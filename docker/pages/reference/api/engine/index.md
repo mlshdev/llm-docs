@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/reference/api/engine/_index.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/reference/api/engine/_index.md)
+> Pinned source for Docker main: [content/reference/api/engine/_index.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/reference/api/engine/_index.md)
 
 # Docker Engine API
 
@@ -15,7 +15,7 @@ The Docker Engine API is a RESTful API accessed by an HTTP client such as `wget`
 ## View the API reference
 
 You can
-[view the reference for the latest version of the API](https://docs.docker.com/reference/api/engine/version/v1.56)
+[view the reference for the latest version of the API](https://docs.docker.com/reference/api/engine/version/v1.57)
 or [choose a specific version](https://docs.docker.com/reference/api/engine/#api-version-matrix).
 
 ## Versioned API and SDK
@@ -48,14 +48,14 @@ support, use `docker version`:
 ```console
 $ docker version
 Client: Docker Engine - Community
- Version:           29.9.3
- API version:       1.56
+ Version:           29.10.0
+ API version:       1.57
  ...
 
 Server: Docker Engine - Community
  Engine:
-  Version:          29.9.3
-  API version:      1.56 (minimum version 1.40)
+  Version:          29.10.0
+  API version:      1.57 (minimum version 1.40)
   ...
 ```
 
@@ -66,14 +66,14 @@ You can specify the API version to use in any of the following ways:
 
 - When using `curl` directly, specify the version as the first part of the URL.
   For instance, if the endpoint is `/containers/` you can use
-  `/v1.56/containers/`.
+  `/v1.57/containers/`.
 
 - To force the Docker CLI or the Docker Engine SDKs to use an older version
   of the API than the version reported by `docker version`, set the
   environment variable `DOCKER_API_VERSION` to the correct version. This works
   on Linux, Windows, and macOS clients.
 
-  1.55
+  1.56
 
   While the environment variable is set, that version of the API is used, even
   if the Docker daemon supports a newer version. This environment variable
@@ -143,7 +143,7 @@ to provide full compatibility, some functionality may not be available.
 
 API versions before v1.40 are deprecated and no longer supported by current
 versions of the Docker Engine and CLI. You can find archived documentation
-for deprecated versions of the API [in the code repository on GitHub](https://github.com/moby/moby/tree/docker-v29.9.3/api/docs):
+for deprecated versions of the API [in the code repository on GitHub](https://github.com/moby/moby/tree/docker-v29.10.0/api/docs):
 
 | Docker version | Maximum API version | Minimum API version | Change log                                                                                |
 | :------------- | :------------------ | :------------------ | :---------------------------------------------------------------------------------------- |

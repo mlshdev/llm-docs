@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/reference/runpodctl-update.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/runpodctl/reference/runpodctl-update.mdx)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-update.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/runpodctl/reference/runpodctl-update.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-update
 
 # update
@@ -14,6 +14,20 @@ runpodctl update
 ## Description
 
 The `update` command downloads the latest version of `runpodctl` and verifies it against its SHA-256 checksum before replacing the installed binary. Verification always runs. If it fails, the update aborts and leaves your existing binary in place. After updating, verify the installation with [`runpodctl version`](https://docs.runpod.io/runpodctl/reference/runpodctl-version).
+
+The command never prompts, so you can run it from scripts. If you installed `runpodctl` with Homebrew, conda, or pixi, the update goes through that package manager.
+
+To check whether a newer release exists without installing it:
+
+```bash
+runpodctl update --check
+```
+
+## Flags
+
+**--check (type: bool)**
+
+Report whether a newer release exists, without installing it.
 
 ## Related commands
 

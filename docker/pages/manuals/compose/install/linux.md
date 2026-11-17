@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/compose/install/linux.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/compose/install/linux.md)
+> Pinned source for Docker main: [content/manuals/compose/install/linux.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/compose/install/linux.md)
 
 # Install the Docker Compose plugin
 
@@ -22,7 +22,10 @@ To install the Docker Compose plugin on Linux, you can either:
    [Debian](https://docs.docker.com/engine/install/debian/#install-using-the-repository) |
    [Raspberry Pi OS](https://docs.docker.com/engine/install/raspberry-pi-os/#install-using-the-repository) |
    [Fedora](https://docs.docker.com/engine/install/fedora/#set-up-the-repository) |
-   [RHEL](https://docs.docker.com/engine/install/rhel/#set-up-the-repository).
+   [RHEL](https://docs.docker.com/engine/install/rhel/#set-up-the-repository) |
+   [AlmaLinux](https://docs.docker.com/engine/install/almalinux/#set-up-the-repository) |
+   [Oracle Linux](https://docs.docker.com/engine/install/oraclelinux/#set-up-the-repository) |
+   [Rocky Linux](https://docs.docker.com/engine/install/rockylinux/#set-up-the-repository).
 
 2. Update the package index, and install the latest version of Docker Compose:
 

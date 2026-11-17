@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/how-to/helm.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/dhi/how-to/helm.md)
+> Pinned source for Docker main: [content/manuals/dhi/how-to/helm.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/dhi/how-to/helm.md)
 
 # Use a Docker Hardened Image chart
 

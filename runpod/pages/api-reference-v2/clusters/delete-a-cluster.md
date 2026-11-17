@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/clusters/delete-a-cluster.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/api-reference-v2/clusters/delete-a-cluster.mdx)
+> Pinned source for Runpod main: [api-reference-v2/clusters/delete-a-cluster.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/api-reference-v2/clusters/delete-a-cluster.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/clusters/delete-a-cluster
 
 # Delete A Cluster

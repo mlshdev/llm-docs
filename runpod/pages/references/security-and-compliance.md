@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [references/security-and-compliance.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/references/security-and-compliance.mdx)
+> Pinned source for Runpod main: [references/security-and-compliance.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/references/security-and-compliance.mdx)
 > Canonical documentation: https://docs.runpod.io/references/security-and-compliance
 
 # Data security and legal compliance

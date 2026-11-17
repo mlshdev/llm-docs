@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/overview.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/api-reference-v2/overview.mdx)
+> Pinned source for Runpod main: [api-reference-v2/overview.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/api-reference-v2/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/overview
 
 # API v2
@@ -8,6 +8,8 @@ Manage Runpod Pods, Serverless endpoints, Clusters, storage, templates, billing,
 The Runpod REST API v2 provides programmatic access to your Runpod resources over standard HTTP. Use it to create and manage Pods, query Serverless endpoints, provision storage, and retrieve billing data — without using the console.
 
 > **Note**
+>
+> REST API v1 is deprecated and no longer available.
 >
 > If you have an existing REST v1 or GraphQL integration, run `/runpod:migrate` with the [Runpod skills plugin](https://docs.runpod.io/get-started/agent-skills#migrate-an-existing-integration) installed in your coding agent to migrate it to v2 automatically. See the [migration guide](https://docs.runpod.io/api-reference-v2/migrate-from-v1) for details.
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/repos/_index.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/docker-hub/repos/_index.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/repos/_index.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/docker-hub/repos/_index.md)
 
 # Repositories
 
@@ -31,8 +31,8 @@ In this section, learn how to:
     for flexibility.
 
   - [Image security insights](https://docs.docker.com/docker-hub/repos/manage/vulnerability-scanning/): Utilize
-    continuous Docker Scout analysis and static vulnerability scanning to
-    detect, understand, and address security issues within container images.
+    continuous Docker Scout analysis to detect, understand, and address
+    security issues within container images.
 
   - [Webhooks](https://docs.docker.com/docker-hub/repos/manage/webhooks/): Automate responses to repository events
     like image pushes or updates by setting up webhooks, which can trigger

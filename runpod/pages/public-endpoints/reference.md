@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/reference.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/public-endpoints/reference.mdx)
+> Pinned source for Runpod main: [public-endpoints/reference.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/public-endpoints/reference.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/reference
 
 # Available models
@@ -11,25 +11,24 @@ This page lists all available models for Runpod Public Endpoints. Select a model
 
 Generate and edit images with text prompts or reference images.
 
-| Model                                                                                                 | Description                                                                                                                                                                     | Price                |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
-| [Flux Dev](https://docs.runpod.io/public-endpoints/models/flux-dev)                                   | High-quality image generation with exceptional prompt adherence.                                                                                                                | $0.02/megapixel      |
-| [Flux Schnell](https://docs.runpod.io/public-endpoints/models/flux-schnell)                           | Fast, lightweight generation for prototyping.                                                                                                                                   | $0.0024/megapixel    |
-| [Flux Kontext Dev](https://docs.runpod.io/public-endpoints/models/flux-kontext-dev)                   | Edit images based on text instructions.                                                                                                                                         | $0.025/image         |
-| [P-Image T2I](https://docs.runpod.io/public-endpoints/models/p-image-t2i)                             | Ultra-fast text-to-image with automatic prompt enhancement.                                                                                                                     | $0.005/image         |
-| [P-Image Edit](https://docs.runpod.io/public-endpoints/models/p-image-edit)                           | Premium image editing with complex compositions.                                                                                                                                | $0.01/image          |
-| [Qwen Image](https://docs.runpod.io/public-endpoints/models/qwen-image)                               | Image generation with advanced text rendering.                                                                                                                                  | $0.02/image          |
-| [Qwen Image LoRA](https://docs.runpod.io/public-endpoints/models/qwen-image-lora)                     | Image generation with LoRA customization.                                                                                                                                       | $0.025/image         |
-| [Qwen Image Edit](https://docs.runpod.io/public-endpoints/models/qwen-image-edit)                     | Image editing with text rendering capabilities.                                                                                                                                 | $0.02/image          |
-| [Qwen Image Edit 2511](https://docs.runpod.io/public-endpoints/models/qwen-image-edit-2511)           | Enhanced image editing with improved consistency.                                                                                                                               | $0.02/image          |
-| [Qwen Image Edit 2511 LoRA](https://docs.runpod.io/public-endpoints/models/qwen-image-edit-2511-lora) | Advanced editing with LoRA support.                                                                                                                                             | $0.025/image         |
-| [Seedream 4.0 T2I](https://docs.runpod.io/public-endpoints/models/seedream-4-t2i)                     | New-generation text-to-image creation.                                                                                                                                          | $0.027/image         |
-| [Seedream 4.0 Edit](https://docs.runpod.io/public-endpoints/models/seedream-4-edit)                   | New-generation image editing.                                                                                                                                                   | $0.027/image         |
-| [WAN 2.6 T2I](https://docs.runpod.io/public-endpoints/models/wan-2-6-t2i)                             | Open-source text-to-image at 1024x1024.                                                                                                                                         | $0.03/image          |
-| [Z-Image Turbo](https://docs.runpod.io/public-endpoints/models/z-image-turbo)                         | Fast 6B parameter image generation.                                                                                                                                             | $0.005/image         |
-| [Nano Banana Edit](https://docs.runpod.io/public-endpoints/models/nano-banana-edit)                   | **Retiring September 28, 2026** — use [Nano Banana 2](https://docs.runpod.io/public-endpoints/models/nano-banana-2-edit) instead. Google's model for combining multiple images. | $0.038/image         |
-| [Nano Banana Pro Edit](https://docs.runpod.io/public-endpoints/models/nano-banana-pro-edit)           | Advanced multi-image editing with resolution options.                                                                                                                           | $0.14–$0.24/image    |
-| [Nano Banana 2 Edit](https://docs.runpod.io/public-endpoints/models/nano-banana-2-edit)               | Google's latest multi-image editing with resolution options.                                                                                                                    | $0.0875–$0.175/image |
+| Model                                                                                                 | Description                                                      | Price                |
+| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | -------------------- |
+| [Flux Dev](https://docs.runpod.io/public-endpoints/models/flux-dev)                                   | High-quality image generation with exceptional prompt adherence. | $0.02/megapixel      |
+| [Flux Schnell](https://docs.runpod.io/public-endpoints/models/flux-schnell)                           | Fast, lightweight generation for prototyping.                    | $0.0024/megapixel    |
+| [Flux Kontext Dev](https://docs.runpod.io/public-endpoints/models/flux-kontext-dev)                   | Edit images based on text instructions.                          | $0.025/image         |
+| [P-Image T2I](https://docs.runpod.io/public-endpoints/models/p-image-t2i)                             | Ultra-fast text-to-image with automatic prompt enhancement.      | $0.005/image         |
+| [P-Image Edit](https://docs.runpod.io/public-endpoints/models/p-image-edit)                           | Premium image editing with complex compositions.                 | $0.01/image          |
+| [Qwen Image](https://docs.runpod.io/public-endpoints/models/qwen-image)                               | Image generation with advanced text rendering.                   | $0.02/image          |
+| [Qwen Image LoRA](https://docs.runpod.io/public-endpoints/models/qwen-image-lora)                     | Image generation with LoRA customization.                        | $0.025/image         |
+| [Qwen Image Edit](https://docs.runpod.io/public-endpoints/models/qwen-image-edit)                     | Image editing with text rendering capabilities.                  | $0.02/image          |
+| [Qwen Image Edit 2511](https://docs.runpod.io/public-endpoints/models/qwen-image-edit-2511)           | Enhanced image editing with improved consistency.                | $0.02/image          |
+| [Qwen Image Edit 2511 LoRA](https://docs.runpod.io/public-endpoints/models/qwen-image-edit-2511-lora) | Advanced editing with LoRA support.                              | $0.025/image         |
+| [Seedream 4.0 T2I](https://docs.runpod.io/public-endpoints/models/seedream-4-t2i)                     | New-generation text-to-image creation.                           | $0.027/image         |
+| [Seedream 4.0 Edit](https://docs.runpod.io/public-endpoints/models/seedream-4-edit)                   | New-generation image editing.                                    | $0.027/image         |
+| [WAN 2.6 T2I](https://docs.runpod.io/public-endpoints/models/wan-2-6-t2i)                             | Open-source text-to-image at 1024x1024.                          | $0.03/image          |
+| [Z-Image Turbo](https://docs.runpod.io/public-endpoints/models/z-image-turbo)                         | Fast 6B parameter image generation.                              | $0.005/image         |
+| [Nano Banana Pro Edit](https://docs.runpod.io/public-endpoints/models/nano-banana-pro-edit)           | Advanced multi-image editing with resolution options.            | $0.14–$0.24/image    |
+| [Nano Banana 2 Edit](https://docs.runpod.io/public-endpoints/models/nano-banana-2-edit)               | Google's latest multi-image editing with resolution options.     | $0.0875–$0.175/image |
 
 ## Video models
 
@@ -51,7 +50,11 @@ Create videos from images or text prompts. Pricing varies by resolution and dura
 | [WAN 2.2 I2V](https://docs.runpod.io/public-endpoints/models/wan-2-2-i2v)                             | Open-source image-to-video at 720p.                                                                                                                               | $0.30/5s                                                         |
 | [WAN 2.1 I2V](https://docs.runpod.io/public-endpoints/models/wan-2-1-i2v)                             | Image-to-video at 720p.                                                                                                                                           | $0.30/5s                                                         |
 | [WAN 2.6 I2V](https://docs.runpod.io/public-endpoints/models/wan-2-6-i2v)                             | Image-to-video with audio support up to 1080p.                                                                                                                    | $0.10/s (720p), $0.15/s (1080p)                                  |
+| [Hailuo 02 Standard](https://docs.runpod.io/public-endpoints/models/hailuo-02)                        | 6 or 10 second videos from text or a reference image.                                                                                                             | $0.23 (6s), $0.56 (10s)                                          |
+| [Hailuo 2.3 Fast](https://docs.runpod.io/public-endpoints/models/hailuo-2-3-fast)                     | Fast image-to-video with prompt optimization.                                                                                                                     | $0.19 (6s), $0.32 (10s)                                          |
+| [Veo 3.1 Fast I2V](https://docs.runpod.io/public-endpoints/models/veo-3-1-fast-i2v)                   | Google's image-to-video at up to 4K with optional audio.                                                                                                          | $0.15/s with audio, $0.10/s without                              |
 | [Pruna Video](https://docs.runpod.io/public-endpoints/models/p-video)                                 | Premium AI video from text, images, and audio.                                                                                                                    | $0.02/s (720p), $0.04/s (1080p)                                  |
+| [Pruna Video Edit](https://docs.runpod.io/public-endpoints/models/p-video-edit)                       | Edit existing videos from a text prompt and reference images.                                                                                                     | $0.045/s (standard), $0.025/s (draft)                            |
 | [Vidu Q3 I2V](https://docs.runpod.io/public-endpoints/models/vidu-q3-i2v)                             | Animate reference images with text-driven motion.                                                                                                                 | $0.15/second                                                     |
 | [Vidu Q3 T2V](https://docs.runpod.io/public-endpoints/models/vidu-q3-t2v)                             | High-quality video from text with audio support.                                                                                                                  | $0.15/second                                                     |
 
@@ -59,11 +62,12 @@ Create videos from images or text prompts. Pricing varies by resolution and dura
 
 Generate text with large language models.
 
-| Model                                                                         | Description                                                         | Price                  |
-| ----------------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------- |
-| [IBM Granite 4.0](https://docs.runpod.io/public-endpoints/models/granite-4)   | 32B parameter long-context instruct model.                          | $10.00/1M tokens       |
-| [Moonshot Kimi](https://docs.runpod.io/public-endpoints/models/moonshot-kimi) | Kimi family for reasoning, chat, and coding with extended thinking. | $4.00-$20.00/1M tokens |
-| [Qwen3 32B AWQ](https://docs.runpod.io/public-endpoints/models/qwen3-32b)     | Advanced reasoning and multilingual support. OpenAI-compatible.     | $10.00/1M tokens       |
+| Model                                                                         | Description                                                             | Price                                         |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------- | --------------------------------------------- |
+| [GLM-5.3](https://docs.runpod.io/public-endpoints/models/glm-5-3)             | Reasoning, coding, and tool use with a 262K context. OpenAI-compatible. | $2.42/1M output tokens, $0.77/1M input tokens |
+| [IBM Granite 4.0](https://docs.runpod.io/public-endpoints/models/granite-4)   | 32B parameter long-context instruct model.                              | $10.00/1M tokens                              |
+| [Moonshot Kimi](https://docs.runpod.io/public-endpoints/models/moonshot-kimi) | Kimi family for reasoning, chat, and coding with extended thinking.     | $4.00-$20.00/1M tokens                        |
+| [Qwen3 32B AWQ](https://docs.runpod.io/public-endpoints/models/qwen3-32b)     | Advanced reasoning and multilingual support. OpenAI-compatible.         | $10.00/1M tokens                              |
 
 ## Audio models
 

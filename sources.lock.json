@@ -23,10 +23,10 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "553482ce632f00c6e7faabab863422b4916e7c18",
-      "sourceCommittedAt": "2026-11-13T17:05:54Z",
-      "observedCommit": "553482ce632f00c6e7faabab863422b4916e7c18",
-      "documentationDigest": "b210000a8f82b801ef71ad66766a640b6d62d130810091222312ff8f13aba60f"
+      "sourceCommit": "670073947d7b7046bc419b40a27c5a448d9b6c9b",
+      "sourceCommittedAt": "2026-11-16T16:28:17Z",
+      "observedCommit": "670073947d7b7046bc419b40a27c5a448d9b6c9b",
+      "documentationDigest": "9b75d830db4372599ee92fef5f4daa805f2550ebcd0a75d7021b0f7c4f834fef"
     },
     "container": {
       "tag": "1.7.1",
@@ -87,10 +87,10 @@
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "b9dcde1f88bc636b8a4b372862a01a13b3003473",
-      "sourceCommittedAt": "2026-11-14T20:02:21Z",
-      "observedCommit": "b9dcde1f88bc636b8a4b372862a01a13b3003473",
-      "documentationDigest": "aa1fabbb2b234174f38527fd7a34344b7fcc6e34acd7c8100178a660c89b53e5"
+      "sourceCommit": "82d767e969d30f9f6db24ef67576890cf3f487ba",
+      "sourceCommittedAt": "2026-10-27T15:41:45Z",
+      "observedCommit": "82d767e969d30f9f6db24ef67576890cf3f487ba",
+      "documentationDigest": "79109b68a6ce73799b3db652be7107b3079c93d73ed5a4559b8080f54b788018"
     },
     "yt-dlp": {
       "tag": "2026.10.26",
@@ -140,10 +140,10 @@
     "runpod": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "badc3b0885d17c76062faf033073f6d062af3aee",
-      "sourceCommittedAt": "2026-11-13T14:27:13Z",
-      "observedCommit": "badc3b0885d17c76062faf033073f6d062af3aee",
-      "documentationDigest": "d6687a083c4752d49b409a838cc963b520a5606cf86915bbc376875480f55a63"
+      "sourceCommit": "ee20bfa4783a890d1da39b7634b3d78e45a4e6c7",
+      "sourceCommittedAt": "2026-11-17T01:59:19Z",
+      "observedCommit": "ee20bfa4783a890d1da39b7634b3d78e45a4e6c7",
+      "documentationDigest": "4ea49d9aae119e8437bff0c5aca97dea430b97dea5bb9d41f43d57953d1afdf1"
     },
     "discord-py-self": {
       "tag": "v2.1.0",

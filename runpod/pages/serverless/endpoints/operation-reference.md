@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/endpoints/operation-reference.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/serverless/endpoints/operation-reference.mdx)
+> Pinned source for Runpod main: [serverless/endpoints/operation-reference.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/serverless/endpoints/operation-reference.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/endpoints/operation-reference
 
 # Operation reference
@@ -39,7 +39,7 @@ Synchronous jobs wait for completion and return the complete result in a single 
 
 - **Maximum payload size**: 20 MB
 - **Result retention**: 1 minute after completion
-- **Default wait time**: 90 seconds (adjustable via `?wait=x` parameter, 1000-300000 ms)
+- **Default wait time**: 90 seconds (adjustable via `?wait=x` parameter, 1000-570000 ms)
 
 ```sh
 https://api.runpod.ai/v2/$ENDPOINT_ID/runsync?wait=120000
@@ -389,6 +389,24 @@ Returns job status (`IN_QUEUE`, `IN_PROGRESS`, `COMPLETED`, `FAILED`) with optio
   "status": "COMPLETED"
 }
 ```
+
+## /status-sync
+
+Wait for a job submitted with `/run` to finish and get its result in the same response, instead of polling `/status`. A finished job returns immediately. Otherwise the request stays open until the job completes or the wait time runs out, then returns the job's current status.
+
+- **Default wait time**: 90 seconds (adjustable via `?wait=x` parameter, 1000-570000 ms)
+
+Replace `YOUR_JOB_ID` with the job ID from your `/run` response.
+
+```sh
+curl --request GET \
+     --url "https://api.runpod.ai/v2/$ENDPOINT_ID/status-sync/YOUR_JOB_ID?wait=120000" \
+     -H "authorization: $RUNPOD_API_KEY"
+```
+
+**Response:**
+
+The same body as `/status`. If the wait time runs out first, `status` is still `IN_QUEUE` or `IN_PROGRESS`; call `/status-sync` again to keep waiting.
 
 ## /stream
 

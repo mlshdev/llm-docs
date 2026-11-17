@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/vllm/openai-compatibility.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/serverless/vllm/openai-compatibility.mdx)
+> Pinned source for Runpod main: [serverless/vllm/openai-compatibility.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/serverless/vllm/openai-compatibility.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/vllm/openai-compatibility
 
 # OpenAI API compatibility
@@ -150,11 +150,10 @@ Standard OpenAI parameters are supported. Include them directly in your request.
 
 Use these environment variables to customize the OpenAI compatibility:
 
-| Variable                            | Default     | Description                                 |
-| ----------------------------------- | ----------- | ------------------------------------------- |
-| `RAW_OPENAI_OUTPUT`                 | `1`         | Enable raw OpenAI SSE format for streaming. |
-| `OPENAI_SERVED_MODEL_NAME_OVERRIDE` | None        | Override model name in responses.           |
-| `OPENAI_RESPONSE_ROLE`              | `assistant` | Role for chat completion responses.         |
+| Variable                            | Default     | Description                         |
+| ----------------------------------- | ----------- | ----------------------------------- |
+| `OPENAI_SERVED_MODEL_NAME_OVERRIDE` | None        | Override model name in responses.   |
+| `RESPONSE_ROLE`                     | `assistant` | Role for chat completion responses. |
 
 See [environment variables reference](https://docs.runpod.io/serverless/vllm/environment-variables) for all options.
 
@@ -167,12 +166,12 @@ See [environment variables reference](https://docs.runpod.io/serverless/vllm/env
 
 ## Troubleshooting
 
-| Issue                      | Solution                                    |
-| -------------------------- | ------------------------------------------- |
-| "Invalid model" error      | Verify model name matches your deployment.  |
-| Authentication error       | Use your Runpod API key, not an OpenAI key. |
-| Timeout errors             | Increase client timeout for large models.   |
-| Unexpected response format | Set `RAW_OPENAI_OUTPUT=1`.                  |
+| Issue                      | Solution                                                                                                  |
+| -------------------------- | --------------------------------------------------------------------------------------------------------- |
+| "Invalid model" error      | Verify model name matches your deployment.                                                                |
+| Authentication error       | Use your Runpod API key, not an OpenAI key.                                                               |
+| Timeout errors             | Increase client timeout for large models.                                                                 |
+| Unexpected response format | Check that the request uses the `/openai/v1` base URL and that the `model` value matches your deployment. |
 
 ## Integrate with workflow tools
 

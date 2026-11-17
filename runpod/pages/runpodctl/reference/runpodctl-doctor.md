@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/reference/runpodctl-doctor.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/runpodctl/reference/runpodctl-doctor.mdx)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-doctor.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/runpodctl/reference/runpodctl-doctor.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-doctor
 
 # doctor
@@ -30,6 +30,20 @@ runpodctl doctor
 ```
 
 The command will interactively guide you through the setup process and report any issues it finds.
+
+To set the API key without a prompt, for example in CI or a container, pipe it on stdin. This keeps the key out of your shell history and the process list. Stdin is read only when no key is configured yet:
+
+```bash
+printf %s "$MY_RUNPOD_KEY" | runpodctl doctor
+```
+
+`doctor` saves a key only after the API accepts it, and exits with a non-zero code when it finishes unhealthy. The report is still printed.
+
+## Flags
+
+**--api-key (type: string)**
+
+API key to validate and save, replacing any saved key. The value is visible in your shell history and the process list, so prefer stdin.
 
 ## Related commands
 

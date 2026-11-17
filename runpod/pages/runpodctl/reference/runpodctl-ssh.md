@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/reference/runpodctl-ssh.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/runpodctl/reference/runpodctl-ssh.mdx)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-ssh.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/runpodctl/reference/runpodctl-ssh.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-ssh
 
 # ssh
@@ -135,6 +135,16 @@ When runpodctl runs in a script or from an AI agent, it doesn't prompt. Instead,
 
 - Re-run the command with `--remove-invalid` to delete the invalid entries as part of the same change.
 - Run `runpodctl ssh remove-key --invalid` to delete only the invalid entries.
+
+### Forget a Pod's host key
+
+Remove the host key that runpodctl recorded for a Pod in `~/.runpod/ssh/known_hosts`, so the next connection trusts the key the Pod offers:
+
+```bash
+runpodctl ssh forget <pod-id>
+```
+
+Use this after stopping and starting a Pod, or updating it, changed its host key. If the Pod didn't restart, a host key mismatch can mean the connection is being intercepted, so check before you run it. The SSH command that `ssh info` prints uses your own `~/.ssh/known_hosts` and isn't affected.
 
 ## Related commands
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/vscode.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/ai/sandboxes/integrations/vscode.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/vscode.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/ai/sandboxes/integrations/vscode.md)
 
 # Connect VS Code to a sandbox
 
@@ -60,23 +60,11 @@ For details, see
 
 ### SSH host key verification fails
 
-VS Code can leave duplicate or malformed `Host *.sbx` blocks in your SSH
-config after you add an SSH host. If a VS Code connection reports a
+VS Code can leave duplicate or malformed managed blocks in your SSH config
+after you add an SSH host. If a VS Code connection reports a
 `KnownHostsCommand` error or `Host key verification failed`, remove every SSH
-config block marked `docker sandboxes (managed)`, including the marker
-comments:
-
-```diff
--# >>> docker sandboxes (managed) >>>
--Host *.sbx
--    User _default_user_
--    ProxyCommand "sbx" ssh proxy %n
--    ...
--    UserKnownHostsFile "~/.ssh/sbx_known_hosts"
--    KnownHostsCommand "sbx" ssh known-hosts %H
--    StrictHostKeyChecking yes
--# <<< docker sandboxes (managed) <<<
-```
+config block between `# >>> docker sandboxes (managed) >>>` and
+`# <<< docker sandboxes (managed) <<<`, including both separator comments.
 
 Then regenerate the managed block:
 

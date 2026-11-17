@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/reference/runpodctl-config.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/runpodctl/reference/runpodctl-config.mdx)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-config.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/runpodctl/reference/runpodctl-config.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-config
 
 # config
@@ -19,9 +19,9 @@ Configure the CLI with your API key:
 runpodctl config --apiKey "your-api-key-here"
 ```
 
-> **Note**
+> **Warning**
 >
-> For first-time setup, we recommend using [`runpodctl doctor`](https://docs.runpod.io/runpodctl/reference/runpodctl-doctor) instead, which guides you through API key configuration and SSH key setup interactively.
+> `runpodctl config` is deprecated. Use [`runpodctl doctor`](https://docs.runpod.io/runpodctl/reference/runpodctl-doctor), which validates and saves your API key and sets up SSH keys, or set the `RUNPOD_API_KEY` environment variable.
 
 ## Flags
 

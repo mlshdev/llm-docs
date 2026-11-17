@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdk/configuration/parameters.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/sdk/configuration/parameters.mdx)
+> Pinned source for Runpod main: [sdk/configuration/parameters.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/sdk/configuration/parameters.mdx)
 > Canonical documentation: https://docs.runpod.io/sdk/configuration/parameters
 
 # Resource parameters
@@ -214,7 +214,7 @@ def chat(prompt: str):
     return llm.generate(prompt)
 ```
 
-Inside the worker, `llama.path` points to the staged weights. Libraries that use the standard Hugging Face cache, such as `transformers` and `vllm`, also find the weights automatically. Gated models need an `HF_TOKEN` on the same resource.
+Inside the worker, `llama.path` points to the staged weights. Libraries that use the standard Hugging Face cache, such as `transformers` and `vllm`, also find the weights automatically. Gated models need an `HF_TOKEN` on the same resource, from an account that has accepted the model's terms on its Hugging Face model page. A token from an account without access to the model still fails.
 
 ### datacenter
 

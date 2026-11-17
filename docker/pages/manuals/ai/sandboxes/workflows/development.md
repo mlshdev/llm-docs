@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/development.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/ai/sandboxes/workflows/development.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/development.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/ai/sandboxes/workflows/development.md)
 
 # Develop and test locally
 
@@ -24,7 +24,7 @@ volumes inside it are deleted with it.
 This pattern works well for tasks where the agent needs to run the project's
 test suite or inspect a service it started. If you need to reach that service
 from your host, publish the port when you create the sandbox, or publish it
-later with `sbx ports`.
+later with `sbx port publish`.
 
 ## Local services
 
@@ -43,7 +43,7 @@ If you know which ports you need, publish them when you create the sandbox:
 $ sbx run --publish 8080:3000 --name my-sandbox claude
 ```
 
-For an existing sandbox, use [`sbx ports`](https://docs.docker.com/reference/cli/sbx/ports/) to
+For an existing sandbox, use `sbx port publish` to
 forward traffic from your host. Publishing a port on a stopped local sandbox
 starts it first.
 
@@ -51,20 +51,20 @@ The common case: an agent has started a dev server or API, and you want to open
 it in your browser or run tests against it.
 
 ```console
-$ sbx ports my-sandbox --publish 8080:3000
+$ sbx port publish my-sandbox 8080:3000
 $ open http://localhost:8080
 ```
 
 To let the OS pick a free host port instead of choosing one yourself, specify
-only the sandbox port. Then use `sbx ports` to check which host port was
+only the sandbox port. Then use `sbx port ls` to check which host port was
 assigned:
 
 ```console
-$ sbx ports my-sandbox --publish 3000
-$ sbx ports my-sandbox
+$ sbx port publish my-sandbox 3000
+$ sbx port ls my-sandbox
 ```
 
-`sbx ls` shows active port mappings alongside each sandbox, and `sbx ports`
+`sbx ls` shows active port mappings alongside each sandbox, and `sbx port ls`
 lists them in detail:
 
 ```console
@@ -76,7 +76,7 @@ my-sandbox   claude   ● running   127.0.0.1:8080->3000/tcp4    /home/user/proj
 To stop forwarding a port:
 
 ```console
-$ sbx ports my-sandbox --unpublish 8080:3000
+$ sbx port unpublish my-sandbox 8080:3000
 ```
 
 For a service to be reachable, it must listen on all interfaces inside the
@@ -96,13 +96,14 @@ reset.
 Published ports survive restarts: `sbx` re-publishes them when the sandbox or
 the daemon restarts. Explicit host ports are reused, while a port published with
 an OS-assigned host port, such as `--publish 3000`, gets a different host port
-on each start. Check `sbx ports my-sandbox` to find it. If an explicit host port
+on each start. Check `sbx port ls my-sandbox` to find it. If an explicit host port
 is already in use at restart, the CLI or the dashboard prompts you to choose
 another. Removing the sandbox releases its ports.
 
 When `sbx run` re-attaches to an existing sandbox, it ignores `--publish`. Use
-`sbx ports` to publish ports on that sandbox. To stop forwarding,
-`--unpublish 8080:3000` removes a single mapping, and `--unpublish 3000`
+`sbx port publish` to publish ports on that sandbox. To stop forwarding,
+`sbx port unpublish my-sandbox 8080:3000` removes a single mapping, and
+`sbx port unpublish my-sandbox 3000`
 removes every host port mapped to sandbox port 3000.
 
 ### Accessing host services from a sandbox

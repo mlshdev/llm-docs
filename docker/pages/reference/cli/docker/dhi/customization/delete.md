@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/dhi/docker_dhi_customization_delete.yaml](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/data/cli/dhi/docker_dhi_customization_delete.yaml)
+> Pinned source for Docker main: [data/cli/dhi/docker_dhi_customization_delete.yaml](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/data/cli/dhi/docker_dhi_customization_delete.yaml)
 
 # docker dhi customization delete
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/governance/reference/network-rules.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/ai/governance/reference/network-rules.md)
+> Pinned source for Docker main: [content/manuals/ai/governance/reference/network-rules.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/ai/governance/reference/network-rules.md)
 
 # Network and HTTP rule syntax
 
@@ -88,6 +88,11 @@ parameters:
 
 A host deny is therefore a floor that HTTP rules can't raise, while a host
 allow is a ceiling that HTTP rules can carve into.
+
+These decisions apply to the hostname attributed to the connection. In local
+sandboxes, a denied host can still be reachable when it shares an IP address
+with an allowed host. See
+[Hostname blocking limitations](https://docs.docker.com/ai/governance/local/network-rules/#hostname-blocking-limitations).
 
 When a rule requires an HTTP decision, the sandbox HTTP proxy
 evaluates each request separately instead of deciding once per connection.

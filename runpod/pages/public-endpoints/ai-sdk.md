@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/ai-sdk.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/public-endpoints/ai-sdk.mdx)
+> Pinned source for Runpod main: [public-endpoints/ai-sdk.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/public-endpoints/ai-sdk.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/ai-sdk
 
 # Vercel AI SDK
@@ -250,7 +250,7 @@ import { runpod } from "@runpod/ai-sdk-provider";
 import { experimental_generateImage as generateImage } from "ai";
 
 const { image } = await generateImage({
-  model: runpod.image("google-nano-banana-edit"),
+  model: runpod.image("google/nano-banana-2-edit"),
   prompt: {
     text: "Add modern Scandinavian furniture to this room",
     images: ["https://example.com/empty-room.png"],
@@ -263,7 +263,7 @@ For models that support multiple reference images:
 
 ```typescript
 const { image } = await generateImage({
-  model: runpod.image("google-nano-banana-edit"),
+  model: runpod.image("google/nano-banana-2-edit"),
   prompt: {
     text: "Combine these into an epic band photo",
     images: [
@@ -403,14 +403,13 @@ const { video } = await generateVideo({
 
 ### Image models
 
-| Model ID                           | Description                                                                                                                                                     |
-| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `black-forest-labs-flux-1-dev`     | [Flux Dev](https://docs.runpod.io/public-endpoints/models/flux-dev). High quality, detailed images.                                                             |
-| `black-forest-labs-flux-1-schnell` | [Flux Schnell](https://docs.runpod.io/public-endpoints/models/flux-schnell). Fast generation, good for prototyping.                                             |
-| `google-nano-banana-edit`          | [Nano Banana Edit](https://docs.runpod.io/public-endpoints/models/nano-banana-edit). Supports multiple reference images.                                        |
-| `google/nano-banana-2-edit`        | [Nano Banana 2 Edit](https://docs.runpod.io/public-endpoints/models/nano-banana-2-edit). Image editing with 14 aspect ratios and resolution options (1k/2k/4k). |
-| `bytedance-seedream-4-0-t2i`       | [Seedream 4.0](https://docs.runpod.io/public-endpoints/models/seedream-4-t2i). Text-to-image with good prompt adherence.                                        |
-| `tongyi-mai/z-image-turbo`         | [Z-Image Turbo](https://docs.runpod.io/public-endpoints/models/z-image-turbo). Fast 6B parameter model with text-to-image support.                              |
+| Model ID                           | Description                                                                                                                                                                                 |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `black-forest-labs-flux-1-dev`     | [Flux Dev](https://docs.runpod.io/public-endpoints/models/flux-dev). High quality, detailed images.                                                                                         |
+| `black-forest-labs-flux-1-schnell` | [Flux Schnell](https://docs.runpod.io/public-endpoints/models/flux-schnell). Fast generation, good for prototyping.                                                                         |
+| `google/nano-banana-2-edit`        | [Nano Banana 2 Edit](https://docs.runpod.io/public-endpoints/models/nano-banana-2-edit). Image editing with multiple reference images, 14 aspect ratios, and resolution options (1k/2k/4k). |
+| `bytedance-seedream-4-0-t2i`       | [Seedream 4.0](https://docs.runpod.io/public-endpoints/models/seedream-4-t2i). Text-to-image with good prompt adherence.                                                                    |
+| `tongyi-mai/z-image-turbo`         | [Z-Image Turbo](https://docs.runpod.io/public-endpoints/models/z-image-turbo). Fast 6B parameter model with text-to-image support.                                                          |
 
 ### Video models
 

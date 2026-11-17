@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/install/_index.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/engine/install/_index.md)
+> Pinned source for Docker main: [content/manuals/engine/install/_index.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/engine/install/_index.md)
 
 # Install Docker Engine
 
@@ -13,11 +13,14 @@ Click on a platform's link to view the relevant installation procedure.
 
 | Platform                                                                            | x86\_64 / amd64 | arm64 / aarch64 | arm (32-bit) | ppc64le | s390x |
 | :---------------------------------------------------------------------------------- | :-------------: | :-------------: | :----------: | :-----: | :---: |
+| [AlmaLinux](https://docs.docker.com/engine/install/almalinux/)                      |        ✅        |        ✅        |              |         |       |
 | [CentOS](https://docs.docker.com/engine/install/centos/)                            |        ✅        |        ✅        |              |    ✅    |       |
 | [Debian](https://docs.docker.com/engine/install/debian/)                            |        ✅        |        ✅        |       ✅      |    ✅    |       |
 | [Fedora](https://docs.docker.com/engine/install/fedora/)                            |        ✅        |        ✅        |              |    ✅    |       |
+| [Oracle Linux](https://docs.docker.com/engine/install/oraclelinux/)                 |        ✅        |        ✅        |              |         |       |
 | [Raspberry Pi OS (32-bit)](https://docs.docker.com/engine/install/raspberry-pi-os/) |                 |                 |      ⚠️      |         |       |
 | [RHEL](https://docs.docker.com/engine/install/rhel/)                                |        ✅        |        ✅        |              |         |   ✅   |
+| [Rocky Linux](https://docs.docker.com/engine/install/rockylinux/)                   |        ✅        |        ✅        |              |         |       |
 | [Ubuntu](https://docs.docker.com/engine/install/ubuntu/)                            |        ✅        |        ✅        |       ✅      |    ✅    |   ✅   |
 | [Binaries](https://docs.docker.com/engine/install/binaries/)                        |        ✅        |        ✅        |       ✅      |         |       |
 

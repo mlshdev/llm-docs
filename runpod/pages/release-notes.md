@@ -1,9 +1,17 @@
-> Pinned source for Runpod main: [release-notes.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/release-notes.mdx)
+> Pinned source for Runpod main: [release-notes.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/release-notes.mdx)
 > Canonical documentation: https://docs.runpod.io/release-notes
 
 # Product updates
 
 New features, fixes, and improvements for the Runpod platform. Review setup, configuration, workflows, and usage guidance in the Runpod documentation.
+
+**November 15, 2026**
+
+\*\*\*\* [REST API v1 retired](https://docs.runpod.io/api-reference-v2/overview) Migrate your integrations to [REST API v2](https://docs.runpod.io/api-reference-v2/migrate-from-v1) to restore access. See the migration guide for step-by-step instructions, or run `/runpod:migrate` in your coding agent with the Runpod skills plugin installed to migrate automatically.
+
+**November 12, 2026**
+
+\*\*\*\* [Scoped API keys](https://docs.runpod.io/get-started/credentials) You can now choose each API key's access to Runpod services separately, including per-scope access for the REST API v2. There is no default full-access option, so select only the scopes your key needs. Existing keys keep working on every service with no action needed.
 
 **October 27, 2026**
 

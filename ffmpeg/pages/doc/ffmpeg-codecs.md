@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/b9dcde1f88bc636b8a4b372862a01a13b3003473/doc/ffmpeg-codecs.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/82d767e969d30f9f6db24ef67576890cf3f487ba/doc/ffmpeg-codecs.texi)
 
 # Description
 
@@ -5311,6 +5311,11 @@ MPEG-2 video encoder.
   - high1440
   - main
   - low
+
+- seq\_end *boolean*
+  Write a sequence end code after the last picture. Disabled by default.
+  Cannot be combined with `flags +low_delay` or frame skipping
+  (`skip_threshold` or `skip_factor`).
 
 - seq\_disp\_ext *integer*
   Specifies if the encoder should write a sequence\_display\_extension to the

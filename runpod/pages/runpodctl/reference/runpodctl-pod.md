@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/reference/runpodctl-pod.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/runpodctl/reference/runpodctl-pod.mdx)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-pod.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/runpodctl/reference/runpodctl-pod.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-pod
 
 # pod
@@ -196,6 +196,18 @@ Country code that restricts Pod placement to datacenters in that country (e.g., 
 
 Comma-separated list of compliance certifications the datacenter must hold (e.g., `HIPAA,SOC_2_TYPE_2`). Supported only on Secure Cloud.
 
+**--wait (type: bool)**
+
+Block until the Pod is reachable over SSH, then print the Pod as `pod get` does. The CLI checks that the Pod's public port 22 answers, so it needs no key. This requires a publicly mapped port 22, which Community Cloud doesn't always provide.
+
+**--wait-for (type: string)**
+
+What `--wait` waits for: `ssh` (default; port 22 is reachable) or `running` (the Pod's container is up). Use `running` for images without an SSH server or with `--ssh=false`. Setting this flag implies `--wait`.
+
+**--wait-timeout (type: string)**
+
+Maximum time to wait with `--wait`, such as `90s`, `10m`, or `1h` (default `10m`). On timeout, the Pod is kept and the error includes its ID.
+
 ### Start a Pod
 
 Start a stopped Pod:
@@ -265,6 +277,48 @@ Delete a Pod:
 ```bash
 runpodctl pod delete <pod-id>
 ```
+
+### Read Pod logs
+
+Read a Pod's container and system logs:
+
+```bash
+# The last 100 lines, then exit
+runpodctl pod logs <pod-id>
+
+# Follow live output
+runpodctl pod logs <pod-id> --follow
+
+# The last 30 minutes of platform events only
+runpodctl pod logs <pod-id> --since 30m --source system
+
+# Live output only, with no history
+runpodctl pod logs <pod-id> --tail 0 --follow
+```
+
+The output is JSON lines, one object per line with `source`, `line`, and `ts` fields, so you can pipe it to `jq`. The `container` source is your workload's own output. The `system` source is the platform reporting image pull, container create, and start. A stalled deployment usually shows up there, as repeated pull progress or a create that never reaches start.
+
+#### Logs flags
+
+**--follow, -f (type: bool)**
+
+Keep streaming new lines until you interrupt the command. Without it, the command replays recent lines and exits once they stop arriving.
+
+**--tail (type: int)**
+
+Number of historical lines to replay before live output, from 0 to 5000 (default `100`). Use `0` for live output only.
+
+**--since (type: string)**
+
+Only show logs after this point: a duration such as `30m`, `2h`, or `7d`, or an RFC 3339 timestamp. Overrides `--tail`.
+
+**--source (type: string)**
+
+Which log source to read: `container` (your workload's own output), `system` (platform events such as image pull, container create, and start), or `both` (default).
+
+**--max-wait (type: duration)**
+
+How long to wait for output before exiting when not following (default `5s`). The command exits earlier once the replayed lines stop arriving.
 
 ## Pod runtime status
 

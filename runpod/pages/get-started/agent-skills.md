@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started/agent-skills.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/get-started/agent-skills.mdx)
+> Pinned source for Runpod main: [get-started/agent-skills.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/get-started/agent-skills.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started/agent-skills
 
 # Agent skills for AI coding tools
@@ -46,17 +46,18 @@ If your endpoints come back, you're set. See [What you can do](#what-you-can-do)
 
 The plugin installs a router and a set of focused skills:
 
-| Skill                     | Description                                                                                                                                                     |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **runpod**                | Router and entry point. Reads your task and hands it to the right skill.                                                                                        |
-| **runpod-mcp**            | Manages Pods, endpoints, templates, network volumes, registries, and billing through the Runpod MCP server.                                                     |
-| **runpodctl**             | Manages the same resources from the [Runpod CLI](https://docs.runpod.io/runpodctl/overview), plus Hub deployments, file transfers, SSH keys, and model caching. |
-| **flash**                 | Writes and deploys your own Python code to Runpod Serverless using the [runpod-flash](https://docs.runpod.io/flash/overview) SDK.                               |
-| **companion-clis**        | Uses supporting CLIs such as Hugging Face, Docker, and the AWS CLI when a task needs them.                                                                      |
-| **runpod-usage**          | Provides conceptual knowledge about Pods, Serverless, storage, and GPU selection.                                                                               |
-| **runpod-templates**      | Picks and configures Runpod's official Pod templates, such as ComfyUI and PyTorch, and fixes problems with a running template.                                  |
-| **runpod-build-template** | Builds a complete template project (Dockerfile and app files) for Pods or Serverless from a request, local code, or a GitHub repo.                              |
-| **runpod-migrate**        | Migrates a codebase from the GraphQL API or REST v1 to REST v2. It inventories which API each call site uses, rewrites the call sites, and verifies the result. |
+| Skill                     | Description                                                                                                                                                                              |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **runpod**                | Router and entry point. Reads your task and hands it to the right skill.                                                                                                                 |
+| **runpod-mcp**            | Manages Pods, endpoints, templates, network volumes, registries, and billing through the Runpod MCP server.                                                                              |
+| **runpodctl**             | Manages the same resources from the [Runpod CLI](https://docs.runpod.io/runpodctl/overview), plus Hub deployments, file transfers, SSH keys, and model caching.                          |
+| **flash**                 | Writes and deploys your own Python code to Runpod Serverless using the [runpod-flash](https://docs.runpod.io/flash/overview) SDK.                                                        |
+| **companion-clis**        | Uses supporting CLIs such as Hugging Face, Docker, and the AWS CLI when a task needs them.                                                                                               |
+| **runpod-usage**          | Provides conceptual knowledge about Pods, Serverless, storage, and GPU selection.                                                                                                        |
+| **runpod-templates**      | Picks and configures Runpod's official Pod templates, such as ComfyUI and PyTorch, and fixes problems with a running template.                                                           |
+| **runpod-build-template** | Builds a complete template project (Dockerfile and app files) for Pods or Serverless from a request, local code, or a GitHub repo.                                                       |
+| **runpod-migrate**        | Migrates a codebase from the GraphQL API or REST v1 to REST v2. It inventories which API each call site uses, rewrites the call sites, and verifies the result.                          |
+| **runpod-cloud-migrate**  | Moves a project to Runpod from another cloud or AI platform. It inventories what the project uses, maps it with a per-platform playbook, plans, ports the code, and verifies the result. |
 
 The plugin also includes a collection of worked, end-to-end reference tasks, such as deploying a Whisper endpoint or running a model on a Pod, that guide your agent through common workflows.
 
@@ -94,6 +95,10 @@ The command takes an optional scope and path:
 ```
 
 Running the command requires the Runpod skills plugin installed in your coding agent (see [Quick start](#quick-start)). For a manual walkthrough of the API changes, see the [migration guide](https://docs.runpod.io/api-reference-v2/migrate-from-v1).
+
+## Migrate from another platform
+
+If your workloads run on another cloud or AI platform, the `/runpod:migrate-cloud` command moves them to Runpod. It scans your repository for the platforms it depends on, proposes a plan with a cost estimate, and waits for your approval before it creates anything. It then migrates one workload at a time and verifies each with a real request. See [Migrate to Runpod](https://docs.runpod.io/migrate/overview) for the guide to each platform.
 
 ## Native install options
 

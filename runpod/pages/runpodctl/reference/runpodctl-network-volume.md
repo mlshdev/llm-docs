@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/reference/runpodctl-network-volume.mdx](https://github.com/runpod/docs/blob/badc3b0885d17c76062faf033073f6d062af3aee/runpodctl/reference/runpodctl-network-volume.mdx)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-network-volume.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/runpodctl/reference/runpodctl-network-volume.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-network-volume
 
 # network-volume
@@ -76,6 +76,59 @@ New volume name.
 **--size (type: int)**
 
 New volume size in GB. Must be larger than the current size.
+
+### Upload files
+
+Upload a file or folder to a network volume:
+
+```bash
+runpodctl network-volume upload <volume-id> ./model.safetensors models/
+runpodctl network-volume upload <volume-id> ./dataset datasets/dataset
+```
+
+The remote path is optional and defaults to the local name. A file uploaded to a remote path that ends in `/` keeps its name inside that folder, and a folder's contents land under the remote path.
+
+### Download files
+
+Download a file or folder from a network volume:
+
+```bash
+runpodctl network-volume download <volume-id> models/model.safetensors
+runpodctl network-volume download <volume-id> outputs/ ./outputs
+```
+
+The local path is optional and defaults to the remote name. Use `/` as the remote path to download the whole volume.
+
+#### Requirements for upload and download
+
+Both commands need `runpodctl` v3.1.0 or later. They use the network volume's [S3-compatible API](https://docs.runpod.io/storage/s3-api), so they also need the following:
+
+- **S3 API keys**, which are separate from your Runpod API key. Create them in your [account settings](https://console.runpod.io/user/settings), then set the `RUNPOD_S3_ACCESS_KEY` and `RUNPOD_S3_SECRET_KEY` environment variables, pass the flags below, or set `s3AccessKey` and `s3SecretKey` in `~/.runpod/config.toml`.
+- **A data center that supports the S3-compatible API.** The CLI looks up the volume's data center with your Runpod API key. Pass `--data-center-id` to skip the lookup.
+
+Transfers resume. If one stops because of a network drop or an interruption, run the same command again: finished files are skipped, and a large file continues from the parts already transferred. Files are also skipped when the destination copy has the same size and isn't older.
+
+#### Upload and download flags
+
+**--concurrency (type: int)**
+
+Number of parallel requests, from 1 to 64 (default `4`).
+
+**--data-center-id (type: string)**
+
+The volume's data center ID, such as `EU-RO-1`. By default, the CLI looks it up from the volume.
+
+**--force (type: bool)**
+
+Transfer every file, including files that the size and time check treats as unchanged. Use it after an edit that kept a file the same size.
+
+**--s3-access-key (type: string)**
+
+S3 API access key. Defaults to the `RUNPOD_S3_ACCESS_KEY` environment variable.
+
+**--s3-secret-key (type: string)**
+
+S3 API secret key. Defaults to the `RUNPOD_S3_SECRET_KEY` environment variable.
 
 ### Delete a network volume
 

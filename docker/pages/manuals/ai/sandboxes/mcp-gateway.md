@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/mcp-gateway.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/ai/sandboxes/mcp-gateway.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/mcp-gateway.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/ai/sandboxes/mcp-gateway.md)
 
 # MCP gateway
 
@@ -449,6 +449,17 @@ mode:
 This choice persists across sandbox restarts unless you
 [unload every server in a named static set](#remove-a-server-from-a-running-sandbox).
 Sandboxes created with `--static-mcp none` remain static.
+
+To check a local sandbox's MCP mode and connected servers, run:
+
+```console
+$ sbx inspect <SANDBOX>
+```
+
+The `MCP mode` field reports `static` or `dynamic`. The `MCP servers` field
+lists connected servers, or `none` when no servers are connected. A dash (`-`)
+means the information is unavailable. These fields describe the sandbox's
+gateway; use [`sbx mcp ls`](#manage-registrations) to list host registrations.
 
 ### Use static mode
 

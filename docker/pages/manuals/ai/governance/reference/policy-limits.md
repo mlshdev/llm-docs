@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/governance/reference/policy-limits.md](https://github.com/docker/docs/blob/553482ce632f00c6e7faabab863422b4916e7c18/content/manuals/ai/governance/reference/policy-limits.md)
+> Pinned source for Docker main: [content/manuals/ai/governance/reference/policy-limits.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/ai/governance/reference/policy-limits.md)
 
 # Organization policy limits
 
@@ -9,16 +9,16 @@ and resource availability across organizations:
 | ------------------------- | ------ | ------------------------------------------------------------------------ |
 | Policies per organization | 100    | All organization policies combined, whatever their type                  |
 | Rules per policy          | 250    | Each network or filesystem policy. MCP policies don't have a rule limit. |
-| Policy size               | 400 KB | Each policy, whatever its type                                           |
+| Policy size               | 350 KB | Each policy, whatever its type                                           |
 
 The policies per organization limit is one shared total, not a separate
 allowance for each policy type. For example, an organization with 60 network
 policies, 30 filesystem policies, and 10 MCP policies has reached the limit.
 
-The policy size limit applies to each policy as Docker stores it. This
-includes the policy's content, such as its name, description, scope, and
-rules or Cedar statements, plus a small amount of metadata that Docker stores
-with every policy. Typical policies use only a small fraction of this limit.
+The policy size limit applies to each policy's definition, which is its rules
+or Cedar statements, including the rule IDs that Docker generates. If a change
+makes a policy larger than the limit, Docker rejects the change and returns an
+error. Typical policies use only a small fraction of this limit.
 Domain and file path values have no separate length limit beyond valid format.
 Because MCP policies have no rule limit, the policy size limit is what caps how
 many Cedar statements an MCP policy can hold.
