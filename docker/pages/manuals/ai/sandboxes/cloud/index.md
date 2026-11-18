@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/_index.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/ai/sandboxes/cloud/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/cloud/_index.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/ai/sandboxes/cloud/_index.md)
 
 # Cloud sandboxes
 
@@ -114,6 +114,9 @@ $ sbx --cloud rm cloud-project
 Removal deletes files stored only in the sandbox. For your own projects, see
 [Transfer files](https://docs.docker.com/ai/sandboxes/cloud/usage/#transfer-files) and
 [Authenticate cloud agents](https://docs.docker.com/ai/sandboxes/cloud/credentials/) before cloning private repositories.
+
+For step-by-step sharing, remote development, and local handoff workflows, see
+[Docker Agentic Platform guides](https://docs.docker.com/agentic-platform/guides/).
 
 ## Learn more
 

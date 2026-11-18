@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.3: [apps/docs/content/guides/integrate/login/oidc/logout.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/guides/integrate/login/oidc/logout.mdx)
+> Pinned source for ZITADEL v4.20.4: [apps/docs/content/guides/integrate/login/oidc/logout.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/guides/integrate/login/oidc/logout.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login/oidc/logout
 
 This guide shows you the different concepts and use cases of the logout process and how to use it in ZITADEL.

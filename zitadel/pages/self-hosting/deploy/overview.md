@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.3: [apps/docs/content/self-hosting/deploy/overview.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/self-hosting/deploy/overview.mdx)
+> Pinned source for ZITADEL v4.20.4: [apps/docs/content/self-hosting/deploy/overview.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/self-hosting/deploy/overview.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/deploy/overview
 
 Choose your platform and run ZITADEL with the most minimal configuration possible.

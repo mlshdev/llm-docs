@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v1/template](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/api-reference/openapi.yaml%23put%20/api/v1/template)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v1/template](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/api-reference/openapi.yaml%23put%20/api/v1/template)
 > Canonical documentation: https://docs.vast.ai/api-reference/templates/edit-template
 
 # edit template

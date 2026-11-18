@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/reference/compose-file/profiles.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/reference/compose-file/profiles.md)
+> Pinned source for Docker main: [content/reference/compose-file/profiles.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/reference/compose-file/profiles.md)
 
 # Learn how to use profiles in Docker Compose
 
@@ -12,7 +12,8 @@ explicitly targeted by a command. In that case its profile is added to the set o
 
 > \[!NOTE]
 >
-> All other top-level elements are not affected by `profiles` and are always active.
+> All other top-level elements, except [jobs](https://docs.docker.com/reference/compose-file/jobs/), are not affected by
+> `profiles` and are always active.
 
 References to other services (by `links`, `extends` or shared resource syntax `service:xxx`) do not
 automatically enable a component that would otherwise have been ignored by active profiles. Instead

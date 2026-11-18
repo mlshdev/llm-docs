@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.3: [apps/docs/content/apis/scim2.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/apis/scim2.mdx)
+> Pinned source for ZITADEL v4.20.4: [apps/docs/content/apis/scim2.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/apis/scim2.mdx)
 > Canonical documentation: https://zitadel.com/docs/apis/scim2
 
 The Zitadel [SCIM v2](https://scim.cloud/) service provider interface enables integration of identity and

@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.3: [apps/docs/content/guides/manage/customize/behavior.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/guides/manage/customize/behavior.mdx)
+> Pinned source for ZITADEL v4.20.4: [apps/docs/content/guides/manage/customize/behavior.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/guides/manage/customize/behavior.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/manage/customize/behavior
 
 In this guide, you will create a [ZITADEL action](https://zitadel.com/docs/concepts/features/actions).

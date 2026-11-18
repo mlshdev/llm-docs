@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.3: [apps/docs/content/guides/integrate/services/cloudflare-oidc.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/guides/integrate/services/cloudflare-oidc.mdx)
+> Pinned source for ZITADEL v4.20.4: [apps/docs/content/guides/integrate/services/cloudflare-oidc.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/guides/integrate/services/cloudflare-oidc.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/services/cloudflare-oidc
 
 This guide shows how to configure ZITADEL as OpenID Connect identity provider for Cloudflare Zero Trust.
@@ -14,7 +14,7 @@ Prerequisites:
 
 Make sure to enable "User Info inside ID Token" on your application settings.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/public/img/guides/integrate/services/user-info-inside-id-token.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/public/img/guides/integrate/services/user-info-inside-id-token.png)
 
 > **Note**
 >

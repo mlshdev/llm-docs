@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/gordon/how-to/configure-tools.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/ai/gordon/how-to/configure-tools.md)
+> Pinned source for Docker main: [content/manuals/ai/gordon/how-to/configure-tools.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/ai/gordon/how-to/configure-tools.md)
 
 # Configure Gordon's tools
 
@@ -25,7 +25,7 @@ To configure Gordon's tools:
 2. Select **Gordon** in the sidebar.
 3. Select the settings icon at the bottom of the text input area.
 
-![Session settings icon](https://raw.githubusercontent.com/docker/docs/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/ai/gordon/images/gordon_permission_settings.avif)
+![Session settings icon](https://raw.githubusercontent.com/docker/docs/947343021a3e1eea022cbede8df39387717343f9/content/manuals/ai/gordon/images/gordon_permission_settings.avif)
 
 The tool settings dialog opens with two tabs: **Basic** and **Advanced**.
 
@@ -60,7 +60,7 @@ To configure:
 2. Add commands to **Allow rules** or **Deny rules**.
 3. Select **Save**.
 
-![Advanced tool configuration](https://raw.githubusercontent.com/docker/docs/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/ai/gordon/images/gordon_advanced_tool_config.avif)
+![Advanced tool configuration](https://raw.githubusercontent.com/docker/docs/947343021a3e1eea022cbede8df39387717343f9/content/manuals/ai/gordon/images/gordon_advanced_tool_config.avif)
 
 Gordon still requests approval before running allow-listed tools, unless YOLO
 mode (auto-approve mode that bypasses permission checks) is enabled.

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [sdk/python/reference/set-user.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/sdk/python/reference/set-user.mdx)
+> Pinned source for Vast.ai main: [sdk/python/reference/set-user.mdx](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/sdk/python/reference/set-user.mdx)
 > Canonical documentation: https://docs.vast.ai/sdk/python/reference/set-user
 
 # VastAI.set_user

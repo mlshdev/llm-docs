@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.3: [apps/docs/content/concepts/structure/policies.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/concepts/structure/policies.mdx)
+> Pinned source for ZITADEL v4.20.4: [apps/docs/content/concepts/structure/policies.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/concepts/structure/policies.mdx)
 > Canonical documentation: https://zitadel.com/docs/concepts/structure/policies
 
 Settings and policies control the behavior of all the different parts of the instance or an organization. For all parts we have a suitable default in the instance.

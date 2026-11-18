@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.3: [apps/docs/content/self-hosting/manage/production.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/self-hosting/manage/production.mdx)
+> Pinned source for ZITADEL v4.20.4: [apps/docs/content/self-hosting/manage/production.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/self-hosting/manage/production.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/manage/production
 
 As soon as you successfully deployed ZITADEL as a proof of concept using one of our [deployment guides](https://zitadel.com/docs/self-hosting/deploy/overview),

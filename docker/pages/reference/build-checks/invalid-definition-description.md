@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/invalid-definition-description.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/invalid-definition-description.md)
+> Pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/invalid-definition-description.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/invalid-definition-description.md)
 
 > \[!NOTE]
 > This check is experimental and is not enabled by default. To enable it, see

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_secret_rm.yaml](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/data/sbx_cli/sbx_secret_rm.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_secret_rm.yaml](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/data/sbx_cli/sbx_secret_rm.yaml)
 
 # sbx secret rm
 
@@ -13,6 +13,7 @@ Remove a secret
 | `--all`           |         | Remove every stored secret across all scopes                                                            |
 | `--all-sandboxes` |         | Remove registry credentials injected into every sandbox (requires --registry)                           |
 | `-f`, `--force`   |         | Delete without confirmation prompt                                                                      |
+| `--placeholder`   |         | Custom mode: placeholder value                                                                          |
 | `--registry`      |         | Registry hostname to remove pull credentials for                                                        |
 | `--sandbox`       |         | Scope the removal to one sandbox (default: all scopes when choosing interactively, global with SERVICE) |
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/usage/pulls.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/docker-hub/usage/pulls.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/usage/pulls.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/docker-hub/usage/pulls.md)
 
 # Docker Hub pull usage and limits
 
@@ -25,7 +25,7 @@ A pull is defined as the following:
   occurs as a result of the pull. Depending on the client, a `docker pull` can
   verify the existence of an image or tag without downloading it by performing
   a version check.
-- Version checks do not count towards usage pricing.
+- Version checks do not count towards pull rate limits.
 - A pull for a normal image makes one pull for a [single
   manifest](https://github.com/opencontainers/image-spec/blob/main/manifest.md).
 - A pull for a multi-arch image will count as one pull for each

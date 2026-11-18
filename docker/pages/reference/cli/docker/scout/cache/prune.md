@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/scout/docker_scout_cache_prune.yaml](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/data/cli/scout/docker_scout_cache_prune.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_cache_prune.yaml](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/data/cli/scout/docker_scout_cache_prune.yaml)
 
 # docker scout cache prune
 

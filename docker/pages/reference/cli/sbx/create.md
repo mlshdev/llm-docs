@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_create.yaml](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/data/sbx_cli/sbx_create.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_create.yaml](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/data/sbx_cli/sbx_create.yaml)
 
 # sbx create
 
@@ -37,8 +37,8 @@ Cloud sandboxes use cloud network policies. Host network and HTTP policies
 do not apply. Set cloud account defaults with
 "sbx --cloud policy init \<allow-all|balanced|deny-all>".
 
-Use "sbx --cloud run <agent> --name SANDBOX" to attach to the agent after
-creation: cloud needs the agent, since a name alone is not a unique handle.
+After creation, use "sbx --cloud attach SANDBOX" with the sandbox ID printed
+by create to attach to the agent.
 
 ## Options
 
@@ -110,7 +110,7 @@ creation: cloud needs the agent, since a name alone is not a unique handle.
   # Add a mixin from a git repository (git+https:// or git+ssh://, optionally pinned to a ref and/or subdirectory)
   sbx create claude --kit "git+https://github.com/org/repo.git#ref=v1.0&dir=mixins/foo"
 
-  # Run the agent on an in-container clone of the host repo, wired back via a git-daemon
+  # Run the agent on an in-container clone of the host repo; fetch its commits with git fetch sandbox-<name>
   sbx create --clone claude .
 
   # Create a cloud sandbox for claude

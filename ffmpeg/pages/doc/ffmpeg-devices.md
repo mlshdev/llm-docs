@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-devices.texi](https://github.com/FFmpeg/FFmpeg/blob/82d767e969d30f9f6db24ef67576890cf3f487ba/doc/ffmpeg-devices.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-devices.texi](https://github.com/FFmpeg/FFmpeg/blob/cb1e96f5f59e579a33b3dedc64e92f509688de68/doc/ffmpeg-devices.texi)
 
 # Description
 

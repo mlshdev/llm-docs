@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.3: [apps/docs/content/self-hosting/manage/productionchecklist.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/self-hosting/manage/productionchecklist.mdx)
+> Pinned source for ZITADEL v4.20.4: [apps/docs/content/self-hosting/manage/productionchecklist.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/self-hosting/manage/productionchecklist.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/manage/productionchecklist
 
 To apply best practices to your production setup we created a step by step checklist you may wish to follow.

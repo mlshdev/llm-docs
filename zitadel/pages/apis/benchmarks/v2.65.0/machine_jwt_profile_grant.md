@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.3: [apps/docs/content/apis/benchmarks/v2.65.0/machine_jwt_profile_grant/index.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/apis/benchmarks/v2.65.0/machine_jwt_profile_grant/index.mdx)
+> Pinned source for ZITADEL v4.20.4: [apps/docs/content/apis/benchmarks/v2.65.0/machine_jwt_profile_grant/index.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/apis/benchmarks/v2.65.0/machine_jwt_profile_grant/index.mdx)
 > Canonical documentation: https://zitadel.com/docs/apis/benchmarks/v2.65.0/machine_jwt_profile_grant
 
 Tests are halted after this test run because of too many [client read events](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/wait-event.clientread.html) on the database.

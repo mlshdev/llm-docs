@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/compose/how-tos/init-containers.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/compose/how-tos/init-containers.md)
+> Pinned source for Docker main: [content/manuals/compose/how-tos/init-containers.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/compose/how-tos/init-containers.md)
 
 # Use init containers in Compose
 
@@ -16,7 +16,7 @@ Compose models init containers as [`pre_start`](https://docs.docker.com/referenc
 
 For static files and secrets, use the native [`configs`](https://docs.docker.com/reference/compose-file/configs/) and [`secrets`](https://docs.docker.com/reference/compose-file/secrets/) top-level elements instead. Compose mounts them directly into containers with a configurable target path, mode, UID, and GID. No init container required.
 
-For background tasks with their own lifecycle - scheduled backups, post-exit cleanup, periodic maintenance — init containers are the wrong tool. Those tasks run independently of service startup, not before it.
+For background tasks with their own lifecycle - scheduled backups, post-exit cleanup, periodic maintenance — init containers are the wrong tool. Those tasks run independently of service startup, not before it. To run them, use [jobs](https://docs.docker.com/compose/how-tos/jobs/).
 
 ## How `pre_start` containers run
 

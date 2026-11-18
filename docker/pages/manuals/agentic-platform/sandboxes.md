@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/agentic-platform/sandboxes.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/agentic-platform/sandboxes.md)
+> Pinned source for Docker main: [content/manuals/agentic-platform/sandboxes.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/agentic-platform/sandboxes.md)
 
 # Sandboxes
 
@@ -17,6 +17,15 @@ and is useful for working manually or installing your own agent.
 
 Your sandbox keeps running when you leave the Console. It runs until you pause
 or delete it. When its timer expires, it performs the action you selected.
+
+## Name a sandbox
+
+You can choose a name when you create a sandbox or keep the randomly generated
+name. See [Sandbox options](https://docs.docker.com/agentic-platform/get-started/#sandbox-options) for how to set a name
+before launch.
+
+To rename an existing sandbox, open it in the Console and edit its name on the
+sandbox's detail page.
 
 ## Choose a platform
 

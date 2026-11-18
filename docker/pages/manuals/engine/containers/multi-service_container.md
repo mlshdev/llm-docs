@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/containers/multi-service_container.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/engine/containers/multi-service_container.md)
+> Pinned source for Docker main: [content/manuals/engine/containers/multi-service_container.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/engine/containers/multi-service_container.md)
 
 A container's main running process is the `ENTRYPOINT` and/or `CMD` at the
 end of the `Dockerfile`. It's best practice to separate areas of concern by
@@ -49,11 +49,14 @@ Next, the Dockerfile:
 ```dockerfile
 # syntax=docker/dockerfile:1
 FROM ubuntu:latest
-COPY my_first_process my_first_process
-COPY my_second_process my_second_process
+COPY --chmod=755 my_first_process my_first_process
+COPY --chmod=755 my_second_process my_second_process
 COPY --chmod=755 my_wrapper_script.sh my_wrapper_script.sh
 CMD ./my_wrapper_script.sh
 ```
+
+These examples use `COPY --chmod=755` to ensure the wrapper and the programs it
+invokes are executable, regardless of their permissions in the build context.
 
 ## Use Bash job controls
 
@@ -85,8 +88,8 @@ fg %1
 ```dockerfile
 # syntax=docker/dockerfile:1
 FROM ubuntu:latest
-COPY my_main_process my_main_process
-COPY my_helper_process my_helper_process
+COPY --chmod=755 my_main_process my_main_process
+COPY --chmod=755 my_helper_process my_helper_process
 COPY --chmod=755 my_wrapper_script.sh my_wrapper_script.sh
 CMD ./my_wrapper_script.sh
 ```

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/sdk/list-machines.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/host/sdk/list-machines.mdx)
+> Pinned source for Vast.ai main: [host/sdk/list-machines.mdx](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/host/sdk/list-machines.mdx)
 > Canonical documentation: https://docs.vast.ai/host/sdk/list-machines
 
 # VastAI.list_machines

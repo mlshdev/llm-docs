@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/compose/intro/compose-application-model.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/compose/intro/compose-application-model.md)
+> Pinned source for Docker main: [content/manuals/compose/intro/compose-application-model.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/compose/intro/compose-application-model.md)
 
 # How Compose works
 
@@ -21,6 +21,8 @@ A [secret](https://docs.docker.com/reference/compose-file/secrets/) is a specifi
 > \[!NOTE]
 >
 > With volumes, configs and secrets you can have a simple declaration at the top-level and then add more platform-specific information at the service level.
+
+One-shot work that runs to completion, rather than staying up like a service, is defined as a [job](https://docs.docker.com/reference/compose-file/jobs/). The Specification defines a dedicated jobs concept for workloads such as database migrations and backups, which run on demand or on a cron schedule. Docker Engine records the state and exit code of each run, so the result survives the removal of the container. Jobs are experimental. Scheduled jobs require the [jobs extension](https://docs.docker.com/engine/daemon/jobs/#turn-on-the-jobs-extension) to be turned on in Docker Engine.
 
 A project is an individual deployment of an application specification on a platform. A project's name, set with the top-level [`name`](https://docs.docker.com/reference/compose-file/version-and-name/) attribute, is used to group
 resources together and isolate them from other applications or other installation of the same Compose-specified application with distinct parameters. If you are creating resources on a platform, you must prefix resource names by project and
@@ -90,7 +92,7 @@ The backend stores data in a persistent volume.
 
 Both services communicate with each other on an isolated back-tier network, while the frontend is also connected to a front-tier network and exposes port 443 for external usage.
 
-![Compose application example](https://raw.githubusercontent.com/docker/docs/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/compose/images/compose-application.webp)
+![Compose application example](https://raw.githubusercontent.com/docker/docs/947343021a3e1eea022cbede8df39387717343f9/content/manuals/compose/images/compose-application.webp)
 
 The example application is composed of the following parts:
 

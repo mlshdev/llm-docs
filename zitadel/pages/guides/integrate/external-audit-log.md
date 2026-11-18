@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.3: [apps/docs/content/guides/integrate/external-audit-log.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/guides/integrate/external-audit-log.mdx)
+> Pinned source for ZITADEL v4.20.4: [apps/docs/content/guides/integrate/external-audit-log.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/guides/integrate/external-audit-log.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/external-audit-log
 
 This document details integrating ZITADEL with external systems for streaming events and audit logs.

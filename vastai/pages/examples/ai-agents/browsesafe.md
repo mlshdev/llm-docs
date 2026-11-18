@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [examples/ai-agents/browsesafe.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/examples/ai-agents/browsesafe.mdx)
+> Pinned source for Vast.ai main: [examples/ai-agents/browsesafe.mdx](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/examples/ai-agents/browsesafe.mdx)
 > Canonical documentation: https://docs.vast.ai/examples/ai-agents/browsesafe
 
 # BrowseSafe Prompt Injection Detection

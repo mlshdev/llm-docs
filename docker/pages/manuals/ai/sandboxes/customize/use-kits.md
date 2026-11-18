@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/use-kits.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/ai/sandboxes/customize/use-kits.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/use-kits.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/ai/sandboxes/customize/use-kits.md)
 
 # Use kits
 
@@ -330,6 +330,36 @@ discarded when the sandbox stops.
 
 For how to preserve storage when changing a kit, see
 [Configure the volume](https://docs.docker.com/ai/sandboxes/customize/author/patterns/#configure-the-volume).
+
+### Preserve Claude Code and Codex conversations
+
+For local sandboxes, add a session mixin to keep conversations after removing
+and recreating the sandbox, including when you use `--rm`. Choose the mixin
+that matches your agent:
+
+**Claude Code**
+
+```console
+$ sbx run --rm claude --kit sbx/claude-sessions:1.0.0
+```
+
+**Codex**
+
+```console
+$ sbx run --rm codex --kit sbx/codex-sessions:1.0.0
+```
+
+Start a conversation, then enter `/exit`. Run the same command again from the
+same project directory and enter `/resume` inside the agent to select the saved
+conversation.
+
+The mixins use host directories managed by Docker Sandboxes to store session
+state. They don't share conversations with Claude Code or Codex running directly
+on your host. Include the session mixin each time you recreate the sandbox.
+
+To choose a host directory, see [Choose directories for kit host mounts](#choose-directories-for-kit-host-mounts).
+The sandbox mount paths are `/home/agent/claude-history` for Claude Code and
+`/home/agent/codex-history` for Codex.
 
 ## Restrict kit sources
 

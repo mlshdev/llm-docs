@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_exec.yaml](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/data/sbx_cli/sbx_exec.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_exec.yaml](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/data/sbx_cli/sbx_exec.yaml)
 
 # sbx exec
 
@@ -10,7 +10,7 @@ Execute a command inside a sandbox
 
 Execute a command in a sandbox. If the sandbox is stopped, it is started first. Or — with --cloud — the cloud sandbox
 ID (sbx\_\*) or name from "sbx --cloud ls". --user is not supported with --cloud.
-\--detach-keys applies only to an interactive (-i/-t) cloud exec.
+Exec sessions cannot detach; --detach-keys is not supported.
 
 Exit status is that of the command. sbx exits 125 if it could not run the command,
 for example because the sandbox does not exist. A missing command exits 127,
@@ -18,15 +18,14 @@ unless a cloud backend reports it as an error rather than a status, which exits 
 
 ## Options
 
-| Option                | Default | Description                                                                                              |
-| --------------------- | ------- | -------------------------------------------------------------------------------------------------------- |
-| `--detach-keys`       |         | Override the key sequence for detaching an interactive cloud exec session (not supported for local exec) |
-| `-e`, `--env`         |         | Set environment variables                                                                                |
-| `--env-file`          |         | Read in a file of environment variables                                                                  |
-| `-i`, `--interactive` |         | Keep STDIN open even if not attached                                                                     |
-| `-t`, `--tty`         |         | Allocate a pseudo-TTY                                                                                    |
-| `-u`, `--user`        |         | Username or UID (format: \<name\|uid>\[:\<group\|gid>])                                                  |
-| `-w`, `--workdir`     |         | Working directory inside the container                                                                   |
+| Option                | Default | Description                                             |
+| --------------------- | ------- | ------------------------------------------------------- |
+| `-e`, `--env`         |         | Set environment variables                               |
+| `--env-file`          |         | Read in a file of environment variables                 |
+| `-i`, `--interactive` |         | Keep STDIN open even if not attached                    |
+| `-t`, `--tty`         |         | Allocate a pseudo-TTY                                   |
+| `-u`, `--user`        |         | Username or UID (format: \<name\|uid>\[:\<group\|gid>]) |
+| `-w`, `--workdir`     |         | Working directory inside the container                  |
 
 ## Global options
 

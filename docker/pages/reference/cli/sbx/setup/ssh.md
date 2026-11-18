@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_setup_ssh.yaml](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/data/sbx_cli/sbx_setup_ssh.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_setup_ssh.yaml](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/data/sbx_cli/sbx_setup_ssh.yaml)
 
 # sbx setup ssh
 
@@ -20,6 +20,9 @@ socket or named pipe (OS user boundary) combined with an active Docker login. Si
 (sbx login). On macOS and Windows, use --auto-create to install the fixed codex.sbx and
 claude.sbx desktop profiles. Sandboxes are created with the standard resource defaults.
 
+With --cloud:
+Write the sbx\_cloud SSH alias to connect to cloud sandboxes. Sign in first with sbx login. The alias uses the selected cloud API endpoint; credentials are obtained when connecting.
+
 ## Options
 
 | Option          | Default | Description                                                           |
@@ -40,4 +43,7 @@ claude.sbx desktop profiles. Sandboxes are created with the standard resource de
 ```console
 sbx setup ssh
   ssh my-sandbox.sbx -- echo hello
+
+  sbx --cloud setup ssh
+  ssh sbx_ID@sbx_cloud
 ```

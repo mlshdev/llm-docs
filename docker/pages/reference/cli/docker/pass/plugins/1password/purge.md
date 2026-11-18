@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/secrets/docker_pass_plugins_1password_purge.yaml](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/data/cli/secrets/docker_pass_plugins_1password_purge.yaml)
+> Pinned source for Docker main: [data/cli/secrets/docker_pass_plugins_1password_purge.yaml](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/data/cli/secrets/docker_pass_plugins_1password_purge.yaml)
 
 # docker pass plugins 1password purge
 

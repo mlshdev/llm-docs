@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.3: [apps/docs/content/guides/manage/customize/branding.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/guides/manage/customize/branding.mdx)
+> Pinned source for ZITADEL v4.20.4: [apps/docs/content/guides/manage/customize/branding.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/guides/manage/customize/branding.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/manage/customize/branding
 
 ZITADEL offers various customization options for your projects brand design. The branding can be configured on two different levels.
@@ -15,7 +15,7 @@ After this your settings will trigger in your system. The login and the emails w
 
 ## Settings
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/public/img/console_private_labeling.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/public/img/console_private_labeling.png)
 
 ### Logo
 

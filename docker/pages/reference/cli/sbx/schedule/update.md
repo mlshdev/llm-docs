@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_schedule_update.yaml](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/data/sbx_cli/sbx_schedule_update.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_schedule_update.yaml](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/data/sbx_cli/sbx_schedule_update.yaml)
 
 # sbx schedule update
 
@@ -29,14 +29,15 @@ network flags, --max-run-duration, --cpus, --memory, --platform, --env and
 | `--enabled`          | `true`  | Start runs on the cron cadence; --enabled=false pauses the schedule                                                       |
 | `-e`, `--env`        |         | Set an environment variable for each run (can be repeated): KEY=VALUE                                                     |
 | `--env-file`         |         | Read environment variables from a file (can be repeated). --env wins over any file; a later file wins over an earlier one |
-| `--max-run-duration` |         | Longest a run may take, at least 1h, e.g. 2h30m (default: 1h)                                                             |
+| `--max-run-duration` |         | Longest a run may take, at least 1h, e.g. 2h30m; units are case-insensitive (default: 1h)                                 |
 | `-m`, `--memory`     |         | Memory for each run's sandbox, e.g. 8g (default: the kit's)                                                               |
 | `--name`             |         | Name of the schedule                                                                                                      |
 | `--platform`         |         | Platform for each run's sandbox: linux/amd64 or linux/arm64                                                               |
 | `--prompt`           |         | Prompt each run passes to the kit's agent                                                                                 |
 | `--static-mcp`       |         | Cloud MCP gateway servers each run's sandbox gets, comma-separated or repeated                                            |
 | `--timezone`         |         | IANA time zone the cron expression is evaluated in, e.g. Europe/Berlin                                                    |
-| `--working-dir`      |         | Directory the prompt or command runs in                                                                                   |
+| `-w`, `--workdir`    |         | Directory the prompt or command runs in                                                                                   |
+| `--working-dir`      |         | Alias for --workdir                                                                                                       |
 
 ## Global options
 

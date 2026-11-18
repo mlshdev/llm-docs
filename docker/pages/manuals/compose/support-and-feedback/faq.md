@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/compose/support-and-feedback/faq.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/compose/support-and-feedback/faq.md)
+> Pinned source for Docker main: [content/manuals/compose/support-and-feedback/faq.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/compose/support-and-feedback/faq.md)
 
 # Frequently asked questions about Docker Compose
 

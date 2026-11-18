@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_rm.yaml](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/data/sbx_cli/sbx_rm.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_rm.yaml](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/data/sbx_cli/sbx_rm.yaml)
 
 # sbx rm
 
@@ -55,4 +55,11 @@ sbx rm my-sandbox
 
   # Remove every sandbox without asking
   sbx rm --all --force
+
+  # Remove a cloud sandbox by name or ID
+  sbx --cloud rm my-sandbox
+  sbx --cloud rm sbx_abc123
+
+  # Remove specific cloud sandboxes without confirmation
+  sbx --cloud rm sbx_abc123 sbx_def456 --force
 ```

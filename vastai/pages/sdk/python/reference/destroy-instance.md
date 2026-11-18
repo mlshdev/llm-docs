@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [sdk/python/reference/destroy-instance.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/sdk/python/reference/destroy-instance.mdx)
+> Pinned source for Vast.ai main: [sdk/python/reference/destroy-instance.mdx](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/sdk/python/reference/destroy-instance.mdx)
 > Canonical documentation: https://docs.vast.ai/sdk/python/reference/destroy-instance
 
 # VastAI.destroy_instance

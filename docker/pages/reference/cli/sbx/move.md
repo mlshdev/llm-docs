@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_move.yaml](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/data/sbx_cli/sbx_move.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_move.yaml](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/data/sbx_cli/sbx_move.yaml)
 
 # sbx move
 
@@ -49,7 +49,7 @@ What does not travel:
   ports under new cloud URLs; a port the cloud refuses is skipped with a
   warning. Moving to local saves the published TCP ports and binds them
   on loopback while the sandbox runs. Host ports can change on restart;
-  'sbx ports SANDBOX' shows them. A cloud port published with an
+  'sbx port ls SANDBOX' shows them. A cloud port published with an
   explicit host binding stops a move to local.
 
 Sizing and disk:

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/permissions.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/api-reference/permissions.mdx)
+> Pinned source for Vast.ai main: [api-reference/permissions.mdx](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/api-reference/permissions.mdx)
 > Canonical documentation: https://docs.vast.ai/api-reference/permissions
 
 # Permissions
@@ -21,7 +21,7 @@ Permissions are organized into categories. When you create a scoped API key, you
 | `billing_write`  | Transferring credit                                                            |
 | `machine_read`   | Viewing machines and reports (hosts)                                           |
 | `machine_write`  | Managing machines, maintenance, listing/unlisting (hosts)                      |
-| `misc`           | Search offers, benchmarks, network volumes, serverless endpoints               |
+| `misc`           | Search offers, benchmarks, serverless endpoints                                |
 | `team_read`      | Viewing team members and roles                                                 |
 | `team_write`     | Inviting/removing team members, managing roles                                 |
 

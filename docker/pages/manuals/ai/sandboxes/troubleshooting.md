@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/ai/sandboxes/troubleshooting.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/ai/sandboxes/troubleshooting.md)
 
 # Troubleshooting
 
@@ -542,6 +542,11 @@ As a last resort, if `sbx reset` doesn't resolve your issue, you can remove the
 `sbx` state directory entirely. This deletes all sandbox data, configuration, and
 cached images. Stop all running sandboxes first with `sbx reset`.
 
+For root cleanup on macOS or Linux, replace `~` in these commands with root's
+registered home directory. Using `sudo` does not change how your shell expands
+`~`. See [Storage paths when running as root](https://docs.docker.com/ai/sandboxes/faq/#which-storage-paths-are-used-when-running-as-root)
+for the environment overrides that `sbx` ignores.
+
 **macOS**
 
 ```console
@@ -565,9 +570,9 @@ $ rm -rf ~/.cache/sandboxes/
 $ rm -rf ~/.config/sandboxes/
 ```
 
-If you have set custom `XDG_STATE_HOME`, `XDG_CACHE_HOME`, or
-`XDG_CONFIG_HOME` environment variables, replace `~/.local/state`,
-`~/.cache`, and `~/.config` with the corresponding values.
+If you run `sbx` as an ordinary user and have set custom `XDG_STATE_HOME`,
+`XDG_CACHE_HOME`, or `XDG_CONFIG_HOME` environment variables, replace
+`~/.local/state`, `~/.cache`, and `~/.config` with the corresponding values.
 
 ## Enable automatic diagnostics uploads
 

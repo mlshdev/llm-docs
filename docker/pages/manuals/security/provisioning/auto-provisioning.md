@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/provisioning/auto-provisioning.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/security/provisioning/auto-provisioning.md)
+> Pinned source for Docker main: [content/manuals/security/provisioning/auto-provisioning.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/security/provisioning/auto-provisioning.md)
 
 # Auto-provisioning
 

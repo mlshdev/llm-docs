@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/machines/{machine_id}/reports](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/api-reference/openapi.yaml%23get%20/api/v0/machines/%7Bmachine_id%7D/reports)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/machines/{machine_id}/reports](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/api-reference/openapi.yaml%23get%20/api/v0/machines/%7Bmachine_id%7D/reports)
 > Canonical documentation: https://docs.vast.ai/api-reference/machines/show-reports
 
 # show reports

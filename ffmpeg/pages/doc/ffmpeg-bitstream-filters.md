@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-bitstream-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/82d767e969d30f9f6db24ef67576890cf3f487ba/doc/ffmpeg-bitstream-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-bitstream-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/cb1e96f5f59e579a33b3dedc64e92f509688de68/doc/ffmpeg-bitstream-filters.texi)
 
 # Description
 
@@ -243,7 +243,17 @@ Convert from a `EIA_608` stream to a `SMPTE_436M_ANC` data stream, wrapping the 
 - initial\_cdp\_sequence\_cntr
   The initial value of the CDP's 16-bit unsigned integer `cdp_hdr_sequence_cntr` and `cdp_ftr_sequence_cntr` fields. Defaults to 0.
 - cdp\_frame\_rate
-  Set the CDP's `cdp_frame_rate` field. This doesn't actually change the timing of the data stream, it just changes the values inserted in that field in the generated CDP packets. Defaults to `30000/1001`.
+  Set the CDP's `cdp_frame_rate` field. When `split` is enabled, it
+  also sets the duration and the EIA-608 capacity of each output packet,
+  otherwise the timing of the data stream is not changed. Defaults to
+  `30000/1001`.
+- split
+  Split the packets holding more EIA-608 byte pairs than one frame can carry,
+  like the ones of an SCC file, into one packet per frame, and delay the
+  following packets when needed. A frame lasts `1/cdp_frame_rate` and carries
+  `30000/1001/cdp_frame_rate` byte pairs of each field on average. Packets
+  holding CTA-708 data are not split. The timestamps are left untouched when
+  disabled, which is the default.
 
 ## extract\_extradata
 

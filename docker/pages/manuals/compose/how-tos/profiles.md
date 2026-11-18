@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/compose/how-tos/profiles.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/compose/how-tos/profiles.md)
+> Pinned source for Docker main: [content/manuals/compose/how-tos/profiles.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/compose/how-tos/profiles.md)
 
 Profiles help you adjust your Compose application for different environments or use cases by selectively activating services. Services can be assigned to one or more profiles; unassigned services start/stop by default, while assigned ones only start/stop when their profile is active. This setup means specific services, like those for debugging or development, to be included in a single `compose.yml` file and activated only as needed.
 
@@ -38,7 +38,7 @@ Valid profiles names follow the regex format of `[a-zA-Z0-9][a-zA-Z0-9_.-]+`.
 > \[!TIP]
 >
 > The core services of your application shouldn't be assigned `profiles` so
-> they are always enabled and automatically started.
+> they are always enabled and automatically started. Jobs also support the [`profiles` attribute](https://docs.docker.com/reference/compose-file/jobs/#profiles) and follow the same rules as services: a job with `profiles` is only active when one of its profiles is active, unless you target it with `docker compose run`.
 
 ## Start specific profiles
 
@@ -122,6 +122,10 @@ If the targeted service has dependencies that are also gated behind a profile, y
 - In the same profile
 - Started separately
 - Not assigned to any profile so are always enabled
+
+> \[!TIP]
+>
+> A profiled service that you only ever start with `docker compose run`, such as `db-migrations` above, is often better expressed as a [job](https://docs.docker.com/compose/how-tos/jobs/). Compose doesn't record whether that work succeeded once its container is removed, and nothing runs it on a schedule. A job keeps a run record with its exit code, and Docker Engine can fire it on a cron schedule. Jobs are experimental.
 
 ## Stop application and services with specific profiles
 

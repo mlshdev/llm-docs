@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/82d767e969d30f9f6db24ef67576890cf3f487ba/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/cb1e96f5f59e579a33b3dedc64e92f509688de68/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -12321,18 +12321,30 @@ when the input format qualifies; no additional options are required.
 When the input format is not `AV_PIX_FMT_CUDA`, the backend uses
 the standard CPU tensor path.
 
+The common `input_dtype` option currently selects the LibTorch
+input tensor element type: `auto` (default), `float`, or
+`uint8`. `auto` tries to detect the type from the model graph
+and falls back to `float` if that fails; set
+`input_dtype=uint8` explicitly for a model requiring UINT8 input
+when auto-detection fails. Other backends do not currently use this
+option to override their input tensor type.
+
+For LibTorch software-frame processing, input and output tensors may
+be `float` or `uint8`. Processing CUDA-backed frames requires
+a model accepting `float` input and returning `float` output.
+
 - onnx
   ONNX Runtime backend. To enable this backend you need to install the
   ONNX Runtime library (see <https://onnxruntime.ai/>) and configure
   FFmpeg with `--enable-libonnxruntime`.
 
 The current ONNX Runtime backend expects 4-D input and output tensors
-with NCHW layout and 32-bit floating-point element type (ONNX
-`FLOAT`); models with integer or other element types (e.g.
-`UINT8`) are not supported and will be rejected at load time.
-Models using NHWC layout or other ranks are not yet
-supported. Only single-input models are supported; the backend binds
-exactly one input tensor when running the model.
+with NCHW layout. For `dnn_processing`, both 32-bit floating-point
+(ONNX `FLOAT`) and 8-bit unsigned integer (ONNX `UINT8`)
+element types are supported; other element types are not supported and
+will be rejected at load time. Models using NHWC layout or other ranks
+are not yet supported. Only single-input models are supported; the
+backend binds exactly one input tensor when running the model.
 
 The `input` and `output` options are optional for the
 ONNX Runtime backend; when they are omitted the backend resolves the
@@ -35056,9 +35068,12 @@ For more information about libzmq see:
 The `zmq` and `azmq` filters work as a libzmq server, which
 receives messages sent through a network interface defined by the
 `bind_address` (or the abbreviation "`b`") option.
-Default value of this option is `tcp://localhost:5555`. You may
+Default value of this option is `tcp://127.0.0.1:5555`. You may
 want to alter this value to your needs, but do not forget to escape any
 ':' signs (see filtergraph escaping).
+
+Commands are not authenticated, protect a non-loopback
+`bind_address` with a firewall.
 
 The received message must be in the form:
 

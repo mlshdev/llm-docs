@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/codex.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/ai/sandboxes/agents/codex.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/codex.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/ai/sandboxes/agents/codex.md)
 
 # Codex
 
@@ -27,6 +27,13 @@ $ sbx run codex
 
 To create a [mountless sandbox](https://docs.docker.com/ai/sandboxes/usage/#choose-a-workspace), use
 `sbx create` without a workspace path, then attach by name.
+
+## Preserve conversations after sandbox removal
+
+To keep Codex conversations when you remove and recreate a local sandbox,
+add its session mixin when creating the sandbox. See
+[Preserve Claude Code and Codex conversations](https://docs.docker.com/ai/sandboxes/customize/use-kits/#preserve-claude-code-and-codex-conversations)
+for commands and steps to resume a conversation.
 
 ## Authentication
 

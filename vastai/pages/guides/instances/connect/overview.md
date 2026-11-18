@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/connect/overview.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/guides/instances/connect/overview.mdx)
+> Pinned source for Vast.ai main: [guides/instances/connect/overview.mdx](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/guides/instances/connect/overview.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/connect/overview
 
 # Overview

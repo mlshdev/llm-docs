@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.3: [apps/docs/content/concepts/eventstore/overview.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/concepts/eventstore/overview.mdx)
+> Pinned source for ZITADEL v4.20.4: [apps/docs/content/concepts/eventstore/overview.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/concepts/eventstore/overview.mdx)
 > Canonical documentation: https://zitadel.com/docs/concepts/eventstore/overview
 
 ZITADEL is built on the [Event Sourcing pattern](https://zitadel.com/docs/concepts/architecture/software), where changes are stored as events in an Event Store.

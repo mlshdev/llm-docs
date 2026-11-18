@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_env_exec.yaml](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/data/sbx_cli/sbx_env_exec.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_env_exec.yaml](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/data/sbx_cli/sbx_env_exec.yaml)
 
 # sbx env exec
 
@@ -41,7 +41,6 @@ unless a cloud backend reports it as an error rather than a status, which exits 
 
 | Option                | Default | Description                                                                                                                                                            |
 | --------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--detach-keys`       |         | Override the key sequence for detaching an interactive cloud exec session (not supported for local exec)                                                               |
 | `-e`, `--env`         |         | Set environment variables                                                                                                                                              |
 | `--env-arg`           |         | Value for an argument the environment file declares, as name=value (can be repeated) (Experimental)                                                                    |
 | `--env-args-file`     |         | File of name=value environment arguments, one per line (can be repeated); --env-arg overrides (Experimental)                                                           |

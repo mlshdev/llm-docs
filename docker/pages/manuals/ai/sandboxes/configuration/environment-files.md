@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/environment-files.md](https://github.com/docker/docs/blob/670073947d7b7046bc419b40a27c5a448d9b6c9b/content/manuals/ai/sandboxes/configuration/environment-files.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/configuration/environment-files.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/ai/sandboxes/configuration/environment-files.md)
 
 A sandbox environment file captures the setup for a local or cloud sandbox in a
 `sbxenv.yaml` file. Share the file with project contributors so they use the
@@ -1008,6 +1008,10 @@ and can run only for its sandbox.
 | `args`    | list of strings | No       | None    | Arguments passed to `command`                           |
 
 Each server must set exactly one of `url` or `command`.
+
+To reuse servers already registered on the host, see
+[Load registered servers when creating an environment](https://docs.docker.com/ai/sandboxes/mcp-gateway/#load-registered-servers-when-creating-an-environment)
+for a `postCreate` lifecycle example.
 
 #### Approve local MCP commands
 

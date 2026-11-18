@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.3: [apps/docs/content/self-hosting/manage/reverseproxy/reverse_proxy.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/self-hosting/manage/reverseproxy/reverse_proxy.mdx)
+> Pinned source for ZITADEL v4.20.4: [apps/docs/content/self-hosting/manage/reverseproxy/reverse_proxy.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/self-hosting/manage/reverseproxy/reverse_proxy.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/manage/reverseproxy/reverse_proxy
 
 ZITADEL exposes a single HTTP/2 port (default `8080`) that serves both gRPC and HTTP APIs, as well as the management console.

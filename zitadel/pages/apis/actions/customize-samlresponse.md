@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.3: [apps/docs/content/apis/actions/customize-samlresponse.mdx](https://github.com/zitadel/zitadel/blob/a8b256c94b6d8615f12c05c54289600a06ca1912/apps/docs/content/apis/actions/customize-samlresponse.mdx)
+> Pinned source for ZITADEL v4.20.4: [apps/docs/content/apis/actions/customize-samlresponse.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/apis/actions/customize-samlresponse.mdx)
 > Canonical documentation: https://zitadel.com/docs/apis/actions/customize-samlresponse
 
 This flow is executed before the return of the SAML Response.

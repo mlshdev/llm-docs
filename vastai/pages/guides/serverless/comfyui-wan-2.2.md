@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/serverless/comfyui-wan-2.2.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/guides/serverless/comfyui-wan-2.2.mdx)
+> Pinned source for Vast.ai main: [guides/serverless/comfyui-wan-2.2.mdx](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/guides/serverless/comfyui-wan-2.2.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/serverless/comfyui-wan-2.2
 
 # ComfyUI Wan 2.2

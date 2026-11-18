@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [cli/reference/metrics-gpu-trends.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/cli/reference/metrics-gpu-trends.mdx)
+> Pinned source for Vast.ai main: [cli/reference/metrics-gpu-trends.mdx](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/cli/reference/metrics-gpu-trends.mdx)
 > Canonical documentation: https://docs.vast.ai/cli/reference/metrics-gpu-trends
 
 # vastai metrics gpu-trends

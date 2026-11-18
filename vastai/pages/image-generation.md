@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [image-generation.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/image-generation.mdx)
+> Pinned source for Vast.ai main: [image-generation.mdx](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/image-generation.mdx)
 > Canonical documentation: https://docs.vast.ai/image-generation
 
 # Image Generation

@@ -6,21 +6,21 @@
   "title": "ZITADEL",
   "homepage": "https://zitadel.com/docs",
   "repository": "zitadel/zitadel",
-  "tag": "v4.20.3",
-  "releaseId": 444313144,
-  "releasePublishedAt": "2026-11-13T14:15:14Z",
-  "sourceCommit": "a8b256c94b6d8615f12c05c54289600a06ca1912",
+  "tag": "v4.20.4",
+  "releaseId": 448875853,
+  "releasePublishedAt": "2026-11-17T16:08:48Z",
+  "sourceCommit": "384bb9ec96b501ad39dc232ee2061a40fe180bbd",
   "documentCount": 335,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 2868485,
+      "byteLength": 2868725,
       "documentCount": 335,
-      "sha256": "776291997d88736e9d124ecb441fdc030eed225310ad21f8ad4205226c14117e"
+      "sha256": "bd40e9619afb4fca76bf8795aa9ef1e3f9acb2629acfb3194451ed7f70ec8fc9"
     }
   ],
-  "outputDigest": "c35ae0c17374e83cb3883cea51703af0301eaf88985770f5d420b688d80d00f0",
+  "outputDigest": "077b24bf2f2793fbda285c5393fa3e8d794107c06d3aa308697ad67a298ab2ca",
   "quarantined": [
     {
       "sourcePath": "apps/docs/content/apis/errors.mdx",

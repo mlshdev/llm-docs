@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/rate-limits-and-errors.mdx](https://github.com/vast-ai/docs/blob/349512480817168ffb72a144bed96c2678228c5c/api-reference/rate-limits-and-errors.mdx)
+> Pinned source for Vast.ai main: [api-reference/rate-limits-and-errors.mdx](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/api-reference/rate-limits-and-errors.mdx)
 > Canonical documentation: https://docs.vast.ai/api-reference/rate-limits-and-errors
 
 # Rate Limits and Errors
