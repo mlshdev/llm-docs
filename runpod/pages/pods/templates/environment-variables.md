@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/templates/environment-variables.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/pods/templates/environment-variables.mdx)
+> Pinned source for Runpod main: [pods/templates/environment-variables.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/pods/templates/environment-variables.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/templates/environment-variables
 
 # Environment variables

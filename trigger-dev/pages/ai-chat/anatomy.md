@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/ai-chat/anatomy.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/ai-chat/anatomy.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/ai-chat/anatomy.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/ai-chat/anatomy.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/anatomy
 
 # Anatomy of an agent
@@ -66,7 +66,7 @@ export const myAgent = chat.agent({
   run: async ({ messages, tools, signal, streamText }) =>
     streamText({
       tools,
-      model: anthropic("claude-sonnet-4-5"),
+      model: anthropic("claude-sonnet-5-5"),
       messages,
       abortSignal: signal,
       stopWhen: stepCountIs(15),

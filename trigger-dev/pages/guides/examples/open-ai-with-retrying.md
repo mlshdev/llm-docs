@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/guides/examples/open-ai-with-retrying.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/examples/open-ai-with-retrying.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/guides/examples/open-ai-with-retrying.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/examples/open-ai-with-retrying.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/examples/open-ai-with-retrying
 
 # Call OpenAI with retrying
@@ -33,7 +33,7 @@ export const openaiTask = task({
     //if this fails, it will throw an error and retry
     const chatCompletion = await openai.chat.completions.create({
       messages: [{ role: "user", content: payload.prompt }],
-      model: "gpt-3.5-turbo",
+      model: "gpt-6-luna",
     });
 
     if (chatCompletion.choices[0]?.message.content === undefined) {

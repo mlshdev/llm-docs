@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/tasks/streams.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/tasks/streams.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/tasks/streams.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/tasks/streams.mdx)
 > Canonical documentation: https://trigger.dev/docs/tasks/streams
 
 # Streaming data from tasks
@@ -403,7 +403,7 @@ export async function POST(req: Request) {
   const { messages, runId } = await req.json();
 
   const result = streamText({
-    model: openai("gpt-4o"),
+    model: openai("gpt-6-luna"),
     messages,
   });
 
@@ -687,7 +687,7 @@ export const generateAI = task({
   id: "generate-ai",
   run: async (payload: { prompt: string }) => {
     const result = streamText({
-      model: openai("gpt-4o"),
+      model: openai("gpt-6-luna"),
       prompt: payload.prompt,
     });
 

@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/cb1e96f5f59e579a33b3dedc64e92f509688de68/doc/ffmpeg-formats.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/aa7c09781dd698d6cd775631198eefcc34a21fcd/doc/ffmpeg-formats.texi)
 
 # Description
 
@@ -1430,6 +1430,18 @@ ffmpeg -i CC.rcwt.bin -c:s copy CC.scc
 
 Note that the SCC format does not support all of the possible CC extensions
 that can be stored in RCWT (such as EIA-708).
+
+## sacd
+
+Super Audio CD (SACD) demuxer.
+
+It reads a disc image or a device. The multi channel and the 2-channel stereo
+version of a disc are programs with one audio stream each. The chapters are
+the tracks of the first program.
+
+Images with 2048 bytes per sector are detected automatically. Images that
+hold the raw sectors of 2064 bytes need the format to be forced with
+`-f sacd`, or a `formatprobesize` of at least 2M.
 
 ## sbg
 

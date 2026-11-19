@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/ai-chat/mcp.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/ai-chat/mcp.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/ai-chat/mcp.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/ai-chat/mcp.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/mcp
 
 # MCP Server

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/guides/tips/index.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/_vendor/github.com/docker/docker-agent/docs/guides/tips/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/guides/tips/index.md](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/_vendor/github.com/docker/docker-agent/docs/guides/tips/index.md)
 
 *Expert guidance for building effective, efficient, and secure agents.*
 

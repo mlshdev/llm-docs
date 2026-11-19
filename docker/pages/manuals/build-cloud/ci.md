@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build-cloud/ci.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/build-cloud/ci.md)
+> Pinned source for Docker main: [content/manuals/build-cloud/ci.md](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/build-cloud/ci.md)
 
 Using Docker Build Cloud in CI can speed up your build pipelines, which means less time
 spent waiting and context switching. You control your CI workflows as usual,

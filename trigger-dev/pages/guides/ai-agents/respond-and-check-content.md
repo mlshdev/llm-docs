@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/guides/ai-agents/respond-and-check-content.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/ai-agents/respond-and-check-content.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/guides/ai-agents/respond-and-check-content.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/ai-agents/respond-and-check-content.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/ai-agents/respond-and-check-content
 
 # Respond to customer inquiry and check for inappropriate content
@@ -8,7 +8,7 @@ Create an AI agent workflow that responds to customer inquiries while checking i
 ## Overview
 
 **Parallelization** is a workflow pattern where multiple tasks or processes run simultaneously instead of sequentially, allowing for more efficient use of resources and faster overall execution. It's particularly valuable when different parts of a task can be handled independently, such as running content analysis and response generation at the same time.
-![Parallelization](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/ai-agents/parallelization.png)
+![Parallelization](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/ai-agents/parallelization.png)
 
 ## Example task
 
@@ -19,7 +19,7 @@ In this example, we'll create a workflow that simultaneously checks content for 
 - Uses `generateText` from the [AI SDK](https://ai-sdk.dev/) to call Anthropic's Claude models
 - Uses `experimental_telemetry` to surface each LLM call on the Run page in the dashboard
 - Uses [`batch.triggerByTaskAndWait`](https://trigger.dev/docs/triggering#batch-triggerbytaskandwait) to run customer response and content moderation tasks in parallel
-- Answers with `claude-sonnet-4-5` and moderates with the faster, cheaper `claude-haiku-4-5`
+- Answers with `claude-sonnet-5-5` and moderates with the faster, cheaper `claude-haiku-5-5`
 - Simultaneously checks for inappropriate content while generating responses
 
 ```typescript
@@ -32,12 +32,9 @@ export const generateCustomerResponse = task({
   id: "generate-customer-response",
   run: async (payload: { question: string }) => {
     const response = await generateText({
-      model: anthropic("claude-sonnet-4-5"),
+      model: anthropic("claude-sonnet-5-5"),
+      system: "You are a helpful customer service representative.",
       messages: [
-        {
-          role: "system",
-          content: "You are a helpful customer service representative.",
-        },
         { role: "user", content: payload.question },
       ],
       experimental_telemetry: {
@@ -55,13 +52,9 @@ export const checkInappropriateContent = task({
   id: "check-inappropriate-content",
   run: async (payload: { text: string }) => {
     const response = await generateText({
-      model: anthropic("claude-haiku-4-5"),
+      model: anthropic("claude-haiku-5-5"),
+      system: "You are a content moderator. Respond with 'true' if the content is inappropriate or contains harmful, threatening, offensive, or explicit content, 'false' otherwise.",
       messages: [
-        {
-          role: "system",
-          content:
-            "You are a content moderator. Respond with 'true' if the content is inappropriate or contains harmful, threatening, offensive, or explicit content, 'false' otherwise.",
-        },
         { role: "user", content: payload.text },
       ],
       experimental_telemetry: {

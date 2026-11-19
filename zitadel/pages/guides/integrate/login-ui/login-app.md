@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.4: [apps/docs/content/guides/integrate/login-ui/login-app.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/guides/integrate/login-ui/login-app.mdx)
+> Pinned source for ZITADEL v4.20.5: [apps/docs/content/guides/integrate/login-ui/login-app.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/guides/integrate/login-ui/login-app.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login-ui/login-app
 
 To replace the old embedded Login built with Golang and to showcase the use of our session and OIDC APIs, we've created the new [Login app](https://github.com/zitadel/zitadel/blob/main/CONTRIBUTING.md#contribute-to-login).
@@ -29,7 +29,7 @@ The cookie consists of an id and a token and is bound to a session which is upda
 
 The following illustration shows the architecture of the Login app and a potential authentication code flow starting from an application which implements the OIDC specification respectively.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/public/img/typescript-login-architecture.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/typescript-login-architecture.png)
 
 *Note that the illustration is just a representation of the architecture and may not specify actual endpoints.*
 
@@ -146,4 +146,4 @@ If you want to enable automatic code submission (e.g. for a smoother UX when lin
 A new OTP SMS code can only be requested 30 seconds after the previous one for the same session; the "Resend code" button shows a countdown until then.
 Set `OTP_SMS_RESEND_COOLDOWN_SECONDS` to change the cooldown, or to `0` to disable it.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/public/img/deploy-to-vercel.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/deploy-to-vercel.png)

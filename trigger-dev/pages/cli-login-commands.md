@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/cli-login-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/cli-login-commands.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/cli-login-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/cli-login-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-login-commands
 
 # CLI login command
@@ -20,6 +20,18 @@ yarn dlx trigger.dev@latest login
 ```
 
 When the CLI opens your browser, approving the login sends you back to the CLI automatically. If the browser is on another machine, for example when you're connected over SSH, use `--no-browser`: after you approve, the page shows a code to paste into the terminal.
+
+## Login expiry
+
+A login stops working after 7 days without use. The 7 days count from the last command that used it, or from when you logged in if you never used it. Running a command that uses your login, such as `dev` or `deploy`, at least once a week keeps you logged in.
+
+When a login has expired, commands that log you in, such as `login`, `dev` and `deploy`, start a new login. You don't need to log out first. The [MCP server](https://trigger.dev/docs/mcp-introduction#authentication) does the same on its next tool call.
+
+- **In CI**, the CLI can't complete a login, so it fails and tells you to run `npx trigger.dev@latest login`. To deploy from CI, use an environment API key in `TRIGGER_ACCESS_TOKEN` instead of a copied CLI login. See [CI / GitHub Actions](https://trigger.dev/docs/github-actions).
+- **CLI versions before 4.8.4** show the server's error but can't start a new login over an expired one. Run `trigger.dev logout`, then `trigger.dev login`.
+- **Logins made before login expiry was introduced** (in 4.8.4 for self-hosted instances) don't expire.
+
+If you self-host, `CLI_LOGIN_IDLE_TIMEOUT_DAYS` sets the window (default `7`), and `0` turns idle expiry off for new logins. Each login keeps the setting it was created with. See the [webapp environment variables](https://trigger.dev/docs/self-hosting/env/webapp).
 
 ## Options
 

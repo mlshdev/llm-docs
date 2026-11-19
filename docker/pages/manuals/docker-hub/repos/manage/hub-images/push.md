@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/hub-images/push.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/docker-hub/repos/manage/hub-images/push.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/hub-images/push.md](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/docker-hub/repos/manage/hub-images/push.md)
 
 # Push images to a repository
 

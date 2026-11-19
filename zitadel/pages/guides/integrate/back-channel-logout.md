@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.4: [apps/docs/content/guides/integrate/back-channel-logout.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/guides/integrate/back-channel-logout.mdx)
+> Pinned source for ZITADEL v4.20.5: [apps/docs/content/guides/integrate/back-channel-logout.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/guides/integrate/back-channel-logout.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/back-channel-logout
 
 The Back-Channel Logout implements [OpenID Connect Back-Channel Logout 1.0](https://openid.net/specs/openid-connect-backchannel-1_0.html)
@@ -19,7 +19,7 @@ ZITADEL provides the possibility for OpenID Connect clients to be notified about
 if a user signs out from another application using the same SSO session.
 This allows the application to also invalidate the user's session without the need for an active browser session.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/public/img/guides/back-channel-logout/back-channel-logout-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/guides/back-channel-logout/back-channel-logout-flow.png)
 
 1. When an unauthenticated user visits your application,
 2. it will create an authorization request to the authorization endpoint.

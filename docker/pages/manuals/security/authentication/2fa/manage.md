@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/authentication/2fa/manage.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/security/authentication/2fa/manage.md)
+> Pinned source for Docker main: [content/manuals/security/authentication/2fa/manage.md](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/security/authentication/2fa/manage.md)
 
 # Manage two-factor authentication for your Docker account
 

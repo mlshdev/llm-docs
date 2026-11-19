@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/self-hosting/docker.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/self-hosting/docker.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/self-hosting/docker.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/self-hosting/docker.mdx)
 > Canonical documentation: https://trigger.dev/docs/self-hosting/docker
 
 # Docker compose
@@ -365,6 +365,8 @@ TRIGGER_IMAGE_TAG=v4.5.0
 We patch the latest released version line only, so keep an eye on new releases to receive security fixes. See [Security & vulnerability reporting](https://trigger.dev/docs/self-hosting/security).
 
 You can also lock the versions of the bundled services, for example with `CLICKHOUSE_IMAGE_TAG`. If you do, or if you bring your own ClickHouse via `CLICKHOUSE_URL`, note that Trigger.dev requires ClickHouse 25.8 or newer.
+
+The optional `LOGS_SEARCH_INSERT_ASYNC` setting defaults to `false` and requires ClickHouse 26.2 or newer when enabled. Leave it disabled on ClickHouse 25.8.
 
 > **Note**
 >

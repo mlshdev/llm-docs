@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.4: [apps/docs/content/guides/integrate/zitadel-apis/example-zitadel-api-with-go.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/guides/integrate/zitadel-apis/example-zitadel-api-with-go.mdx)
+> Pinned source for ZITADEL v4.20.5: [apps/docs/content/guides/integrate/zitadel-apis/example-zitadel-api-with-go.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/guides/integrate/zitadel-apis/example-zitadel-api-with-go.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/zitadel-apis/example-zitadel-api-with-go
 
 This integration guide shows you how to integrate **ZITADEL** into your Go application.

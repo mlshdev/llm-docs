@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/webhooks/slack.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/webhooks/slack.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/slack.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/slack.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/slack
 
 # Slack agents
@@ -7,11 +7,14 @@ Turn a chat.agent into a Slack agent: users message it in Slack, it shows its st
 
 **`slack()` from `@trigger.dev/slack` turns a `chat.agent` into a native Slack agent.** Each Slack agent session (a conversation with the agent, or a thread in a channel) becomes a durable Trigger.dev [session](https://trigger.dev/docs/ai-chat/sessions). A message runs as a turn, the session shows the agent working, the reply streams into the thread as the model writes it, and Slack's stop button stops the turn.
 
+Slack is one of our deep integrations: as well as delivering [webhook events](https://trigger.dev/docs/webhooks/providers/slack), the connector handles Slack's agent features for you.
+
 ```ts /trigger/support.ts
 import { webhooks } from "@trigger.dev/sdk";
 import { chat } from "@trigger.dev/sdk/ai";
 import { appMentions, slack, webhookSource } from "@trigger.dev/slack";
 import { anthropic } from "@ai-sdk/anthropic";
+import { stepCountIs } from "ai";
 
 const slackEvents = webhooks.endpoint.define({ id: "slack", source: webhookSource() });
 
@@ -27,7 +30,13 @@ export const support = chat.agent({
   ],
   tools: { searchDocs, refundOrder },
   run: async ({ messages, tools, signal, streamText }) =>
-    streamText({ model: anthropic("claude-sonnet-4-5"), messages, tools, abortSignal: signal }),
+    streamText({
+      model: anthropic("claude-sonnet-5-5"),
+      messages,
+      tools,
+      abortSignal: signal,
+      stopWhen: stepCountIs(10),
+    }),
 });
 ```
 
@@ -236,7 +245,7 @@ Only buttons built with `button()` or `slackButton()` reach the agent. Buttons y
 
 ## Stopping
 
-Slack shows a stop button while the agent is working. It aborts the running turn through the run's `signal`, exactly like a browser chat's stop: the model call and any tool that honours the signal stop, the partial reply stays in the thread, and the status goes back to active. The next message continues the conversation.
+Slack shows a stop button while the agent is working. It aborts the running turn through the run's `signal`, as a browser chat's stop does: the model call and any tool that honors the signal stop, the partial reply stays in the thread, and the status goes back to active. The next message continues the conversation.
 
 - A stop pressed while nothing is running does nothing, and a repeated or delayed stop never stops a later turn.
 - A stop that reaches a session waiting on an approval cancels it: the buttons are replaced with "Stopped", the pending tool call is recorded as stopped so the model sees that on the next turn, and a later click resumes nothing.

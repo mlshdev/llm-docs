@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/ai-chat/types.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/ai-chat/types.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/ai-chat/types.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/ai-chat/types.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/types
 
 # Types
@@ -94,10 +94,12 @@ export const myChat = chat
     run: async ({ messages, tools, signal, streamText }) => {
       // `tools` is myTools, typed, handed back on the payload
       return streamText({
-        model: anthropic("claude-sonnet-4-5"),
+        model: anthropic("claude-sonnet-5-5"),
         messages,
         tools,
         abortSignal: signal,
+        // Claude 5.5 models omit thinking text unless you ask for a summary
+        providerOptions: { anthropic: { thinking: { type: "adaptive", display: "summarized" } } },
         stopWhen: stepCountIs(15),
       });
     },
@@ -195,7 +197,12 @@ export const myChat = chat
   .agent({
     id: "my-chat",
     run: async ({ messages, signal, streamText }) => {
-      return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
+      return streamText({
+        model: anthropic("claude-sonnet-5-5"),
+        messages,
+        abortSignal: signal,
+        providerOptions: { anthropic: { thinking: { type: "adaptive", display: "summarized" } } },
+      });
     },
   });
 ```
@@ -220,7 +227,7 @@ chat
       await createChatRecord(event.chatId);
     },
     run: async ({ messages, signal, streamText }) => {
-      return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
+      return streamText({ model: anthropic("claude-sonnet-5-5"), messages, abortSignal: signal });
     },
   });
 ```

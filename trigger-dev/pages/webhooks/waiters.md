@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/webhooks/waiters.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/webhooks/waiters.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/waiters.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/waiters.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/waiters
 
 # Waiting for a webhook
@@ -64,11 +64,11 @@ Match on values you control, such as your own order id in the provider object's 
 
 `match` maps paths to the scalar each must equal. Paths use the same namespaces as a [filter](https://trigger.dev/docs/webhooks/filters):
 
-| Path        | Reads                                                                             |
-| ----------- | --------------------------------------------------------------------------------- |
-| `event.*`   | The verified event body, for example `event.data.object.id`.                      |
-| `header.*`  | A request header, matched case-insensitively, for example `header.x-shop-domain`. |
-| `webhook.*` | The endpoint: `id`, `source`, `externalRef`, `tenantId`, or `deliveryId`.         |
+| Path        | Reads                                                                                                                                                                         |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `event.*`   | The verified event body, for example `event.data.object.id`.                                                                                                                  |
+| `header.*`  | A request header, matched case-insensitively, for example `header.x-shop-domain`.                                                                                             |
+| `webhook.*` | The endpoint: `id`, `source`, `externalRef`, `tenantId`, or `deliveryId` (the provider's event ID, or a hash of the request when the provider sends none; not the `whd_` id). |
 
 A waiter can match up to five paths, and each value is a string, number or boolean. Paths are checked against the endpoint's event type at build time: an unknown field on a typed event, a path to an object, or a path without a namespace is a type error. The API refuses the same paths at create time.
 
@@ -94,12 +94,12 @@ if (result.ok) {
 }
 ```
 
-| Output field | Value                                                             |
-| ------------ | ----------------------------------------------------------------- |
-| `event`      | The verified event body, typed by the endpoint's source.          |
-| `headers`    | The request headers, with credentials such as signatures removed. |
-| `deliveryId` | The delivery that resumed the run (`whd_...`).                    |
-| `endpoint`   | The endpoint the delivery arrived on.                             |
+| Output field | Value                                                                                                                                                  |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `event`      | The verified event body, typed by the endpoint's source.                                                                                               |
+| `headers`    | The request headers, without `authorization`, cookie or shared-secret headers. Headers your `match` uses are always kept; the rest are capped at 4 KB. |
+| `deliveryId` | The delivery that resumed the run (`whd_...`).                                                                                                         |
+| `endpoint`   | The endpoint the delivery arrived on.                                                                                                                  |
 
 `timeout` accepts a duration such as `"30m"` or a `Date`. It defaults to 24 hours and can be up to 90 days. A waiter that times out fails the wait with `WaitpointTimeoutError`.
 

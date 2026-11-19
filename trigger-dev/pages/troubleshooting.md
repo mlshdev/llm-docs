@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/troubleshooting.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/troubleshooting.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/troubleshooting.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/troubleshooting.mdx)
 > Canonical documentation: https://trigger.dev/docs/troubleshooting
 
 # Common problems
@@ -49,6 +49,13 @@ If you see "Connection error" when running `trigger login` (or "Failed to create
 1. **Clear saved auth and retry:** `npx trigger.dev@latest logout`, then `npx trigger.dev@latest login` again. Sometimes an invalid config is cached.
 2. **VPN or firewall:** Disconnect from VPN or check firewall/proxy; try `npx trigger.dev@latest login --log-level debug` for more detail.
 3. **TLS / certificate store:** Node may use a different CA store than your OS (e.g. `curl` works but the CLI fails). Try `export NODE_EXTRA_CA_CERTS=/etc/ssl/cert.pem` (macOS/Linux) then login again, or reinstall Node so it gets updated certs. Behind a corporate proxy or custom CA? Set `NODE_EXTRA_CA_CERTS` to that CA file.
+
+### `personal_access_token_expired` or `cli_login_expired`
+
+If a request fails with `401` and one of these codes, the token has expired:
+
+- **`personal_access_token_expired`**: a personal access token from the dashboard reached the expiry date chosen when it was created. Create a new one on the [Personal Access Tokens](https://cloud.trigger.dev/account/tokens) page and replace the old one wherever it's stored. See [PAT expiry](https://trigger.dev/docs/management/authentication#pat-expiry).
+- **`cli_login_expired`**: a CLI or MCP login went unused for 7 days. Run `npx trigger.dev@latest login`. With a CLI version before 4.8.4, `login` can't replace an expired login, so run `trigger.dev logout` first. See [CLI login expiry](https://trigger.dev/docs/cli-login-commands#login-expiry).
 
 ### Runs never dequeue in dev
 

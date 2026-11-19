@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/runs/metadata.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/runs/metadata.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/runs/metadata.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/runs/metadata.mdx)
 > Canonical documentation: https://trigger.dev/docs/runs/metadata
 
 # Run metadata
@@ -344,7 +344,7 @@ export const myTask = task({
   run: async (payload: { prompt: string }) => {
     const completion = await openai.chat.completions.create({
       messages: [{ role: "user", content: payload.prompt }],
-      model: "gpt-3.5-turbo",
+      model: "gpt-6-luna",
       stream: true,
     });
 
@@ -696,7 +696,7 @@ export const myTask = task({
 
 You can view the metadata for a run in the Trigger.dev dashboard. The metadata will be displayed in the run details view:
 
-![View run metadata dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/run-metadata.png)
+![View run metadata dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/images/run-metadata.png)
 
 ### API
 

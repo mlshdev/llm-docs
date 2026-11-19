@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/guides/frameworks/bun.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/frameworks/bun.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/guides/frameworks/bun.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/frameworks/bun.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/bun
 
 # Bun guide
@@ -36,6 +36,32 @@ Node.js yourself with a build extension before moving those projects off `bun`.
 - Ensure TypeScript is installed
 - [Create a Trigger.dev account](https://cloud.trigger.dev)
 - Create a new Trigger.dev project
+
+## Bytecode compilation
+
+On `bun-1.4`, deploys compile the run worker and your task files into a Bun executable with
+bytecode, so runs start faster. `trigger dev` isn't affected. Packages you mark as `external`
+still load from `node_modules`.
+
+`import.meta.url`, `import.meta.dirname` and `__dirname` point at your bundled files under `/app`,
+as they do without compilation. The executable only holds your code, so files you read next to it
+(e.g. with `new URL("./data.json", import.meta.url)`) still have to be in the image, for example
+with the [additionalFiles](https://trigger.dev/docs/config/extensions/additionalFiles) extension. A
+`new Worker(new URL("./worker.mjs", import.meta.url))` loads the worker file from disk too.
+
+If your code still doesn't work compiled, set `bunBytecode` to `false` to turn compilation off:
+
+```ts trigger.config.ts
+import { defineConfig } from "@trigger.dev/sdk";
+
+export default defineConfig({
+  project: "<project ref>",
+  runtime: "bun-1.4",
+  build: {
+    bunBytecode: false,
+  },
+});
+```
 
 ## Known issues
 
@@ -114,12 +140,12 @@ Node.js yourself with a build extension before moving those projects off `bun`.
 
    Press the "Run test" button.
 
-   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/test-dashboard.png)
+   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/images/test-dashboard.png)
 
 1. Congratulations, you should see the run page which will live reload showing you the current state of the run.
 
-   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/run-page.png)
+   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/images/run-page.png)
 
    If you go back to your terminal you'll see that the dev command also shows the task status and links to the run log.
 
-   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/terminal-completed-run.png)
+   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/images/terminal-completed-run.png)

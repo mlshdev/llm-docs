@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.4: [apps/docs/content/apis/benchmarks/v4.17.1/machine_client_credentials_login/index.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/apis/benchmarks/v4.17.1/machine_client_credentials_login/index.mdx)
+> Pinned source for ZITADEL v4.20.5: [apps/docs/content/apis/benchmarks/v4.17.1/machine_client_credentials_login/index.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/apis/benchmarks/v4.17.1/machine_client_credentials_login/index.mdx)
 > Canonical documentation: https://zitadel.com/docs/apis/benchmarks/v4.17.1/machine_client_credentials_login
 
 Benchmark results of the v4.17.1 release of Zitadel.

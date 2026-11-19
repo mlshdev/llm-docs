@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/guides/ai-agents/translate-and-refine.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/ai-agents/translate-and-refine.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/guides/ai-agents/translate-and-refine.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/ai-agents/translate-and-refine.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/ai-agents/translate-and-refine
 
 # Translate text and refine it based on feedback
@@ -9,7 +9,7 @@ This guide will show you how to create a task that translates text and refines i
 
 This example is based on the **evaluator-optimizer** pattern, where one LLM generates a response while another provides evaluation and feedback in a loop. This is particularly effective for tasks with clear evaluation criteria where iterative refinement provides better results.
 
-![Evaluator-optimizer](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/ai-agents/evaluator-optimizer.png)
+![Evaluator-optimizer](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/ai-agents/evaluator-optimizer.png)
 
 ## Example task
 
@@ -64,13 +64,10 @@ export const translateAndRefine = task({
       : `Translate this text into ${payload.targetLanguage}, preserving style and meaning: "${payload.text}"`;
 
     const translation = await generateText({
-      model: anthropic("claude-sonnet-4-5"),
-      messages: [
-        {
-          role: "system",
-          content: `You are an expert literary translator into ${payload.targetLanguage}.
+      model: anthropic("claude-sonnet-5-5"),
+      system: `You are an expert literary translator into ${payload.targetLanguage}.
                    Focus on accuracy first, then style and natural flow.`,
-        },
+      messages: [
         {
           role: "user",
           content: translationPrompt,
@@ -84,11 +81,8 @@ export const translateAndRefine = task({
 
     // Evaluate the translation
     const evaluation = await generateText({
-      model: anthropic("claude-sonnet-4-5"),
-      messages: [
-        {
-          role: "system",
-          content: `You are an expert literary critic and translator focused on practical, high-quality translations.
+      model: anthropic("claude-sonnet-5-5"),
+      system: `You are an expert literary critic and translator focused on practical, high-quality translations.
                  Your goal is to ensure translations are accurate and natural, but not necessarily perfect.
                  This is iteration ${
                    rejectionCount + 1
@@ -110,7 +104,7 @@ export const translateAndRefine = task({
                  - First iteration MUST receive feedback for improvement
                  - Be very strict on accuracy in early iterations
                  - After 3 iterations, lower quality threshold to 85%`,
-        },
+      messages: [
         {
           role: "user",
           content: `Original: "${payload.text}"

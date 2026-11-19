@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/pods/get-a-pod.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/api-reference-v2/pods/get-a-pod.mdx)
+> Pinned source for Runpod main: [api-reference-v2/pods/get-a-pod.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/api-reference-v2/pods/get-a-pod.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/pods/get-a-pod
 
 # Get A Pod
@@ -73,7 +73,7 @@ Returns a single pod by ID.
                   - `items` (object): Reference to a NetworkVolume. Custom paths are honored at runtime on both GPU and CPU pods. On a pod, the volume can be mounted, moved, or unmounted after creation (see `UpdatePodMounts`).
                     - `volumeId` (required; string): ID of an existing NetworkVolume in the same data center as the pod.
                     - `path` (required; string): Mount path inside the container. No default — must be specified explicitly.
-                - `global` (array; maximum items: `1`): At most one global volume, on GPU and CPU pods, with no data center constraint. Combinable with `network` but not with `persistent` (rejected with 400): a persistent disk is dropped whenever a volume is attached. Same PATCH rules as `network`.
+                - `global` (array; maximum items: `1`): At most one global volume, with no data center constraint. Combinable with `network` but not with `persistent` (rejected with 400): a persistent disk is dropped whenever a volume is attached. Same PATCH rules as `network`.
                   - `items` (object): Reference to a GlobalVolume. Usage-billed, so it has no size. On a pod, the volume can be mounted, moved, or unmounted after creation (see `UpdatePodMounts`).
                     - `volumeId` (required; string): ID of an existing GlobalVolume.
                     - `path` (string): Mount path inside the container. Optional; a default is chosen for you when omitted.
@@ -209,3 +209,5 @@ Returns a single pod by ID.
       - `detail` (required; string): Human-readable explanation
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
+
+**Required API key scope:** `pods:read`

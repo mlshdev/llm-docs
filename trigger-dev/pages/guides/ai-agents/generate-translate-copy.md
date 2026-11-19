@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/guides/ai-agents/generate-translate-copy.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/ai-agents/generate-translate-copy.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/guides/ai-agents/generate-translate-copy.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/ai-agents/generate-translate-copy.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/ai-agents/generate-translate-copy
 
 # Generate and translate copy
@@ -9,7 +9,7 @@ Create an AI agent workflow that generates and translates copy
 
 **Prompt chaining** is an AI workflow pattern that decomposes a complex task into a sequence of steps, where each LLM call processes the output of the previous one. This approach trades off latency for higher accuracy by making each LLM call an easier, more focused task, with the ability to add programmatic checks between steps to ensure the process remains on track.
 
-![Generating and translating copy](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/ai-agents/prompt-chaining.png)
+![Generating and translating copy](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/ai-agents/prompt-chaining.png)
 
 ## Example task
 
@@ -40,12 +40,9 @@ export const generateAndTranslateTask = task({
   run: async (payload: TranslatePayload) => {
     // Step 1: Generate marketing copy
     const generatedCopy = await generateText({
-      model: anthropic("claude-sonnet-4-5"),
+      model: anthropic("claude-sonnet-5-5"),
+      system: "You are an expert copywriter.",
       messages: [
-        {
-          role: "system",
-          content: "You are an expert copywriter.",
-        },
         {
           role: "user",
           content: `Generate as close as possible to ${payload.targetWordCount} words of compelling marketing copy for ${payload.marketingSubject}`,
@@ -73,12 +70,9 @@ export const generateAndTranslateTask = task({
 
     // Step 2: Translate to target language
     const translatedCopy = await generateText({
-      model: anthropic("claude-sonnet-4-5"),
+      model: anthropic("claude-sonnet-5-5"),
+      system: `You are an expert translator specializing in marketing content translation into ${payload.targetLanguage}.`,
       messages: [
-        {
-          role: "system",
-          content: `You are an expert translator specializing in marketing content translation into ${payload.targetLanguage}.`,
-        },
         {
           role: "user",
           content: `Translate the following marketing copy to ${payload.targetLanguage}, maintaining the same tone and marketing impact:\n\n${generatedCopy.text}`,

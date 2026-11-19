@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.4: [apps/docs/content/concepts/knowledge/opaque-tokens.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/concepts/knowledge/opaque-tokens.mdx)
+> Pinned source for ZITADEL v4.20.5: [apps/docs/content/concepts/knowledge/opaque-tokens.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/concepts/knowledge/opaque-tokens.mdx)
 > Canonical documentation: https://zitadel.com/docs/concepts/knowledge/opaque-tokens
 
 In the context of application security, robust authentication mechanisms are essential for safeguarding sensitive data and ensuring user trust.

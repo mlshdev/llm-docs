@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/self-hosting/kubernetes.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/self-hosting/kubernetes.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/self-hosting/kubernetes.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/self-hosting/kubernetes.mdx)
 > Canonical documentation: https://trigger.dev/docs/self-hosting/kubernetes
 
 # Kubernetes
@@ -311,6 +311,8 @@ Migration from the old Bitnami subchart to the official `clickhouse/clickhouse-s
 >
 > Trigger.dev requires ClickHouse 25.8 or newer. The bundled ClickHouse is single-node — run
 > ClickHouse externally for a clustered or replicated setup.
+
+The optional `LOGS_SEARCH_INSERT_ASYNC` setting defaults to `false` and requires ClickHouse 26.2 or newer when enabled. Leave it disabled on ClickHouse 25.8.
 
 **Direct configuration:**
 

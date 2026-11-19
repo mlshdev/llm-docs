@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_policy_reset.yaml](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/data/sbx_cli/sbx_policy_reset.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_reset.yaml](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/data/sbx_cli/sbx_policy_reset.yaml)
 
 # sbx policy reset
 

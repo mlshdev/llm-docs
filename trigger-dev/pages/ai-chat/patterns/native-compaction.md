@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/ai-chat/patterns/native-compaction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/ai-chat/patterns/native-compaction.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/ai-chat/patterns/native-compaction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/ai-chat/patterns/native-compaction.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/patterns/native-compaction
 
 # Native compaction & provider fallback
@@ -51,23 +51,28 @@ const isToolPart = (p: { type?: string }) =>
   typeof p?.type === "string" && (p.type.startsWith("tool-") || p.type === "dynamic-tool");
 
 // Drop the oldest n tool parts, mirroring what the provider cleared. A tool call
-// and its result live in one part, so pairing stays intact.
+// and its result live in one part, so pairing stays intact. Once a message is
+// edited, its thinking and every later message's thinking no longer verify on
+// Claude 5.5 models, so those reasoning parts are dropped too.
 function pruneOldestToolParts(messages: UIMessage[], n: number): UIMessage[] {
   let toRemove = n;
+  let edited = false;
   const out: UIMessage[] = [];
   for (const m of messages) {
-    if (toRemove <= 0 || m.role !== "assistant" || !m.parts) {
+    if (m.role !== "assistant" || !m.parts) {
       out.push(m);
       continue;
     }
     const kept = m.parts.filter((p) => {
       if (toRemove > 0 && isToolPart(p)) {
         toRemove--;
+        edited = true;
         return false;
       }
       return true;
     });
-    if (kept.length > 0) out.push({ ...m, parts: kept });
+    const parts = edited ? kept.filter((p) => p.type !== "reasoning") : kept;
+    if (parts.length > 0) out.push({ ...m, parts });
   }
   return out;
 }
@@ -78,7 +83,7 @@ export const nativePersist = chat.agent({
   tools: { fetchRecord },
   run: async ({ messages, chatId, tools, signal, streamText }) => {
     return streamText({
-      model: anthropic("claude-sonnet-4-5"),
+      model: anthropic("claude-sonnet-5-5"),
       messages,
       tools,
       abortSignal: signal,
@@ -127,6 +132,10 @@ Turn 1 sends the user message and accumulates six tool results. Anthropic clears
 >
 > `onTurnComplete` is where persistence happens. Action turns fire `onAction` only, and a `chat.history.set()` inside `run()` is overwritten by the accumulator at turn end. See [Persistence and replay](https://trigger.dev/docs/ai-chat/patterns/persistence-and-replay#action-turns-no-snapshot-write).
 
+> **Warning**
+>
+> Thinking is on by default on Claude 5.5 models, and each thinking block is bound to the conversation that came before it. Removing tool parts from earlier turns in your own code changes that history, so Anthropic can reject the next request with a 400 (`Invalid signature in thinking block`). Server-side context editing, as configured above, doesn't count as an edit. That's why `pruneOldestToolParts` also removes the reasoning parts from the turns it changes and every turn after them.
+
 ## Persist OpenAI stored responses
 
 OpenAI's `store: true` keeps the thread server-side and returns a `responseId`. Pass that back as `previousResponseId` on the next turn and send only the messages since the last assistant reply; everything before it lives on OpenAI's side.
@@ -157,7 +166,7 @@ export const openaiStore = chat.agent({
     const outbound = native ? messagesSinceLastAssistant(messages) : messages;
 
     const result = streamText({
-      model: openai("gpt-4o"),
+      model: openai("gpt-6-luna"),
       messages: outbound,
       abortSignal: signal,
       stopWhen: stepCountIs(5),
@@ -198,10 +207,17 @@ const FALLBACK_ORDER: Provider[] = ["anthropic", "openai"];
 type NativeState = { provider: "openai"; previousResponseId: string };
 const nativeStore = new Map<string, NativeState>();
 
+// Retained messages follow a different history after compaction, so their thinking
+// blocks no longer verify on Claude 5.5 models. Drop reasoning parts before replaying them.
+function stripReasoning(message: ModelMessage): ModelMessage {
+  if (message.role !== "assistant" || typeof message.content === "string") return message;
+  return { ...message, content: message.content.filter((part) => part.type !== "reasoning") };
+}
+
 // Provider-agnostic summary: a plain string, portable across any provider.
 async function summarizeConversation(messages: ModelMessage[]): Promise<string> {
   const { text } = await generateText({
-    model: openai("gpt-4o-mini"),
+    model: openai("gpt-6-luna"),
     messages: [
       ...messages,
       {
@@ -224,7 +240,7 @@ export const resilientChat = chat.agent({
     summarize: ({ messages }) => summarizeConversation(messages),
     compactModelMessages: ({ modelMessages, summary }) => [
       { role: "user", content: `Summary of the conversation so far:\n\n${summary}` },
-      ...modelMessages.slice(-2),
+      ...modelMessages.slice(-2).map(stripReasoning),
     ],
     compactUIMessages: ({ uiMessages, summary }) => [
       {
@@ -252,7 +268,7 @@ export const resilientChat = chat.agent({
           // compacted baseline (summary + recent), so raw history is not re-sent.
           const useHandle = native?.provider === "openai";
           const result = streamText({
-            model: openai("gpt-4o"),
+            model: openai("gpt-6-luna"),
             messages,
             abortSignal: signal,
             stopWhen: stepCountIs(5),
@@ -270,7 +286,7 @@ export const resilientChat = chat.agent({
         }
 
         return streamText({
-          model: anthropic("claude-sonnet-4-5"),
+          model: anthropic("claude-sonnet-5-5"),
           messages,
           abortSignal: signal,
           stopWhen: stepCountIs(5),
@@ -292,6 +308,10 @@ export const resilientChat = chat.agent({
 ```
 
 When Anthropic is down, the loop falls through to OpenAI. Because `compaction` has already reduced `messages` to a summary plus the last couple of exchanges, the switch sends the portable baseline, not megabytes of raw transcript.
+
+> **Note**
+>
+> The messages that `compactModelMessages` keeps after the summary now follow a different history from the one their thinking blocks were produced in. Claude 5.5 models reject those blocks with a 400 (`Invalid signature in thinking block`), which is why the example runs the retained messages through `stripReasoning`.
 
 > **Warning**
 >

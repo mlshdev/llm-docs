@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/deployment/trusted-publishing.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/deployment/trusted-publishing.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/deployment/trusted-publishing.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/deployment/trusted-publishing.mdx)
 > Canonical documentation: https://trigger.dev/docs/deployment/trusted-publishing
 
 # Trusted publishing
@@ -6,6 +6,10 @@
 Deploy from GitHub Actions without storing a Trigger.dev API key.
 
 Trusted publishing uses GitHub Actions OIDC tokens to authorize deployments. No Personal Access Token or environment API key is needed in GitHub secrets. Builds run entirely on Trigger.dev's build server.
+
+## Prerequisites
+
+- Use the Trigger.dev CLI (`trigger.dev`) **4.8.4 or later**, including the CLI used in CI.
 
 ## Configure trust
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/writing-tasks-introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/writing-tasks-introduction.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/writing-tasks-introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/writing-tasks-introduction.mdx)
 > Canonical documentation: https://trigger.dev/docs/writing-tasks-introduction
 
 # Writing tasks: Overview
@@ -35,15 +35,15 @@ Before digging deeper into the details of writing tasks, you should read the [fu
 - [Walkthrough guides](https://trigger.dev/docs/guides/introduction)
 
   Detailed guides for setting up Trigger.dev with popular frameworks and services, including
-  Next.js, Remix, Supabase, Stripe and more.
+  Next.js, Remix, Supabase and more.
 - [Example tasks](https://trigger.dev/docs/guides/introduction#example-tasks)
 
   Task code you can copy and paste to use in your own projects, including OpenAI, Vercel AI SDK,
-  Deepgram, FFmpeg, Puppeteer, Stripe, Supabase and more.
-- [Webhook guides](https://trigger.dev/docs/guides/frameworks/webhooks-guides-overview)
+  Deepgram, FFmpeg, Puppeteer, Supabase and more.
+- [Receiving webhooks](https://trigger.dev/docs/webhooks/providers)
 
-  Learn how to trigger tasks from webhooks, including Next.js, Remix, Supabase and Stripe and
-  more.
+  Receive webhooks from more than 40 providers, including Stripe, GitHub, Firecrawl and Supabase,
+  on hosted endpoints.
 - [Example projects](https://trigger.dev/docs/guides/introduction#example-projects)
 
   Full-stack projects demonstrating how to use Trigger.dev. Fork them in GitHub as a starting

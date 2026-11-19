@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.4: [apps/docs/content/guides/integrate/services/auth0-saml.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/guides/integrate/services/auth0-saml.mdx)
+> Pinned source for ZITADEL v4.20.5: [apps/docs/content/guides/integrate/services/auth0-saml.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/guides/integrate/services/auth0-saml.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/services/auth0-saml
 
 This guide shows how to enable login with ZITADEL on Auth0.
@@ -21,12 +21,12 @@ Prerequisites:
 ## **Auth0**: Create a new connection
 
 In Authentication -> Enterprise
-![](https://raw.githubusercontent.com/zitadel/zitadel/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/public/img/saml/auth0/auth_enterprise.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/saml/auth0/auth_enterprise.png)
 
 1. Press the "+" button right to "SAML"
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/public/img/saml/auth0/enterprise_connections.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/saml/auth0/enterprise_connections.png)
 2. Fill out the fields as follows in the SAML Connection:
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/public/img/saml/auth0/connection.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/saml/auth0/connection.png)
 
 This includes:
 
@@ -55,14 +55,14 @@ be <https://example.auth0.com/samlp/metadata?connection=SAML-ZITADEL>.
 In your existing project:
 
 1. Press the "+"-button to add an application
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/public/img/saml/zitadel/project.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/saml/zitadel/project.png)
 2. Fill in a name for the application and chose the SAML type, then click "Continue".
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/public/img/saml/zitadel/application_saml.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/saml/zitadel/application_saml.png)
 3. Either fill in the URL where ZITADEL can read the metadata from, or upload the metadata XML directly, then click "
    Continue".
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/public/img/saml/zitadel/application_saml_metadata.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/saml/zitadel/application_saml_metadata.png)
 4. Check your application, if everything is correct, press "Create".
-   ![](https://raw.githubusercontent.com/zitadel/zitadel/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/public/img/saml/zitadel/application_saml_create.png)
+   ![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/saml/zitadel/application_saml_create.png)
 
 Everything on the side of ZITADEL is done if the application is correctly created.
 
@@ -71,7 +71,7 @@ Everything on the side of ZITADEL is done if the application is correctly create
 To then test the connection you only have to press "Try" on the created connection in the Authentication → Enterprise
 screen.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/public/img/saml/auth0/auth_enterprise_try.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/saml/auth0/auth_enterprise_try.png)
 
 To further customize the requests you can also customize the SAML communication as
 described [here](https://auth0.com/docs/authenticate/protocols/saml/saml-configuration/customize-saml-assertions)

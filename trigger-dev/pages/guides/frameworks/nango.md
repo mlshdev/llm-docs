@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/guides/frameworks/nango.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/frameworks/nango.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/guides/frameworks/nango.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/frameworks/nango.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/nango
 
 # Nango OAuth with Trigger.dev
@@ -194,8 +194,8 @@ export const analyzePRs = task({
       .join("\n\n");
 
     const message = await anthropic.messages.create({
-      model: "claude-opus-4-6",
-      max_tokens: 1024,
+      model: "claude-opus-5-5",
+      max_tokens: 16000,
       messages: [
         {
           role: "user",
@@ -204,7 +204,15 @@ export const analyzePRs = task({
       ],
     });
 
-    const summary = message.content[0].type === "text" ? message.content[0].text : "";
+    if (message.stop_reason === "max_tokens") {
+      throw new Error("Summary was cut off by max_tokens");
+    }
+
+    // Claude may return a thinking block before the text, so read text blocks by type
+    const summary = message.content
+      .filter((block): block is Anthropic.TextBlock => block.type === "text")
+      .map((block) => block.text)
+      .join("\n");
 
     return { summary, prCount: prs.length };
   },

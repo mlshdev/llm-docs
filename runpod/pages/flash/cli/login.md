@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/cli/login.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/flash/cli/login.mdx)
+> Pinned source for Runpod main: [flash/cli/login.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/flash/cli/login.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/cli/login
 
 # login

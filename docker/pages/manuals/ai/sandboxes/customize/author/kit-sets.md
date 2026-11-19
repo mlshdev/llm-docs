@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/kit-sets.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/ai/sandboxes/customize/author/kit-sets.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/kit-sets.md](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/ai/sandboxes/customize/author/kit-sets.md)
 
 **Docker Sandboxes sbx requirements**
 
@@ -46,7 +46,7 @@ displayName: Codex with tools
 version: "1.0.0"
 
 kits:
-  - ref: docker.io/docker/sbx-kit-codex:0.155.1
+  - ref: docker.io/sbx/codex:0.155.1
   - ref: <MIXIN_REFERENCE>
 ```
 

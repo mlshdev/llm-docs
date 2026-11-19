@@ -1,11 +1,11 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/webhooks/channels.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/webhooks/channels.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/channels.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/channels.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/channels
 
 # Channels (chat frontends)
 
 Point Slack (or any chat surface) at an agent: messages become turns and replies post back.
 
-A [session route](https://trigger.dev/docs/webhooks/session-routing) delivers a verified event to an agent as an [action](https://trigger.dev/docs/ai-chat/actions): the agent reacts, and the response is a side effect. A **channel** is the other half: the webhook IS the chat surface. Inbound messages become **turns** (the normal `run()` loop), and the agent's reply is posted **back** to the surface. A Slack thread becomes a real conversation with the agent, exactly like the browser chat, just a different frontend.
+A [session route](https://trigger.dev/docs/webhooks/session-routing) delivers a verified event to an agent as an [action](https://trigger.dev/docs/ai-chat/actions): the agent reacts, and the response is a side effect. A **channel** makes the webhook the chat surface: inbound messages become **turns** (the normal `run()` loop), and the agent's reply is posted **back** to the surface. A Slack thread works like the browser chat, with Slack as the frontend.
 
 List channels on a [`chat.agent`](https://trigger.dev/docs/ai-chat/overview) alongside (or instead of) `events`:
 
@@ -28,11 +28,11 @@ export const supportAgent = chat.agent({
     }),
   ],
   run: async ({ messages, streamText }) =>
-    streamText({ model: anthropic("claude-sonnet-4-5"), messages }),
+    streamText({ model: anthropic("claude-sonnet-5-5"), messages }),
 });
 ```
 
-The `run()` loop is unchanged: the agent does not know or care that it is talking to Slack. One verified Slack message in a thread is routed to a durable [session](https://trigger.dev/docs/ai-chat/sessions) keyed to that thread, run as a turn, and the reply is posted into the thread.
+The `run()` loop is the same as for the browser chat. One verified Slack message in a thread is routed to a durable [session](https://trigger.dev/docs/ai-chat/sessions) keyed to that thread, run as a turn, and the reply is posted into the thread.
 
 ## Slack
 
@@ -99,7 +99,7 @@ slack({
 
 ## Stopping a turn from the channel
 
-A connector can map an event to a control with `onControl`. Returning `{ kind: "stop" }` while a turn is running aborts it through the run's `stopSignal`, exactly like the browser's stop button: the partial reply posts with `stopped: true` and the event is consumed instead of running as a turn. `linear()` and `slack()` map their stop buttons this way; a custom connector might map a `/stop` command:
+A connector can map an event to a control with `onControl`. Returning `{ kind: "stop" }` while a turn is running aborts it through the run's `stopSignal`, as the browser's stop button does: the partial reply posts with `stopped: true` and the event is consumed instead of running as a turn. `linear()` and `slack()` map their stop buttons this way; a custom connector might map a `/stop` command:
 
 ```ts
 chat.channels.custom({
@@ -140,7 +140,7 @@ chat.channels.custom({
 
 ## Files, buttons and steering
 
-Three more hooks cover what a chat surface carries besides text:
+These hooks cover what a chat surface carries besides text:
 
 - `download(url, { handle })` fetches files only the surface's credentials can read. Have `inbound` return file parts on the surface's URLs, and the `streamText` passed to `run()` asks each connector's `download` for every file URL in the prompt (return null for URLs it doesn't own). Downloads are cached for the run and the transcript keeps the URL. A file `download` throws on becomes a short note in that turn's messages, and the turn still runs.
 - `toAction(event)` maps a click on a control the agent posted to an action. It reaches `onAction`, validated against `actionSchema`, with the click itself as `channel.event`. Returning `chat.turn(message)` answers in the bound thread. Return null for anything else, such as a click answering a pending tool call, which `onInteraction` handles.

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/policies/usage.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/build/policies/usage.md)
+> Pinned source for Docker main: [content/manuals/build/policies/usage.md](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/build/policies/usage.md)
 
 Build policies validate build inputs and can check HTTP(S) requests during build
 steps. This guide covers how to develop policies iteratively and apply them to

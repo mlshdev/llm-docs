@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/guides/frameworks/supabase-edge-functions-basic.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/frameworks/supabase-edge-functions-basic.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/guides/frameworks/supabase-edge-functions-basic.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/frameworks/supabase-edge-functions-basic.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/supabase-edge-functions-basic
 
 # Triggering tasks from Supabase edge functions
@@ -119,15 +119,15 @@ This guide shows you how to set up and deploy a simple Supabase edge function ex
 
    Press the "Run test" button.
 
-   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/test-dashboard.png)
+   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/images/test-dashboard.png)
 
 1. Congratulations, you should see the run page which will live reload showing you the current state of the run.
 
-   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/run-page.png)
+   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/images/run-page.png)
 
    If you go back to your terminal you'll see that the dev command also shows the task status and links to the run log.
 
-   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/terminal-completed-run.png)
+   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/images/terminal-completed-run.png)
 
 ## Create a new Supabase edge function and deploy it
 
@@ -143,8 +143,7 @@ This guide shows you how to set up and deploy a simple Supabase edge function ex
    ```ts functions/edge-function-trigger/index.ts
    // Setup type definitions for built-in Supabase Runtime APIs
    import "jsr:@supabase/functions-js/edge-runtime.d.ts";
-   // Import the Trigger.dev SDK - replace "<your-sdk-version>" with the version of the SDK you are using, e.g. "3.0.0". You can find this in your package.json file.
-   import { tasks } from "npm:@trigger.dev/sdk@3.0.0";
+   import { tasks } from "npm:@trigger.dev/sdk@latest";
    // Import your task type from your /trigger folder
    import type { helloWorldTask } from "../../../src/trigger/example.ts";
    //     👆 **type-only** import
@@ -213,7 +212,7 @@ Then, in [Supabase](https://supabase.com/dashboard/projects), select your projec
 
 Add `TRIGGER_SECRET_KEY`  with the environment API key you created.
 
-![Add secret key in Supabase](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/supabase-keys-1.png)
+![Add secret key in Supabase](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/images/supabase-keys-1.png)
 
 ## Deploy your task and trigger it from your edge function
 
@@ -246,7 +245,7 @@ Add `TRIGGER_SECRET_KEY`  with the environment API key you created.
 
    Once loaded you should see ‘OK’ on the new screen.
 
-   ![Edge function URL](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/supabase-function-url.png)
+   ![Edge function URL](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/images/supabase-function-url.png)
 
    The task will be triggered when your edge function URL is accessed.
 

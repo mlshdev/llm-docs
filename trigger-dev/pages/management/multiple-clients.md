@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/management/multiple-clients.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/management/multiple-clients.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/management/multiple-clients.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/management/multiple-clients.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/multiple-clients
 
 # Multiple SDK clients
@@ -72,7 +72,7 @@ That isolation also means a call from inside a task does not automatically inher
 
 ```ts
 const sameProject = new TriggerClient({
-  accessToken: process.env.TRIGGER_SECRET_KEY,
+  accessToken: process.env.TRIGGER_PROJECT_API_KEY, // a named API key you add to the task's environment variables
   inheritContext: true,
 });
 ```

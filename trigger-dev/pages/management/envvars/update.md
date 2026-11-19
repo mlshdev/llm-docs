@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/management/envvars/update.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/management/envvars/update.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/management/envvars/update.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/management/envvars/update.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/envvars/update
 
 # Update Env Var
@@ -51,3 +51,7 @@ Update a specific environment variable for a specific project and environment.
     - Schema (object)
       - `error` (required; string)
         - Example: `Something went wrong`
+- `409`: The environment variable was changed or deleted by another request while this one was being saved. Nothing was written, so the request can be sent again.
+  - Media type: `application/json`
+    - Schema (object)
+      - `error` (string)

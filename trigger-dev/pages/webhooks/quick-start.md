@@ -1,0 +1,90 @@
+> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/quick-start.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/quick-start.mdx)
+> Canonical documentation: https://trigger.dev/docs/webhooks/quick-start
+
+# Webhooks quick start
+
+Declare a hosted webhook endpoint, run it in dev, and see your first verified delivery start a task run in under 5 minutes.
+
+Install the SDK, declare an endpoint with a subscriber, and send it a test event. By the end, a verified delivery starts a run of your task.
+
+This guide uses the [GitHub provider](https://trigger.dev/docs/webhooks/providers/github) because you generate its signing secret on Trigger.dev, so you don't need a GitHub account to finish it. The steps are the same for every [provider](https://trigger.dev/docs/webhooks/providers).
+
+1. Skip this step if your project already uses Trigger.dev 4.8.1 or later.
+
+   ```bash npm
+   npx trigger.dev@latest init
+   ```
+
+   ```bash pnpm
+   pnpm dlx trigger.dev@latest init
+   ```
+
+   ```bash bun
+   bunx trigger.dev@latest init
+   ```
+
+   To upgrade an existing project, install the SDK and CLI from `@latest`:
+
+   ```bash npm
+   npm i @trigger.dev/sdk@latest
+   npm i -D trigger.dev@latest
+   ```
+
+   ```bash pnpm
+   pnpm add @trigger.dev/sdk@latest
+   pnpm add -D trigger.dev@latest
+   ```
+
+   ```bash bun
+   bun add @trigger.dev/sdk@latest
+   bun add -D trigger.dev@latest
+   ```
+2. Create a file in your `/trigger` directory. The endpoint is the hosted URL; the subscriber is the task that runs for each event.
+
+   ```ts /trigger/github.ts
+   import { webhook, webhooks } from "@trigger.dev/sdk";
+
+   export const github = webhooks.endpoint.define({
+     id: "github",
+     source: webhooks.github(),
+   });
+
+   export const githubEvents = webhook({
+     id: "github-events",
+     endpoint: github,
+     onEvent: async ({ event, headers }) => {
+       // GitHub sends the event name in a header
+       console.log("Received", headers.get("x-github-event"), event);
+     },
+   });
+   ```
+3. ```bash npm
+   npx trigger.dev@latest dev
+   ```
+
+   ```bash pnpm
+   pnpm dlx trigger.dev@latest dev
+   ```
+
+   ```bash bun
+   bunx trigger.dev@latest dev
+   ```
+
+   The CLI registers the `github` endpoint you declared in your **Development** environment.
+4. In the [Trigger.dev dashboard](https://cloud.trigger.dev), open your project, make sure the **Development** environment is selected, and choose **Webhooks** in the side menu. The `github` endpoint is listed with its **Signing secret** column set to **Needs secret**. Every delivery is rejected until an endpoint has its secret.
+
+   Open the `github` endpoint, choose **Generate secret** and confirm. The secret is shown once: copy it if you'll connect GitHub later. Back on the **Webhooks** page, the column now says **Ready**.
+5. On the `github` endpoint's page, open the **Test** tab. It starts with a sample body. Under **Headers**, add `x-github-event` with a value such as `push` so the handler logs an event name, then choose **Send event**. The test is signed with the endpoint's secret and runs the full delivery pipeline. Sending the same body again is deduplicated to the first delivery, so change the body to send another.
+
+   The delivery appears on the **Deliveries** tab. Open it and check **Targets** to see that it reached the `github-events` subscriber, then follow the link to the run to see the logged event.
+
+## Connect the real provider
+
+To receive real events, register the endpoint's **Webhook URL** and the same secret with the provider. Each [provider page](https://trigger.dev/docs/webhooks/providers) lists where to add them.
+
+- [Connect a provider](https://trigger.dev/docs/webhooks/connect)
+
+  Register the URL and secret by hand or with an AI coding agent.
+- [Filters](https://trigger.dev/docs/webhooks/filters)
+
+  Run a subscriber only for the events it handles.

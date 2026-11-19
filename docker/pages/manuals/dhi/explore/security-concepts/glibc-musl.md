@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/dhi/explore/security-concepts/glibc-musl.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/dhi/explore/security-concepts/glibc-musl.md)
+> Pinned source for Docker main: [content/manuals/dhi/explore/security-concepts/glibc-musl.md](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/dhi/explore/security-concepts/glibc-musl.md)
 
 # glibc and musl support in Docker Hardened Images
 

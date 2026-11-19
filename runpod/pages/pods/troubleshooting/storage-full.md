@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/troubleshooting/storage-full.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/pods/troubleshooting/storage-full.mdx)
+> Pinned source for Runpod main: [pods/troubleshooting/storage-full.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/pods/troubleshooting/storage-full.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/troubleshooting/storage-full
 
 # Storage full

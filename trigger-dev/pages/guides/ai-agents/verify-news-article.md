@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/guides/ai-agents/verify-news-article.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/ai-agents/verify-news-article.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/guides/ai-agents/verify-news-article.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/ai-agents/verify-news-article.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/ai-agents/verify-news-article
 
 # Verify a news article
@@ -9,7 +9,7 @@ Create an AI agent workflow that verifies the facts in a news article
 
 This example demonstrates the **orchestrator-workers** pattern, where a central AI agent dynamically breaks down complex tasks and delegates them to specialized worker agents. This pattern is particularly effective when tasks require multiple perspectives or parallel processing streams, with the orchestrator synthesizing the results into a cohesive output.
 
-![Orchestrator](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/ai-agents/orchestrator-workers.png)
+![Orchestrator](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/ai-agents/orchestrator-workers.png)
 
 ## Example task
 
@@ -20,7 +20,7 @@ Our example task uses multiple LLM calls to extract claims from a news article a
 - Uses `generateText` from the [AI SDK](https://ai-sdk.dev/) to call Anthropic's Claude models
 - Uses `experimental_telemetry` to surface each LLM call on the Run page in the dashboard
 - Uses [`batch.triggerByTaskAndWait`](https://trigger.dev/docs/triggering#batch-triggerbytaskandwait) to orchestrate parallel processing of claims
-- Extracts factual claims from news articles using `claude-sonnet-4-5`
+- Extracts factual claims from news articles using `claude-sonnet-5-5`
 - Evaluates claims against recent sources and analyzes historical context in parallel
 - Combines results into a structured analysis report
 
@@ -53,12 +53,8 @@ export const extractClaims = task({
   id: "extract-claims",
   run: async ({ article }: { article: string }) => {
     try {
+      const system = "Extract distinct factual claims from the news article. Format as numbered claims.";
       const messages: ModelMessage[] = [
-        {
-          role: "system",
-          content:
-            "Extract distinct factual claims from the news article. Format as numbered claims.",
-        },
         {
           role: "user",
           content: article,
@@ -66,7 +62,8 @@ export const extractClaims = task({
       ];
 
       const response = await generateText({
-        model: anthropic("claude-sonnet-4-5"),
+        model: anthropic("claude-sonnet-5-5"),
+        system,
         messages,
         experimental_telemetry: {
           isEnabled: true,
@@ -98,13 +95,9 @@ export const verifySource = task({
   id: "verify-source",
   run: async (claim: Claim) => {
     const response = await generateText({
-      model: anthropic("claude-sonnet-4-5"),
+      model: anthropic("claude-sonnet-5-5"),
+      system: "Verify this claim by considering recent news sources and official statements. Assess reliability.",
       messages: [
-        {
-          role: "system",
-          content:
-            "Verify this claim by considering recent news sources and official statements. Assess reliability.",
-        },
         {
           role: "user",
           content: claim.text,
@@ -130,13 +123,9 @@ export const analyzeHistory = task({
   id: "analyze-history",
   run: async (claim: Claim) => {
     const response = await generateText({
-      model: anthropic("claude-sonnet-4-5"),
+      model: anthropic("claude-sonnet-5-5"),
+      system: "Analyze this claim in historical context, considering past announcements and technological feasibility.",
       messages: [
-        {
-          role: "system",
-          content:
-            "Analyze this claim in historical context, considering past announcements and technological feasibility.",
-        },
         {
           role: "user",
           content: claim.text,

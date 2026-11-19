@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/webhooks/linear.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/webhooks/linear.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/linear.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/linear.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/linear
 
 # Linear agents
@@ -6,6 +6,8 @@
 Turn a chat.agent into a Linear agent: assign it an issue or @mention it, and it works the issue inside Linear's agent session UI.
 
 Linear opens an **agent session** when someone @mentions your app in an issue or delegates (assigns) an issue to it. `linear()` from `@trigger.dev/linear` is a [channel](https://trigger.dev/docs/webhooks/channels) connector for those sessions: each one becomes a durable Trigger.dev [session](https://trigger.dev/docs/ai-chat/sessions), the user's prompt runs as a turn, and the agent's work shows up in Linear as thoughts, actions, a plan, an approval card when it needs a decision, and a response when it is done.
+
+Linear is one of our deep integrations: as well as delivering [webhook events](https://trigger.dev/docs/webhooks/providers/linear), the connector handles Linear's agent session UI for you.
 
 ```ts
 import { webhooks } from "@trigger.dev/sdk";
@@ -20,7 +22,7 @@ export const triage = chat.agent({
   channels: [linear({ id: "linear", endpoint: linearEvents, token: process.env.LINEAR_ACCESS_TOKEN! })],
   tools: { searchDocs, createSubIssues },
   run: async ({ messages, tools, signal, streamText }) =>
-    streamText({ model: anthropic("claude-sonnet-4-5"), messages, tools, abortSignal: signal }),
+    streamText({ model: anthropic("claude-sonnet-5-5"), messages, tools, abortSignal: signal }),
 });
 ```
 
@@ -37,7 +39,7 @@ The `run()` loop is the same one a browser chat or a Slack thread uses. Verifica
 
 On the first turn of a session the connector frames Linear's payload for the model: who summoned it and on which issue, the workspace **guidance** rules for agents, Linear's formatted **issue context** (title, description, labels, project, comments), and the comment that mentioned it. An assignment with no comment reads as "assigned ENG-412 to you". Prior comments on the issue are seeded as transcript messages, so the agent can answer with the context a reader of the issue has.
 
-A follow-up prompt on the session is just the message. If the user hits **Stop** in Linear, see [Stopping](#stopping).
+A follow-up prompt on the session is the message itself. If the user hits **Stop** in Linear, see [Stopping](#stopping).
 
 Images and PDFs uploaded to Linear reach the model as files: screenshots in the prompt, in the comment that mentioned the agent, or in the issue description. The transcript keeps the upload link, and the `streamText` passed to `run()` downloads the file with the app's token when the model reads it, at most ten per message. A file that can't be downloaded reaches the model as a short note. A custom `inbound` keeps this by adding `linearFileParts(markdown)` to its message parts.
 
@@ -98,7 +100,7 @@ For manual control, `chat.surface<LinearRunSurface>()` returns the current turn'
 
 ## Approvals and choices
 
-A tool with no `execute` pauses the turn for a human decision, exactly as on [any channel](https://trigger.dev/docs/webhooks/human-in-the-loop). On Linear the connector posts an elicitation card with Approve and Deny options. The card lays the tool input out as markdown: a list of proposed items becomes a numbered list with a bold title per item, a flat object becomes key and value bullets, and only shapes it cannot lay out fall back to JSON. For a card written for the tool, pass a renderer per tool name:
+A tool with no `execute` pauses the turn for a human decision, as on [any channel](https://trigger.dev/docs/webhooks/human-in-the-loop). On Linear the connector posts an elicitation card with Approve and Deny options. The card lays the tool input out as markdown: a list of proposed items becomes a numbered list with a bold title per item, a flat object becomes key and value bullets, and only shapes it cannot lay out fall back to JSON. For a card written for the tool, pass a renderer per tool name:
 
 ```ts
 linear({

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/ci/github-actions/github-builder-architecture/index.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/build/ci/github-actions/github-builder-architecture/index.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/github-builder-architecture/index.md](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/build/ci/github-actions/github-builder-architecture/index.md)
 
 # Docker GitHub Builder architecture
 
@@ -10,7 +10,7 @@ owns the build implementation itself. That split keeps repository workflows
 short while centralizing BuildKit, caching, provenance, SBOM generation,
 signing, and multi-platform assembly in one Docker-maintained path.
 
-![Caller controls, Builder responsibilities, and outputs](https://raw.githubusercontent.com/docker/docs/947343021a3e1eea022cbede8df39387717343f9/content/manuals/build/ci/github-actions/github-builder-architecture/images/architecture-overview.png)
+![Caller controls, Builder responsibilities, and outputs](https://raw.githubusercontent.com/docker/docs/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/build/ci/github-actions/github-builder-architecture/images/architecture-overview.png)
 
 ## Core architecture
 
@@ -81,7 +81,7 @@ deprecation warnings. Use an explicit runner label or platform mapping instead.
 
 ## Execution path
 
-![Preparation, parallel platform builds, and finalization](https://raw.githubusercontent.com/docker/docs/947343021a3e1eea022cbede8df39387717343f9/content/manuals/build/ci/github-actions/github-builder-architecture/images/execution-flow.png)
+![Preparation, parallel platform builds, and finalization](https://raw.githubusercontent.com/docker/docs/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/build/ci/github-actions/github-builder-architecture/images/execution-flow.png)
 
 The execution path stays short on purpose. The consuming repository calls the
 reusable workflow. The reusable workflow prepares the build, runs the

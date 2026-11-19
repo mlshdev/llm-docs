@@ -1,0 +1,55 @@
+> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/providers/recall-ai.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/providers/recall-ai.mdx)
+> Canonical documentation: https://trigger.dev/docs/webhooks/providers/recall-ai
+
+# Recall.ai webhooks
+
+Receive and verify Recall.ai webhooks with Trigger.dev. Check the Standard Webhooks signature and run a task for each Recall.ai event, filtered on event.event.
+
+**`webhooks.recallai()` verifies the Standard Webhooks signature Recall.ai sends in the `webhook-*` headers on every request.**
+
+```ts /trigger/recall-ai.ts
+import { webhook, webhooks } from "@trigger.dev/sdk";
+
+export const recallai = webhooks.endpoint.define({
+  id: "recall-ai",
+  source: webhooks.recallai(),
+});
+
+export const recallaiEvents = webhook({
+  id: "recall-ai-events",
+  endpoint: recallai,
+  onEvent: async ({ event }) => {
+    console.log(event);
+  },
+});
+```
+
+To run a subscriber only for some events, add a [filter](https://trigger.dev/docs/webhooks/filters) on `event.event`.
+
+| Setting        | Value                                                                                       |
+| -------------- | ------------------------------------------------------------------------------------------- |
+| Source         | `webhooks.recallai()`                                                                       |
+| Verification   | Standard Webhooks (`webhook-id`, `webhook-timestamp`, `webhook-signature`)                  |
+| Credential     | Workspace verification secret issued by Recall.ai                                           |
+| Event type     | `event.event`                                                                               |
+| Recall.ai docs | [Recall.ai webhook docs](https://docs.recall.ai/docs/authenticating-requests-from-recallai) |
+
+## Set up Recall.ai
+
+1. Start `trigger dev` or deploy, then copy the endpoint's **Webhook URL** from the **Webhooks** page.
+2. Add the webhook URL as an endpoint on Recall.ai's webhooks dashboard and subscribe it to the event types your subscribers need.
+3. Create a workspace verification secret under **Developers > API Keys & Secrets > Create Workspace Secret**, then choose **Set signing secret** on the Trigger.dev endpoint and paste it. Recall.ai sends no signature headers until a workspace secret exists.
+4. Send a test event from Recall.ai, or use the endpoint's **Test** tab, and check the endpoint's **Deliveries** tab. See [Verify the connection](https://trigger.dev/docs/webhooks/connect#verify-the-connection) if nothing arrives.
+
+## Accounts created before 15 December 2025
+
+Older Recall.ai accounts sign webhooks-dashboard deliveries with `svix-*` headers and a separate secret for each endpoint. For those accounts, declare the endpoint with `webhooks.svix()` instead, and set the endpoint's signing secret from the Recall.ai webhooks dashboard:
+
+```ts /trigger/recall.ts
+import { webhooks } from "@trigger.dev/sdk";
+
+export const recall = webhooks.endpoint.define({
+  id: "recall",
+  source: webhooks.svix(),
+});
+```

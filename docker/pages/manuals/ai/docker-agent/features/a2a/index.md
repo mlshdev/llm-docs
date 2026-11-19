@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/a2a/index.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/_vendor/github.com/docker/docker-agent/docs/features/a2a/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/a2a/index.md](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/_vendor/github.com/docker/docker-agent/docs/features/a2a/index.md)
 
 *Expose Docker Agent agents via Google's Agent-to-Agent (A2A) protocol for interoperability with other agent frameworks.*
 

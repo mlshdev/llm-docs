@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/ai-chat/fast-starts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/ai-chat/fast-starts.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/ai-chat/fast-starts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/ai-chat/fast-starts.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/fast-starts
 
 # Fast starts
@@ -82,7 +82,7 @@ export const myChat = chat.agent({
     // ... fallback initialization for non-preloaded runs
   },
   run: async ({ messages, signal, streamText }) => {
-    return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
+    return streamText({ model: anthropic("claude-sonnet-5-5"), messages, abortSignal: signal });
   },
 });
 ```
@@ -226,7 +226,8 @@ sequenceDiagram
      id: "my-chat",
      run: async ({ messages, signal, streamText }) =>
        streamText({
-         model: anthropic("claude-sonnet-4-6"),
+         model: anthropic("claude-sonnet-5-5"),
+         system: "You are a helpful assistant.",
          messages,
          tools: chatTools,
          stopWhen: stepCountIs(10),
@@ -246,7 +247,7 @@ sequenceDiagram
      agentId: "my-chat",
      run: async ({ streamText }) =>
        streamText({
-         model: anthropic("claude-sonnet-4-6"),
+         model: anthropic("claude-sonnet-5-5"),
          system: "You are a helpful assistant.",
          tools: headStartTools,
        }),
@@ -264,7 +265,7 @@ sequenceDiagram
 
    > **Tip**
    >
-   > Use the **same model** on both sides (route handler and `chat.agent`) to avoid a tone or style shift between step 1 and step 2+. Your LLM provider keys stay server-side in your warm process — Trigger.dev never holds them in this design.
+   > Use the **same model and system prompt** on both sides (route handler and `chat.agent`), with the same tool names and schemas. On Claude 5.5 models, step 1's thinking is bound to that system prompt and tool set, so a mismatch makes step 2 fail with a 400. Your LLM provider keys stay server-side in your warm process — Trigger.dev never holds them in this design.
 
    Mount the handler in whatever framework you use — see [Mounting in your framework](#mounting-in-your-framework) below.
 4. Add `headStart: "/api/chat"` to `useTriggerChatTransport`. Subsequent turns bypass this URL automatically — `accessToken` and (optionally) `startSession` still run for the direct-trigger path on turn 2 onward.
@@ -536,7 +537,7 @@ for await (const turn of session) {
   const result = turn.handover?.isFinal
     ? undefined
     : streamText({
-        model: anthropic("claude-sonnet-4-6"),
+        model: anthropic("claude-sonnet-5-5"),
         messages: turn.messages,
         abortSignal: turn.signal,
         stopWhen: stepCountIs(10),
@@ -560,7 +561,7 @@ if (turn === 0 && payload.trigger === "handover-prepare") {
     // passing originalMessages so the tool output merges into the
     // handed-over assistant instead of starting a new message.
     const result = streamText({
-      model: anthropic("claude-sonnet-4-6"),
+      model: anthropic("claude-sonnet-5-5"),
       messages: conversation.modelMessages,
       stopWhen: stepCountIs(10),
     });
@@ -658,7 +659,7 @@ export async function POST(req: Request) {
     messages, // first-turn user history
     run: async ({ streamText }) =>
       streamText({
-        model: anthropic("claude-sonnet-4-6"),
+        model: anthropic("claude-sonnet-5-5"),
         system: "You are a helpful assistant.",
         tools: headStartTools,
       }),

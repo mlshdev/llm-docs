@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/apikeys.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/apikeys.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/apikeys.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/apikeys.mdx)
 > Canonical documentation: https://trigger.dev/docs/apikeys
 
 # API keys
@@ -112,11 +112,12 @@ The key must belong to the target environment. Use a Production key with `--env 
 
 Give a key a list of allowed IP addresses to limit where it can be used. Requests using the key from any other address are rejected, so a leaked key is useless outside your network. They get the same `Invalid API key` error as a key that doesn't exist, so the response never confirms the key is real. If a working key suddenly returns that error, check its allowed IP addresses.
 
-- Enter one IPv4 or IPv6 address or CIDR range per line, for example `203.0.113.9` or `203.0.113.0/24`. A key can have up to 50 ranges.
+- Add IPv4 or IPv6 addresses or CIDR ranges, for example `203.0.113.9` or `203.0.113.0/24`. Press Enter, comma or space after each one, or paste a list. A key can have up to 50 ranges.
 - Leave the list empty to allow any IP address.
 - Private and reserved ranges, such as `10.0.0.0/8` or `192.168.0.0/16`, are not accepted. Use the public addresses your requests come from.
 - Set the list when you create the key, or change it later with **Edit allowed IPs** in the key's menu. Changes take effect immediately.
 - The API keys page shows the IP address each key was last used from, so you can check it before saving a list.
+- **Test an IP**, beside the list, checks whether an address would be allowed before you save.
 - [Public Access Tokens](https://trigger.dev/docs/realtime/auth) created with the key are not IP-restricted, since they are meant for browsers. Creating one still requires an allowed IP address.
 
 > **Tip**

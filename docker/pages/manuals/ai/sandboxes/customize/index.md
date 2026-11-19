@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/_index.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/ai/sandboxes/customize/_index.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/_index.md](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/ai/sandboxes/customize/_index.md)
 
 # Kits
 
@@ -33,7 +33,7 @@ credentials, setup commands, or instructions for the agent. You publish the
 kit as a container image containing its files and descriptor.
 
 You identify a published kit by its container image reference, such as
-`docker.io/docker/sbx-kit-claude:2.1.267`. When you use the kit, `sbx`
+`docker.io/sbx/claude:2.1.267`. When you use the kit, `sbx`
 prepares its files and applies its settings. You can use one kit for a
 complete environment or combine kits that contribute different parts.
 
@@ -65,7 +65,7 @@ and launch command, and mixins add tools or behavior to it.
 For example, this command runs a workload with a mixin:
 
 ```console
-$ sbx run docker.io/docker/sbx-kit-claude:2.1.267 --kit docker.io/sbx/playwright:1.61.1
+$ sbx run docker.io/sbx/claude:2.1.267 --kit docker.io/sbx/playwright:1.61.1
 ```
 
 The Claude Code workload starts the agent, and the Playwright mixin adds

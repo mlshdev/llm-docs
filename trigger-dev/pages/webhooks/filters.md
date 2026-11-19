@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/webhooks/filters.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/webhooks/filters.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/filters.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/filters.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/filters
 
 # Filtering deliveries
@@ -28,7 +28,7 @@ export const largePayments = webhook({
 
 The same `filter` works on a [`chat.event`](https://trigger.dev/docs/webhooks/session-routing#filtering), a channel connector, and a [waiter](https://trigger.dev/docs/webhooks/waiters), where it is checked after the waiter's `match`.
 
-The filter is checked against the [endpoint's event type](https://trigger.dev/docs/webhooks/sources#typing-the-event). Concrete types catch missing fields and incompatible literals. Fields typed as `unknown`, including values in Stripe's default `data.object`, allow arbitrary non-empty field paths. Operator literals and path structure are still checked. A filter built at runtime (typed as `string` rather than a string literal) skips the compile-time check, and is validated when the endpoint is deployed.
+The filter is checked against the [endpoint's event type](https://trigger.dev/docs/webhooks/verification#typing-the-event). Concrete types catch missing fields and incompatible literals. Fields typed as `unknown`, including values in Stripe's default `data.object`, allow arbitrary non-empty field paths. Operator literals and path structure are still checked. A filter built at runtime (typed as `string` rather than a string literal) skips the compile-time check, and is validated when the endpoint is deployed.
 
 ## Narrow a union event
 
@@ -78,7 +78,7 @@ A path reads from one of three namespaces:
 
 - `event.*`: the verified, parsed request body, for example `event.data.object.amount`.
 - `header.*`: an inbound request header, matched case-insensitively, for example `header.x-github-event`.
-- `webhook.*`: endpoint and delivery metadata: `source`, `id`, `deliveryId`, `externalRef`, and `tenantId`. The last two depend on the endpoint configuration.
+- `webhook.*`: endpoint and delivery metadata: `source`, `id`, `deliveryId`, `externalRef`, and `tenantId`. The last two depend on the endpoint configuration. `deliveryId` is the provider's event ID, or a hash of the request when the provider sends none; it isn't the `whd_` delivery id.
 
 Paths must have non-empty segments. `event.data.amount` is valid; `event.`, `event..amount`, and `event.amount.` are rejected.
 

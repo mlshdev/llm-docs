@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/serverless/update-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/api-reference-v2/serverless/update-a-serverless-endpoint.mdx)
+> Pinned source for Runpod main: [api-reference-v2/serverless/update-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/api-reference-v2/serverless/update-a-serverless-endpoint.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/serverless/update-a-serverless-endpoint
 
 # Update A Serverless Endpoint
@@ -13,7 +13,7 @@ Partially updates a serverless endpoint. This is a PATCH: only the
 fields present in the body are changed; omitted fields are left
 untouched. See `UpdateEndpointRequest` for the full body.
 
-Mutable fields: `name`, `gpu`, `cpu`, `workers` (`min`/`max`),
+Mutable fields: `name`, `gpu`, `cpu`, `workers` (`min`/`max`/`initTimeout`),
 `scaling` (`type`/`value`/`idleTimeout`), `dataCenterIds`,
 `networkVolumes`, `timeout`, `flashboot`, and the
 container settings (`image`, `args`, `disk`, `ports`, `env`,
@@ -89,7 +89,7 @@ keep the previous version until they are replaced. Track rollout via
         - `name` (string; minimum length: `1`)
         - `networkVolumes` (array): Network volume IDs. Pass `[]` to detach.
           - `items` (string)
-        - `mounts` (object): Volumes to mount on the endpoint's workers. A `network` or `global` list that is present replaces the endpoint's current list of that kind; an empty list detaches it, and an omitted list is left unchanged. Both kinds cannot be present on the endpoint at once, so to switch kinds send `[]` for one and the new list for the other in the same request. Changes apply to workers created afterwards. At most one global volume, GPU endpoints only. `network` may accompany the deprecated `networkVolumes` field only if the two agree exactly.
+        - `mounts` (object): Volumes to mount on the endpoint's workers. A `network` or `global` list that is present replaces the endpoint's current list of that kind; an empty list detaches it, and an omitted list is left unchanged. Both kinds cannot be present on the endpoint at once, so to switch kinds send `[]` for one and the new list for the other in the same request. Changes apply to workers created afterwards. At most one global volume. `network` may accompany the deprecated `networkVolumes` field only if the two agree exactly.
           - `network` (array): Network volumes, at most one per data center.
             - `items` (object): A volume mounted on every worker, always at `/runpod-volume`. Custom paths are not supported yet.
               - `volumeId` (required; string): ID of a NetworkVolume (under `network`) or GlobalVolume (under `global`).
@@ -110,7 +110,10 @@ keep the previous version until they are replaced. Track rollout via
           - `min` (integer; minimum: `0`): Minimum number of workers.
           - `max` (integer; minimum: `0`): Maximum number of workers.
           - `idleTimeout` (integer; minimum: `1`; maximum: `3600`): Seconds before idle workers scale down. Not applicable to queue-based endpoints scaling on `requestCount` — rejected on create/update and omitted from responses for that combination.
+          - `initTimeout` (nullable; minimum: `60`; maximum: `14400`): Seconds a worker may take to become ready before it is terminated and replaced. In responses, the endpoint setting, or null if none is set. In PATCH, null clears the endpoint setting so the platform default applies. Changes apply to workers that start initializing after the change and do not trigger a rollout.
   - Example `scaleEndpoint`: `{"workers":{"min":1,"max":10,"idleTimeout":10},"scaling":{"type":"QUEUE_DELAY","queueDelay":8}}`
+  - Example `setInitTimeout`: `{"workers":{"initTimeout":1800}}`
+  - Example `clearInitTimeout`: `{"workers":{"initTimeout":null}}`
   - Example `changeGpuPoolsKeepingExclusions`: `{"gpu":{"pools":["ADA_24","AMPERE_80"],"excludedTypes":["NVIDIA L40"]}}`
   - Example `changeCudaOnly`: `{"gpu":{"minCudaVersion":"12.4"}}`
 
@@ -195,6 +198,7 @@ keep the previous version until they are replaced. Track rollout via
                 - `min` (integer; minimum: `0`): Minimum number of workers.
                 - `max` (integer; minimum: `0`): Maximum number of workers.
                 - `idleTimeout` (integer; minimum: `1`; maximum: `3600`): Seconds before idle workers scale down. Not applicable to queue-based endpoints scaling on `requestCount` — rejected on create/update and omitted from responses for that combination.
+                - `initTimeout` (nullable; minimum: `60`; maximum: `14400`): Seconds a worker may take to become ready before it is terminated and replaced. In responses, the endpoint setting, or null if none is set. In PATCH, null clears the endpoint setting so the platform default applies. Changes apply to workers that start initializing after the change and do not trigger a rollout.
           - `scaling` (required): Autoscaling signal — a discriminated union on `type`: `QUEUE_DELAY` (queue-based endpoints only) or `REQUEST_COUNT`. The scaler is chosen independently of the endpoint's routing `type` and can be switched on update.
             - oneOf:
               - `variant 1` (object): Scale on queue wait time. Queue-based endpoints only.
@@ -217,7 +221,9 @@ keep the previous version until they are replaced. Track rollout via
           - `timeout` (required; integer): Per-request execution timeout in milliseconds
           - `flashboot` (required; string; enum: `OFF`, `FLASHBOOT`, `PRIORITY_FLASHBOOT`): FlashBoot cold-start acceleration mode. - `OFF` — disabled - `FLASHBOOT` — enabled - `PRIORITY_FLASHBOOT` — enabled with priority capacity
           - `createdAt` (required; string; format: date-time)
-    - Example `endpoint`: `{"id":"4m7x2k9q","name":"image-generator","type":"QUEUE","requestUrls":{"run":"https://api.runpod.ai/v2/4m7x2k9q/run","runSync":"https://api.runpod.ai/v2/4m7x2k9q/runsync","status":"https://api.runpod.ai/v2/4m7x2k9q/status/{job_id}","stream":"https://api.runpod.ai/v2/4m7x2k9q/stream/{job_id}","cancel":"https://api.runpod.ai/v2/4m7x2k9q/cancel/{job_id}","retry":"https://api.runpod.ai/v2/4m7x2k9q/retry/{job_id}","purgeQueue":"https://api.runpod.ai/v2/4m7x2k9q/purge-queue","health":"https://api.runpod.ai/v2/4m7x2k9q/health"},"image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":20,"ports":["8000/http"],"env":{"MODEL_NAME":"sdxl"},"registry":null,"gpu":{"pools":["ADA_24"],"count":1,"allowedCudaVersions":[],"minCudaVersion":null},"workers":{"min":1,"max":10,"idleTimeout":10},"scaling":{"type":"QUEUE_DELAY","queueDelay":8},"dataCenterIds":["US-KS-2"],"networkVolumes":["2q9m7x4c"],"mounts":{"network":[{"volumeId":"2q9m7x4c"}],"global":[]},"timeout":300000,"flashboot":"OFF","createdAt":"2026-06-01T12:00:00Z"}`
+          - `userId` (nullable): ID of the account the endpoint is stamped to. This is its creator, unless the endpoint was migrated from a team. Omitted when unknown.
+          - `version` (nullable): The endpoint's current worker configuration version. To see whether a worker runs an older configuration, use its `isStale`: comparing versions directly can disagree on legacy endpoints (version 1). It changes on edits that roll out new workers (image, template, compute, volumes, CUDA versions, data centers) and not on scaling, worker count or timeout edits. Omitted when unknown.
+    - Example `endpoint`: `{"id":"4m7x2k9q","name":"image-generator","type":"QUEUE","requestUrls":{"run":"https://api.runpod.ai/v2/4m7x2k9q/run","runSync":"https://api.runpod.ai/v2/4m7x2k9q/runsync","status":"https://api.runpod.ai/v2/4m7x2k9q/status/{job_id}","stream":"https://api.runpod.ai/v2/4m7x2k9q/stream/{job_id}","cancel":"https://api.runpod.ai/v2/4m7x2k9q/cancel/{job_id}","retry":"https://api.runpod.ai/v2/4m7x2k9q/retry/{job_id}","purgeQueue":"https://api.runpod.ai/v2/4m7x2k9q/purge-queue","health":"https://api.runpod.ai/v2/4m7x2k9q/health"},"image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":20,"ports":["8000/http"],"env":{"MODEL_NAME":"sdxl"},"registry":null,"gpu":{"pools":["ADA_24"],"count":1,"allowedCudaVersions":[],"minCudaVersion":null},"workers":{"min":1,"max":10,"idleTimeout":10,"initTimeout":null},"scaling":{"type":"QUEUE_DELAY","queueDelay":8},"dataCenterIds":["US-KS-2"],"networkVolumes":["2q9m7x4c"],"mounts":{"network":[{"volumeId":"2q9m7x4c"}],"global":[]},"timeout":300000,"flashboot":"OFF","createdAt":"2026-06-01T12:00:00Z"}`
 - `400`: The request could not be processed because it is malformed or conflicts with request rules.
   - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
   - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
@@ -304,3 +310,5 @@ keep the previous version until they are replaced. Track rollout via
       - `detail` (required; string): Human-readable explanation
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
+
+**Required API key scope:** `serverless:write`

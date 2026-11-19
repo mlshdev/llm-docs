@@ -1,6 +1,6 @@
 # Docker main
 
-> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `947343021a3e1eea022cbede8df39387717343f9`.
+> Documentation generated from the latest `main` branch commit of [docker/docs](https://github.com/docker/docs) and pinned to immutable source commit `f8d4abc333036d7d71928bab49a417876d348966`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Docker main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -396,12 +396,12 @@
 - [Debug a kit](pages/manuals/ai/sandboxes/customize/author/debug.md): Docker Sandboxes sbx requirements (6748 bytes)
 - [Build and distribute kits](pages/manuals/ai/sandboxes/customize/author/distribute.md): Docker Sandboxes sbx requirements (4551 bytes)
 - [Author kits](pages/manuals/ai/sandboxes/customize/author/index.md): Docker Sandboxes sbx requirements (11396 bytes)
-- [Compose a kit set](pages/manuals/ai/sandboxes/customize/author/kit-sets.md): Docker Sandboxes sbx requirements (9366 bytes)
-- [Kit authoring patterns](pages/manuals/ai/sandboxes/customize/author/patterns.md): Docker Sandboxes sbx requirements (6679 bytes)
+- [Compose a kit set](pages/manuals/ai/sandboxes/customize/author/kit-sets.md): Docker Sandboxes sbx requirements (9355 bytes)
+- [Kit authoring patterns](pages/manuals/ai/sandboxes/customize/author/patterns.md): Docker Sandboxes sbx requirements (6668 bytes)
 - [Build a tool mixin](pages/manuals/ai/sandboxes/customize/author/tool-mixins.md): Docker Sandboxes sbx requirements (7610 bytes)
-- [Kits](pages/manuals/ai/sandboxes/customize/index.md): Docker Sandboxes sbx requirements (5495 bytes)
+- [Kits](pages/manuals/ai/sandboxes/customize/index.md): Docker Sandboxes sbx requirements (5473 bytes)
 - [Kits v2](pages/manuals/ai/sandboxes/customize/kits-v2.md): Docker Sandboxes sbx requirements (45144 bytes)
-- [Use kits](pages/manuals/ai/sandboxes/customize/use-kits.md): Docker Sandboxes sbx requirements (18083 bytes)
+- [Use kits](pages/manuals/ai/sandboxes/customize/use-kits.md): Docker Sandboxes sbx requirements (17913 bytes)
 - [FAQ](pages/manuals/ai/sandboxes/faq.md): Host integration and workspace instructions on this page describe local sandboxes. See Local and cloud differences before adapting those workflows to the cloud. (10684 bytes)
 - [Get started with local Docker Sandboxes](pages/manuals/ai/sandboxes/get-started.md): This walkthrough uses local sandboxes. For cloud credentials and a first cloud session, see Get started with cloud sandboxes. (7016 bytes)
 - [Docker Sandboxes](pages/manuals/ai/sandboxes/index.md): Docker Sandboxes run AI coding agents in isolated environments on your machine or on Docker-managed cloud infrastructure. Use the sbx CLI to create and manage either kind of sandbox. (3623 bytes)

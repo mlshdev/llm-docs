@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/cb1e96f5f59e579a33b3dedc64e92f509688de68/doc/general.texi)
+> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/aa7c09781dd698d6cd775631198eefcc34a21fcd/doc/general.texi)
 
 # External libraries
 
@@ -832,6 +832,7 @@ library:
 - SoX native format          |  X  |  X
 - SUN AU format              |  X  |  X
 - SUP raw PGS subtitles      |  X  |  X
+- Super Audio CD (SACD)      |     |  X
 - SVAG                       |     |  X
   \|  Audio format used in Konami PS2 games.
 - TDSC                       |     |  X

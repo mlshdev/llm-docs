@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/guides/introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/introduction.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/guides/introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/introduction.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/introduction
 
 # Frameworks, guides and examples
@@ -17,28 +17,27 @@ A growing list of guides and examples to get the most out of Trigger.dev.
 
 Get set up fast using our detailed walk-through guides.
 
-| Guide                                                                                                              | Description                                                            |
-| :----------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------- |
-| [AI Agent: Chat agent](https://trigger.dev/docs/guides/ai-agents/chat-agent)                                       | Build a durable, multi-turn chat agent with `chat.agent()`             |
-| [AI Agent: Content moderation](https://trigger.dev/docs/guides/ai-agents/respond-and-check-content)                | Parallel check content while responding to customers                   |
-| [AI Agent: Generate and translate copy](https://trigger.dev/docs/guides/ai-agents/generate-translate-copy)         | Chain prompts to generate and translate content                        |
-| [AI Agent: News verification](https://trigger.dev/docs/guides/ai-agents/verify-news-article)                       | Orchestrate fact checking of news articles                             |
-| [AI Agent: Route questions](https://trigger.dev/docs/guides/ai-agents/route-question)                              | Route questions to different models based on complexity                |
-| [AI Agent: Translation refinement](https://trigger.dev/docs/guides/ai-agents/translate-and-refine)                 | Evaluate and refine translations with feedback                         |
-| [Claude Agent SDK](https://trigger.dev/docs/guides/ai-agents/claude-code-trigger)                                  | Build AI agents that read files, run commands, and edit code           |
-| [Agent rules](https://trigger.dev/docs/mcp-agent-rules)                                                            | Install agent skills so your AI assistant writes correct tasks         |
-| [Prisma](https://trigger.dev/docs/guides/frameworks/prisma)                                                        | How to setup Prisma with Trigger.dev                                   |
-| [Python image processing](https://trigger.dev/docs/guides/python/python-image-processing)                          | Use Python and Pillow to process images                                |
-| [Python document to markdown](https://trigger.dev/docs/guides/python/python-doc-to-markdown)                       | Use Python and MarkItDown to convert documents to markdown             |
-| [Python PDF form extractor](https://trigger.dev/docs/guides/python/python-pdf-form-extractor)                      | Use Python, PyMuPDF and Trigger.dev to extract data from a PDF form    |
-| [Python web crawler](https://trigger.dev/docs/guides/python/python-crawl4ai)                                       | Use Python, Crawl4AI and Playwright to create a headless web crawler   |
-| [Sequin database triggers](https://trigger.dev/docs/guides/frameworks/sequin)                                      | Trigger tasks from database changes using Sequin                       |
-| [Stripe webhooks](https://trigger.dev/docs/guides/examples/stripe-webhook)                                         | Trigger tasks from incoming Stripe webhook events                      |
-| [Hookdeck webhooks](https://trigger.dev/docs/guides/examples/hookdeck-webhook)                                     | Use Hookdeck to receive webhooks and forward them to Trigger.dev tasks |
-| [Supabase database webhooks](https://trigger.dev/docs/guides/frameworks/supabase-edge-functions-database-webhooks) | Trigger tasks using Supabase database webhooks                         |
-| [Supabase edge function hello world](https://trigger.dev/docs/guides/frameworks/supabase-edge-functions-basic)     | Trigger tasks from Supabase edge function                              |
-| [Using webhooks in Next.js](https://trigger.dev/docs/guides/frameworks/nextjs-webhooks)                            | Trigger tasks from a webhook in Next.js                                |
-| [Using webhooks in Remix](https://trigger.dev/docs/guides/frameworks/remix-webhooks)                               | Trigger tasks from a webhook in Remix                                  |
+| Guide                                                                                                              | Description                                                               |
+| :----------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------ |
+| [AI Agent: Chat agent](https://trigger.dev/docs/guides/ai-agents/chat-agent)                                       | Build a durable, multi-turn chat agent with `chat.agent()`                |
+| [AI Agent: Content moderation](https://trigger.dev/docs/guides/ai-agents/respond-and-check-content)                | Parallel check content while responding to customers                      |
+| [AI Agent: Generate and translate copy](https://trigger.dev/docs/guides/ai-agents/generate-translate-copy)         | Chain prompts to generate and translate content                           |
+| [AI Agent: News verification](https://trigger.dev/docs/guides/ai-agents/verify-news-article)                       | Orchestrate fact checking of news articles                                |
+| [AI Agent: Route questions](https://trigger.dev/docs/guides/ai-agents/route-question)                              | Route questions to different models based on complexity                   |
+| [AI Agent: Translation refinement](https://trigger.dev/docs/guides/ai-agents/translate-and-refine)                 | Evaluate and refine translations with feedback                            |
+| [Claude Agent SDK](https://trigger.dev/docs/guides/ai-agents/claude-code-trigger)                                  | Build AI agents that read files, run commands, and edit code              |
+| [Agent rules](https://trigger.dev/docs/mcp-agent-rules)                                                            | Install agent skills so your AI assistant writes correct tasks            |
+| [Prisma](https://trigger.dev/docs/guides/frameworks/prisma)                                                        | How to setup Prisma with Trigger.dev                                      |
+| [Python image processing](https://trigger.dev/docs/guides/python/python-image-processing)                          | Use Python and Pillow to process images                                   |
+| [Python document to markdown](https://trigger.dev/docs/guides/python/python-doc-to-markdown)                       | Use Python and MarkItDown to convert documents to markdown                |
+| [Python PDF form extractor](https://trigger.dev/docs/guides/python/python-pdf-form-extractor)                      | Use Python, PyMuPDF and Trigger.dev to extract data from a PDF form       |
+| [Python web crawler](https://trigger.dev/docs/guides/python/python-crawl4ai)                                       | Use Python, Crawl4AI and Playwright to create a headless web crawler      |
+| [Sequin database triggers](https://trigger.dev/docs/guides/frameworks/sequin)                                      | Trigger tasks from database changes using Sequin                          |
+| [Receiving webhooks](https://trigger.dev/docs/webhooks/providers)                                                  | Receive webhooks from more than 40 providers, including Stripe and GitHub |
+| [Supabase database webhooks](https://trigger.dev/docs/guides/frameworks/supabase-edge-functions-database-webhooks) | Trigger tasks using Supabase database webhooks                            |
+| [Supabase edge function hello world](https://trigger.dev/docs/guides/frameworks/supabase-edge-functions-basic)     | Trigger tasks from Supabase edge function                                 |
+| [Custom webhook handler with Next.js](https://trigger.dev/docs/guides/frameworks/nextjs-webhooks)                  | Trigger tasks from a webhook in Next.js                                   |
+| [Custom webhook handler with Remix](https://trigger.dev/docs/guides/frameworks/remix-webhooks)                     | Trigger tasks from a webhook in Remix                                     |
 
 ## Featured use cases
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/mcp-introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/mcp-introduction.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/mcp-introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/mcp-introduction.mdx)
 > Canonical documentation: https://trigger.dev/docs/mcp-introduction
 
 # MCP Introduction
@@ -16,6 +16,10 @@ The Trigger.dev MCP (Model Context Protocol) Server enables AI assistants to int
 - Deploy projects to different environments
 - Monitor run details and list runs with filtering options
 - Query your data with TRQL and run built-in dashboard metrics
+
+> **Note**
+>
+> This page covers the CLI MCP server, which runs locally and can deploy and run your dev server. To connect over HTTP without installing anything, use the [remote MCP server](https://trigger.dev/docs/mcp-remote).
 
 ## Installation
 
@@ -305,7 +309,9 @@ After adding the config, restart your client. You should see a server named **tr
 
 ## Authentication
 
-The `search_docs` tool works without authentication, and so do the local-only tools `list_profiles`, `dev_server_status` and `stop_dev_server`. All other tools require you to be logged in via the [Trigger.dev CLI](https://trigger.dev/docs/cli-login-commands). The first time you use an authenticated tool, your MCP client will prompt you to log in.
+The `search_docs` tool works without authentication, and so do the local-only tools `list_profiles`, `dev_server_status` and `stop_dev_server`. All other tools require you to be logged in via the [Trigger.dev CLI](https://trigger.dev/docs/cli-login-commands). The first time you use an authenticated tool, your MCP client prompts you to log in.
+
+A login stops working after 7 days without use. The next authenticated tool call starts the login flow again. If your client supports confirmation prompts, it asks first. Then the browser opens, and the call continues once you approve. See [CLI login expiry](https://trigger.dev/docs/cli-login-commands#login-expiry).
 
 The `install-mcp` command supports these options:
 

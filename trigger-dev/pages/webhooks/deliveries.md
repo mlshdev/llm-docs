@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/webhooks/deliveries.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/webhooks/deliveries.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/deliveries.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/deliveries.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/deliveries
 
 # Deliveries and endpoints
@@ -59,7 +59,7 @@ curl -X POST "https://api.trigger.dev/api/v1/webhooks/deliveries/whd_1234/replay
   -H "Authorization: Bearer $TRIGGER_SECRET_KEY"
 ```
 
-Add `?targetId=` to send it to one subscriber regardless of its filter. `targetId` is the subscriber id: a `webhook()` task's id, or `agentId:eventId` for an agent's `chat.event` or channel. A replay never resumes waiting runs.
+Add `?targetId=` to send it to one subscriber regardless of its filter. `targetId` is the subscriber id: a `webhook()` task's id, `agentId:eventId` for an agent's `chat.event`, or `agentId:connectorId` for a channel. A replay never resumes waiting runs.
 
 ## From an agent or the API
 
@@ -79,23 +79,23 @@ Deliveries stay visible for 3 days on Free, 7 days on Hobby, 30 days on Pro, and
 
 Trigger.dev uses the endpoint and idempotency key to deduplicate incoming events. Delivery records and task runs have separate deduplication windows:
 
-| What is deduplicated | Window                                            |
-| -------------------- | ------------------------------------------------- |
-| Delivery records     | Six hours by default.                             |
-| Task runs            | Three days for Stripe; one day for other sources. |
+| What is deduplicated | Window                                              |
+| -------------------- | --------------------------------------------------- |
+| Delivery records     | Six hours by default.                               |
+| Task runs            | Three days for Stripe; one day for other providers. |
 
 A retry after the delivery window expires can create another delivery record. If the task-run idempotency window is still active, routing returns the existing run instead of starting another one.
 
 When the source maps a provider event ID, that ID becomes the key, so the provider's own retries of an event are recognised as duplicates:
 
-| Key          | Sources                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| A header     | GitHub (`X-GitHub-Delivery`), Svix and Autumn (`svix-id`), Standard Webhooks, Loops and Granola (`webhook-id`), Linear (`Linear-Delivery`), PagerDuty (`X-Webhook-Id`), Jira (`X-Atlassian-Webhook-Identifier`), Zendesk (`X-Zendesk-Webhook-Invocation-Id`), Attio (`Idempotency-Key`), Shopify (`X-Shopify-Webhook-Id`), Hookdeck (`X-Hookdeck-Eventid`, or `<prefix>-eventid` with a custom header prefix) |
-| A body field | Stripe, Notion, Vercel, Intercom, WorkOS, Metronome, Mux, Langfuse and Plain (`id`), Square, Slack and Typeform (`event_id`), Firecrawl (`webhookId`)                                                                                                                                                                                                                                                         |
+| Key          | Providers                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A header     | GitHub (`X-GitHub-Delivery`); Svix, Clerk, Resend and Autumn (`svix-id`); Standard Webhooks, OpenAI, Replicate, Recall.ai, Loops and Granola (`webhook-id`); Linear (`Linear-Delivery`); PagerDuty (`X-Webhook-Id`); Jira (`X-Atlassian-Webhook-Identifier`); Zendesk (`X-Zendesk-Webhook-Invocation-Id`); Attio (`Idempotency-Key`); Shopify (`X-Shopify-Webhook-Id`); Hookdeck (`X-Hookdeck-Eventid`, or `<prefix>-eventid` with a custom header prefix) |
+| A body field | Stripe, Vercel, WorkOS, Metronome, Mux, Langfuse and Plain (`id`); Square, Slack and Typeform (`event_id`); Firecrawl (`webhookId`)                                                                                                                                                                                                                                                                                                                        |
 
-The other named sources (Zoom, Calendly, Sentry, DocuSign, ElevenLabs, Vapi, Retell, Tailscale, Infisical, PlanetScale, Supabase, Discord) use the fallback below.
+The other built-in providers (Calendly, Cal.com, Sentry, DocuSign, ElevenLabs, Vapi, Retell, Tailscale, Infisical, PlanetScale, Supabase, Discord, GitLab and WhatsApp) use the fallback below.
 
-If the source doesn't map an event ID, the key is derived from the raw body, timestamp, and signature. A retry with a different timestamp or signature can therefore produce a different key. For a [custom source](https://trigger.dev/docs/webhooks/sources#custom-providers), set `idempotencyField` to a stable event identifier when the provider supplies one.
+If the source doesn't map an event ID, the key is derived from the raw body, timestamp, and signature. A retry with a different timestamp or signature can therefore produce a different key. For a [custom provider](https://trigger.dev/docs/webhooks/custom-providers), set `idempotencyField` to a stable event identifier when the provider supplies one.
 
 ## Verification and recording
 

@@ -1,11 +1,11 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/github-actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/github-actions.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/github-actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/github-actions.mdx)
 > Canonical documentation: https://trigger.dev/docs/github-actions
 
 # CI / GitHub Actions
 
 Deploy your tasks from CI using trusted deploys or an environment API key.
 
-For GitHub Actions without stored credentials, use [Trusted publishing](https://trigger.dev/docs/deployment/trusted-publishing) with OIDC. The API-key instructions below also apply to other CI systems. Use an environment API key rather than a Personal Access Token so deployments are not tied to an individual team member's account or permissions.
+For GitHub Actions without stored credentials, use [Trusted publishing](https://trigger.dev/docs/deployment/trusted-publishing) with OIDC. The API-key instructions below also apply to other CI systems. Use an environment API key rather than a Personal Access Token so deployments are not tied to an individual team member's account or permissions. A Personal Access Token also [expires](https://trigger.dev/docs/management/authentication#pat-expiry) on the date chosen when it was created, and a copied CLI login [expires after 7 days without use](https://trigger.dev/docs/cli-login-commands#login-expiry).
 
 > **Tip**
 >
@@ -155,7 +155,7 @@ Create a separate API key for each environment that your CI workflows deploy to.
 4. Open the repository's **Settings**, then select **Secrets and variables** → **Actions** → **New
    repository secret**. Add the name `TRIGGER_ACCESS_TOKEN` and paste the API key as its value.
 
-   ![Add TRIGGER\_ACCESS\_TOKEN in GitHub](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/images/github-access-token.png)
+   ![Add TRIGGER\_ACCESS\_TOKEN in GitHub](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/images/github-access-token.png)
 
 The API key must belong to the environment targeted by the deploy command. If the repository deploys to multiple environments, store each environment's key in a separate GitHub secret and map the appropriate secret to `TRIGGER_ACCESS_TOKEN` in each workflow.
 

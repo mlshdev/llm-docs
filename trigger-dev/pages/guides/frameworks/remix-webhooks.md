@@ -1,9 +1,14 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/guides/frameworks/remix-webhooks.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/frameworks/remix-webhooks.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/guides/frameworks/remix-webhooks.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/frameworks/remix-webhooks.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/remix-webhooks
 
-# Triggering tasks with webhooks in Remix
+# Custom webhook handler with Remix
 
-Learn how to trigger a task from a webhook in a Remix app.
+Handle a webhook in your own Remix action and trigger a task from it.
+
+> **Note**
+>
+> Trigger.dev has built-in webhook endpoints that verify and route events for you. See
+> [Webhooks](https://trigger.dev/docs/webhooks/overview). This guide is for when you want to handle webhooks in your own app and trigger tasks yourself.
 
 ## Prerequisites
 

@@ -1,0 +1,42 @@
+> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/providers/replicate.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/providers/replicate.mdx)
+> Canonical documentation: https://trigger.dev/docs/webhooks/providers/replicate
+
+# Replicate webhooks
+
+Receive and verify Replicate webhooks with Trigger.dev. Check the Standard Webhooks signature and run a task for each Replicate event, filtered on event.status.
+
+**`webhooks.replicate()` verifies the Standard Webhooks signature Replicate sends in the `webhook-*` headers on every request.**
+
+```ts /trigger/replicate.ts
+import { webhook, webhooks } from "@trigger.dev/sdk";
+
+export const replicate = webhooks.endpoint.define({
+  id: "replicate",
+  source: webhooks.replicate(),
+});
+
+export const replicateEvents = webhook({
+  id: "replicate-events",
+  endpoint: replicate,
+  onEvent: async ({ event }) => {
+    console.log(event);
+  },
+});
+```
+
+To run a subscriber only for some events, add a [filter](https://trigger.dev/docs/webhooks/filters) on `event.status`.
+
+| Setting        | Value                                                                               |
+| -------------- | ----------------------------------------------------------------------------------- |
+| Source         | `webhooks.replicate()`                                                              |
+| Verification   | Standard Webhooks (`webhook-id`, `webhook-timestamp`, `webhook-signature`)          |
+| Credential     | Signing secret issued by Replicate                                                  |
+| Event type     | `event.status`                                                                      |
+| Replicate docs | [Replicate webhook docs](https://replicate.com/docs/topics/webhooks/verify-webhook) |
+
+## Set up Replicate
+
+1. Start `trigger dev` or deploy, then copy the endpoint's **Webhook URL** from the **Webhooks** page.
+2. Replicate has no webhook settings page. Pass the webhook URL as `webhook` when you create a prediction, with `webhook_events_filter` set to the events you want (`start`, `output`, `logs`, `completed`).
+3. Get your signing secret from `GET https://api.replicate.com/v1/webhooks/default/secret`. It starts with `whsec_` and is the same for every webhook on your user or organization. Choose **Set signing secret** on the Trigger.dev endpoint and paste it.
+4. Create a prediction with the webhook set, or use the endpoint's **Test** tab, and check the endpoint's **Deliveries** tab. See [Verify the connection](https://trigger.dev/docs/webhooks/connect#verify-the-connection) if nothing arrives.

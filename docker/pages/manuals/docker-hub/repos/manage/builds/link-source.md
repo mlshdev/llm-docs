@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/link-source.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/docker-hub/repos/manage/builds/link-source.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/link-source.md](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/docker-hub/repos/manage/builds/link-source.md)
 
 # Configure automated builds from GitHub and BitBucket
 
@@ -30,7 +30,7 @@ If you are linking a source code provider to create autobuilds for a team, follo
 
 4. Review the settings for the **Docker Hub Builder** OAuth application.
 
-![Granting access to GitHub account](https://raw.githubusercontent.com/docker/docs/947343021a3e1eea022cbede8df39387717343f9/content/manuals/docker-hub/repos/manage/builds/images/authorize-builder.png)
+![Granting access to GitHub account](https://raw.githubusercontent.com/docker/docs/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/docker-hub/repos/manage/builds/images/authorize-builder.png)
 
 ```
 > [!NOTE]
@@ -146,7 +146,7 @@ To revoke authorization in your Bitbucket account:
 
 3. Select **Revoke** next to the Docker Hub line.
 
-![Bitbucket Authorization revocation page](https://raw.githubusercontent.com/docker/docs/947343021a3e1eea022cbede8df39387717343f9/content/manuals/docker-hub/repos/manage/builds/images/bitbucket-revoke.png)
+![Bitbucket Authorization revocation page](https://raw.githubusercontent.com/docker/docs/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/docker-hub/repos/manage/builds/images/bitbucket-revoke.png)
 
 > \[!NOTE]
 >

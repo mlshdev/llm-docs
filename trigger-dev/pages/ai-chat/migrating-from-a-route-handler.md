@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/ai-chat/migrating-from-a-route-handler.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/ai-chat/migrating-from-a-route-handler.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/ai-chat/migrating-from-a-route-handler.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/ai-chat/migrating-from-a-route-handler.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/migrating-from-a-route-handler
 
 # Migrate from an AI SDK route handler
@@ -120,7 +120,7 @@ export async function POST(req: Request) {
   if (!session) return new Response("Unauthorized", { status: 401 });
 
   const result = streamText({
-    model: anthropic("claude-sonnet-4-5"),
+    model: anthropic("claude-sonnet-5-5"),
     system: "You are a helpful assistant.",
     messages: convertToModelMessages(messages),
     tools,
@@ -149,7 +149,7 @@ export const myChat = chat.agent({
   run: async ({ messages, tools, signal, streamText }) =>
     streamText({
       tools,
-      model: anthropic("claude-sonnet-4-5"),
+      model: anthropic("claude-sonnet-5-5"),
       system: "You are a helpful assistant.",
       messages,
       abortSignal: signal,
@@ -356,7 +356,7 @@ export const myChat = chat.agent({
   run: async ({ messages, tools, signal, streamText }) =>
     streamText({
       tools,
-      model: anthropic("claude-sonnet-4-5"),
+      model: anthropic("claude-sonnet-5-5"),
       system: "You are a helpful assistant.",
       messages,
       abortSignal: signal,
@@ -458,7 +458,7 @@ Head Start brings the route handler back for exactly that first turn. It runs st
      agentId: "my-chat",
      run: async ({ streamText }) =>
        streamText({
-         model: anthropic("claude-sonnet-4-5"),
+         model: anthropic("claude-sonnet-5-5"),
          system: "You are a helpful assistant.",
          tools: headStartTools,
        }),

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_alpha_scale.yaml](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_alpha_scale.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_alpha_scale.yaml](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_alpha_scale.yaml)
 
 # docker compose alpha scale
 

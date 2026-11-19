@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.4: [apps/docs/content/guides/integrate/zitadel-apis/access-zitadel-apis.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/guides/integrate/zitadel-apis/access-zitadel-apis.mdx)
+> Pinned source for ZITADEL v4.20.5: [apps/docs/content/guides/integrate/zitadel-apis/access-zitadel-apis.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/guides/integrate/zitadel-apis/access-zitadel-apis.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/zitadel-apis/access-zitadel-apis
 
 This guide explains what ZITADEL APIs are and how to access ZITADEL APIs using a service account to manage all types of resources and settings.
@@ -78,7 +78,7 @@ To be able to access the ZITADEL APIs, your service account needs permissions to
 3. Search for your service account
 4. Give the user the role you need — for example, we choose Org Owner (More about [ZITADEL Permissions](https://zitadel.com/docs/guides/manage/console/administrators))
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/public/img/console_org_owner_add.gif)
+![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/console_org_owner_add.gif)
 
 ## 3. Authenticate service account and request token
 
@@ -149,7 +149,7 @@ Get the client id and client secret by
 2. Open **Actions** in the top right corner and click on **Generate Client Secret**
 3. Copy the **ClientID** and **ClientSecret** from the dialog
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/public/img/console_serviceaccounts_secret.gif)
+![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/console_serviceaccounts_secret.gif)
 
 With the ClientId and ClientSecret from the prior step, you will need to craft a POST request to ZITADEL's token endpoint.
 

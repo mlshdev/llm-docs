@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/policies/examples.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/build/policies/examples.md)
+> Pinned source for Docker main: [content/manuals/build/policies/examples.md](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/build/policies/examples.md)
 
 This page provides complete, working policy examples you can copy and adapt.
 The examples are organized into two sections: getting started policies for

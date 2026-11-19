@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/guides/ai-agents/chat-agent.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/ai-agents/chat-agent.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/guides/ai-agents/chat-agent.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/ai-agents/chat-agent.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/ai-agents/chat-agent
 
 # Build a chat agent
@@ -24,7 +24,7 @@ export const myChat = chat.agent({
   id: "my-chat",
   run: async ({ messages, signal, streamText }) => {
     return streamText({
-      model: anthropic("claude-sonnet-4-5"),
+      model: anthropic("claude-sonnet-5-5"),
       messages,
       abortSignal: signal,
       stopWhen: stepCountIs(15),
@@ -62,7 +62,7 @@ export const myChat = chat.agent({
   run: async ({ messages, tools, signal, streamText }) => {
     return streamText({
       tools,
-      model: anthropic("claude-sonnet-4-5"),
+      model: anthropic("claude-sonnet-5-5"),
       messages,
       stopWhen: stepCountIs(15),
       abortSignal: signal,

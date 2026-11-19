@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/database-connections.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/database-connections.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/database-connections.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/database-connections.mdx)
 > Canonical documentation: https://trigger.dev/docs/database-connections
 
 # Database connections
@@ -183,7 +183,7 @@ export const myChat = chat.agent({
     const user = await prisma.user.findUnique({ where: { id: clientData.userId } });
     // The connection is back in the pool before the model stream starts.
     return streamText({
-      model: openai("gpt-4o"),
+      model: openai("gpt-6-luna"),
       system: `Helping ${user?.name ?? "the user"}.`,
       messages,
       abortSignal: signal,

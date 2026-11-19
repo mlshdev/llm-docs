@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/infra.txt](https://github.com/FFmpeg/FFmpeg/blob/cb1e96f5f59e579a33b3dedc64e92f509688de68/doc/infra.txt)
+> Pinned source for FFmpeg master: [doc/infra.txt](https://github.com/FFmpeg/FFmpeg/blob/aa7c09781dd698d6cd775631198eefcc34a21fcd/doc/infra.txt)
 
 # FFmpeg Infrastructure:
 

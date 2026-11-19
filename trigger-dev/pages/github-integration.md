@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/github-integration.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/github-integration.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/github-integration.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/github-integration.mdx)
 > Canonical documentation: https://trigger.dev/docs/github-integration
 
 # GitHub integration
@@ -32,7 +32,7 @@ This eliminates the need to manually run the `trigger.dev deploy` command or set
 
 Our GitHub integration uses branch tracking to determine when and where to deploy your code.
 
-![Trigger.dev project git settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/deployment/git-settings.png)
+![Trigger.dev project git settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/deployment/git-settings.png)
 
 ### Production and staging branches
 
@@ -58,6 +58,27 @@ The name of the preview branch matches the branch name of the pull request.
 > **Note**
 >
 > Preview branch deployments require the preview environment to be enabled on your project. Learn more about [preview branches](https://trigger.dev/docs/deployment/preview-branches).
+
+## Ignored branches
+
+Ignored branches stop pull requests from matching branches from getting a preview deployment, for example Dependabot updates.
+
+Open **Integrations** in your project settings and add the patterns in the git settings panel, one per line. Use **Test a branch** to check which pattern, if any, matches a branch.
+
+```text
+dependabot/**
+skip-preview/**
+```
+
+- Patterns match the whole branch name. `*` stays within one part of the name and `**` also crosses `/`, so `skip-preview/**` matches `skip-preview/login` and `skip-preview` itself.
+- Negation (`!`), braces (`{a,b}`) and extglob groups like `@(a|b)` aren't supported. A pattern can use `**` at most twice and `*` at most twice more, and you can add up to 100 patterns of up to 256 characters each.
+- Only previews are affected: pushes to your production and staging branches always deploy, and a preview deployed before you added a pattern is archived as usual.
+
+When a preview is skipped, the pull request's Trigger.dev check is marked as skipped with the matching pattern. Re-run that check from GitHub to deploy the preview anyway.
+
+> **Warning**
+>
+> If your project is connected to Vercel, ignore the same branches in both places. A Vercel preview of a branch that Trigger.dev ignores has no task deployment for its commit, so with [version skew protection](https://trigger.dev/docs/vercel-integration#version-skew-protection) its runs wait for one and [expire after an hour](https://trigger.dev/docs/deployment/atomic-deployment#waiting-and-expiry).
 
 ## Ignored paths
 
@@ -100,7 +121,7 @@ You can disconnect a repository at any time from your project git settings. This
 
 To add or remove repository access for the Trigger.dev GitHub app, follow the link in the `Connect GitHub repository` modal:
 
-![Trigger.dev prompt to connect a GitHub repository](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/deployment/connect-repo.png)
+![Trigger.dev prompt to connect a GitHub repository](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/deployment/connect-repo.png)
 
 Alternatively, you can follow these steps on GitHub:
 

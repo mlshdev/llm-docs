@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/runs/max-duration.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/runs/max-duration.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/runs/max-duration.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/runs/max-duration.mdx)
 > Canonical documentation: https://trigger.dev/docs/runs/max-duration
 
 # Max duration
@@ -58,7 +58,7 @@ export const maxDurationTask = task({
 
 The above value will be compared to the `maxDuration` you set. If the task exceeds the `maxDuration`, it will be stopped with the following error:
 
-![Max duration error](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/runs/max-duration-error.png)
+![Max duration error](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/runs/max-duration-error.png)
 
 ## Configuring for a task
 

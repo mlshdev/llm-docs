@@ -1,0 +1,41 @@
+> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/providers/square.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/providers/square.mdx)
+> Canonical documentation: https://trigger.dev/docs/webhooks/providers/square
+
+# Square webhooks
+
+Receive and verify Square webhooks with Trigger.dev. Check the HMAC-SHA256 signature in x-square-hmacsha256-signature and run a task for each Square event, filtered on event.type.
+
+**`webhooks.square()` verifies the HMAC-SHA256 signature Square sends in `x-square-hmacsha256-signature` on every request.**
+
+```ts /trigger/square.ts
+import { webhook, webhooks } from "@trigger.dev/sdk";
+
+export const square = webhooks.endpoint.define({
+  id: "square",
+  source: webhooks.square(),
+});
+
+export const squareEvents = webhook({
+  id: "square-events",
+  endpoint: square,
+  filter: "event.type == 'payment.created'",
+  onEvent: async ({ event }) => {
+    console.log(event);
+  },
+});
+```
+
+| Setting      | Value                                                                             |
+| ------------ | --------------------------------------------------------------------------------- |
+| Source       | `webhooks.square()`                                                               |
+| Verification | HMAC-SHA256 in `x-square-hmacsha256-signature`                                    |
+| Credential   | Signing secret issued by Square                                                   |
+| Event type   | `event.type`                                                                      |
+| Square docs  | [Square webhook docs](https://developer.squareup.com/docs/webhooks/step3validate) |
+
+## Set up Square
+
+1. Start `trigger dev` or deploy, then copy the endpoint's **Webhook URL** from the **Webhooks** page.
+2. Add the webhook URL as a webhook in Square and select the events your subscribers need. See Square's [webhook docs](https://developer.squareup.com/docs/webhooks/step3validate) for where its webhook settings are.
+3. Copy the signing secret Square shows for the webhook, then choose **Set signing secret** on the Trigger.dev endpoint.
+4. Send a test event from Square, or use the endpoint's **Test** tab, and check the endpoint's **Deliveries** tab. See [Verify the connection](https://trigger.dev/docs/webhooks/connect#verify-the-connection) if nothing arrives.

@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.4: [apps/docs/content/self-hosting/manage/cli/mirror.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/self-hosting/manage/cli/mirror.mdx)
+> Pinned source for ZITADEL v4.20.5: [apps/docs/content/self-hosting/manage/cli/mirror.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/self-hosting/manage/cli/mirror.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/manage/cli/mirror
 
 The `mirror` command allows you to do database to database migrations. This functionality is useful to copy data from one database to another.

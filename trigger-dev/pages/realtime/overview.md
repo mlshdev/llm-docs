@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/realtime/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/realtime/overview.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/realtime/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/realtime/overview.mdx)
 > Canonical documentation: https://trigger.dev/docs/realtime/overview
 
 # Realtime overview

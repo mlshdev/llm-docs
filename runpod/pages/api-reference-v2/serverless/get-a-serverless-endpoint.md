@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/serverless/get-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/api-reference-v2/serverless/get-a-serverless-endpoint.mdx)
+> Pinned source for Runpod main: [api-reference-v2/serverless/get-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/api-reference-v2/serverless/get-a-serverless-endpoint.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/serverless/get-a-serverless-endpoint
 
 # Get A Serverless Endpoint
@@ -99,6 +99,7 @@ Returns a single serverless endpoint by ID.
                 - `min` (integer; minimum: `0`): Minimum number of workers.
                 - `max` (integer; minimum: `0`): Maximum number of workers.
                 - `idleTimeout` (integer; minimum: `1`; maximum: `3600`): Seconds before idle workers scale down. Not applicable to queue-based endpoints scaling on `requestCount` — rejected on create/update and omitted from responses for that combination.
+                - `initTimeout` (nullable; minimum: `60`; maximum: `14400`): Seconds a worker may take to become ready before it is terminated and replaced. In responses, the endpoint setting, or null if none is set. In PATCH, null clears the endpoint setting so the platform default applies. Changes apply to workers that start initializing after the change and do not trigger a rollout.
           - `scaling` (required): Autoscaling signal — a discriminated union on `type`: `QUEUE_DELAY` (queue-based endpoints only) or `REQUEST_COUNT`. The scaler is chosen independently of the endpoint's routing `type` and can be switched on update.
             - oneOf:
               - `variant 1` (object): Scale on queue wait time. Queue-based endpoints only.
@@ -121,7 +122,9 @@ Returns a single serverless endpoint by ID.
           - `timeout` (required; integer): Per-request execution timeout in milliseconds
           - `flashboot` (required; string; enum: `OFF`, `FLASHBOOT`, `PRIORITY_FLASHBOOT`): FlashBoot cold-start acceleration mode. - `OFF` — disabled - `FLASHBOOT` — enabled - `PRIORITY_FLASHBOOT` — enabled with priority capacity
           - `createdAt` (required; string; format: date-time)
-    - Example `endpoint`: `{"id":"4m7x2k9q","name":"image-generator","type":"LOAD_BALANCER","requestUrls":{"base":"https://4m7x2k9q.api.runpod.ai","health":"https://4m7x2k9q.api.runpod.ai/ping"},"image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":20,"ports":["8000/http"],"env":{"MODEL_NAME":"sdxl"},"registry":null,"gpu":{"pools":["ADA_24"],"count":1,"allowedCudaVersions":[],"minCudaVersion":null},"workers":{"min":0,"max":5,"idleTimeout":5},"scaling":{"type":"REQUEST_COUNT","requestCount":4},"dataCenterIds":["US-KS-2"],"networkVolumes":["2q9m7x4c"],"mounts":{"network":[{"volumeId":"2q9m7x4c"}],"global":[]},"timeout":300000,"flashboot":"OFF","createdAt":"2026-06-01T12:00:00Z"}`
+          - `userId` (nullable): ID of the account the endpoint is stamped to. This is its creator, unless the endpoint was migrated from a team. Omitted when unknown.
+          - `version` (nullable): The endpoint's current worker configuration version. To see whether a worker runs an older configuration, use its `isStale`: comparing versions directly can disagree on legacy endpoints (version 1). It changes on edits that roll out new workers (image, template, compute, volumes, CUDA versions, data centers) and not on scaling, worker count or timeout edits. Omitted when unknown.
+    - Example `endpoint`: `{"id":"4m7x2k9q","name":"image-generator","type":"LOAD_BALANCER","requestUrls":{"base":"https://4m7x2k9q.api.runpod.ai","health":"https://4m7x2k9q.api.runpod.ai/ping"},"image":"runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404","args":"","disk":20,"ports":["8000/http"],"env":{"MODEL_NAME":"sdxl"},"registry":null,"gpu":{"pools":["ADA_24"],"count":1,"allowedCudaVersions":[],"minCudaVersion":null},"workers":{"min":0,"max":5,"idleTimeout":5,"initTimeout":null},"scaling":{"type":"REQUEST_COUNT","requestCount":4},"dataCenterIds":["US-KS-2"],"networkVolumes":["2q9m7x4c"],"mounts":{"network":[{"volumeId":"2q9m7x4c"}],"global":[]},"timeout":300000,"flashboot":"OFF","createdAt":"2026-06-01T12:00:00Z"}`
 - `401`: Authentication failed because the bearer token is missing, malformed, expired, or invalid.
   - Media type: `application/problem+json`
     - Schema (object)
@@ -175,3 +178,5 @@ Returns a single serverless endpoint by ID.
       - `detail` (required; string): Human-readable explanation
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
+
+**Required API key scope:** `serverless:read`

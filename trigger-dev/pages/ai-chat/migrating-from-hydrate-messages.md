@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/ai-chat/migrating-from-hydrate-messages.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/ai-chat/migrating-from-hydrate-messages.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/ai-chat/migrating-from-hydrate-messages.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/ai-chat/migrating-from-hydrate-messages.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/migrating-from-hydrate-messages
 
 # Migrate from hydrateMessages to transcript storage
@@ -184,7 +184,7 @@ With `hydrateMessages`, your hook was the source of truth and the runtime wrote 
      storage: transcriptStorage,
      clientDataSchema: z.object({ userId: z.string() }),
      run: async ({ messages, signal, streamText }) =>
-       streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal }),
+       streamText({ model: anthropic("claude-sonnet-5-5"), messages, abortSignal: signal }),
    });
    ```
 5. Work through your hooks and remove every write that duplicates a change the storage receives:

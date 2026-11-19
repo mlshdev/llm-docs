@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/bake/contexts.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/build/bake/contexts.md)
+> Pinned source for Docker main: [content/manuals/build/bake/contexts.md](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/build/bake/contexts.md)
 
 In addition to the main `context` key that defines the build context, each
 target can also define additional named contexts with a map defined with key

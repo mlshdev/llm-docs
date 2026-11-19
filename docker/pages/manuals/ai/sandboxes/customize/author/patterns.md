@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/patterns.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/ai/sandboxes/customize/author/patterns.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/customize/author/patterns.md](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/ai/sandboxes/customize/author/patterns.md)
 
 **Docker Sandboxes sbx requirements**
 
@@ -103,7 +103,7 @@ shell kit. The hook updates the workload's trust store as root, after all kit
 files are present and before the agent launches.
 
 ```console
-$ sbx run docker.io/docker/sbx-kit-shell:1.0.0 --kit ./internal-ca
+$ sbx run docker.io/sbx/shell:1.0.0 --kit ./internal-ca
 ```
 
 ## Seed storage after it is mounted

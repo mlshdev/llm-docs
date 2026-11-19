@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.4: [apps/docs/content/guides/integrate/actions/usage.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/guides/integrate/actions/usage.mdx)
+> Pinned source for ZITADEL v4.20.5: [apps/docs/content/guides/integrate/actions/usage.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/guides/integrate/actions/usage.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/actions/usage
 
 The Action API provides a flexible mechanism for customizing and extending the functionality of ZITADEL. By allowing you to define targets and executions, you can implement custom workflows triggered on an API requests and responses, events or specific functions.

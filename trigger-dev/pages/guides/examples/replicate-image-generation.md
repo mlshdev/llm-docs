@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/guides/examples/replicate-image-generation.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/examples/replicate-image-generation.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/guides/examples/replicate-image-generation.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/examples/replicate-image-generation.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/examples/replicate-image-generation
 
 # Image-to-image generation using Replicate and nano-banana
@@ -97,10 +97,9 @@ export const generateImageAndUploadToR2 = task({
 
 ## Environment variables
 
-Create a named **Trigger only** API key in the Trigger.dev environment your app uses, then set the following environment variables:
+Set the following environment variables in your Trigger.dev environment. The task authenticates its `wait` calls automatically, so it doesn't need a Trigger.dev API key:
 
 ```
-TRIGGER_SECRET_KEY=<your-trigger-secret-key>
 REPLICATE_API_TOKEN=<your-replicate-api-token>
 R2_ENDPOINT=<your-r2-endpoint>
 R2_ACCESS_KEY_ID=<your-r2-access-key-id>

@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.4: [apps/docs/content/guides/integrate/login/login-users.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/guides/integrate/login/login-users.mdx)
+> Pinned source for ZITADEL v4.20.5: [apps/docs/content/guides/integrate/login/login-users.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/guides/integrate/login/login-users.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login/login-users
 
 ZITADEL is a comprehensive identity and access management platform designed to streamline user authentication, authorization, and management processes for your application. It offers a range of features, including single sign-on (SSO), multi-factor authentication (MFA), and centralized user management.
@@ -9,7 +9,7 @@ Besides federated authentication with OpenID Connect and SAML, ZITADEL offers an
 
 In this guide, we will walk through the different protocols, features and concepts that can be used to login users securely into your applications.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/public/img/guides/integrate/login/login-start.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/guides/integrate/login/login-start.png)
 
 ## Using industry-standard protocols
 

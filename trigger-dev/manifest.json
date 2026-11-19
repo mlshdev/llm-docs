@@ -6,21 +6,21 @@
   "title": "Trigger.dev",
   "homepage": "https://trigger.dev/docs",
   "repository": "triggerdotdev/trigger.dev",
-  "tag": "v4.8.5",
-  "releaseId": 442349147,
-  "releasePublishedAt": "2026-11-12T00:38:09Z",
-  "sourceCommit": "d412e08a8ab97131816c18a5cdb39bb74ced0eb0",
-  "documentCount": 375,
+  "tag": "v4.8.6",
+  "releaseId": 450013055,
+  "releasePublishedAt": "2026-11-18T13:16:57Z",
+  "sourceCommit": "74765f97f1baafc7665d25b0f2f2af2dcf14436b",
+  "documentCount": 429,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 3366999,
-      "documentCount": 375,
-      "sha256": "155dfb1311292aeb50eaae3206111670a3c7c8c434db36dbdbacd762e8298a32"
+      "byteLength": 3562772,
+      "documentCount": 429,
+      "sha256": "fdd6b72e494f5c27743fb7c3a54fe7f91ef4266acd08783049faac9b810e50e1"
     }
   ],
-  "outputDigest": "72e40d9fe6d9e3fb11cd63ef3cef302908a15dcf466b2370b60d486900fac8b6",
+  "outputDigest": "a33aa7dec9f0da53177ccf93d7c2b54195a6c622486016e6de0c9d1afb08bdf4",
   "quarantined": [
     {
       "sourcePath": "deploy-environment-variables.mdx",

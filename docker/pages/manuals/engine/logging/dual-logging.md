@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/logging/dual-logging.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/engine/logging/dual-logging.md)
+> Pinned source for Docker main: [content/manuals/engine/logging/dual-logging.md](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/engine/logging/dual-logging.md)
 
 # Use docker logs with remote logging drivers
 

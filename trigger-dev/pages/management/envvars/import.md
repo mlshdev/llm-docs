@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/management/envvars/import.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/management/envvars/import.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/management/envvars/import.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/management/envvars/import.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/envvars/import
 
 # Import Env Vars
@@ -49,6 +49,10 @@ Upload mulitple environment variables for a specific project and environment.
     - Schema (object)
       - `error` (string)
 - `404`: Resource not found
+  - Media type: `application/json`
+    - Schema (object)
+      - `error` (string)
+- `409`: A variable in the import was changed or deleted by another request while it was being saved. Variables before it in the import may already have been saved, so sending the request again needs `override` set to `true`.
   - Media type: `application/json`
     - Schema (object)
       - `error` (string)

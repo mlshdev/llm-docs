@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/migrating-from-v3.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/migrating-from-v3.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/migrating-from-v3.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/migrating-from-v3.mdx)
 > Canonical documentation: https://trigger.dev/docs/migrating-from-v3
 
 # Migrating from v3
@@ -160,7 +160,7 @@ export const myAiTask = schemaTask({
   run: async (payload, { ctx }) => {
     const { text } = await generateText({
       prompt: payload.text,
-      model: openai("gpt-4o"),
+      model: openai("gpt-6-luna"),
       tools: {
         myToolTask,
       },
@@ -173,7 +173,7 @@ This is the new version:
 import { schemaTask } from "@trigger.dev/sdk";
 import { ai } from "@trigger.dev/sdk/ai";
 import { z } from "zod";
-import { generateText, tool } from "ai";
+import { generateText, stepCountIs, tool } from "ai";
 import { openai } from "@ai-sdk/openai";
 
 // Convert toolTask to schemaTask with a schema
@@ -200,10 +200,11 @@ export const myAiTask = schemaTask({
   run: async (payload, { ctx }) => {
     const { text } = await generateText({
       prompt: payload.text,
-      model: openai("gpt-4o"),
+      model: openai("gpt-6-luna"),
       tools: {
         myTool,
       },
+      stopWhen: stepCountIs(5),
     });
   },
 });
@@ -384,7 +385,7 @@ export const myAiTask = schemaTask({
   run: async (payload, { ctx }) => {
     const { text } = await generateText({
       prompt: payload.text,
-      model: openai("gpt-4o"),
+      model: openai("gpt-6-luna"),
       tools: {
         myToolTask,
       },

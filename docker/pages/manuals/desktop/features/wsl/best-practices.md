@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/features/wsl/best-practices.md](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/content/manuals/desktop/features/wsl/best-practices.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/wsl/best-practices.md](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/content/manuals/desktop/features/wsl/best-practices.md)
 
 # WSL 2 best practices for Docker Desktop on Windows
 

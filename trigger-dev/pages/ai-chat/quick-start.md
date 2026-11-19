@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/ai-chat/quick-start.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/ai-chat/quick-start.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/ai-chat/quick-start.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/ai-chat/quick-start.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/quick-start
 
 # Quick Start
@@ -22,7 +22,7 @@ The chat surface works with Vercel AI SDK **v5, v6, or v7**; install whichever m
      id: "my-chat",
      run: async ({ messages, signal, streamText }) => {
        return streamText({
-         model: anthropic("claude-sonnet-4-5"),
+         model: anthropic("claude-sonnet-5-5"),
          messages,
          abortSignal: signal,
          stopWhen: stepCountIs(15),
@@ -71,7 +71,7 @@ The chat surface works with Vercel AI SDK **v5, v6, or v7**; install whichever m
 
    `requireChatOwner` is your application helper: authenticate the request, load the chat by ID and owner, and throw if it doesn't belong to that user. Create the chat record on your server before rendering the frontend, and pass its ID into `Chat`. Check ownership in both actions, including token refresh.
 
-   Set `TRIGGER_SECRET_KEY` and your model provider key in the server and worker environments. Keep both keys out of the browser.
+   Set `TRIGGER_SECRET_KEY` on your server and your model provider key in the worker environment. Keep both keys out of the browser.
 3. Use the `useTriggerChatTransport` hook from `@trigger.dev/sdk/chat/react` to create a memoized transport instance, then pass it to `useChat`. Wire both server actions into the transport's `accessToken` and `startSession` callbacks.
 
    The example below uses the Next.js `@/*` path alias for imports from `@/trigger/chat` and `@/app/actions`. If you're not using Next.js (or haven't configured the alias), swap them for relative imports.

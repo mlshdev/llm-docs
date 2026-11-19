@@ -1,0 +1,42 @@
+> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/providers/workos.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/providers/workos.mdx)
+> Canonical documentation: https://trigger.dev/docs/webhooks/providers/workos
+
+# WorkOS webhooks
+
+Receive and verify WorkOS webhooks with Trigger.dev. Check the HMAC-SHA256 signature in workos-signature and run a task for each WorkOS event, filtered on event.event.
+
+**`webhooks.workos()` verifies the HMAC-SHA256 signature WorkOS sends in `workos-signature` on every request.**
+
+```ts /trigger/workos.ts
+import { webhook, webhooks } from "@trigger.dev/sdk";
+
+export const workos = webhooks.endpoint.define({
+  id: "workos",
+  source: webhooks.workos(),
+});
+
+export const workosEvents = webhook({
+  id: "workos-events",
+  endpoint: workos,
+  onEvent: async ({ event }) => {
+    console.log(event);
+  },
+});
+```
+
+To run a subscriber only for some events, add a [filter](https://trigger.dev/docs/webhooks/filters) on `event.event`.
+
+| Setting      | Value                                                                       |
+| ------------ | --------------------------------------------------------------------------- |
+| Source       | `webhooks.workos()`                                                         |
+| Verification | HMAC-SHA256 in `workos-signature`                                           |
+| Credential   | Signing secret issued by WorkOS                                             |
+| Event type   | `event.event`                                                               |
+| WorkOS docs  | [WorkOS webhook docs](https://workos.com/docs/events/data-syncing/webhooks) |
+
+## Set up WorkOS
+
+1. Start `trigger dev` or deploy, then copy the endpoint's **Webhook URL** from the **Webhooks** page.
+2. Add the webhook URL as a webhook in WorkOS and select the events your subscribers need. See WorkOS's [webhook docs](https://workos.com/docs/events/data-syncing/webhooks) for where its webhook settings are.
+3. Copy the signing secret WorkOS shows for the webhook, then choose **Set signing secret** on the Trigger.dev endpoint.
+4. Send a test event from WorkOS, or use the endpoint's **Test** tab, and check the endpoint's **Deliveries** tab. See [Verify the connection](https://trigger.dev/docs/webhooks/connect#verify-the-connection) if nothing arrives.

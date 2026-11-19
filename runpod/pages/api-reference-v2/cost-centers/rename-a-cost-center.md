@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/cost-centers/rename-a-cost-center.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/api-reference-v2/cost-centers/rename-a-cost-center.mdx)
+> Pinned source for Runpod main: [api-reference-v2/cost-centers/rename-a-cost-center.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/api-reference-v2/cost-centers/rename-a-cost-center.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/cost-centers/rename-a-cost-center
 
 # Rename A Cost Center
@@ -121,3 +121,5 @@ follow the new name — the attribution is by identifier, not by name.
       - `detail` (required; string): Human-readable explanation
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
+
+**Required API key scope:** `billing:write`

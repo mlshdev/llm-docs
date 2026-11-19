@@ -1,11 +1,11 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/webhooks/human-in-the-loop.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/webhooks/human-in-the-loop.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/human-in-the-loop.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/human-in-the-loop.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/human-in-the-loop
 
-# Human-in-the-loop
+# Human-in-the-loop over a channel
 
 Pause an agent mid-turn to get a human decision from the channel (Slack approve/deny), then resume with the answer.
 
-**An agent on a [channel](https://trigger.dev/docs/webhooks/channels) can pause a turn to get a human decision, then resume once someone answers in the thread.** It posts controls into the conversation and picks up where it left off once someone clicks, with the decision merged into the turn. This is the channel counterpart of browser [human-in-the-loop](https://trigger.dev/docs/ai-chat/patterns/human-in-the-loop): the same no-`execute` tool, but the controls live in Slack (or your own surface) instead of a React component. The [`slack()`](https://trigger.dev/docs/webhooks/slack) connector ships Approve and Deny buttons out of the box.
+**An agent on a [channel](https://trigger.dev/docs/webhooks/channels) can pause a turn to get a human decision, then resume once someone answers in the thread.** It posts controls into the conversation and picks up where it left off once someone clicks, with the decision merged into the turn. The click arrives as a webhook on the same endpoint as the conversation's messages, and that delivery resumes the paused run. To pause a run until any other webhook arrives, use a [waiter](https://trigger.dev/docs/webhooks/waiters). This is the channel counterpart of browser [human-in-the-loop](https://trigger.dev/docs/ai-chat/patterns/human-in-the-loop): the same no-`execute` tool, but the controls live in Slack (or your own surface) instead of a React component. The [`slack()`](https://trigger.dev/docs/webhooks/slack) connector includes Approve and Deny buttons.
 
 ## How it works
 
@@ -68,7 +68,7 @@ export const supportAgent = chat.agent({
   tools: { requestApproval },
   run: async ({ messages, tools, streamText }) =>
     streamText({
-      model: anthropic("claude-sonnet-4-5"),
+      model: anthropic("claude-sonnet-5-5"),
       messages,
       tools,
       system:

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/organization/get-an-organization-member.mdx](https://github.com/runpod/docs/blob/ee20bfa4783a890d1da39b7634b3d78e45a4e6c7/api-reference-v2/organization/get-an-organization-member.mdx)
+> Pinned source for Runpod main: [api-reference-v2/organization/get-an-organization-member.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/api-reference-v2/organization/get-an-organization-member.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/organization/get-an-organization-member
 
 # Get An Organization Member
@@ -89,3 +89,5 @@ Returns one member of the authenticated caller's organization by user ID, with t
       - `detail` (required; string): Human-readable explanation
       - `errors` (array): Individual request-validation failures.
         - `items` (string)
+
+**Required API key scope:** `membership:read`

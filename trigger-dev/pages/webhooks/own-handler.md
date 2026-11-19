@@ -1,0 +1,61 @@
+> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/own-handler.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/own-handler.mdx)
+> Canonical documentation: https://trigger.dev/docs/webhooks/own-handler
+
+# Use your own webhook handler
+
+Receive webhooks in a route in your own app and trigger tasks from it with tasks.trigger().
+
+**Trigger.dev has built-in webhook endpoints, and we recommend them for most projects.** They verify each provider's signature, drop duplicate retries, record every delivery, and route events to tasks, agents and waiting runs. See [Webhooks](https://trigger.dev/docs/webhooks/overview).
+
+If you prefer to handle webhooks yourself, receive them in a route in your own app and trigger runs from there with `tasks.trigger()`, the same way any backend code does.
+
+## When to use your own handler
+
+| Use a hosted endpoint                                                                 | Use your own handler                                                                             |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| You want Trigger.dev to verify signatures, deduplicate retries and record deliveries. | You already have a handler in production and only want to move the work into a task.             |
+| One event should reach several tasks, agents or waiting runs.                         | The provider needs a response body that your code computes from the request.                     |
+| You want to replay deliveries and see which runs each one started.                    | The request must pass through your app first, for example to look up a tenant before triggering. |
+
+## Trigger a task from your route
+
+Verify the request with the provider's SDK, then trigger the task. This Next.js route uses Stripe's SDK; import the task as a type so the route doesn't bundle the task code.
+
+```ts app/api/webhooks/stripe/route.ts
+import Stripe from "stripe";
+import { tasks } from "@trigger.dev/sdk";
+import type { handleStripeEvent } from "@/trigger/handle-stripe-event";
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+
+export async function POST(request: Request) {
+  const body = await request.text();
+
+  // Verify the signature before trusting the body
+  const event = stripe.webhooks.constructEvent(
+    body,
+    request.headers.get("stripe-signature")!,
+    process.env.STRIPE_WEBHOOK_SECRET!
+  );
+
+  await tasks.trigger<typeof handleStripeEvent>("handle-stripe-event", event, {
+    // Retries of the same event start one run
+    idempotencyKey: event.id,
+  });
+
+  return Response.json({ received: true });
+}
+```
+
+Return quickly: the task runs in the background, so the provider gets its response before the work starts.
+
+Set `TRIGGER_SECRET_KEY` in your app to a named [**Trigger only**](https://trigger.dev/docs/apikeys) API key from the Trigger.dev environment the app uses, so the route can trigger tasks but do nothing else.
+
+## Framework guides
+
+- [Custom webhook handler with Next.js](https://trigger.dev/docs/guides/frameworks/nextjs-webhooks)
+
+  Handle a webhook in a Next.js API route and trigger a task.
+- [Custom webhook handler with Remix](https://trigger.dev/docs/guides/frameworks/remix-webhooks)
+
+  Handle a webhook in a Remix action and trigger a task.

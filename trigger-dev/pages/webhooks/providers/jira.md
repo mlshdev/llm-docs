@@ -1,0 +1,42 @@
+> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/providers/jira.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/providers/jira.mdx)
+> Canonical documentation: https://trigger.dev/docs/webhooks/providers/jira
+
+# Jira webhooks
+
+Receive and verify Jira webhooks with Trigger.dev. Check the HMAC-SHA256 signature in x-hub-signature and run a task for each Jira event, filtered on event.webhookEvent.
+
+**`webhooks.jira()` verifies the HMAC-SHA256 signature Jira sends in `x-hub-signature` on every request.**
+
+```ts /trigger/jira.ts
+import { webhook, webhooks } from "@trigger.dev/sdk";
+
+export const jira = webhooks.endpoint.define({
+  id: "jira",
+  source: webhooks.jira(),
+});
+
+export const jiraEvents = webhook({
+  id: "jira-events",
+  endpoint: jira,
+  onEvent: async ({ event }) => {
+    console.log(event);
+  },
+});
+```
+
+To run a subscriber only for some events, add a [filter](https://trigger.dev/docs/webhooks/filters) on `event.webhookEvent`.
+
+| Setting      | Value                                                                              |
+| ------------ | ---------------------------------------------------------------------------------- |
+| Source       | `webhooks.jira()`                                                                  |
+| Verification | HMAC-SHA256 in `x-hub-signature`                                                   |
+| Credential   | Secret you generate on Trigger.dev                                                 |
+| Event type   | `event.webhookEvent`                                                               |
+| Jira docs    | [Jira webhook docs](https://developer.atlassian.com/cloud/jira/platform/webhooks/) |
+
+## Set up Jira
+
+1. Start `trigger dev` or deploy, then copy the endpoint's **Webhook URL** from the **Webhooks** page.
+2. Choose **Generate secret** on the Trigger.dev endpoint and copy the value.
+3. As a Jira admin, open **System > WebHooks** and choose **Create a WebHook**. Enter the webhook URL, select the events your subscribers need, and paste the secret into **Secret**. Only webhooks an admin registers here are signed; webhooks registered by Connect or OAuth apps aren't, so the endpoint rejects them.
+4. Send a test event from Jira, or use the endpoint's **Test** tab, and check the endpoint's **Deliveries** tab. See [Verify the connection](https://trigger.dev/docs/webhooks/connect#verify-the-connection) if nothing arrives.

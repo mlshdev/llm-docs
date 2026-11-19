@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/ai/prompts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/ai/prompts.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/ai/prompts.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/ai/prompts.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai/prompts
 
 # Prompts
@@ -26,8 +26,8 @@ import { z } from "zod";
 export const supportPrompt = prompts.define({
   id: "customer-support",
   description: "System prompt for customer support interactions",
-  model: "gpt-4o",
-  config: { temperature: 0.7 },
+  model: "gpt-6-luna",
+  config: { maxOutputTokens: 1024 },
   variables: z.object({
     customerName: z.string(),
     plan: z.string(),
@@ -51,8 +51,8 @@ Respond to the customer's issue. Be concise and helpful.`,
 | ------------- | ------------------ | -------- | ------------------------------------------------------------------- |
 | `id`          | `string`           | Yes      | Unique identifier (becomes the prompt slug)                         |
 | `description` | `string`           | No       | Shown in the dashboard                                              |
-| `model`       | `string`           | No       | Default model (e.g. `"gpt-4o"`, `"claude-sonnet-4-6"`)              |
-| `config`      | `object`           | No       | Default config (temperature, maxTokens, etc.)                       |
+| `model`       | `string`           | No       | Default model (e.g. `"gpt-6-luna"`, `"claude-sonnet-5-5"`)          |
+| `config`      | `object`           | No       | Default AI SDK call settings (e.g. `maxOutputTokens`)               |
 | `variables`   | Zod/ArkType schema | No       | Schema for template variables (enables validation and dashboard UI) |
 | `content`     | `string`           | Yes      | The prompt template with `{{variable}}` placeholders                |
 
@@ -66,7 +66,7 @@ Templates use Mustache-style placeholders:
 ```ts
 export const prompt = prompts.define({
   id: "summarizer",
-  model: "gpt-4o-mini",
+  model: "gpt-6-luna",
   variables: z.object({
     text: z.string(),
     maxSentences: z.string().optional(),
@@ -92,7 +92,7 @@ const resolved = await supportPrompt.resolve({
 
 console.log(resolved.text);    // The compiled prompt with variables filled in
 console.log(resolved.version); // e.g. 3
-console.log(resolved.model);   // "gpt-4o"
+console.log(resolved.model);   // "gpt-6-luna"
 console.log(resolved.labels);  // ["current"] or ["override"]
 ```
 
@@ -136,12 +136,16 @@ By default, `resolve()` returns the **override** version if one is active, other
 
 The resolved prompt integrates with the [Vercel AI SDK](https://ai-sdk.dev) via `toAISDKTelemetry()`. This links AI generation spans to the prompt in the dashboard.
 
+> **Note**
+>
+> Prompt linking currently works on AI SDK 5 and 6. On AI SDK 7, the metadata from `toAISDKTelemetry()` doesn't reach the span yet, so generations are traced but not linked to the prompt.
+
 ### generateText
 
 ```ts
 import { task } from "@trigger.dev/sdk";
 import { generateText, stepCountIs } from "ai";
-import { anthropic } from "@ai-sdk/anthropic";
+import { openai } from "@ai-sdk/openai";
 
 export const supportTask = task({
   id: "handle-support",
@@ -153,9 +157,10 @@ export const supportTask = task({
     });
 
     const result = await generateText({
-      model: openai(resolved.model ?? "gpt-4o"),
+      model: openai(resolved.model ?? "gpt-6-luna"),
       system: resolved.text,
       prompt: payload.issue,
+      ...resolved.config,
       ...resolved.toAISDKTelemetry(),
     });
 
@@ -179,9 +184,10 @@ export const streamTask = task({
     });
 
     const result = streamText({
-      model: openai(resolved.model ?? "gpt-4o"),
+      model: openai(resolved.model ?? "gpt-6-luna"),
       system: resolved.text,
       prompt: payload.issue,
+      ...resolved.config,
       ...resolved.toAISDKTelemetry(),
       stopWhen: stepCountIs(15),
     });
@@ -202,7 +208,7 @@ Pass additional metadata to `toAISDKTelemetry()` that will appear on the generat
 
 ```ts
 const result = await generateText({
-  model: anthropic("claude-sonnet-4-5"),
+  model: anthropic("claude-sonnet-5-5"),
   prompt: resolved.text,
   ...resolved.toAISDKTelemetry({
     "task.type": "summarization",
@@ -228,8 +234,8 @@ const registry = createProviderRegistry({ anthropic });
 
 const systemPrompt = prompts.define({
   id: "my-chat-system",
-  model: "anthropic:claude-sonnet-4-5",
-  config: { temperature: 0.7 },
+  model: "anthropic:claude-sonnet-5-5",
+  config: { maxOutputTokens: 1024 },
   variables: z.object({ name: z.string() }),
   content: `You are a helpful assistant for {{name}}.`,
 });
@@ -260,22 +266,22 @@ Inside a `chat.agent` you don't need this: the `streamText` passed to `run()` ap
 
 - `system` — the compiled prompt text
 - `model` — resolved via the `registry` when provided
-- `temperature`, `maxTokens`, etc. — from the prompt's `config`
+- `maxOutputTokens` and other call settings — from the prompt's `config`
 - `experimental_telemetry` — links generations to the prompt in the dashboard
 
 ```ts
 // With registry — model is resolved automatically
 const options = chat.toStreamTextOptions({ registry });
-// { system: "...", model: LanguageModel, temperature: 0.7, experimental_telemetry: { ... } }
+// { system: "...", model: LanguageModel, maxOutputTokens: 1024, experimental_telemetry: { ... } }
 
 // Without registry — model is not included
 const options = chat.toStreamTextOptions();
-// { system: "...", temperature: 0.7, experimental_telemetry: { ... } }
+// { system: "...", maxOutputTokens: 1024, experimental_telemetry: { ... } }
 ```
 
 > **Tip**
 >
-> When the user provides a `registry` and the prompt has a `model` string (e.g. `"anthropic:claude-sonnet-4-5"`), the model is resolved via `registry.languageModel()` and included in the returned options. This means `streamText` uses the prompt's model by default — no manual model selection needed.
+> When the user provides a `registry` and the prompt has a `model` string (e.g. `"anthropic:claude-sonnet-5-5"`), the model is resolved via `registry.languageModel()` and included in the returned options. This means `streamText` uses the prompt's model by default — no manual model selection needed.
 
 ### Reading the prompt
 
@@ -285,7 +291,7 @@ Access the stored prompt from anywhere in the run:
 run: async ({ messages, signal, streamText }) => {
   const prompt = chat.prompt(); // Throws if not set
   console.log(prompt.text);     // The compiled prompt
-  console.log(prompt.model);    // "anthropic:claude-sonnet-4-5"
+  console.log(prompt.model);    // "anthropic:claude-sonnet-5-5"
   console.log(prompt.version);  // 3
 
   return streamText({
@@ -325,7 +331,7 @@ Create a new override that takes priority over the deployed version:
 ```ts
 const result = await prompts.createOverride("customer-support", {
   textContent: "New prompt template: Hello {{customerName}}!",
-  model: "gpt-4o-mini",
+  model: "gpt-6-luna",
   commitMessage: "Shorter prompt",
 });
 ```
@@ -335,7 +341,7 @@ const result = await prompts.createOverride("customer-support", {
 ```ts
 await prompts.updateOverride("customer-support", {
   textContent: "Updated template: Hi {{customerName}}!",
-  model: "gpt-4o",
+  model: "gpt-6-luna",
 });
 ```
 

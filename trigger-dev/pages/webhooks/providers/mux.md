@@ -1,0 +1,41 @@
+> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/providers/mux.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/providers/mux.mdx)
+> Canonical documentation: https://trigger.dev/docs/webhooks/providers/mux
+
+# Mux webhooks
+
+Receive and verify Mux webhooks with Trigger.dev. Check the HMAC-SHA256 signature in mux-signature and run a task for each Mux event, filtered on event.type.
+
+**`webhooks.mux()` verifies the HMAC-SHA256 signature Mux sends in `mux-signature` on every request.**
+
+```ts /trigger/mux.ts
+import { webhook, webhooks } from "@trigger.dev/sdk";
+
+export const mux = webhooks.endpoint.define({
+  id: "mux",
+  source: webhooks.mux(),
+});
+
+export const muxEvents = webhook({
+  id: "mux-events",
+  endpoint: mux,
+  filter: "event.type == 'video.asset.ready'",
+  onEvent: async ({ event }) => {
+    console.log(event);
+  },
+});
+```
+
+| Setting      | Value                                                                       |
+| ------------ | --------------------------------------------------------------------------- |
+| Source       | `webhooks.mux()`                                                            |
+| Verification | HMAC-SHA256 in `mux-signature`                                              |
+| Credential   | Signing secret issued by Mux                                                |
+| Event type   | `event.type`                                                                |
+| Mux docs     | [Mux webhook docs](https://www.mux.com/docs/core/verify-webhook-signatures) |
+
+## Set up Mux
+
+1. Start `trigger dev` or deploy, then copy the endpoint's **Webhook URL** from the **Webhooks** page.
+2. In the [Mux webhook settings](https://dashboard.mux.com/settings/webhooks), select the environment your app uses and add the webhook URL. Mux sends every event in that environment.
+3. Copy that webhook's signing secret, then choose **Set signing secret** on the Trigger.dev endpoint.
+4. Send a test event from Mux, or use the endpoint's **Test** tab, and check the endpoint's **Deliveries** tab. See [Verify the connection](https://trigger.dev/docs/webhooks/connect#verify-the-connection) if nothing arrives.

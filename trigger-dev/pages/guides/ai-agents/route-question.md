@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/guides/ai-agents/route-question.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/ai-agents/route-question.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/guides/ai-agents/route-question.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/ai-agents/route-question.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/ai-agents/route-question
 
 # Route a question to a different AI model
@@ -9,7 +9,7 @@ Create an AI agent workflow that routes a question to a different AI model depen
 
 **Routing** is a workflow pattern that classifies an input and directs it to a specialized followup task. This pattern allows for separation of concerns and building more specialized prompts, which is particularly effective when there are distinct categories that are better handled separately. Without routing, optimizing for one kind of input can hurt performance on other inputs.
 
-![Routing](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/guides/ai-agents/routing.png)
+![Routing](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/ai-agents/routing.png)
 
 ## Example task
 
@@ -19,8 +19,8 @@ In this example, we'll create a workflow that routes a question to a different A
 
 - Uses `generateObject` from the [AI SDK](https://ai-sdk.dev/) to classify the question into a typed routing decision
 - Uses `experimental_telemetry` to surface each LLM call on the Run page in the dashboard
-- Classifies complexity with a fast, cheap model (`claude-haiku-4-5`)
-- Directs simple questions to `claude-haiku-4-5` and complex ones to `claude-sonnet-4-5`
+- Classifies complexity with a fast, cheap model (`claude-haiku-5-5`)
+- Directs simple questions to `claude-haiku-5-5` and complex ones to `claude-sonnet-5-5`
 - Returns both the answer and metadata about the routing decision
 
 ```typescript
@@ -32,7 +32,7 @@ import { z } from "zod";
 // The router's structured decision. generateObject validates the model
 // output against this schema, so there's no manual JSON parsing.
 const routingSchema = z.object({
-  model: z.enum(["claude-haiku-4-5", "claude-sonnet-4-5"]),
+  model: z.enum(["claude-haiku-5-5", "claude-sonnet-5-5"]),
   reason: z.string(),
 });
 
@@ -41,12 +41,12 @@ export const routeAndAnswerQuestion = task({
   run: async (payload: { question: string }) => {
     // Step 1: Classify the question and pick a model
     const { object: routing } = await generateObject({
-      model: anthropic("claude-haiku-4-5"),
+      model: anthropic("claude-haiku-5-5"),
       schema: routingSchema,
       system:
         "You are a routing assistant. Pick the model best suited to answer the question:\n" +
-        "- claude-haiku-4-5 for simple, common, or straightforward questions\n" +
-        "- claude-sonnet-4-5 for complex, unusual, or questions needing deep reasoning",
+        "- claude-haiku-5-5 for simple, common, or straightforward questions\n" +
+        "- claude-sonnet-5-5 for complex, unusual, or questions needing deep reasoning",
       prompt: payload.question,
       experimental_telemetry: {
         isEnabled: true,
@@ -75,7 +75,7 @@ export const routeAndAnswerQuestion = task({
 
 ## Run a test
 
-Triggering our task with a simple question shows it routing to the `claude-haiku-4-5` model and returning the answer with reasoning:
+Triggering our task with a simple question shows it routing to the `claude-haiku-5-5` model and returning the answer with reasoning:
 
 ```json
 {

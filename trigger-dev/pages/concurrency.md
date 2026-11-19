@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/concurrency.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/concurrency.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/concurrency.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/concurrency.mdx)
 > Canonical documentation: https://trigger.dev/docs/concurrency
 
 # Concurrency
@@ -202,6 +202,46 @@ export const processWebhook = task({
 // the run counts towards this tenant's pool in both limits
 await processWebhook.trigger(payload, { concurrencyKey: tenantId });
 ```
+
+## A different key for each limit
+
+A string `concurrencyKey` keys every `perKey` bound the run holds. When two limits need different keys, for example a cap per session and a cap per organization on the same run, pass an object. `default` is the run's own key, and every other entry is a named limit and the key to use for it:
+
+```ts /trigger/subagent.ts
+import { concurrencyLimit, task } from "@trigger.dev/sdk";
+
+// each organization runs at most 20 sub-agents at once
+export const orgLimit = concurrencyLimit({ name: "org-subagents", perKey: 20 });
+
+export const subagent = task({
+  id: "subagent",
+  // 3 per session, 200 in total, plus the organization limit
+  concurrency: [{ perKey: 3, total: 200 }, orgLimit],
+  run: async (payload) => {
+    //...
+  },
+});
+```
+
+```ts app/api/subagent/route.ts
+import { orgLimit, subagent } from "~/trigger/subagent";
+
+await subagent.trigger(payload, {
+  concurrencyKey: {
+    default: sessionId,
+    [orgLimit.name]: orgId,
+  },
+});
+```
+
+The run starts only when the session has fewer than 3 running, the organization has fewer than 20, and fewer than 200 are running in total.
+
+- **A limit uses its own entry if it has one, otherwise `default`.** A string is shorthand for `{ default: "..." }`.
+- **`default` is required.** Runs are queued and scheduled fairly per default key, so pick the key you want fairness across.
+- **A limit's own key is 1-128 characters.**
+- **An entry for a limit the task doesn't declare adds that limit to the run.** If the limit is declared in the same environment, by another task or by a deploy that is still rolling out, the run counts towards it, so triggers keep working during the deploy.
+- **A name that matches no declared limit caps nothing**, and the limit you meant falls back to `default`. Use `[limit.name]` rather than a string literal.
+- **`default` always means the default key**, so a limit that is itself named `default` can't be given its own key.
 
 ## A global cap for a shared resource
 

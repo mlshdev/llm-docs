@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.4: [apps/docs/content/apis/benchmarks/v2.70.0/machine_jwt_profile_grant/index.mdx](https://github.com/zitadel/zitadel/blob/384bb9ec96b501ad39dc232ee2061a40fe180bbd/apps/docs/content/apis/benchmarks/v2.70.0/machine_jwt_profile_grant/index.mdx)
+> Pinned source for ZITADEL v4.20.5: [apps/docs/content/apis/benchmarks/v2.70.0/machine_jwt_profile_grant/index.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/apis/benchmarks/v2.70.0/machine_jwt_profile_grant/index.mdx)
 > Canonical documentation: https://zitadel.com/docs/apis/benchmarks/v2.70.0/machine_jwt_profile_grant
 
 The performance goals of [this issue](https://github.com/zitadel/zitadel/issues/8352) are reached. Next we will test linear scalability.

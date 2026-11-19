@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.5: [docs/oidc.mdx](https://github.com/triggerdotdev/trigger.dev/blob/d412e08a8ab97131816c18a5cdb39bb74ced0eb0/docs/oidc.mdx)
+> Pinned source for Trigger.dev v4.8.6: [docs/oidc.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/oidc.mdx)
 > Canonical documentation: https://trigger.dev/docs/oidc
 
 # OpenID Connect (OIDC)
@@ -32,6 +32,8 @@ Choose an official integration, or connect a service that supports external OIDC
   Read secrets using your task's workload identity.
 
 For other services, follow [Custom integrations](https://trigger.dev/docs/oidc/custom) to request a token and implement the service's authentication flow.
+
+The OIDC page in the dashboard lists the environment variables in your project that hold credentials OIDC could replace, such as `AWS_ACCESS_KEY_ID` or `ANTHROPIC_API_KEY`, grouped by service with a link to each service's guide. The same keys are listed under **Replace with OIDC** on the environment variables [Needs attention page](https://trigger.dev/docs/deploy-environment-variables#values-that-need-attention).
 
 ## Prerequisites
 

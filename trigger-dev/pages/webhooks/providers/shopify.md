@@ -1,0 +1,50 @@
+> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/providers/shopify.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/providers/shopify.mdx)
+> Canonical documentation: https://trigger.dev/docs/webhooks/providers/shopify
+
+# Shopify webhooks
+
+Receive and verify Shopify webhooks with Trigger.dev. Check the HMAC-SHA256 signature in x-shopify-hmac-sha256 and run a task for each Shopify event, filtered on header.x-shopify-topic.
+
+**`webhooks.shopify()` verifies the HMAC-SHA256 signature Shopify sends in `x-shopify-hmac-sha256` on every request.**
+
+```ts /trigger/shopify.ts
+import { webhook, webhooks } from "@trigger.dev/sdk";
+
+export const shopify = webhooks.endpoint.define({
+  id: "shopify",
+  source: webhooks.shopify(),
+});
+
+export const shopifyEvents = webhook({
+  id: "shopify-events",
+  endpoint: shopify,
+  filter: "header.x-shopify-topic == 'orders/create'",
+  onEvent: async ({ event }) => {
+    console.log(event);
+  },
+});
+```
+
+| Setting      | Value                                                                                  |
+| ------------ | -------------------------------------------------------------------------------------- |
+| Source       | `webhooks.shopify()`                                                                   |
+| Verification | HMAC-SHA256 in `x-shopify-hmac-sha256`                                                 |
+| Credential   | Signing secret issued by Shopify                                                       |
+| Event type   | `header.x-shopify-topic`                                                               |
+| Shopify docs | [Shopify webhook docs](https://shopify.dev/docs/apps/build/webhooks/verify-deliveries) |
+
+## Set up Shopify
+
+1. Start `trigger dev` or deploy, then copy the endpoint's **Webhook URL** from the **Webhooks** page.
+2. For an app, add a subscription to `shopify.app.toml` and run `shopify app deploy`:
+
+   ```toml shopify.app.toml
+   [[webhooks.subscriptions]]
+   topics = ["orders/create"]
+   uri = "<webhook URL>"
+   ```
+
+   Or create it with the Admin API's `webhookSubscriptionCreate` mutation. Use the JSON format.
+3. Shopify signs app webhooks with the app's client secret, which is in the app's settings in the Shopify Dev Dashboard. Choose **Set signing secret** on the Trigger.dev endpoint and paste it.
+4. For a store without an app, add the webhook under **Settings > Notifications > Webhooks** in the store admin, and use the signing key shown on that page instead.
+5. Send a test event from Shopify, or use the endpoint's **Test** tab, and check the endpoint's **Deliveries** tab. See [Verify the connection](https://trigger.dev/docs/webhooks/connect#verify-the-connection) if nothing arrives.

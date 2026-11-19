@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/scout/docker_scout_repo_disable.yaml](https://github.com/docker/docs/blob/947343021a3e1eea022cbede8df39387717343f9/data/cli/scout/docker_scout_repo_disable.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_repo_disable.yaml](https://github.com/docker/docs/blob/f8d4abc333036d7d71928bab49a417876d348966/data/cli/scout/docker_scout_repo_disable.yaml)
 
 # docker scout repo disable
 
