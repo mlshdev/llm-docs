@@ -6,10 +6,10 @@
   "title": "Bun",
   "homepage": "https://bun.com/docs",
   "repository": "oven-sh/bun",
-  "tag": "bun-v1.4.4",
-  "releaseId": 420500253,
-  "releasePublishedAt": "2026-10-22T10:11:32Z",
-  "sourceCommit": "38afee6c84fcf48c0edb2466aa4b27d287a59c30",
+  "tag": "bun-v1.4.5",
+  "releaseId": 451031435,
+  "releasePublishedAt": "2026-11-19T08:47:28Z",
+  "sourceCommit": "a7733435cf40429e3b35c36072769df2052b80f1",
   "documentCount": 331,
   "indexComplete": true,
   "corpusVolumes": [
@@ -17,10 +17,10 @@
       "name": "llms-full.txt",
       "byteLength": 2654008,
       "documentCount": 331,
-      "sha256": "227fb12cd7aa1881d79a63c9f0b2e3af8d806e49879fecdbd3283b639828de76"
+      "sha256": "7b78abb2485c6ab9b36fc1fe5461d3bc665082f45116b797674c05d73da28214"
     }
   ],
-  "outputDigest": "380bb0620e3a635be123e4b39c6ba0251774c5225b968eec43bf5a86262c503a",
+  "outputDigest": "60f0dfa566042dd5e76582b5117d6d9f254ab08952d6e099e201c6deb9cce476",
   "notes": [
     "Pages and their order come from the release-tagged Mintlify navigation in docs/docs.json; unreferenced files are excluded and snippets are inlined rather than published as duplicate pages.",
     "Static MDX cards, tabs, accordions, steps, callouts, and media frames are normalized to Markdown without executing JavaScript.",

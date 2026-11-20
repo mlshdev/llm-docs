@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.6: [docs/management/queues/pause.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/management/queues/pause.mdx)
+> Pinned source for Trigger.dev v4.8.7: [docs/management/queues/pause.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/management/queues/pause.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/queues/pause
 
 # Pause or Resume Queue

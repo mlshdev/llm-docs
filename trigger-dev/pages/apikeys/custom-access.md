@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.6: [docs/apikeys/custom-access.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/apikeys/custom-access.mdx)
+> Pinned source for Trigger.dev v4.8.7: [docs/apikeys/custom-access.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/apikeys/custom-access.mdx)
 > Canonical documentation: https://trigger.dev/docs/apikeys/custom-access
 
 # Custom API key access

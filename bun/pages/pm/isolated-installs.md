@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.4: [docs/pm/isolated-installs.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/pm/isolated-installs.mdx)
+> Pinned source for Bun bun-v1.4.5: [docs/pm/isolated-installs.mdx](https://github.com/oven-sh/bun/blob/a7733435cf40429e3b35c36072769df2052b80f1/docs/pm/isolated-installs.mdx)
 > Canonical documentation: https://bun.com/docs/pm/isolated-installs
 
 Bun provides an alternative package installation strategy called **isolated installs** that creates strict dependency isolation similar to pnpm's approach. This mode prevents phantom dependencies (packages importing dependencies they never declared) and makes builds reproducible and deterministic.

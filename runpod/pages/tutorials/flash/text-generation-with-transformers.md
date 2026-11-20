@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/flash/text-generation-with-transformers.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/tutorials/flash/text-generation-with-transformers.mdx)
+> Pinned source for Runpod main: [tutorials/flash/text-generation-with-transformers.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/tutorials/flash/text-generation-with-transformers.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/flash/text-generation-with-transformers
 
 # Generate text with Flash and transformers

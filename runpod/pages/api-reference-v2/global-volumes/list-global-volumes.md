@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/global-volumes/list-global-volumes.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/api-reference-v2/global-volumes/list-global-volumes.mdx)
+> Pinned source for Runpod main: [api-reference-v2/global-volumes/list-global-volumes.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/api-reference-v2/global-volumes/list-global-volumes.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/global-volumes/list-global-volumes
 
 # List Global Volumes

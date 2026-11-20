@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/troubleshooting/jupyterlab-checkpoints-folder.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/pods/troubleshooting/jupyterlab-checkpoints-folder.mdx)
+> Pinned source for Runpod main: [pods/troubleshooting/jupyterlab-checkpoints-folder.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/pods/troubleshooting/jupyterlab-checkpoints-folder.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/troubleshooting/jupyterlab-checkpoints-folder
 
 # JupyterLab checkpoints folder access

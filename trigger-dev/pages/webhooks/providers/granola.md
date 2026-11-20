@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.6: [docs/webhooks/providers/granola.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/webhooks/providers/granola.mdx)
+> Pinned source for Trigger.dev v4.8.7: [docs/webhooks/providers/granola.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/webhooks/providers/granola.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/providers/granola
 
 # Granola webhooks

@@ -1,8 +1,12 @@
-> Pinned source for VictoriaMetrics datasource for Grafana v1.0.1: [CHANGELOG.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/8dc0515aa573a02cd799f010727c74830c6240d1/CHANGELOG.md)
+> Pinned source for VictoriaMetrics datasource for Grafana v1.0.2: [CHANGELOG.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/53e959300a520900f25547efee2f89d17538a368/CHANGELOG.md)
 
 # Changelog
 
 ## tip
+
+- BUGFIX: use the selected time range for label and label value suggestions when `Use optimized labels API` is enabled, which is the default. Previously, these requests always covered the last 6 hours regardless of the time picker. See [#600](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/600).
+
+## v1.0.1
 
 - BUGFIX: keep the query editor settings saved in the browser separate from the built-in Prometheus datasource. Previously, both plugins shared the same storage keys and overwrote each other's default editor mode and last used labels.
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.6: [docs/github-integration.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/github-integration.mdx)
+> Pinned source for Trigger.dev v4.8.7: [docs/github-integration.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/github-integration.mdx)
 > Canonical documentation: https://trigger.dev/docs/github-integration
 
 # GitHub integration
@@ -32,7 +32,7 @@ This eliminates the need to manually run the `trigger.dev deploy` command or set
 
 Our GitHub integration uses branch tracking to determine when and where to deploy your code.
 
-![Trigger.dev project git settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/deployment/git-settings.png)
+![Trigger.dev project git settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/fae01445473658369323ddc462b71eae51c790ff/docs/deployment/git-settings.png)
 
 ### Production and staging branches
 
@@ -41,7 +41,7 @@ When you connect a repository, the default branch of your repository will be use
 When you configure a production or staging branch, every push to that branch will trigger a deployment.
 Our build server will install the project dependencies, build your project, and deploy it to the corresponding environment.
 
-If there are multiple consecutive pushes to a tracked branch, the later deployments will be queued until the previous deployment completes.
+Builds for an environment run one at a time, in the order the pushes arrived, so a push made while another build is running waits in a queue. Each preview branch has its own queue. A deployment still queued 15 minutes after it was created times out.
 
 > **Note**
 >
@@ -58,6 +58,16 @@ The name of the preview branch matches the branch name of the pull request.
 > **Note**
 >
 > Preview branch deployments require the preview environment to be enabled on your project. Learn more about [preview branches](https://trigger.dev/docs/deployment/preview-branches).
+
+### Skip superseded builds
+
+When you push a newer commit while an older one is still queued, the older build is skipped. Its deployment shows as **Superseded** and its GitHub check is marked skipped, so only the newest queued commit builds. A build that has already started always finishes. Each preview branch is handled on its own.
+
+Turn this on or off for each environment with the **Skip superseded** switches in your project's Git settings. It's on by default for staging and preview, and off for production.
+
+> **Warning**
+>
+> With [version skew protection](https://trigger.dev/docs/deployment/atomic-deployment), runs from a skipped commit's app wait for a build that never happens, then expire. On Vercel this affects staging and preview. Turn Skip superseded off for an environment whose app serves traffic from every commit.
 
 ## Ignored branches
 
@@ -121,7 +131,7 @@ You can disconnect a repository at any time from your project git settings. This
 
 To add or remove repository access for the Trigger.dev GitHub app, follow the link in the `Connect GitHub repository` modal:
 
-![Trigger.dev prompt to connect a GitHub repository](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/deployment/connect-repo.png)
+![Trigger.dev prompt to connect a GitHub repository](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/fae01445473658369323ddc462b71eae51c790ff/docs/deployment/connect-repo.png)
 
 Alternatively, you can follow these steps on GitHub:
 

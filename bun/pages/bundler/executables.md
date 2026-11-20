@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.4: [docs/bundler/executables.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/bundler/executables.mdx)
+> Pinned source for Bun bun-v1.4.5: [docs/bundler/executables.mdx](https://github.com/oven-sh/bun/blob/a7733435cf40429e3b35c36072769df2052b80f1/docs/bundler/executables.mdx)
 > Canonical documentation: https://bun.com/docs/bundler/executables
 
 Bun's bundler implements a `--compile` flag for generating a standalone binary from a TypeScript or JavaScript file.

@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.4: [docs/project/building-windows.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/project/building-windows.mdx)
+> Pinned source for Bun bun-v1.4.5: [docs/project/building-windows.mdx](https://github.com/oven-sh/bun/blob/a7733435cf40429e3b35c36072769df2052b80f1/docs/project/building-windows.mdx)
 > Canonical documentation: https://bun.com/docs/project/building-windows
 
 Use [PowerShell 7 (`pwsh.exe`)](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4) instead of the default `powershell.exe`. If you run into problems, ask in the [#contributing channel on our Discord](http://bun.com/discord).

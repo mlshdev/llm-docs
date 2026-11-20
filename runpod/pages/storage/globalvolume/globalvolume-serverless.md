@@ -1,13 +1,9 @@
-> Pinned source for Runpod main: [storage/globalvolume/globalvolume-serverless.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/storage/globalvolume/globalvolume-serverless.mdx)
+> Pinned source for Runpod main: [storage/globalvolume/globalvolume-serverless.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/storage/globalvolume/globalvolume-serverless.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/globalvolume/globalvolume-serverless
 
 # Global volumes for Serverless
 
 Attach a global volume to a GPU Serverless endpoint so workers share access to model weights and other read-heavy data across all data centers.
-
-> **Note**
->
-> Global volumes for Serverless are in beta. Features and behavior may change before general availability.
 
 Attaching a global volume to a Serverless endpoint gives its workers shared, region-independent access to model weights and other read-heavy data. Because a global volume has no data center, attaching one doesn't restrict where your workers run. Your endpoint keeps access to the full GPU pool, unlike a network volume, which limits an endpoint to a single region.
 

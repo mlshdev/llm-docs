@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/serverless/run-your-first.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/tutorials/serverless/run-your-first.mdx)
+> Pinned source for Runpod main: [tutorials/serverless/run-your-first.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/tutorials/serverless/run-your-first.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/serverless/run-your-first
 
 # Generate images with Serverless and SDXL

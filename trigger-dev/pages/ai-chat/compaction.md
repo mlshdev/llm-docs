@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.6: [docs/ai-chat/compaction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/ai-chat/compaction.mdx)
+> Pinned source for Trigger.dev v4.8.7: [docs/ai-chat/compaction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/ai-chat/compaction.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/compaction
 
 # Compaction
@@ -389,9 +389,15 @@ for (let turn = 0; turn < 100; turn++) {
   const { message } = await chat.pipeAndCapture(result);
   if (message) await conversation.addResponse(message);
 
-  // Outer-loop compaction
-  const usage = await result.totalUsage;
-  await conversation.compactIfNeeded(usage, { chatId: payload.chatId, turn });
+  // Outer-loop compaction. Pass the last step's usage: it's what the model's
+  // context window held on its final call. `result.usage` is the turn's sum on
+  // AI SDK 7, so read it from `steps`, and pass the turn's sum separately.
+  const lastStepUsage = (await result.steps).at(-1)?.usage;
+  await conversation.compactIfNeeded(lastStepUsage, {
+    chatId: payload.chatId,
+    turn,
+    turnUsage: await result.totalUsage,
+  });
 
   await db.chat.update({ data: { messages: conversation.uiMessages } });
   await chat.writeTurnComplete();

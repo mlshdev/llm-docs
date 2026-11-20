@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/aa7c09781dd698d6cd775631198eefcc34a21fcd/doc/ffmpeg-protocols.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/95411863b480fdee7623141821b1de83e719566c/doc/ffmpeg-protocols.texi)
 
 # Description
 
@@ -1117,6 +1117,11 @@ The libcurl protocol accepts the following options.
 - user\_agent
   Override the `User-Agent` header. Defaults to `Lavf/<version>`.
 
+- method
+  Override the HTTP method. `HEAD` retrieves the response headers and
+  the resource size without a response body. Any other method name is sent
+  as supplied; method tokens are case-sensitive.
+
 - referer
   Set the `Referer` header.
 
@@ -1129,7 +1134,8 @@ The libcurl protocol accepts the following options.
 
 - cookies
   Cookies to be sent in future requests, given as newline-delimited
-  `Set-Cookie`-style values.
+  `Set-Cookie`-style values. A cookie without a domain is only sent to the
+  host of the URL.
 
 - location
   The actual location of the data after following redirects. This is an output

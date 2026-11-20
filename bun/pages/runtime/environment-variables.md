@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.4: [docs/runtime/environment-variables.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/runtime/environment-variables.mdx)
+> Pinned source for Bun bun-v1.4.5: [docs/runtime/environment-variables.mdx](https://github.com/oven-sh/bun/blob/a7733435cf40429e3b35c36072769df2052b80f1/docs/runtime/environment-variables.mdx)
 > Canonical documentation: https://bun.com/docs/runtime/environment-variables
 
 Bun reads your `.env` files automatically and provides idiomatic ways to read and write your environment variables programmatically. You can also configure parts of Bun's runtime behavior with Bun-specific environment variables.

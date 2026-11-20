@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.6: [docs/self-hosting/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/self-hosting/overview.mdx)
+> Pinned source for Trigger.dev v4.8.7: [docs/self-hosting/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/self-hosting/overview.mdx)
 > Canonical documentation: https://trigger.dev/docs/self-hosting/overview
 
 # Self-hosting overview
@@ -35,7 +35,7 @@ The self-hosted version is a set of containers running on your own infrastructur
 - **Webapp**: includes the dashboard and other services like Redis and Postgres.
 - **Worker**: includes the supervisor and the runners that execute your tasks.
 
-![Self-hosting architecture](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/self-hosting/architecture.png)
+![Self-hosting architecture](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/fae01445473658369323ddc462b71eae51c790ff/docs/self-hosting/architecture.png)
 
 ## Feature comparison
 

@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.4: [docs/guides/runtime/build-time-constants.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/guides/runtime/build-time-constants.mdx)
+> Pinned source for Bun bun-v1.4.5: [docs/guides/runtime/build-time-constants.mdx](https://github.com/oven-sh/bun/blob/a7733435cf40429e3b35c36072769df2052b80f1/docs/guides/runtime/build-time-constants.mdx)
 > Canonical documentation: https://bun.com/docs/guides/runtime/build-time-constants
 
 Pass `--define` to `bun build` or `bun build --compile` to inject build-time constants into your application. Use it to embed metadata like build versions, timestamps, or configuration flags directly into your compiled executables.

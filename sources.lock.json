@@ -61,10 +61,10 @@
       "sourceCommit": "6433dae586cc15921b4b9c50a805a49553c9d761"
     },
     "victoriametrics-datasource": {
-      "tag": "v1.0.1",
-      "releaseId": 433966976,
-      "releasePublishedAt": "2026-11-04T13:34:05Z",
-      "sourceCommit": "8dc0515aa573a02cd799f010727c74830c6240d1"
+      "tag": "v1.0.2",
+      "releaseId": 451320478,
+      "releasePublishedAt": "2026-11-19T12:33:20Z",
+      "sourceCommit": "53e959300a520900f25547efee2f89d17538a368"
     },
     "victorialogs-datasource": {
       "tag": "v0.34.0",
@@ -87,10 +87,10 @@
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "aa7c09781dd698d6cd775631198eefcc34a21fcd",
-      "sourceCommittedAt": "2026-11-17T01:40:15Z",
-      "observedCommit": "aa7c09781dd698d6cd775631198eefcc34a21fcd",
-      "documentationDigest": "775b4b75969dccefb9790014eb0ef70f4a5b89cfd48ce0af7d7f3df9d57fb459"
+      "sourceCommit": "95411863b480fdee7623141821b1de83e719566c",
+      "sourceCommittedAt": "2026-11-20T00:50:12Z",
+      "observedCommit": "95411863b480fdee7623141821b1de83e719566c",
+      "documentationDigest": "33866cb60603f5a8a5a3cf9705dc3cd54b3f5fcb83fd21e526b5db77f9b46a13"
     },
     "yt-dlp": {
       "tag": "2026.10.26",
@@ -103,20 +103,20 @@
       "branch": "master",
       "sourceCommit": "de722ab1bc957fd2e648bc2404b9155db69c617f",
       "sourceCommittedAt": "2026-11-10T19:05:53Z",
-      "observedCommit": "b867c56a5668966ef4be8097f1b559bdc2841743",
+      "observedCommit": "368baa340d87428a4a30077b2b0531032906b811",
       "documentationDigest": "fadf4da8a949da4ad04cc1aadb2569b220025b22b61331ea2784ba649c737f20"
     },
     "bun": {
-      "tag": "bun-v1.4.4",
-      "releaseId": 420500253,
-      "releasePublishedAt": "2026-10-22T10:11:32Z",
-      "sourceCommit": "38afee6c84fcf48c0edb2466aa4b27d287a59c30"
+      "tag": "bun-v1.4.5",
+      "releaseId": 451031435,
+      "releasePublishedAt": "2026-11-19T08:47:28Z",
+      "sourceCommit": "a7733435cf40429e3b35c36072769df2052b80f1"
     },
     "trigger-dev": {
-      "tag": "v4.8.6",
-      "releaseId": 450013055,
-      "releasePublishedAt": "2026-11-18T13:16:57Z",
-      "sourceCommit": "74765f97f1baafc7665d25b0f2f2af2dcf14436b"
+      "tag": "v4.8.7",
+      "releaseId": 451541982,
+      "releasePublishedAt": "2026-11-19T15:32:09Z",
+      "sourceCommit": "fae01445473658369323ddc462b71eae51c790ff"
     },
     "aria2": {
       "tag": "release-1.37.0",
@@ -140,10 +140,10 @@
     "runpod": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "1d195e36bae30bf7ccc6543bce79500dea0e259c",
-      "sourceCommittedAt": "2026-11-18T20:54:45Z",
-      "observedCommit": "1d195e36bae30bf7ccc6543bce79500dea0e259c",
-      "documentationDigest": "d2db77038bd013429f01f3ee30864d2924e55abf38c9e5d030a8636dd84dc8e8"
+      "sourceCommit": "2260ee963520748b2e23054fcee3ac046f62deff",
+      "sourceCommittedAt": "2026-11-19T21:07:36Z",
+      "observedCommit": "2260ee963520748b2e23054fcee3ac046f62deff",
+      "documentationDigest": "0ee8c015f14329c44cfc111354d8c32acc74b4a570e137af994459c7ca610602"
     },
     "discord-py-self": {
       "tag": "v2.1.0",

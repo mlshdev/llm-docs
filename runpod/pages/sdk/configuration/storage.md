@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdk/configuration/storage.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/sdk/configuration/storage.mdx)
+> Pinned source for Runpod main: [sdk/configuration/storage.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/sdk/configuration/storage.mdx)
 > Canonical documentation: https://docs.runpod.io/sdk/configuration/storage
 
 # Storage
@@ -8,7 +8,7 @@ Attach network volumes and global volumes to Runpod SDK resources with mounts, r
 Use volumes to keep data that outlives a single worker, such as model weights, datasets, and checkpoints, and to share files between resources. The SDK supports two kinds of persistent volume:
 
 - **`runpod.NetworkVolume`**: Storage in a single data center. Resources that mount it run in that data center. Works with GPU and CPU compute.
-- **`runpod.GlobalVolume`** (beta): Storage that isn't tied to a data center. Requires GPU compute.
+- **`runpod.GlobalVolume`**: Storage that isn't tied to a data center. Requires GPU compute.
 
 To compare the two and decide which to use, see [Storage overview](https://docs.runpod.io/storage/overview).
 

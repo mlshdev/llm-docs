@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.6: [docs/how-to-reduce-your-spend.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/how-to-reduce-your-spend.mdx)
+> Pinned source for Trigger.dev v4.8.7: [docs/how-to-reduce-your-spend.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/how-to-reduce-your-spend.mdx)
 > Canonical documentation: https://trigger.dev/docs/how-to-reduce-your-spend
 
 # How to reduce your spend
@@ -14,7 +14,7 @@ Monitor your usage dashboard to understand your spending patterns. You can see:
 - Number of runs by task
 - Spikes in your daily usage
 
-![Usage dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/images/usage-dashboard.png)
+![Usage dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/fae01445473658369323ddc462b71eae51c790ff/docs/images/usage-dashboard.png)
 
 You can view your usage page by clicking the "Organization" menu in the top left of the dashboard and then clicking "Usage".
 

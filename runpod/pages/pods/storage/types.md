@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/storage/types.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/pods/storage/types.mdx)
+> Pinned source for Runpod main: [pods/storage/types.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/pods/storage/types.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/storage/types
 
 # Storage options
@@ -60,10 +60,6 @@ Network volumes are available in two tiers:
 > Network volumes must be attached during Pod creation and cannot be detached later. When attached, the network volume replaces the volume disk at `/workspace`.
 
 ## Global volume
-
-> **Warning**
->
-> Global volumes are in beta. Features and behavior may change before general availability.
 
 Global volumes provide elastic, region-independent storage that any Pod can mount, regardless of data center. Capacity grows with the data you store, so there is no capacity to provision upfront, and the volume persists when a Pod is stopped or deleted.
 

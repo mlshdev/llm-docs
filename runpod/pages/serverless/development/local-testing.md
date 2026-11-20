@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/development/local-testing.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/serverless/development/local-testing.mdx)
+> Pinned source for Runpod main: [serverless/development/local-testing.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/serverless/development/local-testing.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/development/local-testing
 
 # Local testing

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [storage/overview.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/storage/overview.mdx)
+> Pinned source for Runpod main: [storage/overview.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/storage/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/overview
 
 # Storage overview
@@ -12,7 +12,7 @@ Pods and Serverless workers also include temporary disks that are tied to the re
 ## Storage options
 
 - **[Network volumes](https://docs.runpod.io/storage/network-volumes)**: Persistent storage located in a single data center. Network volumes are available in a standard tier and a [high-performance tier](https://docs.runpod.io/storage/high-performance-storage) that provides up to 3x the throughput and 4x the IOPS.
-- **[Global volumes](https://docs.runpod.io/storage/globalvolume/overview)** (beta): Persistent storage that's available across data centers, so you can access the same files from compute in any supported region.
+- **[Global volumes](https://docs.runpod.io/storage/globalvolume/overview)**: Persistent storage that's available across data centers, so you can access the same files from compute in any supported region.
 - **[S3-compatible API](https://docs.runpod.io/storage/s3-api)**: Manage files on your network volumes using standard S3 tools, without starting a Pod or worker.
 
 ## Compare network and global volumes

@@ -1,8 +1,8 @@
-# Trigger.dev v4.8.6
+# Trigger.dev v4.8.7
 
-> Documentation generated from the latest stable release of [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) and pinned to immutable source commit `74765f97f1baafc7665d25b0f2f2af2dcf14436b`.
+> Documentation generated from the latest stable release of [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) and pinned to immutable source commit `fae01445473658369323ddc462b71eae51c790ff`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Trigger.dev v4.8.6.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Trigger.dev v4.8.7.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow the navigation declared in docs/docs.json at the immutable release tag; snippets are inlined into the pages that import them rather than published separately.
 - API reference pages are rendered from the OpenAPI specification the page names in its `openapi` frontmatter, since the upstream page carries no prose of its own.
@@ -97,7 +97,7 @@
 - [Prompts](pages/ai/prompts.md): Define prompt templates as code, version them on deploy, and override from the dashboard without redeploying. (14566 bytes)
 - [LLM observability](pages/ai/observability.md): Capture Vercel AI SDK calls in a task as spans in the run trace, with model, token usage, cost, and latency. Link calls to prompt versions and query usage across runs. (7732 bytes)
 - [Fast starts](pages/ai-chat/fast-starts.md): Two ways to cut first-turn TTFC: Preload eagerly triggers the run before the first message; Head Start runs step 1 in your warm server while the agent boots in parallel. (39654 bytes)
-- [Compaction](pages/ai-chat/compaction.md): Automatic context compaction to keep long conversations within token limits. (16646 bytes)
+- [Compaction](pages/ai-chat/compaction.md): Automatic context compaction to keep long conversations within token limits. (16931 bytes)
 - [Prompt caching](pages/ai-chat/prompt-caching.md): Cache the stable prefix of your agent's prompt with Anthropic prompt caching to cut token cost and latency on every turn. (12420 bytes)
 - [Pending Messages](pages/ai-chat/pending-messages.md): Inject user messages mid-execution to steer agents between tool-call steps. (16675 bytes)
 - [Background injection](pages/ai-chat/background-injection.md): Inject context from background work into the agent's conversation: self-review, RAG augmentation, or any async analysis. (16611 bytes)
@@ -217,7 +217,7 @@
 - [Preview branches](pages/deployment/preview-branches.md): Create isolated environments for each branch of your code, allowing you to test changes before merging to production. You can create preview branches manually or automatically from your git branches. (9864 bytes)
 - [Development branches](pages/deployment/dev-branches.md): Run multiple local dev sessions in isolation by giving each one its own development branch. Use branches to keep parallel work (in separate worktrees, directories, or agents) from clashing. (2774 bytes)
 - [Atomic deployments](pages/deployment/atomic-deployment.md): Keep your app and your tasks in sync with version skew protection: pin every run to the deployment built for the release of your app that triggered it. (33021 bytes)
-- [GitHub integration](pages/github-integration.md): Automatically deploy your tasks on every push to your GitHub repository. (9544 bytes)
+- [GitHub integration](pages/github-integration.md): Automatically deploy your tasks on every push to your GitHub repository. (10490 bytes)
 - [Vercel integration](pages/vercel-integration.md): Automatically deploy your tasks whenever you deploy to Vercel. (13050 bytes)
 
 ## Private networking

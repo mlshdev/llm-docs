@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.6: [docs/tags.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/tags.mdx)
+> Pinned source for Trigger.dev v4.8.7: [docs/tags.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/tags.mdx)
 > Canonical documentation: https://trigger.dev/docs/tags
 
 # Tags
@@ -51,7 +51,7 @@ const batch = await myTask.batchTrigger([
 
 This will create a run with the tags `user_123456` and `org_abcdefg`. They look like this in the runs table:
 
-![How tags appear in the dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/images/tags-org-user.png)
+![How tags appear in the dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/fae01445473658369323ddc462b71eae51c790ff/docs/images/tags-org-user.png)
 
 ### 2. Adding tags inside the `run` function
 
@@ -102,7 +102,7 @@ You can filter runs by tags in the dashboard and in the SDK.
 
 On the Runs page open the filter menu, choose "Tags" and then start typing in the name of the tag you want to filter by. You can select it and it will restrict the results to only runs with that tag. You can add multiple tags to filter by more than one.
 
-![Filter by tags](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/images/tags-filtering.png)
+![Filter by tags](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/fae01445473658369323ddc462b71eae51c790ff/docs/images/tags-filtering.png)
 
 ### Using `runs.list()`
 

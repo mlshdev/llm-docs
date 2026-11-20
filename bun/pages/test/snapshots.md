@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.4: [docs/test/snapshots.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/test/snapshots.mdx)
+> Pinned source for Bun bun-v1.4.5: [docs/test/snapshots.mdx](https://github.com/oven-sh/bun/blob/a7733435cf40429e3b35c36072769df2052b80f1/docs/test/snapshots.mdx)
 > Canonical documentation: https://bun.com/docs/test/snapshots
 
 Snapshot testing saves the output of a value and compares it against future test runs. Use it for UI components, complex objects, or any output that needs to remain consistent.

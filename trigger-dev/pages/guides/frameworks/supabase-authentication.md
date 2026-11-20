@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.6: [docs/guides/frameworks/supabase-authentication.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/frameworks/supabase-authentication.mdx)
+> Pinned source for Trigger.dev v4.8.7: [docs/guides/frameworks/supabase-authentication.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/guides/frameworks/supabase-authentication.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/supabase-authentication
 
 # Authenticating Supabase tasks: JWTs and service roles

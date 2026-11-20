@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.6: [docs/billing-limits.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/billing-limits.mdx)
+> Pinned source for Trigger.dev v4.8.7: [docs/billing-limits.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/billing-limits.mdx)
 > Canonical documentation: https://trigger.dev/docs/billing-limits
 
 # Billing limits and alerts
@@ -17,7 +17,7 @@ Billing limits let you cap your organization's monthly compute spend so a runawa
 
 You can find the settings in the dashboard: open the **Organization** menu in the top left, then **Settings** → **Billing limits**.
 
-![Billing limit settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/images/billing-docs.png)
+![Billing limit settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/fae01445473658369323ddc462b71eae51c790ff/docs/images/billing-docs.png)
 
 ## Setting a billing limit
 
@@ -38,7 +38,7 @@ Billing alerts are email notifications sent when your monthly spend crosses a th
 - **With a billing limit set**: thresholds are percentages of your limit (e.g. 50%, 80%).
 - **Without a billing limit**: thresholds are dollar amounts.
 
-![Billing alerts settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/images/billing-alerts-docs.png)
+![Billing alerts settings](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/fae01445473658369323ddc462b71eae51c790ff/docs/images/billing-alerts-docs.png)
 
 Alerts only notify you — they never pause environments or reject runs. Use them on their own for visibility, or alongside a limit to get advance warning before enforcement kicks in.
 

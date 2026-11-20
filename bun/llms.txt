@@ -1,8 +1,8 @@
-# Bun bun-v1.4.4
+# Bun bun-v1.4.5
 
-> Documentation generated from the latest stable release of [oven-sh/bun](https://github.com/oven-sh/bun) and pinned to immutable source commit `38afee6c84fcf48c0edb2466aa4b27d287a59c30`.
+> Documentation generated from the latest stable release of [oven-sh/bun](https://github.com/oven-sh/bun) and pinned to immutable source commit `a7733435cf40429e3b35c36072769df2052b80f1`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Bun bun-v1.4.4.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Bun bun-v1.4.5.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages and their order come from the release-tagged Mintlify navigation in docs/docs.json; unreferenced files are excluded and snippets are inlined rather than published as duplicate pages.
 - Static MDX cards, tabs, accordions, steps, callouts, and media frames are normalized to Markdown without executing JavaScript.

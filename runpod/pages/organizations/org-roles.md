@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [organizations/org-roles.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/organizations/org-roles.mdx)
+> Pinned source for Runpod main: [organizations/org-roles.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/organizations/org-roles.mdx)
 > Canonical documentation: https://docs.runpod.io/organizations/org-roles
 
 # Roles

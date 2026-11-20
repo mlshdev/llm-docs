@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `1d195e36bae30bf7ccc6543bce79500dea0e259c`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `2260ee963520748b2e23054fcee3ac046f62deff`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -8,6 +8,7 @@
 - API reference pages are rendered from the OpenAPI specification in the directory the page lives under, since the upstream page carries no prose of its own.
 - Glossary tooltips are replaced by the term they label, and static MDX cards, tabs, accordions, steps, file trees, callouts, and parameter fields are normalized to Markdown without executing JavaScript.
 - Published page links resolve to https://docs.runpod.io; source assets point at the pinned commit.
+- Quarantined sources (1): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
 
 ## Get started
 
@@ -16,9 +17,12 @@
 - [Choose a workflow](pages/get-started/connect-to-runpod.md): Review available methods for accessing and managing Runpod resources. Review setup steps and core concepts for building on Runpod. (2209 bytes)
 - [Concepts](pages/get-started/concepts.md): Key concepts and terminology for understanding Runpod's platform and products. Review setup steps and core concepts for building on Runpod. (3461 bytes)
 - [Manage credentials](pages/get-started/credentials.md): Create and manage your API keys, SSH keys, S3 API keys, container registry credentials, and secrets from the Credentials page. (7235 bytes)
+- [Early access features](pages/get-started/early-access.md): Opt in to experimental Runpod console features before they're generally available. Review setup steps and core concepts for building on Runpod. (1730 bytes)
+
+## Agents and skills
+
 - [Agent skills for AI coding tools](pages/get-started/agent-skills.md): Manage GPU workloads on Runpod with coding agents like Claude Code, Codex, and Cursor. Review setup steps and core concepts for building on Runpod. (11235 bytes)
 - [Use Runpod's MCP servers](pages/get-started/mcp-servers.md): Connect AI tools to Runpod using the Model Context Protocol for infrastructure management and documentation access. (12307 bytes)
-- [Early access features](pages/get-started/early-access.md): Opt in to experimental Runpod console features before they're generally available. Review setup steps and core concepts for building on Runpod. (1730 bytes)
 
 ## Runpod SDK
 
@@ -27,7 +31,7 @@
 - [Resource parameters](pages/sdk/configuration/parameters.md): Reference for every resource parameter on @app.queue, @app.api, and @app.task in the Runpod SDK, including defaults and which decorators support each one. (10278 bytes)
 - [GPU types](pages/sdk/configuration/gpu-types.md): Choose GPUs for Runpod SDK resources with short names, GPU pools, or exact device types, and learn how the SDK matches each form to available hardware. (7135 bytes)
 - [CPU types](pages/sdk/configuration/cpu-types.md): Run Runpod SDK resources on CPU-only workers. Compare CPU instance types by vCPU and memory, and see which data centers stock each generation. (2836 bytes)
-- [Storage](pages/sdk/configuration/storage.md): Attach network volumes and global volumes to Runpod SDK resources with mounts, read volume paths in worker code, and avoid common storage mistakes. (4507 bytes)
+- [Storage](pages/sdk/configuration/storage.md): Attach network volumes and global volumes to Runpod SDK resources with mounts, read volume paths in worker code, and avoid common storage mistakes. (4500 bytes)
 - [Configuration best practices](pages/sdk/configuration/best-practices.md): Recommended Runpod SDK resource settings for production, development, and cost control, including worker counts, idle timeouts, and GPU selection. (4759 bytes)
 - [Build an app](pages/sdk/apps/build-app.md): Build a Runpod SDK app step by step: run a function on a GPU, add a load-balanced HTTP service, share data between tasks, and deploy it. (7947 bytes)
 - [Dev sessions](pages/sdk/apps/dev-sessions.md): Use rp flash dev to run a Runpod SDK app against temporary endpoints, stream worker logs, re-run on code changes, and clean up when you finish. (4509 bytes)
@@ -141,7 +145,7 @@
 - [Connect to a Pod with VSCode or Cursor](pages/pods/configuration/connect-to-ide.md): Set up remote development on your Pod using VSCode or Cursor. Review setup, configuration, and operations guidance for Runpod Pods. (8147 bytes)
 - [Expose ports](pages/pods/configuration/expose-ports.md): Learn how to make your Pod services accessible from the internet using HTTP proxy and TCP port forwarding (8772 bytes)
 - [Global networking](pages/pods/networking.md): Connect your Pods through a secure private network for internal communication. Review setup, configuration, and operations guidance for Runpod Pods. (4717 bytes)
-- [Storage options](pages/pods/storage/types.md): Choose the right type of storage for your Pods. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (6937 bytes)
+- [Storage options](pages/pods/storage/types.md): Choose the right type of storage for your Pods. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods. (6828 bytes)
 - [Transfer files](pages/pods/storage/transfer-files.md): Move files between your local machine and Pods with a variety of secure transfer methods. See setup and usage details for Runpod Pods. (7928 bytes)
 - [Sync Pod data with cloud storage providers](pages/pods/storage/cloud-sync.md): Learn how to sync your Pod data with popular cloud storage providers. Review setup, configuration, and operations guidance for Runpod Pods. (10224 bytes)
 - [Overview](pages/pods/templates/overview.md): Streamline your Pod deployments with templates, bundling prebuilt container images with hardware specs and network settings. (2670 bytes)
@@ -175,13 +179,13 @@
 
 ## Storage
 
-- [Storage overview](pages/storage/overview.md): Compare Runpod network volumes and global volumes, and learn how to attach persistent storage to Pods, Serverless endpoints, and Runpod SDK apps. (5975 bytes)
+- [Storage overview](pages/storage/overview.md): Compare Runpod network volumes and global volumes, and learn how to attach persistent storage to Pods, Serverless endpoints, and Runpod SDK apps. (5968 bytes)
 - [Network volumes](pages/storage/network-volumes.md): Persistent, portable storage for your AI workloads. Review configuration, access methods, and usage guidance for managing storage on Runpod. (7938 bytes)
 - [High-performance storage](pages/storage/high-performance-storage.md): Premium storage tier for demanding AI workloads with up to 3x throughput and 4x IOPS. Review configuration and usage guidance for Runpod storage. (5239 bytes)
 - [S3-compatible API](pages/storage/s3-api.md): Use Runpod's S3-compatible API to access and manage your network volumes. Review configuration and usage guidance for Runpod storage. (26928 bytes)
-- [Overview](pages/storage/globalvolume/overview.md): Create a Runpod global volume, attach it to Pods or Serverless workers across data centers, and review storage costs and limitations. (7411 bytes)
-- [Global volumes for Pods](pages/storage/globalvolume/globalvolume-pods.md): Attach a global volume to a GPU Pod for elastic, region-independent storage that persists across sessions. (2840 bytes)
-- [Global volumes for Serverless](pages/storage/globalvolume/globalvolume-serverless.md): Attach a global volume to a GPU Serverless endpoint so workers share access to model weights and other read-heavy data across all data centers. (4218 bytes)
+- [Overview](pages/storage/globalvolume/overview.md): Create a Runpod global volume, attach it to Pods or Serverless workers across data centers, and review storage costs and limitations. (7305 bytes)
+- [Global volumes for Pods](pages/storage/globalvolume/globalvolume-pods.md): Attach a global volume to a GPU Pod for elastic, region-independent storage that persists across sessions. (2725 bytes)
+- [Global volumes for Serverless](pages/storage/globalvolume/globalvolume-serverless.md): Attach a global volume to a GPU Serverless endpoint so workers share access to model weights and other read-heavy data across all data centers. (4097 bytes)
 
 ## Public Endpoints
 

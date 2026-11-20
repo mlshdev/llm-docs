@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.4: [docs/guides/install/registry-scope.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/guides/install/registry-scope.mdx)
+> Pinned source for Bun bun-v1.4.5: [docs/guides/install/registry-scope.mdx](https://github.com/oven-sh/bun/blob/a7733435cf40429e3b35c36072769df2052b80f1/docs/guides/install/registry-scope.mdx)
 > Canonical documentation: https://bun.com/docs/guides/install/registry-scope
 
 You can configure private registries in [`.npmrc`](https://bun.com/docs/pm/npmrc) or [`bunfig.toml`](https://bun.com/docs/runtime/bunfig#install-registry). Both work; we recommend `bunfig.toml` for its Bun-specific options.

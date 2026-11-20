@@ -1,4 +1,4 @@
-> Pinned source for Bun bun-v1.4.4: [docs/bundler/index.mdx](https://github.com/oven-sh/bun/blob/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/bundler/index.mdx)
+> Pinned source for Bun bun-v1.4.5: [docs/bundler/index.mdx](https://github.com/oven-sh/bun/blob/a7733435cf40429e3b35c36072769df2052b80f1/docs/bundler/index.mdx)
 > Canonical documentation: https://bun.com/docs/bundler
 
 Use Bun's native bundler through the `bun build` CLI command or the `Bun.build()` JavaScript API.
@@ -24,7 +24,7 @@ bun build ./index.tsx --outdir ./build
 
 It's fast. The following numbers are from esbuild's [three.js benchmark](https://github.com/oven-sh/bun/tree/main/bench/bundle).
 
-![](https://raw.githubusercontent.com/oven-sh/bun/38afee6c84fcf48c0edb2466aa4b27d287a59c30/docs/images/bundler-speed.png)
+![](https://raw.githubusercontent.com/oven-sh/bun/a7733435cf40429e3b35c36072769df2052b80f1/docs/images/bundler-speed.png)
 
 ## Why bundle?
 

@@ -8,20 +8,26 @@
   "repository": "runpod/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-11-18T20:54:45Z",
-  "documentationDigest": "d2db77038bd013429f01f3ee30864d2924e55abf38c9e5d030a8636dd84dc8e8",
-  "sourceCommit": "1d195e36bae30bf7ccc6543bce79500dea0e259c",
+  "sourceCommittedAt": "2026-11-19T21:07:36Z",
+  "documentationDigest": "0ee8c015f14329c44cfc111354d8c32acc74b4a570e137af994459c7ca610602",
+  "sourceCommit": "2260ee963520748b2e23054fcee3ac046f62deff",
   "documentCount": 404,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 4640833,
+      "byteLength": 4640368,
       "documentCount": 404,
-      "sha256": "d6d29240b67c1d7f41fb8bcd26ccd72e96cb4f5c3b8720b39c329bc317487d35"
+      "sha256": "5764756c3c4674a09786dfc8c7318ac64c946e5fe65e27498c4ceeeeb6159a0d"
     }
   ],
-  "outputDigest": "6edd6f4eb9d670409e9058cd1d530b3c175a6c44dfc9fb29dd2c1dce026a023b",
+  "outputDigest": "5279cbadc2312e1a4e78464d98100d208e0c364b8f13b3bdae265c3d612a605e",
+  "quarantined": [
+    {
+      "sourcePath": "agent-setup.mdx",
+      "reason": "Unable to convert Runpod page agent-setup.mdx: Unhandled MDX component <AgentButtons> in agent-setup.mdx"
+    }
+  ],
   "notes": [
     "Pages follow the navigation declared in docs.json at the pinned commit; snippets are inlined into the pages that import them rather than published separately.",
     "API reference pages are rendered from the OpenAPI specification in the directory the page lives under, since the upstream page carries no prose of its own.",

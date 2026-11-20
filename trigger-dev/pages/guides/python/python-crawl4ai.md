@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.6: [docs/guides/python/python-crawl4ai.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/guides/python/python-crawl4ai.mdx)
+> Pinned source for Trigger.dev v4.8.7: [docs/guides/python/python-crawl4ai.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/guides/python/python-crawl4ai.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/python/python-crawl4ai
 
 # Python headless browser web crawler example

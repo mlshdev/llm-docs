@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [hub/publishing-guide.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/hub/publishing-guide.mdx)
+> Pinned source for Runpod main: [hub/publishing-guide.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/hub/publishing-guide.mdx)
 > Canonical documentation: https://docs.runpod.io/hub/publishing-guide
 
 # Runpod Hub publishing guide
@@ -9,7 +9,7 @@ Learn how to publish your repositories to the [Runpod Hub](https://console.runpo
 
 After you publish your repository to the Hub, you can start [earning revenue](https://docs.runpod.io/hub/revenue-sharing) from your users' compute usage.
 
-![](https://raw.githubusercontent.com/runpod/docs/1d195e36bae30bf7ccc6543bce79500dea0e259c/images/hub-publish-page.png)
+![](https://raw.githubusercontent.com/runpod/docs/2260ee963520748b2e23054fcee3ac046f62deff/images/hub-publish-page.png)
 
 ## How to publish your repo
 

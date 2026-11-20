@@ -1,13 +1,9 @@
-> Pinned source for Runpod main: [storage/globalvolume/globalvolume-pods.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/storage/globalvolume/globalvolume-pods.mdx)
+> Pinned source for Runpod main: [storage/globalvolume/globalvolume-pods.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/storage/globalvolume/globalvolume-pods.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/globalvolume/globalvolume-pods
 
 # Global volumes for Pods
 
 Attach a global volume to a GPU Pod for elastic, region-independent storage that persists across sessions.
-
-> **Note**
->
-> Global volumes for Pods are in beta. Features and behavior may change before general availability.
 
 Attaching a global volume to a Pod gives it access to elastic, region-independent storage without being locked to a specific data center. The volume persists when the Pod is stopped or deleted, so your data is available the next time you deploy.
 

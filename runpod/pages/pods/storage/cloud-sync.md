@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/storage/cloud-sync.mdx](https://github.com/runpod/docs/blob/1d195e36bae30bf7ccc6543bce79500dea0e259c/pods/storage/cloud-sync.mdx)
+> Pinned source for Runpod main: [pods/storage/cloud-sync.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/pods/storage/cloud-sync.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/storage/cloud-sync
 
 # Sync Pod data with cloud storage providers

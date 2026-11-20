@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.6: [docs/management/sessions/channels.mdx](https://github.com/triggerdotdev/trigger.dev/blob/74765f97f1baafc7665d25b0f2f2af2dcf14436b/docs/management/sessions/channels.mdx)
+> Pinned source for Trigger.dev v4.8.7: [docs/management/sessions/channels.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/management/sessions/channels.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/sessions/channels
 
 # Session channels
