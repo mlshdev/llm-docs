@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/95411863b480fdee7623141821b1de83e719566c/doc/ffmpeg-formats.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/21c81303cb7c6c407dac1a8c03991ab273f1fe13/doc/ffmpeg-formats.texi)
 
 # Description
 
@@ -1196,6 +1196,32 @@ ffmpeg -i video_and_audio.mxf -eia608_extract 0 -i CC.mcc -c copy -map 0 -map 1 
 ```
 
 This retains all VANC data and inserts it into the output MXF file as a `SMPTE_436M_ANC` data stream.
+
+## matroska
+
+Matroska / WebM demuxer.
+
+### Options
+
+- best\_fit\_ts *bool*
+  Fit the timestamps to the units of each stream, where the clock of the file
+  is coarser than those units. The most common Matroska clock is a millisecond,
+  which places a 48 kHz audio packet up to 24 samples away from its first
+  sample.
+
+Audio tracks are moved to a sample time base and their timestamps are
+rebuilt from the packet lengths, which come from the codec for Opus and AAC
+and from the default duration of the track for the other codecs. A stored
+timestamp is followed wherever it departs from that count by more than its
+rounding. Streams whose units the clock already resolves, such as video at
+the usual frame rates, keep the clock of the file.
+
+Vorbis tracks, tracks stored in a compatibility or interleaved mode, tracks
+whose packets a parser re-times and tracks without a known sample rate or
+packet length also keep the clock of the file. The reason is logged at
+verbose level.
+
+Default is disabled.
 
 ## mov/mp4/3gp
 
@@ -4721,7 +4747,21 @@ hardcoded fixed value.
   Store at most the provided number of milliseconds in a cluster.
 
 If not specified, the limit is set automatically to a sensible
-hardcoded fixed value.
+hardcoded fixed value. The limit cannot exceed 32767 ticks of the
+timestamp scale, 327 milliseconds at 10 microseconds.
+
+- timestamp\_scale *nanoseconds*
+  Set the clock of the file, in nanoseconds.
+
+If set to `0`, the default, the muxer picks the coarsest power of
+ten of a nanosecond, up to a millisecond, that is finer than half a
+sample of every audio stream: 10 microseconds at 44.1 or 48 kHz. With a
+video stream the clock stays at 10 microseconds or above, so that frame
+reordering fits in a cluster. WebM files use a millisecond.
+A value set by this option applies to WebM files too.
+
+Set it to `1000000` to write the millisecond clock that most
+Matroska files use.
 
 - dash *bool*
   Create a WebM file conforming to WebM DASH specification. By default

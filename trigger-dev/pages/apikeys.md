@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.7: [docs/apikeys.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/apikeys.mdx)
+> Pinned source for Trigger.dev v4.8.8: [docs/apikeys.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/apikeys.mdx)
 > Canonical documentation: https://trigger.dev/docs/apikeys
 
 # API keys
@@ -122,9 +122,10 @@ Give a key a list of allowed IP addresses to limit where it can be used. Request
 
 > **Tip**
 >
-> To lock down an environment, give each backend its own IP-restricted key, move your applications
-> to those keys, then hide the root key. Your tasks keep working because they don't authenticate
-> with your API keys.
+> Give each backend its own IP-restricted key and move your applications to those keys. The
+> dashboard shows only the last four characters of the root key, but masking doesn't stop it from
+> working. To invalidate a root key your apps no longer use, choose **Regenerate…** and revoke
+> the previous key immediately.
 
 ## Change a key's access
 

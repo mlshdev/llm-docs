@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/reference/runpodctl-serverless.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/runpodctl/reference/runpodctl-serverless.mdx)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-serverless.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/runpodctl/reference/runpodctl-serverless.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-serverless
 
 # serverless
@@ -391,6 +391,24 @@ Access your Serverless endpoint using these URL patterns:
 | Sync request  | `https://api.runpod.ai/v2/<endpoint-id>/runsync`         |
 | Health check  | `https://api.runpod.ai/v2/<endpoint-id>/health`          |
 | Job status    | `https://api.runpod.ai/v2/<endpoint-id>/status/<job-id>` |
+
+### Invoke URLs in command output
+
+`serverless create`, `serverless get`, `serverless list`, and `serverless update` include a `urls` object on each endpoint so you can invoke a freshly deployed endpoint without a second lookup:
+
+```json
+{
+  "id": "abc123",
+  "name": "my-vllm",
+  "urls": {
+    "run": "https://api.runpod.ai/v2/abc123/run",
+    "runsync": "https://api.runpod.ai/v2/abc123/runsync",
+    "health": "https://api.runpod.ai/v2/abc123/health"
+  }
+}
+```
+
+The URLs are computed client-side from the endpoint ID. Invoke is a separate service from the control plane, so `RUNPOD_API_URL` and `RUNPOD_GRAPHQL_URL` do not move them. Set `RUNPOD_INVOKE_URL` (or the `invokeUrl` key in `~/.runpod/config.toml`) when you need to target a non-production invoke host; the default is `https://api.runpod.ai/v2`.
 
 ## Related commands
 

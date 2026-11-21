@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.7: [docs/guides/example-projects/meme-generator-human-in-the-loop.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/guides/example-projects/meme-generator-human-in-the-loop.mdx)
+> Pinned source for Trigger.dev v4.8.8: [docs/guides/example-projects/meme-generator-human-in-the-loop.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/guides/example-projects/meme-generator-human-in-the-loop.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/example-projects/meme-generator-human-in-the-loop
 
 # Meme generator with human-in-the-loop approval
@@ -23,7 +23,7 @@ This demo is a full stack example that uses the following:
 
 ## Post to Slack
 
-![Meme Generator with Human-in-the-Loop Approval](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/fae01445473658369323ddc462b71eae51c790ff/docs/images/slack-meme-approval.png)
+![Meme Generator with Human-in-the-Loop Approval](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/images/slack-meme-approval.png)
 
 ## Relevant code
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/endpoints/job-states.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/serverless/endpoints/job-states.mdx)
+> Pinned source for Runpod main: [serverless/endpoints/job-states.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/serverless/endpoints/job-states.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/endpoints/job-states
 
 # Job states and metrics

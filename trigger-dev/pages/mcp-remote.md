@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.7: [docs/mcp-remote.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/mcp-remote.mdx)
+> Pinned source for Trigger.dev v4.8.8: [docs/mcp-remote.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/mcp-remote.mdx)
 > Canonical documentation: https://trigger.dev/docs/mcp-remote
 
 # Remote MCP server
@@ -52,10 +52,12 @@ An OAuth grant stops working after 30 days without use, and 90 days after it was
 
 Each OAuth grant carries a list of scopes. A tool call is denied if the scopes or your role in the organization don't allow it.
 
-| Kind  | Scopes                                                                                                                                                                 |
-| ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Read  | `read:alerts`, `read:branches`, `read:deployments`, `read:organizations`, `read:projects`, `read:prompts`, `read:query`, `read:runs`, `read:sessions`, `read:webhooks` |
-| Write | `trigger:tasks`, `update:prompts`, `write:alerts`, `write:projects`, `write:query`, `write:runs`, `write:sessions`, `write:webhooks`                                   |
+| Kind  | Scopes                                                                                                                                                                                                                                                                                   |
+| ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Read  | `read:alerts`, `read:batch`, `read:branches`, `read:deployments`, `read:environments`, `read:envvars`, `read:errors`, `read:organizations`, `read:projects`, `read:prompts`, `read:query`, `read:queues`, `read:runs`, `read:sessions`, `read:tasks`, `read:waitpoints`, `read:webhooks` |
+| Write | `manage:project`, `trigger:tasks`, `update:prompts`, `write:alerts`, `write:batch`, `write:branches`, `write:deployments`, `write:errors`, `write:projects`, `write:query`, `write:runs`, `write:sessions`, `write:tasks`, `write:waitpoints`, `write:webhooks`                          |
+
+If a client doesn't ask for specific scopes, it gets every read scope except `read:envvars`, which a client must ask for by name.
 
 ## Write confirmation
 

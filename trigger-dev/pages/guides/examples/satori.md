@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.7: [docs/guides/examples/satori.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/guides/examples/satori.mdx)
+> Pinned source for Trigger.dev v4.8.8: [docs/guides/examples/satori.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/guides/examples/satori.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/examples/satori
 
 # Generate OG Images using Satori
@@ -118,7 +118,7 @@ export const generateOgImage = schemaTask({
 
 This image was generated using the above task.
 
-![OG Image](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/fae01445473658369323ddc462b71eae51c790ff/docs/images/react-satori-og.jpg)
+![OG Image](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/images/react-satori-og.jpg)
 
 ## Testing your task
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.7: [docs/mcp-tools.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/mcp-tools.mdx)
+> Pinned source for Trigger.dev v4.8.8: [docs/mcp-tools.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/mcp-tools.mdx)
 > Canonical documentation: https://trigger.dev/docs/mcp-tools
 
 # MCP Tools
@@ -80,22 +80,41 @@ Trigger a task to run with a specific payload. You can add a delay, set tags, co
 
 ### get\_run\_details
 
-Get detailed information about a specific task run, including logs and status. Enable debug mode to get the full trace with all logs and spans.
+Get detailed information about a specific task run, including logs and status. Enable debug mode to get the full trace with all logs and spans. On the [remote MCP server](https://trigger.dev/docs/mcp-remote), the details include the run's metadata values, cut off after 4,000 characters.
 
 **Example usage:**
 
 - `"Show me details for run run_abc123"`
 - `"Why did this run fail?"`
+- `"What progress did run run_abc123 report in its metadata?"`
 
 ### list\_runs
 
-List runs for a project. Filter by status, task, tags, version, machine size, or time period.
+List runs for a project. Filter by status, task, tags, version, machine size, region, queue, batch, schedule, bulk action, or time period. To match several versions, separate them with commas. If you pass `period`, it takes precedence and `from` and `to` are ignored. On the [remote MCP server](https://trigger.dev/docs/mcp-remote), a batch, schedule or bulk action ID that does not start with lowercase `batch_`, `sched_` or `bulk_` is refused.
 
 **Example usage:**
 
 - `"Show me recent runs"`
 - `"List failed runs from the last 7 days"`
 - `"What runs are currently executing?"`
+
+### list\_run\_tags
+
+List the tags used on runs in an environment, in alphabetical order. Search by part of a tag name, choose how far back to look (the last 7 days by default), and set how many tags to return (up to 100). Only available on the [remote MCP server](https://trigger.dev/docs/mcp-remote).
+
+**Example usage:**
+
+- `"Which run tags did we use this week?"`
+- `"List tags that contain user: from the last 30 days"`
+
+### read\_run\_stream
+
+Read what a run streamed (`output`), or what was sent to one of its input streams (`input`), like the streams on the run page in the dashboard. Without a stream key, lists the run's output stream keys. Returns up to 200 records per call (50 by default) with a cursor for the next ones, and can wait up to 50 seconds for a record. Each record is cut off after 4,000 characters, and one call returns at most 40,000 characters of records. Chat input streams can't be read through the MCP server (open the run in the dashboard to see them), and runs on the first-generation stream store aren't supported. Only available on the [remote MCP server](https://trigger.dev/docs/mcp-remote).
+
+**Example usage:**
+
+- `"What did run run_abc123 stream?"`
+- `"Show the progress stream of that run"`
 
 ### wait\_for\_run\_to\_complete
 
@@ -129,6 +148,93 @@ Replay a run as a new run of the same task, in the same environment. The new run
 - `"Replay run run_abc123"`
 - `"Replay that failed run with userId set to user_456"`
 - `"Replay run run_abc123 on a large-1x machine in 10 minutes"`
+
+### search\_logs
+
+Search the logs of an environment, newest first, like the Logs page in the dashboard. Filter by text, level (`TRACE`, `DEBUG`, `INFO`, `WARN`, `ERROR`), task (up to 50), run, and time period (the last day by default, never past your plan's log retention). Pass either `period` or `from` and `to`, not both. Returns up to 100 logs per page. One call keeps searching older logs until the page is full, starts no new read after 10 seconds, and says which part of the time range it searched; when more logs may exist it returns a cursor for the rest. A cursor that does not match the filters is not used, and the reply says the search started again from the newest logs. Messages longer than 500 characters are cut off in the list. Only available on the [remote MCP server](https://trigger.dev/docs/mcp-remote), for organizations that have the Logs page.
+
+**Example usage:**
+
+- `"Show me error logs from the last hour"`
+- `"Search the logs for payment declined"`
+- `"What did run run_abc123 log?"`
+
+### get\_log
+
+Get one log entry in full, including its attributes, using a log ID from `search_logs`. The message and the attributes are each cut off after 4,000 characters. Only available on the [remote MCP server](https://trigger.dev/docs/mcp-remote), for organizations that have the Logs page.
+
+**Example usage:**
+
+- `"Show me the full details of that error log"`
+
+### reset\_run\_idempotency\_key
+
+Clear the idempotency key of a run, so the next trigger with the same key starts a new run instead of returning this one. A run without an idempotency key is refused without asking for approval. Only available on the [remote MCP server](https://trigger.dev/docs/mcp-remote), and you approve each call.
+
+**Example usage:**
+
+- `"Reset the idempotency key on run run_abc123 so I can trigger it again"`
+
+### update\_run\_metadata
+
+Update the metadata of a run that has not finished. Pass `metadata` to replace it all, or `operations` to change single keys (`set`, `delete`, `append`, `remove`, `increment`), applied in order. An `update` operation replaces all metadata with the object you pass. The approval page lists every operation in order with the new value it writes, so a change too large to show in full (about 64 KB) is refused; the API's own size limit applies too. A change that would leave the metadata as it is is refused without asking for approval. Only available on the [remote MCP server](https://trigger.dev/docs/mcp-remote), and you approve each call.
+
+**Example usage:**
+
+- `"Set progress to 50 in the metadata of run run_abc123"`
+
+### add\_run\_tags
+
+Add tags to a run. A run can have up to 10 tags of up to 128 characters each. The reply names the tags added, the tags skipped because the run already had them, and any duplicate or blank entries ignored; if the run already has every tag, the call is refused without asking for approval. Only available on the [remote MCP server](https://trigger.dev/docs/mcp-remote), and you approve each call.
+
+**Example usage:**
+
+- `"Tag run run_abc123 with needs-review"`
+
+### reschedule\_run
+
+Change when a delayed run starts, as a duration like `1h30m` or an ISO 8601 date. A duration is counted from when the approved call runs, not from when it was requested. Runs that are not delayed can't be rescheduled, and are refused without asking for approval. Only available on the [remote MCP server](https://trigger.dev/docs/mcp-remote), and you approve each call.
+
+**Example usage:**
+
+- `"Push run run_abc123 back by two hours"`
+
+## Bulk Action Tools
+
+A bulk action cancels or replays many runs at once, like the bulk actions in the dashboard. These tools are only available on the [remote MCP server](https://trigger.dev/docs/mcp-remote).
+
+### list\_bulk\_actions
+
+List the bulk actions of an environment, newest first, up to 100 per page with a cursor for older ones.
+
+**Example usage:**
+
+- `"Show me recent bulk actions"`
+
+### get\_bulk\_action
+
+Get one bulk action: its type, status, how many runs it selected, succeeded and failed, the filter or run IDs it selected, and when it was created and completed.
+
+**Example usage:**
+
+- `"How far along is bulk action bulk_abc123?"`
+
+### create\_bulk\_action
+
+Cancel or replay runs, selected by up to 500 run IDs or by a filter (status, task, version, tag, queue, machine, region, batch, schedule, bulk action, error, root runs only, and a time range). Root runs only can't be combined with batch or schedule, which always include child runs. A filter field with several values matches runs that have any of them, and every field you set must match. Without a time range, only runs created in the last 7 days are selected; pass `period`, or `from` and `to`, to reach older runs. The filter is checked again as each batch of runs is processed. Run IDs that are not in the environment, or that are older than 7 days, are skipped. You approve every bulk action, whatever its size: the approval page shows the action, the environment, every filter value and the time window or every run ID, and how many runs match now. The number may differ by the time the action starts, because runs change status and new runs are indexed. Replaying creates a new run for every selected run, and the new runs consume compute.
+
+**Example usage:**
+
+- `"Cancel the queued runs of my-task in prod from the last 7 days"`
+- `"Replay every run that failed in the last day"`
+
+### abort\_bulk\_action
+
+Stop a bulk action that is still in progress. No new batch of runs starts, but a batch already being processed may finish. Runs it already cancelled stay cancelled, and runs it already replayed keep running. A bulk action that has already finished, or that is not in the environment, is refused without asking for approval. You approve each call.
+
+**Example usage:**
+
+- `"Stop bulk action bulk_abc123"`
 
 ## Deployment Tools
 

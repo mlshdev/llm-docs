@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdk/overview.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/sdk/overview.mdx)
+> Pinned source for Runpod main: [sdk/overview.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/sdk/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/sdk/overview
 
 # Runpod Python SDK
@@ -63,7 +63,7 @@ Log in once to store your credentials:
 rp login
 ```
 
-This opens your browser to approve access. Credentials are saved to `~/.runpod/config.toml` and are shared by the SDK and the CLI. See [`rp login`](https://docs.runpod.io/sdk/cli#rp-login) for other options, including named profiles.
+This opens your browser to approve access. After you approve, copy the API key the console shows and paste it at the prompt in your terminal. Credentials are saved to `~/.runpod/config.toml` and are shared by the SDK and the CLI. See [`rp login`](https://docs.runpod.io/sdk/cli#rp-login) for other options, including named profiles.
 
 > **Tip**
 >

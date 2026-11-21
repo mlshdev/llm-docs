@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdk/quickstart.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/sdk/quickstart.mdx)
+> Pinned source for Runpod main: [sdk/quickstart.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/sdk/quickstart.mdx)
 > Canonical documentation: https://docs.runpod.io/sdk/quickstart
 
 # Get started with the Runpod SDK
@@ -43,7 +43,7 @@ rp login
 uv run rp login
 ```
 
-This opens your browser so you can approve access. Your credentials are saved to `~/.runpod/config.toml`, and both the SDK and the CLI use them from then on.
+This opens your browser so you can approve access. After you approve, copy the API key the console shows and paste it at the prompt in your terminal. Your credentials are saved to `~/.runpod/config.toml`, and both the SDK and the CLI use them from then on.
 
 > **Tip**
 >

@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `2260ee963520748b2e23054fcee3ac046f62deff`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `e4b64f14b14cea0c05ab6977e1843b891202d4b9`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -26,18 +26,18 @@
 
 ## Runpod SDK
 
-- [Runpod Python SDK](pages/sdk/overview.md): Use the runpod Python package to define GPU functions, deploy apps, call endpoints, build Serverless workers, and manage Runpod resources from one SDK. (13361 bytes)
-- [Get started with the Runpod SDK](pages/sdk/quickstart.md): Install the runpod Python package, log in with the rp CLI, and run your first function on a Runpod GPU in a few minutes, then deploy it as an endpoint. (4588 bytes)
-- [Resource parameters](pages/sdk/configuration/parameters.md): Reference for every resource parameter on @app.queue, @app.api, and @app.task in the Runpod SDK, including defaults and which decorators support each one. (10278 bytes)
+- [Runpod Python SDK](pages/sdk/overview.md): Use the runpod Python package to define GPU functions, deploy apps, call endpoints, build Serverless workers, and manage Runpod resources from one SDK. (13460 bytes)
+- [Get started with the Runpod SDK](pages/sdk/quickstart.md): Install the runpod Python package, log in with the rp CLI, and run your first function on a Runpod GPU in a few minutes, then deploy it as an endpoint. (4687 bytes)
+- [Resource parameters](pages/sdk/configuration/parameters.md): Reference for every resource parameter on @app.queue, @app.api, and @app.task in the Runpod SDK, including defaults and which decorators support each one. (11412 bytes)
 - [GPU types](pages/sdk/configuration/gpu-types.md): Choose GPUs for Runpod SDK resources with short names, GPU pools, or exact device types, and learn how the SDK matches each form to available hardware. (7135 bytes)
 - [CPU types](pages/sdk/configuration/cpu-types.md): Run Runpod SDK resources on CPU-only workers. Compare CPU instance types by vCPU and memory, and see which data centers stock each generation. (2836 bytes)
-- [Storage](pages/sdk/configuration/storage.md): Attach network volumes and global volumes to Runpod SDK resources with mounts, read volume paths in worker code, and avoid common storage mistakes. (4500 bytes)
+- [Storage](pages/sdk/configuration/storage.md): Attach network volumes and global volumes to Runpod SDK resources with mounts, read volume paths in worker code, and avoid common storage mistakes. (4750 bytes)
 - [Configuration best practices](pages/sdk/configuration/best-practices.md): Recommended Runpod SDK resource settings for production, development, and cost control, including worker counts, idle timeouts, and GPU selection. (4759 bytes)
 - [Build an app](pages/sdk/apps/build-app.md): Build a Runpod SDK app step by step: run a function on a GPU, add a load-balanced HTTP service, share data between tasks, and deploy it. (7947 bytes)
-- [Dev sessions](pages/sdk/apps/dev-sessions.md): Use rp flash dev to run a Runpod SDK app against temporary endpoints, stream worker logs, re-run on code changes, and clean up when you finish. (4509 bytes)
+- [Dev sessions](pages/sdk/apps/dev-sessions.md): Use rp flash dev to run a Runpod SDK app against temporary endpoints, stream worker logs, re-run on code changes, and clean up when you finish. (5423 bytes)
 - [Apps and environments](pages/sdk/apps/apps-and-environments.md): Learn how Runpod SDK apps and environments organize deployments, and manage them with the rp flash app and rp flash env commands. (3213 bytes)
-- [Deploy an app](pages/sdk/apps/deploy.md): Deploy a Runpod SDK app with rp flash deploy: what goes into the build, ignore rules, size limits, Python versions, and how to call deployed resources. (5614 bytes)
-- [rp CLI reference](pages/sdk/cli.md): Reference for the rp CLI that ships with the runpod Python package: log in, scaffold apps, run live dev sessions, deploy, and manage SSH keys and Pods. (8050 bytes)
+- [Deploy an app](pages/sdk/apps/deploy.md): Deploy a Runpod SDK app with rp flash deploy: what goes into the build, ignore rules, size limits, Python versions, and how to call deployed resources. (6852 bytes)
+- [rp CLI reference](pages/sdk/cli.md): Reference for the rp CLI that ships with the runpod Python package: log in, scaffold apps, run live dev sessions, deploy, and manage SSH keys and Pods. (9852 bytes)
 - [Runpod SDK runtime](pages/sdk/runtime.md): Learn what the runpod-sdk-runtime package does, where its source lives, and when you need to think about it separately from the runpod Python SDK. (2750 bytes)
 - [Migrate from Flash to the Runpod SDK](pages/sdk/migrate-from-flash.md): Move an existing Flash project to the unified Runpod SDK: install runpod, update CLI commands and code, check behavior changes, and test before redeploying. (19246 bytes)
 
@@ -74,7 +74,7 @@
 - [Quickstart](pages/serverless/quickstart.md): Write a handler function, build a worker image, create an endpoint, and send your first request. See Runpod Serverless setup and usage details. (6760 bytes)
 - [Install the Runpod Serverless SDK](pages/serverless/sdks.md): Install and configure the Serverless SDK for Python, JavaScript, or Go to interact with Serverless endpoints programmatically. (3177 bytes)
 - [Pricing](pages/serverless/pricing.md): Learn how Serverless billing works to optimize your costs. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (3565 bytes)
-- [Overview](pages/serverless/workers/handler-functions.md): Write custom handler functions to process incoming requests to your queue-based endpoints. See Runpod Serverless setup and usage details. (10913 bytes)
+- [Overview](pages/serverless/workers/handler-functions.md): Write custom handler functions to process incoming requests to your queue-based endpoints. See Runpod Serverless setup and usage details. (11409 bytes)
 - [Local testing](pages/serverless/development/local-testing.md): Test your Serverless handlers locally before deploying to production. Review configuration and operations guidance for Runpod Serverless. (5994 bytes)
 - [Validate inputs](pages/serverless/development/validation.md): Validate handler inputs using the Runpod SDK schema validator. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (3144 bytes)
 - [Clean up temporary files](pages/serverless/development/cleanup.md): Manage disk space by automatically removing temporary files. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (3042 bytes)
@@ -117,7 +117,7 @@
 - [Generate images with Serverless and SDXL](pages/tutorials/serverless/run-your-first.md): Learn how to deploy a Serverless endpoint running SDXL from the Runpod Hub and use it to generate images. (8206 bytes)
 - [Deploy ComfyUI on Serverless](pages/tutorials/serverless/comfyui.md): Learn how to deploy a Serverless endpoint running ComfyUI from the Runpod Hub and use it to generate images with FLUX Dev. (13714 bytes)
 - [Deploy Phi-3 using model caching](pages/tutorials/serverless/model-caching-text.md): Learn how to create a custom Serverless endpoint that uses model caching to serve Phi-3 with reduced cost and cold start times. (16189 bytes)
-- [Integrate Serverless with a web application](pages/tutorials/serverless/generate-sdxl-turbo.md): Deploy an image generation endpoint from the Hub and integrate it into a web application. Follow the implementation steps in this Runpod tutorial. (10973 bytes)
+- [Integrate Serverless with a web application](pages/tutorials/serverless/generate-sdxl-turbo.md): Deploy an image generation endpoint from the Hub and integrate it into a web application. Follow the implementation steps in this Runpod tutorial. (13107 bytes)
 - [Deploy a Gemma 3 chatbot with the OpenAI API](pages/tutorials/serverless/run-gemma-7b.md): Deploy a Serverless endpoint with Google's Gemma 3 model using vLLM and the OpenAI API to build an interactive chatbot. (8085 bytes)
 - [List Serverless Endpoints](pages/api-reference-v2/serverless/list-serverless-endpoints.md): List all Runpod Serverless endpoints owned by the authenticated user, including compute, worker, scaling, and deployment settings. (24286 bytes)
 - [Create A Serverless Endpoint](pages/api-reference-v2/serverless/create-a-serverless-endpoint.md): Create a Runpod Serverless endpoint with GPU or CPU compute, container or template settings, worker limits, and scaling policies. (39636 bytes)
@@ -313,16 +313,16 @@
 
 ## Runpod CLI
 
-- [Overview](pages/runpodctl/overview.md): Use Runpod CLI to manage Pods, Serverless endpoints, templates, and more from your local machine. Review commands and usage guidance for the Runpod CLI. (7377 bytes)
+- [Overview](pages/runpodctl/overview.md): Use Runpod CLI to manage Pods, Serverless endpoints, templates, and more from your local machine. Review commands and usage guidance for the Runpod CLI. (20234 bytes)
 - [doctor](pages/runpodctl/reference/runpodctl-doctor.md): Run runpodctl doctor to configure API and SSH credentials, verify the CLI setup, and diagnose common connection or configuration problems. (1580 bytes)
 - [pod](pages/runpodctl/reference/runpodctl-pod.md): Use runpodctl to create, list, start, stop, inspect, and delete Pods from the command line with status and resource filters. (16416 bytes)
-- [serverless](pages/runpodctl/reference/runpodctl-serverless.md): Use runpodctl to create, list, inspect, update, and delete Serverless endpoints, including Hub-based deployments and templates. (15447 bytes)
+- [serverless](pages/runpodctl/reference/runpodctl-serverless.md): Use runpodctl to create, list, inspect, update, and delete Serverless endpoints, including Hub-based deployments and templates. (16258 bytes)
 - [template](pages/runpodctl/reference/runpodctl-template.md): Use runpodctl to list, search, inspect, create, update, and delete reusable templates for Pods and Serverless endpoints. (6119 bytes)
 - [hub](pages/runpodctl/reference/runpodctl-hub.md): Browse and search Runpod Hub repos with runpodctl, inspect repository details, and use Hub IDs to deploy Serverless endpoints. (3350 bytes)
 - [model](pages/runpodctl/reference/runpodctl-model.md): Use runpodctl to add, list, and remove models in the Runpod model repository, including uploads from a local directory or Hugging Face. (4175 bytes)
 - [network-volume](pages/runpodctl/reference/runpodctl-network-volume.md): Use runpodctl to create, inspect, list, update, and remove persistent network volumes shared by Pods and Serverless endpoints. (4333 bytes)
 - [registry](pages/runpodctl/reference/runpodctl-registry.md): Use runpodctl to list, inspect, create, update, and remove credentials for private container registries used by Runpod workloads. (3121 bytes)
-- [gpu](pages/runpodctl/reference/runpodctl-gpu.md): Use runpodctl to list available GPU types, include unavailable options, and review hardware specifications from the command line. (1590 bytes)
+- [gpu](pages/runpodctl/reference/runpodctl-gpu.md): Use runpodctl to list available GPU types, include unavailable options, and review hardware specifications from the command line. (3438 bytes)
 - [datacenter](pages/runpodctl/reference/runpodctl-datacenter.md): Use runpodctl to list Runpod data centers, review their locations, and inspect current GPU availability from the command line. (1898 bytes)
 - [billing](pages/runpodctl/reference/runpodctl-billing.md): Use runpodctl to retrieve billing history for Pods, Serverless endpoints, and network volumes across configurable time ranges. (2496 bytes)
 - [user](pages/runpodctl/reference/runpodctl-user.md): Use runpodctl to view your Runpod account email, credit balance, hourly spend, spending limit, and notification settings. (942 bytes)

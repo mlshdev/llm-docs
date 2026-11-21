@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/load-balancing/build-a-worker.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/serverless/load-balancing/build-a-worker.mdx)
+> Pinned source for Runpod main: [serverless/load-balancing/build-a-worker.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/serverless/load-balancing/build-a-worker.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/load-balancing/build-a-worker
 
 # Build a load balancing worker

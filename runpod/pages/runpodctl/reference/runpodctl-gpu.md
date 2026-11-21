@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [runpodctl/reference/runpodctl-gpu.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/runpodctl/reference/runpodctl-gpu.mdx)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-gpu.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/runpodctl/reference/runpodctl-gpu.mdx)
 > Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-gpu
 
 # gpu
@@ -35,28 +35,65 @@ Include GPUs that are currently unavailable.
 
 ## Example output
 
+GPU entries report on-demand pricing and, where the catalog provides them, per-data-center stock statuses and an overall `stockStatus`:
+
 ```json
 [
   {
     "available": true,
     "communityCloud": true,
+    "communityPricePerHr": 0.34,
+    "dataCenterAvailability": [
+      { "dataCenterId": "US-CA-2", "stockStatus": "High" },
+      { "dataCenterId": "EU-RO-1", "stockStatus": "Low" },
+      { "dataCenterId": "US-KS-2", "stockStatus": "none" }
+    ],
     "displayName": "RTX 4090",
     "gpuId": "NVIDIA GeForce RTX 4090",
     "memoryInGb": 24,
     "secureCloud": true,
+    "securePricePerHr": 0.44,
     "stockStatus": "High"
   },
   {
     "available": true,
-    "communityCloud": true,
+    "communityCloud": false,
+    "communityPricePerHr": null,
+    "dataCenterAvailability": [
+      { "dataCenterId": "US-CA-2", "stockStatus": "High" },
+      { "dataCenterId": "EU-RO-1", "stockStatus": "Medium" }
+    ],
     "displayName": "A100 PCIe",
     "gpuId": "NVIDIA A100 80GB PCIe",
     "memoryInGb": 80,
     "secureCloud": true,
+    "securePricePerHr": 1.39,
     "stockStatus": "High"
   }
 ]
 ```
+
+### Output fields
+
+**securePricePerHr (type: number | null)**
+
+On-demand price per hour in USD on Secure Cloud. Explicitly `null` when the GPU is not offered on Secure Cloud (distinguishable from a real `0`).
+
+**communityPricePerHr (type: number | null)**
+
+On-demand price per hour in USD on Community Cloud. Explicitly `null` when the GPU is not offered on Community Cloud.
+
+**stockStatus (type: string)**
+
+Best availability from the catalog's overall status and its per-data-center entries. Typical values are `High`, `Medium`, and `Low`; the field is omitted when no stock is reported. The overall catalog status can reflect Community Cloud stock that has no data-center entry.
+
+**dataCenterAvailability (type: array)**
+
+Per-data-center availability breakdown. Every data center that offers the GPU is listed; a data center with no reported stock is included with `stockStatus: "none"` so you can tell "offered here, out of stock" apart from "not offered here." The field is omitted when the catalog returns no data-center entries.
+
+**available (type: bool)**
+
+`true` when `stockStatus` reports stock. Derived from the best overall status, including Community Cloud stock that has no data-center entry.
 
 ## Using GPU IDs
 

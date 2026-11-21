@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/95411863b480fdee7623141821b1de83e719566c/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/21c81303cb7c6c407dac1a8c03991ab273f1fe13/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -19133,7 +19133,11 @@ Default value is 0.
 Values for `hi` and `lo` are for 8x8 pixel blocks and
 represent actual pixel value differences, so a threshold of 64
 corresponds to 1 unit of difference for each pixel, or the same spread
-out differently over the block.
+out differently over the block. They are expressed for 8-bit samples
+and are scaled by 2^(depth-8) for higher bit depth formats. For otherwise
+identical input, this preserves keep/drop decisions when the high bit
+depth samples are the corresponding 8-bit samples shifted left by
+depth-8.
 
 A frame is a candidate for dropping if no 8x8 blocks differ by more
 than a threshold of `hi`, and if no more than `frac` blocks (1

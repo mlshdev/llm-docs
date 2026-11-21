@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.7: [docs/guides/python/python-pdf-form-extractor.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/guides/python/python-pdf-form-extractor.mdx)
+> Pinned source for Trigger.dev v4.8.8: [docs/guides/python/python-pdf-form-extractor.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/guides/python/python-pdf-form-extractor.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/python/python-pdf-form-extractor
 
 # Python PDF form extractor example

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/seedance-2-5-i2v.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/public-endpoints/models/seedance-2-5-i2v.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/seedance-2-5-i2v.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/public-endpoints/models/seedance-2-5-i2v.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/seedance-2-5-i2v
 
 # Seedance 2.5 Image-to-Video

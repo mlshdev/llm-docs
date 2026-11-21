@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdk/apps/dev-sessions.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/sdk/apps/dev-sessions.mdx)
+> Pinned source for Runpod main: [sdk/apps/dev-sessions.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/sdk/apps/dev-sessions.mdx)
 > Canonical documentation: https://docs.runpod.io/sdk/apps/dev-sessions
 
 # Dev sessions
@@ -38,7 +38,7 @@ The command exits with an error if the entrypoint fails, so you can use it as a 
 
 ## Python version
 
-In a dev session, and for every task call, the SDK sends your function to the worker as a serialized payload produced by your local Python. The worker must run the same Python version, so your local interpreter must be one of the supported versions: 3.10, 3.11, 3.12, 3.13, or 3.14. An unsupported version fails with an error before anything is provisioned.
+In a dev session, and for task calls from your machine, the SDK sends your function's source code to the worker. The worker runs the same Python version as your machine so that syntax and language behavior match. Your local interpreter must be one of the supported versions: 3.10, 3.11, 3.12, 3.13, or 3.14. An unsupported version fails with an error before anything is provisioned.
 
 ## Write code that works in a session
 
@@ -60,6 +60,17 @@ Inside an entrypoint, call your resources in whichever way suits the work:
 | `fn.local(...)`            | Runs the function body on your machine.               |
 
 `remote()` and `job.wait()` don't impose an execution timeout by default.
+
+### Arguments and return values
+
+Remote calls send arguments, return values, and stream chunks as JSON. Use JSON-compatible values: strings, numbers, booleans, `None`, lists, and dictionaries. The SDK converts values the way Python's `json` module does, including when a function calls another function on the same worker:
+
+- Tuples arrive as lists.
+- Dictionary keys that are numbers, booleans, or `None` arrive as strings.
+
+Bytes, custom objects such as NumPy arrays or tensors, circular references, and `NaN` or infinite floats make the call fail with an error. Convert them before you pass or return them, for example with `tensor.tolist()`. For large binary data, such as model weights or images, write the data to a [volume](https://docs.runpod.io/sdk/configuration/storage) and return its path.
+
+`fn.local(...)` is a direct Python call, so it accepts and returns any Python value.
 
 ### Spawned tasks
 

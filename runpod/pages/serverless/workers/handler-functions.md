@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/workers/handler-functions.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/serverless/workers/handler-functions.mdx)
+> Pinned source for Runpod main: [serverless/workers/handler-functions.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/serverless/workers/handler-functions.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/workers/handler-functions
 
 # Overview
@@ -197,6 +197,10 @@ runpod.serverless.start({"handler": handler})
 ```
 
 Exercise caution when using `try/except` blocks to avoid unintentionally suppressing errors. Either return the error for a graceful failure or raise it to flag the job as `FAILED`.
+
+### Results that aren't valid JSON
+
+Job results travel as JSON. Your handler's return value, and each chunk a streaming handler yields, must be JSON-serializable with finite numbers. If a result contains a value such as bytes, a NumPy array, or `NaN`, the job fails. The SDK marks it as `FAILED` and returns the serialization error in the job results. Convert these values before you return them, for example with `array.tolist()`. Upload binary data to cloud storage and return a link instead.
 
 ## Advanced handler controls
 

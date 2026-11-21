@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.7: [docs/cli-promote-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/cli-promote-commands.mdx)
+> Pinned source for Trigger.dev v4.8.8: [docs/cli-promote-commands.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/cli-promote-commands.mdx)
 > Canonical documentation: https://trigger.dev/docs/cli-promote-commands
 
 # CLI promote command

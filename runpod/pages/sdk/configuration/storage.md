@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdk/configuration/storage.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/sdk/configuration/storage.mdx)
+> Pinned source for Runpod main: [sdk/configuration/storage.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/sdk/configuration/storage.mdx)
 > Canonical documentation: https://docs.runpod.io/sdk/configuration/storage
 
 # Storage
@@ -58,6 +58,8 @@ runpod.GlobalVolume(name_or_id, create=True)
 | --------------------------- | ---------------------------------------- | ---------------------------- |
 | `@app.queue` and `@app.api` | One volume                               | `/runpod-volume`             |
 | `@app.task`                 | One network volume and one global volume | Any paths that don't overlap |
+
+When you deploy an app, a task's mount paths also can't overlap paths that the runtime reserves: `/root/.runpod`, `/runpod-volume`, `/proc`, `/sys`, and `/dev`. A mount path overlaps when it equals a reserved path, contains one, or sits inside one.
 
 Global volumes require GPU compute for both tasks and endpoints.
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdk/apps/deploy.mdx](https://github.com/runpod/docs/blob/2260ee963520748b2e23054fcee3ac046f62deff/sdk/apps/deploy.mdx)
+> Pinned source for Runpod main: [sdk/apps/deploy.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/sdk/apps/deploy.mdx)
 > Canonical documentation: https://docs.runpod.io/sdk/apps/deploy
 
 # Deploy an app
@@ -11,7 +11,7 @@ When your app works in a [dev session](https://docs.runpod.io/sdk/apps/dev-sessi
 rp flash deploy
 ```
 
-The command finds every app in the current directory, builds an artifact for each one, uploads it, and creates or updates the endpoints in the target environment. When it finishes, it prints a link to each endpoint.
+The command finds every app in the current directory, builds an artifact for each one, uploads it, and creates or updates the endpoints in the target environment. When it finishes, it lists every resource in the app. Queue and API resources show a link to their endpoint. Tasks show as registered, because each task call provisions its own Pod.
 
 To deploy a different directory, pass it as an argument: `rp flash deploy path/to/project`.
 
@@ -65,7 +65,7 @@ These paths are left out of every artifact, and negation patterns can't re-inclu
 
 ## Call deployed resources
 
-From another codebase, use `runpod.Queue` and `runpod.Api` to call resources in a deployed app by name:
+From another codebase, use `runpod.Queue`, `runpod.Api`, and `runpod.Task` to call resources in a deployed app by name:
 
 ```python
 import runpod
@@ -75,9 +75,20 @@ result = transcribe.remote(audio_url="https://example.com/audio.mp3")
 
 inference = runpod.Api(app="media", name="inference")
 response = inference.post("/generate", {"prompt": "hi"})
+
+train = runpod.Task(app="media", name="train")
+job = train.spawn(steps=500)  # Use train.remote(...) to wait for the result
 ```
 
-Both target the `default` environment unless you pass `env=`.
+Each stub targets the `default` environment unless you pass `env=`. Arguments and results must be JSON-compatible. See [Arguments and return values](https://docs.runpod.io/sdk/apps/dev-sessions#arguments-and-return-values).
+
+From your machine, these calls use your account credentials from `rp login` or `RUNPOD_API_KEY`, so they can reach any app that your API key has permission to call.
+
+### Calls from deployed workers
+
+Deployed workers don't receive your API key. Runpod issues each endpoint and task Pod its own runtime credentials, and the SDK uses them for calls the worker makes to other resources. With these credentials, a deployed worker can call only resources in its own app and environment. This applies to `.remote()` calls on your resources and to `runpod.Queue`, `runpod.Api`, and `runpod.Task` stubs. A call to another app or environment fails.
+
+Because Runpod sets these credentials, your resources can't use some environment variable names. See [env](https://docs.runpod.io/sdk/configuration/parameters#env).
 
 You can also call a deployed queue endpoint by ID with the [endpoint client](https://docs.runpod.io/sdk/overview#endpoint-client), or send HTTP requests to it directly. See [Send API requests](https://docs.runpod.io/serverless/endpoints/send-requests).
 

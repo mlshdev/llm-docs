@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.7: [docs/webhooks/how-it-works.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/webhooks/how-it-works.mdx)
+> Pinned source for Trigger.dev v4.8.8: [docs/webhooks/how-it-works.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/webhooks/how-it-works.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/how-it-works
 
 # How webhooks work

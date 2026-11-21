@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.7: [docs/realtime/react-hooks/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/fae01445473658369323ddc462b71eae51c790ff/docs/realtime/react-hooks/overview.mdx)
+> Pinned source for Trigger.dev v4.8.8: [docs/realtime/react-hooks/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/realtime/react-hooks/overview.mdx)
 > Canonical documentation: https://trigger.dev/docs/realtime/react-hooks/overview
 
 # React hooks for real-time task updates

@@ -1,8 +1,8 @@
-# Trigger.dev v4.8.7
+# Trigger.dev v4.8.8
 
-> Documentation generated from the latest stable release of [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) and pinned to immutable source commit `fae01445473658369323ddc462b71eae51c790ff`.
+> Documentation generated from the latest stable release of [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) and pinned to immutable source commit `c4443e2b07a3cf993b76979ef323ae21556553c2`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Trigger.dev v4.8.7.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Trigger.dev v4.8.8.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow the navigation declared in docs/docs.json at the immutable release tag; snippets are inlined into the pages that import them rather than published separately.
 - API reference pages are rendered from the OpenAPI specification the page names in its `openapi` frontmatter, since the upstream page carries no prose of its own.
@@ -27,7 +27,7 @@
 - [Triggering](pages/triggering.md): Tasks need to be triggered in order to run. (48170 bytes)
 - [Runs](pages/runs.md): Understanding the lifecycle of task run execution in Trigger.dev (13997 bytes)
 - [Using runs.list() efficiently](pages/runs/list-best-practices.md): When to use runs.list(), the patterns to avoid, and what to use instead. (11087 bytes)
-- [API keys](pages/apikeys.md): Authenticate backend requests with environment-specific API keys. (13188 bytes)
+- [API keys](pages/apikeys.md): Authenticate backend requests with environment-specific API keys. (13289 bytes)
 - [Custom API key access](pages/apikeys/custom-access.md): Build an API key's access from presets and per-area levels, limit it to selected tasks, and save the result as a preset your organization can reuse. (12914 bytes)
 - [OpenID Connect (OIDC)](pages/oidc.md): Use workload identity to access external services from your tasks without storing long-lived credentials. (5508 bytes)
 - [Connect to AWS](pages/oidc/aws.md): Assume an IAM role from your tasks without storing AWS access keys. (8927 bytes)
@@ -47,8 +47,8 @@
 
 - [Building with AI: overview](pages/building-with-ai.md): Tools and resources for building Trigger.dev projects with AI coding assistants. (8772 bytes)
 - [MCP Introduction](pages/mcp-introduction.md): Learn how to install and configure the Trigger.dev MCP Server (9341 bytes)
-- [Remote MCP server](pages/mcp-remote.md): Connect AI assistants to your Trigger.dev projects over HTTP with OAuth, with no local install. (5096 bytes)
-- [MCP Tools](pages/mcp-tools.md): Learn about how to use the tools available in the Trigger.dev MCP Server (15663 bytes)
+- [Remote MCP server](pages/mcp-remote.md): Connect AI assistants to your Trigger.dev projects over HTTP with OAuth, with no local install. (5683 bytes)
+- [MCP Tools](pages/mcp-tools.md): Learn about how to use the tools available in the Trigger.dev MCP Server (23251 bytes)
 - [Skills](pages/skills.md): Install Trigger.dev agent skills to teach any AI coding assistant how to write tasks, realtime frontends, and chat.agent AI agents. (5645 bytes)
 - [Agent rules](pages/mcp-agent-rules.md): Trigger.dev agent rules are now agent skills, installed with the trigger.dev CLI. (1807 bytes)
 
