@@ -89,7 +89,7 @@
       "branch": "master",
       "sourceCommit": "21c81303cb7c6c407dac1a8c03991ab273f1fe13",
       "sourceCommittedAt": "2026-11-11T06:08:57Z",
-      "observedCommit": "21c81303cb7c6c407dac1a8c03991ab273f1fe13",
+      "observedCommit": "8f3cccbca4a5f1f81ab7b990ce1acc4cb7b91abc",
       "documentationDigest": "1497b6ddf6f22ef7c4d5f247a2c8035e1277674e5a07cee2e15e9d3eac5416c3"
     },
     "yt-dlp": {
@@ -103,7 +103,7 @@
       "branch": "master",
       "sourceCommit": "de722ab1bc957fd2e648bc2404b9155db69c617f",
       "sourceCommittedAt": "2026-11-10T19:05:53Z",
-      "observedCommit": "cd6d28091c7c7bcaf13190e7b76da0661dabdb5a",
+      "observedCommit": "c6ee3e9fd0235004a694e63720efc869bb1e3594",
       "documentationDigest": "fadf4da8a949da4ad04cc1aadb2569b220025b22b61331ea2784ba649c737f20"
     },
     "bun": {
