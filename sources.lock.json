@@ -89,7 +89,7 @@
       "branch": "master",
       "sourceCommit": "21c81303cb7c6c407dac1a8c03991ab273f1fe13",
       "sourceCommittedAt": "2026-11-11T06:08:57Z",
-      "observedCommit": "8f3cccbca4a5f1f81ab7b990ce1acc4cb7b91abc",
+      "observedCommit": "dd86debdbcec9ec057304c845859771bd6a10c8c",
       "documentationDigest": "1497b6ddf6f22ef7c4d5f247a2c8035e1277674e5a07cee2e15e9d3eac5416c3"
     },
     "yt-dlp": {
