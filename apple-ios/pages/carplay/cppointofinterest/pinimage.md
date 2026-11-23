@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppointofinterest/pinimage
 
 # pinImage (Swift)
@@ -25,7 +25,7 @@ CarPlay doesn’t support animated images. If you provide an animated image, Car
 
 ## See Also
 
-### Managing the Map Annotation
+### Managing the map annotation
 
 - [location](location.md): The map item that contains the point of interest’s geographical information.
 
@@ -53,6 +53,6 @@ CarPlay doesn’t support animated images. If you provide an animated image, Car
 
 ## See Also
 
-### Managing the Map Annotation
+### Managing the map annotation
 
 - [location](location.md): The map item that contains the point of interest’s geographical information.

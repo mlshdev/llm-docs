@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppanelitem/isenabled
 
 # isEnabled (Swift)
@@ -21,6 +21,12 @@ var isEnabled: Bool { get set }
 
 When the value of this property is `true`, the item is enabled and supports interactions. Set the value to `false` to disable interactions. The default value of this property is `true`.
 
+## See Also
+
+### Configuring the panel’s behavior
+
+- [showsBottomSeparator](showsbottomseparator.md): A Boolean value that indicates whether a separator line appears at the bottom edge of the item.
+
 # enabled (Objective-C)
 
 **Framework:** CarPlay  
@@ -40,3 +46,9 @@ A Boolean value that indicates whether the item supports interactions.
 ## Discussion
 
 When the value of this property is `true`, the item is enabled and supports interactions. Set the value to `false` to disable interactions. The default value of this property is `true`.
+
+## See Also
+
+### Configuring the panel’s behavior
+
+- [showsBottomSeparator](showsbottomseparator.md): A Boolean value that indicates whether a separator line appears at the bottom edge of the item.

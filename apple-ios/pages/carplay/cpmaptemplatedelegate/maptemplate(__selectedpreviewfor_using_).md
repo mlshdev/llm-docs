@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplatedelegate/maptemplate(_:selectedpreviewfor:using:)
 
 # mapTemplate(\_:selectedPreviewFor:using:) (Swift)
@@ -23,7 +23,7 @@ optional func mapTemplate(_ mapTemplate: CPMapTemplate, selectedPreviewFor trip:
 
 ## See Also
 
-### Handling Navigation Events
+### Responding to navigation events
 
 - [mapTemplate(\_:startedTrip:using:)](maptemplate%28__startedtrip_using_%29.md): Tells the delegate that the user selected a trip and route choice to navigate.
 - [mapTemplateDidCancelNavigation(\_:)](maptemplatedidcancelnavigation%28__%29.md): Tells the delegate that the system canceled the navigation.
@@ -51,7 +51,7 @@ Tells the delegate that the user selected a trip and route choice to preview.
 
 ## See Also
 
-### Handling Navigation Events
+### Responding to navigation events
 
 - [mapTemplate:startedTrip:usingRouteChoice:](maptemplate%28__startedtrip_using_%29.md): Tells the delegate that the user selected a trip and route choice to navigate.
 - [mapTemplateDidCancelNavigation:](maptemplatedidcancelnavigation%28__%29.md): Tells the delegate that the system canceled the navigation.

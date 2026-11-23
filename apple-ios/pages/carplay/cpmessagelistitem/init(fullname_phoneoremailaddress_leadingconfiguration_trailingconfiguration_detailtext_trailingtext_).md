@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessagelistitem/init(fullname:phoneoremailaddress:leadingconfiguration:trailingconfiguration:detailtext:trailingtext:)
 
 # init(fullName:phoneOrEmailAddress:leadingConfiguration:trailingConfiguration:detailText:trailingText:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Initializer  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Creates a list item that represents a contact.
+Creates a message list item with the identifier for one of your app’s conversations.
 
 ## Declaration
 
@@ -17,18 +17,30 @@ init(fullName: String, phoneOrEmailAddress: String, leadingConfiguration: CPMess
 
 ## Parameters
 
-- `fullName`: The contact’s full name. The list item displays this value as its primary content. Siri speaks this when the user selects the list item.
-- `phoneOrEmailAddress`: The phone number or email address that Siri uses when launching the compose message flow.
-- `leadingConfiguration`: The configuration that describes the visual elements of the list item’s leading region.
-- `trailingConfiguration`: The configuration that describes the visual elements of the list item’s trailing region.
-- `detailText`: The list item’s secondary text.
-- `trailingText`: Supplementary text that the list item’s trailing region displays.
+- `fullName`: The full name of the contact. CarPlay displays this text prominently in the row. When someone selects the row, Siri speaks this name as part of the workflow for composing a message.
+- `phoneOrEmailAddress`: The contact’s phone or email address. Siri composes a message that targets the value you provide. CarPlay doesn’t display this text in the row.
+- `leadingConfiguration`: Configuration options for the leading edge of the row.
+- `trailingConfiguration`: Configuration options for the trailing edge of the row.
+- `detailText`: Additional text to display below the main text string. Specify `nil` to omit this string from the row.
+- `trailingText`: Additional text to display at the trailing edge of the row. Specify `nil` to omit this string from the row.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized message list item to add to your list content.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this initializer to create a row that represents a conversation with one or more people.
 
 ## See Also
 
-### Creating a Message List Item
+### Creating a message list item
 
-- [init(conversationIdentifier:text:leadingConfiguration:trailingConfiguration:detailText:trailingText:)](init%28conversationidentifier_text_leadingconfiguration_trailingconfiguration_detailtext_trailingtext_%29.md): Creates a list item that represents an existing conversation.
+- [init(conversationIdentifier:text:leadingConfiguration:trailingConfiguration:detailText:trailingText:)](init%28conversationidentifier_text_leadingconfiguration_trailingconfiguration_detailtext_trailingtext_%29.md): Creates a message list item with the identifier for one of your app’s conversations.
 
 # initWithFullName:phoneOrEmailAddress:leadingConfiguration:trailingConfiguration:detailText:trailingText: (Objective-C)
 
@@ -36,7 +48,7 @@ init(fullName: String, phoneOrEmailAddress: String, leadingConfiguration: CPMess
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Creates a list item that represents a contact.
+Creates a message list item with the identifier for one of your app’s conversations.
 
 ## Declaration
 
@@ -46,15 +58,27 @@ Creates a list item that represents a contact.
 
 ## Parameters
 
-- `fullName`: The contact’s full name. The list item displays this value as its primary content. Siri speaks this when the user selects the list item.
-- `phoneOrEmailAddress`: The phone number or email address that Siri uses when launching the compose message flow.
-- `leadingConfiguration`: The configuration that describes the visual elements of the list item’s leading region.
-- `trailingConfiguration`: The configuration that describes the visual elements of the list item’s trailing region.
-- `detailText`: The list item’s secondary text.
-- `trailingText`: Supplementary text that the list item’s trailing region displays.
+- `fullName`: The full name of the contact. CarPlay displays this text prominently in the row. When someone selects the row, Siri speaks this name as part of the workflow for composing a message.
+- `phoneOrEmailAddress`: The contact’s phone or email address. Siri composes a message that targets the value you provide. CarPlay doesn’t display this text in the row.
+- `leadingConfiguration`: Configuration options for the leading edge of the row.
+- `trailingConfiguration`: Configuration options for the trailing edge of the row.
+- `detailText`: Additional text to display below the main text string. Specify `nil` to omit this string from the row.
+- `trailingText`: Additional text to display at the trailing edge of the row. Specify `nil` to omit this string from the row.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized message list item to add to your list content.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this initializer to create a row that represents a conversation with one or more people.
 
 ## See Also
 
-### Creating a Message List Item
+### Creating a message list item
 
-- [initWithConversationIdentifier:text:leadingConfiguration:trailingConfiguration:detailText:trailingText:](init%28conversationidentifier_text_leadingconfiguration_trailingconfiguration_detailtext_trailingtext_%29.md): Creates a list item that represents an existing conversation.
+- [initWithConversationIdentifier:text:leadingConfiguration:trailingConfiguration:detailText:trailingText:](init%28conversationidentifier_text_leadingconfiguration_trailingconfiguration_detailtext_trailingtext_%29.md): Creates a message list item with the identifier for one of your app’s conversations.

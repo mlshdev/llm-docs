@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppointofinterest/summary
 
 # summary (Swift)
@@ -17,7 +17,7 @@ var summary: String? { get set }
 
 ## See Also
 
-### Managing the Picker Item’s Data
+### Managing the picker item
 
 - [title](title.md): The title that the picker’s item displays.
 - [subtitle](subtitle.md): The subtitle that the picker’s item displays.
@@ -38,7 +38,7 @@ The summary that the picker’s item displays.
 
 ## See Also
 
-### Managing the Picker Item’s Data
+### Managing the picker item
 
 - [title](title.md): The title that the picker’s item displays.
 - [subtitle](subtitle.md): The subtitle that the picker’s item displays.

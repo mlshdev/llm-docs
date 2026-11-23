@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinterfacecontroller/pop(to:animated:)
 
 # pop(to:animated:) (Swift)
@@ -7,9 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ (deprecated in 14.0) · iPadOS 12.0+ (deprecated in 14.0) · Mac Catalyst 13.1+ (deprecated in 14.0)
 
-Pops templates until the specified template is at the top of the navigation stack.
-
-> Use [pop(to:animated:completion:)](pop%28to_animated_completion_%29.md) instead.
+Pop back to a specified template.
 
 ## Declaration
 
@@ -17,21 +15,22 @@ Pops templates until the specified template is at the top of the navigation stac
 func pop(to targetTemplate: CPTemplate, animated: Bool)
 ```
 
-## Parameters
+<a id="discussion"></a>
 
-- `targetTemplate`: The template that you want at the top of the stack. The template must be on the navigation stack before you call this method.
-- `animated`: A Boolean value that indicates whether the system animates the display of transitioning templates. Set to [true](https://developer.apple.com/documentation/swift/true) to animate the transition.
+## Discussion
+
+targetTemplate must exist in the current template navigation hierarchy.
 
 ## See Also
 
-### Deprecated Methods
+### Deprecated
 
-- [setRootTemplate(\_:animated:)](setroottemplate%28__animated_%29.md): Deprecated. Sets the root template, starting a new stack for the template navigation hierarchy.
-- [pushTemplate(\_:animated:)](pushtemplate%28__animated_%29.md): Deprecated. Pushes a template onto the navigation stack and updates the CarPlay display.
-- [popTemplate(animated:)](poptemplate%28animated_%29.md): Deprecated. Pops the top template from the navigation stack and updates the CarPlay display.
-- [popToRootTemplate(animated:)](poptoroottemplate%28animated_%29.md): Deprecated. Pops all templates on the stack—except the root template—and updates the CarPlay display.
-- [presentTemplate(\_:animated:)](presenttemplate%28__animated_%29.md): Deprecated. Presents a template modally.
-- [dismissTemplate(animated:)](dismisstemplate%28animated_%29.md): Deprecated. Dismisses the template that the interface controller is displaying modally.
+- [dismissTemplate(animated:)](dismisstemplate%28animated_%29.md): Deprecated. Dismiss the current modally-presented template, optionally animating the dismissal.
+- [popTemplate(animated:)](poptemplate%28animated_%29.md): Deprecated. Pop back a single level in the template navigation hierarchy.
+- [popToRootTemplate(animated:)](poptoroottemplate%28animated_%29.md): Deprecated. Pop back to the first template in the template navigation hierarchy.
+- [presentTemplate(\_:animated:)](presenttemplate%28__animated_%29.md): Deprecated. Present a template modally over the navigation hierarchy. Only one template may be presented at a time.
+- [pushTemplate(\_:animated:)](pushtemplate%28__animated_%29.md): Deprecated. Push a new template onto the template navigation hierarchy, showing it immediately.
+- [setRootTemplate(\_:animated:)](setroottemplate%28__animated_%29.md): Deprecated. Set the root template. If no existing templates exist in the template navigation hierarchy, the animated flag will be ignored. If there is an existing template navigation hierarchy, the existing stack will be replaced by the new root template.
 
 # popToTemplate:animated: (Objective-C)
 
@@ -39,9 +38,7 @@ func pop(to targetTemplate: CPTemplate, animated: Bool)
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ (deprecated in 14.0) · iPadOS 12.0+ (deprecated in 14.0) · Mac Catalyst 13.1+ (deprecated in 14.0)
 
-Pops templates until the specified template is at the top of the navigation stack.
-
-> Use [popToTemplate:animated:completion:](pop%28to_animated_completion_%29.md) instead.
+Pop back to a specified template.
 
 ## Declaration
 
@@ -49,18 +46,19 @@ Pops templates until the specified template is at the top of the navigation stac
 - (void) popToTemplate:(CPTemplate *) targetTemplate animated:(BOOL) animated;
 ```
 
-## Parameters
+<a id="discussion"></a>
 
-- `targetTemplate`: The template that you want at the top of the stack. The template must be on the navigation stack before you call this method.
-- `animated`: A Boolean value that indicates whether the system animates the display of transitioning templates. Set to [true](https://developer.apple.com/documentation/swift/true) to animate the transition.
+## Discussion
+
+targetTemplate must exist in the current template navigation hierarchy.
 
 ## See Also
 
-### Deprecated Methods
+### Deprecated
 
-- [setRootTemplate:animated:](setroottemplate%28__animated_%29.md): Deprecated. Sets the root template, starting a new stack for the template navigation hierarchy.
-- [pushTemplate:animated:](pushtemplate%28__animated_%29.md): Deprecated. Pushes a template onto the navigation stack and updates the CarPlay display.
-- [popTemplateAnimated:](poptemplate%28animated_%29.md): Deprecated. Pops the top template from the navigation stack and updates the CarPlay display.
-- [popToRootTemplateAnimated:](poptoroottemplate%28animated_%29.md): Deprecated. Pops all templates on the stack—except the root template—and updates the CarPlay display.
-- [presentTemplate:animated:](presenttemplate%28__animated_%29.md): Deprecated. Presents a template modally.
-- [dismissTemplateAnimated:](dismisstemplate%28animated_%29.md): Deprecated. Dismisses the template that the interface controller is displaying modally.
+- [dismissTemplateAnimated:](dismisstemplate%28animated_%29.md): Deprecated. Dismiss the current modally-presented template, optionally animating the dismissal.
+- [popTemplateAnimated:](poptemplate%28animated_%29.md): Deprecated. Pop back a single level in the template navigation hierarchy.
+- [popToRootTemplateAnimated:](poptoroottemplate%28animated_%29.md): Deprecated. Pop back to the first template in the template navigation hierarchy.
+- [presentTemplate:animated:](presenttemplate%28__animated_%29.md): Deprecated. Present a template modally over the navigation hierarchy. Only one template may be presented at a time.
+- [pushTemplate:animated:](pushtemplate%28__animated_%29.md): Deprecated. Push a new template onto the template navigation hierarchy, showing it immediately.
+- [setRootTemplate:animated:](setroottemplate%28__animated_%29.md): Deprecated. Set the root template. If no existing templates exist in the template navigation hierarchy, the animated flag will be ignored. If there is an existing template navigation hierarchy, the existing stack will be replaced by the new root template.

@@ -1,9 +1,9 @@
-# Apple Xcode and developer tools snapshot-ee1c8cbf0f44: full documentation
+# Apple Xcode and developer tools snapshot-6bb1532b03d3: full documentation
 
 Source: https://developer.apple.com/documentation/xcode
-Catalog snapshot: ee1c8cbf0f444324b8d8344f5a1156f029d70a64656a2e18bbd463d6cdfb4480
-Content digest: a185e0d809e86cca76a9e737941229540ade97b52993d4252ec7703050b67f2f
-Captured at: 2026-11-08T22:37:20.676Z
+Catalog snapshot: 6bb1532b03d3926068d90735187eda38862dcecfa0cfd2ccaae82490796174b1
+Content digest: ee20a4b01464caa985a09dd39085ff55a15f80d183a423cb1eff4c3be184c721
+Captured at: 2026-11-22T23:58:10.597Z
 Volume 2
 
 # Document: Creating a standalone Swift package with Xcode
@@ -2480,7 +2480,7 @@ When you use theme presets, the light appearance has a subtle look while the dar
 
 ## Select themes from presets
 
-On the Theme pane of Appearance settings, click Choose in the Theme row, and choose a custom or preset theme from the popover that appears. The preview updates to show your changes. Changes you make to themes also appear immediately in open Xcode windows. All types of editors and even live issues use the themes that you configure in the Theme pane.
+On the Theme pane of Appearance settings, click Choose in the Theme row, and choose a custom or preset theme from the popover that appears. The preview updates to show your changes. Changes you make to themes also appear immediately in open Xcode windows. All types of editors and even predictive issues use the themes that you configure in the Theme pane.
 
 ![A screenshot of Theme settings showing the preset popover.](https://developer.apple.com/images/com.apple.Xcode/select-theme-presets@2x.png)
 
@@ -3941,9 +3941,10 @@ Accessing memory improperly can introduce unexpected issues into your code, and 
 
 To enable ASan from the command line, use the following flags:
 
-- `-fsanitize=address` (clang)
-- `-sanitize=address` (swiftc)
-- `-enableAddressSanitizer YES` (xcodebuild)
+- `--sanitize=address` (`swift build`, `swift run`, and `swift test`)
+- `-enableAddressSanitizer YES` (`xcodebuild`)
+- `-fsanitize=address` (`clang`)
+- `-sanitize=address` (`swiftc`)
 
 The Address Sanitizer tool replaces the `malloc(_:)` and `free(_:)` functions with custom implementations. The custom `malloc(_:)` function surrounds a requested memory block with special off-limits regions, and reports attempts to access those regions. The `free(_:)` function places a deallocated block into a special quarantine queue, and reports attempts to access that quarantined memory.
 
@@ -3965,9 +3966,10 @@ To detect race conditions and other thread-related issues, enable the Thread San
 
 To enable TSan from the command line, use the following flags:
 
-- `-fsanitize=thread` (clang)
-- `-sanitize=thread` (swiftc)
-- `-enableThreadSanitizer YES` (xcodebuild)
+- `--sanitize=thread` (`swift build`, `swift run`, and `swift test`)
+- `-enableThreadSanitizer YES` (`xcodebuild`)
+- `-fsanitize=thread` (`clang`)
+- `-sanitize=thread` (`swiftc`)
 
 The Thread Sanitizer tool inserts diagnostics into your code to record each memory read or write operation. These diagnostics generate a timestamp for each operation, as well as its location in memory. The tool then reports any operations that occur at the same location at approximately the same time. The tool also detects other thread-related bugs, such as uninitialized mutexes and thread leaks.
 
@@ -4025,7 +4027,12 @@ To enable this tool, select Undefined Behavior Sanitizer from the Diagnostics se
 
 ![A screenshot of the Scheme Editor with the Undefined Behavior Sanitizer checkbox selected.](https://developer.apple.com/images/com.apple.Xcode/diagnosing-memory-thread-and-crash-issues-early-4@2x.png)
 
-To enable UBSan from the command line, add the `-fsanitize=undefined` option in clang or the `enableUndefinedBehaviorSanitizer YES` option in xcodebuild. To enable individual sanitizer checks, use the following options:
+To enable UBSan from the command line, use the following flags:
+
+- `-enableUndefinedBehaviorSanitizer YES` (`xcodebuild`)
+- `-fsanitize=undefined` (`clang`)
+
+To enable individual sanitizer checks, use the following options:
 
 | Compiler flag | UBSan check |
 | --- | --- |
@@ -4248,6 +4255,111 @@ To disable runtime issues in tests, edit the test plan and set the Runtime API C
 - [Understanding hitches in your app](understanding-hitches-in-your-app.md): Determine the cause of interruptions in motion by examining the render loop.
 - [Reducing your app’s launch time](reducing-your-app-s-launch-time.md): Create a more responsive experience with your app by minimizing time spent in startup.
 - [Reducing terminations in your app](reduce-terminations-in-your-app.md): Minimize how frequently the system stops your app by addressing common termination reasons.
+
+# Document: Distributing apps to your development devices
+
+Source path: documentation/xcode/distributing-apps-to-your-development-devices
+Canonical documentation: https://developer.apple.com/documentation/xcode/distributing-apps-to-your-development-devices
+Description: Kind: Article
+
+# Distributing apps to your development devices
+
+**Kind:** Article
+
+Test apps on your own devices that you register in your developer account.
+
+<a id="Overview"></a>
+
+## Overview
+
+Before collecting feedback from beta testers using TestFlight, you can distribute builds to a limited set of testers on known devices without having to go through beta app review.
+
+First, use either Xcode or your [developer account](https://developer.apple.com/programs/) to register the devices that you want to test with. Consider that your team has a limited number of devices per product family per year for both development and testing. Then archive and export your app for distribution.
+
+Alternatively, distribute your app to testers using TestFlight. For more information, see [Distributing your app for beta testing and releases](distributing-your-app-for-beta-testing-and-releases.md).
+
+<a id="Register-devices-automatically-in-Xcode"></a>
+
+## Register devices automatically in Xcode
+
+Xcode can manage the certificates, identifiers, and profiles for you.
+
+First, use Device Hub to pair your physical devices with your Mac, either wirelessly or with a cable. For more information, see [Managing your simulated and physical devices in Device Hub](managing-your-simulated-and-physical-devices-in-device-hub.md).
+
+The first time you run your app on a physical device, set up code signing in the Signing & Capabilities pane of the project editor. For more information, see doc:running-your-app-on-simulated-or-physical-devices#set-up-cod-signing-for-physical-devices.
+
+To register devices using Xcode, toggle on “Automatically manage signing” under Signing. For each device, choose it as the run destination, click the Register Device button under Signing or in the popover if it appears, and click Run. Xcode registers and adds the device to the provisioning profile.
+
+For more information on running apps through Xcode, see [Running your app on simulated or physical devices](running-your-app-on-simulated-or-physical-devices.md).
+
+<a id="Register-devices-in-your-developer-account"></a>
+
+## Register devices in your developer account
+
+First, collect the unique device identifiers for your iPhone, iPad, Apple TV, Apple Vision Pro, or Apple Watch devices using either Device Hub or Finder. To get the device identifiers for Mac computers, use System Information. For more information, see [Locating device identifiers](locating-device-identifiers.md).
+
+Then upload a file containing the device names and identifiers to your developer account. For more information, see [Register multiple devices](https://developer.apple.com/help/account/register-devices/register-multiple-devices) in Developer Account Help.
+
+For more information on managing your devices, including disabling devices you no longer use, see [Devices overview](https://developer.apple.com/help/account/devices/devices-overview) in Developer Account Help.
+
+<a id="Create-an-app-archive"></a>
+
+## Create an app archive
+
+In the project window, choose a target and a run destination from the Scheme toolbar menu. Choose Product \> Archive to build the target. Xcode then displays the archive in the Archives organizer. If you select a simulator for your run destination, Xcode builds an archive matching the build-only device type for that simulator.
+
+![A screenshot of the Archives organizer showing an archive selected and Distribute App button.](https://developer.apple.com/images/com.apple.Xcode/distributing-apps-archives-organizer@2x.png)
+
+> **Note**
+
+> For an app built with Mac Catalyst, create separate archives for the iPad and Mac Catalyst builds. When creating the archive for the Mac Catalyst build, choose the run destination that includes Mac Catalyst in its name. For an app built with Designed for iPad, create a single archive using iPad as the run destination or any run destination that includes Designed for iPad in its name. These run destinations produce the same archive.
+
+<a id="Export-the-app-archive"></a>
+
+## Export the app archive
+
+In the Archives organizer, export a version of the app to distribute to testers:
+
+1. Select the archive and click Distribute App.
+2. Select Release Testing or Debugging as the method of distribution and then click Distribute.
+3. Review the build details in the next sheet and click Export.
+4. Select a location to save the exported app and click Export.
+
+Xcode creates a folder that contains a few files. For iOS, iPadOS, tvOS, visionOS, or watchOS apps, the folder contains the iOS Package Archive file (with an `.ipa` extension). For macOS apps, it contains the app bundle.
+
+> **Note**
+
+> The Release Testing distribution method isn’t available for macOS apps.
+
+<a id="Install-the-app-on-registered-devices"></a>
+
+## Install the app on registered devices
+
+Give the exported files to testers so they can install the app on their registered devices using Device Hub or Apple Configurator. For more information on using Device Hub, see [Install apps on devices](managing-apps-on-devices.md#Install-apps-on-devices). For macOS apps, drag the app bundle to the `/Applications` folder or another folder of your choice on the Mac.
+
+<a id="Test-your-app-on-specific-devices"></a>
+
+## Test your app on specific devices
+
+For iOS, iPadOS, tvOS, visionOS, and watchOS apps, you can have finer control over the test devices using an ad hoc provisioning profile for distribution that you create in your developer account.
+
+To create a provisioning profile containing a subset of devices, see [Create an ad hoc provisioning profile](https://developer.apple.com/help/account/provisioning-profiles/create-an-ad-hoc-provisioning-profile) in Developer Account Help, where you select which registered devices to include.
+
+To update an existing provisioning profile after you add or remove devices, see [Edit, download, or delete provisioning profiles](https://developer.apple.com/help/account/provisioning-profiles/edit-download-or-delete-profiles).
+
+Then choose your custom provisioning profile when you export your archive for distribution. Testers can run your app only on the devices that you add to the provisioning profile.
+
+## See Also
+
+### Related Documentation
+
+- [Notarizing macOS software before distribution](https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution): Give users even more confidence in your macOS software by submitting it to Apple for notarization.
+
+### Distribution and release
+
+- [Distributing your app for beta testing and releases](distributing-your-app-for-beta-testing-and-releases.md): Release your app to beta testers and users.
+- [Locating device identifiers](locating-device-identifiers.md): Get the unique identifier for a device before registering it in your developer account.
+- [Packaging Mac software for distribution](packaging-mac-software-for-distribution.md): Build a zip archive, disk image, or installer package for distributing your Mac software.
 
 # Document: Distributing binary frameworks as Swift packages
 
@@ -4572,10 +4684,10 @@ To begin a custom distribution, which allows you to configure your own settings,
 Select from the following distribution methods:
 
 - **App Store Connect**: Distribute using TestFlight or through the App Store.
-- **Ad Hoc**: Distribute to a limited number of devices you register in App Store Connect. For more information on distributing to devices you register, see [Distributing your app to registered devices](distributing-your-app-to-registered-devices.md).
+- **Ad Hoc**: Distribute to a limited number of devices you register in App Store Connect. For more information on distributing to devices you register, see [Distributing apps to your development devices](distributing-apps-to-your-development-devices.md).
 - **Enterprise**: Distribute to members of your organization if you’re a part of the [Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise) and are ready to release your app to users in your organization.
 - **Developer ID**: Distribute a macOS app outside the App Store that is notarized by Apple or signed with a Developer ID. This distribution method is only available for apps built for Mac.
-- **Development**: Distribute to a limited number of devices you register in App Store Connect. For more information on distributing to devices you register, see [Distributing your app to registered devices](distributing-your-app-to-registered-devices.md).
+- **Development**: Distribute to a limited number of devices you register in App Store Connect. For more information on distributing to devices you register, see [Distributing apps to your development devices](distributing-apps-to-your-development-devices.md).
 - **Copy App**: Distribute a macOS app without code signing. This distribution method is only available for apps built for Mac.
 
 If you choose App Store Connect or Developer ID as your distribution method, you select a destination option as well. You can choose to upload your build to the App Store, or Export your build locally to upload later.
@@ -4608,7 +4720,7 @@ When packaging for self distribution using the Ad Hoc or Development option, cho
 To distribute a beta version of your app to offer a preview of an upcoming release, choose a distribution method that aligns with your testing resources:
 
 - Distribute a beta version of your app to internal and external testers using TestFlight. The TestFlight app allows invited users to install, beta test, provide feedback, and get updates of your app. Apple distributes the beta version for you, you manage the builds and users in App Store Connect. To learn more, see [TestFlight overview](https://developer.apple.com/help/app-store-connect/test-a-beta-version/overview-of-testflight).
-- Distribute a beta version to registered devices in your developer account. Choose this option only if you can reserve a portion of your limited development devices for beta testing. To learn more, see [Distributing your app to registered devices](distributing-your-app-to-registered-devices.md).
+- Distribute a beta version to registered devices in your developer account. Choose this option only if you can reserve a portion of your limited development devices for beta testing. To learn more, see [Distributing apps to your development devices](distributing-apps-to-your-development-devices.md).
 - For macOS apps, distribute an Apple-notarized build to testers before you distribute the app through the App Store. To learn more, see [Notarizing macOS software before distribution](https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution).
 
 ![Screenshot of App Store Connect showing builds that were uploaded from Xcode.](https://developer.apple.com/images/com.apple.Xcode/distributing-your-app-for-beta-testing-and-releases-8@2x.png)
@@ -4653,108 +4765,7 @@ If you distribute your app using TestFlight or through the App Store, you can vi
 
 ### Distribution and release
 
-- [Distributing your app to registered devices](distributing-your-app-to-registered-devices.md): Test your app on devices that you register in your developer account.
-- [Locating device identifiers](locating-device-identifiers.md): Get the unique identifier for a device before registering it in your developer account.
-- [Packaging Mac software for distribution](packaging-mac-software-for-distribution.md): Build a zip archive, disk image, or installer package for distributing your Mac software.
-
-# Document: Distributing your app to registered devices
-
-Source path: documentation/xcode/distributing-your-app-to-registered-devices
-Canonical documentation: https://developer.apple.com/documentation/xcode/distributing-your-app-to-registered-devices
-Description: Kind: Article
-
-# Distributing your app to registered devices
-
-**Kind:** Article
-
-Test your app on devices that you register in your developer account.
-
-<a id="Overview"></a>
-
-## Overview
-
-Before collecting feedback from beta testers using TestFlight, you can distribute builds to a limited set of testers on known devices without having to go through beta app review.
-
-First, use either Xcode or your [developer account](https://developer.apple.com/programs/) to register the devices that you want to test with. Consider that your team has a limited number of devices per product family per year for both development and testing. Then archive and export your app for distribution.
-
-Alternatively, distribute your app to testers using TestFlight. For more information, see [Distributing your app for beta testing and releases](distributing-your-app-for-beta-testing-and-releases.md).
-
-<a id="Register-devices-automatically-in-Xcode"></a>
-
-## Register devices automatically in Xcode
-
-Xcode can manage the certificates, identifiers, and profiles for you.
-
-First, use Device Hub to pair the physical devices with your Mac, either wirelessly or with a cable. For more information, see [Managing your simulated and physical devices in Device Hub](managing-your-simulated-and-physical-devices-in-device-hub.md).
-
-In the Signing & Capabilities pane under Signing, toggle “Automatically manage signing” on. For each device, choose it as the run destination, click the Register Device button under Signing or in the popover if it appears, and click Run. Xcode registers and adds the device to the provisioning profile.
-
-For more information on running apps through Xcode, see [Running your app on simulated or physical devices](running-your-app-on-simulated-or-physical-devices.md).
-
-<a id="Register-devices-in-your-developer-account"></a>
-
-## Register devices in your developer account
-
-First, collect the unique device identifiers for your iPhone, iPad, Apple TV, Apple Vision Pro, or Apple Watch devices using either Device Hub or Finder. To get the device identifiers for Mac computers, use System Information. For more information, see [Locating device identifiers](locating-device-identifiers.md).
-
-Then upload a file containing the device names and identifiers to your developer account. For more information, see [Register multiple devices](https://developer.apple.com/help/account/register-devices/register-multiple-devices) in Developer Account Help.
-
-For more information on managing your devices, including disabling devices you no longer use, see [Devices overview](https://developer.apple.com/help/account/devices/devices-overview) in Developer Account Help.
-
-<a id="Create-an-app-archive"></a>
-
-## Create an app archive
-
-In the project window, choose a target and a run destination from the Scheme toolbar menu. Choose Product \> Archive to build the target. Xcode then displays the archive in the Archives organizer. If you select a simulator for your run destination, Xcode builds an archive matching the build-only device type for that simulator.
-
-> **Note**
-
-> For an app built with Mac Catalyst, create separate archives for the iPad and Mac Catalyst builds. When creating the archive for the Mac Catalyst build, choose the run destination that includes Mac Catalyst in its name. For an app built with Designed for iPad, create a single archive using iPad as the run destination or any run destination that includes Designed for iPad in its name. These run destinations produce the same archive.
-
-<a id="Export-the-app-archive"></a>
-
-## Export the app archive
-
-In the Archives organizer, export a version of the app to distribute to testers:
-
-1. Select the archive and click Distribute App.
-2. Select Debugging and click Distribute.
-3. Review the build details in the next sheet and click Export.
-4. Select a location to save the exported app and click Export.
-
-Xcode creates a folder that contains a few files. For iOS, iPadOS, tvOS, visionOS, or watchOS apps, the folder contains the iOS Package Archive file (with an `.ipa` extension). For macOS apps, it contains the app bundle.
-
-<a id="Install-the-app-on-registered-devices"></a>
-
-## Install the app on registered devices
-
-Next, give the exported files to testers so they can install the app on their registered devices using Device Hub or Apple Configurator. For more information, see [Install apps on devices](managing-apps-on-devices.md#Install-apps-on-devices). For macOS apps, drag the app bundle to the `/Applications` folder or another folder of your choice on the Mac.
-
-> **Important**
-
-> To run your iOS, iPadOS, visionOS, or watchOS app that you install from an iOS Package Archive, enable Developer Mode on that device. For more information, see [Enabling Developer Mode on a device](enabling-developer-mode-on-a-device.md).
-
-<a id="Test-your-app-on-specific-devices"></a>
-
-## Test your app on specific devices
-
-For iOS, iPadOS, tvOS, visionOS, and watchOS apps, you can have finer control over the test devices using an ad hoc provisioning profile for distribution that you create in your developer account.
-
-To create a provisioning profile containing a subset of devices, see [Create an ad hoc provisioning profile](https://developer.apple.com/help/account/provisioning-profiles/create-an-ad-hoc-provisioning-profile) in Developer Account Help, where you select which registered devices to include.
-
-To update an existing provisioning profile after you add or remove devices, see [Edit, download, or delete provisioning profiles](https://developer.apple.com/help/account/provisioning-profiles/edit-download-or-delete-profiles).
-
-Then choose your custom provisioning profile when you export your archive for distribution. Testers can run your app only on the devices that you add to the provisioning profile.
-
-## See Also
-
-### Related Documentation
-
-- [Notarizing macOS software before distribution](https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution): Give users even more confidence in your macOS software by submitting it to Apple for notarization.
-
-### Distribution and release
-
-- [Distributing your app for beta testing and releases](distributing-your-app-for-beta-testing-and-releases.md): Release your app to beta testers and users.
+- [Distributing apps to your development devices](distributing-apps-to-your-development-devices.md): Test apps on your own devices that you register in your developer account.
 - [Locating device identifiers](locating-device-identifiers.md): Get the unique identifier for a device before registering it in your developer account.
 - [Packaging Mac software for distribution](packaging-mac-software-for-distribution.md): Build a zip archive, disk image, or installer package for distributing your Mac software.
 
@@ -4850,7 +4861,7 @@ Prepare your app and share it with your team, beta testers, and customers.
 ### Distribution and release
 
 - [Distributing your app for beta testing and releases](distributing-your-app-for-beta-testing-and-releases.md): Release your app to beta testers and users.
-- [Distributing your app to registered devices](distributing-your-app-to-registered-devices.md): Test your app on devices that you register in your developer account.
+- [Distributing apps to your development devices](distributing-apps-to-your-development-devices.md): Test apps on your own devices that you register in your developer account.
 - [Locating device identifiers](locating-device-identifiers.md): Get the unique identifier for a device before registering it in your developer account.
 - [Packaging Mac software for distribution](packaging-mac-software-for-distribution.md): Build a zip archive, disk image, or installer package for distributing your Mac software.
 
@@ -7600,7 +7611,7 @@ As you enter code in the source editor, Xcode checks the syntax and offers fixes
 
 Xcode highlights issues with a red or yellow underline and presents an issue summary and icon. Clicking the icon displays more information about the issue and, in many cases, provides a fix that you can apply.
 
-![An Xcode screenshot showing the Issues navigator on the left and the source editor on the right with more information about three issues.](https://developer.apple.com/images/com.apple.Xcode/fix-it-correction@2x.png)
+![An Xcode screenshot showing the Issues navigator on the left and the source editor on the right with more information about multiple issues.](https://developer.apple.com/images/com.apple.Xcode/fix-it-correction@2x.png)
 
 To apply a fix for an issue:
 
@@ -7609,9 +7620,9 @@ To apply a fix for an issue:
 
 If the popover contains multiple issues, navigate between them using the Up Arrow and Down Arrow keys (or Navigate \> Jump to Next Issue and Navigate \> Jump to Previous Issue). To dismiss the popover, press the Escape key or click anywhere else.
 
-You can configure the appearance and behavior of issues that appear in the source editor in Xcode \> Settings \> General under Issues. For example, to turn off fix suggestions, toggle the “Show live issues” setting off.
+You can configure the appearance and behavior of issues that appear in the source editor in Xcode \> Settings \> General under Issues. For example, to turn off fix suggestions, toggle the “Predictive issues” setting off.
 
-If you set up coding intelligence, you can click the Generate button that appears at the bottom of the popover to fix the issues. See [Writing code with intelligence in Xcode](writing-code-with-intelligence-in-xcode.md).
+If you set up coding intelligence, you can click the Generate button that appears at the bottom of the popover to fix the issues. For more information, see [Using coding intelligence in the source editor](using-coding-intelligence-in-the-source-editor.md).
 
 # Document: Gaining performance insights with the Metal Performance HUD
 
@@ -12950,7 +12961,7 @@ Before you run your app in Device Hub, set a language and region in the Run sche
 
 Also, verify that right-to-left languages have enough space. For more information, see [Previewing localizations](previewing-localizations.md) and [Testing localizations when running your app](testing-localizations-when-running-your-app.md).
 
-Get feedback from people who speak the languages and live in the regions you support. For distribution options, including using TestFlight, see [Distributing your app to registered devices](distributing-your-app-to-registered-devices.md) and [Distributing your app for beta testing and releases](distributing-your-app-for-beta-testing-and-releases.md).
+Get feedback from people who speak the languages and live in the regions you support. For distribution options, including using TestFlight, see [Distributing apps to your development devices](distributing-apps-to-your-development-devices.md) and [Distributing your app for beta testing and releases](distributing-your-app-for-beta-testing-and-releases.md).
 
 <a id="Provide-translation-guidance"></a>
 
@@ -13080,7 +13091,7 @@ Get the unique identifier for a device before registering it in your developer a
 
 To register one or more devices using your developer account, you first collect the device identifiers. Typically, you register multiple devices using your developer account to test your app internally before uploading builds to App Store Connect. Later, you can use TestFlight to distribute beta builds to testers without needing to register their devices.
 
-For more information on distributing your app to a limited set of people on known devices, see [Distributing your app to registered devices](distributing-your-app-to-registered-devices.md).
+For more information on distributing your app to a limited set of people on known devices, see [Distributing apps to your development devices](distributing-apps-to-your-development-devices.md).
 
 <a id="Locate-device-identifiers-using-Device-Hub"></a>
 
@@ -13402,7 +13413,7 @@ Find, add, and remove apps installed for testing on simulated and physical devic
 
 ## Overview
 
-Use the Apps inspector in Device Hub to view, install, and remove apps on both simulated and physical devices. During development, Xcode installs your app on devices for you (see [Running your app on simulated or physical devices](running-your-app-on-simulated-or-physical-devices.md)), and you remove it using Device Hub. Later, when you’re ready to distribute your app for testing (see [Distributing your app to registered devices](distributing-your-app-to-registered-devices.md)), you can use Device Hub independently of Xcode to add and remove apps on multiple test devices.
+Use the Apps inspector in Device Hub to view, install, and remove apps on both simulated and physical devices. During development, Xcode installs your app on devices for you (see [Running your app on simulated or physical devices](running-your-app-on-simulated-or-physical-devices.md)), and you remove it using Device Hub. Later, when you’re ready to distribute your app for testing (see [Distributing apps to your development devices](distributing-apps-to-your-development-devices.md)), you can use Device Hub independently of Xcode to add and remove apps on multiple test devices.
 
 ![A screenshot of Device Hub with a simulator selected in the sidebar on the left, an iPhone simulator running in the canvas in the middle, and the Apps inspector showing an installed app selected on the right.](https://developer.apple.com/images/com.apple.Xcode/device-hub-apps-inspector@2x.png)
 
@@ -13634,6 +13645,12 @@ Xcode checks to see if the groups in your Xcode project match the underlying fil
 
 To convert the files Xcode displays in Show Details, make the file and directory structure in Xcode match what Finder displays on disk. Either modify the file and group structure in Xcode to match the file and directory structure in Finder, or modify the file and directory structure in Finder to match the contents of your groups in Xcode. Then select the groups, Control-click, and choose Convert to Folder again.
 
+## See Also
+
+### Files and workspaces
+
+- [Managing multiple projects and their dependencies](managing-multiple-projects-and-their-dependencies.md): Manage related projects in one place using a workspace, or configure build-time dependencies between different Xcode projects using cross-project references.
+
 # Document: Managing multiple projects and their dependencies
 
 Source path: documentation/xcode/managing-multiple-projects-and-their-dependencies
@@ -13697,6 +13714,12 @@ After you add a cross-project reference, you can refer to the other project’s 
 > **Note**
 
 > It’s good practice to use a workspace to manage multiple projects. However, you can’t create explicit dependencies between two projects in the same workspace.
+
+## See Also
+
+### Files and workspaces
+
+- [Managing files and folders in your Xcode project](managing-files-and-folders-in-your-xcode-project.md): Add new or existing files to your project, and use groups to organize the files and folders in the Project navigator.
 
 # Document: Managing Xcode projects using command-line tools
 
@@ -15819,7 +15842,7 @@ For products that you distribute as zip files or disk image files, consider thes
 ### Distribution and release
 
 - [Distributing your app for beta testing and releases](distributing-your-app-for-beta-testing-and-releases.md): Release your app to beta testers and users.
-- [Distributing your app to registered devices](distributing-your-app-to-registered-devices.md): Test your app on devices that you register in your developer account.
+- [Distributing apps to your development devices](distributing-apps-to-your-development-devices.md): Test apps on your own devices that you register in your developer account.
 - [Locating device identifiers](locating-device-identifiers.md): Get the unique identifier for a device before registering it in your developer account.
 
 # Document: Performance and metrics
@@ -16905,6 +16928,11 @@ Description: Manage the code and resources you use to build apps, libraries, and
 Manage the code and resources you use to build apps, libraries, and other software for Apple platforms.
 
 ## Topics
+
+### Files and workspaces
+
+- [Managing files and folders in your Xcode project](managing-files-and-folders-in-your-xcode-project.md): Add new or existing files to your project, and use groups to organize the files and folders in the Project navigator.
+- [Managing multiple projects and their dependencies](managing-multiple-projects-and-their-dependencies.md): Manage related projects in one place using a workspace, or configure build-time dependencies between different Xcode projects using cross-project references.
 
 ### Navigation
 
@@ -22315,7 +22343,7 @@ Then, choose the Archive option in Xcode’s Product menu. After the archive bui
 Xcode saves app archives on disk so you can refer to a particular build later, for example, to submit the build to App Review after the app passes beta tests. The archives’ distribution workflow offers several ways to test the app:
 
 - **TestFlight**: TestFlight automates app distribution and submission to reduce the chances of submitting the wrong build to App Review. To distribute an app archive through TestFlight, choose the archive pane’s App Store Connect option. For more on TestFlight, see [Distributing your app for beta testing and releases](distributing-your-app-for-beta-testing-and-releases.md).
-- **Ad Hoc**: To distribute your app to testers manually, for example, by emailing them an .ipa file, choose the archive pane’s Ad Hoc option. For more information, see [Distributing your app to registered devices](distributing-your-app-to-registered-devices.md).
+- **Ad Hoc**: To distribute your app to testers manually, for example, by emailing them an .ipa file, choose the archive pane’s Ad Hoc option. For more information, see [Distributing apps to your development devices](distributing-apps-to-your-development-devices.md).
 - **Enterprise**: Enterprise distribution is similar to Ad Hoc distribution except that you choose the Enterprise option from the Archive pane. Xcode looks for a different code signing identity for Enterprise app distribution that contains a valid Enterprise distribution certificate.
 - **Development**: The development distribution method signs the release build with your development credentials. This option enables testing if you lack access to team distribution identities. The debugger can attach to a development-signed release build, but be aware that it can mask watchdog timeouts.
 
@@ -27036,11 +27064,11 @@ Xcode includes a set of command-line tools that only ship with the app, such as 
 - **`ibtool`**: Compile, print, update, and verify Interface Builder documents. To learn more about this command, enter `man ibtool` in Terminal.
 - **`xcstringstool`**: Generate string tables from source code. To learn more about this command, enter `xcrun xcstringstool help` in Terminal.
 
-<a id="Manage-the-Simulator"></a>
+<a id="Manage-a-simulator"></a>
 
-### Manage the Simulator
+### Manage a simulator
 
-- **`simctl`**: Control the Simulator. To learn more about this command, enter `xcrun simctl help` in Terminal.
+- **`simctl`**: Control a simulated device in Device Hub. To learn more about this command, enter `xcrun simctl help` in Terminal or see [Interacting with devices using the command line](interacting-with-devices-using-the-command-line.md).
 
 ## See Also
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingsportsclock/init(elapsedtime:paused:)
 
 # init(elapsedTime:paused:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Initializer  
 **Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+
 
-Represents a duration of time that has elapsed so far in this event, or play period of the event (quarter/inning/period).
+Creates a clock that counts up to measure the elapsed time from the specified value.
 
 ## Declaration
 
@@ -15,11 +15,23 @@ Represents a duration of time that has elapsed so far in this event, or play per
 init(elapsedTime: TimeInterval, paused: Bool)
 ```
 
+## Parameters
+
+- `elapsedTime`: The number of elapsed seconds in the match. Specify `0` to represent the start of the match.
+- `paused`: `true` to prevent CarPlay from incrementing the time value automatically, or `false` to start counting up.
+
 <a id="discussion"></a>
 
 ## Discussion
 
-When displayed on the now playing screen, the clock will count UP.
+Use this method for sports events in which the game clock counts up from `0`. After updating the Now Playing interface with this information, CarPlay starts the clock if the `paused` parameter is `false`.
+
+## See Also
+
+### Creating a sports mode type
+
+- [init(timeRemaining:paused:)](init%28timeremaining_paused_%29.md): Creates a clock that counts down from the specified value.
+- [init(coder:)](init%28coder_%29.md)
 
 # initWithElapsedTime:paused: (Objective-C)
 
@@ -27,7 +39,7 @@ When displayed on the now playing screen, the clock will count UP.
 **Kind:** Instance Method  
 **Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+
 
-Represents a duration of time that has elapsed so far in this event, or play period of the event (quarter/inning/period).
+Creates a clock that counts up to measure the elapsed time from the specified value.
 
 ## Declaration
 
@@ -35,8 +47,19 @@ Represents a duration of time that has elapsed so far in this event, or play per
 - (instancetype) initWithElapsedTime:(NSTimeInterval) elapsedTime paused:(BOOL) paused;
 ```
 
+## Parameters
+
+- `elapsedTime`: The number of elapsed seconds in the match. Specify `0` to represent the start of the match.
+- `paused`: `true` to prevent CarPlay from incrementing the time value automatically, or `false` to start counting up.
+
 <a id="discussion"></a>
 
 ## Discussion
 
-When displayed on the now playing screen, the clock will count UP.
+Use this method for sports events in which the game clock counts up from `0`. After updating the Now Playing interface with this information, CarPlay starts the clock if the `paused` parameter is `false`.
+
+## See Also
+
+### Creating a sports mode type
+
+- [initWithTimeRemaining:paused:](init%28timeremaining_paused_%29.md): Creates a clock that counts down from the specified value.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptextbutton
 
 # CPTextButton (Swift)
@@ -23,15 +23,15 @@ You use a text button to attach custom actions to an instance of [CPPointOfInter
 
 ## Topics
 
-### Creating a Text Button
+### Creating a text button
 
 - [init(title:textStyle:handler:)](cptextbutton/init%28title_textstyle_handler_%29.md): Creates a button that displays a title in a specific style.
 
-### Managing the Title
+### Managing the title
 
 - [title](cptextbutton/title.md): The text the button displays.
 
-### Managing the Button Style
+### Managing the button style
 
 - [textStyle](cptextbutton/textstyle.md): The text style the button applies to its title.
 - [CPTextButtonStyle](cptextbuttonstyle.md): The styles a button can apply to its title to communicate its action.
@@ -53,11 +53,14 @@ You use a text button to attach custom actions to an instance of [CPPointOfInter
 
 ## See Also
 
-### Location and Information
+### Common types
 
-- [CPPointOfInterestTemplate](cppointofinteresttemplate.md): A template that displays a map with selectable points of interest.
-- [CPInformationTemplate](cpinformationtemplate.md): A template that provides information for a point of interest, food order, parking location, or charging location.
-- [Integrating CarPlay with your quick-ordering app](integrating-carplay-with-your-quick-ordering-app.md): Configure your food-ordering app to work with CarPlay.
+- [CPTemplate](cptemplate.md): An abstract base class for interface templates.
+- [CPButton](cpbutton.md): A button that displays an image and invokes a handler when the user taps it.
+- [CPImageSet](cpimageset.md): Light and dark representations of an image.
+- [CPPanel](cppanel.md): A type that provides the common behaviors for panels you display on top of your app’s content.
+- [CPPanelItem](cppanelitem.md): A type that provides the common behaviors for items you display in a section of a panel.
+- [CPPanelButtonConfiguration](cppanelbuttonconfiguration.md): A type that provides the common behaviors for a button layout in a panel.
 
 # CPTextButton (Objective-C)
 
@@ -81,15 +84,15 @@ You use a text button to attach custom actions to an instance of [CPPointOfInter
 
 ## Topics
 
-### Creating a Text Button
+### Creating a text button
 
 - [initWithTitle:textStyle:handler:](cptextbutton/init%28title_textstyle_handler_%29.md): Creates a button that displays a title in a specific style.
 
-### Managing the Title
+### Managing the title
 
 - [title](cptextbutton/title.md): The text the button displays.
 
-### Managing the Button Style
+### Managing the button style
 
 - [textStyle](cptextbutton/textstyle.md): The text style the button applies to its title.
 - [CPTextButtonStyle](cptextbuttonstyle.md): The styles a button can apply to its title to communicate its action.
@@ -102,8 +105,11 @@ You use a text button to attach custom actions to an instance of [CPPointOfInter
 
 ## See Also
 
-### Location and Information
+### Common types
 
-- [CPPointOfInterestTemplate](cppointofinteresttemplate.md): A template that displays a map with selectable points of interest.
-- [CPInformationTemplate](cpinformationtemplate.md): A template that provides information for a point of interest, food order, parking location, or charging location.
-- [Integrating CarPlay with your quick-ordering app](integrating-carplay-with-your-quick-ordering-app.md): Configure your food-ordering app to work with CarPlay.
+- [CPTemplate](cptemplate.md): An abstract base class for interface templates.
+- [CPButton](cpbutton.md): A button that displays an image and invokes a handler when the user taps it.
+- [CPImageSet](cpimageset.md): Light and dark representations of an image.
+- [CPPanel](cppanel.md): A type that provides the common behaviors for panels you display on top of your app’s content.
+- [CPPanelItem](cppanelitem.md): A type that provides the common behaviors for items you display in a section of a panel.
+- [CPPanelButtonConfiguration](cppanelbuttonconfiguration.md): A type that provides the common behaviors for a button layout in a panel.

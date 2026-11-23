@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes/tn3150-getting-ready-for-data-less-files
 
 # TN3150: Getting ready for dataless files
@@ -87,7 +87,7 @@ if (iopolicy >= 0) {
 }
 ```
 
-For more information about the functions and constants in the above code, see their man pages. doc://com.apple.documentation/documentation/os/reading-unix-manual-pages covers how to read man pages.
+For more information about the functions and constants in the above code, see their man pages. [TN3215: Reading man pages](tn3215-reading-man-pages.md) covers how to read man pages.
 
 <a id="Revision-History"></a>
 

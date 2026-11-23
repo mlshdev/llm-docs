@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplane/secondaryangles
 
 # secondaryAngles (Swift)
@@ -25,10 +25,9 @@ This doesn’t include the `primaryAngle`.
 
 ## See Also
 
-### Properties
+### Getting the lane angles
 
 - [primaryAngle](primaryangle.md): Deprecated. A value that represents the angle the framework highlights if this lane is preferred or good.
-- [status](status.md): A value that describes the lane’s status.
 
 # secondaryAngles (Objective-C)
 
@@ -54,7 +53,6 @@ This doesn’t include the `primaryAngle`.
 
 ## See Also
 
-### Properties
+### Getting the lane angles
 
 - [primaryAngle](primaryangle.md): Deprecated. A value that represents the angle the framework highlights if this lane is preferred or good.
-- [status](status.md): A value that describes the lane’s status.

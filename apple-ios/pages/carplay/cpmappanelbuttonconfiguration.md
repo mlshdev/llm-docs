@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmappanelbuttonconfiguration
 
 # CPMapPanelButtonConfiguration (Swift)
@@ -25,11 +25,11 @@ Instantiate this type and specify it with the rest of the panel content when ini
 
 ## Topics
 
-### Initializers
+### Creating a map panel button configuration
 
 - [init(primaryAction:secondaryButton:travelEstimates:)](cpmappanelbuttonconfiguration/init%28primaryaction_secondarybutton_travelestimates_%29.md): Initializes the map panel button configuration with the specified action buttons and travel estimates.
 
-### Instance Properties
+### Accessing the configuration details
 
 - [secondaryButton](cpmappanelbuttonconfiguration/secondarybutton.md): The optional button you use to perform a secondary action.
 - [travelEstimates](cpmappanelbuttonconfiguration/travelestimates.md): The travel estimates to display alongside the action buttons.
@@ -50,6 +50,17 @@ Instantiate this type and specify it with the rest of the panel content when ini
 - [NSCoding](https://developer.apple.com/documentation/foundation/nscoding)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
+
+## See Also
+
+### Maps
+
+- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPMapButton](cpmapbutton.md): A button that represents an action that a map template displays on the CarPlay screen.
+- [CPMapPanel](cpmappanel.md): An overlay for a custom map interface that shows navigation-related instructions or information over a portion of the map.
+- [CPMapPanelSection](cpmappanelsection.md): A single section of a map panel that you fill with a title and one or more items.
+- [CPMapPanelItem](cpmappanelitem.md): A type that manages the waypoint, route, trip, and other information you display in a map panel.
+- [CPChargingStationConnection](cpchargingstationconnection.md): Details about the equipment at an electric vehicle charging station.
 
 # CPMapPanelButtonConfiguration (Objective-C)
 
@@ -75,17 +86,28 @@ Instantiate this type and specify it with the rest of the panel content when ini
 
 ## Topics
 
-### Instance Properties
+### Creating a map panel button configuration
+
+- [initWithPrimaryAction:secondaryButton:travelEstimates:](cpmappanelbuttonconfiguration/init%28primaryaction_secondarybutton_travelestimates_%29.md): Initializes the map panel button configuration with the specified action buttons and travel estimates.
+
+### Accessing the configuration details
 
 - [secondaryButton](cpmappanelbuttonconfiguration/secondarybutton.md): The optional button you use to perform a secondary action.
 - [travelEstimates](cpmappanelbuttonconfiguration/travelestimates.md): The travel estimates to display alongside the action buttons.
-
-### Instance Methods
-
-- [initWithPrimaryAction:secondaryButton:travelEstimates:](cpmappanelbuttonconfiguration/init%28primaryaction_secondarybutton_travelestimates_%29.md): Initializes the map panel button configuration with the specified action buttons and travel estimates.
 
 ## Relationships
 
 ### Inherits From
 
 - [CPPanelButtonConfiguration](cppanelbuttonconfiguration.md)
+
+## See Also
+
+### Maps
+
+- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPMapButton](cpmapbutton.md): A button that represents an action that a map template displays on the CarPlay screen.
+- [CPMapPanel](cpmappanel.md): An overlay for a custom map interface that shows navigation-related instructions or information over a portion of the map.
+- [CPMapPanelSection](cpmappanelsection.md): A single section of a map panel that you fill with a title and one or more items.
+- [CPMapPanelItem](cpmappanelitem.md): A type that manages the waypoint, route, trip, and other information you display in a map panel.
+- [CPChargingStationConnection](cpchargingstationconnection.md): Details about the equipment at an electric vehicle charging station.

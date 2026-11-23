@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessagelistitemleadingconfiguration/leadingimage
 
 # leadingImage (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The configuration’s image.
+The custom image to display in the row’s leading region.
 
 ## Declaration
 
@@ -15,19 +15,17 @@ The configuration’s image.
 var leadingImage: UIImage? { get }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Configurations are immutable. To change or remove the image that the message list item’s leading region shows, create a new configuration and update the list item’s [leadingConfiguration](../cpmessagelistitem/leadingconfiguration.md) property.
-
-A configuration’s image can’t be larger than [CPMaximumMessageItemImageSize](../cpmaximummessageitemimagesize.md). If you use an animated image, this property returns the first image in the animation sequence.
+Specify this image at initialization time.
 
 ## See Also
 
-### Getting the Configuration’s State
+### Getting the configuration’s state
 
-- [isUnread](isunread.md): A Boolean value that determines whether the message list item displays an unread indicator.
+- [isUnread](isunread.md): A Boolean value that indicates the unread status of the conversation.
 
 # leadingImage (Objective-C)
 
@@ -35,7 +33,7 @@ A configuration’s image can’t be larger than [CPMaximumMessageItemImageSize]
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The configuration’s image.
+The custom image to display in the row’s leading region.
 
 ## Declaration
 
@@ -43,16 +41,14 @@ The configuration’s image.
 @property (nonatomic, readonly, nullable) UIImage * leadingImage;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Configurations are immutable. To change or remove the image that the message list item’s leading region shows, create a new configuration and update the list item’s [leadingConfiguration](../cpmessagelistitem/leadingconfiguration.md) property.
-
-A configuration’s image can’t be larger than [CPMaximumMessageItemImageSize](../cpmaximummessageitemimagesize.md). If you use an animated image, this property returns the first image in the animation sequence.
+Specify this image at initialization time.
 
 ## See Also
 
-### Getting the Configuration’s State
+### Getting the configuration’s state
 
-- [unread](isunread.md): A Boolean value that determines whether the message list item displays an unread indicator.
+- [unread](isunread.md): A Boolean value that indicates the unread status of the conversation.

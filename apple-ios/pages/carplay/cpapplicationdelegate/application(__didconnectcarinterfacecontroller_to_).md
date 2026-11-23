@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpapplicationdelegate/application(_:didconnectcarinterfacecontroller:to:)
 
 # application(\_:didConnectCarInterfaceController:to:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ (deprecated in 13.0) · iPadOS 12.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
 
-Tells the app delegate that the app connected to the CarPlay interface.
+The CarPlay screen has connected and is ready to present content.
 
 ## Declaration
 
@@ -15,17 +15,15 @@ Tells the app delegate that the app connected to the CarPlay interface.
 func application(_ application: UIApplication, didConnectCarInterfaceController interfaceController: CPInterfaceController, to window: CPWindow)
 ```
 
-## Parameters
+<a id="discussion"></a>
 
-- `application`: Your singleton app object.
-- `interfaceController`: The interface controller provided by CarPlay. Your app should maintain a reference to this controller.
-- `window`: The CarPlay window. Your app should create its view controller and assign the controller to the [rootViewController](https://developer.apple.com/documentation/uikit/uiwindow/rootviewcontroller) property of this window.
+## Discussion
 
-## See Also
+Your app should create its view controller and assign it to the @c rootViewController property of this window.
 
-### Connecting to the CarPlay Interface
+> **Note**
 
-- [application(\_:didDisconnectCarInterfaceController:from:)](application%28__diddisconnectcarinterfacecontroller_from_%29.md): Deprecated. Tells the app delegate that the app disconnected from the CarPlay interface.
+> It is the responsibility of the delegate to maintain a reference to the interface controller beyond the scope of this method.
 
 # application:didConnectCarInterfaceController:toWindow: (Objective-C)
 
@@ -33,7 +31,7 @@ func application(_ application: UIApplication, didConnectCarInterfaceController 
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ (deprecated in 13.0) · iPadOS 12.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
 
-Tells the app delegate that the app connected to the CarPlay interface.
+The CarPlay screen has connected and is ready to present content.
 
 ## Declaration
 
@@ -41,14 +39,12 @@ Tells the app delegate that the app connected to the CarPlay interface.
 - (void) application:(UIApplication *) application didConnectCarInterfaceController:(CPInterfaceController *) interfaceController toWindow:(CPWindow *) window;
 ```
 
-## Parameters
+<a id="discussion"></a>
 
-- `application`: Your singleton app object.
-- `interfaceController`: The interface controller provided by CarPlay. Your app should maintain a reference to this controller.
-- `window`: The CarPlay window. Your app should create its view controller and assign the controller to the [rootViewController](https://developer.apple.com/documentation/uikit/uiwindow/rootviewcontroller) property of this window.
+## Discussion
 
-## See Also
+Your app should create its view controller and assign it to the @c rootViewController property of this window.
 
-### Connecting to the CarPlay Interface
+> **Note**
 
-- [application:didDisconnectCarInterfaceController:fromWindow:](application%28__diddisconnectcarinterfacecontroller_from_%29.md): Deprecated. Tells the app delegate that the app disconnected from the CarPlay interface.
+> It is the responsibility of the delegate to maintain a reference to the interface controller beyond the scope of this method.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptabbartemplate
 
 # CPTabBarTemplate (Swift)
@@ -14,6 +14,10 @@ A container template that displays and manages other templates, presenting them 
 ```swift
 @MainActor class CPTabBarTemplate
 ```
+
+## Mentioned In
+
+- [Building your app’s initial CarPlay interface](building-your-apps-initial-carplay-interface.md)
 
 <a id="overview"></a>
 
@@ -33,29 +37,26 @@ When the user selects a tab, the template calls the [tabBarTemplate(\_:didSelect
 
 ## Topics
 
-### Creating a Tab Bar Template
+### Creating a tab bar template
 
 - [init(templates:)](cptabbartemplate/init%28templates_%29.md): Creates a tab bar template that displays the provided root templates as tabs.
 
-### Managing Tab Bar Interactions
+### Responding to tab selections
 
 - [delegate](cptabbartemplate/delegate.md): The object that acts as the template’s delegate.
 - [CPTabBarTemplateDelegate](cptabbartemplatedelegate.md): The methods an object implements to act as the delegate for a tab bar template.
 
-### Managing the Templates
+### Managing the tabs
 
 - [templates](cptabbartemplate/templates.md): The tab bar’s templates.
 - [updateTemplates(\_:)](cptabbartemplate/updatetemplates%28__%29.md): Adds, removes, reorders, or updates the tab bar’s templates.
 - [maximumTabCount](cptabbartemplate/maximumtabcount.md): The maximum number of tabs that the template can display.
 
-### Getting the Selected Template
-
-- [selectedTemplate](cptabbartemplate/selectedtemplate.md): The currently selected template in the tab bar.
-
-### Instance Methods
+### Selecting a tab
 
 - [select(\_:)](cptabbartemplate/select%28__%29.md)
 - [selectTemplate(at:)](cptabbartemplate/selecttemplate%28at_%29.md)
+- [selectedTemplate](cptabbartemplate/selectedtemplate.md): The currently selected template in the tab bar.
 
 ## Relationships
 
@@ -78,12 +79,20 @@ When the user selects a tab, the template calls the [tabBarTemplate(\_:didSelect
 
 ## See Also
 
-### General Purpose Templates
+### Interface templates
 
-- [CPListTemplate](cplisttemplate.md): A template that displays and manages a list of items.
+- [CPListTemplate](cplisttemplate.md): A template that displays a single-column list of items in one of several visual styles.
 - [CPGridTemplate](cpgridtemplate.md): A template that displays and manages a grid of items.
-- [CPTemplate](cptemplate.md): An abstract base class for interface templates.
-- [CPBarButtonProviding](cpbarbuttonproviding.md): The methods that templates use to provide buttons for the navigation bar.
+- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPNowPlayingTemplate](cpnowplayingtemplate.md): A shared system template that shows the currently selected audio content and offers controls to manage playback.
+- [CPPointOfInterestTemplate](cppointofinteresttemplate.md): A template that displays a map with selectable points of interest.
+- [CPInformationTemplate](cpinformationtemplate.md): A template that provides information for a point of interest, food order, parking location, or charging location.
+- [CPContactTemplate](cpcontacttemplate.md): A template that displays information about a person or a business.
+- [CPSearchTemplate](cpsearchtemplate.md): A template that provides the ability to search for a destination and see a list of search results.
+- [CPVoiceControlTemplate](cpvoicecontroltemplate.md): A template that displays a voice control indicator during audio input.
+- [CPActionSheetTemplate](cpactionsheettemplate.md): A template that displays a modal action sheet.
+- [CPAlertTemplate](cpalerttemplate.md): A template that displays a modal alert.
+- [All templates and supporting types](all-templates-and-supporting-types.md): Explore the templates you use to build the interface of your CarPlay app.
 
 # CPTabBarTemplate (Objective-C)
 
@@ -98,6 +107,10 @@ A container template that displays and manages other templates, presenting them 
 ```objectivec
 @interface CPTabBarTemplate : CPTemplate
 ```
+
+## Mentioned In
+
+- [Building your app’s initial CarPlay interface](building-your-apps-initial-carplay-interface.md)
 
 <a id="overview"></a>
 
@@ -117,29 +130,26 @@ When the user selects a tab, the template calls the [tabBarTemplate:didSelectTem
 
 ## Topics
 
-### Creating a Tab Bar Template
+### Creating a tab bar template
 
 - [initWithTemplates:](cptabbartemplate/init%28templates_%29.md): Creates a tab bar template that displays the provided root templates as tabs.
 
-### Managing Tab Bar Interactions
+### Responding to tab selections
 
 - [delegate](cptabbartemplate/delegate.md): The object that acts as the template’s delegate.
 - [CPTabBarTemplateDelegate](cptabbartemplatedelegate.md): The methods an object implements to act as the delegate for a tab bar template.
 
-### Managing the Templates
+### Managing the tabs
 
 - [templates](cptabbartemplate/templates.md): The tab bar’s templates.
 - [updateTemplates:](cptabbartemplate/updatetemplates%28__%29.md): Adds, removes, reorders, or updates the tab bar’s templates.
 - [maximumTabCount](cptabbartemplate/maximumtabcount.md): The maximum number of tabs that the template can display.
 
-### Getting the Selected Template
-
-- [selectedTemplate](cptabbartemplate/selectedtemplate.md): The currently selected template in the tab bar.
-
-### Instance Methods
+### Selecting a tab
 
 - [selectTemplate:](cptabbartemplate/select%28__%29.md)
 - [selectTemplateAtIndex:](cptabbartemplate/selecttemplate%28at_%29.md)
+- [selectedTemplate](cptabbartemplate/selectedtemplate.md): The currently selected template in the tab bar.
 
 ## Relationships
 
@@ -149,9 +159,17 @@ When the user selects a tab, the template calls the [tabBarTemplate:didSelectTem
 
 ## See Also
 
-### General Purpose Templates
+### Interface templates
 
-- [CPListTemplate](cplisttemplate.md): A template that displays and manages a list of items.
+- [CPListTemplate](cplisttemplate.md): A template that displays a single-column list of items in one of several visual styles.
 - [CPGridTemplate](cpgridtemplate.md): A template that displays and manages a grid of items.
-- [CPTemplate](cptemplate.md): An abstract base class for interface templates.
-- [CPBarButtonProviding](cpbarbuttonproviding.md): The methods that templates use to provide buttons for the navigation bar.
+- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPNowPlayingTemplate](cpnowplayingtemplate.md): A shared system template that shows the currently selected audio content and offers controls to manage playback.
+- [CPPointOfInterestTemplate](cppointofinteresttemplate.md): A template that displays a map with selectable points of interest.
+- [CPInformationTemplate](cpinformationtemplate.md): A template that provides information for a point of interest, food order, parking location, or charging location.
+- [CPContactTemplate](cpcontacttemplate.md): A template that displays information about a person or a business.
+- [CPSearchTemplate](cpsearchtemplate.md): A template that provides the ability to search for a destination and see a list of search results.
+- [CPVoiceControlTemplate](cpvoicecontroltemplate.md): A template that displays a voice control indicator during audio input.
+- [CPActionSheetTemplate](cpactionsheettemplate.md): A template that displays a modal action sheet.
+- [CPAlertTemplate](cpalerttemplate.md): A template that displays a modal alert.
+- [All templates and supporting types](all-templates-and-supporting-types.md): Explore the templates you use to build the interface of your CarPlay app.

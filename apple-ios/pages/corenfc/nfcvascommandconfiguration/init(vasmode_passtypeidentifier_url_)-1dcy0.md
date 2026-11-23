@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/corenfc/nfcvascommandconfiguration/init(vasmode:passtypeidentifier:url:)-1dcy0
 
 # init(VASMode:passTypeIdentifier:url:)

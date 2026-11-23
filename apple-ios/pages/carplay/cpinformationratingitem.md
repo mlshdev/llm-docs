@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinformationratingitem
 
 # CPInformationRatingItem (Swift)
@@ -25,11 +25,11 @@ The template manages the visual styling of the rating and maximum rating.
 
 ## Topics
 
-### Creating a Rating Item
+### Creating a rating item
 
 - [init(rating:maximumRating:title:detail:)](cpinformationratingitem/init%28rating_maximumrating_title_detail_%29.md): Creates a rating item with a current and a maximum rating.
 
-### Accessing the Item’s Attributes
+### Accessing the item’s attributes
 
 - [rating](cpinformationratingitem/rating.md): The current rating that the template displays.
 - [maximumRating](cpinformationratingitem/maximumrating.md): The maximum rating that the template displays.
@@ -53,7 +53,7 @@ The template manages the visual styling of the rating and maximum rating.
 
 ## See Also
 
-### Managing the Items
+### Managing the items
 
 - [items](cpinformationtemplate/items.md): The items that the template displays.
 - [CPInformationItem](cpinformationitem.md): A data object that provides content for an information template.
@@ -82,11 +82,11 @@ The template manages the visual styling of the rating and maximum rating.
 
 ## Topics
 
-### Creating a Rating Item
+### Creating a rating item
 
 - [initWithRating:maximumRating:title:detail:](cpinformationratingitem/init%28rating_maximumrating_title_detail_%29.md): Creates a rating item with a current and a maximum rating.
 
-### Accessing the Item’s Attributes
+### Accessing the item’s attributes
 
 - [rating](cpinformationratingitem/rating.md): The current rating that the template displays.
 - [maximumRating](cpinformationratingitem/maximumrating.md): The maximum rating that the template displays.
@@ -99,7 +99,7 @@ The template manages the visual styling of the rating and maximum rating.
 
 ## See Also
 
-### Managing the Items
+### Managing the items
 
 - [items](cpinformationtemplate/items.md): The items that the template displays.
 - [CPInformationItem](cpinformationitem.md): A data object that provides content for an information template.

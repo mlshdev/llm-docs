@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitemaccessorytype/disclosureindicator
 
 # CPListItemAccessoryType.disclosureIndicator (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Case  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Show a chevron icon.
+A chevron image that signifies the item displays new content.
 
 ## Declaration
 
@@ -17,10 +17,10 @@ case disclosureIndicator
 
 ## See Also
 
-### Accessory Types
+### Accessory types
 
-- [CPListItemAccessoryType.none](none.md): Don’t show an accessory.
-- [CPListItemAccessoryType.cloud](cloud.md): Show a cloud icon.
+- [CPListItemAccessoryType.none](none.md): A value that indicates the list item has no standard accessory type.
+- [CPListItemAccessoryType.cloud](cloud.md): A cloud image that signifies the item contains cloud-based content.
 
 # CPListItemAccessoryTypeDisclosureIndicator (Objective-C)
 
@@ -28,7 +28,7 @@ case disclosureIndicator
 **Kind:** Enumeration Case  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-Show a chevron icon.
+A chevron image that signifies the item displays new content.
 
 ## Declaration
 
@@ -38,7 +38,7 @@ CPListItemAccessoryTypeDisclosureIndicator
 
 ## See Also
 
-### Accessory Types
+### Accessory types
 
-- [CPListItemAccessoryTypeNone](none.md): Don’t show an accessory.
-- [CPListItemAccessoryTypeCloud](cloud.md): Show a cloud icon.
+- [CPListItemAccessoryTypeNone](none.md): A value that indicates the list item has no standard accessory type.
+- [CPListItemAccessoryTypeCloud](cloud.md): A cloud image that signifies the item contains cloud-based content.

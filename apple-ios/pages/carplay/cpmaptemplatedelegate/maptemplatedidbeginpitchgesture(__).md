@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplatedelegate/maptemplatedidbeginpitchgesture(_:)
 
 # mapTemplateDidBeginPitchGesture(\_:) (Swift)
@@ -19,6 +19,13 @@ optional func mapTemplateDidBeginPitchGesture(_ mapTemplate: CPMapTemplate)
 
 - `mapTemplate`: The [CPMapTemplate](../cpmaptemplate.md) the gesture applies to.
 
+## See Also
+
+### Changing the camera pitch
+
+- [mapTemplate(\_:pitchWithCenter:)](maptemplate%28__pitchwithcenter_%29.md): Called when a pitch gesture changes. May not be called when connected to some CarPlay systems
+- [mapTemplate(\_:pitchEndedWithCenter:)](maptemplate%28__pitchendedwithcenter_%29.md): Tells the delegate that a person stopped pitching the map.
+
 # mapTemplateDidBeginPitchGesture: (Objective-C)
 
 **Framework:** CarPlay  
@@ -36,3 +43,10 @@ Tells the delegate that the pitch gesture started.
 ## Parameters
 
 - `mapTemplate`: The [CPMapTemplate](../cpmaptemplate.md) the gesture applies to.
+
+## See Also
+
+### Changing the camera pitch
+
+- [mapTemplate:pitchWithCenter:](maptemplate%28__pitchwithcenter_%29.md): Called when a pitch gesture changes. May not be called when connected to some CarPlay systems
+- [mapTemplate:pitchEndedWithCenter:](maptemplate%28__pitchendedwithcenter_%29.md): Tells the delegate that a person stopped pitching the map.

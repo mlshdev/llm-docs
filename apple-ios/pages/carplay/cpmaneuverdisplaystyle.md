@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaneuverdisplaystyle
 
 # CPManeuverDisplayStyle (Swift)
@@ -17,14 +17,14 @@ struct CPManeuverDisplayStyle
 
 ## Topics
 
-### Display Styles
+### Getting the display styles
 
 - [leadingSymbol](cpmaneuverdisplaystyle/leadingsymbol.md): The symbol appears before the instructions for the maneuver.
 - [trailingSymbol](cpmaneuverdisplaystyle/trailingsymbol.md): The symbol appears after the instructions for the maneuver.
 - [instructionOnly](cpmaneuverdisplaystyle/instructiononly.md): Only the instructions appear for the maneuver.
 - [symbolOnly](cpmaneuverdisplaystyle/symbolonly.md): Only the symbol appears for the maneuver.
 
-### Initializers
+### Creating a display style
 
 - [init(rawValue:)](cpmaneuverdisplaystyle/init%28rawvalue_%29.md): Initializes a maneuver display style using the specified raw value.
 
@@ -43,7 +43,7 @@ struct CPManeuverDisplayStyle
 
 ## See Also
 
-### Setting the Display Style
+### Configuring the map’s appearance
 
 - [mapTemplate(\_:displayStyleFor:)](cpmaptemplatedelegate/maptemplate%28__displaystylefor_%29.md): Asks the delegate for the maneuver’s display style.
 
@@ -63,7 +63,7 @@ enum CPManeuverDisplayStyle : NSInteger;
 
 ## Topics
 
-### Display Styles
+### Getting the display styles
 
 - [CPManeuverDisplayStyleDefault](cpmaneuverdisplaystyle/cpmaneuverdisplaystyledefault.md): The default display style for the maneuver.
 - [CPManeuverDisplayStyleLeadingSymbol](cpmaneuverdisplaystyle/leadingsymbol.md): The symbol appears before the instructions for the maneuver.
@@ -73,6 +73,6 @@ enum CPManeuverDisplayStyle : NSInteger;
 
 ## See Also
 
-### Setting the Display Style
+### Configuring the map’s appearance
 
 - [mapTemplate:displayStyleForManeuver:](cpmaptemplatedelegate/maptemplate%28__displaystylefor_%29.md): Asks the delegate for the maneuver’s display style.

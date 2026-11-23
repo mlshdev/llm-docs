@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingtemplate/shared
 
 # shared (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Type Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The Now Playing template the system provides.
+The shared Now Playing template for you to configure and display.
 
 ## Declaration
 
@@ -15,13 +15,11 @@ The Now Playing template the system provides.
 class var shared: CPNowPlayingTemplate { get }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-You do not create instances of `CPNowPlayingTemplate` directly. Instead, use this property to access the shared Now Playing template that CarPlay provides, and then configure its properties accordingly.
-
-You must present this shared instance when your app needs to display Now Playing information. For example, in response to the user tapping a playable item. When CarPlay displays Now Playing information for your app, it presents this shared instance.
+Use this property to access the singleton `CPNowPlayingTemplate` object and configure it. At launch time, configure this instance and register an observer to support features like the Album Artist and Up Next button. While your app is running, you can present the template directly from your interface to reflect the currently playing item. For example, if someone plays an album, you might show this interface so the person can monitor playback and see upcoming tracks. The system can also present your app’s shared Now Playing interface from the Now Playing app.
 
 # sharedTemplate (Objective-C)
 
@@ -29,7 +27,7 @@ You must present this shared instance when your app needs to display Now Playing
 **Kind:** Type Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The Now Playing template the system provides.
+The shared Now Playing template for you to configure and display.
 
 ## Declaration
 
@@ -37,10 +35,8 @@ The Now Playing template the system provides.
 @property (class, nonatomic, strong, readonly) CPNowPlayingTemplate * sharedTemplate;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-You do not create instances of `CPNowPlayingTemplate` directly. Instead, use this property to access the shared Now Playing template that CarPlay provides, and then configure its properties accordingly.
-
-You must present this shared instance when your app needs to display Now Playing information. For example, in response to the user tapping a playable item. When CarPlay displays Now Playing information for your app, it presents this shared instance.
+Use this property to access the singleton `CPNowPlayingTemplate` object and configure it. At launch time, configure this instance and register an observer to support features like the Album Artist and Up Next button. While your app is running, you can present the template directly from your interface to reflect the currently playing item. For example, if someone plays an album, you might show this interface so the person can monitor playback and see upcoming tracks. The system can also present your app’s shared Now Playing interface from the Now Playing app.

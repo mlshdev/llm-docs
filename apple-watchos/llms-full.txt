@@ -1,9 +1,9 @@
-# Apple watchOS snapshot-057e837b5f7a: full documentation
+# Apple watchOS snapshot-a77e67da8d8e: full documentation
 
 Source: https://developer.apple.com/watchos/
-Catalog snapshot: 057e837b5f7a4453d91bdf0ef930b1b32d547a4244aa854d0b0fbabbed1d67be
-Content digest: d6e9acf1ad1b5da3a9ecede2a7f158c22ad490dbd230b0cebb82a1f788fef828
-Captured at: 2026-11-08T22:37:20.768Z
+Catalog snapshot: a77e67da8d8e6a14c754d35a4c8f15d7ee5701d913f5bc2aaec9d3995559645b
+Content digest: d2c5b349e76394b73cdb40a7a19306f3b00bedf048ceb8671ef4a6aca536eafd
+Captured at: 2026-11-22T23:58:10.730Z
 
 # Document: WatchKit
 
@@ -30786,6 +30786,14 @@ A Boolean value that indicates whether the water lock is enabled.
 var isWaterLockEnabled: Bool { get }
 ```
 
+<a id="Discussion"></a>
+
+## Discussion
+
+> **Warning**
+
+>  Access this property only from the main thread. Accessing it from a background thread crashes your app.
+
 ## See Also
 
 ### Accessing Water Resistance and Lock
@@ -30807,6 +30815,14 @@ A Boolean value that indicates whether the water lock is enabled.
 ```objectivec
 @property (nonatomic, readonly, getter=isWaterLockEnabled) BOOL waterLockEnabled;
 ```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+> **Warning**
+
+>  Access this property only from the main thread. Accessing it from a background thread crashes your app.
 
 ## See Also
 
@@ -57303,7 +57319,7 @@ For issues not mentioned in release notes, file bugs through [Feedback Assistant
 
 ### watchOS 27
 
-- [watchOS 27.3 Beta Release Notes](watchos-release-notes/watchos-27_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [watchOS 27.3 Beta 2 Release Notes](watchos-release-notes/watchos-27_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [watchOS 27.2 Release Notes](watchos-release-notes/watchos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [watchOS 27 Release Notes](watchos-release-notes/watchos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
@@ -60111,7 +60127,7 @@ The watchOS 27 SDK provides support to develop watchOS apps for Apple Watch devi
 
 ### watchOS 27
 
-- [watchOS 27.3 Beta Release Notes](watchos-27_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [watchOS 27.3 Beta 2 Release Notes](watchos-27_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [watchOS 27.2 Release Notes](watchos-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 # Document: watchOS 27.2 Release Notes
@@ -60154,16 +60170,16 @@ The watchOS 27.2 SDK provides support to develop watchOS apps for Apple Watch de
 
 ### watchOS 27
 
-- [watchOS 27.3 Beta Release Notes](watchos-27_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [watchOS 27.3 Beta 2 Release Notes](watchos-27_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [watchOS 27 Release Notes](watchos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
-# Document: watchOS 27.3 Beta Release Notes
+# Document: watchOS 27.3 Beta 2 Release Notes
 
 Source path: documentation/watchos-release-notes/watchos-27_3-release-notes
 Canonical documentation: https://developer.apple.com/documentation/watchos-release-notes/watchos-27_3-release-notes
 Description: Kind: Article
 
-# watchOS 27.3 Beta Release Notes
+# watchOS 27.3 Beta 2 Release Notes
 
 **Kind:** Article
 
@@ -60173,7 +60189,7 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The watchOS 27.3 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 27.3 beta. The SDK comes bundled with Xcode 27.3. For information on the compatibility requirements for Xcode 27.3, see [Xcode 27.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_3-release-notes).
+The watchOS 27.3 SDK provides support to develop watchOS apps for Apple Watch devices running watchOS 27.3 beta 2. The SDK comes bundled with Xcode 27.3. For information on the compatibility requirements for Xcode 27.3, see [Xcode 27.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_3-release-notes).
 
 <a id="StoreKit-Testing-in-Xcode"></a>
 
@@ -60184,14 +60200,7 @@ The watchOS 27.3 SDK provides support to develop watchOS apps for Apple Watch de
 #### Resolved Issues
 
 - Fixed: Making an in-app purchase for a subscription that is a member of a subscription bundle incorrectly allows the user to unbundle instead of throwing an error. (186018916)
-
-<a id="Known-Issues"></a>
-
-#### Known Issues
-
-- When you launch an app that uses `SKTestSession` for the first time, some StoreKit Test API calls might hang. (186670057) (FB24651858)
-
-  **Workaround:** Set a StoreKit configuration file in your scheme’s run options, then rerun the tests.
+- Fixed: When you launch an app that uses `SKTestSession` for the first time, some StoreKit Test API calls might hang. (186670057) (FB24651858)
 
 ## See Also
 

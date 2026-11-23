@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinterfacecontroller
 
 # CPInterfaceController (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Class  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-A controller that manages the templates for constructing a scene’s user interface.
+The type you use to present your app’s CarPlay interface and change what appears on the vehicle’s display.
 
 ## Declaration
 
@@ -15,56 +15,72 @@ A controller that manages the templates for constructing a scene’s user interf
 @MainActor class CPInterfaceController
 ```
 
+## Mentioned In
+
+- [Building your app’s initial CarPlay interface](building-your-apps-initial-carplay-interface.md)
+
 <a id="overview"></a>
 
 ## Overview
 
-An interface controller manages one or more templates in the navigation hierarchy. You don’t create the interface controller. Instead, CarPlay creates one for you and passes it to the delegate of [CPTemplateApplicationScene](cptemplateapplicationscene.md) when the scene connects.
+When someone launches your app, CarPlay instantiates your app’s main scene so you can display your interface. Instead of creating your interface from views, you create it from system-provided templates, which specify how to lay out and present your content on the vehicle’s display. To display the templates you create, call the methods of the `CPInterfaceController` object your scene provides. The interface controller handles the presentation of your templates on the vehicle display, adjusting your content as needed to fit on different display sizes.
 
-After receiving the controller, store a reference to it in your app. Then set the root template by calling the [setRootTemplate(\_:animated:completion:)](cpinterfacecontroller/setroottemplate%28__animated_completion_%29.md) method. To display another template in the navigation hierarchy, call [pushTemplate(\_:animated:completion:)](cpinterfacecontroller/pushtemplate%28__animated_completion_%29.md), and use [popTemplate(animated:completion:)](cpinterfacecontroller/poptemplate%28animated_completion_%29.md) to remove the top-most template.
+You don’t create a `CPInterfaceController` object directly. After creating your app’s main scene, the system delivers the interface controller to the scene’s delegate object. You can also retrieve the interface controller from the scene’s [interfaceController](cptemplateapplicationscene/interfacecontroller.md) property at other times. Use only the provided interface controller to display the content for your app’s main scene.
 
-You also use the interface controller to display a single template modally. Call [presentTemplate(\_:animated:completion:)](cpinterfacecontroller/presenttemplate%28__animated_completion_%29.md) to display the modal template, and call [dismissTemplate(animated:completion:)](cpinterfacecontroller/dismisstemplate%28animated_completion_%29.md) to dismiss it.
+CarPlay apps use a navigation-style interface, which uses a stack-based approach to manage your content. At startup, call the [setRootTemplate(\_:animated:completion:)](cpinterfacecontroller/setroottemplate%28__animated_completion_%29.md) method to install the template with your app’s main content. This template sits at the bottom of the stack and is the starting point for navigating your content. To navigate one level deeper into your content, call the interface controller’s [pushTemplate(\_:animated:completion:)](cpinterfacecontroller/pushtemplate%28__animated_completion_%29.md) method to push a new template onto the stack and display its content. To return to the previous template, call the [popTemplate(animated:completion:)](cpinterfacecontroller/poptemplate%28animated_completion_%29.md) method to remove the top-most template from the stack. You can pop any template off the stack except the root template.
+
+In addition to displaying content in your app’s navigation interface, you can present specific templates modally or as an overlay. You can present action sheet, alert, and voice-control templates modally. You can also present the voice-control template using an overlay.
+
+> **Note**
+
+> In navigation apps, dashboard and instrument cluster scenes present their content using [CPDashboardController](cpdashboardcontroller.md) or [CPInstrumentClusterController](cpinstrumentclustercontroller.md) types instead of `CPInterfaceControllerDelegate`.
 
 ## Topics
 
-### Configuring the Interface Controller
+### Installing and removing templates
 
-- [delegate](cpinterfacecontroller/delegate.md): An object that serves as the delegate to the interface controller.
-- [CPInterfaceControllerDelegate](cpinterfacecontrollerdelegate.md): The interface that an object implements to serve as a delegate to an interface controller.
-- [prefersDarkUserInterfaceStyle](cpinterfacecontroller/prefersdarkuserinterfacestyle.md): A Boolean value that determines whether the system draws the user interface in Dark Mode.
-- [setRootTemplate(\_:animated:completion:)](cpinterfacecontroller/setroottemplate%28__animated_completion_%29.md): Sets the root template of the navigation hierarchy.
+- [setRootTemplate(\_:animated:completion:)](cpinterfacecontroller/setroottemplate%28__animated_completion_%29.md): Installs the root template of your app’s navigation hierarchy.
+- [pushTemplate(\_:animated:completion:)](cpinterfacecontroller/pushtemplate%28__animated_completion_%29.md): Adds the specified template to the navigation hierarchy and displays it.
+- [popTemplate(animated:completion:)](cpinterfacecontroller/poptemplate%28animated_completion_%29.md): Removes the top-most template from your app’s navigation hierarchy.
+- [popToRootTemplate(animated:completion:)](cpinterfacecontroller/poptoroottemplate%28animated_completion_%29.md): Removes all of the templates from your app’s navigation hierarchy except the root template.
+- [pop(to:animated:completion:)](cpinterfacecontroller/pop%28to_animated_completion_%29.md): Removes templates from your app’s navigation hierarchy until the specified template becomes visible.
 
-### Accessing the Trait Collection
+### Responding to interface changes
 
+- [delegate](cpinterfacecontroller/delegate.md): A custom object you use to respond when templates appear and disappear.
+- [CPInterfaceControllerDelegate](cpinterfacecontrollerdelegate.md): The methods you implement to observe the addition and removal of templates in your app’s interface.
+
+### Configuring interface-related details
+
+- [prefersDarkUserInterfaceStyle](cpinterfacecontroller/prefersdarkuserinterfacestyle.md): A Boolean value that indicates whether you prefer Dark Mode for your interface.
 - [carTraitCollection](cpinterfacecontroller/cartraitcollection.md): The trait collection of the vehicle’s primary screen.
 
-### Accessing Templates
+### Getting the current templates
 
 - [rootTemplate](cpinterfacecontroller/roottemplate.md): The root template in the navigation hierarchy.
-- [topTemplate](cpinterfacecontroller/toptemplate.md): The top-most template in the navigation hierarchy.
-- [templates](cpinterfacecontroller/templates.md): The contents of the navigation hierarchy.
+- [topTemplate](cpinterfacecontroller/toptemplate.md): The top-most template in your app’s navigation hierarchy.
+- [templates](cpinterfacecontroller/templates.md): The templates currently in your app’s navigation hierarchy.
 
-### Adding and Removing Templates
+### Presenting a template modally
 
-- [pushTemplate(\_:animated:completion:)](cpinterfacecontroller/pushtemplate%28__animated_completion_%29.md): Adds the specified template to the navigation hierarchy and displays it.
-- [popTemplate(animated:completion:)](cpinterfacecontroller/poptemplate%28animated_completion_%29.md): Removes the top-most template from the navigation hierarchy.
-- [popToRootTemplate(animated:completion:)](cpinterfacecontroller/poptoroottemplate%28animated_completion_%29.md): Removes all of the templates from the navigation hierarchy except the root template.
-- [pop(to:animated:completion:)](cpinterfacecontroller/pop%28to_animated_completion_%29.md): Removes each template from the navigation hierarchy until the specified template becomes visible.
+- [presentTemplate(\_:animated:completion:)](cpinterfacecontroller/presenttemplate%28__animated_completion_%29.md): Presents the template modally over your app’s navigation interface.
+- [dismissTemplate(animated:completion:)](cpinterfacecontroller/dismisstemplate%28animated_completion_%29.md): Dismisses the template you previously presented modally.
+- [presentedTemplate](cpinterfacecontroller/presentedtemplate.md): The current modally-presented template.
 
-### Displaying Templates Modally
+### Showing a template as an overlay
 
-- [presentTemplate(\_:animated:completion:)](cpinterfacecontroller/presenttemplate%28__animated_completion_%29.md): Presents a template modally.
-- [dismissTemplate(animated:completion:)](cpinterfacecontroller/dismisstemplate%28animated_completion_%29.md): Dismisses a modal template.
-- [presentedTemplate](cpinterfacecontroller/presentedtemplate.md): The interface controller’s current modal template.
+- [showOverlayTemplate(\_:animated:completion:)](cpinterfacecontroller/showoverlaytemplate%28__animated_completion_%29.md): Displays a voice-control template as an overlay on top of your app’s current content.
+- [hideOverlayTemplate(animated:completion:)](cpinterfacecontroller/hideoverlaytemplate%28animated_completion_%29.md): Dismisses the template previously displayed as an overlay.
 
 ### Deprecated
 
-- [Deprecated Symbols](cpinterfacecontroller-deprecated-symbols.md): Review unsupported symbols and their replacements.
-
-### Instance Methods
-
-- [hideOverlayTemplate(animated:completion:)](cpinterfacecontroller/hideoverlaytemplate%28animated_completion_%29.md): Dismiss the current overlay template, optionally animating the dismissal.
-- [showOverlayTemplate(\_:animated:completion:)](cpinterfacecontroller/showoverlaytemplate%28__animated_completion_%29.md): Show a template as an overlay over the current template hierarchy. Only one overlay template may be shown at a time.
+- [dismissTemplate(animated:)](cpinterfacecontroller/dismisstemplate%28animated_%29.md): Deprecated. Dismiss the current modally-presented template, optionally animating the dismissal.
+- [pop(to:animated:)](cpinterfacecontroller/pop%28to_animated_%29.md): Deprecated. Pop back to a specified template.
+- [popTemplate(animated:)](cpinterfacecontroller/poptemplate%28animated_%29.md): Deprecated. Pop back a single level in the template navigation hierarchy.
+- [popToRootTemplate(animated:)](cpinterfacecontroller/poptoroottemplate%28animated_%29.md): Deprecated. Pop back to the first template in the template navigation hierarchy.
+- [presentTemplate(\_:animated:)](cpinterfacecontroller/presenttemplate%28__animated_%29.md): Deprecated. Present a template modally over the navigation hierarchy. Only one template may be presented at a time.
+- [pushTemplate(\_:animated:)](cpinterfacecontroller/pushtemplate%28__animated_%29.md): Deprecated. Push a new template onto the template navigation hierarchy, showing it immediately.
+- [setRootTemplate(\_:animated:)](cpinterfacecontroller/setroottemplate%28__animated_%29.md): Deprecated. Set the root template. If no existing templates exist in the template navigation hierarchy, the animated flag will be ignored. If there is an existing template navigation hierarchy, the existing stack will be replaced by the new root template.
 
 ## Relationships
 
@@ -84,9 +100,13 @@ You also use the interface controller to display a single template modally. Call
 
 ## See Also
 
-### Accessing the Interface Controller
+### App management
 
-- [interfaceController](cptemplateapplicationscene/interfacecontroller.md): The controller that manages the scene’s user interface.
+- [Building your app’s initial CarPlay interface](building-your-apps-initial-carplay-interface.md): Build the interface for your CarPlay app using scenes and templates from the CarPlay framework.
+- [CPTemplateApplicationScene](cptemplateapplicationscene.md): A CarPlay scene that manages your app’s interface on the vehicle’s center display.
+- [CPTemplateApplicationSceneDelegate](cptemplateapplicationscenedelegate.md): Methods for responding to life-cycle events in your app’s scene.
+- [CPSessionConfiguration](cpsessionconfiguration.md): An object that keeps you informed of changes to the CarPlay environment.
+- [CPWindow](cpwindow.md): A type that navigation apps use to present their map content.
 
 # CPInterfaceController (Objective-C)
 
@@ -94,7 +114,7 @@ You also use the interface controller to display a single template modally. Call
 **Kind:** Class  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-A controller that manages the templates for constructing a scene’s user interface.
+The type you use to present your app’s CarPlay interface and change what appears on the vehicle’s display.
 
 ## Declaration
 
@@ -102,56 +122,72 @@ A controller that manages the templates for constructing a scene’s user interf
 @interface CPInterfaceController : NSObject
 ```
 
+## Mentioned In
+
+- [Building your app’s initial CarPlay interface](building-your-apps-initial-carplay-interface.md)
+
 <a id="overview"></a>
 
 ## Overview
 
-An interface controller manages one or more templates in the navigation hierarchy. You don’t create the interface controller. Instead, CarPlay creates one for you and passes it to the delegate of [CPTemplateApplicationScene](cptemplateapplicationscene.md) when the scene connects.
+When someone launches your app, CarPlay instantiates your app’s main scene so you can display your interface. Instead of creating your interface from views, you create it from system-provided templates, which specify how to lay out and present your content on the vehicle’s display. To display the templates you create, call the methods of the `CPInterfaceController` object your scene provides. The interface controller handles the presentation of your templates on the vehicle display, adjusting your content as needed to fit on different display sizes.
 
-After receiving the controller, store a reference to it in your app. Then set the root template by calling the [setRootTemplate:animated:completion:](cpinterfacecontroller/setroottemplate%28__animated_completion_%29.md) method. To display another template in the navigation hierarchy, call [pushTemplate:animated:completion:](cpinterfacecontroller/pushtemplate%28__animated_completion_%29.md), and use [popTemplateAnimated:completion:](cpinterfacecontroller/poptemplate%28animated_completion_%29.md) to remove the top-most template.
+You don’t create a `CPInterfaceController` object directly. After creating your app’s main scene, the system delivers the interface controller to the scene’s delegate object. You can also retrieve the interface controller from the scene’s [interfaceController](cptemplateapplicationscene/interfacecontroller.md) property at other times. Use only the provided interface controller to display the content for your app’s main scene.
 
-You also use the interface controller to display a single template modally. Call [presentTemplate:animated:completion:](cpinterfacecontroller/presenttemplate%28__animated_completion_%29.md) to display the modal template, and call [dismissTemplateAnimated:completion:](cpinterfacecontroller/dismisstemplate%28animated_completion_%29.md) to dismiss it.
+CarPlay apps use a navigation-style interface, which uses a stack-based approach to manage your content. At startup, call the [setRootTemplate:animated:completion:](cpinterfacecontroller/setroottemplate%28__animated_completion_%29.md) method to install the template with your app’s main content. This template sits at the bottom of the stack and is the starting point for navigating your content. To navigate one level deeper into your content, call the interface controller’s [pushTemplate:animated:completion:](cpinterfacecontroller/pushtemplate%28__animated_completion_%29.md) method to push a new template onto the stack and display its content. To return to the previous template, call the [popTemplateAnimated:completion:](cpinterfacecontroller/poptemplate%28animated_completion_%29.md) method to remove the top-most template from the stack. You can pop any template off the stack except the root template.
+
+In addition to displaying content in your app’s navigation interface, you can present specific templates modally or as an overlay. You can present action sheet, alert, and voice-control templates modally. You can also present the voice-control template using an overlay.
+
+> **Note**
+
+> In navigation apps, dashboard and instrument cluster scenes present their content using [CPDashboardController](cpdashboardcontroller.md) or [CPInstrumentClusterController](cpinstrumentclustercontroller.md) types instead of `CPInterfaceControllerDelegate`.
 
 ## Topics
 
-### Configuring the Interface Controller
+### Installing and removing templates
 
-- [delegate](cpinterfacecontroller/delegate.md): An object that serves as the delegate to the interface controller.
-- [CPInterfaceControllerDelegate](cpinterfacecontrollerdelegate.md): The interface that an object implements to serve as a delegate to an interface controller.
-- [prefersDarkUserInterfaceStyle](cpinterfacecontroller/prefersdarkuserinterfacestyle.md): A Boolean value that determines whether the system draws the user interface in Dark Mode.
-- [setRootTemplate:animated:completion:](cpinterfacecontroller/setroottemplate%28__animated_completion_%29.md): Sets the root template of the navigation hierarchy.
+- [setRootTemplate:animated:completion:](cpinterfacecontroller/setroottemplate%28__animated_completion_%29.md): Installs the root template of your app’s navigation hierarchy.
+- [pushTemplate:animated:completion:](cpinterfacecontroller/pushtemplate%28__animated_completion_%29.md): Adds the specified template to the navigation hierarchy and displays it.
+- [popTemplateAnimated:completion:](cpinterfacecontroller/poptemplate%28animated_completion_%29.md): Removes the top-most template from your app’s navigation hierarchy.
+- [popToRootTemplateAnimated:completion:](cpinterfacecontroller/poptoroottemplate%28animated_completion_%29.md): Removes all of the templates from your app’s navigation hierarchy except the root template.
+- [popToTemplate:animated:completion:](cpinterfacecontroller/pop%28to_animated_completion_%29.md): Removes templates from your app’s navigation hierarchy until the specified template becomes visible.
 
-### Accessing the Trait Collection
+### Responding to interface changes
 
+- [delegate](cpinterfacecontroller/delegate.md): A custom object you use to respond when templates appear and disappear.
+- [CPInterfaceControllerDelegate](cpinterfacecontrollerdelegate.md): The methods you implement to observe the addition and removal of templates in your app’s interface.
+
+### Configuring interface-related details
+
+- [prefersDarkUserInterfaceStyle](cpinterfacecontroller/prefersdarkuserinterfacestyle.md): A Boolean value that indicates whether you prefer Dark Mode for your interface.
 - [carTraitCollection](cpinterfacecontroller/cartraitcollection.md): The trait collection of the vehicle’s primary screen.
 
-### Accessing Templates
+### Getting the current templates
 
 - [rootTemplate](cpinterfacecontroller/roottemplate.md): The root template in the navigation hierarchy.
-- [topTemplate](cpinterfacecontroller/toptemplate.md): The top-most template in the navigation hierarchy.
-- [templates](cpinterfacecontroller/templates.md): The contents of the navigation hierarchy.
+- [topTemplate](cpinterfacecontroller/toptemplate.md): The top-most template in your app’s navigation hierarchy.
+- [templates](cpinterfacecontroller/templates.md): The templates currently in your app’s navigation hierarchy.
 
-### Adding and Removing Templates
+### Presenting a template modally
 
-- [pushTemplate:animated:completion:](cpinterfacecontroller/pushtemplate%28__animated_completion_%29.md): Adds the specified template to the navigation hierarchy and displays it.
-- [popTemplateAnimated:completion:](cpinterfacecontroller/poptemplate%28animated_completion_%29.md): Removes the top-most template from the navigation hierarchy.
-- [popToRootTemplateAnimated:completion:](cpinterfacecontroller/poptoroottemplate%28animated_completion_%29.md): Removes all of the templates from the navigation hierarchy except the root template.
-- [popToTemplate:animated:completion:](cpinterfacecontroller/pop%28to_animated_completion_%29.md): Removes each template from the navigation hierarchy until the specified template becomes visible.
+- [presentTemplate:animated:completion:](cpinterfacecontroller/presenttemplate%28__animated_completion_%29.md): Presents the template modally over your app’s navigation interface.
+- [dismissTemplateAnimated:completion:](cpinterfacecontroller/dismisstemplate%28animated_completion_%29.md): Dismisses the template you previously presented modally.
+- [presentedTemplate](cpinterfacecontroller/presentedtemplate.md): The current modally-presented template.
 
-### Displaying Templates Modally
+### Showing a template as an overlay
 
-- [presentTemplate:animated:completion:](cpinterfacecontroller/presenttemplate%28__animated_completion_%29.md): Presents a template modally.
-- [dismissTemplateAnimated:completion:](cpinterfacecontroller/dismisstemplate%28animated_completion_%29.md): Dismisses a modal template.
-- [presentedTemplate](cpinterfacecontroller/presentedtemplate.md): The interface controller’s current modal template.
+- [showOverlayTemplate:animated:completion:](cpinterfacecontroller/showoverlaytemplate%28__animated_completion_%29.md): Displays a voice-control template as an overlay on top of your app’s current content.
+- [hideOverlayTemplateAnimated:completion:](cpinterfacecontroller/hideoverlaytemplate%28animated_completion_%29.md): Dismisses the template previously displayed as an overlay.
 
 ### Deprecated
 
-- [Deprecated Symbols](cpinterfacecontroller-deprecated-symbols.md): Review unsupported symbols and their replacements.
-
-### Instance Methods
-
-- [hideOverlayTemplateAnimated:completion:](cpinterfacecontroller/hideoverlaytemplate%28animated_completion_%29.md): Dismiss the current overlay template, optionally animating the dismissal.
-- [showOverlayTemplate:animated:completion:](cpinterfacecontroller/showoverlaytemplate%28__animated_completion_%29.md): Show a template as an overlay over the current template hierarchy. Only one overlay template may be shown at a time.
+- [dismissTemplateAnimated:](cpinterfacecontroller/dismisstemplate%28animated_%29.md): Deprecated. Dismiss the current modally-presented template, optionally animating the dismissal.
+- [popToTemplate:animated:](cpinterfacecontroller/pop%28to_animated_%29.md): Deprecated. Pop back to a specified template.
+- [popTemplateAnimated:](cpinterfacecontroller/poptemplate%28animated_%29.md): Deprecated. Pop back a single level in the template navigation hierarchy.
+- [popToRootTemplateAnimated:](cpinterfacecontroller/poptoroottemplate%28animated_%29.md): Deprecated. Pop back to the first template in the template navigation hierarchy.
+- [presentTemplate:animated:](cpinterfacecontroller/presenttemplate%28__animated_%29.md): Deprecated. Present a template modally over the navigation hierarchy. Only one template may be presented at a time.
+- [pushTemplate:animated:](cpinterfacecontroller/pushtemplate%28__animated_%29.md): Deprecated. Push a new template onto the template navigation hierarchy, showing it immediately.
+- [setRootTemplate:animated:](cpinterfacecontroller/setroottemplate%28__animated_%29.md): Deprecated. Set the root template. If no existing templates exist in the template navigation hierarchy, the animated flag will be ignored. If there is an existing template navigation hierarchy, the existing stack will be replaced by the new root template.
 
 ## Relationships
 
@@ -161,6 +197,10 @@ You also use the interface controller to display a single template modally. Call
 
 ## See Also
 
-### Accessing the Interface Controller
+### App management
 
-- [interfaceController](cptemplateapplicationscene/interfacecontroller.md): The controller that manages the scene’s user interface.
+- [Building your app’s initial CarPlay interface](building-your-apps-initial-carplay-interface.md): Build the interface for your CarPlay app using scenes and templates from the CarPlay framework.
+- [CPTemplateApplicationScene](cptemplateapplicationscene.md): A CarPlay scene that manages your app’s interface on the vehicle’s center display.
+- [CPTemplateApplicationSceneDelegate](cptemplateapplicationscenedelegate.md): Methods for responding to life-cycle events in your app’s scene.
+- [CPSessionConfiguration](cpsessionconfiguration.md): An object that keeps you informed of changes to the CarPlay environment.
+- [CPWindow](cpwindow.md): A type that navigation apps use to present their map content.

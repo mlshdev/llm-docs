@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptrafficside/right
 
 # CPTrafficSide.right (Swift)
@@ -17,7 +17,7 @@ case right
 
 ## See Also
 
-### Lane statuses
+### Getting the traffic side
 
 - [CPTrafficSide.left](left.md): Indicates the traffic drives on the left side of the roadway.
 
@@ -37,6 +37,6 @@ CPTrafficSideRight
 
 ## See Also
 
-### Lane statuses
+### Getting the traffic side
 
 - [CPTrafficSideLeft](left.md): Indicates the traffic drives on the left side of the roadway.

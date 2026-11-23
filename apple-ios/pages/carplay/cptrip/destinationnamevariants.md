@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptrip/destinationnamevariants
 
 # destinationNameVariants (Swift)
@@ -23,9 +23,11 @@ You need to provide at least one variant. Present the variant strings as localiz
 
 ## See Also
 
-### Getting Route Choices
+### Deprecated
 
-- [routeChoices](routechoices.md): The list of route choices for the trip.
+- [init(origin:destination:routeChoices:)](init%28origin_destination_routechoices_%29.md): Deprecated. Creates a trip with an origin, destination, and route choices.
+- [origin](origin.md): Deprecated. The trip’s origin.
+- [destination](destination.md): Deprecated. The trip’s destination.
 
 # destinationNameVariants (Objective-C)
 
@@ -49,6 +51,8 @@ You need to provide at least one variant. Present the variant strings as localiz
 
 ## See Also
 
-### Getting Route Choices
+### Deprecated
 
-- [routeChoices](routechoices.md): The list of route choices for the trip.
+- [initWithOrigin:destination:routeChoices:](init%28origin_destination_routechoices_%29.md): Deprecated. Creates a trip with an origin, destination, and route choices.
+- [origin](origin.md): Deprecated. The trip’s origin.
+- [destination](destination.md): Deprecated. The trip’s destination.

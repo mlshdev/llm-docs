@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitem/isenabled
 
 # isEnabled (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+
 
-A Boolean value that indicates if the item is enabled.
+A Boolean value that indicates whether the item is enabled.
 
 ## Declaration
 
@@ -15,18 +15,17 @@ A Boolean value that indicates if the item is enabled.
 var isEnabled: Bool { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The default value is [true](https://developer.apple.com/documentation/swift/true).
+The default value of this property is `true`. Set the property to `false` to disable the item in your list interface. CarPlay doesn’t report interactions with disabled items and changes their appearance to reflect their disabled state.
 
 ## See Also
 
-### Managing Configuration
+### Responding to interactions
 
-- [handler](handler.md): An optional closure that CarPlay invokes when the user selects the list item.
-- [userInfo](userinfo.md): An opaque value for the list item.
+- [handler](handler.md): The closure to run when someone interacts with any part of the list item.
 
 # enabled (Objective-C)
 
@@ -34,7 +33,7 @@ The default value is [true](https://developer.apple.com/documentation/swift/true
 **Kind:** Instance Property  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+
 
-A Boolean value that indicates if the item is enabled.
+A Boolean value that indicates whether the item is enabled.
 
 ## Declaration
 
@@ -42,15 +41,14 @@ A Boolean value that indicates if the item is enabled.
 @property (nonatomic, assign, getter=isEnabled) BOOL enabled;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The default value is [true](https://developer.apple.com/documentation/swift/true).
+The default value of this property is `true`. Set the property to `false` to disable the item in your list interface. CarPlay doesn’t report interactions with disabled items and changes their appearance to reflect their disabled state.
 
 ## See Also
 
-### Managing Configuration
+### Responding to interactions
 
-- [handler](handler.md): An optional closure that CarPlay invokes when the user selects the list item.
-- [userInfo](userinfo.md): An opaque value for the list item.
+- [handler](handler.md): The closure to run when someone interacts with any part of the list item.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpgridbutton/init(titlevariants:image:handler:)
 
 # init(titleVariants:image:handler:) (Swift)
@@ -27,6 +27,13 @@ convenience init(titleVariants: [String], image: UIImage, handler: ((CPGridButto
 
 A newly initialized grid button.
 
+## See Also
+
+### Creating a grid button
+
+- [init(titleVariants:image:messageConfiguration:handler:)](init%28titlevariants_image_messageconfiguration_handler_%29.md): Initialize a button with a title, image, and message configuration.
+- [init(coder:)](init%28coder_%29.md)
+
 # initWithTitleVariants:image:handler: (Objective-C)
 
 **Framework:** CarPlay  
@@ -52,3 +59,9 @@ Creates a grid button with the specified title variants, image, and action handl
 ## Return Value
 
 A newly initialized grid button.
+
+## See Also
+
+### Creating a grid button
+
+- [initWithTitleVariants:image:messageConfiguration:handler:](init%28titlevariants_image_messageconfiguration_handler_%29.md): Initialize a button with a title, image, and message configuration.

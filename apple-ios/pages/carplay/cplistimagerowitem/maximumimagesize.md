@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistimagerowitem/maximumimagesize
 
 # maximumImageSize (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Type Property  
 **Availability:** iOS 14.0+ (deprecated in 26.0) · iPadOS 14.0+ (deprecated in 26.0) · Mac Catalyst 14.0+ (deprecated in 26.0)
 
-The maximum size of an image that an image row can display.
+The expected image size for the grid images in your @c CPListImageRowItem. Images provided will be resized to this size.
 
 > Use +\[CPListImageRowItemElement maximumImageSize\] on an appropriate element
 
@@ -17,20 +17,21 @@ The maximum size of an image that an image row can display.
 class var maximumImageSize: CGSize { get }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-At runtime, use this value to determine the maximum size that CarPlay allows for a single image in an image row.
+To properly size your images, your app should size them to the display scale of the car screen. See -\[CPInterfaceController carTraitCollection\].
 
 ## See Also
 
-### Managing Content
+### Deprecated
 
-- [text](text.md): The list item’s primary text.
-- [gridImages](gridimages.md): Deprecated. The images that appear in the list item’s image row.
-- [update(\_:)](update%28__%29.md): Deprecated. Adds, removes, reorders, or updates the images in the list item’s image row.
-- [CPMaximumNumberOfGridImages](../cpmaximumnumberofgridimages.md): The maximum number of images that an image row can contain.
+- [init(text:images:)](init%28text_images_%29.md): Deprecated. Initialize a list image row item with a text string and an array of @c UIImage for the grid of images.
+- [init(text:images:imageTitles:)](init%28text_images_imagetitles_%29.md): Deprecated. Initialize a list image row item with a text string, an array of @c UIImage for the grid of images, and an array of @c NSString titles, one displayed below each image.
+- [gridImages](gridimages.md): Deprecated. Read-only access to the grid images shown in a row in the cell.
+- [imageTitles](imagetitles.md): Deprecated. The titles displayed for each image in this image row item.
+- [update(\_:)](update%28__%29.md): Deprecated. Update the images displayed in this image row item. If this image row item is already displayed in a list template, this image row item will be automatically reloaded.
 
 # maximumImageSize (Objective-C)
 
@@ -38,7 +39,7 @@ At runtime, use this value to determine the maximum size that CarPlay allows for
 **Kind:** Type Property  
 **Availability:** iOS 14.0+ (deprecated in 26.0) · iPadOS 14.0+ (deprecated in 26.0) · Mac Catalyst 14.0+ (deprecated in 26.0)
 
-The maximum size of an image that an image row can display.
+The expected image size for the grid images in your @c CPListImageRowItem. Images provided will be resized to this size.
 
 > Use +\[CPListImageRowItemElement maximumImageSize\] on an appropriate element
 
@@ -48,17 +49,18 @@ The maximum size of an image that an image row can display.
 @property (class, nonatomic, readonly) CGSize maximumImageSize;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-At runtime, use this value to determine the maximum size that CarPlay allows for a single image in an image row.
+To properly size your images, your app should size them to the display scale of the car screen. See -\[CPInterfaceController carTraitCollection\].
 
 ## See Also
 
-### Managing Content
+### Deprecated
 
-- [text](text.md): The list item’s primary text.
-- [gridImages](gridimages.md): Deprecated. The images that appear in the list item’s image row.
-- [updateImages:](update%28__%29.md): Deprecated. Adds, removes, reorders, or updates the images in the list item’s image row.
-- [CPMaximumNumberOfGridImages](../cpmaximumnumberofgridimages.md): The maximum number of images that an image row can contain.
+- [initWithText:images:](init%28text_images_%29.md): Deprecated. Initialize a list image row item with a text string and an array of @c UIImage for the grid of images.
+- [initWithText:images:imageTitles:](init%28text_images_imagetitles_%29.md): Deprecated. Initialize a list image row item with a text string, an array of @c UIImage for the grid of images, and an array of @c NSString titles, one displayed below each image.
+- [gridImages](gridimages.md): Deprecated. Read-only access to the grid images shown in a row in the cell.
+- [imageTitles](imagetitles.md): Deprecated. The titles displayed for each image in this image row item.
+- [updateImages:](update%28__%29.md): Deprecated. Update the images displayed in this image row item. If this image row item is already displayed in a list template, this image row item will be automatically reloaded.

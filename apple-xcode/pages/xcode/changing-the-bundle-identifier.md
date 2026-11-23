@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/changing-the-bundle-identifier
 
 # Changing the bundle identifier
@@ -85,7 +85,7 @@ Update any other settings in App Store Connect that use the bundle ID, such as i
 
 If you use manual provisioning, update the App ID in those provisioning files to match the bundle ID in your project. For more information, see [Edit, download, or delete provisioning profiles](https://developer.apple.com/help/account/provisioning-profiles/edit-download-or-delete-profiles) in Developer Account Help. After you update your provisioning profile in your developer account, you can download it from Xcode \> Settings \> Apple Accounts, using the Download Manual Profiles button when you select your account.
 
-If you toggle the “Automatically manage signing” checkbox in the Signing & Capabilities pane, Xcode updates your provisioning profiles for you.
+If you select the “Automatically manage signing” checkbox in the Signing & Capabilities pane, Xcode updates your provisioning profiles for you.
 
 ## See Also
 

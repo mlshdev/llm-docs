@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpdashboardbutton/init(titlevariants:subtitlevariants:image:handler:)
 
 # init(titleVariants:subtitleVariants:image:handler:) (Swift)
@@ -35,6 +35,12 @@ A button that displays the provided title, subtitle, and image.
 You must provide at least one, nonzero length title variant, and an image for the button to display. CarPlay displays the first variant that fits into the available screen space, so arrange your title and subtitle variant arrays from most- to least-preferred. Provide the variant strings as localized, displayable content.
 
 The maximum supported image size is 30 x 30 points.
+
+## See Also
+
+### Creating a dashboard button
+
+- [init(coder:)](init%28coder_%29.md)
 
 # initWithTitleVariants:subtitleVariants:image:handler: (Objective-C)
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationwaypoint/name
 
 # name (Swift)
@@ -15,6 +15,12 @@ name is an optional display name for the waypoint.
 var name: String? { get }
 ```
 
+## See Also
+
+### Deprecated
+
+- [address](address.md): Deprecated. address is an optional address string for the waypoint, formatted with newline characters separating each address component. Example: “Apple Inc.\\n1 Apple Park Way\\nCupertino, CA 95014\\nUnited States”
+
 # name (Objective-C)
 
 **Framework:** CarPlay  
@@ -28,3 +34,9 @@ name is an optional display name for the waypoint.
 ```objectivec
 @property (nonatomic, readonly, nullable) NSString * name;
 ```
+
+## See Also
+
+### Deprecated
+
+- [address](address.md): Deprecated. address is an optional address string for the waypoint, formatted with newline characters separating each address component. Example: “Apple Inc.\\n1 Apple Park Way\\nCupertino, CA 95014\\nUnited States”

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpplaybackconfiguration/presentation
 
 # CPPlaybackConfiguration.Presentation (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Enumeration  
 **Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.4+
 
-The style of media presentation shown after selecting the item.
+Constants that specify the presentation style for the media of a selected item.
 
 ## Declaration
 
@@ -15,13 +15,19 @@ The style of media presentation shown after selecting the item.
 enum Presentation
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+These constants specify the presentation style to apply to media items in a list when someone selects them. The system can present system media interfaces automatically in response to interactions. For example, when someone selects an audio item, the system can show your app’s Now Playing interface and configure it to display the item. If you prefer to present your app’s media interface, choose the [CPPlaybackConfiguration.Presentation.none](presentation/none.md) option and configure the interface using your custom code.
+
 ## Topics
 
 ### Enumeration Cases
 
-- [CPPlaybackConfiguration.Presentation.audio](presentation/audio.md)
-- [CPPlaybackConfiguration.Presentation.none](presentation/none.md)
-- [CPPlaybackConfiguration.Presentation.video](presentation/video.md)
+- [CPPlaybackConfiguration.Presentation.audio](presentation/audio.md): An option to display the Now Playing interface automatically and configure it with the item.
+- [CPPlaybackConfiguration.Presentation.none](presentation/none.md): An option to handle media selections from your app.
+- [CPPlaybackConfiguration.Presentation.video](presentation/video.md): An option to display the system video player automatically if it’s available and supported.
 
 ### Initializers
 
@@ -44,7 +50,7 @@ enum Presentation
 **Kind:** Enumeration  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-The style of media presentation shown after selecting the item.
+Constants that specify the presentation style for the media of a selected item.
 
 ## Declaration
 
@@ -52,10 +58,16 @@ The style of media presentation shown after selecting the item.
 enum CPPlaybackPresentation : NSInteger;
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+These constants specify the presentation style to apply to media items in a list when someone selects them. The system can present system media interfaces automatically in response to interactions. For example, when someone selects an audio item, the system can show your app’s Now Playing interface and configure it to display the item. If you prefer to present your app’s media interface, choose the [CPPlaybackPresentationNone](presentation/none.md) option and configure the interface using your custom code.
+
 ## Topics
 
 ### Enumeration Cases
 
-- [CPPlaybackPresentationAudio](presentation/audio.md)
-- [CPPlaybackPresentationNone](presentation/none.md)
-- [CPPlaybackPresentationVideo](presentation/video.md)
+- [CPPlaybackPresentationAudio](presentation/audio.md): An option to display the Now Playing interface automatically and configure it with the item.
+- [CPPlaybackPresentationNone](presentation/none.md): An option to handle media selections from your app.
+- [CPPlaybackPresentationVideo](presentation/video.md): An option to display the system video player automatically if it’s available and supported.

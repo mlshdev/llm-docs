@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes/tn3161-inside-code-signing-certificates
 
 # TN3161: Inside Code Signing: Certificates
@@ -291,7 +291,7 @@ When you sign code, you pass `codesign` the name of a code-signing identity usin
 
 By default `codesign` searches all keychains for a code-signing identity whose certificate matches the supplied name.  If multiple identities match, `codesign` complains about the ambiguity.  To resolve this, either pass in the full name or pass in the SHA-1 hash of the identity’s certificate.
 
-The `codesign` man page explains this search process in detail.  For general information about man pages, see doc://com.apple.documentation/documentation/os/reading-unix-manual-pages.
+The `codesign` man page explains this search process in detail.  For general information about man pages, see [TN3215: Reading man pages](tn3215-reading-man-pages.md).
 
 When searching for code-signing identities, `codesign` checks certain aspects of each identity’s certificate:
 

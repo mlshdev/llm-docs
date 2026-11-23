@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppanelbuttonconfiguration
 
 # CPPanelButtonConfiguration (Swift)
@@ -23,12 +23,12 @@ The `CPPanelButtonConfiguration` type defines the default behaviors for button c
 
 ## Topics
 
-### Initializers
+### Initializing the panel
 
-- [init(coder:)](cppanelbuttonconfiguration/init%28coder_%29.md)
 - [init(primaryAction:secondaryAction:)](cppanelbuttonconfiguration/init%28primaryaction_secondaryaction_%29.md): Initializes the button configuration object with the specified buttons.
+- [init(coder:)](cppanelbuttonconfiguration/init%28coder_%29.md)
 
-### Instance Properties
+### Getting the action buttons
 
 - [primaryAction](cppanelbuttonconfiguration/primaryaction.md): The primary action button for the panel.
 - [secondaryAction](cppanelbuttonconfiguration/secondaryaction.md): An optional action button to display in the panel.
@@ -54,6 +54,17 @@ The `CPPanelButtonConfiguration` type defines the default behaviors for button c
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
 
+## See Also
+
+### Common types
+
+- [CPTemplate](cptemplate.md): An abstract base class for interface templates.
+- [CPTextButton](cptextbutton.md): A button that displays a stylized title.
+- [CPButton](cpbutton.md): A button that displays an image and invokes a handler when the user taps it.
+- [CPImageSet](cpimageset.md): Light and dark representations of an image.
+- [CPPanel](cppanel.md): A type that provides the common behaviors for panels you display on top of your app’s content.
+- [CPPanelItem](cppanelitem.md): A type that provides the common behaviors for items you display in a section of a panel.
+
 # CPPanelButtonConfiguration (Objective-C)
 
 **Framework:** CarPlay  
@@ -76,14 +87,14 @@ The `CPPanelButtonConfiguration` type defines the default behaviors for button c
 
 ## Topics
 
-### Instance Properties
+### Initializing the panel
+
+- [initWithPrimaryAction:secondaryAction:](cppanelbuttonconfiguration/init%28primaryaction_secondaryaction_%29.md): Initializes the button configuration object with the specified buttons.
+
+### Getting the action buttons
 
 - [primaryAction](cppanelbuttonconfiguration/primaryaction.md): The primary action button for the panel.
 - [secondaryAction](cppanelbuttonconfiguration/secondaryaction.md): An optional action button to display in the panel.
-
-### Instance Methods
-
-- [initWithPrimaryAction:secondaryAction:](cppanelbuttonconfiguration/init%28primaryaction_secondaryaction_%29.md): Initializes the button configuration object with the specified buttons.
 
 ## Relationships
 
@@ -98,3 +109,14 @@ The `CPPanelButtonConfiguration` type defines the default behaviors for button c
 ### Conforms To
 
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
+
+## See Also
+
+### Common types
+
+- [CPTemplate](cptemplate.md): An abstract base class for interface templates.
+- [CPTextButton](cptextbutton.md): A button that displays a stylized title.
+- [CPButton](cpbutton.md): A button that displays an image and invokes a handler when the user taps it.
+- [CPImageSet](cpimageset.md): Light and dark representations of an image.
+- [CPPanel](cppanel.md): A type that provides the common behaviors for panels you display on top of your app’s content.
+- [CPPanelItem](cppanelitem.md): A type that provides the common behaviors for items you display in a section of a panel.

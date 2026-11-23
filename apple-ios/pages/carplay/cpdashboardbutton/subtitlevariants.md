@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpdashboardbutton/subtitlevariants
 
 # subtitleVariants (Swift)
@@ -23,7 +23,7 @@ An array of subtitle variants for this button in an arrangement from most- to le
 
 ## See Also
 
-### Accessing the Button Configuration
+### Accessing the button configuration
 
 - [titleVariants](titlevariants.md): The array of title variants for the button.
 - [image](image.md): The image the button displays.
@@ -50,7 +50,7 @@ An array of subtitle variants for this button in an arrangement from most- to le
 
 ## See Also
 
-### Accessing the Button Configuration
+### Accessing the button configuration
 
 - [titleVariants](titlevariants.md): The array of title variants for the button.
 - [image](image.md): The image the button displays.

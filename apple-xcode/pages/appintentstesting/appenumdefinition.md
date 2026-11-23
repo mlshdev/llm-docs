@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appintentstesting/appenumdefinition
 
 # AppEnumDefinition
@@ -53,7 +53,12 @@ let redCase = colorEnum.makeCase("red") // Matches `Color.red`.
 
 - [AppIntentTypeDefinition](appintenttypedefinition.md)
 - [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [Decodable](https://developer.apple.com/documentation/swift/decodable)
+- [Encodable](https://developer.apple.com/documentation/swift/encodable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
 - [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
 ## See Also
 

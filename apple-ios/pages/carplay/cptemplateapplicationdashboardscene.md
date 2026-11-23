@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptemplateapplicationdashboardscene
 
 # CPTemplateApplicationDashboardScene (Swift)
@@ -40,17 +40,17 @@ You don’t create an instance of the dashboard scene directly. Instead, you spe
 
 ## Topics
 
-### Responding to the Dashboard Scene Life Cycle
+### Responding to the dashboard scene life cycle
 
 - [delegate](cptemplateapplicationdashboardscene/delegate.md): The object that receives the dashboard scene’s life-cycle events.
 - [CPTemplateApplicationDashboardSceneDelegate](cptemplateapplicationdashboardscenedelegate.md): The methods for responding to the life-cycle events of your navigation app’s dashboard scene.
 
-### Accessing the Dashboard Controller
+### Accessing the dashboard controller
 
 - [dashboardController](cptemplateapplicationdashboardscene/dashboardcontroller.md): The controller that manages the dashboard scene’s shortcut buttons.
 - [CPDashboardController](cpdashboardcontroller.md): A controller that provides shortcut buttons for the CarPlay Dashboard.
 
-### Accessing the Dashboard Window
+### Accessing the dashboard window
 
 - [dashboardWindow](cptemplateapplicationdashboardscene/dashboardwindow.md): The window that belongs to the dashboard scene.
 
@@ -78,13 +78,12 @@ You don’t create an instance of the dashboard scene directly. Instead, you spe
 
 ## See Also
 
-### Navigation
+### Dashboard display
 
-- [Integrating CarPlay with Your Navigation App](integrating-carplay-with-your-navigation-app.md): Configure your navigation app to work with CarPlay by displaying your custom map and directions.
+- [CPDashboardController](cpdashboardcontroller.md): A controller that provides shortcut buttons for the CarPlay Dashboard.
+- [CPDashboardButton](cpdashboardbutton.md): A shortcut button for placement on the CarPlay Dashboard.
 - [CPTemplateApplicationDashboardSceneDelegate](cptemplateapplicationdashboardscenedelegate.md): The methods for responding to the life-cycle events of your navigation app’s dashboard scene.
-- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
-- [CPSearchTemplate](cpsearchtemplate.md): A template that provides the ability to search for a destination and see a list of search results.
-- [CPVoiceControlTemplate](cpvoicecontroltemplate.md): A template that displays a voice control indicator during audio input.
+- [CPSupportsDashboardNavigationScene](https://developer.apple.com/documentation/bundleresources/information-property-list/uiapplicationscenemanifest/cpsupportsdashboardnavigationscene): A Boolean value that indicates whether your app supports displaying navigation content in the CarPlay Dashboard.
 
 # CPTemplateApplicationDashboardScene (Objective-C)
 
@@ -125,17 +124,17 @@ You don’t create an instance of the dashboard scene directly. Instead, you spe
 
 ## Topics
 
-### Responding to the Dashboard Scene Life Cycle
+### Responding to the dashboard scene life cycle
 
 - [delegate](cptemplateapplicationdashboardscene/delegate.md): The object that receives the dashboard scene’s life-cycle events.
 - [CPTemplateApplicationDashboardSceneDelegate](cptemplateapplicationdashboardscenedelegate.md): The methods for responding to the life-cycle events of your navigation app’s dashboard scene.
 
-### Accessing the Dashboard Controller
+### Accessing the dashboard controller
 
 - [dashboardController](cptemplateapplicationdashboardscene/dashboardcontroller.md): The controller that manages the dashboard scene’s shortcut buttons.
 - [CPDashboardController](cpdashboardcontroller.md): A controller that provides shortcut buttons for the CarPlay Dashboard.
 
-### Accessing the Dashboard Window
+### Accessing the dashboard window
 
 - [dashboardWindow](cptemplateapplicationdashboardscene/dashboardwindow.md): The window that belongs to the dashboard scene.
 
@@ -147,10 +146,9 @@ You don’t create an instance of the dashboard scene directly. Instead, you spe
 
 ## See Also
 
-### Navigation
+### Dashboard display
 
-- [Integrating CarPlay with Your Navigation App](integrating-carplay-with-your-navigation-app.md): Configure your navigation app to work with CarPlay by displaying your custom map and directions.
+- [CPDashboardController](cpdashboardcontroller.md): A controller that provides shortcut buttons for the CarPlay Dashboard.
+- [CPDashboardButton](cpdashboardbutton.md): A shortcut button for placement on the CarPlay Dashboard.
 - [CPTemplateApplicationDashboardSceneDelegate](cptemplateapplicationdashboardscenedelegate.md): The methods for responding to the life-cycle events of your navigation app’s dashboard scene.
-- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
-- [CPSearchTemplate](cpsearchtemplate.md): A template that provides the ability to search for a destination and see a list of search results.
-- [CPVoiceControlTemplate](cpvoicecontroltemplate.md): A template that displays a voice control indicator during audio input.
+- [CPSupportsDashboardNavigationScene](https://developer.apple.com/documentation/bundleresources/information-property-list/uiapplicationscenemanifest/cpsupportsdashboardnavigationscene): A Boolean value that indicates whether your app supports displaying navigation content in the CarPlay Dashboard.

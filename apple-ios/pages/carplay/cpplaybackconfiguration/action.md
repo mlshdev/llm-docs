@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpplaybackconfiguration/action
 
 # CPPlaybackConfiguration.Action (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Enumeration  
 **Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.4+
 
-The playback action to perform on the item.
+The action to perform when someone selects the item.
 
 ## Declaration
 
@@ -15,14 +15,20 @@ The playback action to perform on the item.
 enum Action
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+These constants specify the automatic actions the system can take when someone selects media items in a list. These actions offer a convenient way to start, stop, or restart playback of an item when someone selects it in your app’s interface. If you prefer to handle these actions yourself, choose the [CPPlaybackConfiguration.Action.none](action/none.md) option and use your app’s code to manage playback.
+
 ## Topics
 
 ### Enumeration Cases
 
-- [CPPlaybackConfiguration.Action.none](action/none.md)
-- [CPPlaybackConfiguration.Action.pause](action/pause.md)
-- [CPPlaybackConfiguration.Action.play](action/play.md)
-- [CPPlaybackConfiguration.Action.replay](action/replay.md)
+- [CPPlaybackConfiguration.Action.none](action/none.md): An option to do nothing when someone selects the item.
+- [CPPlaybackConfiguration.Action.pause](action/pause.md): An option to pause playback.
+- [CPPlaybackConfiguration.Action.play](action/play.md): An option to start or resume playback.
+- [CPPlaybackConfiguration.Action.replay](action/replay.md): An option to start playback of the item from the beginning.
 
 ### Initializers
 
@@ -45,7 +51,7 @@ enum Action
 **Kind:** Enumeration  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-The playback action to perform on the item.
+The action to perform when someone selects the item.
 
 ## Declaration
 
@@ -53,11 +59,17 @@ The playback action to perform on the item.
 enum CPPlaybackAction : NSInteger;
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+These constants specify the automatic actions the system can take when someone selects media items in a list. These actions offer a convenient way to start, stop, or restart playback of an item when someone selects it in your app’s interface. If you prefer to handle these actions yourself, choose the [CPPlaybackActionNone](action/none.md) option and use your app’s code to manage playback.
+
 ## Topics
 
 ### Enumeration Cases
 
-- [CPPlaybackActionNone](action/none.md)
-- [CPPlaybackActionPause](action/pause.md)
-- [CPPlaybackActionPlay](action/play.md)
-- [CPPlaybackActionReplay](action/replay.md)
+- [CPPlaybackActionNone](action/none.md): An option to do nothing when someone selects the item.
+- [CPPlaybackActionPause](action/pause.md): An option to pause playback.
+- [CPPlaybackActionPlay](action/play.md): An option to start or resume playback.
+- [CPPlaybackActionReplay](action/replay.md): An option to start playback of the item from the beginning.

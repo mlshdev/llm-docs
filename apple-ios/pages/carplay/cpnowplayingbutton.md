@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingbutton
 
 # CPNowPlayingButton (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Class  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The abstract base class that Now Playing template buttons use.
+The abstract base class for buttons in the Now Playing interface.
 
 ## Declaration
 
@@ -19,20 +19,18 @@ The abstract base class that Now Playing template buttons use.
 
 ## Overview
 
-`CPNowPlayingButton` is an abstract base class for defining buttons that the Now Playing template displays. It provides the common functionality that’s present in all buttons available to the template.
-
-You don’t use this class directly, or create your own subclasses. Instead, you must use one of the concrete subclasses that the framework provides, such as [CPNowPlayingImageButton](cpnowplayingimagebutton.md) or [CPNowPlayingShuffleButton](cpnowplayingshufflebutton.md).
+`CPNowPlayingButton` is an abstract base class that provides common behavior for buttons you add to a [CPNowPlayingTemplate](cpnowplayingtemplate.md) object. Don’t instantiate this class directly or define any custom subclasses. Instead, use the properties of this class to affect the behavior of concrete subclasses such as [CPNowPlayingImageButton](cpnowplayingimagebutton.md) or [CPNowPlayingShuffleButton](cpnowplayingshufflebutton.md).
 
 ## Topics
 
-### Creating a Button
+### Creating a button
 
-- [init(handler:)](cpnowplayingbutton/init%28handler_%29.md): Creates a Now Playing button that invokes a handler.
+- [init(handler:)](cpnowplayingbutton/init%28handler_%29.md): Creates a button and sets its action to the provided handler.
 
-### Managing the Button State
+### Managing the button state
 
-- [isEnabled](cpnowplayingbutton/isenabled.md): A Boolean value that indicates whether the button is in an enabled state.
-- [isSelected](cpnowplayingbutton/isselected.md): A Boolean value that indicates whether the button is in a selected state.
+- [isEnabled](cpnowplayingbutton/isenabled.md): A Boolean value that indicates whether the button is enabled.
+- [isSelected](cpnowplayingbutton/isselected.md): A Boolean value that indicates the selected state of a custom button.
 
 ### Initializers
 
@@ -67,16 +65,14 @@ You don’t use this class directly, or create your own subclasses. Instead, you
 
 ## See Also
 
-### Managing the Template’s Buttons
+### Now Playing buttons
 
-- [nowPlayingButtons](cpnowplayingtemplate/nowplayingbuttons.md): The Now Playing template’s playback control buttons.
-- [updateNowPlayingButtons(\_:)](cpnowplayingtemplate/updatenowplayingbuttons%28__%29.md): Updates the playback control buttons the template displays.
-- [CPNowPlayingImageButton](cpnowplayingimagebutton.md): A button that displays an image.
-- [CPNowPlayingAddToLibraryButton](cpnowplayingaddtolibrarybutton.md): A button for adding the current playing item to a collection.
-- [CPNowPlayingMoreButton](cpnowplayingmorebutton.md): A button for presenting more options to the user.
-- [CPNowPlayingPlaybackRateButton](cpnowplayingplaybackratebutton.md): A button for cycling through the available playback rates.
+- [CPNowPlayingShuffleButton](cpnowplayingshufflebutton.md): A button for toggling shuffle mode on and off.
 - [CPNowPlayingRepeatButton](cpnowplayingrepeatbutton.md): A button for cycling through the available repeat modes.
-- [CPNowPlayingShuffleButton](cpnowplayingshufflebutton.md): A button for cycling through the available shuffle modes.
+- [CPNowPlayingPlaybackRateButton](cpnowplayingplaybackratebutton.md): A button for changing the playback rate of the media.
+- [CPNowPlayingAddToLibraryButton](cpnowplayingaddtolibrarybutton.md): A button for adding the current item to a collection, such as the person’s library.
+- [CPNowPlayingMoreButton](cpnowplayingmorebutton.md): A button for displaying additional playback options.
+- [CPNowPlayingImageButton](cpnowplayingimagebutton.md): A custom Now Playing button that displays an image.
 
 # CPNowPlayingButton (Objective-C)
 
@@ -84,7 +80,7 @@ You don’t use this class directly, or create your own subclasses. Instead, you
 **Kind:** Class  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The abstract base class that Now Playing template buttons use.
+The abstract base class for buttons in the Now Playing interface.
 
 ## Declaration
 
@@ -96,20 +92,18 @@ The abstract base class that Now Playing template buttons use.
 
 ## Overview
 
-`CPNowPlayingButton` is an abstract base class for defining buttons that the Now Playing template displays. It provides the common functionality that’s present in all buttons available to the template.
-
-You don’t use this class directly, or create your own subclasses. Instead, you must use one of the concrete subclasses that the framework provides, such as [CPNowPlayingImageButton](cpnowplayingimagebutton.md) or [CPNowPlayingShuffleButton](cpnowplayingshufflebutton.md).
+`CPNowPlayingButton` is an abstract base class that provides common behavior for buttons you add to a [CPNowPlayingTemplate](cpnowplayingtemplate.md) object. Don’t instantiate this class directly or define any custom subclasses. Instead, use the properties of this class to affect the behavior of concrete subclasses such as [CPNowPlayingImageButton](cpnowplayingimagebutton.md) or [CPNowPlayingShuffleButton](cpnowplayingshufflebutton.md).
 
 ## Topics
 
-### Creating a Button
+### Creating a button
 
-- [initWithHandler:](cpnowplayingbutton/init%28handler_%29.md): Creates a Now Playing button that invokes a handler.
+- [initWithHandler:](cpnowplayingbutton/init%28handler_%29.md): Creates a button and sets its action to the provided handler.
 
-### Managing the Button State
+### Managing the button state
 
-- [enabled](cpnowplayingbutton/isenabled.md): A Boolean value that indicates whether the button is in an enabled state.
-- [selected](cpnowplayingbutton/isselected.md): A Boolean value that indicates whether the button is in a selected state.
+- [enabled](cpnowplayingbutton/isenabled.md): A Boolean value that indicates whether the button is enabled.
+- [selected](cpnowplayingbutton/isselected.md): A Boolean value that indicates the selected state of a custom button.
 
 ## Relationships
 
@@ -132,13 +126,11 @@ You don’t use this class directly, or create your own subclasses. Instead, you
 
 ## See Also
 
-### Managing the Template’s Buttons
+### Now Playing buttons
 
-- [nowPlayingButtons](cpnowplayingtemplate/nowplayingbuttons.md): The Now Playing template’s playback control buttons.
-- [updateNowPlayingButtons:](cpnowplayingtemplate/updatenowplayingbuttons%28__%29.md): Updates the playback control buttons the template displays.
-- [CPNowPlayingImageButton](cpnowplayingimagebutton.md): A button that displays an image.
-- [CPNowPlayingAddToLibraryButton](cpnowplayingaddtolibrarybutton.md): A button for adding the current playing item to a collection.
-- [CPNowPlayingMoreButton](cpnowplayingmorebutton.md): A button for presenting more options to the user.
-- [CPNowPlayingPlaybackRateButton](cpnowplayingplaybackratebutton.md): A button for cycling through the available playback rates.
+- [CPNowPlayingShuffleButton](cpnowplayingshufflebutton.md): A button for toggling shuffle mode on and off.
 - [CPNowPlayingRepeatButton](cpnowplayingrepeatbutton.md): A button for cycling through the available repeat modes.
-- [CPNowPlayingShuffleButton](cpnowplayingshufflebutton.md): A button for cycling through the available shuffle modes.
+- [CPNowPlayingPlaybackRateButton](cpnowplayingplaybackratebutton.md): A button for changing the playback rate of the media.
+- [CPNowPlayingAddToLibraryButton](cpnowplayingaddtolibrarybutton.md): A button for adding the current item to a collection, such as the person’s library.
+- [CPNowPlayingMoreButton](cpnowplayingmorebutton.md): A button for displaying additional playback options.
+- [CPNowPlayingImageButton](cpnowplayingimagebutton.md): A custom Now Playing button that displays an image.

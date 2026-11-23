@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpcontentstyle/light
 
 # light (Swift)
@@ -6,8 +6,6 @@
 **Framework:** CarPlay  
 **Kind:** Type Property  
 **Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+
-
-The indication from the vehicle to draw the content in a light style.
 
 ## Declaration
 
@@ -17,17 +15,15 @@ static var light: CPContentStyle { get }
 
 ## See Also
 
-### Content Styles
+### Getting the content styles
 
-- [dark](dark.md): The indication from the vehicle to draw the content in a dark style.
+- [dark](dark.md)
 
 # CPContentStyleLight (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Enumeration Case  
 **Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+
-
-The indication from the vehicle to draw the content in a light style.
 
 ## Declaration
 
@@ -37,6 +33,6 @@ CPContentStyleLight
 
 ## See Also
 
-### Content Styles
+### Getting the content styles
 
-- [CPContentStyleDark](dark.md): The indication from the vehicle to draw the content in a dark style.
+- [CPContentStyleDark](dark.md)

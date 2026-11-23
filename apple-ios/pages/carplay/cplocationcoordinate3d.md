@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplocationcoordinate3d
 
 # CPLocationCoordinate3D (Swift)
@@ -35,6 +35,17 @@ struct CPLocationCoordinate3D
 - [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 
+## See Also
+
+### Maneuvers
+
+- [CPManeuver](cpmaneuver.md): An object that describes a single navigation instruction.
+- [CPManeuverState](cpmaneuverstate.md): Values that describe the state of a maneuver.
+- [CPManeuverType](cpmaneuvertype.md): Values that describe types of navigation maneuvers.
+- [CPTravelEstimates](cptravelestimates.md): An object that describes the time and distance remaining for a maneuver in a navigation session.
+- [CPTripPreviewTextConfiguration](cptrippreviewtextconfiguration.md): A configuration object for changing the button titles on a trip preview.
+- [NSStringFromCPManeuverType(\_:)](nsstringfromcpmaneuvertype%28__%29.md)
+
 # CPLocationCoordinate3D (Objective-C)
 
 **Framework:** CarPlay  
@@ -56,3 +67,14 @@ typedef struct { ... } CPLocationCoordinate3D;
 - [altitude](cplocationcoordinate3d/altitude.md): altitude is the coordinate’s elevation above sea level in meters. If no altitude is available, use CLLocationDistanceMax.
 - [latitude](cplocationcoordinate3d/latitude.md): latitude is the coordinate’s latitude value in degrees.
 - [longitude](cplocationcoordinate3d/longitude.md): longitude is the coordinate’s longitude value in degrees.
+
+## See Also
+
+### Maneuvers
+
+- [CPManeuver](cpmaneuver.md): An object that describes a single navigation instruction.
+- [CPManeuverState](cpmaneuverstate.md): Values that describe the state of a maneuver.
+- [CPManeuverType](cpmaneuvertype.md): Values that describe types of navigation maneuvers.
+- [CPTravelEstimates](cptravelestimates.md): An object that describes the time and distance remaining for a maneuver in a navigation session.
+- [CPTripPreviewTextConfiguration](cptrippreviewtextconfiguration.md): A configuration object for changing the button titles on a trip preview.
+- [NSStringFromCPManeuverType](nsstringfromcpmaneuvertype%28__%29.md)

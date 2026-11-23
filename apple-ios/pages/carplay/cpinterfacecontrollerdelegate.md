@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinterfacecontrollerdelegate
 
 # CPInterfaceControllerDelegate (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Protocol  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-The interface that an object implements to serve as a delegate to an interface controller.
+The methods you implement to observe the addition and removal of templates in your app’s interface.
 
 ## Declaration
 
@@ -15,14 +15,20 @@ The interface that an object implements to serve as a delegate to an interface c
 @MainActor protocol CPInterfaceControllerDelegate : NSObjectProtocol
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+Adopt the `CPInterfaceControllerDelegate` protocol in an custom type when you want to respond to changes in your app’s visible content. When a transition causes a new template to appear, the [CPInterfaceController](cpinterfacecontroller.md) object calls the methods of this protocol on its delegate before and after the transition. Use the methods to perform additional tasks related to the appearance of the content.
+
 ## Topics
 
-### Handling Display Events
+### Handling display-related events
 
-- [templateWillAppear(\_:animated:)](cpinterfacecontrollerdelegate/templatewillappear%28__animated_%29.md): Tells the delegate that the template will appear onscreen.
-- [templateDidAppear(\_:animated:)](cpinterfacecontrollerdelegate/templatedidappear%28__animated_%29.md): Tells the delegate that the template did appear onscreen.
-- [templateWillDisappear(\_:animated:)](cpinterfacecontrollerdelegate/templatewilldisappear%28__animated_%29.md): Tells the delegate that the template will disappear from the screen.
-- [templateDidDisappear(\_:animated:)](cpinterfacecontrollerdelegate/templatediddisappear%28__animated_%29.md): Tells the delegate that the template did disappear from the screen.
+- [templateWillAppear(\_:animated:)](cpinterfacecontrollerdelegate/templatewillappear%28__animated_%29.md): Tells the delegate that the controller is about to show the specified template in your interface.
+- [templateDidAppear(\_:animated:)](cpinterfacecontrollerdelegate/templatedidappear%28__animated_%29.md): Tells the delegate that the controller showed the specified template in your interface.
+- [templateWillDisappear(\_:animated:)](cpinterfacecontrollerdelegate/templatewilldisappear%28__animated_%29.md): Tells the delegate that the controller is about to remove the specified template in your interface.
+- [templateDidDisappear(\_:animated:)](cpinterfacecontrollerdelegate/templatediddisappear%28__animated_%29.md): Tells the delegate that the controller removed the specified template from your interface.
 
 ## Relationships
 
@@ -32,11 +38,9 @@ The interface that an object implements to serve as a delegate to an interface c
 
 ## See Also
 
-### Configuring the Interface Controller
+### Responding to interface changes
 
-- [delegate](cpinterfacecontroller/delegate.md): An object that serves as the delegate to the interface controller.
-- [prefersDarkUserInterfaceStyle](cpinterfacecontroller/prefersdarkuserinterfacestyle.md): A Boolean value that determines whether the system draws the user interface in Dark Mode.
-- [setRootTemplate(\_:animated:completion:)](cpinterfacecontroller/setroottemplate%28__animated_completion_%29.md): Sets the root template of the navigation hierarchy.
+- [delegate](cpinterfacecontroller/delegate.md): A custom object you use to respond when templates appear and disappear.
 
 # CPInterfaceControllerDelegate (Objective-C)
 
@@ -44,7 +48,7 @@ The interface that an object implements to serve as a delegate to an interface c
 **Kind:** Protocol  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-The interface that an object implements to serve as a delegate to an interface controller.
+The methods you implement to observe the addition and removal of templates in your app’s interface.
 
 ## Declaration
 
@@ -52,14 +56,20 @@ The interface that an object implements to serve as a delegate to an interface c
 @protocol CPInterfaceControllerDelegate <NSObject>
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+Adopt the `CPInterfaceControllerDelegate` protocol in an custom type when you want to respond to changes in your app’s visible content. When a transition causes a new template to appear, the [CPInterfaceController](cpinterfacecontroller.md) object calls the methods of this protocol on its delegate before and after the transition. Use the methods to perform additional tasks related to the appearance of the content.
+
 ## Topics
 
-### Handling Display Events
+### Handling display-related events
 
-- [templateWillAppear:animated:](cpinterfacecontrollerdelegate/templatewillappear%28__animated_%29.md): Tells the delegate that the template will appear onscreen.
-- [templateDidAppear:animated:](cpinterfacecontrollerdelegate/templatedidappear%28__animated_%29.md): Tells the delegate that the template did appear onscreen.
-- [templateWillDisappear:animated:](cpinterfacecontrollerdelegate/templatewilldisappear%28__animated_%29.md): Tells the delegate that the template will disappear from the screen.
-- [templateDidDisappear:animated:](cpinterfacecontrollerdelegate/templatediddisappear%28__animated_%29.md): Tells the delegate that the template did disappear from the screen.
+- [templateWillAppear:animated:](cpinterfacecontrollerdelegate/templatewillappear%28__animated_%29.md): Tells the delegate that the controller is about to show the specified template in your interface.
+- [templateDidAppear:animated:](cpinterfacecontrollerdelegate/templatedidappear%28__animated_%29.md): Tells the delegate that the controller showed the specified template in your interface.
+- [templateWillDisappear:animated:](cpinterfacecontrollerdelegate/templatewilldisappear%28__animated_%29.md): Tells the delegate that the controller is about to remove the specified template in your interface.
+- [templateDidDisappear:animated:](cpinterfacecontrollerdelegate/templatediddisappear%28__animated_%29.md): Tells the delegate that the controller removed the specified template from your interface.
 
 ## Relationships
 
@@ -69,8 +79,6 @@ The interface that an object implements to serve as a delegate to an interface c
 
 ## See Also
 
-### Configuring the Interface Controller
+### Responding to interface changes
 
-- [delegate](cpinterfacecontroller/delegate.md): An object that serves as the delegate to the interface controller.
-- [prefersDarkUserInterfaceStyle](cpinterfacecontroller/prefersdarkuserinterfacestyle.md): A Boolean value that determines whether the system draws the user interface in Dark Mode.
-- [setRootTemplate:animated:completion:](cpinterfacecontroller/setroottemplate%28__animated_completion_%29.md): Sets the root template of the navigation hierarchy.
+- [delegate](cpinterfacecontroller/delegate.md): A custom object you use to respond when templates appear and disappear.

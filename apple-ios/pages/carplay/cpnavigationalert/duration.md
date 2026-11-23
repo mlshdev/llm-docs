@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationalert/duration
 
 # duration (Swift)
@@ -23,7 +23,7 @@ Set `duration` to zero to display the alert until dismissed by the user. When `d
 
 ## See Also
 
-### Getting the Alert Duration
+### Getting the alert duration
 
 - [CPNavigationAlertMinimumDuration](../cpnavigationalertminimumduration.md): A constant that defines the minimum amount of time that an alert is visible.
 
@@ -49,6 +49,6 @@ Set `duration` to zero to display the alert until dismissed by the user. When `d
 
 ## See Also
 
-### Getting the Alert Duration
+### Getting the alert duration
 
 - [CPNavigationAlertMinimumDuration](../cpnavigationalertminimumduration.md): A constant that defines the minimum amount of time that an alert is visible.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/sensorkit/srphotoplethysmogramopticalsample/noiseterms-swift.property
 
 # noiseTerms
@@ -35,4 +35,4 @@ If the sensor data is invalid, this property is [nil](https://developer.apple.co
 - [conditions](conditions.md): The sensor context or conditions that may affect the sample.
 - [SRPhotoplethysmogramOpticalSample.Condition](condition.md): The conditions that may occur when recording photoplethysmogram optical data.
 - [SRPhotoplethysmogramOpticalSample.NoiseTerms](noiseterms-swift.struct.md): The mathematical terms that you use to compute the photoplethysmogram (PPG) noise.
-- [normalizedReflectance](normalizedreflectance-15f2k.md)
+- [normalizedReflectance](normalizedreflectance-15f2k.md): The photoplethysmogram waveform in normalized units.

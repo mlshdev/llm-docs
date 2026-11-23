@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplate/showpanninginterface(animated:)
 
 # showPanningInterface(animated:) (Swift)
@@ -29,7 +29,7 @@ While showing the panning interface, the system hides all map buttons. The syste
 
 ## See Also
 
-### Panning the Map
+### Displaying the panning interface
 
 - [dismissPanningInterface(animated:)](dismisspanninginterface%28animated_%29.md): Dismisses the panning interface.
 - [isPanningInterfaceVisible](ispanninginterfacevisible.md): A Boolean value that indicates whether the map template is displaying the panning interface.
@@ -62,7 +62,7 @@ While showing the panning interface, the system hides all map buttons. The syste
 
 ## See Also
 
-### Panning the Map
+### Displaying the panning interface
 
 - [dismissPanningInterfaceAnimated:](dismisspanninginterface%28animated_%29.md): Dismisses the panning interface.
 - [panningInterfaceVisible](ispanninginterfacevisible.md): A Boolean value that indicates whether the map template is displaying the panning interface.

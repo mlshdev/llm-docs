@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationwaypoint/namevariants
 
 # nameVariants (Swift)
@@ -15,6 +15,12 @@ nameVariants is an array of @c NSString representing variants of the waypoint’
 var nameVariants: [String] { get }
 ```
 
+## See Also
+
+### Getting the route information
+
+- [addressVariants](addressvariants.md): addressVariants is an array of @c NSString representing variants of the waypoint’s address, arranged from most to least preferred. The variant strings should be provided as localized, displayable content.
+
 # nameVariants (Objective-C)
 
 **Framework:** CarPlay  
@@ -28,3 +34,9 @@ nameVariants is an array of @c NSString representing variants of the waypoint’
 ```objectivec
 @property (nonatomic, readonly) NSArray<NSString *> * nameVariants;
 ```
+
+## See Also
+
+### Getting the route information
+
+- [addressVariants](addressvariants.md): addressVariants is an array of @c NSString representing variants of the waypoint’s address, arranged from most to least preferred. The variant strings should be provided as localized, displayable content.

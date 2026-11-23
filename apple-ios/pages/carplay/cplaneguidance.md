@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplaneguidance
 
 # CPLaneGuidance (Swift)
@@ -17,7 +17,7 @@ class CPLaneGuidance
 
 ## Topics
 
-### Properties
+### Getting the lane guidance
 
 - [instructionVariants](cplaneguidance/instructionvariants.md): An array of strings that represent the instruction for this lane guidance, arranged from most- to least-preferred.
 - [lanes](cplaneguidance/lanes.md): An array of lane objects, each describing a single lane.
@@ -46,12 +46,15 @@ class CPLaneGuidance
 
 ## See Also
 
-### Routes, lanes and junctions
+### Lanes and junctions
 
-- [CPRouteInformation](cprouteinformation.md): A class that describes the characteristic elements of a route.
 - [CPLane](cplane.md): A class that describes characteristics of a lane on a roadway.
 - [CPLaneStatus](cplanestatus.md): Values that describe the status or preferability of a lane.
 - [CPJunctionType](cpjunctiontype.md): Values that represent types of roadway junctions.
+- [CPTrafficSide](cptrafficside.md): Values that represent which side of the road the traffic drives on.
+- [NSStringFromCPJunctionType(\_:)](nsstringfromcpjunctiontype%28__%29.md)
+- [NSStringFromCPLaneStatus(\_:)](nsstringfromcplanestatus%28__%29.md)
+- [NSStringFromCPTrafficSide(\_:)](nsstringfromcptrafficside%28__%29.md)
 
 # CPLaneGuidance (Objective-C)
 
@@ -69,7 +72,7 @@ A class that provides information that describes the number of lanes on a roadwa
 
 ## Topics
 
-### Properties
+### Getting the lane guidance
 
 - [instructionVariants](cplaneguidance/instructionvariants.md): An array of strings that represent the instruction for this lane guidance, arranged from most- to least-preferred.
 - [lanes](cplaneguidance/lanes.md): An array of lane objects, each describing a single lane.
@@ -87,9 +90,12 @@ A class that provides information that describes the number of lanes on a roadwa
 
 ## See Also
 
-### Routes, lanes and junctions
+### Lanes and junctions
 
-- [CPRouteInformation](cprouteinformation.md): A class that describes the characteristic elements of a route.
 - [CPLane](cplane.md): A class that describes characteristics of a lane on a roadway.
 - [CPLaneStatus](cplanestatus.md): Values that describe the status or preferability of a lane.
 - [CPJunctionType](cpjunctiontype.md): Values that represent types of roadway junctions.
+- [CPTrafficSide](cptrafficside.md): Values that represent which side of the road the traffic drives on.
+- [NSStringFromCPJunctionType](nsstringfromcpjunctiontype%28__%29.md)
+- [NSStringFromCPLaneStatus](nsstringfromcplanestatus%28__%29.md)
+- [NSStringFromCPTrafficSide](nsstringfromcptrafficside%28__%29.md)

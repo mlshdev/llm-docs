@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbarbuttonstyle
 
 # CPBarButtonStyle (Swift)
@@ -17,7 +17,7 @@ enum CPBarButtonStyle
 
 ## Topics
 
-### Button Styles
+### Getting the button style
 
 - [CPBarButtonStyle.none](cpbarbuttonstyle/none.md): A style that provides no additional styling.
 - [CPBarButtonStyle.rounded](cpbarbuttonstyle/rounded.md): A style that provides a rounded background.
@@ -39,10 +39,9 @@ enum CPBarButtonStyle
 
 ## See Also
 
-### Getting the Button Style
+### Getting the display style
 
-- [buttonType](cpbarbutton/buttontype.md): Deprecated. The display type for the bar button.
-- [buttonStyle](cpbarbutton/buttonstyle.md): The style to use when displaying the button.
+- [buttonStyle](cpbarbutton/buttonstyle.md): The style to apply to the button.
 
 # CPBarButtonStyle (Objective-C)
 
@@ -60,14 +59,13 @@ enum CPBarButtonStyle : NSInteger;
 
 ## Topics
 
-### Button Styles
+### Getting the button style
 
 - [CPBarButtonStyleNone](cpbarbuttonstyle/none.md): A style that provides no additional styling.
 - [CPBarButtonStyleRounded](cpbarbuttonstyle/rounded.md): A style that provides a rounded background.
 
 ## See Also
 
-### Getting the Button Style
+### Getting the display style
 
-- [buttonType](cpbarbutton/buttontype.md): Deprecated. The display type for the bar button.
-- [buttonStyle](cpbarbutton/buttonstyle.md): The style to use when displaying the button.
+- [buttonStyle](cpbarbutton/buttonstyle.md): The style to apply to the button.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationalert/imageset
 
 # imageSet (Swift)
@@ -23,9 +23,13 @@ The navigation alert doesn’t support animated images. If [imageSet](imageset.m
 
 ## See Also
 
-### Getting the Alert Image
+### Getting the alert image
 
 - [image](image.md): An image displayed in the navigation alert.
+- [alertImage](alertimage.md)
+- [avatarImage](avatarimage.md)
+- [maximumAlertImageSize](maximumalertimagesize.md): The maximum image size for the alert image that a @c CPNavigationAlert can display.
+- [maximumAvatarImageSize](maximumavatarimagesize.md): The maximum image size for the avatar image that a @c CPNavigationAlert can display.
 
 # imageSet (Objective-C)
 
@@ -49,6 +53,10 @@ The navigation alert doesn’t support animated images. If [imageSet](imageset.m
 
 ## See Also
 
-### Getting the Alert Image
+### Getting the alert image
 
 - [image](image.md): An image displayed in the navigation alert.
+- [alertImage](alertimage.md)
+- [avatarImage](avatarimage.md)
+- [maximumAlertImageSize](maximumalertimagesize.md): The maximum image size for the alert image that a @c CPNavigationAlert can display.
+- [maximumAvatarImageSize](maximumavatarimagesize.md): The maximum image size for the avatar image that a @c CPNavigationAlert can display.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/packaging-mac-software-for-distribution
 
 # Packaging Mac software for distribution
@@ -179,5 +179,5 @@ For products that you distribute as zip files or disk image files, consider thes
 ### Distribution and release
 
 - [Distributing your app for beta testing and releases](distributing-your-app-for-beta-testing-and-releases.md): Release your app to beta testers and users.
-- [Distributing your app to registered devices](distributing-your-app-to-registered-devices.md): Test your app on devices that you register in your developer account.
+- [Distributing apps to your development devices](distributing-apps-to-your-development-devices.md): Test apps on your own devices that you register in your developer account.
 - [Locating device identifiers](locating-device-identifiers.md): Get the unique identifier for a device before registering it in your developer account.

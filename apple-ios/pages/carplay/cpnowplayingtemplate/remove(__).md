@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingtemplate/remove(_:)
 
 # remove(\_:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Removes an observer from receiving Now Playing template events.
+Unregisters an observer and stops it from receiving events related to the Now Playing interface.
 
 ## Declaration
 
@@ -17,20 +17,19 @@ func remove(_ observer: any CPNowPlayingTemplateObserver)
 
 ## Parameters
 
-- `observer`: An object that implements the [CPNowPlayingTemplateObserver](../cpnowplayingtemplateobserver.md) protocol.
+- `observer`: An object you previously registered as an observer.
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-You must register an observer using the [add(\_:)](add%28__%29.md) method before calling this method.
+Call this method to remove an observer object you previously registered with a call to the [add(\_:)](add%28__%29.md) method.
 
 ## See Also
 
-### Observing Now Playing Events
+### Adding and removing observers
 
-- [add(\_:)](add%28__%29.md): Registers an observer that receives Now Playing template events.
-- [CPNowPlayingTemplateObserver](../cpnowplayingtemplateobserver.md): The methods for responding to the user interacting with the Now Playing template.
+- [add(\_:)](add%28__%29.md): Registers an observer to handle events related to the Now Playing interface.
 
 # removeObserver: (Objective-C)
 
@@ -38,7 +37,7 @@ You must register an observer using the [add(\_:)](add%28__%29.md) method before
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Removes an observer from receiving Now Playing template events.
+Unregisters an observer and stops it from receiving events related to the Now Playing interface.
 
 ## Declaration
 
@@ -48,17 +47,16 @@ Removes an observer from receiving Now Playing template events.
 
 ## Parameters
 
-- `observer`: An object that implements the [CPNowPlayingTemplateObserver](../cpnowplayingtemplateobserver.md) protocol.
+- `observer`: An object you previously registered as an observer.
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-You must register an observer using the [addObserver:](add%28__%29.md) method before calling this method.
+Call this method to remove an observer object you previously registered with a call to the [addObserver:](add%28__%29.md) method.
 
 ## See Also
 
-### Observing Now Playing Events
+### Adding and removing observers
 
-- [addObserver:](add%28__%29.md): Registers an observer that receives Now Playing template events.
-- [CPNowPlayingTemplateObserver](../cpnowplayingtemplateobserver.md): The methods for responding to the user interacting with the Now Playing template.
+- [addObserver:](add%28__%29.md): Registers an observer to handle events related to the Now Playing interface.

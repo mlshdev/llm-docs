@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessorytransportextension/accessoryfeatureauthorizationstatus
 
 # AccessoryFeatureAuthorizationStatus
@@ -21,7 +21,7 @@ enum AccessoryFeatureAuthorizationStatus
 
 The system returns [AccessoryFeatureAuthorizationStatus.unknown](accessoryfeatureauthorizationstatus/unknown.md) until your app enrolls the feature for the accessory. Subsequent calls return the recorded status.
 
-Read the status with `AccessoryWorker/authorizationStatus(for:)` or `AccessoryGPUWorker/authorizationStatus(for:)` and enroll the feature with a matching `requestAuthorization(for:)` method.
+Read the status with [authorizationStatus(for:)](accessoryworker/authorizationstatus%28for_%29.md) or [authorizationStatus(for:)](accessorygpuworker/authorizationstatus%28for_%29.md) and enroll the feature with a matching `requestAuthorization(for:)` method.
 
 ## Topics
 
@@ -39,3 +39,10 @@ Read the status with `AccessoryWorker/authorizationStatus(for:)` or `AccessoryGP
 - [Hashable](https://developer.apple.com/documentation/swift/hashable)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Checking authorization
+
+- [authorizationStatus(for:)](accessorygpuworker/authorizationstatus%28for_%29.md): Beta. Returns the feature’s current authorization status for an accessory.
+- [requestAuthorization(for:)](accessorygpuworker/requestauthorization%28for_%29.md): Beta. Enrolls the feature for an accessory.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpsportsoverlay
 
 # CPSportsOverlay (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Class  
 **Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.4+
 
-A sports overlay that displays left and right team information.
+A type that displays sporting event details on top of a thumbnail image.
 
 ## Declaration
 
@@ -15,18 +15,26 @@ A sports overlay that displays left and right team information.
 @MainActor class CPSportsOverlay
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+Use a `CPSportsOverlay` object to place the score and details from a sporting event on top of the main image in a [CPThumbnailImage](cpthumbnailimage.md) object. Sports apps use this overlay to show multiple game scores in the rows of a list interface. For example, the app might display division matches in a row and use row elements to show the current scores of games in that division.
+
+You can add a `CPSportsOverlay` object to a thumbnail image at any time. CarPlay places the overlay content on the bottom half of the thumbnail image. Add a sports overlay to a thumbnail image close to the start of a match. When the match ends, remove the overlay after a reasonable delay to give someone time to see the final score. For example, remove the overlay an hour after the match finishes.
+
 ## Topics
 
-### Initializers
+### Creating a sports overlay
 
+- [init(leftTeam:rightTeam:eventStatus:)](cpsportsoverlay/init%28leftteam_rightteam_eventstatus_%29.md): Creates a now playing mode object configured with the specified team and sporting event information.
 - [init(coder:)](cpsportsoverlay/init%28coder_%29.md)
-- [init(leftTeam:rightTeam:eventStatus:)](cpsportsoverlay/init%28leftteam_rightteam_eventstatus_%29.md): Initialize a sports overlay with left and right team objects.
 
-### Instance Properties
+### Getting the overlay information
 
-- [eventStatus](cpsportsoverlay/eventstatus.md): The event status label.
-- [leftTeam](cpsportsoverlay/leftteam.md): The left team information.
-- [rightTeam](cpsportsoverlay/rightteam.md): The right team information.
+- [leftTeam](cpsportsoverlay/leftteam.md): Team-specific details to display in the left-bottom portion of the thumbnail image.
+- [rightTeam](cpsportsoverlay/rightteam.md): Team-specific details to display in the right-bottom portion of the thumbnail image.
+- [eventStatus](cpsportsoverlay/eventstatus.md): Match details to display in the bottom center of the thumbnail image.
 
 ## Relationships
 
@@ -46,13 +54,19 @@ A sports overlay that displays left and right team information.
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 
+## See Also
+
+### Element overlays
+
+- [CPImageOverlay](cpimageoverlay.md): A type that manages content you layer on top of a thumbnail image.
+
 # CPSportsOverlay (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Class  
 **Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.4+
 
-A sports overlay that displays left and right team information.
+A type that displays sporting event details on top of a thumbnail image.
 
 ## Declaration
 
@@ -60,17 +74,25 @@ A sports overlay that displays left and right team information.
 @interface CPSportsOverlay : NSObject
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+Use a `CPSportsOverlay` object to place the score and details from a sporting event on top of the main image in a [CPThumbnailImage](cpthumbnailimage.md) object. Sports apps use this overlay to show multiple game scores in the rows of a list interface. For example, the app might display division matches in a row and use row elements to show the current scores of games in that division.
+
+You can add a `CPSportsOverlay` object to a thumbnail image at any time. CarPlay places the overlay content on the bottom half of the thumbnail image. Add a sports overlay to a thumbnail image close to the start of a match. When the match ends, remove the overlay after a reasonable delay to give someone time to see the final score. For example, remove the overlay an hour after the match finishes.
+
 ## Topics
 
-### Instance Properties
+### Creating a sports overlay
 
-- [eventStatus](cpsportsoverlay/eventstatus.md): The event status label.
-- [leftTeam](cpsportsoverlay/leftteam.md): The left team information.
-- [rightTeam](cpsportsoverlay/rightteam.md): The right team information.
+- [initWithLeftTeam:rightTeam:eventStatus:](cpsportsoverlay/init%28leftteam_rightteam_eventstatus_%29.md): Creates a now playing mode object configured with the specified team and sporting event information.
 
-### Instance Methods
+### Getting the overlay information
 
-- [initWithLeftTeam:rightTeam:eventStatus:](cpsportsoverlay/init%28leftteam_rightteam_eventstatus_%29.md): Initialize a sports overlay with left and right team objects.
+- [leftTeam](cpsportsoverlay/leftteam.md): Team-specific details to display in the left-bottom portion of the thumbnail image.
+- [rightTeam](cpsportsoverlay/rightteam.md): Team-specific details to display in the right-bottom portion of the thumbnail image.
+- [eventStatus](cpsportsoverlay/eventstatus.md): Match details to display in the bottom center of the thumbnail image.
 
 ## Relationships
 
@@ -81,3 +103,9 @@ A sports overlay that displays left and right team information.
 ### Conforms To
 
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
+
+## See Also
+
+### Element overlays
+
+- [CPImageOverlay](cpimageoverlay.md): A type that manages content you layer on top of a thumbnail image.

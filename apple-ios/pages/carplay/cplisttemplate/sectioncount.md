@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplisttemplate/sectioncount
 
 # sectionCount (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The number of sections in the list.
+The current number of sections in the list.
 
 ## Declaration
 
@@ -15,20 +15,18 @@ The number of sections in the list.
 var sectionCount: Int { get }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-This value never exceeds [maximumSectionCount](maximumsectioncount.md). If you initialize a list, or call the [updateSections(\_:)](updatesections%28__%29.md) method, with an array larger than `maximumSectionCount`, CarPlay trims the array to an appropriate size.
+This property reflects the total number of sections in the list. The value never exceeds the maximum number of supported sections, as set in the [maximumSectionCount](maximumsectioncount.md) property. If you initialize or update the list with more sections than the allowed maximum, CarPlay discards any sections past the maximum number.
 
 ## See Also
 
-### Managing Sections
+### Managing section content
 
-- [maximumSectionCount](maximumsectioncount.md): The maximum number of sections that the template can display.
 - [sections](sections.md): The sections that the list displays.
-- [updateSections(\_:)](updatesections%28__%29.md): Adds, removes, reorders, or updates the list’s sections.
-- [CPListSection](../cplistsection.md): A container that groups your list items into sections.
+- [updateSections(\_:)](updatesections%28__%29.md): Adds, removes, reorders, or updates the current sections in the list.
 
 # sectionCount (Objective-C)
 
@@ -36,7 +34,7 @@ This value never exceeds [maximumSectionCount](maximumsectioncount.md). If you i
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The number of sections in the list.
+The current number of sections in the list.
 
 ## Declaration
 
@@ -44,17 +42,15 @@ The number of sections in the list.
 @property (nonatomic, readonly) NSUInteger sectionCount;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-This value never exceeds [maximumSectionCount](maximumsectioncount.md). If you initialize a list, or call the [updateSections:](updatesections%28__%29.md) method, with an array larger than `maximumSectionCount`, CarPlay trims the array to an appropriate size.
+This property reflects the total number of sections in the list. The value never exceeds the maximum number of supported sections, as set in the [maximumSectionCount](maximumsectioncount.md) property. If you initialize or update the list with more sections than the allowed maximum, CarPlay discards any sections past the maximum number.
 
 ## See Also
 
-### Managing Sections
+### Managing section content
 
-- [maximumSectionCount](maximumsectioncount.md): The maximum number of sections that the template can display.
 - [sections](sections.md): The sections that the list displays.
-- [updateSections:](updatesections%28__%29.md): Adds, removes, reorders, or updates the list’s sections.
-- [CPListSection](../cplistsection.md): A container that groups your list items into sections.
+- [updateSections:](updatesections%28__%29.md): Adds, removes, reorders, or updates the current sections in the list.

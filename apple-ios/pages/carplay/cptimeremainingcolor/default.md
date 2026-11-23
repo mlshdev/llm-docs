@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptimeremainingcolor/default
 
 # CPTimeRemainingColor.default (Swift)
@@ -23,7 +23,7 @@ The color is white when the map template’s [tripEstimateStyle](../cpmaptemplat
 
 ## See Also
 
-### Colors
+### Getting the color
 
 - [CPTimeRemainingColor.green](green.md): A shade of green.
 - [CPTimeRemainingColor.orange](orange.md): A shade of orange.
@@ -51,7 +51,7 @@ The color is white when the map template’s [tripEstimateStyle](../cpmaptemplat
 
 ## See Also
 
-### Colors
+### Getting the color
 
 - [CPTimeRemainingColorGreen](green.md): A shade of green.
 - [CPTimeRemainingColorOrange](orange.md): A shade of orange.

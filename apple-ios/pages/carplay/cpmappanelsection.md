@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmappanelsection
 
 # CPMapPanelSection (Swift)
@@ -25,15 +25,15 @@ Create a `CPMapPanelSection` object and configure it with the section title and 
 
 ## Topics
 
-### Initializers
+### Creating a map panel section
 
-- [init(coder:)](cpmappanelsection/init%28coder_%29.md)
 - [init(title:items:)](cpmappanelsection/init%28title_items_%29.md): Initializes the section with the specified title and items.
+- [init(coder:)](cpmappanelsection/init%28coder_%29.md)
 
-### Instance Properties
+### Accessing the section’s content
 
-- [items](cpmappanelsection/items.md): The items to display in the section.
 - [title](cpmappanelsection/title.md): The localized string to display for the section title.
+- [items](cpmappanelsection/items.md): The items to display in the section.
 
 ## Relationships
 
@@ -51,6 +51,17 @@ Create a `CPMapPanelSection` object and configure it with the section title and 
 - [NSCoding](https://developer.apple.com/documentation/foundation/nscoding)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
+
+## See Also
+
+### Maps
+
+- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPMapButton](cpmapbutton.md): A button that represents an action that a map template displays on the CarPlay screen.
+- [CPMapPanel](cpmappanel.md): An overlay for a custom map interface that shows navigation-related instructions or information over a portion of the map.
+- [CPMapPanelItem](cpmappanelitem.md): A type that manages the waypoint, route, trip, and other information you display in a map panel.
+- [CPMapPanelButtonConfiguration](cpmappanelbuttonconfiguration.md): A type that manages the action buttons and travel estimates in a map panel.
+- [CPChargingStationConnection](cpchargingstationconnection.md): Details about the equipment at an electric vehicle charging station.
 
 # CPMapPanelSection (Objective-C)
 
@@ -76,14 +87,14 @@ Create a `CPMapPanelSection` object and configure it with the section title and 
 
 ## Topics
 
-### Instance Properties
-
-- [items](cpmappanelsection/items.md): The items to display in the section.
-- [title](cpmappanelsection/title.md): The localized string to display for the section title.
-
-### Instance Methods
+### Creating a map panel section
 
 - [initWithTitle:items:](cpmappanelsection/init%28title_items_%29.md): Initializes the section with the specified title and items.
+
+### Accessing the section’s content
+
+- [title](cpmappanelsection/title.md): The localized string to display for the section title.
+- [items](cpmappanelsection/items.md): The items to display in the section.
 
 ## Relationships
 
@@ -94,3 +105,14 @@ Create a `CPMapPanelSection` object and configure it with the section title and 
 ### Conforms To
 
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
+
+## See Also
+
+### Maps
+
+- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPMapButton](cpmapbutton.md): A button that represents an action that a map template displays on the CarPlay screen.
+- [CPMapPanel](cpmappanel.md): An overlay for a custom map interface that shows navigation-related instructions or information over a portion of the map.
+- [CPMapPanelItem](cpmappanelitem.md): A type that manages the waypoint, route, trip, and other information you display in a map panel.
+- [CPMapPanelButtonConfiguration](cpmappanelbuttonconfiguration.md): A type that manages the action buttons and travel estimates in a map panel.
+- [CPChargingStationConnection](cpchargingstationconnection.md): Details about the equipment at an electric vehicle charging station.

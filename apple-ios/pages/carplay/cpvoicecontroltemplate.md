@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpvoicecontroltemplate
 
 # CPVoiceControlTemplate (Swift)
@@ -23,17 +23,17 @@ CarPlay navigation apps must show a voice control indicator during audio input b
 
 ## Topics
 
-### Creating a Voice Control Template
+### Creating a voice control template
 
 - [init(voiceControlStates:)](cpvoicecontroltemplate/init%28voicecontrolstates_%29.md): Creates a voice control template with a list of voice control states.
 - [CPVoiceControlState](cpvoicecontrolstate.md): A voice control state containing title variants and images for use by a voice control template.
 
-### Activating a State
+### Activating a state
 
 - [activateVoiceControlState(withIdentifier:)](cpvoicecontroltemplate/activatevoicecontrolstate%28withidentifier_%29.md): Changes the template’s state to the one matching the specified identifier.
 - [activeStateIdentifier](cpvoicecontroltemplate/activestateidentifier.md): The identifier of the template’s current voice control state.
 
-### Getting Available States
+### Getting the available states
 
 - [voiceControlStates](cpvoicecontroltemplate/voicecontrolstates.md): The array of voice control states available to the template.
 
@@ -60,18 +60,23 @@ CarPlay navigation apps must show a voice control indicator during audio input b
 - [NSCoding](https://developer.apple.com/documentation/foundation/nscoding)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
-- [Sendable](https://developer.apple.com/documentation/swift/sendable)
-- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
 ## See Also
 
-### Navigation
+### Interface templates
 
-- [Integrating CarPlay with Your Navigation App](integrating-carplay-with-your-navigation-app.md): Configure your navigation app to work with CarPlay by displaying your custom map and directions.
-- [CPTemplateApplicationDashboardScene](cptemplateapplicationdashboardscene.md): A CarPlay scene that controls your app’s dashboard navigation window.
-- [CPTemplateApplicationDashboardSceneDelegate](cptemplateapplicationdashboardscenedelegate.md): The methods for responding to the life-cycle events of your navigation app’s dashboard scene.
+- [CPTabBarTemplate](cptabbartemplate.md): A container template that displays and manages other templates, presenting them as tabs.
+- [CPListTemplate](cplisttemplate.md): A template that displays a single-column list of items in one of several visual styles.
+- [CPGridTemplate](cpgridtemplate.md): A template that displays and manages a grid of items.
 - [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPNowPlayingTemplate](cpnowplayingtemplate.md): A shared system template that shows the currently selected audio content and offers controls to manage playback.
+- [CPPointOfInterestTemplate](cppointofinteresttemplate.md): A template that displays a map with selectable points of interest.
+- [CPInformationTemplate](cpinformationtemplate.md): A template that provides information for a point of interest, food order, parking location, or charging location.
+- [CPContactTemplate](cpcontacttemplate.md): A template that displays information about a person or a business.
 - [CPSearchTemplate](cpsearchtemplate.md): A template that provides the ability to search for a destination and see a list of search results.
+- [CPActionSheetTemplate](cpactionsheettemplate.md): A template that displays a modal action sheet.
+- [CPAlertTemplate](cpalerttemplate.md): A template that displays a modal alert.
+- [All templates and supporting types](all-templates-and-supporting-types.md): Explore the templates you use to build the interface of your CarPlay app.
 
 # CPVoiceControlTemplate (Objective-C)
 
@@ -95,17 +100,17 @@ CarPlay navigation apps must show a voice control indicator during audio input b
 
 ## Topics
 
-### Creating a Voice Control Template
+### Creating a voice control template
 
 - [initWithVoiceControlStates:](cpvoicecontroltemplate/init%28voicecontrolstates_%29.md): Creates a voice control template with a list of voice control states.
 - [CPVoiceControlState](cpvoicecontrolstate.md): A voice control state containing title variants and images for use by a voice control template.
 
-### Activating a State
+### Activating a state
 
 - [activateVoiceControlStateWithIdentifier:](cpvoicecontroltemplate/activatevoicecontrolstate%28withidentifier_%29.md): Changes the template’s state to the one matching the specified identifier.
 - [activeStateIdentifier](cpvoicecontroltemplate/activestateidentifier.md): The identifier of the template’s current voice control state.
 
-### Getting Available States
+### Getting the available states
 
 - [voiceControlStates](cpvoicecontroltemplate/voicecontrolstates.md): The array of voice control states available to the template.
 
@@ -127,10 +132,17 @@ CarPlay navigation apps must show a voice control indicator during audio input b
 
 ## See Also
 
-### Navigation
+### Interface templates
 
-- [Integrating CarPlay with Your Navigation App](integrating-carplay-with-your-navigation-app.md): Configure your navigation app to work with CarPlay by displaying your custom map and directions.
-- [CPTemplateApplicationDashboardScene](cptemplateapplicationdashboardscene.md): A CarPlay scene that controls your app’s dashboard navigation window.
-- [CPTemplateApplicationDashboardSceneDelegate](cptemplateapplicationdashboardscenedelegate.md): The methods for responding to the life-cycle events of your navigation app’s dashboard scene.
+- [CPTabBarTemplate](cptabbartemplate.md): A container template that displays and manages other templates, presenting them as tabs.
+- [CPListTemplate](cplisttemplate.md): A template that displays a single-column list of items in one of several visual styles.
+- [CPGridTemplate](cpgridtemplate.md): A template that displays and manages a grid of items.
 - [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPNowPlayingTemplate](cpnowplayingtemplate.md): A shared system template that shows the currently selected audio content and offers controls to manage playback.
+- [CPPointOfInterestTemplate](cppointofinteresttemplate.md): A template that displays a map with selectable points of interest.
+- [CPInformationTemplate](cpinformationtemplate.md): A template that provides information for a point of interest, food order, parking location, or charging location.
+- [CPContactTemplate](cpcontacttemplate.md): A template that displays information about a person or a business.
 - [CPSearchTemplate](cpsearchtemplate.md): A template that provides the ability to search for a destination and see a list of search results.
+- [CPActionSheetTemplate](cpactionsheettemplate.md): A template that displays a modal action sheet.
+- [CPAlertTemplate](cpalerttemplate.md): A template that displays a modal alert.
+- [All templates and supporting types](all-templates-and-supporting-types.md): Explore the templates you use to build the interface of your CarPlay app.

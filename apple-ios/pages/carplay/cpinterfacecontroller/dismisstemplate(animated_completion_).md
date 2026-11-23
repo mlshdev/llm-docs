@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinterfacecontroller/dismisstemplate(animated:completion:)
 
 # dismissTemplate(animated:completion:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Dismisses a modal template.
+Dismisses the template you previously presented modally.
 
 ## Declaration
 
@@ -21,31 +21,25 @@ func dismissTemplate(animated: Bool) async throws -> Bool
 
 ## Parameters
 
-- `animated`: If [true](https://developer.apple.com/documentation/swift/true), CarPlay animates the dismissal of the template.
-- `completion`: The closure CarPlay calls after it dismisses the template.
+- `animated`: If `true`, CarPlay animates the dismissal of the modal presentation.
+- `completion`: The closure to run with the results of the operation. This closure receives a Boolean value and an optional error as parameters. The Boolean value is `true` if CarPlay successfully dismissed the modal presentation. If the value is `false`, CarPlay provides an error with information about what happened. If you don’t provide a closure, CarPlay throws an exception when an error occurs. CarPlay runs this closure on your app’s main thread.
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-> **Important**
+Call this method to dismiss a template you presented using the [presentTemplate(\_:animated:completion:)](presenttemplate%28__animated_completion_%29.md) method.
 
->  You can call this method from synchronous code using a completion handler, as shown on this page, or you can call it as an asynchronous method that has the following declaration:
->
-> ```swift
-> func dismissTemplate(animated: Bool) async throws -> Bool
-> ```
->
-> For information about concurrency and asynchronous code in Swift, see [Calling Objective-C APIs Asynchronously](https://developer.apple.com/documentation/swift/calling-objective-c-apis-asynchronously).
+> **Note**
 
-CarPlay calls `completion` after it dismisses the template. The Boolean parameter is [true](https://developer.apple.com/documentation/swift/true) when the dismissal succeeds; otherwise, it’s [false](https://developer.apple.com/documentation/swift/false) and CarPlay provides an error that describes the failure. CarPlay throws an exception if the dismissal fails and you don’t provide a closure.
+> You can call this method from synchronous code using a completion handler, or you can call it as an asynchronous method without the completion handler. For information about concurrency and asynchronous code in Swift, see [Calling Objective-C APIs Asynchronously](https://developer.apple.com/documentation/swift/calling-objective-c-apis-asynchronously).
 
 ## See Also
 
-### Displaying Templates Modally
+### Presenting a template modally
 
-- [presentTemplate(\_:animated:completion:)](presenttemplate%28__animated_completion_%29.md): Presents a template modally.
-- [presentedTemplate](presentedtemplate.md): The interface controller’s current modal template.
+- [presentTemplate(\_:animated:completion:)](presenttemplate%28__animated_completion_%29.md): Presents the template modally over your app’s navigation interface.
+- [presentedTemplate](presentedtemplate.md): The current modally-presented template.
 
 # dismissTemplateAnimated:completion: (Objective-C)
 
@@ -53,7 +47,7 @@ CarPlay calls `completion` after it dismisses the template. The Boolean paramete
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Dismisses a modal template.
+Dismisses the template you previously presented modally.
 
 ## Declaration
 
@@ -63,28 +57,22 @@ Dismisses a modal template.
 
 ## Parameters
 
-- `animated`: If [true](https://developer.apple.com/documentation/swift/true), CarPlay animates the dismissal of the template.
-- `completion`: The closure CarPlay calls after it dismisses the template.
+- `animated`: If `true`, CarPlay animates the dismissal of the modal presentation.
+- `completion`: The closure to run with the results of the operation. This closure receives a Boolean value and an optional error as parameters. The Boolean value is `true` if CarPlay successfully dismissed the modal presentation. If the value is `false`, CarPlay provides an error with information about what happened. If you don’t provide a closure, CarPlay throws an exception when an error occurs. CarPlay runs this closure on your app’s main thread.
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-> **Important**
+Call this method to dismiss a template you presented using the [presentTemplate:animated:completion:](presenttemplate%28__animated_completion_%29.md) method.
 
->  You can call this method from synchronous code using a completion handler, as shown on this page, or you can call it as an asynchronous method that has the following declaration:
->
-> ```swift
-> func dismissTemplate(animated: Bool) async throws -> Bool
-> ```
->
-> For information about concurrency and asynchronous code in Swift, see [Calling Objective-C APIs Asynchronously](https://developer.apple.com/documentation/swift/calling-objective-c-apis-asynchronously).
+> **Note**
 
-CarPlay calls `completion` after it dismisses the template. The Boolean parameter is [true](https://developer.apple.com/documentation/swift/true) when the dismissal succeeds; otherwise, it’s [false](https://developer.apple.com/documentation/swift/false) and CarPlay provides an error that describes the failure. CarPlay throws an exception if the dismissal fails and you don’t provide a closure.
+> You can call this method from synchronous code using a completion handler, or you can call it as an asynchronous method without the completion handler. For information about concurrency and asynchronous code in Swift, see [Calling Objective-C APIs Asynchronously](https://developer.apple.com/documentation/swift/calling-objective-c-apis-asynchronously).
 
 ## See Also
 
-### Displaying Templates Modally
+### Presenting a template modally
 
-- [presentTemplate:animated:completion:](presenttemplate%28__animated_completion_%29.md): Presents a template modally.
-- [presentedTemplate](presentedtemplate.md): The interface controller’s current modal template.
+- [presentTemplate:animated:completion:](presenttemplate%28__animated_completion_%29.md): Presents the template modally over your app’s navigation interface.
+- [presentedTemplate](presentedtemplate.md): The current modally-presented template.

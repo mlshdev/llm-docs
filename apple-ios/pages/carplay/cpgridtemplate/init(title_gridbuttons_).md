@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpgridtemplate/init(title:gridbuttons:)
 
 # init(title:gridButtons:) (Swift)
@@ -28,9 +28,9 @@ A newly initialized grid template.
 
 ## See Also
 
-### Creating a Grid Template
+### Creating a grid template
 
-- [CPGridButton](../cpgridbutton.md): A menu item button displayed on a grid template.
+- [maximumGridButtonImageSize](maximumgridbuttonimagesize.md): The expected image size for your @c CPGridButton.
 
 # initWithTitle:gridButtons: (Objective-C)
 
@@ -59,6 +59,6 @@ A newly initialized grid template.
 
 ## See Also
 
-### Creating a Grid Template
+### Creating a grid template
 
-- [CPGridButton](../cpgridbutton.md): A menu item button displayed on a grid template.
+- [maximumGridButtonImageSize](maximumgridbuttonimagesize.md): The expected image size for your @c CPGridButton.

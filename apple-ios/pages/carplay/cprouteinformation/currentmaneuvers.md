@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cprouteinformation/currentmaneuvers
 
 # currentManeuvers (Swift)
@@ -17,7 +17,7 @@ var currentManeuvers: [CPManeuver] { get }
 
 ## See Also
 
-### Properties
+### Getting route details
 
 - [currentLaneGuidance](currentlaneguidance.md): A lane guidance object that describes the current lane guidance.
 - [laneGuidances](laneguidances.md): An array of lane guidance objects.
@@ -41,7 +41,7 @@ An array of maneuver objects that describes the current maneuvers.
 
 ## See Also
 
-### Properties
+### Getting route details
 
 - [currentLaneGuidance](currentlaneguidance.md): A lane guidance object that describes the current lane guidance.
 - [laneGuidances](laneguidances.md): An array of lane guidance objects.

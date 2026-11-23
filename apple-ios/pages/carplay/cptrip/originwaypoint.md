@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptrip/originwaypoint
 
 # originWaypoint (Swift)
@@ -13,6 +13,13 @@
 var originWaypoint: CPNavigationWaypoint { get }
 ```
 
+## See Also
+
+### Getting the route information
+
+- [destinationWaypoint](destinationwaypoint.md)
+- [routeChoices](routechoices.md): The list of route choices for the trip.
+
 # originWaypoint (Objective-C)
 
 **Framework:** CarPlay  
@@ -24,3 +31,10 @@ var originWaypoint: CPNavigationWaypoint { get }
 ```objectivec
 @property (nonatomic, readonly) CPNavigationWaypoint * originWaypoint;
 ```
+
+## See Also
+
+### Getting the route information
+
+- [destinationWaypoint](destinationwaypoint.md)
+- [routeChoices](routechoices.md): The list of route choices for the trip.

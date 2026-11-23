@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppointofinteresttemplatedelegate
 
 # CPPointOfInterestTemplateDelegate (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Protocol  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The methods to handle a Point of Interest template’s events.
+The methods to handle a point of interest template’s events.
 
 ## Declaration
 
@@ -19,15 +19,15 @@ The methods to handle a Point of Interest template’s events.
 
 ## Overview
 
-You use the `CPPointOfInterestTemplateDelegate` protocol to respond to a Point of Interest template’s events. The protocol defines methods that CarPlay calls in response to these events, and your implementation provides the appropriate behavior for when the events occur. For example, when the user pans the template’s map and the visible region changes, update the points of interest that the template displays to only those relevant to the new region.
+You use the `CPPointOfInterestTemplateDelegate` protocol to respond to a point of interest template’s events. The protocol defines methods that CarPlay calls in response to these events, and your implementation provides the appropriate behavior for when the events occur. For example, when the user pans the template’s map and the visible region changes, update the points of interest that the template displays to only those relevant to the new region.
 
 ## Topics
 
-### Responding to Map Region Changes
+### Responding to map region changes
 
 - [pointOfInterestTemplate(\_:didChangeMapRegion:)](cppointofinteresttemplatedelegate/pointofinteresttemplate%28__didchangemapregion_%29.md): Tells the delegate about changes to the visible region of the template’s map.
 
-### Responding to Point of Interest Selection
+### Responding to a point of interest selection
 
 - [pointOfInterestTemplate(\_:didSelectPointOfInterest:)](cppointofinteresttemplatedelegate/pointofinteresttemplate%28__didselectpointofinterest_%29.md): Tells the delegate when the user selects a point of interest.
 
@@ -39,7 +39,7 @@ You use the `CPPointOfInterestTemplateDelegate` protocol to respond to a Point o
 
 ## See Also
 
-### Handling Template Events
+### Handling events
 
 - [pointOfInterestDelegate](cppointofinteresttemplate/pointofinterestdelegate.md): The object that serves as the template’s delegate.
 
@@ -49,7 +49,7 @@ You use the `CPPointOfInterestTemplateDelegate` protocol to respond to a Point o
 **Kind:** Protocol  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The methods to handle a Point of Interest template’s events.
+The methods to handle a point of interest template’s events.
 
 ## Declaration
 
@@ -61,15 +61,15 @@ The methods to handle a Point of Interest template’s events.
 
 ## Overview
 
-You use the `CPPointOfInterestTemplateDelegate` protocol to respond to a Point of Interest template’s events. The protocol defines methods that CarPlay calls in response to these events, and your implementation provides the appropriate behavior for when the events occur. For example, when the user pans the template’s map and the visible region changes, update the points of interest that the template displays to only those relevant to the new region.
+You use the `CPPointOfInterestTemplateDelegate` protocol to respond to a point of interest template’s events. The protocol defines methods that CarPlay calls in response to these events, and your implementation provides the appropriate behavior for when the events occur. For example, when the user pans the template’s map and the visible region changes, update the points of interest that the template displays to only those relevant to the new region.
 
 ## Topics
 
-### Responding to Map Region Changes
+### Responding to map region changes
 
 - [pointOfInterestTemplate:didChangeMapRegion:](cppointofinteresttemplatedelegate/pointofinteresttemplate%28__didchangemapregion_%29.md): Tells the delegate about changes to the visible region of the template’s map.
 
-### Responding to Point of Interest Selection
+### Responding to a point of interest selection
 
 - [pointOfInterestTemplate:didSelectPointOfInterest:](cppointofinteresttemplatedelegate/pointofinteresttemplate%28__didselectpointofinterest_%29.md): Tells the delegate when the user selects a point of interest.
 
@@ -81,6 +81,6 @@ You use the `CPPointOfInterestTemplateDelegate` protocol to respond to a Point o
 
 ## See Also
 
-### Handling Template Events
+### Handling events
 
 - [pointOfInterestDelegate](cppointofinteresttemplate/pointofinterestdelegate.md): The object that serves as the template’s delegate.

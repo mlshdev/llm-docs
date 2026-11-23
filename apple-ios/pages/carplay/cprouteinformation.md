@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cprouteinformation
 
 # CPRouteInformation (Swift)
@@ -17,12 +17,11 @@ class CPRouteInformation
 
 ## Topics
 
-### Initializers
+### Creating route information
 
 - [init(maneuvers:laneGuidances:currentManeuvers:currentLaneGuidance:trip:maneuverTravelEstimates:)](cprouteinformation/init%28maneuvers_laneguidances_currentmaneuvers_currentlaneguidance_trip_maneuvertravelestimates_%29.md): Initializes a new route information object with maneuvers, lane guidances, the current maneuvers, the current lane guidance, and trip and current maneuver travel estimates.
-- [init(maneuvers:laneGuidances:currentManeuvers:currentLaneGuidance:tripTravelEstimates:maneuverTravelEstimates:)](cprouteinformation/init%28maneuvers_laneguidances_currentmaneuvers_currentlaneguidance_triptravelestimates_maneuvertravelestimates_%29.md)
 
-### Properties
+### Getting route details
 
 - [currentLaneGuidance](cprouteinformation/currentlaneguidance.md): A lane guidance object that describes the current lane guidance.
 - [currentManeuvers](cprouteinformation/currentmaneuvers.md): An array of maneuver objects that describes the current maneuvers.
@@ -30,6 +29,10 @@ class CPRouteInformation
 - [maneuverTravelEstimates](cprouteinformation/maneuvertravelestimates.md): An object that describes the time and distance estimates for a maneuver.
 - [maneuvers](cprouteinformation/maneuvers.md): An array of maneuver objects.
 - [tripTravelEstimates](cprouteinformation/triptravelestimates.md): A travel estimates object that describes the estimated time and distance for the current trip.
+
+### Initializers
+
+- [init(maneuvers:laneGuidances:currentManeuvers:currentLaneGuidance:tripTravelEstimates:maneuverTravelEstimates:)](cprouteinformation/init%28maneuvers_laneguidances_currentmaneuvers_currentlaneguidance_triptravelestimates_maneuvertravelestimates_%29.md)
 
 ## Relationships
 
@@ -50,12 +53,14 @@ class CPRouteInformation
 
 ## See Also
 
-### Routes, lanes and junctions
+### Route details
 
-- [CPLane](cplane.md): A class that describes characteristics of a lane on a roadway.
-- [CPLaneGuidance](cplaneguidance.md): A class that provides information that describes the number of lanes on a roadway and navigation instruction variants.
-- [CPLaneStatus](cplanestatus.md): Values that describe the status or preferability of a lane.
-- [CPJunctionType](cpjunctiontype.md): Values that represent types of roadway junctions.
+- [CPRouteChoice](cproutechoice.md): A possible route for a trip.
+- [CPRouteDetail](cproutedetail.md)
+- [CPRouteSegment](cproutesegment.md): CPRouteSegment describes information pertaining to a segment of a route.
+- [CPRerouteReason](cpreroutereason.md): Values that represent reasons for navigation rerouting.
+- [CPRouteSource](cproutesource.md)
+- [NSStringFromCPRerouteReason(\_:)](nsstringfromcpreroutereason%28__%29.md)
 
 # CPRouteInformation (Objective-C)
 
@@ -73,11 +78,11 @@ A class that describes the characteristic elements of a route.
 
 ## Topics
 
-### Initializers
+### Creating route information
 
 - [initWithManeuvers:laneGuidances:currentManeuvers:currentLaneGuidance:tripTravelEstimates:maneuverTravelEstimates:](cprouteinformation/init%28maneuvers_laneguidances_currentmaneuvers_currentlaneguidance_trip_maneuvertravelestimates_%29.md): Initializes a new route information object with maneuvers, lane guidances, the current maneuvers, the current lane guidance, and trip and current maneuver travel estimates.
 
-### Properties
+### Getting route details
 
 - [currentLaneGuidance](cprouteinformation/currentlaneguidance.md): A lane guidance object that describes the current lane guidance.
 - [currentManeuvers](cprouteinformation/currentmaneuvers.md): An array of maneuver objects that describes the current maneuvers.
@@ -94,9 +99,11 @@ A class that describes the characteristic elements of a route.
 
 ## See Also
 
-### Routes, lanes and junctions
+### Route details
 
-- [CPLane](cplane.md): A class that describes characteristics of a lane on a roadway.
-- [CPLaneGuidance](cplaneguidance.md): A class that provides information that describes the number of lanes on a roadway and navigation instruction variants.
-- [CPLaneStatus](cplanestatus.md): Values that describe the status or preferability of a lane.
-- [CPJunctionType](cpjunctiontype.md): Values that represent types of roadway junctions.
+- [CPRouteChoice](cproutechoice.md): A possible route for a trip.
+- [CPRouteDetail](cproutedetail.md)
+- [CPRouteSegment](cproutesegment.md): CPRouteSegment describes information pertaining to a segment of a route.
+- [CPRerouteReason](cpreroutereason.md): Values that represent reasons for navigation rerouting.
+- [CPRouteSource](cproutesource.md)
+- [NSStringFromCPRerouteReason](nsstringfromcpreroutereason%28__%29.md)

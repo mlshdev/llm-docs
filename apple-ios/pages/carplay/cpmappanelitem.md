@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmappanelitem
 
 # CPMapPanelItem (Swift)
@@ -29,14 +29,14 @@ Each type of item displays different information from the map panel interface. F
 
 ## Topics
 
-### Initializers
+### Creating map panel items
 
-- [init(chargingStationConnection:handler:)](cpmappanelitem/init%28chargingstationconnection_handler_%29.md): Creates a map panel item with charging connection details.
-- [init(mapTemplateWaypoint:image:handler:)](cpmappanelitem/init%28maptemplatewaypoint_image_handler_%29.md): Creates a map panel item with waypoint information.
+- [init(trip:handler:)](cpmappanelitem/init%28trip_handler_%29.md): Creates a map panel item with trip-related details.
+- [init(travelEstimates:handler:)](cpmappanelitem/init%28travelestimates_handler_%29.md): Creates a map panel item with travel estimate information.
 - [init(routeChoice:handler:)](cpmappanelitem/init%28routechoice_handler_%29.md): Creates a map panel item with one of the route choices available for a trip.
 - [init(routeDetails:handler:)](cpmappanelitem/init%28routedetails_handler_%29.md): Creates a map panel item with route details.
-- [init(travelEstimates:handler:)](cpmappanelitem/init%28travelestimates_handler_%29.md): Creates a map panel item with travel estimate information.
-- [init(trip:handler:)](cpmappanelitem/init%28trip_handler_%29.md): Creates a map panel item with trip-related details.
+- [init(chargingStationConnection:handler:)](cpmappanelitem/init%28chargingstationconnection_handler_%29.md): Creates a map panel item with charging connection details.
+- [init(mapTemplateWaypoint:image:handler:)](cpmappanelitem/init%28maptemplatewaypoint_image_handler_%29.md): Creates a map panel item with waypoint information.
 
 ## Relationships
 
@@ -54,6 +54,17 @@ Each type of item displays different information from the map panel interface. F
 - [NSCoding](https://developer.apple.com/documentation/foundation/nscoding)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
+
+## See Also
+
+### Maps
+
+- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPMapButton](cpmapbutton.md): A button that represents an action that a map template displays on the CarPlay screen.
+- [CPMapPanel](cpmappanel.md): An overlay for a custom map interface that shows navigation-related instructions or information over a portion of the map.
+- [CPMapPanelSection](cpmappanelsection.md): A single section of a map panel that you fill with a title and one or more items.
+- [CPMapPanelButtonConfiguration](cpmappanelbuttonconfiguration.md): A type that manages the action buttons and travel estimates in a map panel.
+- [CPChargingStationConnection](cpchargingstationconnection.md): Details about the equipment at an electric vehicle charging station.
 
 # CPMapPanelItem (Objective-C)
 
@@ -83,17 +94,28 @@ Each type of item displays different information from the map panel interface. F
 
 ## Topics
 
-### Instance Methods
+### Creating map panel items
 
-- [initWithChargingStationConnection:handler:](cpmappanelitem/init%28chargingstationconnection_handler_%29.md): Creates a map panel item with charging connection details.
-- [initWithMapTemplateWaypoint:image:handler:](cpmappanelitem/init%28maptemplatewaypoint_image_handler_%29.md): Creates a map panel item with waypoint information.
+- [initWithTrip:handler:](cpmappanelitem/init%28trip_handler_%29.md): Creates a map panel item with trip-related details.
+- [initWithTravelEstimates:handler:](cpmappanelitem/init%28travelestimates_handler_%29.md): Creates a map panel item with travel estimate information.
 - [initWithRouteChoice:handler:](cpmappanelitem/init%28routechoice_handler_%29.md): Creates a map panel item with one of the route choices available for a trip.
 - [initWithRouteDetails:handler:](cpmappanelitem/init%28routedetails_handler_%29.md): Creates a map panel item with route details.
-- [initWithTravelEstimates:handler:](cpmappanelitem/init%28travelestimates_handler_%29.md): Creates a map panel item with travel estimate information.
-- [initWithTrip:handler:](cpmappanelitem/init%28trip_handler_%29.md): Creates a map panel item with trip-related details.
+- [initWithChargingStationConnection:handler:](cpmappanelitem/init%28chargingstationconnection_handler_%29.md): Creates a map panel item with charging connection details.
+- [initWithMapTemplateWaypoint:image:handler:](cpmappanelitem/init%28maptemplatewaypoint_image_handler_%29.md): Creates a map panel item with waypoint information.
 
 ## Relationships
 
 ### Inherits From
 
 - [CPPanelItem](cppanelitem.md)
+
+## See Also
+
+### Maps
+
+- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPMapButton](cpmapbutton.md): A button that represents an action that a map template displays on the CarPlay screen.
+- [CPMapPanel](cpmappanel.md): An overlay for a custom map interface that shows navigation-related instructions or information over a portion of the map.
+- [CPMapPanelSection](cpmappanelsection.md): A single section of a map panel that you fill with a title and one or more items.
+- [CPMapPanelButtonConfiguration](cpmappanelbuttonconfiguration.md): A type that manages the action buttons and travel estimates in a map panel.
+- [CPChargingStationConnection](cpchargingstationconnection.md): Details about the equipment at an electric vehicle charging station.

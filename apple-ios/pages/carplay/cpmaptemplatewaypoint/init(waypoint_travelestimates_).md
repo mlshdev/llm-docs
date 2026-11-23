@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplatewaypoint/init(waypoint:travelestimates:)
 
 # init(waypoint:travelEstimates:) (Swift)
@@ -25,6 +25,12 @@ init(waypoint: CPNavigationWaypoint, travelEstimates: CPTravelEstimates)
 ## Return Value
 
 A new CPMapTemplateWaypoint instance ready for use with CarPlay templates
+
+## See Also
+
+### Creating a trip
+
+- [init(coder:)](init%28coder_%29.md)
 
 # initWithWaypoint:travelEstimates: (Objective-C)
 

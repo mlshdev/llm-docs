@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplate/guidancebackgroundcolor
 
 # guidanceBackgroundColor (Swift)
@@ -27,10 +27,11 @@ The system determines whether [guidanceBackgroundColor](guidancebackgroundcolor.
 
 ## See Also
 
-### Configuring Map Templates
+### Configuring the map template
 
 - [automaticallyHidesNavigationBar](automaticallyhidesnavigationbar.md): A Boolean value that indicates whether the template should automatically hide the navigation bar.
 - [hidesButtonsWithNavigationBar](hidesbuttonswithnavigationbar.md): A Boolean value that tells the system to hide the map buttons when hiding the navigation bar.
+- [mapButtons](mapbuttons.md): An array of map buttons on the trailing bottom corner of the map template.
 
 # guidanceBackgroundColor (Objective-C)
 
@@ -58,7 +59,8 @@ The system determines whether [guidanceBackgroundColor](guidancebackgroundcolor.
 
 ## See Also
 
-### Configuring Map Templates
+### Configuring the map template
 
 - [automaticallyHidesNavigationBar](automaticallyhidesnavigationbar.md): A Boolean value that indicates whether the template should automatically hide the navigation bar.
 - [hidesButtonsWithNavigationBar](hidesbuttonswithnavigationbar.md): A Boolean value that tells the system to hide the map buttons when hiding the navigation bar.
+- [mapButtons](mapbuttons.md): An array of map buttons on the trailing bottom corner of the map template.

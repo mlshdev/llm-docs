@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplate/currentnavigationalert
 
 # currentNavigationAlert (Swift)
@@ -23,11 +23,10 @@ If a navigation alert isn’t visible, the property returns [nil](https://develo
 
 ## See Also
 
-### Displaying a Navigation Alert
+### Displaying navigation alerts
 
 - [present(navigationAlert:animated:)](present%28navigationalert_animated_%29.md): Displays a navigation alert on the map template.
 - [dismissNavigationAlert(animated:completion:)](dismissnavigationalert%28animated_completion_%29.md): Tells the map template to dismiss the visable navigation alert.
-- [CPNavigationAlert](../cpnavigationalert.md): An alert that displays map- or navigation-related information to the user.
 
 # currentNavigationAlert (Objective-C)
 
@@ -51,8 +50,7 @@ If a navigation alert isn’t visible, the property returns [nil](https://develo
 
 ## See Also
 
-### Displaying a Navigation Alert
+### Displaying navigation alerts
 
 - [presentNavigationAlert:animated:](present%28navigationalert_animated_%29.md): Displays a navigation alert on the map template.
 - [dismissNavigationAlertAnimated:completion:](dismissnavigationalert%28animated_completion_%29.md): Tells the map template to dismiss the visable navigation alert.
-- [CPNavigationAlert](../cpnavigationalert.md): An alert that displays map- or navigation-related information to the user.

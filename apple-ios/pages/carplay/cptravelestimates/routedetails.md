@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptravelestimates/routedetails
 
 # routeDetails (Swift)
@@ -15,6 +15,14 @@ Additional trip information such as battery, fuel, or toll information to displa
 var routeDetails: [CPRouteDetail] { get }
 ```
 
+## See Also
+
+### Getting travel estimates
+
+- [distanceRemaining](distanceremaining.md): The remaining distance for the travel estimate.
+- [distanceRemainingToDisplay](distanceremainingtodisplay.md): The distance remaining that the framework displays to a person, in the default units of measurement.
+- [timeRemaining](timeremaining.md): The remaining time for the travel estimate.
+
 # routeDetails (Objective-C)
 
 **Framework:** CarPlay  
@@ -28,3 +36,11 @@ Additional trip information such as battery, fuel, or toll information to displa
 ```objectivec
 @property (nonatomic, copy, readonly) NSArray<CPRouteDetail *> * routeDetails;
 ```
+
+## See Also
+
+### Getting travel estimates
+
+- [distanceRemaining](distanceremaining.md): The remaining distance for the travel estimate.
+- [distanceRemainingToDisplay](distanceremainingtodisplay.md): The distance remaining that the framework displays to a person, in the default units of measurement.
+- [timeRemaining](timeremaining.md): The remaining time for the travel estimate.

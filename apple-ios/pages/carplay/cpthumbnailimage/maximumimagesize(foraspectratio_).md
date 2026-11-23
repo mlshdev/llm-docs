@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpthumbnailimage/maximumimagesize(foraspectratio:)
 
 # maximumImageSize(forAspectRatio:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Type Method  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
 
-Returns the recommended maximum image size for a @c CPThumbnailImage with the given aspect ratio.
+Calculates the maximum image size for a thumbnail image with the specified aspect ratio.
 
 ## Declaration
 
@@ -17,21 +17,19 @@ class func maximumImageSize(forAspectRatio aspectRatio: CGFloat) -> CGSize
 
 ## Parameters
 
-- `aspectRatio`: The width-to-height ratio of the image.
+- `aspectRatio`: The width-to-height ratio of the image. Divide the width of the image by its height to get this value.
 
 <a id="return-value"></a>
 
 ## Return Value
 
-The recommended @c CGSize at which to size the image.
+The maximum size of the thumbnail image in points. To calculate the image dimensions in pixels, multiply the returned value by the scale factor from the current CarPlay traits, which you can get from your scene’s [CPInterfaceController](../cpinterfacecontroller.md) object.
 
 <a id="discussion"></a>
 
 ## Discussion
 
-Use this method to determine the correct size for images before providing them to
-
-oversized images being held in the thumbnail pipeline.
+Call this method to calculate the maximum size of the image you use for the main image of a [CPThumbnailImage](../cpthumbnailimage.md) object.
 
 # maximumImageSizeForAspectRatio: (Objective-C)
 
@@ -39,7 +37,7 @@ oversized images being held in the thumbnail pipeline.
 **Kind:** Type Method  
 **Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
 
-Returns the recommended maximum image size for a @c CPThumbnailImage with the given aspect ratio.
+Calculates the maximum image size for a thumbnail image with the specified aspect ratio.
 
 ## Declaration
 
@@ -49,18 +47,16 @@ Returns the recommended maximum image size for a @c CPThumbnailImage with the gi
 
 ## Parameters
 
-- `aspectRatio`: The width-to-height ratio of the image.
+- `aspectRatio`: The width-to-height ratio of the image. Divide the width of the image by its height to get this value.
 
 <a id="return-value"></a>
 
 ## Return Value
 
-The recommended @c CGSize at which to size the image.
+The maximum size of the thumbnail image in points. To calculate the image dimensions in pixels, multiply the returned value by the scale factor from the current CarPlay traits, which you can get from your scene’s [CPInterfaceController](../cpinterfacecontroller.md) object.
 
 <a id="discussion"></a>
 
 ## Discussion
 
-Use this method to determine the correct size for images before providing them to
-
-oversized images being held in the thumbnail pipeline.
+Call this method to calculate the maximum size of the image you use for the main image of a [CPThumbnailImage](../cpthumbnailimage.md) object.

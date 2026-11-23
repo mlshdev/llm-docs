@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaneuvertype/arriveatdestination
 
 # CPManeuverType.arriveAtDestination (Swift)
@@ -15,7 +15,7 @@ case arriveAtDestination
 
 ## See Also
 
-### Maneuver types
+### Getting the maneuver type
 
 - [CPManeuverType.arriveAtDestinationLeft](arriveatdestinationleft.md)
 - [CPManeuverType.arriveAtDestinationRight](arriveatdestinationright.md)
@@ -47,7 +47,7 @@ CPManeuverTypeArriveAtDestination
 
 ## See Also
 
-### Maneuver types
+### Getting the maneuver type
 
 - [CPManeuverTypeArriveAtDestinationLeft](arriveatdestinationleft.md)
 - [CPManeuverTypeArriveAtDestinationRight](arriveatdestinationright.md)

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptimeremainingcolor/green
 
 # CPTimeRemainingColor.green (Swift)
@@ -17,7 +17,7 @@ case green
 
 ## See Also
 
-### Colors
+### Getting the color
 
 - [CPTimeRemainingColor.default](default.md): The system default color.
 - [CPTimeRemainingColor.orange](orange.md): A shade of orange.
@@ -39,7 +39,7 @@ CPTimeRemainingColorGreen
 
 ## See Also
 
-### Colors
+### Getting the color
 
 - [CPTimeRemainingColorDefault](default.md): The system default color.
 - [CPTimeRemainingColorOrange](orange.md): A shade of orange.

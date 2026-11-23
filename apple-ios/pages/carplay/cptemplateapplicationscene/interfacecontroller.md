@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptemplateapplicationscene/interfacecontroller
 
 # interfaceController (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+
 
-The controller that manages the scene’s user interface.
+The controller object you use to present your app’s interface.
 
 ## Declaration
 
@@ -15,17 +15,13 @@ The controller that manages the scene’s user interface.
 var interfaceController: CPInterfaceController { get }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Use this property to access the interface controller CarPlay creates when the scene connects, which you then use to manage your templates.
+This property contains the interface controller you use to build the interface for your CarPlay app. CarPlay apps use a template-based approach to presenting content, which insulates you from having to customize your interface for different vehicles and different display sizes. Each template contains the data to display and the expected presentation style. The interface controller creates the views necessary to display that content on the current vehicle’s display.
 
-## See Also
-
-### Accessing the Interface Controller
-
-- [CPInterfaceController](../cpinterfacecontroller.md): A controller that manages the templates for constructing a scene’s user interface.
+All apps use the interface controller in this property to build their interface. If you’re building a navigation app, you present most of your content using this interface controller but also add your custom map content to the scene’s window.
 
 # interfaceController (Objective-C)
 
@@ -33,7 +29,7 @@ Use this property to access the interface controller CarPlay creates when the sc
 **Kind:** Instance Property  
 **Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+
 
-The controller that manages the scene’s user interface.
+The controller object you use to present your app’s interface.
 
 ## Declaration
 
@@ -41,14 +37,10 @@ The controller that manages the scene’s user interface.
 @property (nonatomic, strong, readonly, nonnull) CPInterfaceController * interfaceController;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Use this property to access the interface controller CarPlay creates when the scene connects, which you then use to manage your templates.
+This property contains the interface controller you use to build the interface for your CarPlay app. CarPlay apps use a template-based approach to presenting content, which insulates you from having to customize your interface for different vehicles and different display sizes. Each template contains the data to display and the expected presentation style. The interface controller creates the views necessary to display that content on the current vehicle’s display.
 
-## See Also
-
-### Accessing the Interface Controller
-
-- [CPInterfaceController](../cpinterfacecontroller.md): A controller that manages the templates for constructing a scene’s user interface.
+All apps use the interface controller in this property to build their interface. If you’re building a navigation app, you present most of your content using this interface controller but also add your custom map content to the scene’s window.

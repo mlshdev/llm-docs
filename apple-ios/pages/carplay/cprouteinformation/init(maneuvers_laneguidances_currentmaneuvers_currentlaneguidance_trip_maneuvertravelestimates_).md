@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cprouteinformation/init(maneuvers:laneguidances:currentmaneuvers:currentlaneguidance:trip:maneuvertravelestimates:)
 
 # init(maneuvers:laneGuidances:currentManeuvers:currentLaneGuidance:trip:maneuverTravelEstimates:) (Swift)
@@ -21,6 +21,7 @@ init(maneuvers: [CPManeuver], laneGuidances: [CPLaneGuidance], currentManeuvers:
 - `laneGuidances`: An array of [CPLaneGuidance](../cplaneguidance.md) objects.
 - `currentManeuvers`: An array of `CPManeuver` objects that represent the current list of maneuvers.
 - `currentLaneGuidance`: A [CPLaneGuidance](../cplaneguidance.md) object that represents the guidance for the current lane.
+- `tripTravelEstimates`: The [CPTravelEstimates](../cptravelestimates.md) that represent the travel estimates for the current trip.
 - `maneuverTravelEstimates`: The `CPTravelEstimates` that present the estimates for the trip’s maneuvers.
 
 # initWithManeuvers:laneGuidances:currentManeuvers:currentLaneGuidance:tripTravelEstimates:maneuverTravelEstimates: (Objective-C)
@@ -43,4 +44,5 @@ Initializes a new route information object with maneuvers, lane guidances, the c
 - `laneGuidances`: An array of [CPLaneGuidance](../cplaneguidance.md) objects.
 - `currentManeuvers`: An array of `CPManeuver` objects that represent the current list of maneuvers.
 - `currentLaneGuidance`: A [CPLaneGuidance](../cplaneguidance.md) object that represents the guidance for the current lane.
+- `tripTravelEstimates`: The [CPTravelEstimates](../cptravelestimates.md) that represent the travel estimates for the current trip.
 - `maneuverTravelEstimates`: The `CPTravelEstimates` that present the estimates for the trip’s maneuvers.

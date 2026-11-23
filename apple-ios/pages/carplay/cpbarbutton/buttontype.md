@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbarbutton/buttontype
 
 # buttonType (Swift)
@@ -6,8 +6,6 @@
 **Framework:** CarPlay  
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ (deprecated in 14.0) · iPadOS 12.0+ (deprecated in 14.0) · Mac Catalyst 13.1+ (deprecated in 14.0)
-
-The display type for the bar button.
 
 ## Declaration
 
@@ -17,18 +15,16 @@ var buttonType: CPBarButton.Type { get }
 
 ## See Also
 
-### Getting the Button Style
+### Deprecated
 
-- [buttonStyle](buttonstyle.md): The style to use when displaying the button.
-- [CPBarButtonStyle](../cpbarbuttonstyle.md): The display style of a bar button.
+- [init(type:handler:)](init%28type_handler_%29.md): Deprecated.
+- [CPBarButton.Type](type.md): Specifies the type of a @c CPBarButton.
 
 # buttonType (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ (deprecated in 14.0) · iPadOS 12.0+ (deprecated in 14.0) · Mac Catalyst 13.1+ (deprecated in 14.0)
-
-The display type for the bar button.
 
 ## Declaration
 
@@ -38,7 +34,7 @@ The display type for the bar button.
 
 ## See Also
 
-### Getting the Button Style
+### Deprecated
 
-- [buttonStyle](buttonstyle.md): The style to use when displaying the button.
-- [CPBarButtonStyle](../cpbarbuttonstyle.md): The display style of a bar button.
+- [initWithType:handler:](init%28type_handler_%29.md): Deprecated.
+- [CPBarButtonType](type.md): Specifies the type of a @c CPBarButton.

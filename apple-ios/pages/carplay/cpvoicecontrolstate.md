@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpvoicecontrolstate
 
 # CPVoiceControlState (Swift)
@@ -17,11 +17,11 @@ class CPVoiceControlState
 
 ## Topics
 
-### Creating a Voice Control State
+### Creating a voice control state
 
 - [init(identifier:titleVariants:image:repeats:)](cpvoicecontrolstate/init%28identifier_titlevariants_image_repeats_%29.md): Creates a voice control state.
 
-### Getting State Information
+### Getting the state information
 
 - [identifier](cpvoicecontrolstate/identifier.md): The string that your app uses to identify the voice control state.
 - [titleVariants](cpvoicecontrolstate/titlevariants.md): The array of title variants for the voice control state.
@@ -61,7 +61,7 @@ class CPVoiceControlState
 
 ## See Also
 
-### Creating a Voice Control Template
+### Creating a voice control template
 
 - [init(voiceControlStates:)](cpvoicecontroltemplate/init%28voicecontrolstates_%29.md): Creates a voice control template with a list of voice control states.
 
@@ -81,11 +81,11 @@ A voice control state containing title variants and images for use by a voice co
 
 ## Topics
 
-### Creating a Voice Control State
+### Creating a voice control state
 
 - [initWithIdentifier:titleVariants:image:repeats:](cpvoicecontrolstate/init%28identifier_titlevariants_image_repeats_%29.md): Creates a voice control state.
 
-### Getting State Information
+### Getting the state information
 
 - [identifier](cpvoicecontrolstate/identifier.md): The string that your app uses to identify the voice control state.
 - [titleVariants](cpvoicecontrolstate/titlevariants.md): The array of title variants for the voice control state.
@@ -117,6 +117,6 @@ A voice control state containing title variants and images for use by a voice co
 
 ## See Also
 
-### Creating a Voice Control Template
+### Creating a voice control template
 
 - [initWithVoiceControlStates:](cpvoicecontroltemplate/init%28voicecontrolstates_%29.md): Creates a voice control template with a list of voice control states.

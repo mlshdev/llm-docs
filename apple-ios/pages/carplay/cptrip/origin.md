@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptrip/origin
 
 # origin (Swift)
@@ -17,9 +17,11 @@ var origin: MKMapItem { get }
 
 ## See Also
 
-### Getting the Trip’s Origin and Destination
+### Deprecated
 
+- [init(origin:destination:routeChoices:)](init%28origin_destination_routechoices_%29.md): Deprecated. Creates a trip with an origin, destination, and route choices.
 - [destination](destination.md): Deprecated. The trip’s destination.
+- [destinationNameVariants](destinationnamevariants.md): Deprecated. An array of strings that represents the names of the destination for this trip, arranged from most to least preferred.
 
 # origin (Objective-C)
 
@@ -37,6 +39,8 @@ The trip’s origin.
 
 ## See Also
 
-### Getting the Trip’s Origin and Destination
+### Deprecated
 
+- [initWithOrigin:destination:routeChoices:](init%28origin_destination_routechoices_%29.md): Deprecated. Creates a trip with an origin, destination, and route choices.
 - [destination](destination.md): Deprecated. The trip’s destination.
+- [destinationNameVariants](destinationnamevariants.md): Deprecated. An array of strings that represents the names of the destination for this trip, arranged from most to least preferred.

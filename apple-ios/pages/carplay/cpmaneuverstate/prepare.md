@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaneuverstate/prepare
 
 # CPManeuverState.prepare (Swift)
@@ -15,7 +15,7 @@ case prepare
 
 ## See Also
 
-### Enumeration Cases
+### Getting the maneuver state
 
 - [CPManeuverState.initial](initial.md)
 - [CPManeuverState.execute](execute.md)
@@ -35,7 +35,7 @@ CPManeuverStatePrepare
 
 ## See Also
 
-### Enumeration Cases
+### Getting the maneuver state
 
 - [CPManeuverStateInitial](initial.md)
 - [CPManeuverStateExecute](execute.md)

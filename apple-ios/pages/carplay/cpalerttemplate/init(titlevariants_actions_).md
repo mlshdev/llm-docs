@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpalerttemplate/init(titlevariants:actions:)
 
 # init(titleVariants:actions:) (Swift)
@@ -28,7 +28,7 @@ A newly initialized alert template.
 
 ## See Also
 
-### Creating an Alert Template
+### Creating an alert template
 
 - [maximumActionCount](maximumactioncount.md): The maximum number of actions allowed in an alert template.
 
@@ -59,6 +59,6 @@ A newly initialized alert template.
 
 ## See Also
 
-### Creating an Alert Template
+### Creating an alert template
 
 - [maximumActionCount](maximumactioncount.md): The maximum number of actions allowed in an alert template.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptravelestimates/timeremaining
 
 # timeRemaining (Swift)
@@ -17,10 +17,11 @@ var timeRemaining: TimeInterval { get }
 
 ## See Also
 
-### Getting Travel Estimates
+### Getting travel estimates
 
 - [distanceRemaining](distanceremaining.md): The remaining distance for the travel estimate.
 - [distanceRemainingToDisplay](distanceremainingtodisplay.md): The distance remaining that the framework displays to a person, in the default units of measurement.
+- [routeDetails](routedetails.md): Additional trip information such as battery, fuel, or toll information to display with travel estimates.
 
 # timeRemaining (Objective-C)
 
@@ -38,7 +39,8 @@ The remaining time for the travel estimate.
 
 ## See Also
 
-### Getting Travel Estimates
+### Getting travel estimates
 
 - [distanceRemaining](distanceremaining.md): The remaining distance for the travel estimate.
 - [distanceRemainingToDisplay](distanceremainingtodisplay.md): The distance remaining that the framework displays to a person, in the default units of measurement.
+- [routeDetails](routedetails.md): Additional trip information such as battery, fuel, or toll information to display with travel estimates.

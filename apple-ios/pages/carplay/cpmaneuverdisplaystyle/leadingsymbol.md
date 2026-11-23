@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaneuverdisplaystyle/leadingsymbol
 
 # leadingSymbol (Swift)
@@ -17,7 +17,7 @@ static var leadingSymbol: CPManeuverDisplayStyle { get }
 
 ## See Also
 
-### Display Styles
+### Getting the display styles
 
 - [trailingSymbol](trailingsymbol.md): The symbol appears after the instructions for the maneuver.
 - [instructionOnly](instructiononly.md): Only the instructions appear for the maneuver.
@@ -39,7 +39,7 @@ CPManeuverDisplayStyleLeadingSymbol
 
 ## See Also
 
-### Display Styles
+### Getting the display styles
 
 - [CPManeuverDisplayStyleDefault](cpmaneuverdisplaystyledefault.md): The default display style for the maneuver.
 - [CPManeuverDisplayStyleTrailingSymbol](trailingsymbol.md): The symbol appears after the instructions for the maneuver.

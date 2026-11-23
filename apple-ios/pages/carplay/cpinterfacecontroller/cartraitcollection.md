@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinterfacecontroller/cartraitcollection
 
 # carTraitCollection (Swift)
@@ -15,11 +15,17 @@ The trait collection of the vehicle’s primary screen.
 var carTraitCollection: UITraitCollection { get }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Use this trait collection to derive metrics, such as display scale, for your CarPlay templates. For example, images you display in a [CPListTemplate](../cplisttemplate.md) can use this trait collection’s display scale rather than the scale of the user’s iPhone screen.
+Use this trait collection to derive metrics for the content you display in your CarPlay interface. For example, create or select images at the display scale you get from this trait collection, and not from the display scale from the person’s iPhone.
+
+## See Also
+
+### Configuring interface-related details
+
+- [prefersDarkUserInterfaceStyle](prefersdarkuserinterfacestyle.md): A Boolean value that indicates whether you prefer Dark Mode for your interface.
 
 # carTraitCollection (Objective-C)
 
@@ -35,8 +41,14 @@ The trait collection of the vehicle’s primary screen.
 @property (nonatomic, strong, readonly) UITraitCollection * carTraitCollection;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Use this trait collection to derive metrics, such as display scale, for your CarPlay templates. For example, images you display in a [CPListTemplate](../cplisttemplate.md) can use this trait collection’s display scale rather than the scale of the user’s iPhone screen.
+Use this trait collection to derive metrics for the content you display in your CarPlay interface. For example, create or select images at the display scale you get from this trait collection, and not from the display scale from the person’s iPhone.
+
+## See Also
+
+### Configuring interface-related details
+
+- [prefersDarkUserInterfaceStyle](prefersdarkuserinterfacestyle.md): A Boolean value that indicates whether you prefer Dark Mode for your interface.

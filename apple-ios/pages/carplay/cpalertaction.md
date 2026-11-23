@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpalertaction
 
 # CPAlertAction (Swift)
@@ -23,32 +23,26 @@ Use an alert action to display a button on an alert. The combination of the aler
 
 ## Topics
 
-### Creating an Alert Action
+### Creating an alert action
 
 - [init(title:style:handler:)](cpalertaction/init%28title_style_handler_%29.md): Creates an alert action with a title, style, and action handler.
-
-### Getting the Title
-
-- [title](cpalertaction/title.md): The action button’s title.
-
-### Getting the Action Style
-
-- [style](cpalertaction/style-swift.property.md): The display style for the action button.
-- [CPAlertAction.Style](cpalertaction/style-swift.enum.md): Display styles for an alert’s action button.
-
-### Getting the Action Handler
-
-- [handler](cpalertaction/handler.md): The closure that CarPlay invokes after the user taps the action button.
-- [CPAlertActionHandler](cpalertactionhandler.md): The declaration for an alert action handler.
-
-### Initializers
-
 - [init(title:color:handler:)](cpalertaction/init%28title_color_handler_%29.md)
 - [init(coder:)](cpalertaction/init%28coder_%29.md)
 
-### Instance Properties
+### Getting the title
 
+- [title](cpalertaction/title.md): The action button’s title.
+
+### Getting the action style
+
+- [style](cpalertaction/style-swift.property.md): The display style for the action button.
+- [CPAlertAction.Style](cpalertaction/style-swift.enum.md): Display styles for an alert’s action button.
 - [color](cpalertaction/color.md)
+
+### Getting the handler
+
+- [handler](cpalertaction/handler.md): The closure that CarPlay invokes after the user taps the action button.
+- [CPAlertActionHandler](cpalertactionhandler.md): The declaration for an alert action handler.
 
 ## Relationships
 
@@ -69,9 +63,8 @@ Use an alert action to display a button on an alert. The combination of the aler
 
 ## See Also
 
-### Actions and Alerts
+### Alerts
 
-- [CPActionSheetTemplate](cpactionsheettemplate.md): A template that displays a modal action sheet.
 - [CPAlertTemplate](cpalerttemplate.md): A template that displays a modal alert.
 
 # CPAlertAction (Objective-C)
@@ -96,31 +89,25 @@ Use an alert action to display a button on an alert. The combination of the aler
 
 ## Topics
 
-### Creating an Alert Action
+### Creating an alert action
 
 - [initWithTitle:style:handler:](cpalertaction/init%28title_style_handler_%29.md): Creates an alert action with a title, style, and action handler.
+- [initWithTitle:color:handler:](cpalertaction/init%28title_color_handler_%29.md)
 
-### Getting the Title
+### Getting the title
 
 - [title](cpalertaction/title.md): The action button’s title.
 
-### Getting the Action Style
+### Getting the action style
 
 - [style](cpalertaction/style-swift.property.md): The display style for the action button.
 - [CPAlertActionStyle](cpalertaction/style-swift.enum.md): Display styles for an alert’s action button.
+- [color](cpalertaction/color.md)
 
-### Getting the Action Handler
+### Getting the handler
 
 - [handler](cpalertaction/handler.md): The closure that CarPlay invokes after the user taps the action button.
 - [CPAlertActionHandler](cpalertactionhandler.md): The declaration for an alert action handler.
-
-### Initializers
-
-- [initWithTitle:color:handler:](cpalertaction/init%28title_color_handler_%29.md)
-
-### Instance Properties
-
-- [color](cpalertaction/color.md)
 
 ## Relationships
 
@@ -134,7 +121,6 @@ Use an alert action to display a button on an alert. The combination of the aler
 
 ## See Also
 
-### Actions and Alerts
+### Alerts
 
-- [CPActionSheetTemplate](cpactionsheettemplate.md): A template that displays a modal action sheet.
 - [CPAlertTemplate](cpalerttemplate.md): A template that displays a modal alert.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingtemplateobserver/nowplayingtemplateupnextbuttontapped(_:)
 
 # nowPlayingTemplateUpNextButtonTapped(\_:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Tells the observer that the user tapped the Up Next button.
+Tells the delegate that someone wants to view the Up Next content.
 
 ## Declaration
 
@@ -17,19 +17,19 @@ optional func nowPlayingTemplateUpNextButtonTapped(_ nowPlayingTemplate: CPNowPl
 
 ## Parameters
 
-- `nowPlayingTemplate`: The template that contains the button that the user tapped.
+- `nowPlayingTemplate`: The Now Playing template that originated the request.
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-When CarPlay calls this method on your observer, you should push an instance of [CPListTemplate](../cplisttemplate.md)—other template types are not supported when Now Playing is the visible template—on to your navigation stack that displays a list of upcoming or queued content.
+In your implementation of this method, push a [CPListTemplate](../cplisttemplate.md) object onto your interface and fill it with the upcoming or queued content. Don’t push other types of templates.
 
 ## See Also
 
-### Responding to User Interactions
+### Responding to interactions
 
-- [nowPlayingTemplateAlbumArtistButtonTapped(\_:)](nowplayingtemplatealbumartistbuttontapped%28__%29.md): Tells the observer that the user tapped the Album-Artist button.
+- [nowPlayingTemplateAlbumArtistButtonTapped(\_:)](nowplayingtemplatealbumartistbuttontapped%28__%29.md): Tells the delegate that someone wants to view album artist information.
 
 # nowPlayingTemplateUpNextButtonTapped: (Objective-C)
 
@@ -37,7 +37,7 @@ When CarPlay calls this method on your observer, you should push an instance of 
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Tells the observer that the user tapped the Up Next button.
+Tells the delegate that someone wants to view the Up Next content.
 
 ## Declaration
 
@@ -47,16 +47,16 @@ Tells the observer that the user tapped the Up Next button.
 
 ## Parameters
 
-- `nowPlayingTemplate`: The template that contains the button that the user tapped.
+- `nowPlayingTemplate`: The Now Playing template that originated the request.
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-When CarPlay calls this method on your observer, you should push an instance of [CPListTemplate](../cplisttemplate.md)—other template types are not supported when Now Playing is the visible template—on to your navigation stack that displays a list of upcoming or queued content.
+In your implementation of this method, push a [CPListTemplate](../cplisttemplate.md) object onto your interface and fill it with the upcoming or queued content. Don’t push other types of templates.
 
 ## See Also
 
-### Responding to User Interactions
+### Responding to interactions
 
-- [nowPlayingTemplateAlbumArtistButtonTapped:](nowplayingtemplatealbumartistbuttontapped%28__%29.md): Tells the observer that the user tapped the Album-Artist button.
+- [nowPlayingTemplateAlbumArtistButtonTapped:](nowplayingtemplatealbumartistbuttontapped%28__%29.md): Tells the delegate that someone wants to view album artist information.

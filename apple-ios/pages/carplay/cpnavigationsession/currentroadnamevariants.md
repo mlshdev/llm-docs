@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationsession/currentroadnamevariants
 
 # currentRoadNameVariants (Swift)
@@ -23,7 +23,7 @@ Set this property with variants of the current road name, from most to least ver
 
 ## See Also
 
-### Managing Upcoming Maneuvers
+### Managing upcoming maneuvers
 
 - [upcomingManeuvers](upcomingmaneuvers.md): The next set of maneuvers the user should perform while following the current route.
 - [maneuverState](maneuverstate.md): The current maneuver state.
@@ -54,7 +54,7 @@ Set this property with variants of the current road name, from most to least ver
 
 ## See Also
 
-### Managing Upcoming Maneuvers
+### Managing upcoming maneuvers
 
 - [upcomingManeuvers](upcomingmaneuvers.md): The next set of maneuvers the user should perform while following the current route.
 - [maneuverState](maneuverstate.md): The current maneuver state.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplisttemplate/sections
 
 # sections (Swift)
@@ -15,20 +15,18 @@ The sections that the list displays.
 var sections: [CPListSection] { get }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-To add new sections to the list, to remove or reorder existing sections, or to update a section’s appearance, use the [updateSections(\_:)](updatesections%28__%29.md) method.
+Specify the sections for your list when creating your list template. To add, remove, reorder, or update the current sections, call the [updateSections(\_:)](updatesections%28__%29.md) method.
 
 ## See Also
 
-### Managing Sections
+### Managing section content
 
-- [maximumSectionCount](maximumsectioncount.md): The maximum number of sections that the template can display.
-- [sectionCount](sectioncount.md): The number of sections in the list.
-- [updateSections(\_:)](updatesections%28__%29.md): Adds, removes, reorders, or updates the list’s sections.
-- [CPListSection](../cplistsection.md): A container that groups your list items into sections.
+- [sectionCount](sectioncount.md): The current number of sections in the list.
+- [updateSections(\_:)](updatesections%28__%29.md): Adds, removes, reorders, or updates the current sections in the list.
 
 # sections (Objective-C)
 
@@ -44,17 +42,15 @@ The sections that the list displays.
 @property (nonatomic, copy, readonly) NSArray<CPListSection *> * sections;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-To add new sections to the list, to remove or reorder existing sections, or to update a section’s appearance, use the [updateSections:](updatesections%28__%29.md) method.
+Specify the sections for your list when creating your list template. To add, remove, reorder, or update the current sections, call the [updateSections:](updatesections%28__%29.md) method.
 
 ## See Also
 
-### Managing Sections
+### Managing section content
 
-- [maximumSectionCount](maximumsectioncount.md): The maximum number of sections that the template can display.
-- [sectionCount](sectioncount.md): The number of sections in the list.
-- [updateSections:](updatesections%28__%29.md): Adds, removes, reorders, or updates the list’s sections.
-- [CPListSection](../cplistsection.md): A container that groups your list items into sections.
+- [sectionCount](sectioncount.md): The current number of sections in the list.
+- [updateSections:](updatesections%28__%29.md): Adds, removes, reorders, or updates the current sections in the list.

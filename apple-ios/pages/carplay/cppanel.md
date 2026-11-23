@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppanel
 
 # CPPanel (Swift)
@@ -23,15 +23,15 @@ The `CPPanel` type defines the default behaviors for panels you display in your 
 
 ## Topics
 
-### Initializers
+### Initializing the panel
 
 - [init(coder:)](cppanel/init%28coder_%29.md)
 
-### Instance Properties
+### Adding a close button to the panel
 
 - [showsCloseButton](cppanel/showsclosebutton.md): A Boolean value that indicates whether the panel displays a close button.
 
-### Type Properties
+### Getting the maximum number of items
 
 - [maximumPanelItemsCount](cppanel/maximumpanelitemscount.md): The maximum number of items the panel is able to display.
 
@@ -56,6 +56,17 @@ The `CPPanel` type defines the default behaviors for panels you display in your 
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
 
+## See Also
+
+### Common types
+
+- [CPTemplate](cptemplate.md): An abstract base class for interface templates.
+- [CPTextButton](cptextbutton.md): A button that displays a stylized title.
+- [CPButton](cpbutton.md): A button that displays an image and invokes a handler when the user taps it.
+- [CPImageSet](cpimageset.md): Light and dark representations of an image.
+- [CPPanelItem](cppanelitem.md): A type that provides the common behaviors for items you display in a section of a panel.
+- [CPPanelButtonConfiguration](cppanelbuttonconfiguration.md): A type that provides the common behaviors for a button layout in a panel.
+
 # CPPanel (Objective-C)
 
 **Framework:** CarPlay  
@@ -78,11 +89,11 @@ The `CPPanel` type defines the default behaviors for panels you display in your 
 
 ## Topics
 
-### Instance Properties
+### Adding a close button to the panel
 
 - [showsCloseButton](cppanel/showsclosebutton.md): A Boolean value that indicates whether the panel displays a close button.
 
-### Type Properties
+### Getting the maximum number of items
 
 - [maximumPanelItemsCount](cppanel/maximumpanelitemscount.md): The maximum number of items the panel is able to display.
 
@@ -99,3 +110,14 @@ The `CPPanel` type defines the default behaviors for panels you display in your 
 ### Conforms To
 
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
+
+## See Also
+
+### Common types
+
+- [CPTemplate](cptemplate.md): An abstract base class for interface templates.
+- [CPTextButton](cptextbutton.md): A button that displays a stylized title.
+- [CPButton](cpbutton.md): A button that displays an image and invokes a handler when the user taps it.
+- [CPImageSet](cpimageset.md): Light and dark representations of an image.
+- [CPPanelItem](cppanelitem.md): A type that provides the common behaviors for items you display in a section of a panel.
+- [CPPanelButtonConfiguration](cppanelbuttonconfiguration.md): A type that provides the common behaviors for a button layout in a panel.

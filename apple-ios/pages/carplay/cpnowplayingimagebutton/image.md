@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingimagebutton/image
 
 # image (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The image that the button displays.
+The image to display for the button.
 
 ## Declaration
 
@@ -15,11 +15,11 @@ The image that the button displays.
 var image: UIImage? { get }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The button displays images no larger than [CPNowPlayingButtonMaximumImageSize](../cpnowplayingbuttonmaximumimagesize.md). If you use an animated image, this property returns the first image in the animation sequence.
+If you specified an image with a width and height of zero, the system displays a placeholder image instead.
 
 # image (Objective-C)
 
@@ -27,7 +27,7 @@ The button displays images no larger than [CPNowPlayingButtonMaximumImageSize](.
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The image that the button displays.
+The image to display for the button.
 
 ## Declaration
 
@@ -35,8 +35,8 @@ The image that the button displays.
 @property (nonatomic, strong, readonly, nullable) UIImage * image;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The button displays images no larger than [CPNowPlayingButtonMaximumImageSize](../cpnowplayingbuttonmaximumimagesize.md). If you use an animated image, this property returns the first image in the animation sequence.
+If you specified an image with a width and height of zero, the system displays a placeholder image instead.

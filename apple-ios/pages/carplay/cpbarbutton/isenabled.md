@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbarbutton/isenabled
 
 # isEnabled (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-A Boolean value that enables and disables the bar button.
+A Boolean value that indicates whether the button is enabled.
 
 ## Declaration
 
@@ -15,18 +15,18 @@ A Boolean value that enables and disables the bar button.
 var isEnabled: Bool { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The default value is [true](https://developer.apple.com/documentation/swift/true).
+When the value of this property is `true`, the button displays an enabled appearance and calls the attached handler in response to interactions. When the value of this property is `false`, the button displays a disabled appearance and doesn’t call the attached handler. The default value of this property is `true`.
 
 ## See Also
 
-### Configuring the Button
+### Configuring the button
 
-- [image](image.md): The image displayed on the bar button.
-- [title](title.md): The title displayed on the bar button.
+- [image](image.md): The image to display in the button.
+- [title](title.md): The text to display in the button.
 
 # enabled (Objective-C)
 
@@ -34,7 +34,7 @@ The default value is [true](https://developer.apple.com/documentation/swift/true
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-A Boolean value that enables and disables the bar button.
+A Boolean value that indicates whether the button is enabled.
 
 ## Declaration
 
@@ -42,15 +42,15 @@ A Boolean value that enables and disables the bar button.
 @property (nonatomic, assign, getter=isEnabled) BOOL enabled;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The default value is [true](https://developer.apple.com/documentation/swift/true).
+When the value of this property is `true`, the button displays an enabled appearance and calls the attached handler in response to interactions. When the value of this property is `false`, the button displays a disabled appearance and doesn’t call the attached handler. The default value of this property is `true`.
 
 ## See Also
 
-### Configuring the Button
+### Configuring the button
 
-- [image](image.md): The image displayed on the bar button.
-- [title](title.md): The title displayed on the bar button.
+- [image](image.md): The image to display in the button.
+- [title](title.md): The text to display in the button.

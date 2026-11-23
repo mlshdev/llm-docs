@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingimagebutton/init(image:handler:)
 
 # init(image:handler:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Initializer  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Creates a Now Playing button that displays a custom image and invokes a handler.
+Creates a button with the specified image and handler.
 
 ## Declaration
 
@@ -17,22 +17,26 @@ init(image: UIImage, handler: ((CPNowPlayingButton) -> Void)? = nil)
 
 ## Parameters
 
-- `image`: An image to display on the button.
-- `handler`: A closure that the button invokes when the user taps it.
+- `image`: The image to display for the button. Specify an SF Symbol or an image with the dimensions in [CPNowPlayingButtonMaximumImageSize](../cpnowplayingbuttonmaximumimagesize.md). This method scales images to the expected dimensions as needed. If you specify an animated image, the system uses only the first image in the animation sequence.
+- `handler`: The handler to run when someone interacts with the button. This closure takes the button as a parameter and returns no value.
 
-<a id="Discussion"></a>
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized image button.
+
+<a id="discussion"></a>
 
 ## Discussion
 
-Provide an image that is display-ready. If necessary, provide light and dark variants using an asset catalog, or use an instance of [UIImageAsset](https://developer.apple.com/documentation/uikit/uiimageasset) and register an image for each interface style. To properly size your image, use the display scale of the vehicle’s primary screen—see your interface controller’s [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md) property—and make sure it is no larger than [CPNowPlayingButtonMaximumImageSize](../cpnowplayingbuttonmaximumimagesize.md).
-
-CarPlay doesn’t support animated images. If you provide an animated image, CarPlay uses only the first image in the animation sequence.
+When calculating the size of your image, multiply the dimensions in [CPNowPlayingButtonMaximumImageSize](../cpnowplayingbuttonmaximumimagesize.md) by the current display scale to get the image size in pixels. You can retrieve the current display scale from the vehicle’s trait collection, which you get from the [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md) property of your interface controller.
 
 ## See Also
 
-### Creating a Button
+### Creating the button
 
-- [CPNowPlayingButtonMaximumImageSize](../cpnowplayingbuttonmaximumimagesize.md): The maximum size CarPlay supports for a button’s image.
+- [CPNowPlayingButtonMaximumImageSize](../cpnowplayingbuttonmaximumimagesize.md): The dimensions for images in custom buttons.
 
 # initWithImage:handler: (Objective-C)
 
@@ -40,7 +44,7 @@ CarPlay doesn’t support animated images. If you provide an animated image, Car
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Creates a Now Playing button that displays a custom image and invokes a handler.
+Creates a button with the specified image and handler.
 
 ## Declaration
 
@@ -50,19 +54,23 @@ Creates a Now Playing button that displays a custom image and invokes a handler.
 
 ## Parameters
 
-- `image`: An image to display on the button.
-- `handler`: A closure that the button invokes when the user taps it.
+- `image`: The image to display for the button. Specify an SF Symbol or an image with the dimensions in [CPNowPlayingButtonMaximumImageSize](../cpnowplayingbuttonmaximumimagesize.md). This method scales images to the expected dimensions as needed. If you specify an animated image, the system uses only the first image in the animation sequence.
+- `handler`: The handler to run when someone interacts with the button. This closure takes the button as a parameter and returns no value.
 
-<a id="Discussion"></a>
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized image button.
+
+<a id="discussion"></a>
 
 ## Discussion
 
-Provide an image that is display-ready. If necessary, provide light and dark variants using an asset catalog, or use an instance of [UIImageAsset](https://developer.apple.com/documentation/uikit/uiimageasset) and register an image for each interface style. To properly size your image, use the display scale of the vehicle’s primary screen—see your interface controller’s [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md) property—and make sure it is no larger than [CPNowPlayingButtonMaximumImageSize](../cpnowplayingbuttonmaximumimagesize.md).
-
-CarPlay doesn’t support animated images. If you provide an animated image, CarPlay uses only the first image in the animation sequence.
+When calculating the size of your image, multiply the dimensions in [CPNowPlayingButtonMaximumImageSize](../cpnowplayingbuttonmaximumimagesize.md) by the current display scale to get the image size in pixels. You can retrieve the current display scale from the vehicle’s trait collection, which you get from the [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md) property of your interface controller.
 
 ## See Also
 
-### Creating a Button
+### Creating the button
 
-- [CPNowPlayingButtonMaximumImageSize](../cpnowplayingbuttonmaximumimagesize.md): The maximum size CarPlay supports for a button’s image.
+- [CPNowPlayingButtonMaximumImageSize](../cpnowplayingbuttonmaximumimagesize.md): The dimensions for images in custom buttons.

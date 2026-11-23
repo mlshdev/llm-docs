@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpsearchtemplate
 
 # CPSearchTemplate (Swift)
@@ -33,7 +33,7 @@ When the user selects an item from the search result, the system calls the [sear
 
 ## Topics
 
-### Providing a Search Template Delegate
+### Managing search behaviors
 
 - [delegate](cpsearchtemplate/delegate.md): The object that serves as the search template’s delegate.
 - [CPSearchTemplateDelegate](cpsearchtemplatedelegate.md): The interface for an object that serves as the search template’s delegate.
@@ -59,13 +59,20 @@ When the user selects an item from the search result, the system calls the [sear
 
 ## See Also
 
-### Navigation
+### Interface templates
 
-- [Integrating CarPlay with Your Navigation App](integrating-carplay-with-your-navigation-app.md): Configure your navigation app to work with CarPlay by displaying your custom map and directions.
-- [CPTemplateApplicationDashboardScene](cptemplateapplicationdashboardscene.md): A CarPlay scene that controls your app’s dashboard navigation window.
-- [CPTemplateApplicationDashboardSceneDelegate](cptemplateapplicationdashboardscenedelegate.md): The methods for responding to the life-cycle events of your navigation app’s dashboard scene.
+- [CPTabBarTemplate](cptabbartemplate.md): A container template that displays and manages other templates, presenting them as tabs.
+- [CPListTemplate](cplisttemplate.md): A template that displays a single-column list of items in one of several visual styles.
+- [CPGridTemplate](cpgridtemplate.md): A template that displays and manages a grid of items.
 - [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPNowPlayingTemplate](cpnowplayingtemplate.md): A shared system template that shows the currently selected audio content and offers controls to manage playback.
+- [CPPointOfInterestTemplate](cppointofinteresttemplate.md): A template that displays a map with selectable points of interest.
+- [CPInformationTemplate](cpinformationtemplate.md): A template that provides information for a point of interest, food order, parking location, or charging location.
+- [CPContactTemplate](cpcontacttemplate.md): A template that displays information about a person or a business.
 - [CPVoiceControlTemplate](cpvoicecontroltemplate.md): A template that displays a voice control indicator during audio input.
+- [CPActionSheetTemplate](cpactionsheettemplate.md): A template that displays a modal action sheet.
+- [CPAlertTemplate](cpalerttemplate.md): A template that displays a modal alert.
+- [All templates and supporting types](all-templates-and-supporting-types.md): Explore the templates you use to build the interface of your CarPlay app.
 
 # CPSearchTemplate (Objective-C)
 
@@ -99,7 +106,7 @@ When the user selects an item from the search result, the system calls the [sear
 
 ## Topics
 
-### Providing a Search Template Delegate
+### Managing search behaviors
 
 - [delegate](cpsearchtemplate/delegate.md): The object that serves as the search template’s delegate.
 - [CPSearchTemplateDelegate](cpsearchtemplatedelegate.md): The interface for an object that serves as the search template’s delegate.
@@ -112,10 +119,17 @@ When the user selects an item from the search result, the system calls the [sear
 
 ## See Also
 
-### Navigation
+### Interface templates
 
-- [Integrating CarPlay with Your Navigation App](integrating-carplay-with-your-navigation-app.md): Configure your navigation app to work with CarPlay by displaying your custom map and directions.
-- [CPTemplateApplicationDashboardScene](cptemplateapplicationdashboardscene.md): A CarPlay scene that controls your app’s dashboard navigation window.
-- [CPTemplateApplicationDashboardSceneDelegate](cptemplateapplicationdashboardscenedelegate.md): The methods for responding to the life-cycle events of your navigation app’s dashboard scene.
+- [CPTabBarTemplate](cptabbartemplate.md): A container template that displays and manages other templates, presenting them as tabs.
+- [CPListTemplate](cplisttemplate.md): A template that displays a single-column list of items in one of several visual styles.
+- [CPGridTemplate](cpgridtemplate.md): A template that displays and manages a grid of items.
 - [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPNowPlayingTemplate](cpnowplayingtemplate.md): A shared system template that shows the currently selected audio content and offers controls to manage playback.
+- [CPPointOfInterestTemplate](cppointofinteresttemplate.md): A template that displays a map with selectable points of interest.
+- [CPInformationTemplate](cpinformationtemplate.md): A template that provides information for a point of interest, food order, parking location, or charging location.
+- [CPContactTemplate](cpcontacttemplate.md): A template that displays information about a person or a business.
 - [CPVoiceControlTemplate](cpvoicecontroltemplate.md): A template that displays a voice control indicator during audio input.
+- [CPActionSheetTemplate](cpactionsheettemplate.md): A template that displays a modal action sheet.
+- [CPAlertTemplate](cpalerttemplate.md): A template that displays a modal alert.
+- [All templates and supporting types](all-templates-and-supporting-types.md): Explore the templates you use to build the interface of your CarPlay app.

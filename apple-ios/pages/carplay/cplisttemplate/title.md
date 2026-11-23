@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplisttemplate/title
 
 # title (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-The title that the navigation bar displays when the template is visible.
+The title to display in the navigation bar when the list is visible.
 
 ## Declaration
 
@@ -17,11 +17,11 @@ var title: String? { get }
 
 ## See Also
 
-### Getting Supplementary Information
+### Managing the supplemental content
 
-- [maximumItemCount](maximumitemcount.md): The maximum number of items, across all sections, that the template can display.
-- [itemCount](itemcount.md): The total number of items, across all sections, in the list.
-- [indexPath(for:)](indexpath%28for_%29.md): Returns the index path for the specified item.
+- [listHeader](listheader.md): An optional header to display between the navigation bar and first section of content.
+- [headerGridButtons](headergridbuttons.md): Buttons to display in the header area above the list content.
+- [assistantCellConfiguration](assistantcellconfiguration.md): The object that provides the configuration attributes for the assistant cell.
 
 # title (Objective-C)
 
@@ -29,7 +29,7 @@ var title: String? { get }
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-The title that the navigation bar displays when the template is visible.
+The title to display in the navigation bar when the list is visible.
 
 ## Declaration
 
@@ -39,8 +39,8 @@ The title that the navigation bar displays when the template is visible.
 
 ## See Also
 
-### Getting Supplementary Information
+### Managing the supplemental content
 
-- [maximumItemCount](maximumitemcount.md): The maximum number of items, across all sections, that the template can display.
-- [itemCount](itemcount.md): The total number of items, across all sections, in the list.
-- [indexPathForItem:](indexpath%28for_%29.md): Returns the index path for the specified item.
+- [listHeader](listheader.md): An optional header to display between the navigation bar and first section of content.
+- [headerGridButtons](headergridbuttons.md): Buttons to display in the header area above the list content.
+- [assistantCellConfiguration](assistantcellconfiguration.md): The object that provides the configuration attributes for the assistant cell.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/asset-management
 
 # Asset management
@@ -33,7 +33,7 @@ Xcode also provides interactive editors for certain types of assets, like partic
 ### Images
 
 - [Adding images to your Xcode project](adding-images-to-your-xcode-project.md): Import images into your project, manage their appearances and variations, and load them at runtime.
-- [Creating custom symbols](https://developer.apple.com/documentation/technologyoverviews/custom-sf-symbols): Design a symbol image with the same behavior as system-provided symbols.
+- [Creating custom SF Symbols](https://developer.apple.com/documentation/technologyoverviews/creating-custom-sf-symbols): Design a symbol image with the same behavior as system-provided symbols.
 
 ### Colors
 

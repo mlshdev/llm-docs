@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitem/init(text:detailtext:image:accessoryimage:accessorytype:)
 
 # init(text:detailText:image:accessoryImage:accessoryType:) (Swift)
@@ -17,25 +17,23 @@ init(text: String?, detailText: String?, image: UIImage?, accessoryImage: UIImag
 
 ## Parameters
 
-- `text`: The list item’s primary text.
-- `detailText`: The list item’s secondary text.
-- `image`: The image that the list item displays in its leading region.
-- `accessoryImage`: The image that the list item displays in its trailing region.
-- `accessoryType`: The accessory that the list item displays in its trailing region.
+- `text`: The primary text to show in the list item’s row.
+- `detailText`: Secondary text to display below the primary text.
+- `image`: An image to display on the leading edge of the list item’s row. If the image originates from an asset catalog, CarPlay manages light and dark variants of your image and switches them when needed.
+- `accessoryImage`: An image to display on the trailing edge of the item’s row. Use this parameter to specify a custom accessory image. If you specify a value for the `accessoryType` parameter, set this parameter to `nil`.
+- `accessoryType`: The accessory that the list item displays in its trailing region. If you specify an image in the `accessoryImage` parameter, CarPlay ignores the value in this parameter and sets the [accessoryType](accessorytype.md) property to [CPListItemAccessoryType.none](../cplistitemaccessorytype/none.md).
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-If you specify an image, CarPlay sets `accessoryType` to [CPListItemAccessoryType.none](../cplistitemaccessorytype/none.md).
+If you create the images for the `image` and `accessoryImage` parameters from an asset catalog resource, CarPlay manages light and dark variants of your image and switches them when needed. Specify images with the dimensions listed in the [maximumImageSize](maximumimagesize.md) property. If your image is smaller or larger than the maximum dimensions, CarPlay scales the image as needed to fit the space. If the image contains an animated sequence, CarPlay shows only the first image in the sequence.
 
-Provide an image that is display-ready. If necessary, provide light and dark variants using an asset catalog, or use an instance of [UIImageAsset](https://developer.apple.com/documentation/uikit/uiimageasset) and register an image for each interface style. To properly size your image, use the display scale of the vehicle’s primary screen, which you access from your interface controller’s [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md) property. At runtime, use [maximumImageSize](maximumimagesize.md) to determine the maximum size for a list item’s image and accessory image.
-
-CarPlay doesn’t support animated images. If you provide an animated image, CarPlay uses only the first image in the animation sequence.
+To determine the maximum pixel dimensions for images, multiply the value in the [maximumImageSize](maximumimagesize.md) property by the current scale factor for your CarPlay interface. Get the interface scale factor from the traits in the [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md) property of your interface controller.
 
 ## See Also
 
-### Creating a List Item
+### Creating a list item
 
 - [init(text:detailText:)](init%28text_detailtext_%29.md): Creates a list item with primary and secondary text.
 - [init(text:detailText:image:)](init%28text_detailtext_image_%29.md): Creates a list item with primary text, secondary text, and an image.
@@ -56,25 +54,23 @@ Creates a list item that displays an accessory beside its content.
 
 ## Parameters
 
-- `text`: The list item’s primary text.
-- `detailText`: The list item’s secondary text.
-- `image`: The image that the list item displays in its leading region.
-- `accessoryImage`: The image that the list item displays in its trailing region.
-- `accessoryType`: The accessory that the list item displays in its trailing region.
+- `text`: The primary text to show in the list item’s row.
+- `detailText`: Secondary text to display below the primary text.
+- `image`: An image to display on the leading edge of the list item’s row. If the image originates from an asset catalog, CarPlay manages light and dark variants of your image and switches them when needed.
+- `accessoryImage`: An image to display on the trailing edge of the item’s row. Use this parameter to specify a custom accessory image. If you specify a value for the `accessoryType` parameter, set this parameter to `nil`.
+- `accessoryType`: The accessory that the list item displays in its trailing region. If you specify an image in the `accessoryImage` parameter, CarPlay ignores the value in this parameter and sets the [accessoryType](accessorytype.md) property to [CPListItemAccessoryTypeNone](../cplistitemaccessorytype/none.md).
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-If you specify an image, CarPlay sets `accessoryType` to [CPListItemAccessoryTypeNone](../cplistitemaccessorytype/none.md).
+If you create the images for the `image` and `accessoryImage` parameters from an asset catalog resource, CarPlay manages light and dark variants of your image and switches them when needed. Specify images with the dimensions listed in the [maximumImageSize](maximumimagesize.md) property. If your image is smaller or larger than the maximum dimensions, CarPlay scales the image as needed to fit the space. If the image contains an animated sequence, CarPlay shows only the first image in the sequence.
 
-Provide an image that is display-ready. If necessary, provide light and dark variants using an asset catalog, or use an instance of [UIImageAsset](https://developer.apple.com/documentation/uikit/uiimageasset) and register an image for each interface style. To properly size your image, use the display scale of the vehicle’s primary screen, which you access from your interface controller’s [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md) property. At runtime, use [maximumImageSize](maximumimagesize.md) to determine the maximum size for a list item’s image and accessory image.
-
-CarPlay doesn’t support animated images. If you provide an animated image, CarPlay uses only the first image in the animation sequence.
+To determine the maximum pixel dimensions for images, multiply the value in the [maximumImageSize](maximumimagesize.md) property by the current scale factor for your CarPlay interface. Get the interface scale factor from the traits in the [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md) property of your interface controller.
 
 ## See Also
 
-### Creating a List Item
+### Creating a list item
 
 - [initWithText:detailText:](init%28text_detailtext_%29.md): Creates a list item with primary and secondary text.
 - [initWithText:detailText:image:](init%28text_detailtext_image_%29.md): Creates a list item with primary text, secondary text, and an image.

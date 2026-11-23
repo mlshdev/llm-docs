@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitem/assistantcellposition/bottom
 
 # CPListItem.AssistantCellPosition.bottom (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Case  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+
 
-Positions the assistant cell at the bottom of all visible cells.
+An option to place the assistant cell above all visible cells in your list template.
 
 ## Declaration
 
@@ -15,28 +15,16 @@ Positions the assistant cell at the bottom of all visible cells.
 case bottom
 ```
 
-## See Also
-
-### Controlling the Assistant Cell Position
-
-- [CPListItem.AssistantCellPosition.top](top.md): Positions the assistant cell at the top of all visible cells.
-
 # CPAssistantCellPositionBottom (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Enumeration Case  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+
 
-Positions the assistant cell at the bottom of all visible cells.
+An option to place the assistant cell above all visible cells in your list template.
 
 ## Declaration
 
 ```objectivec
 CPAssistantCellPositionBottom
 ```
-
-## See Also
-
-### Controlling the Assistant Cell Position
-
-- [CPAssistantCellPositionTop](top.md): Positions the assistant cell at the top of all visible cells.

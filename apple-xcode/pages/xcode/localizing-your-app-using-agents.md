@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/localizing-your-app-using-agents
 
 # Localizing your app using agents
@@ -84,7 +84,7 @@ Before you run your app in Device Hub, set a language and region in the Run sche
 
 Also, verify that right-to-left languages have enough space. For more information, see [Previewing localizations](previewing-localizations.md) and [Testing localizations when running your app](testing-localizations-when-running-your-app.md).
 
-Get feedback from people who speak the languages and live in the regions you support. For distribution options, including using TestFlight, see [Distributing your app to registered devices](distributing-your-app-to-registered-devices.md) and [Distributing your app for beta testing and releases](distributing-your-app-for-beta-testing-and-releases.md).
+Get feedback from people who speak the languages and live in the regions you support. For distribution options, including using TestFlight, see [Distributing apps to your development devices](distributing-apps-to-your-development-devices.md) and [Distributing your app for beta testing and releases](distributing-your-app-for-beta-testing-and-releases.md).
 
 <a id="Provide-translation-guidance"></a>
 

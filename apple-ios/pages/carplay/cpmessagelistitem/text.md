@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessagelistitem/text
 
 # text (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The list item’s primary text.
+The primary text to display in the message list item’s row.
 
 ## Declaration
 
@@ -15,18 +15,19 @@ The list item’s primary text.
 var text: String? { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Siri speaks this text when the user selects the list item.
+CarPlay displays this string prominently in the message list item’s row. If you initialize the message list item with a conversation identifier, this property contains the string from the `text` parameter of the initializer. If you initialize it with a contact, this property contains the contact name.
 
 ## See Also
 
-### Managing Content
+### Getting the row content
 
-- [detailText](detailtext.md): The list item’s secondary text.
-- [trailingText](trailingtext.md): The list item’s supplementary text.
+- [detailText](detailtext.md): Additional text to display less prominently below the row’s main text.
+- [trailingText](trailingtext.md): Additional text to display after the trailing configuration items.
+- [leadingDetailTextImage](leadingdetailtextimage.md): An image to display before the row’s detail text.
 
 # text (Objective-C)
 
@@ -34,7 +35,7 @@ Siri speaks this text when the user selects the list item.
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The list item’s primary text.
+The primary text to display in the message list item’s row.
 
 ## Declaration
 
@@ -42,15 +43,16 @@ The list item’s primary text.
 @property (nonatomic, copy, nullable) NSString * text;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Siri speaks this text when the user selects the list item.
+CarPlay displays this string prominently in the message list item’s row. If you initialize the message list item with a conversation identifier, this property contains the string from the `text` parameter of the initializer. If you initialize it with a contact, this property contains the contact name.
 
 ## See Also
 
-### Managing Content
+### Getting the row content
 
-- [detailText](detailtext.md): The list item’s secondary text.
-- [trailingText](trailingtext.md): The list item’s supplementary text.
+- [detailText](detailtext.md): Additional text to display less prominently below the row’s main text.
+- [trailingText](trailingtext.md): Additional text to display after the trailing configuration items.
+- [leadingDetailTextImage](leadingdetailtextimage.md): An image to display before the row’s detail text.

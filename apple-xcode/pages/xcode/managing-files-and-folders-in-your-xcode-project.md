@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/managing-files-and-folders-in-your-xcode-project
 
 # Managing files and folders in your Xcode project
@@ -122,3 +122,9 @@ To convert a group into a folder using the Convert to Folder option within the P
 Xcode checks to see if the groups in your Xcode project match the underlying files and directories on disk. If they do, Xcode converts each group into a folder. If the groups and underlying directory structures don’t match, Xcode displays a dialog with a Show Details button. Click the Show Details button to see a list of the files and directories Xcode couldn’t convert.
 
 To convert the files Xcode displays in Show Details, make the file and directory structure in Xcode match what Finder displays on disk. Either modify the file and group structure in Xcode to match the file and directory structure in Finder, or modify the file and directory structure in Finder to match the contents of your groups in Xcode. Then select the groups, Control-click, and choose Convert to Folder again.
+
+## See Also
+
+### Files and workspaces
+
+- [Managing multiple projects and their dependencies](managing-multiple-projects-and-their-dependencies.md): Manage related projects in one place using a workspace, or configure build-time dependencies between different Xcode projects using cross-project references.

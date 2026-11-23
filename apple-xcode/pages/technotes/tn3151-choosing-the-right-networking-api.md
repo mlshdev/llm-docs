@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes/tn3151-choosing-the-right-networking-api
 
 # TN3151: Choosing the right networking API
@@ -352,7 +352,7 @@ BSD Sockets has a number of limitations.  Your life will be easier if you use [N
 
 If your primary reason for using BSD Sockets is cross-platform support, consider using a network abstraction layer that adapts to the target platform.  One such option is [SwiftNIO Transport Services](https://github.com/apple/swift-nio-transport-services), which makes it straightforward to use Network framework on Apple platforms and BSD Sockets elsewhere.
 
-Apple’s BSD Sockets implementation is documented in the man pages.  If you’re unfamiliar with that term, see doc://com.apple.documentation/documentation/os/reading-unix-manual-pages.  Man pages are notoriously succinct.  If you’re getting started with BSD Sockets, take advantage of the wide range of non-Apple resources out there.  A classic work in the field is the book *UNIX Network Programming* by Stevens et al.
+Apple’s BSD Sockets implementation is documented in the man pages.  If you’re unfamiliar with that term, see [TN3215: Reading man pages](tn3215-reading-man-pages.md).  Man pages are notoriously succinct.  If you’re getting started with BSD Sockets, take advantage of the wide range of non-Apple resources out there.  A classic work in the field is the book *UNIX Network Programming* by Stevens et al.
 
 One traditional challenge with BSD Sockets is how best to handle nonblocking sockets.  For cross-platform code you have all the usual options (`select`, `poll`, `kqueue`).  For Apple-specific code you have one more: a Dispatch read source.  Use this to integrate a nonblocking socket into existing code that uses Dispatch queues.  For more details, see [Dispatch Source](https://developer.apple.com/documentation/dispatch/dispatch-source).
 

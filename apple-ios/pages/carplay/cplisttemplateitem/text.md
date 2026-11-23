@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplisttemplateitem/text
 
 # text (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The item’s primary text.
+The primary text to display for the item.
 
 ## Declaration
 
@@ -17,9 +17,9 @@ var text: String? { get }
 
 ## See Also
 
-### Managing Content
+### Managing content
 
-- [userInfo](userinfo.md): An opaque value for the list item.
+- [userInfo](userinfo.md): App-specific data you associate with the item.
 
 # text (Objective-C)
 
@@ -27,7 +27,7 @@ var text: String? { get }
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The item’s primary text.
+The primary text to display for the item.
 
 ## Declaration
 
@@ -37,6 +37,6 @@ The item’s primary text.
 
 ## See Also
 
-### Managing Content
+### Managing content
 
-- [userInfo](userinfo.md): An opaque value for the list item.
+- [userInfo](userinfo.md): App-specific data you associate with the item.

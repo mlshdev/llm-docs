@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptabbartemplate/maximumtabcount
 
 # maximumTabCount (Swift)
@@ -23,7 +23,7 @@ This property’s value depends on the app’s entitlements. At runtime, use thi
 
 ## See Also
 
-### Managing the Templates
+### Managing the tabs
 
 - [templates](templates.md): The tab bar’s templates.
 - [updateTemplates(\_:)](updatetemplates%28__%29.md): Adds, removes, reorders, or updates the tab bar’s templates.
@@ -50,7 +50,7 @@ This property’s value depends on the app’s entitlements. At runtime, use thi
 
 ## See Also
 
-### Managing the Templates
+### Managing the tabs
 
 - [templates](templates.md): The tab bar’s templates.
 - [updateTemplates:](updatetemplates%28__%29.md): Adds, removes, reorders, or updates the tab bar’s templates.

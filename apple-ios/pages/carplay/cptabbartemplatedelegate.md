@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptabbartemplatedelegate
 
 # CPTabBarTemplateDelegate (Swift)
@@ -23,7 +23,7 @@ You use the `CPTabBarTemplateDelegate` protocol to respond to a tab bar template
 
 ## Topics
 
-### Managing the Selected Template
+### Responding to tab selections
 
 - [tabBarTemplate(\_:didSelect:)](cptabbartemplatedelegate/tabbartemplate%28__didselect_%29.md): Tells the delegate when the tab bar selects the specified template.
 
@@ -35,7 +35,7 @@ You use the `CPTabBarTemplateDelegate` protocol to respond to a tab bar template
 
 ## See Also
 
-### Managing Tab Bar Interactions
+### Responding to tab selections
 
 - [delegate](cptabbartemplate/delegate.md): The object that acts as the template’s delegate.
 
@@ -61,7 +61,7 @@ You use the `CPTabBarTemplateDelegate` protocol to respond to a tab bar template
 
 ## Topics
 
-### Managing the Selected Template
+### Responding to tab selections
 
 - [tabBarTemplate:didSelectTemplate:](cptabbartemplatedelegate/tabbartemplate%28__didselect_%29.md): Tells the delegate when the tab bar selects the specified template.
 
@@ -73,6 +73,6 @@ You use the `CPTabBarTemplateDelegate` protocol to respond to a tab bar template
 
 ## See Also
 
-### Managing Tab Bar Interactions
+### Responding to tab selections
 
 - [delegate](cptabbartemplate/delegate.md): The object that acts as the template’s delegate.

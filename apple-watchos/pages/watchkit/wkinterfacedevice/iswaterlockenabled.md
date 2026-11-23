@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple watchOS snapshot-057e837b5f7a; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple watchOS snapshot-a77e67da8d8e; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/watchkit/wkinterfacedevice/iswaterlockenabled
 
 # isWaterLockEnabled (Swift)
@@ -14,6 +14,14 @@ A Boolean value that indicates whether the water lock is enabled.
 ```swift
 var isWaterLockEnabled: Bool { get }
 ```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+> **Warning**
+
+>  Access this property only from the main thread. Accessing it from a background thread crashes your app.
 
 ## See Also
 
@@ -36,6 +44,14 @@ A Boolean value that indicates whether the water lock is enabled.
 ```objectivec
 @property (nonatomic, readonly, getter=isWaterLockEnabled) BOOL waterLockEnabled;
 ```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+> **Warning**
+
+>  Access this property only from the main thread. Accessing it from a background thread crashes your app.
 
 ## See Also
 

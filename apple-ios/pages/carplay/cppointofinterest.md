@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppointofinterest
 
 # CPPointOfInterest (Swift)
@@ -27,49 +27,43 @@ You provide an array of `CPPointOfInterest` objects when initializing [CPPointOf
 
 ## Topics
 
-### Creating a Point of Interest
+### Creating a point of interest
 
 - [init(location:title:subtitle:summary:detailTitle:detailSubtitle:detailSummary:pinImage:)](cppointofinterest/init%28location_title_subtitle_summary_detailtitle_detailsubtitle_detailsummary_pinimage_%29.md): Creates a point of interest for a specific location.
+- [init(location:title:subtitle:summary:detailTitle:detailSubtitle:detailSummary:pinImage:selectedPinImage:)](cppointofinterest/init%28location_title_subtitle_summary_detailtitle_detailsubtitle_detailsummary_pinimage_selectedpinimage_%29.md)
+- [init(coder:)](cppointofinterest/init%28coder_%29.md)
+- [pinImageSize](cppointofinterest/pinimagesize.md)
+- [selectedPinImageSize](cppointofinterest/selectedpinimagesize.md)
 
-### Managing the Map Annotation
+### Managing the map annotation
 
 - [location](cppointofinterest/location.md): The map item that contains the point of interest’s geographical information.
 - [pinImage](cppointofinterest/pinimage.md): A custom image that the map annotation displays.
 
-### Managing the Picker Item’s Data
+### Managing the picker item
 
 - [title](cppointofinterest/title.md): The title that the picker’s item displays.
 - [subtitle](cppointofinterest/subtitle.md): The subtitle that the picker’s item displays.
 - [summary](cppointofinterest/summary.md): The summary that the picker’s item displays.
 
-### Managing the Detail Card’s Data
+### Managing the detail card
 
 - [detailTitle](cppointofinterest/detailtitle.md): The detail card’s title.
 - [detailSubtitle](cppointofinterest/detailsubtitle.md): The detail card’s subtitle.
 - [detailSummary](cppointofinterest/detailsummary.md): The detail card’s summary.
 
-### Managing the Detail Card’s Buttons
+### Managing the pin image
+
+- [selectedPinImage](cppointofinterest/selectedpinimage.md)
+
+### Managing the buttons
 
 - [primaryButton](cppointofinterest/primarybutton.md): The detail card’s primary action button.
 - [secondaryButton](cppointofinterest/secondarybutton.md): The detail card’s secondary action button.
 
-### Attaching Additional Context
+### Providing app-specific content
 
 - [userInfo](cppointofinterest/userinfo.md): An opaque value for the point of interest.
-
-### Initializers
-
-- [init(location:title:subtitle:summary:detailTitle:detailSubtitle:detailSummary:pinImage:selectedPinImage:)](cppointofinterest/init%28location_title_subtitle_summary_detailtitle_detailsubtitle_detailsummary_pinimage_selectedpinimage_%29.md)
-- [init(coder:)](cppointofinterest/init%28coder_%29.md)
-
-### Instance Properties
-
-- [selectedPinImage](cppointofinterest/selectedpinimage.md)
-
-### Type Properties
-
-- [pinImageSize](cppointofinterest/pinimagesize.md)
-- [selectedPinImageSize](cppointofinterest/selectedpinimagesize.md)
 
 ## Relationships
 
@@ -90,9 +84,9 @@ You provide an array of `CPPointOfInterest` objects when initializing [CPPointOf
 
 ## See Also
 
-### Creating a Point of Interest Template
+### Creating a point of interest template
 
-- [init(title:pointsOfInterest:selectedIndex:)](cppointofinteresttemplate/init%28title_pointsofinterest_selectedindex_%29.md): Creates a Point of Interest template with a title, the points of interest to display, and the initial selection’s index.
+- [init(title:pointsOfInterest:selectedIndex:)](cppointofinteresttemplate/init%28title_pointsofinterest_selectedindex_%29.md): Creates a point of interest template with a title, the points of interest to display, and the initial selection’s index.
 
 # CPPointOfInterest (Objective-C)
 
@@ -120,48 +114,42 @@ You provide an array of `CPPointOfInterest` objects when initializing [CPPointOf
 
 ## Topics
 
-### Creating a Point of Interest
+### Creating a point of interest
 
 - [initWithLocation:title:subtitle:summary:detailTitle:detailSubtitle:detailSummary:pinImage:](cppointofinterest/init%28location_title_subtitle_summary_detailtitle_detailsubtitle_detailsummary_pinimage_%29.md): Creates a point of interest for a specific location.
+- [initWithLocation:title:subtitle:summary:detailTitle:detailSubtitle:detailSummary:pinImage:selectedPinImage:](cppointofinterest/init%28location_title_subtitle_summary_detailtitle_detailsubtitle_detailsummary_pinimage_selectedpinimage_%29.md)
+- [pinImageSize](cppointofinterest/pinimagesize.md)
+- [selectedPinImageSize](cppointofinterest/selectedpinimagesize.md)
 
-### Managing the Map Annotation
+### Managing the map annotation
 
 - [location](cppointofinterest/location.md): The map item that contains the point of interest’s geographical information.
 - [pinImage](cppointofinterest/pinimage.md): A custom image that the map annotation displays.
 
-### Managing the Picker Item’s Data
+### Managing the picker item
 
 - [title](cppointofinterest/title.md): The title that the picker’s item displays.
 - [subtitle](cppointofinterest/subtitle.md): The subtitle that the picker’s item displays.
 - [summary](cppointofinterest/summary.md): The summary that the picker’s item displays.
 
-### Managing the Detail Card’s Data
+### Managing the detail card
 
 - [detailTitle](cppointofinterest/detailtitle.md): The detail card’s title.
 - [detailSubtitle](cppointofinterest/detailsubtitle.md): The detail card’s subtitle.
 - [detailSummary](cppointofinterest/detailsummary.md): The detail card’s summary.
 
-### Managing the Detail Card’s Buttons
+### Managing the pin image
+
+- [selectedPinImage](cppointofinterest/selectedpinimage.md)
+
+### Managing the buttons
 
 - [primaryButton](cppointofinterest/primarybutton.md): The detail card’s primary action button.
 - [secondaryButton](cppointofinterest/secondarybutton.md): The detail card’s secondary action button.
 
-### Attaching Additional Context
+### Providing app-specific content
 
 - [userInfo](cppointofinterest/userinfo.md): An opaque value for the point of interest.
-
-### Initializers
-
-- [initWithLocation:title:subtitle:summary:detailTitle:detailSubtitle:detailSummary:pinImage:selectedPinImage:](cppointofinterest/init%28location_title_subtitle_summary_detailtitle_detailsubtitle_detailsummary_pinimage_selectedpinimage_%29.md)
-
-### Instance Properties
-
-- [selectedPinImage](cppointofinterest/selectedpinimage.md)
-
-### Type Properties
-
-- [pinImageSize](cppointofinterest/pinimagesize.md)
-- [selectedPinImageSize](cppointofinterest/selectedpinimagesize.md)
 
 ## Relationships
 
@@ -175,6 +163,6 @@ You provide an array of `CPPointOfInterest` objects when initializing [CPPointOf
 
 ## See Also
 
-### Creating a Point of Interest Template
+### Creating a point of interest template
 
-- [initWithTitle:pointsOfInterest:selectedIndex:](cppointofinteresttemplate/init%28title_pointsofinterest_selectedindex_%29.md): Creates a Point of Interest template with a title, the points of interest to display, and the initial selection’s index.
+- [initWithTitle:pointsOfInterest:selectedIndex:](cppointofinteresttemplate/init%28title_pointsofinterest_selectedindex_%29.md): Creates a point of interest template with a title, the points of interest to display, and the initial selection’s index.

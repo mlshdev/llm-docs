@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistimagerowitemcondensedelement/shape/circular
 
 # CPListImageRowItemCondensedElement.Shape.circular (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Case  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
 
-The list item will render an element with a circular image.
+A circular shape for the element’s image.
 
 ## Declaration
 
@@ -21,7 +21,7 @@ case circular
 **Kind:** Enumeration Case  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-The list item will render an element with a circular image.
+A circular shape for the element’s image.
 
 ## Declaration
 

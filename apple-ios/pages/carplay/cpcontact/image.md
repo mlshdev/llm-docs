@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpcontact/image
 
 # image (Swift)
@@ -25,7 +25,7 @@ CarPlay doesn’t support animated images. If you provide an animated image, Car
 
 ## See Also
 
-### Configuring the Contact’s Attributes
+### Configuring the contact’s attributes
 
 - [name](name.md): The contact’s name.
 - [subtitle](subtitle.md): A subtitle that the template displays in addition to the contact’s name.
@@ -55,7 +55,7 @@ CarPlay doesn’t support animated images. If you provide an animated image, Car
 
 ## See Also
 
-### Configuring the Contact’s Attributes
+### Configuring the contact’s attributes
 
 - [name](name.md): The contact’s name.
 - [subtitle](subtitle.md): A subtitle that the template displays in addition to the contact’s name.

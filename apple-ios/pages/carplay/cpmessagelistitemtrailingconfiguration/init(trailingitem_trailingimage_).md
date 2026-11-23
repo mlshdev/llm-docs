@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessagelistitemtrailingconfiguration/init(trailingitem:trailingimage:)
 
 # init(trailingItem:trailingImage:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Initializer  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Creates a trailing configuration that contains an item and an image.
+Creates the configuration object with the items to display at the leading edge of the row.
 
 ## Declaration
 
@@ -17,22 +17,14 @@ init(trailingItem: CPMessageTrailingItem, trailingImage: UIImage?)
 
 ## Parameters
 
-- `trailingItem`: The item to show in the trailing region of the message list item. See [CPMessageTrailingItem](../cpmessagetrailingitem.md) for the available options.
-- `trailingImage`: The image to show in the trailing region of the message list item.
+- `trailingItem`: A standard system symbol to display. Specify [CPMessageTrailingItem.none](../cpmessagetrailingitem/none.md) if you don’t want to display a standard symbol.
+- `trailingImage`: A custom image you provide. If the image originates from an asset catalog, CarPlay manages light and dark variants of your image and switches them when needed. If you specify an image larger or smaller than the value in [CPMaximumMessageItemImageSize](../cpmaximummessageitemimagesize.md), the initializer scales the image to that size. If the image contains an animated sequence, CarPlay shows only the first image in the sequence.
 
-<a id="Discussion"></a>
+<a id="return-value"></a>
 
-## Discussion
+## Return Value
 
-Provide an image that is display-ready. If necessary, provide light and dark variants using an asset catalog, or use an instance of [UIImageAsset](https://developer.apple.com/documentation/uikit/uiimageasset) and register an image for each interface style. To properly size your image, use the display scale of the vehicle’s primary screen, which you access from your interface controller’s [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md) property. Make sure that the image isn’t larger than [CPMaximumMessageItemImageSize](../cpmaximummessageitemimagesize.md).
-
-CarPlay doesn’t support animated images. If you provide an animated image, CarPlay uses only the first image in the animation sequence.
-
-## See Also
-
-### Creating a Configuration
-
-- [CPMaximumMessageItemImageSize](../cpmaximummessageitemimagesize.md): The maximum size of a message list item’s image.
+An initialized configuration object.
 
 # initWithTrailingItem:trailingImage: (Objective-C)
 
@@ -40,7 +32,7 @@ CarPlay doesn’t support animated images. If you provide an animated image, Car
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Creates a trailing configuration that contains an item and an image.
+Creates the configuration object with the items to display at the leading edge of the row.
 
 ## Declaration
 
@@ -50,19 +42,11 @@ Creates a trailing configuration that contains an item and an image.
 
 ## Parameters
 
-- `trailingItem`: The item to show in the trailing region of the message list item. See [CPMessageTrailingItem](../cpmessagetrailingitem.md) for the available options.
-- `trailingImage`: The image to show in the trailing region of the message list item.
+- `trailingItem`: A standard system symbol to display. Specify [CPMessageTrailingItemNone](../cpmessagetrailingitem/none.md) if you don’t want to display a standard symbol.
+- `trailingImage`: A custom image you provide. If the image originates from an asset catalog, CarPlay manages light and dark variants of your image and switches them when needed. If you specify an image larger or smaller than the value in [CPMaximumMessageItemImageSize](../cpmaximummessageitemimagesize.md), the initializer scales the image to that size. If the image contains an animated sequence, CarPlay shows only the first image in the sequence.
 
-<a id="Discussion"></a>
+<a id="return-value"></a>
 
-## Discussion
+## Return Value
 
-Provide an image that is display-ready. If necessary, provide light and dark variants using an asset catalog, or use an instance of [UIImageAsset](https://developer.apple.com/documentation/uikit/uiimageasset) and register an image for each interface style. To properly size your image, use the display scale of the vehicle’s primary screen, which you access from your interface controller’s [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md) property. Make sure that the image isn’t larger than [CPMaximumMessageItemImageSize](../cpmaximummessageitemimagesize.md).
-
-CarPlay doesn’t support animated images. If you provide an animated image, CarPlay uses only the first image in the animation sequence.
-
-## See Also
-
-### Creating a Configuration
-
-- [CPMaximumMessageItemImageSize](../cpmaximummessageitemimagesize.md): The maximum size of a message list item’s image.
+An initialized configuration object.

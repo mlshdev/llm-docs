@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbutton
 
 # CPButton (Swift)
@@ -25,18 +25,18 @@ The framework provides specialized subclasses for common actions, such as [CPCon
 
 ## Topics
 
-### Creating a Button
+### Creating a button
 
 - [init(image:handler:)](cpbutton/init%28image_handler_%29.md): Creates a button that displays an image and invokes a handler when the user taps it.
 - [CPButtonMaximumImageSize](cpbuttonmaximumimagesize.md): The maximum size of a button’s image that CarPlay supports.
 
-### Getting the Button’s Image
+### Getting the button’s content
 
 - [image](cpbutton/image.md): The button’s image.
-
-### Configuring the Button’s Attributes
-
 - [title](cpbutton/title.md): The button’s title.
+
+### Enabling and disabling the button
+
 - [isEnabled](cpbutton/isenabled.md): A Boolean value that determines whether the button is in an enabled state.
 
 ## Relationships
@@ -62,10 +62,14 @@ The framework provides specialized subclasses for common actions, such as [CPCon
 
 ## See Also
 
-### Related Types
+### Common types
 
+- [CPTemplate](cptemplate.md): An abstract base class for interface templates.
+- [CPTextButton](cptextbutton.md): A button that displays a stylized title.
 - [CPImageSet](cpimageset.md): Light and dark representations of an image.
-- [CarPlayErrorDomain](carplayerrordomain.md): The domain that CarPlay uses for any errors it provides.
+- [CPPanel](cppanel.md): A type that provides the common behaviors for panels you display on top of your app’s content.
+- [CPPanelItem](cppanelitem.md): A type that provides the common behaviors for items you display in a section of a panel.
+- [CPPanelButtonConfiguration](cppanelbuttonconfiguration.md): A type that provides the common behaviors for a button layout in a panel.
 
 # CPButton (Objective-C)
 
@@ -91,18 +95,18 @@ The framework provides specialized subclasses for common actions, such as [CPCon
 
 ## Topics
 
-### Creating a Button
+### Creating a button
 
 - [initWithImage:handler:](cpbutton/init%28image_handler_%29.md): Creates a button that displays an image and invokes a handler when the user taps it.
 - [CPButtonMaximumImageSize](cpbuttonmaximumimagesize.md): The maximum size of a button’s image that CarPlay supports.
 
-### Getting the Button’s Image
+### Getting the button’s content
 
 - [image](cpbutton/image.md): The button’s image.
-
-### Configuring the Button’s Attributes
-
 - [title](cpbutton/title.md): The button’s title.
+
+### Enabling and disabling the button
+
 - [enabled](cpbutton/isenabled.md): A Boolean value that determines whether the button is in an enabled state.
 
 ## Relationships
@@ -119,7 +123,11 @@ The framework provides specialized subclasses for common actions, such as [CPCon
 
 ## See Also
 
-### Related Types
+### Common types
 
+- [CPTemplate](cptemplate.md): An abstract base class for interface templates.
+- [CPTextButton](cptextbutton.md): A button that displays a stylized title.
 - [CPImageSet](cpimageset.md): Light and dark representations of an image.
-- [CarPlayErrorDomain](carplayerrordomain.md): The domain that CarPlay uses for any errors it provides.
+- [CPPanel](cppanel.md): A type that provides the common behaviors for panels you display on top of your app’s content.
+- [CPPanelItem](cppanelitem.md): A type that provides the common behaviors for items you display in a section of a panel.
+- [CPPanelButtonConfiguration](cppanelbuttonconfiguration.md): A type that provides the common behaviors for a button layout in a panel.

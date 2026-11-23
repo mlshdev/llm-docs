@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/integrating-carplay-with-your-quick-ordering-app
 
 # Integrating CarPlay with your quick-ordering app
@@ -260,8 +260,6 @@ private static func createJWT() throws -> String {
 
 ## See Also
 
-### Location and Information
+### Essentials
 
-- [CPPointOfInterestTemplate](cppointofinteresttemplate.md): A template that displays a map with selectable points of interest.
-- [CPInformationTemplate](cpinformationtemplate.md): A template that provides information for a point of interest, food order, parking location, or charging location.
-- [CPTextButton](cptextbutton.md): A button that displays a stylized title.
+- [CarPlay Quick Food Ordering App](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.carplay-quick-ordering): A Boolean value that indicates whether the CarPlay app helps someone order food for pickup.

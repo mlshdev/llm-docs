@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppointofinterest/init(location:title:subtitle:summary:detailtitle:detailsubtitle:detailsummary:pinimage:)
 
 # init(location:title:subtitle:summary:detailTitle:detailSubtitle:detailSummary:pinImage:) (Swift)
@@ -36,6 +36,15 @@ If you use a custom `pinImage`, provide an image that is display-ready. If neces
 
 CarPlay doesn’t support animated images. If you provide an animated image, CarPlay uses only the first image in the animation sequence.
 
+## See Also
+
+### Creating a point of interest
+
+- [init(location:title:subtitle:summary:detailTitle:detailSubtitle:detailSummary:pinImage:selectedPinImage:)](init%28location_title_subtitle_summary_detailtitle_detailsubtitle_detailsummary_pinimage_selectedpinimage_%29.md)
+- [init(coder:)](init%28coder_%29.md)
+- [pinImageSize](pinimagesize.md)
+- [selectedPinImageSize](selectedpinimagesize.md)
+
 # initWithLocation:title:subtitle:summary:detailTitle:detailSubtitle:detailSummary:pinImage: (Objective-C)
 
 **Framework:** CarPlay  
@@ -70,3 +79,11 @@ Creates a point of interest for a specific location.
 If you use a custom `pinImage`, provide an image that is display-ready. If necessary, provide light and dark variants using an asset catalog, or use an instance of [UIImageAsset](https://developer.apple.com/documentation/uikit/uiimageasset) and register an image for each interface style. To properly size your image, use the display scale of the vehicle’s primary screen from your interface controller’s [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md) property.
 
 CarPlay doesn’t support animated images. If you provide an animated image, CarPlay uses only the first image in the animation sequence.
+
+## See Also
+
+### Creating a point of interest
+
+- [initWithLocation:title:subtitle:summary:detailTitle:detailSubtitle:detailSummary:pinImage:selectedPinImage:](init%28location_title_subtitle_summary_detailtitle_detailsubtitle_detailsummary_pinimage_selectedpinimage_%29.md)
+- [pinImageSize](pinimagesize.md)
+- [selectedPinImageSize](selectedpinimagesize.md)

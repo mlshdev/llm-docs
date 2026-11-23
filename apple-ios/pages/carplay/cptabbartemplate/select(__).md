@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptabbartemplate/select(_:)
 
 # select(\_:) (Swift)
@@ -15,9 +15,10 @@ func select(_ newTemplate: CPTemplate)
 
 ## See Also
 
-### Instance Methods
+### Selecting a tab
 
 - [selectTemplate(at:)](selecttemplate%28at_%29.md)
+- [selectedTemplate](selectedtemplate.md): The currently selected template in the tab bar.
 
 # selectTemplate: (Objective-C)
 
@@ -33,6 +34,7 @@ func select(_ newTemplate: CPTemplate)
 
 ## See Also
 
-### Instance Methods
+### Selecting a tab
 
 - [selectTemplateAtIndex:](selecttemplate%28at_%29.md)
+- [selectedTemplate](selectedtemplate.md): The currently selected template in the tab bar.

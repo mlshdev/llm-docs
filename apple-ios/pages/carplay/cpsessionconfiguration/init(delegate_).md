@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpsessionconfiguration/init(delegate:)
 
 # init(delegate:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Initializer  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-Creates a session configuration with a delegate.
+Configures a session configuration with the custom delegate object you provide.
 
 ## Declaration
 
@@ -17,19 +17,19 @@ init(delegate: any CPSessionConfigurationDelegate)
 
 ## Parameters
 
-- `delegate`: The delegate object.
+- `delegate`: A custom type you use to handle subsequent changes to environment values.
 
 <a id="return-value"></a>
 
 ## Return Value
 
-A newly initialized session configuration.
+A new session configuration object with the specified delegate.
 
 ## See Also
 
-### Creating a Session Configuration
+### Creating a session configuration
 
-- [CPSessionConfigurationDelegate](../cpsessionconfigurationdelegate.md): A protocol for receiving notifications about changes to vehicle properties and configuration.
+- [CPSessionConfigurationDelegate](../cpsessionconfigurationdelegate.md): Methods you use to respond to changes in the CarPlay environment.
 
 # initWithDelegate: (Objective-C)
 
@@ -37,7 +37,7 @@ A newly initialized session configuration.
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-Creates a session configuration with a delegate.
+Configures a session configuration with the custom delegate object you provide.
 
 ## Declaration
 
@@ -47,16 +47,16 @@ Creates a session configuration with a delegate.
 
 ## Parameters
 
-- `delegate`: The delegate object.
+- `delegate`: A custom type you use to handle subsequent changes to environment values.
 
 <a id="return-value"></a>
 
 ## Return Value
 
-A newly initialized session configuration.
+A new session configuration object with the specified delegate.
 
 ## See Also
 
-### Creating a Session Configuration
+### Creating a session configuration
 
-- [CPSessionConfigurationDelegate](../cpsessionconfigurationdelegate.md): A protocol for receiving notifications about changes to vehicle properties and configuration.
+- [CPSessionConfigurationDelegate](../cpsessionconfigurationdelegate.md): Methods you use to respond to changes in the CarPlay environment.

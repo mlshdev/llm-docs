@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingtemplateobserver
 
 # CPNowPlayingTemplateObserver (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Protocol  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The methods for responding to the user interacting with the Now Playing template.
+Methods for responding to interactions with buttons in the Now Playing template.
 
 ## Declaration
 
@@ -19,16 +19,14 @@ protocol CPNowPlayingTemplateObserver : NSObjectProtocol
 
 ## Overview
 
-You use a Now Playing template observer to respond when the user interacts with the Album-Artist and Up Next buttons. The protocol defines methods that CarPlay calls when a user taps these buttons. Use your implementation to provide the appropriate behavior when these events occur. For example, when the user taps the Album-Artist button, you can present a new template that displays the content of the current album, playlist, or podcast.
-
-To register an observer, create an object that implements the `CPNowPlayingTemplateObserver` protocol and then call the Now Playing template’s [add(\_:)](cpnowplayingtemplate/add%28__%29.md) method, passing your object as the only parameter.
+If you enable the Album Artist or Up Next button in the Now Playing interface, use this protocol to respond to interactions with those buttons. Implement this protocol in one of your app’s custom objects, and register the object as an observer using the [add(\_:)](cpnowplayingtemplate/add%28__%29.md) method of [CPNowPlayingTemplate](cpnowplayingtemplate.md). For each of the protocol’s methods, provide a response when someone interacts with the button. For example, when someone selects the Album Artist button, update your app’s interface to display the artist information for the currently playing item.
 
 ## Topics
 
-### Responding to User Interactions
+### Responding to interactions
 
-- [nowPlayingTemplateAlbumArtistButtonTapped(\_:)](cpnowplayingtemplateobserver/nowplayingtemplatealbumartistbuttontapped%28__%29.md): Tells the observer that the user tapped the Album-Artist button.
-- [nowPlayingTemplateUpNextButtonTapped(\_:)](cpnowplayingtemplateobserver/nowplayingtemplateupnextbuttontapped%28__%29.md): Tells the observer that the user tapped the Up Next button.
+- [nowPlayingTemplateAlbumArtistButtonTapped(\_:)](cpnowplayingtemplateobserver/nowplayingtemplatealbumartistbuttontapped%28__%29.md): Tells the delegate that someone wants to view album artist information.
+- [nowPlayingTemplateUpNextButtonTapped(\_:)](cpnowplayingtemplateobserver/nowplayingtemplateupnextbuttontapped%28__%29.md): Tells the delegate that someone wants to view the Up Next content.
 
 ## Relationships
 
@@ -38,10 +36,10 @@ To register an observer, create an object that implements the `CPNowPlayingTempl
 
 ## See Also
 
-### Observing Now Playing Events
+### Now playing
 
-- [add(\_:)](cpnowplayingtemplate/add%28__%29.md): Registers an observer that receives Now Playing template events.
-- [remove(\_:)](cpnowplayingtemplate/remove%28__%29.md): Removes an observer from receiving Now Playing template events.
+- [CPNowPlayingTemplate](cpnowplayingtemplate.md): A shared system template that shows the currently selected audio content and offers controls to manage playback.
+- [Now Playing supporting types](now-playing-support.md): Add Now Playing buttons to your interface and configure overlays with sports information.
 
 # CPNowPlayingTemplateObserver (Objective-C)
 
@@ -49,7 +47,7 @@ To register an observer, create an object that implements the `CPNowPlayingTempl
 **Kind:** Protocol  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The methods for responding to the user interacting with the Now Playing template.
+Methods for responding to interactions with buttons in the Now Playing template.
 
 ## Declaration
 
@@ -61,16 +59,14 @@ The methods for responding to the user interacting with the Now Playing template
 
 ## Overview
 
-You use a Now Playing template observer to respond when the user interacts with the Album-Artist and Up Next buttons. The protocol defines methods that CarPlay calls when a user taps these buttons. Use your implementation to provide the appropriate behavior when these events occur. For example, when the user taps the Album-Artist button, you can present a new template that displays the content of the current album, playlist, or podcast.
-
-To register an observer, create an object that implements the `CPNowPlayingTemplateObserver` protocol and then call the Now Playing template’s [addObserver:](cpnowplayingtemplate/add%28__%29.md) method, passing your object as the only parameter.
+If you enable the Album Artist or Up Next button in the Now Playing interface, use this protocol to respond to interactions with those buttons. Implement this protocol in one of your app’s custom objects, and register the object as an observer using the [addObserver:](cpnowplayingtemplate/add%28__%29.md) method of [CPNowPlayingTemplate](cpnowplayingtemplate.md). For each of the protocol’s methods, provide a response when someone interacts with the button. For example, when someone selects the Album Artist button, update your app’s interface to display the artist information for the currently playing item.
 
 ## Topics
 
-### Responding to User Interactions
+### Responding to interactions
 
-- [nowPlayingTemplateAlbumArtistButtonTapped:](cpnowplayingtemplateobserver/nowplayingtemplatealbumartistbuttontapped%28__%29.md): Tells the observer that the user tapped the Album-Artist button.
-- [nowPlayingTemplateUpNextButtonTapped:](cpnowplayingtemplateobserver/nowplayingtemplateupnextbuttontapped%28__%29.md): Tells the observer that the user tapped the Up Next button.
+- [nowPlayingTemplateAlbumArtistButtonTapped:](cpnowplayingtemplateobserver/nowplayingtemplatealbumartistbuttontapped%28__%29.md): Tells the delegate that someone wants to view album artist information.
+- [nowPlayingTemplateUpNextButtonTapped:](cpnowplayingtemplateobserver/nowplayingtemplateupnextbuttontapped%28__%29.md): Tells the delegate that someone wants to view the Up Next content.
 
 ## Relationships
 
@@ -80,7 +76,7 @@ To register an observer, create an object that implements the `CPNowPlayingTempl
 
 ## See Also
 
-### Observing Now Playing Events
+### Now playing
 
-- [addObserver:](cpnowplayingtemplate/add%28__%29.md): Registers an observer that receives Now Playing template events.
-- [removeObserver:](cpnowplayingtemplate/remove%28__%29.md): Removes an observer from receiving Now Playing template events.
+- [CPNowPlayingTemplate](cpnowplayingtemplate.md): A shared system template that shows the currently selected audio content and offers controls to manage playback.
+- [Now Playing supporting types](now-playing-support.md): Add Now Playing buttons to your interface and configure overlays with sports information.

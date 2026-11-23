@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpcontacttemplate/contact
 
 # contact (Swift)
@@ -23,7 +23,7 @@ Assigning a new instance of [CPContact](../cpcontact.md) updates the template.
 
 ## See Also
 
-### Configuring the Contact
+### Configuring the contact
 
 - [CPContact](../cpcontact.md): A data object that contains information about a contact.
 
@@ -49,6 +49,6 @@ Assigning a new instance of [CPContact](../cpcontact.md) updates the template.
 
 ## See Also
 
-### Configuring the Contact
+### Configuring the contact
 
 - [CPContact](../cpcontact.md): A data object that contains information about a contact.

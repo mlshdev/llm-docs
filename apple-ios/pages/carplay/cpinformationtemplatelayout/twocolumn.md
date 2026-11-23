@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinformationtemplatelayout/twocolumn
 
 # CPInformationTemplateLayout.twoColumn (Swift)
@@ -23,7 +23,7 @@ You use this layout when you want the template to display an item’s detail tex
 
 ## See Also
 
-### Template Layout Styles
+### Getting the template layout style
 
 - [CPInformationTemplateLayout.leading](leading.md): A layout that displays a template’s items aligned to its leading edge.
 
@@ -49,6 +49,6 @@ You use this layout when you want the template to display an item’s detail tex
 
 ## See Also
 
-### Template Layout Styles
+### Getting the template layout style
 
 - [CPInformationTemplateLayoutLeading](leading.md): A layout that displays a template’s items aligned to its leading edge.

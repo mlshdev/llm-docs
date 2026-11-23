@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinformationitem/title
 
 # title (Swift)
@@ -17,7 +17,7 @@ var title: String? { get }
 
 ## See Also
 
-### Accessing the Item’s Attributes
+### Accessing the item’s attributes
 
 - [detail](detail.md): The text that the template displays below or beside the item’s title.
 
@@ -37,6 +37,6 @@ The text that the template displays as the item’s title.
 
 ## See Also
 
-### Accessing the Item’s Attributes
+### Accessing the item’s attributes
 
 - [detail](detail.md): The text that the template displays below or beside the item’s title.

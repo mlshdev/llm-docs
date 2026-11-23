@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpalerttemplate/maximumactioncount
 
 # maximumActionCount (Swift)
@@ -17,7 +17,7 @@ class var maximumActionCount: Int { get }
 
 ## See Also
 
-### Creating an Alert Template
+### Creating an alert template
 
 - [init(titleVariants:actions:)](init%28titlevariants_actions_%29.md): Creates an alert template.
 
@@ -37,6 +37,6 @@ The maximum number of actions allowed in an alert template.
 
 ## See Also
 
-### Creating an Alert Template
+### Creating an alert template
 
 - [initWithTitleVariants:actions:](init%28titlevariants_actions_%29.md): Creates an alert template.

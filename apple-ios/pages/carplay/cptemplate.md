@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptemplate
 
 # CPTemplate (Swift)
@@ -25,16 +25,16 @@ You don’t use this class directly, or create your own subclasses. Instead, you
 
 ## Topics
 
-### Accessing Template Information
-
-- [userInfo](cptemplate/userinfo.md): Any custom data or object that you want to associate with the template.
-
-### Accessing Tab Information
+### Accessing tab information
 
 - [tabTitle](cptemplate/tabtitle.md): A short title that describes the content of the tab.
 - [tabImage](cptemplate/tabimage.md): An image that represents the content of the tab.
 - [tabSystemItem](cptemplate/tabsystemitem.md): A system object that provides a title and image for common tab content, such as contacts or favorites.
 - [showsTabBadge](cptemplate/showstabbadge.md): An indicator you use to call attention to the tab.
+
+### Accessing app-specific details
+
+- [userInfo](cptemplate/userinfo.md): Any custom data or object that you want to associate with the template.
 
 ### Initializers
 
@@ -75,12 +75,14 @@ You don’t use this class directly, or create your own subclasses. Instead, you
 
 ## See Also
 
-### General Purpose Templates
+### Common types
 
-- [CPListTemplate](cplisttemplate.md): A template that displays and manages a list of items.
-- [CPGridTemplate](cpgridtemplate.md): A template that displays and manages a grid of items.
-- [CPTabBarTemplate](cptabbartemplate.md): A container template that displays and manages other templates, presenting them as tabs.
-- [CPBarButtonProviding](cpbarbuttonproviding.md): The methods that templates use to provide buttons for the navigation bar.
+- [CPTextButton](cptextbutton.md): A button that displays a stylized title.
+- [CPButton](cpbutton.md): A button that displays an image and invokes a handler when the user taps it.
+- [CPImageSet](cpimageset.md): Light and dark representations of an image.
+- [CPPanel](cppanel.md): A type that provides the common behaviors for panels you display on top of your app’s content.
+- [CPPanelItem](cppanelitem.md): A type that provides the common behaviors for items you display in a section of a panel.
+- [CPPanelButtonConfiguration](cppanelbuttonconfiguration.md): A type that provides the common behaviors for a button layout in a panel.
 
 # CPTemplate (Objective-C)
 
@@ -106,16 +108,16 @@ You don’t use this class directly, or create your own subclasses. Instead, you
 
 ## Topics
 
-### Accessing Template Information
-
-- [userInfo](cptemplate/userinfo.md): Any custom data or object that you want to associate with the template.
-
-### Accessing Tab Information
+### Accessing tab information
 
 - [tabTitle](cptemplate/tabtitle.md): A short title that describes the content of the tab.
 - [tabImage](cptemplate/tabimage.md): An image that represents the content of the tab.
 - [tabSystemItem](cptemplate/tabsystemitem.md): A system object that provides a title and image for common tab content, such as contacts or favorites.
 - [showsTabBadge](cptemplate/showstabbadge.md): An indicator you use to call attention to the tab.
+
+### Accessing app-specific details
+
+- [userInfo](cptemplate/userinfo.md): Any custom data or object that you want to associate with the template.
 
 ## Relationships
 
@@ -144,9 +146,11 @@ You don’t use this class directly, or create your own subclasses. Instead, you
 
 ## See Also
 
-### General Purpose Templates
+### Common types
 
-- [CPListTemplate](cplisttemplate.md): A template that displays and manages a list of items.
-- [CPGridTemplate](cpgridtemplate.md): A template that displays and manages a grid of items.
-- [CPTabBarTemplate](cptabbartemplate.md): A container template that displays and manages other templates, presenting them as tabs.
-- [CPBarButtonProviding](cpbarbuttonproviding.md): The methods that templates use to provide buttons for the navigation bar.
+- [CPTextButton](cptextbutton.md): A button that displays a stylized title.
+- [CPButton](cpbutton.md): A button that displays an image and invokes a handler when the user taps it.
+- [CPImageSet](cpimageset.md): Light and dark representations of an image.
+- [CPPanel](cppanel.md): A type that provides the common behaviors for panels you display on top of your app’s content.
+- [CPPanelItem](cppanelitem.md): A type that provides the common behaviors for items you display in a section of a panel.
+- [CPPanelButtonConfiguration](cppanelbuttonconfiguration.md): A type that provides the common behaviors for a button layout in a panel.

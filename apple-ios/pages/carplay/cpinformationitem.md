@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinformationitem
 
 # CPInformationItem (Swift)
@@ -23,11 +23,11 @@ class CPInformationItem
 
 ## Topics
 
-### Creating an Information Item
+### Creating an information item
 
 - [init(title:detail:)](cpinformationitem/init%28title_detail_%29.md): Creates an information item with a title and detail text.
 
-### Accessing the Item’s Attributes
+### Accessing the item’s attributes
 
 - [title](cpinformationitem/title.md): The text that the template displays as the item’s title.
 - [detail](cpinformationitem/detail.md): The text that the template displays below or beside the item’s title.
@@ -59,7 +59,7 @@ class CPInformationItem
 
 ## See Also
 
-### Managing the Items
+### Managing the items
 
 - [items](cpinformationtemplate/items.md): The items that the template displays.
 - [CPInformationRatingItem](cpinformationratingitem.md): A data object that provides rated content for an information template.
@@ -86,11 +86,11 @@ A data object that provides content for an information template.
 
 ## Topics
 
-### Creating an Information Item
+### Creating an information item
 
 - [initWithTitle:detail:](cpinformationitem/init%28title_detail_%29.md): Creates an information item with a title and detail text.
 
-### Accessing the Item’s Attributes
+### Accessing the item’s attributes
 
 - [title](cpinformationitem/title.md): The text that the template displays as the item’s title.
 - [detail](cpinformationitem/detail.md): The text that the template displays below or beside the item’s title.
@@ -111,7 +111,7 @@ A data object that provides content for an information template.
 
 ## See Also
 
-### Managing the Items
+### Managing the items
 
 - [items](cpinformationtemplate/items.md): The items that the template displays.
 - [CPInformationRatingItem](cpinformationratingitem.md): A data object that provides rated content for an information template.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinterfacecontrollerdelegate/templatewillappear(_:animated:)
 
 # templateWillAppear(\_:animated:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-Tells the delegate that the template will appear onscreen.
+Tells the delegate that the controller is about to show the specified template in your interface.
 
 ## Declaration
 
@@ -17,15 +17,22 @@ optional func templateWillAppear(_ aTemplate: CPTemplate, animated: Bool)
 
 ## Parameters
 
-- `animated`: A Boolean value indicating whether the system animates the presentation of the template.
+- `aTemplate`: The template that’s about to appear.
+- `animated`: `true` if the system animates the appearance of the template.
+
+<a id="discussion"></a>
+
+## Discussion
+
+The interface controller calls this method before making the template’s content visible in your app’s interface. Use this method to perform additional tasks before the template’s appearance.
 
 ## See Also
 
-### Handling Display Events
+### Handling display-related events
 
-- [templateDidAppear(\_:animated:)](templatedidappear%28__animated_%29.md): Tells the delegate that the template did appear onscreen.
-- [templateWillDisappear(\_:animated:)](templatewilldisappear%28__animated_%29.md): Tells the delegate that the template will disappear from the screen.
-- [templateDidDisappear(\_:animated:)](templatediddisappear%28__animated_%29.md): Tells the delegate that the template did disappear from the screen.
+- [templateDidAppear(\_:animated:)](templatedidappear%28__animated_%29.md): Tells the delegate that the controller showed the specified template in your interface.
+- [templateWillDisappear(\_:animated:)](templatewilldisappear%28__animated_%29.md): Tells the delegate that the controller is about to remove the specified template in your interface.
+- [templateDidDisappear(\_:animated:)](templatediddisappear%28__animated_%29.md): Tells the delegate that the controller removed the specified template from your interface.
 
 # templateWillAppear:animated: (Objective-C)
 
@@ -33,7 +40,7 @@ optional func templateWillAppear(_ aTemplate: CPTemplate, animated: Bool)
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-Tells the delegate that the template will appear onscreen.
+Tells the delegate that the controller is about to show the specified template in your interface.
 
 ## Declaration
 
@@ -43,12 +50,19 @@ Tells the delegate that the template will appear onscreen.
 
 ## Parameters
 
-- `animated`: A Boolean value indicating whether the system animates the presentation of the template.
+- `aTemplate`: The template that’s about to appear.
+- `animated`: `true` if the system animates the appearance of the template.
+
+<a id="discussion"></a>
+
+## Discussion
+
+The interface controller calls this method before making the template’s content visible in your app’s interface. Use this method to perform additional tasks before the template’s appearance.
 
 ## See Also
 
-### Handling Display Events
+### Handling display-related events
 
-- [templateDidAppear:animated:](templatedidappear%28__animated_%29.md): Tells the delegate that the template did appear onscreen.
-- [templateWillDisappear:animated:](templatewilldisappear%28__animated_%29.md): Tells the delegate that the template will disappear from the screen.
-- [templateDidDisappear:animated:](templatediddisappear%28__animated_%29.md): Tells the delegate that the template did disappear from the screen.
+- [templateDidAppear:animated:](templatedidappear%28__animated_%29.md): Tells the delegate that the controller showed the specified template in your interface.
+- [templateWillDisappear:animated:](templatewilldisappear%28__animated_%29.md): Tells the delegate that the controller is about to remove the specified template in your interface.
+- [templateDidDisappear:animated:](templatediddisappear%28__animated_%29.md): Tells the delegate that the controller removed the specified template from your interface.

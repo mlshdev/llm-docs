@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbarbutton/image
 
 # image (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-The image displayed on the bar button.
+The image to display in the button.
 
 ## Declaration
 
@@ -15,20 +15,18 @@ The image displayed on the bar button.
 var image: UIImage? { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-If you provide an animated image, the button displays only the first image in the animation sequence.
-
-Setting this property has an effect only when the button type is [CPBarButton.Type.image](type/image.md).
+Specify the button’s image at initialization time and use this property to update it. If you initialize the button with text instead of an image, this property is `nil`.
 
 ## See Also
 
-### Configuring the Button
+### Configuring the button
 
-- [isEnabled](isenabled.md): A Boolean value that enables and disables the bar button.
-- [title](title.md): The title displayed on the bar button.
+- [title](title.md): The text to display in the button.
+- [isEnabled](isenabled.md): A Boolean value that indicates whether the button is enabled.
 
 # image (Objective-C)
 
@@ -36,7 +34,7 @@ Setting this property has an effect only when the button type is [CPBarButton.Ty
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-The image displayed on the bar button.
+The image to display in the button.
 
 ## Declaration
 
@@ -44,17 +42,15 @@ The image displayed on the bar button.
 @property (nonatomic, strong, nullable) UIImage * image;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-If you provide an animated image, the button displays only the first image in the animation sequence.
-
-Setting this property has an effect only when the button type is [CPBarButtonTypeImage](type/image.md).
+Specify the button’s image at initialization time and use this property to update it. If you initialize the button with text instead of an image, this property is `nil`.
 
 ## See Also
 
-### Configuring the Button
+### Configuring the button
 
-- [enabled](isenabled.md): A Boolean value that enables and disables the bar button.
-- [title](title.md): The title displayed on the bar button.
+- [title](title.md): The text to display in the button.
+- [enabled](isenabled.md): A Boolean value that indicates whether the button is enabled.

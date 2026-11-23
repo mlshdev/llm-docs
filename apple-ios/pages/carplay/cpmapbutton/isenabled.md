@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmapbutton/isenabled
 
 # isEnabled (Swift)
@@ -23,7 +23,7 @@ The default value is [true](https://developer.apple.com/documentation/swift/true
 
 ## See Also
 
-### Controlling the Button
+### Configuring the button
 
 - [isHidden](ishidden.md): A Boolean value that hides and shows the map button.
 
@@ -49,6 +49,6 @@ The default value is [true](https://developer.apple.com/documentation/swift/true
 
 ## See Also
 
-### Controlling the Button
+### Configuring the button
 
 - [hidden](ishidden.md): A Boolean value that hides and shows the map button.

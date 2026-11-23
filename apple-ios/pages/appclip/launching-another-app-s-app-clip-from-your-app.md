@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appclip/launching-another-app-s-app-clip-from-your-app
 
 # Launching another app’s App Clip from your app (Swift)
@@ -23,7 +23,7 @@ Starting with iOS 17, an app can launch another app’s App Clip using the invoc
 
 Use the [Link Presentation](https://developer.apple.com/documentation/linkpresentation) framework to include a rich preview of the App Clip in your app that people tap to launch the App Clip directly:
 
-1. To fetch metadata using the invokation URL of the App Clip, use [LPMetadataProvider](https://developer.apple.com/documentation/linkpresentation/lpmetadataprovider).
+1. To fetch metadata using the invocation URL of the App Clip, use [LPMetadataProvider](https://developer.apple.com/documentation/linkpresentation/lpmetadataprovider).
 2. To display the App Clip preview, use the metadata you receive in an [LPLinkView](https://developer.apple.com/documentation/linkpresentation/lplinkview).
 
 The following example fetches the metadata and then passes it to a link view.
@@ -107,7 +107,7 @@ Starting with iOS 17, an app can launch another app’s App Clip using the invoc
 
 Use the [Link Presentation](https://developer.apple.com/documentation/linkpresentation) framework to include a rich preview of the App Clip in your app that people tap to launch the App Clip directly:
 
-1. To fetch metadata using the invokation URL of the App Clip, use [LPMetadataProvider](https://developer.apple.com/documentation/linkpresentation/lpmetadataprovider).
+1. To fetch metadata using the invocation URL of the App Clip, use [LPMetadataProvider](https://developer.apple.com/documentation/linkpresentation/lpmetadataprovider).
 2. To display the App Clip preview, use the metadata you receive in an [LPLinkView](https://developer.apple.com/documentation/linkpresentation/lplinkview).
 
 The following example fetches the metadata and then passes it to a link view.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpvoicecontroltemplate/activestateidentifier
 
 # activeStateIdentifier (Swift)
@@ -17,7 +17,7 @@ var activeStateIdentifier: String? { get }
 
 ## See Also
 
-### Activating a State
+### Activating a state
 
 - [activateVoiceControlState(withIdentifier:)](activatevoicecontrolstate%28withidentifier_%29.md): Changes the template’s state to the one matching the specified identifier.
 
@@ -37,6 +37,6 @@ The identifier of the template’s current voice control state.
 
 ## See Also
 
-### Activating a State
+### Activating a state
 
 - [activateVoiceControlStateWithIdentifier:](activatevoicecontrolstate%28withidentifier_%29.md): Changes the template’s state to the one matching the specified identifier.

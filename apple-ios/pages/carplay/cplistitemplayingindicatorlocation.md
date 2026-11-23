@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitemplayingindicatorlocation
 
 # CPListItemPlayingIndicatorLocation (Swift)
@@ -19,14 +19,14 @@ enum CPListItemPlayingIndicatorLocation
 
 ## Overview
 
-Use these constants to set the value of a list item’s [playingIndicatorLocation](cplistitem/playingindicatorlocation.md) property. When you set a list item’s [isPlaying](cplistitem/isplaying.md) property to `true`, it uses the specified location to position the Now Playing indicator.
+Use these constants to configure the [playingIndicatorLocation](cplistitem/playingindicatorlocation.md) property of the list item. When you set a list item’s [isPlaying](cplistitem/isplaying.md) property to `true`, CarPlay displays Now Playing information the item’s row and positions it according to the constant you specified.
 
 ## Topics
 
-### Now Playing Indicator Locations
+### Now Playing indicator locations
 
-- [CPListItemPlayingIndicatorLocation.leading](cplistitemplayingindicatorlocation/leading.md): Align the Now Playing indicator with the leading edge of the list item.
-- [CPListItemPlayingIndicatorLocation.trailing](cplistitemplayingindicatorlocation/trailing.md): Align the Now Playing indicator with the trailing edge of the list item.
+- [CPListItemPlayingIndicatorLocation.leading](cplistitemplayingindicatorlocation/leading.md): An option to display the Now Playing indicator on the leading edge of the list item’s row.
+- [CPListItemPlayingIndicatorLocation.trailing](cplistitemplayingindicatorlocation/trailing.md): An option to display the Now Playing indicator on the trailing edge of the list item’s row.
 
 ### Initializers
 
@@ -45,12 +45,12 @@ Use these constants to set the value of a list item’s [playingIndicatorLocatio
 
 ## See Also
 
-### Managing Playback Information
+### Managing playback information
 
-- [isExplicitContent](cplistitem/isexplicitcontent.md): A Boolean value that determines whether the list item displays its explicit content indicator.
-- [isPlaying](cplistitem/isplaying.md): A Boolean value that determines whether the list item displays its Now Playing indicator.
-- [playingIndicatorLocation](cplistitem/playingindicatorlocation.md): The location where the list item displays its Now Playing indicator.
-- [playbackProgress](cplistitem/playbackprogress.md): The playback progress status for the content that the list item represents.
+- [isPlaying](cplistitem/isplaying.md): A Boolean value that indicates whether the list item displays the Now Playing indicator.
+- [playbackProgress](cplistitem/playbackprogress.md): The current playback progress for a media item.
+- [playingIndicatorLocation](cplistitem/playingindicatorlocation.md): The placement of the Now Playing indicator in the list item’s row.
+- [isExplicitContent](cplistitem/isexplicitcontent.md): A Boolean value that indicates whether the list item displays an explicit content indicator.
 
 # CPListItemPlayingIndicatorLocation (Objective-C)
 
@@ -70,20 +70,20 @@ enum CPListItemPlayingIndicatorLocation : NSInteger;
 
 ## Overview
 
-Use these constants to set the value of a list item’s [playingIndicatorLocation](cplistitem/playingindicatorlocation.md) property. When you set a list item’s [playing](cplistitem/isplaying.md) property to `true`, it uses the specified location to position the Now Playing indicator.
+Use these constants to configure the [playingIndicatorLocation](cplistitem/playingindicatorlocation.md) property of the list item. When you set a list item’s [playing](cplistitem/isplaying.md) property to `true`, CarPlay displays Now Playing information the item’s row and positions it according to the constant you specified.
 
 ## Topics
 
-### Now Playing Indicator Locations
+### Now Playing indicator locations
 
-- [CPListItemPlayingIndicatorLocationLeading](cplistitemplayingindicatorlocation/leading.md): Align the Now Playing indicator with the leading edge of the list item.
-- [CPListItemPlayingIndicatorLocationTrailing](cplistitemplayingindicatorlocation/trailing.md): Align the Now Playing indicator with the trailing edge of the list item.
+- [CPListItemPlayingIndicatorLocationLeading](cplistitemplayingindicatorlocation/leading.md): An option to display the Now Playing indicator on the leading edge of the list item’s row.
+- [CPListItemPlayingIndicatorLocationTrailing](cplistitemplayingindicatorlocation/trailing.md): An option to display the Now Playing indicator on the trailing edge of the list item’s row.
 
 ## See Also
 
-### Managing Playback Information
+### Managing playback information
 
-- [explicitContent](cplistitem/isexplicitcontent.md): A Boolean value that determines whether the list item displays its explicit content indicator.
-- [playing](cplistitem/isplaying.md): A Boolean value that determines whether the list item displays its Now Playing indicator.
-- [playingIndicatorLocation](cplistitem/playingindicatorlocation.md): The location where the list item displays its Now Playing indicator.
-- [playbackProgress](cplistitem/playbackprogress.md): The playback progress status for the content that the list item represents.
+- [playing](cplistitem/isplaying.md): A Boolean value that indicates whether the list item displays the Now Playing indicator.
+- [playbackProgress](cplistitem/playbackprogress.md): The current playback progress for a media item.
+- [playingIndicatorLocation](cplistitem/playingindicatorlocation.md): The placement of the Now Playing indicator in the list item’s row.
+- [explicitContent](cplistitem/isexplicitcontent.md): A Boolean value that indicates whether the list item displays an explicit content indicator.

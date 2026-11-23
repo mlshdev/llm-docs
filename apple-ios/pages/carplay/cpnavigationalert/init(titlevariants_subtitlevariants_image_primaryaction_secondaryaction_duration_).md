@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationalert/init(titlevariants:subtitlevariants:image:primaryaction:secondaryaction:duration:)
 
 # init(titleVariants:subtitleVariants:image:primaryAction:secondaryAction:duration:) (Swift)
@@ -34,9 +34,11 @@ CarPlay doesn’t support animated images. If you provide an animated image, Car
 
 ## See Also
 
-### Creating a Navigation Alert
+### Creating a navigation alert
 
-- [init(titleVariants:subtitleVariants:imageSet:primaryAction:secondaryAction:duration:)](init%28titlevariants_subtitlevariants_imageset_primaryaction_secondaryaction_duration_%29.md): Deprecated. Creates a navigation alert.
+- [init(titleVariants:subtitleVariants:avatarImage:alert:actions:duration:)](init%28titlevariants_subtitlevariants_avatarimage_alert_actions_duration_%29.md): Initialize a @c CPNavigationAlert with a title, image, an array of actions, and duration.
+- [init(titleVariants:subtitleVariants:avatarImage:alertImage:actions:duration:)](init%28titlevariants_subtitlevariants_avatarimage_alertimage_actions_duration_%29.md)
+- [init(coder:)](init%28coder_%29.md)
 
 # initWithTitleVariants:subtitleVariants:image:primaryAction:secondaryAction:duration: (Objective-C)
 
@@ -71,6 +73,6 @@ CarPlay doesn’t support animated images. If you provide an animated image, Car
 
 ## See Also
 
-### Creating a Navigation Alert
+### Creating a navigation alert
 
-- [initWithTitleVariants:subtitleVariants:imageSet:primaryAction:secondaryAction:duration:](init%28titlevariants_subtitlevariants_imageset_primaryaction_secondaryaction_duration_%29.md): Deprecated. Creates a navigation alert.
+- [initWithTitleVariants:subtitleVariants:avatarImage:alertImage:actions:duration:](init%28titlevariants_subtitlevariants_avatarimage_alert_actions_duration_%29.md): Initialize a @c CPNavigationAlert with a title, image, an array of actions, and duration.

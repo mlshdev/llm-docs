@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingtemplate/updatenowplayingbuttons(_:)
 
 # updateNowPlayingButtons(\_:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Updates the playback control buttons the template displays.
+Updates the app-specific playback controls that appear in the lower region of the Now Playing interface.
 
 ## Declaration
 
@@ -17,26 +17,19 @@ func updateNowPlayingButtons(_ nowPlayingButtons: [CPNowPlayingButton])
 
 ## Parameters
 
-- `nowPlayingButtons`: The array of buttons to display.
+- `nowPlayingButtons`: The array of buttons to display. Specify a maximum of five buttons in this array, and specify the buttons in the order you want them to appear.
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-You can provide a maximum of five playback control buttons. The template arranges the buttons using the array’s order, from the leading edge of the CarPlay screen to the trailing edge.
+The template arranges the buttons in the same order as they appear in the array, starting from the leading edge of the interface.
 
 ## See Also
 
-### Managing the Template’s Buttons
+### Adding app-specific controls
 
-- [nowPlayingButtons](nowplayingbuttons.md): The Now Playing template’s playback control buttons.
-- [CPNowPlayingButton](../cpnowplayingbutton.md): The abstract base class that Now Playing template buttons use.
-- [CPNowPlayingImageButton](../cpnowplayingimagebutton.md): A button that displays an image.
-- [CPNowPlayingAddToLibraryButton](../cpnowplayingaddtolibrarybutton.md): A button for adding the current playing item to a collection.
-- [CPNowPlayingMoreButton](../cpnowplayingmorebutton.md): A button for presenting more options to the user.
-- [CPNowPlayingPlaybackRateButton](../cpnowplayingplaybackratebutton.md): A button for cycling through the available playback rates.
-- [CPNowPlayingRepeatButton](../cpnowplayingrepeatbutton.md): A button for cycling through the available repeat modes.
-- [CPNowPlayingShuffleButton](../cpnowplayingshufflebutton.md): A button for cycling through the available shuffle modes.
+- [nowPlayingButtons](nowplayingbuttons.md): Additional app-specific playback controls to display in the lower region of the Now Playing interface.
 
 # updateNowPlayingButtons: (Objective-C)
 
@@ -44,7 +37,7 @@ You can provide a maximum of five playback control buttons. The template arrange
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Updates the playback control buttons the template displays.
+Updates the app-specific playback controls that appear in the lower region of the Now Playing interface.
 
 ## Declaration
 
@@ -54,23 +47,16 @@ Updates the playback control buttons the template displays.
 
 ## Parameters
 
-- `nowPlayingButtons`: The array of buttons to display.
+- `nowPlayingButtons`: The array of buttons to display. Specify a maximum of five buttons in this array, and specify the buttons in the order you want them to appear.
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-You can provide a maximum of five playback control buttons. The template arranges the buttons using the array’s order, from the leading edge of the CarPlay screen to the trailing edge.
+The template arranges the buttons in the same order as they appear in the array, starting from the leading edge of the interface.
 
 ## See Also
 
-### Managing the Template’s Buttons
+### Adding app-specific controls
 
-- [nowPlayingButtons](nowplayingbuttons.md): The Now Playing template’s playback control buttons.
-- [CPNowPlayingButton](../cpnowplayingbutton.md): The abstract base class that Now Playing template buttons use.
-- [CPNowPlayingImageButton](../cpnowplayingimagebutton.md): A button that displays an image.
-- [CPNowPlayingAddToLibraryButton](../cpnowplayingaddtolibrarybutton.md): A button for adding the current playing item to a collection.
-- [CPNowPlayingMoreButton](../cpnowplayingmorebutton.md): A button for presenting more options to the user.
-- [CPNowPlayingPlaybackRateButton](../cpnowplayingplaybackratebutton.md): A button for cycling through the available playback rates.
-- [CPNowPlayingRepeatButton](../cpnowplayingrepeatbutton.md): A button for cycling through the available repeat modes.
-- [CPNowPlayingShuffleButton](../cpnowplayingshufflebutton.md): A button for cycling through the available shuffle modes.
+- [nowPlayingButtons](nowplayingbuttons.md): Additional app-specific playback controls to display in the lower region of the Now Playing interface.

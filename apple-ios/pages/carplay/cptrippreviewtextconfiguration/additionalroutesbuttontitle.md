@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptrippreviewtextconfiguration/additionalroutesbuttontitle
 
 # additionalRoutesButtonTitle (Swift)
@@ -23,7 +23,7 @@ When the title is `nil`, the button displays a system-provided title.
 
 ## See Also
 
-### Setting Button Titles
+### Accessing button titles
 
 - [startButtonTitle](startbuttontitle.md): The title displayed on the start button.
 - [overviewButtonTitle](overviewbuttontitle.md): The title displayed on the overview button.
@@ -50,7 +50,7 @@ When the title is `nil`, the button displays a system-provided title.
 
 ## See Also
 
-### Setting Button Titles
+### Accessing button titles
 
 - [startButtonTitle](startbuttontitle.md): The title displayed on the start button.
 - [overviewButtonTitle](overviewbuttontitle.md): The title displayed on the overview button.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplisttemplatedelegate
 
 # CPListTemplateDelegate (Swift)
@@ -6,8 +6,6 @@
 **Framework:** CarPlay  
 **Kind:** Protocol  
 **Availability:** iOS 12.0+ (deprecated in 14.0) · iPadOS 12.0+ (deprecated in 14.0) · Mac Catalyst 13.1+ (deprecated in 14.0)
-
-The interface an object implements to serve as the delegate for a list template.
 
 ## Declaration
 
@@ -17,9 +15,9 @@ protocol CPListTemplateDelegate : NSObjectProtocol
 
 ## Topics
 
-### Getting the Selected Item
+### Getting the selected item
 
-- [listTemplate(\_:didSelect:completionHandler:)](cplisttemplatedelegate/listtemplate%28__didselect_completionhandler_%29.md): Deprecated. Tells the delegate when the user selects a list item.
+- [listTemplate(\_:didSelect:completionHandler:)](cplisttemplatedelegate/listtemplate%28__didselect_completionhandler_%29.md): Deprecated. The user has selected an item in the list template.
 
 ## Relationships
 
@@ -29,17 +27,15 @@ protocol CPListTemplateDelegate : NSObjectProtocol
 
 ## See Also
 
-### Responding to List Events
+### Deprecated
 
-- [delegate](cplisttemplate/delegate.md): Deprecated. The object that serves as the delegate to the list template.
+- [delegate](cplisttemplate/delegate.md): Deprecated. The list template’s delegate is informed of list selection events.
 
 # CPListTemplateDelegate (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Protocol  
 **Availability:** iOS 12.0+ (deprecated in 14.0) · iPadOS 12.0+ (deprecated in 14.0) · Mac Catalyst 13.1+ (deprecated in 14.0)
-
-The interface an object implements to serve as the delegate for a list template.
 
 ## Declaration
 
@@ -49,9 +45,9 @@ The interface an object implements to serve as the delegate for a list template.
 
 ## Topics
 
-### Getting the Selected Item
+### Getting the selected item
 
-- [listTemplate:didSelectListItem:completionHandler:](cplisttemplatedelegate/listtemplate%28__didselect_completionhandler_%29.md): Deprecated. Tells the delegate when the user selects a list item.
+- [listTemplate:didSelectListItem:completionHandler:](cplisttemplatedelegate/listtemplate%28__didselect_completionhandler_%29.md): Deprecated. The user has selected an item in the list template.
 
 ## Relationships
 
@@ -61,6 +57,6 @@ The interface an object implements to serve as the delegate for a list template.
 
 ## See Also
 
-### Responding to List Events
+### Deprecated
 
-- [delegate](cplisttemplate/delegate.md): Deprecated. The object that serves as the delegate to the list template.
+- [delegate](cplisttemplate/delegate.md): Deprecated. The list template’s delegate is informed of list selection events.

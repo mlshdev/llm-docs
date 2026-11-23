@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessagelistitem
 
 # CPMessageListItem (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Class  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A list template row that represents a conversation or contact.
+A list template row that manages a text message thread or contact.
 
 ## Declaration
 
@@ -19,54 +19,44 @@ class CPMessageListItem
 
 ## Overview
 
-Use `CPMessageListItem` to display information about a conversation or a contact in a list template. Unlike [CPListItem](cplistitem.md), you don’t provide a selection handler. Instead, when the user selects the row, CarPlay invokes Siri using the parameters you provide and begins a message compose, read, or reply flow.
+When your communication app displays a list of someone’s contacts or conversations, create the rows of your list using `CPMessageListItem` objects instead of a custom type. Message list items offer a standard way for communication apps to share conversation and contact information, while still giving you ways to customize the content for your app. Each row shows the name of the thread or contact and offers ways to display additional text and images. Rows also offer ways to show common information. For example, message list items offer standard ways to mark a conversation as unread or mark a contact as a favorite.
 
-The behavior of the list item when the user selects it depends on how you initialize or configure it. If the item has a phone number or email address, Siri launches the message compose flow. If the list item has an unread indicator, Siri launches the message read flow. Otherwise, Siri launches the message reply flow.
+Unlike most rows in a list, `CPMessageListItem` objects don’t require you to provide a handler to respond to interactions with the row. Interactions occur via Siri, which uses your app’s existing SiriKit support to compose, read, and reply to messages or phone calls. If you create the item with a phone number or email address, Siri initiates your app’s workflow for composing a message. If an item has an unread indicator, Siri reads the message. In all other cases, Siri initiates the message reply workflow. To support the required workflows, make sure to handle the [INSendMessageIntent](https://developer.apple.com/documentation/intents/insendmessageintent), [INSearchForMessagesIntent](https://developer.apple.com/documentation/intents/insearchformessagesintent), and [INSetMessageAttributeIntent](https://developer.apple.com/documentation/intents/insetmessageattributeintent) types in your app’s SiriKit code.
 
-`CPMessageListItem` can display various auxiliary items in its leading and trailing regions. You describe these using a configuration object for each region. See [leadingConfiguration](cpmessagelistitem/leadingconfiguration.md) and [trailingConfiguration](cpmessagelistitem/trailingconfiguration.md) for more information.
-
-CarPlay doesn’t support custom list item types. Instead, use the [userInfo](cpmessagelistitem/userinfo.md) property to attach a value to the list item that provides additional context, such as specifying  a model object that corresponds to the item.
+Each `CPMessageListItem` object you create has three regions: a leading region, a content region, and a trailing region. The leading region displays unread or favorite indicators and an optional image. The trailing region displays optional images and text that are relevant for your content. The content region contains the name of the contact or message thread and additional information you want the person to know. For example, a contact row might have additional text to explain whether it’s the person’s work or personal phone number. Configure this information when you first create the row and update it as needed using the properties of this class.
 
 > **Note**
 
->  `CPMessageListItem` is available only in apps that have the communication entitlement.
+> You can use this class in your app only if it has the CarPlay communication entitlement.
 
 ## Topics
 
-### Creating a Message List Item
+### Creating a message list item
 
-- [init(conversationIdentifier:text:leadingConfiguration:trailingConfiguration:detailText:trailingText:)](cpmessagelistitem/init%28conversationidentifier_text_leadingconfiguration_trailingconfiguration_detailtext_trailingtext_%29.md): Creates a list item that represents an existing conversation.
-- [init(fullName:phoneOrEmailAddress:leadingConfiguration:trailingConfiguration:detailText:trailingText:)](cpmessagelistitem/init%28fullname_phoneoremailaddress_leadingconfiguration_trailingconfiguration_detailtext_trailingtext_%29.md): Creates a list item that represents a contact.
+- [init(conversationIdentifier:text:leadingConfiguration:trailingConfiguration:detailText:trailingText:)](cpmessagelistitem/init%28conversationidentifier_text_leadingconfiguration_trailingconfiguration_detailtext_trailingtext_%29.md): Creates a message list item with the identifier for one of your app’s conversations.
+- [init(fullName:phoneOrEmailAddress:leadingConfiguration:trailingConfiguration:detailText:trailingText:)](cpmessagelistitem/init%28fullname_phoneoremailaddress_leadingconfiguration_trailingconfiguration_detailtext_trailingtext_%29.md): Creates a message list item with the identifier for one of your app’s conversations.
 
-### Managing the Message Context
+### Getting the message context
 
-- [conversationIdentifier](cpmessagelistitem/conversationidentifier.md): The conversation’s unique identifier.
-- [phoneOrEmailAddress](cpmessagelistitem/phoneoremailaddress.md): The contact’s phone number or email address.
+- [conversationIdentifier](cpmessagelistitem/conversationidentifier.md): The app-specific identifier for the message conversation.
+- [phoneOrEmailAddress](cpmessagelistitem/phoneoremailaddress.md): The phone or email address of the contact.
 
-### Managing Content
+### Getting the row content
 
-- [text](cpmessagelistitem/text.md): The list item’s primary text.
-- [detailText](cpmessagelistitem/detailtext.md): The list item’s secondary text.
-- [trailingText](cpmessagelistitem/trailingtext.md): The list item’s supplementary text.
+- [text](cpmessagelistitem/text.md): The primary text to display in the message list item’s row.
+- [detailText](cpmessagelistitem/detailtext.md): Additional text to display less prominently below the row’s main text.
+- [trailingText](cpmessagelistitem/trailingtext.md): Additional text to display after the trailing configuration items.
+- [leadingDetailTextImage](cpmessagelistitem/leadingdetailtextimage.md): An image to display before the row’s detail text.
 
-### Managing Leading and Trailing Configurations
+### Configuring additional details
 
-- [leadingConfiguration](cpmessagelistitem/leadingconfiguration.md): The configuration of the list item’s leading region.
-- [CPMessageListItemLeadingConfiguration](cpmessagelistitemleadingconfiguration.md): An object that describes the appearance of a message list item’s leading region.
-- [trailingConfiguration](cpmessagelistitem/trailingconfiguration.md): The configuration of the list item’s trailing region.
-- [CPMessageListItemTrailingConfiguration](cpmessagelistitemtrailingconfiguration.md): An object that describes the appearance of a message list item’s trailing region.
+- [leadingConfiguration](cpmessagelistitem/leadingconfiguration.md): Additional content to display at the leading edge of the row.
+- [trailingConfiguration](cpmessagelistitem/trailingconfiguration.md): Additional content to display at the trailing edge of the row.
+- [userInfo](cpmessagelistitem/userinfo.md): Custom information you want to store with the message list item.
 
-### Managing Supplementary Information
+### Enabling the item
 
-- [userInfo](cpmessagelistitem/userinfo.md): An opaque value for the list item.
-
-### Enabling Items
-
-- [isEnabled](cpmessagelistitem/isenabled.md): A Boolean value that indicates if the item is enabled.
-
-### Instance Properties
-
-- [leadingDetailTextImage](cpmessagelistitem/leadingdetailtextimage.md): Image shown on the leading edge of the detail text.
+- [isEnabled](cpmessagelistitem/isenabled.md): A Boolean value that indicates whether the row is enabled.
 
 ## Relationships
 
@@ -86,13 +76,12 @@ CarPlay doesn’t support custom list item types. Instead, use the [userInfo](cp
 
 ## See Also
 
-### Creating a Section
+### List items
 
-- [init(items:header:headerSubtitle:headerImage:headerButton:sectionIndexTitle:)](cplistsection/init%28items_header_headersubtitle_headerimage_headerbutton_sectionindextitle_%29.md): Creates a section with list items, a header, a section index title, and section header details.
-- [CPListTemplateItem](cplisttemplateitem.md): A description of the common properties of all list item types.
-- [CPSelectableListItem](cpselectablelistitem.md): A description of a selectable list item.
-- [CPListItem](cplistitem.md): A selectable row in a list template.
-- [CPListImageRowItem](cplistimagerowitem.md): A list template row that displays a series of images.
+- [CPMessageListItemLeadingConfiguration](cpmessagelistitemleadingconfiguration.md): A type that defines the content at the leading edge of a message list item’s row.
+- [CPMessageListItemTrailingConfiguration](cpmessagelistitemtrailingconfiguration.md): A type that defines the content at the trailing edge of a message list item’s row.
+- [CPMaximumMessageItemImageSize](cpmaximummessageitemimagesize.md): The maximum size for images in the leading and trailing regions of a message list item.
+- [CPMaximumMessageItemLeadingDetailTextImageSize](cpmaximummessageitemleadingdetailtextimagesize.md): The maximum size for images in the detail text image of a message list item.
 
 # CPMessageListItem (Objective-C)
 
@@ -100,7 +89,7 @@ CarPlay doesn’t support custom list item types. Instead, use the [userInfo](cp
 **Kind:** Class  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A list template row that represents a conversation or contact.
+A list template row that manages a text message thread or contact.
 
 ## Declaration
 
@@ -112,54 +101,44 @@ A list template row that represents a conversation or contact.
 
 ## Overview
 
-Use `CPMessageListItem` to display information about a conversation or a contact in a list template. Unlike [CPListItem](cplistitem.md), you don’t provide a selection handler. Instead, when the user selects the row, CarPlay invokes Siri using the parameters you provide and begins a message compose, read, or reply flow.
+When your communication app displays a list of someone’s contacts or conversations, create the rows of your list using `CPMessageListItem` objects instead of a custom type. Message list items offer a standard way for communication apps to share conversation and contact information, while still giving you ways to customize the content for your app. Each row shows the name of the thread or contact and offers ways to display additional text and images. Rows also offer ways to show common information. For example, message list items offer standard ways to mark a conversation as unread or mark a contact as a favorite.
 
-The behavior of the list item when the user selects it depends on how you initialize or configure it. If the item has a phone number or email address, Siri launches the message compose flow. If the list item has an unread indicator, Siri launches the message read flow. Otherwise, Siri launches the message reply flow.
+Unlike most rows in a list, `CPMessageListItem` objects don’t require you to provide a handler to respond to interactions with the row. Interactions occur via Siri, which uses your app’s existing SiriKit support to compose, read, and reply to messages or phone calls. If you create the item with a phone number or email address, Siri initiates your app’s workflow for composing a message. If an item has an unread indicator, Siri reads the message. In all other cases, Siri initiates the message reply workflow. To support the required workflows, make sure to handle the [INSendMessageIntent](https://developer.apple.com/documentation/intents/insendmessageintent), [INSearchForMessagesIntent](https://developer.apple.com/documentation/intents/insearchformessagesintent), and [INSetMessageAttributeIntent](https://developer.apple.com/documentation/intents/insetmessageattributeintent) types in your app’s SiriKit code.
 
-`CPMessageListItem` can display various auxiliary items in its leading and trailing regions. You describe these using a configuration object for each region. See [leadingConfiguration](cpmessagelistitem/leadingconfiguration.md) and [trailingConfiguration](cpmessagelistitem/trailingconfiguration.md) for more information.
-
-CarPlay doesn’t support custom list item types. Instead, use the [userInfo](cpmessagelistitem/userinfo.md) property to attach a value to the list item that provides additional context, such as specifying  a model object that corresponds to the item.
+Each `CPMessageListItem` object you create has three regions: a leading region, a content region, and a trailing region. The leading region displays unread or favorite indicators and an optional image. The trailing region displays optional images and text that are relevant for your content. The content region contains the name of the contact or message thread and additional information you want the person to know. For example, a contact row might have additional text to explain whether it’s the person’s work or personal phone number. Configure this information when you first create the row and update it as needed using the properties of this class.
 
 > **Note**
 
->  `CPMessageListItem` is available only in apps that have the communication entitlement.
+> You can use this class in your app only if it has the CarPlay communication entitlement.
 
 ## Topics
 
-### Creating a Message List Item
+### Creating a message list item
 
-- [initWithConversationIdentifier:text:leadingConfiguration:trailingConfiguration:detailText:trailingText:](cpmessagelistitem/init%28conversationidentifier_text_leadingconfiguration_trailingconfiguration_detailtext_trailingtext_%29.md): Creates a list item that represents an existing conversation.
-- [initWithFullName:phoneOrEmailAddress:leadingConfiguration:trailingConfiguration:detailText:trailingText:](cpmessagelistitem/init%28fullname_phoneoremailaddress_leadingconfiguration_trailingconfiguration_detailtext_trailingtext_%29.md): Creates a list item that represents a contact.
+- [initWithConversationIdentifier:text:leadingConfiguration:trailingConfiguration:detailText:trailingText:](cpmessagelistitem/init%28conversationidentifier_text_leadingconfiguration_trailingconfiguration_detailtext_trailingtext_%29.md): Creates a message list item with the identifier for one of your app’s conversations.
+- [initWithFullName:phoneOrEmailAddress:leadingConfiguration:trailingConfiguration:detailText:trailingText:](cpmessagelistitem/init%28fullname_phoneoremailaddress_leadingconfiguration_trailingconfiguration_detailtext_trailingtext_%29.md): Creates a message list item with the identifier for one of your app’s conversations.
 
-### Managing the Message Context
+### Getting the message context
 
-- [conversationIdentifier](cpmessagelistitem/conversationidentifier.md): The conversation’s unique identifier.
-- [phoneOrEmailAddress](cpmessagelistitem/phoneoremailaddress.md): The contact’s phone number or email address.
+- [conversationIdentifier](cpmessagelistitem/conversationidentifier.md): The app-specific identifier for the message conversation.
+- [phoneOrEmailAddress](cpmessagelistitem/phoneoremailaddress.md): The phone or email address of the contact.
 
-### Managing Content
+### Getting the row content
 
-- [text](cpmessagelistitem/text.md): The list item’s primary text.
-- [detailText](cpmessagelistitem/detailtext.md): The list item’s secondary text.
-- [trailingText](cpmessagelistitem/trailingtext.md): The list item’s supplementary text.
+- [text](cpmessagelistitem/text.md): The primary text to display in the message list item’s row.
+- [detailText](cpmessagelistitem/detailtext.md): Additional text to display less prominently below the row’s main text.
+- [trailingText](cpmessagelistitem/trailingtext.md): Additional text to display after the trailing configuration items.
+- [leadingDetailTextImage](cpmessagelistitem/leadingdetailtextimage.md): An image to display before the row’s detail text.
 
-### Managing Leading and Trailing Configurations
+### Configuring additional details
 
-- [leadingConfiguration](cpmessagelistitem/leadingconfiguration.md): The configuration of the list item’s leading region.
-- [CPMessageListItemLeadingConfiguration](cpmessagelistitemleadingconfiguration.md): An object that describes the appearance of a message list item’s leading region.
-- [trailingConfiguration](cpmessagelistitem/trailingconfiguration.md): The configuration of the list item’s trailing region.
-- [CPMessageListItemTrailingConfiguration](cpmessagelistitemtrailingconfiguration.md): An object that describes the appearance of a message list item’s trailing region.
+- [leadingConfiguration](cpmessagelistitem/leadingconfiguration.md): Additional content to display at the leading edge of the row.
+- [trailingConfiguration](cpmessagelistitem/trailingconfiguration.md): Additional content to display at the trailing edge of the row.
+- [userInfo](cpmessagelistitem/userinfo.md): Custom information you want to store with the message list item.
 
-### Managing Supplementary Information
+### Enabling the item
 
-- [userInfo](cpmessagelistitem/userinfo.md): An opaque value for the list item.
-
-### Enabling Items
-
-- [enabled](cpmessagelistitem/isenabled.md): A Boolean value that indicates if the item is enabled.
-
-### Instance Properties
-
-- [leadingDetailTextImage](cpmessagelistitem/leadingdetailtextimage.md): Image shown on the leading edge of the detail text.
+- [enabled](cpmessagelistitem/isenabled.md): A Boolean value that indicates whether the row is enabled.
 
 ## Relationships
 
@@ -173,12 +152,9 @@ CarPlay doesn’t support custom list item types. Instead, use the [userInfo](cp
 
 ## See Also
 
-### Creating a Section
+### List items
 
-- [initWithItems:](cplistsection/initwithitems_.md): Creates a section with list items.
-- [initWithItems:header:sectionIndexTitle:](cplistsection/initwithitems_header_sectionindextitle_.md): Creates a section with list items, a header, and a section index title.
-- [initWithItems:header:headerSubtitle:headerImage:headerButton:sectionIndexTitle:](cplistsection/init%28items_header_headersubtitle_headerimage_headerbutton_sectionindextitle_%29.md): Creates a section with list items, a header, a section index title, and section header details.
-- [CPListTemplateItem](cplisttemplateitem.md): A description of the common properties of all list item types.
-- [CPSelectableListItem](cpselectablelistitem.md): A description of a selectable list item.
-- [CPListItem](cplistitem.md): A selectable row in a list template.
-- [CPListImageRowItem](cplistimagerowitem.md): A list template row that displays a series of images.
+- [CPMessageListItemLeadingConfiguration](cpmessagelistitemleadingconfiguration.md): A type that defines the content at the leading edge of a message list item’s row.
+- [CPMessageListItemTrailingConfiguration](cpmessagelistitemtrailingconfiguration.md): A type that defines the content at the trailing edge of a message list item’s row.
+- [CPMaximumMessageItemImageSize](cpmaximummessageitemimagesize.md): The maximum size for images in the leading and trailing regions of a message list item.
+- [CPMaximumMessageItemLeadingDetailTextImageSize](cpmaximummessageitemleadingdetailtextimagesize.md): The maximum size for images in the detail text image of a message list item.

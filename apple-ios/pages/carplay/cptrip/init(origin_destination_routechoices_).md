@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptrip/init(origin:destination:routechoices:)
 
 # init(origin:destination:routeChoices:) (Swift)
@@ -29,9 +29,11 @@ A newly initialized trip.
 
 ## See Also
 
-### Creating a Trip
+### Deprecated
 
-- [CPRouteChoice](../cproutechoice.md): A possible route for a trip.
+- [origin](origin.md): Deprecated. The trip’s origin.
+- [destination](destination.md): Deprecated. The trip’s destination.
+- [destinationNameVariants](destinationnamevariants.md): Deprecated. An array of strings that represents the names of the destination for this trip, arranged from most to least preferred.
 
 # initWithOrigin:destination:routeChoices: (Objective-C)
 
@@ -61,6 +63,8 @@ A newly initialized trip.
 
 ## See Also
 
-### Creating a Trip
+### Deprecated
 
-- [CPRouteChoice](../cproutechoice.md): A possible route for a trip.
+- [origin](origin.md): Deprecated. The trip’s origin.
+- [destination](destination.md): Deprecated. The trip’s destination.
+- [destinationNameVariants](destinationnamevariants.md): Deprecated. An array of strings that represents the names of the destination for this trip, arranged from most to least preferred.

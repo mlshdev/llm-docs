@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpgridtemplate/updatetitle(_:)
 
 # updateTitle(\_:) (Swift)
@@ -15,9 +15,9 @@ func updateTitle(_ title: String)
 
 ## See Also
 
-### Instance Methods
+### Getting the grid title
 
-- [updateGridButtons(\_:)](updategridbuttons%28__%29.md)
+- [title](title.md): The title shown in the grid template’s navigation bar.
 
 # updateTitle: (Objective-C)
 
@@ -33,6 +33,6 @@ func updateTitle(_ title: String)
 
 ## See Also
 
-### Instance Methods
+### Getting the grid title
 
-- [updateGridButtons:](updategridbuttons%28__%29.md)
+- [title](title.md): The title shown in the grid template’s navigation bar.

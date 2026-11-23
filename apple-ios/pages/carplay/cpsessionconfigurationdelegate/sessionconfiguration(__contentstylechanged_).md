@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpsessionconfigurationdelegate/sessionconfiguration(_:contentstylechanged:)
 
 # sessionConfiguration(\_:contentStyleChanged:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+
 
-Tells the delegate that the vehicle changed its selected content style.
+Tells the delegate about changes to the interface’s appearance.
 
 ## Declaration
 
@@ -17,14 +17,19 @@ optional func sessionConfiguration(_ sessionConfiguration: CPSessionConfiguratio
 
 ## Parameters
 
-- `sessionConfiguration`: The current session configuration.
-- `contentStyle`: The vehicle’s selected content style.
+- `sessionConfiguration`: The session configuration object that reports the change.
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The vehicle selects the content style according to the ambient light level, which can change periodically. Use this method to make sure your navigation app is always drawing the most appropriate style of map content in its base view.
+Use this method to toggle your interface between a light or dark style. When the ambient light levels change, a vehicle might update this value to ensure content on the center display remains easy to see.
+
+## See Also
+
+### Handling environmental changes
+
+- [sessionConfiguration(\_:limitedUserInterfacesChanged:)](sessionconfiguration%28__limiteduserinterfaceschanged_%29.md): Tells the delegate about changes to the availability of interface features.
 
 # sessionConfiguration:contentStyleChanged: (Objective-C)
 
@@ -32,7 +37,7 @@ The vehicle selects the content style according to the ambient light level, whic
 **Kind:** Instance Method  
 **Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+
 
-Tells the delegate that the vehicle changed its selected content style.
+Tells the delegate about changes to the interface’s appearance.
 
 ## Declaration
 
@@ -42,11 +47,16 @@ Tells the delegate that the vehicle changed its selected content style.
 
 ## Parameters
 
-- `sessionConfiguration`: The current session configuration.
-- `contentStyle`: The vehicle’s selected content style.
+- `sessionConfiguration`: The session configuration object that reports the change.
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The vehicle selects the content style according to the ambient light level, which can change periodically. Use this method to make sure your navigation app is always drawing the most appropriate style of map content in its base view.
+Use this method to toggle your interface between a light or dark style. When the ambient light levels change, a vehicle might update this value to ensure content on the center display remains easy to see.
+
+## See Also
+
+### Handling environmental changes
+
+- [sessionConfiguration:limitedUserInterfacesChanged:](sessionconfiguration%28__limiteduserinterfaceschanged_%29.md): Tells the delegate about changes to the availability of interface features.

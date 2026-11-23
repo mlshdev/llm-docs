@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistsection/headersubtitle
 
 # headerSubtitle (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+
 
-A string that the header displays as a subtitle.
+The secondary text to display in the header area of the section.
 
 ## Declaration
 
@@ -17,10 +17,11 @@ var headerSubtitle: String? { get }
 
 ## See Also
 
-### Configuring Section Headers
+### Getting the section’s header content
 
-- [headerButton](headerbutton.md): A button that the section header displays.
-- [headerImage](headerimage.md): An image that the section header displays.
+- [header](header.md): The main text to display in the header area of the section.
+- [headerButton](headerbutton.md): The button to display in the header area of the section.
+- [headerImage](headerimage.md): The image to display in the header area of the section.
 
 # headerSubtitle (Objective-C)
 
@@ -28,7 +29,7 @@ var headerSubtitle: String? { get }
 **Kind:** Instance Property  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+
 
-A string that the header displays as a subtitle.
+The secondary text to display in the header area of the section.
 
 ## Declaration
 
@@ -38,7 +39,8 @@ A string that the header displays as a subtitle.
 
 ## See Also
 
-### Configuring Section Headers
+### Getting the section’s header content
 
-- [headerButton](headerbutton.md): A button that the section header displays.
-- [headerImage](headerimage.md): An image that the section header displays.
+- [header](header.md): The main text to display in the header area of the section.
+- [headerButton](headerbutton.md): The button to display in the header area of the section.
+- [headerImage](headerimage.md): The image to display in the header area of the section.

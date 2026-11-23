@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplisttemplate/emptyviewsubtitlevariants
 
 # emptyViewSubtitleVariants (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-An array of subtitle variants for the template’s empty view.
+An array of localized subtitle strings to display when the list contains no items.
 
 ## Declaration
 
@@ -15,19 +15,20 @@ An array of subtitle variants for the template’s empty view.
 var emptyViewSubtitleVariants: [String] { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-When the list contains zero items, the template displays an empty view with a title and a subtitle. The template removes the empty view if you update the list and provide items.
+When the list contains no items in any of its sections, the template displays an empty view with a title and a subtitle string. This property contains the potential strings to display in the subtitle position of the view. CarPlay displays the first string from the array that fits the available space, so arrange your strings in the array from most- to least-preferred.
 
-Provide at least one nonzero length subtitle variant. The view displays the first subtitle variant that fits into the available screen space, so arrange your variants array from most- to least-preferred. Provide the strings as localized displayable content.
+When you update the list and add one or more items, CarPlay removes the empty view.
 
 ## See Also
 
-### Managing an Empty List
+### Managing an empty list
 
-- [emptyViewTitleVariants](emptyviewtitlevariants.md): An array of title variants for the template’s empty view.
+- [showsSpinnerWhileEmpty](showsspinnerwhileempty.md): A Boolean value that indicates whether to display a spinning activity indicator when the list contains no items.
+- [emptyViewTitleVariants](emptyviewtitlevariants.md): An array of localized title strings to display when the list contains no items.
 
 # emptyViewSubtitleVariants (Objective-C)
 
@@ -35,7 +36,7 @@ Provide at least one nonzero length subtitle variant. The view displays the firs
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-An array of subtitle variants for the template’s empty view.
+An array of localized subtitle strings to display when the list contains no items.
 
 ## Declaration
 
@@ -43,16 +44,17 @@ An array of subtitle variants for the template’s empty view.
 @property (nonatomic, copy) NSArray<NSString *> * emptyViewSubtitleVariants;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-When the list contains zero items, the template displays an empty view with a title and a subtitle. The template removes the empty view if you update the list and provide items.
+When the list contains no items in any of its sections, the template displays an empty view with a title and a subtitle string. This property contains the potential strings to display in the subtitle position of the view. CarPlay displays the first string from the array that fits the available space, so arrange your strings in the array from most- to least-preferred.
 
-Provide at least one nonzero length subtitle variant. The view displays the first subtitle variant that fits into the available screen space, so arrange your variants array from most- to least-preferred. Provide the strings as localized displayable content.
+When you update the list and add one or more items, CarPlay removes the empty view.
 
 ## See Also
 
-### Managing an Empty List
+### Managing an empty list
 
-- [emptyViewTitleVariants](emptyviewtitlevariants.md): An array of title variants for the template’s empty view.
+- [showsSpinnerWhileEmpty](showsspinnerwhileempty.md): A Boolean value that indicates whether to display a spinning activity indicator when the list contains no items.
+- [emptyViewTitleVariants](emptyviewtitlevariants.md): An array of localized title strings to display when the list contains no items.

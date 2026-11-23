@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmappanel
 
 # CPMapPanel (Swift)
@@ -27,20 +27,20 @@ To monitor the appearance and disappearance of the panel, assign a delegate obje
 
 ## Topics
 
-### Protocols
-
-- [CPMapPanel.Delegate](cpmappanel/delegate-swift.protocol.md): The interface you use to respond to the appearance and disappearance of the panel.
-
-### Initializers
+### Creating a map panel
 
 - [init(title:sections:buttonConfiguration:)](cpmappanel/init%28title_sections_buttonconfiguration_%29.md): Creates and configures a new map panel for display over your navigation app’s map template.
 
-### Instance Properties
+### Responding to the panel’s appearance and disappearance
 
-- [buttonConfiguration](cpmappanel/buttonconfiguration.md): The button information and travel estimates to display in the panel.
 - [delegate](cpmappanel/delegate-swift.property.md): The app-specific object that the system notifies when it hides and shows the panel.
-- [sections](cpmappanel/sections.md): The sections of content to display in the panel.
+- [CPMapPanel.Delegate](cpmappanel/delegate-swift.protocol.md): The interface you use to respond to the appearance and disappearance of the panel.
+
+### Getting the panel’s content
+
 - [title](cpmappanel/title.md): The title to display at the top of the panel.
+- [sections](cpmappanel/sections.md): The sections of content to display in the panel.
+- [buttonConfiguration](cpmappanel/buttonconfiguration.md): The button information and travel estimates to display in the panel.
 
 ## Relationships
 
@@ -58,6 +58,17 @@ To monitor the appearance and disappearance of the panel, assign a delegate obje
 - [NSCoding](https://developer.apple.com/documentation/foundation/nscoding)
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
+
+## See Also
+
+### Maps
+
+- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPMapButton](cpmapbutton.md): A button that represents an action that a map template displays on the CarPlay screen.
+- [CPMapPanelSection](cpmappanelsection.md): A single section of a map panel that you fill with a title and one or more items.
+- [CPMapPanelItem](cpmappanelitem.md): A type that manages the waypoint, route, trip, and other information you display in a map panel.
+- [CPMapPanelButtonConfiguration](cpmappanelbuttonconfiguration.md): A type that manages the action buttons and travel estimates in a map panel.
+- [CPChargingStationConnection](cpchargingstationconnection.md): Details about the equipment at an electric vehicle charging station.
 
 # CPMapPanel (Objective-C)
 
@@ -85,19 +96,34 @@ To monitor the appearance and disappearance of the panel, assign a delegate obje
 
 ## Topics
 
-### Instance Properties
-
-- [buttonConfiguration](cpmappanel/buttonconfiguration.md): The button information and travel estimates to display in the panel.
-- [delegate](cpmappanel/delegate-swift.property.md): The app-specific object that the system notifies when it hides and shows the panel.
-- [sections](cpmappanel/sections.md): The sections of content to display in the panel.
-- [title](cpmappanel/title.md): The title to display at the top of the panel.
-
-### Instance Methods
+### Creating a map panel
 
 - [initWithTitle:sections:buttonConfiguration:](cpmappanel/init%28title_sections_buttonconfiguration_%29.md): Creates and configures a new map panel for display over your navigation app’s map template.
+
+### Responding to the panel’s appearance and disappearance
+
+- [delegate](cpmappanel/delegate-swift.property.md): The app-specific object that the system notifies when it hides and shows the panel.
+- [CPMapPanelDelegate](cpmappanel/delegate-swift.protocol.md): The interface you use to respond to the appearance and disappearance of the panel.
+
+### Getting the panel’s content
+
+- [title](cpmappanel/title.md): The title to display at the top of the panel.
+- [sections](cpmappanel/sections.md): The sections of content to display in the panel.
+- [buttonConfiguration](cpmappanel/buttonconfiguration.md): The button information and travel estimates to display in the panel.
 
 ## Relationships
 
 ### Inherits From
 
 - [CPPanel](cppanel.md)
+
+## See Also
+
+### Maps
+
+- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPMapButton](cpmapbutton.md): A button that represents an action that a map template displays on the CarPlay screen.
+- [CPMapPanelSection](cpmappanelsection.md): A single section of a map panel that you fill with a title and one or more items.
+- [CPMapPanelItem](cpmappanelitem.md): A type that manages the waypoint, route, trip, and other information you display in a map panel.
+- [CPMapPanelButtonConfiguration](cpmappanelbuttonconfiguration.md): A type that manages the action buttons and travel estimates in a map panel.
+- [CPChargingStationConnection](cpchargingstationconnection.md): Details about the equipment at an electric vehicle charging station.

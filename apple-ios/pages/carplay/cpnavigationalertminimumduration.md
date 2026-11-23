@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationalertminimumduration
 
 # CPNavigationAlertMinimumDuration (Swift)
@@ -15,7 +15,7 @@ A constant that defines the minimum amount of time that an alert is visible.
 var CPNavigationAlertMinimumDuration: TimeInterval { get }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
@@ -23,7 +23,7 @@ The minimum duration is in effect when [duration](cpnavigationalert/duration.md)
 
 ## See Also
 
-### Getting the Alert Duration
+### Getting the alert duration
 
 - [duration](cpnavigationalert/duration.md): The amount of time, in seconds, that the alert is visible.
 
@@ -41,7 +41,7 @@ A constant that defines the minimum amount of time that an alert is visible.
 static const NSTimeInterval CPNavigationAlertMinimumDuration;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
@@ -49,6 +49,6 @@ The minimum duration is in effect when [duration](cpnavigationalert/duration.md)
 
 ## See Also
 
-### Getting the Alert Duration
+### Getting the alert duration
 
 - [duration](cpnavigationalert/duration.md): The amount of time, in seconds, that the alert is visible.

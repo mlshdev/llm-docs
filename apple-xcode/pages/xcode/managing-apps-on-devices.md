@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/managing-apps-on-devices
 
 # Managing apps on devices
@@ -11,7 +11,7 @@ Find, add, and remove apps installed for testing on simulated and physical devic
 
 ## Overview
 
-Use the Apps inspector in Device Hub to view, install, and remove apps on both simulated and physical devices. During development, Xcode installs your app on devices for you (see [Running your app on simulated or physical devices](running-your-app-on-simulated-or-physical-devices.md)), and you remove it using Device Hub. Later, when you’re ready to distribute your app for testing (see [Distributing your app to registered devices](distributing-your-app-to-registered-devices.md)), you can use Device Hub independently of Xcode to add and remove apps on multiple test devices.
+Use the Apps inspector in Device Hub to view, install, and remove apps on both simulated and physical devices. During development, Xcode installs your app on devices for you (see [Running your app on simulated or physical devices](running-your-app-on-simulated-or-physical-devices.md)), and you remove it using Device Hub. Later, when you’re ready to distribute your app for testing (see [Distributing apps to your development devices](distributing-apps-to-your-development-devices.md)), you can use Device Hub independently of Xcode to add and remove apps on multiple test devices.
 
 ![A screenshot of Device Hub with a simulator selected in the sidebar on the left, an iPhone simulator running in the canvas in the middle, and the Apps inspector showing an installed app selected on the right.](https://developer.apple.com/images/com.apple.Xcode/device-hub-apps-inspector@2x.png)
 

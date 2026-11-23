@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbuttonmaximumimagesize
 
 # CPButtonMaximumImageSize (Swift)
@@ -17,7 +17,7 @@ let CPButtonMaximumImageSize: CGSize
 
 ## See Also
 
-### Creating a Button
+### Creating a button
 
 - [init(image:handler:)](cpbutton/init%28image_handler_%29.md): Creates a button that displays an image and invokes a handler when the user taps it.
 
@@ -37,6 +37,6 @@ extern const CGSize CPButtonMaximumImageSize;
 
 ## See Also
 
-### Creating a Button
+### Creating a button
 
 - [initWithImage:handler:](cpbutton/init%28image_handler_%29.md): Creates a button that displays an image and invokes a handler when the user taps it.

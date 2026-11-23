@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpreroutereason/missedturn
 
 # CPRerouteReason.missedTurn (Swift)
@@ -17,10 +17,13 @@ case missedTurn
 
 ## See Also
 
-### Properties
+### Getting the reroute reason
 
 - [CPRerouteReason.alternateRoute](alternateroute.md): A value that represents rerouting because an alternate route became available.
 - [CPRerouteReason.offline](offline.md): A value that represents rerouting because the system was offline.
+- [CPRerouteReason.mandated](mandated.md): A reroute was required due to external circumstances, such as a road closure.
+- [CPRerouteReason.waypointModified](waypointmodified.md): An existing waypoint was modified or updated.
+- [CPRerouteReason.unknown](unknown.md): The reason for rerouting is unknown or not specified.
 
 # CPRerouteReasonMissedTurn (Objective-C)
 
@@ -38,7 +41,10 @@ CPRerouteReasonMissedTurn
 
 ## See Also
 
-### Properties
+### Getting the reroute reason
 
 - [CPRerouteReasonAlternateRoute](alternateroute.md): A value that represents rerouting because an alternate route became available.
 - [CPRerouteReasonOffline](offline.md): A value that represents rerouting because the system was offline.
+- [CPRerouteReasonMandated](mandated.md): A reroute was required due to external circumstances, such as a road closure.
+- [CPRerouteReasonWaypointModified](waypointmodified.md): An existing waypoint was modified or updated.
+- [CPRerouteReasonUnknown](unknown.md): The reason for rerouting is unknown or not specified.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpsessionconfiguration
 
 # CPSessionConfiguration (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Class  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-An object that provides vehicle properties and configuration for the CarPlay environment.
+An object that keeps you informed of changes to the CarPlay environment.
 
 ## Declaration
 
@@ -19,32 +19,28 @@ class CPSessionConfiguration
 
 ## Overview
 
-You use a session configuration to determine any user interface limits the vehicle imposes, such as keyboard display and list length, and the content style the vehicle selects according to the ambient light level.
+A `CPSessionConfiguration` object provides your app with the current configuration of the CarPlay environment. When building a CarPlay app, use the information in this object to make decisions about what content to display and how to display it. For example, you might disable your app’s video features if the [supportsVideoPlayback](cpsessionconfiguration/supportsvideoplayback.md) property is `false`.
+
+Create an instance of `CPSessionConfiguration` when your app starts and use it to get the current values. When instantiating this type, you also provide a custom delegate object to respond to subsequent environment changes. Define this type in your code and use the methods of the [CPSessionConfigurationDelegate](cpsessionconfigurationdelegate.md) protocol to receive the updated values. Keep a strong reference to the `CPSessionConfiguration` object and your custom delegate object while your app runs.
 
 ## Topics
 
-### Creating a Session Configuration
+### Creating a session configuration
 
-- [init(delegate:)](cpsessionconfiguration/init%28delegate_%29.md): Creates a session configuration with a delegate.
-- [CPSessionConfigurationDelegate](cpsessionconfigurationdelegate.md): A protocol for receiving notifications about changes to vehicle properties and configuration.
+- [init(delegate:)](cpsessionconfiguration/init%28delegate_%29.md): Configures a session configuration with the custom delegate object you provide.
+- [CPSessionConfigurationDelegate](cpsessionconfigurationdelegate.md): Methods you use to respond to changes in the CarPlay environment.
 
-### Managing the Delegate
+### Responding to configuration changes
 
-- [delegate](cpsessionconfiguration/delegate.md): An object that serves as the delegate to the session configuration.
+- [delegate](cpsessionconfiguration/delegate.md): The custom object you use to handle changes to environment values.
 
-### Getting the Content Style
+### Getting the configuration details
 
-- [contentStyle](cpsessionconfiguration/contentstyle.md): The content style that the vehicle selects.
+- [contentStyle](cpsessionconfiguration/contentstyle.md): The preferred interface style for your app’s content.
+- [limitedUserInterfaces](cpsessionconfiguration/limiteduserinterfaces.md): A bitmask of the interface restrictions that currently apply to your app.
+- [supportsVideoPlayback](cpsessionconfiguration/supportsvideoplayback.md): A Boolean value that indicates whether CarPlay supports playing video content.
 - [CPContentStyle](cpcontentstyle.md): The types of content style that the vehicle allows.
-
-### Getting the Limits
-
-- [limitedUserInterfaces](cpsessionconfiguration/limiteduserinterfaces.md): A bit mask value that indicates the user interface limits.
-- [CPLimitableUserInterface](cplimitableuserinterface.md): The types of limitable user interface elements.
-
-### Instance Properties
-
-- [supportsVideoPlayback](cpsessionconfiguration/supportsvideoplayback.md): The connected CarPlay system supports video playback.
+- [CPLimitableUserInterface](cplimitableuserinterface.md): The types of interfaces to which a vehicle can limit access.
 
 ## Relationships
 
@@ -63,14 +59,13 @@ You use a session configuration to determine any user interface limits the vehic
 
 ## See Also
 
-### CarPlay Integration
+### App management
 
-- [Requesting CarPlay Entitlements](requesting-carplay-entitlements.md): Configure your CarPlay-enabled app with the entitlements it requires.
-- [Displaying Content in CarPlay](displaying-content-in-carplay.md): Use scenes to present your app’s content on the vehicle’s built-in screen.
-- [Supporting Previous Versions of iOS](supporting-previous-versions-of-ios.md): Make your CarPlay-enabled apps compatible with older system versions, such as iOS 13 and earlier.
-- [Using the CarPlay Simulator](using-the-carplay-simulator.md): Configure Simulator to run and debug your CarPlay-enabled app.
-- [CPTemplateApplicationScene](cptemplateapplicationscene.md): A CarPlay scene that controls your app’s user interface.
-- [CPTemplateApplicationSceneDelegate](cptemplateapplicationscenedelegate.md): The methods for responding to the life cycle events of your app’s scene.
+- [Building your app’s initial CarPlay interface](building-your-apps-initial-carplay-interface.md): Build the interface for your CarPlay app using scenes and templates from the CarPlay framework.
+- [CPTemplateApplicationScene](cptemplateapplicationscene.md): A CarPlay scene that manages your app’s interface on the vehicle’s center display.
+- [CPTemplateApplicationSceneDelegate](cptemplateapplicationscenedelegate.md): Methods for responding to life-cycle events in your app’s scene.
+- [CPInterfaceController](cpinterfacecontroller.md): The type you use to present your app’s CarPlay interface and change what appears on the vehicle’s display.
+- [CPWindow](cpwindow.md): A type that navigation apps use to present their map content.
 
 # CPSessionConfiguration (Objective-C)
 
@@ -78,7 +73,7 @@ You use a session configuration to determine any user interface limits the vehic
 **Kind:** Class  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-An object that provides vehicle properties and configuration for the CarPlay environment.
+An object that keeps you informed of changes to the CarPlay environment.
 
 ## Declaration
 
@@ -90,32 +85,28 @@ An object that provides vehicle properties and configuration for the CarPlay env
 
 ## Overview
 
-You use a session configuration to determine any user interface limits the vehicle imposes, such as keyboard display and list length, and the content style the vehicle selects according to the ambient light level.
+A `CPSessionConfiguration` object provides your app with the current configuration of the CarPlay environment. When building a CarPlay app, use the information in this object to make decisions about what content to display and how to display it. For example, you might disable your app’s video features if the [supportsVideoPlayback](cpsessionconfiguration/supportsvideoplayback.md) property is `false`.
+
+Create an instance of `CPSessionConfiguration` when your app starts and use it to get the current values. When instantiating this type, you also provide a custom delegate object to respond to subsequent environment changes. Define this type in your code and use the methods of the [CPSessionConfigurationDelegate](cpsessionconfigurationdelegate.md) protocol to receive the updated values. Keep a strong reference to the `CPSessionConfiguration` object and your custom delegate object while your app runs.
 
 ## Topics
 
-### Creating a Session Configuration
+### Creating a session configuration
 
-- [initWithDelegate:](cpsessionconfiguration/init%28delegate_%29.md): Creates a session configuration with a delegate.
-- [CPSessionConfigurationDelegate](cpsessionconfigurationdelegate.md): A protocol for receiving notifications about changes to vehicle properties and configuration.
+- [initWithDelegate:](cpsessionconfiguration/init%28delegate_%29.md): Configures a session configuration with the custom delegate object you provide.
+- [CPSessionConfigurationDelegate](cpsessionconfigurationdelegate.md): Methods you use to respond to changes in the CarPlay environment.
 
-### Managing the Delegate
+### Responding to configuration changes
 
-- [delegate](cpsessionconfiguration/delegate.md): An object that serves as the delegate to the session configuration.
+- [delegate](cpsessionconfiguration/delegate.md): The custom object you use to handle changes to environment values.
 
-### Getting the Content Style
+### Getting the configuration details
 
-- [contentStyle](cpsessionconfiguration/contentstyle.md): The content style that the vehicle selects.
+- [contentStyle](cpsessionconfiguration/contentstyle.md): The preferred interface style for your app’s content.
+- [limitedUserInterfaces](cpsessionconfiguration/limiteduserinterfaces.md): A bitmask of the interface restrictions that currently apply to your app.
+- [supportsVideoPlayback](cpsessionconfiguration/supportsvideoplayback.md): A Boolean value that indicates whether CarPlay supports playing video content.
 - [CPContentStyle](cpcontentstyle.md): The types of content style that the vehicle allows.
-
-### Getting the Limits
-
-- [limitedUserInterfaces](cpsessionconfiguration/limiteduserinterfaces.md): A bit mask value that indicates the user interface limits.
-- [CPLimitableUserInterface](cplimitableuserinterface.md): The types of limitable user interface elements.
-
-### Instance Properties
-
-- [supportsVideoPlayback](cpsessionconfiguration/supportsvideoplayback.md): The connected CarPlay system supports video playback.
+- [CPLimitableUserInterface](cplimitableuserinterface.md): The types of interfaces to which a vehicle can limit access.
 
 ## Relationships
 
@@ -125,11 +116,10 @@ You use a session configuration to determine any user interface limits the vehic
 
 ## See Also
 
-### CarPlay Integration
+### App management
 
-- [Requesting CarPlay Entitlements](requesting-carplay-entitlements.md): Configure your CarPlay-enabled app with the entitlements it requires.
-- [Displaying Content in CarPlay](displaying-content-in-carplay.md): Use scenes to present your app’s content on the vehicle’s built-in screen.
-- [Supporting Previous Versions of iOS](supporting-previous-versions-of-ios.md): Make your CarPlay-enabled apps compatible with older system versions, such as iOS 13 and earlier.
-- [Using the CarPlay Simulator](using-the-carplay-simulator.md): Configure Simulator to run and debug your CarPlay-enabled app.
-- [CPTemplateApplicationScene](cptemplateapplicationscene.md): A CarPlay scene that controls your app’s user interface.
-- [CPTemplateApplicationSceneDelegate](cptemplateapplicationscenedelegate.md): The methods for responding to the life cycle events of your app’s scene.
+- [Building your app’s initial CarPlay interface](building-your-apps-initial-carplay-interface.md): Build the interface for your CarPlay app using scenes and templates from the CarPlay framework.
+- [CPTemplateApplicationScene](cptemplateapplicationscene.md): A CarPlay scene that manages your app’s interface on the vehicle’s center display.
+- [CPTemplateApplicationSceneDelegate](cptemplateapplicationscenedelegate.md): Methods for responding to life-cycle events in your app’s scene.
+- [CPInterfaceController](cpinterfacecontroller.md): The type you use to present your app’s CarPlay interface and change what appears on the vehicle’s display.
+- [CPWindow](cpwindow.md): A type that navigation apps use to present their map content.

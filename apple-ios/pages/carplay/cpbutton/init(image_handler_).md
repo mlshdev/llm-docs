@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbutton/init(image:handler:)
 
 # init(image:handler:) (Swift)
@@ -36,7 +36,7 @@ CarPlay doesn’t support animated images. If you provide an animated image, Car
 
 ## See Also
 
-### Creating a Button
+### Creating a button
 
 - [CPButtonMaximumImageSize](../cpbuttonmaximumimagesize.md): The maximum size of a button’s image that CarPlay supports.
 
@@ -75,6 +75,6 @@ CarPlay doesn’t support animated images. If you provide an animated image, Car
 
 ## See Also
 
-### Creating a Button
+### Creating a button
 
 - [CPButtonMaximumImageSize](../cpbuttonmaximumimagesize.md): The maximum size of a button’s image that CarPlay supports.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitem
 
 # CPListItem (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Class  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-A selectable row in a list template.
+A selectable row in a list interface.
 
 ## Declaration
 
@@ -19,59 +19,56 @@ A selectable row in a list template.
 
 ## Overview
 
-A list item manages the content of a single row in a list template. CarPlay manages the layout of a list item and may adjust its layout to allow for the display of auxiliary content, such as an accessory or a Now Playing indicator. A list item can display primary and secondary text and an image. It can also show an accessory or custom accessory image, and one of several indicators that the system provides.
+A `CPListItem` object manages the content for a single row in a list interface. The row contains primary and secondary text elements and an image to describe one piece of your app’s content. For example, a row of this type might describe a single song, album, or playlist. CarPlay handles the presentation of the data you provide, adjusting the row’s layout automatically to accommodate additional elements such as an accessory or Now Playing indicator.
 
-You assign a [handler](cplistitem/handler.md) to a list item that CarPlay executes when the user selects the item. The handler receives the item and a closure that you must call after you finish processing the selection.
+Create one or more `CPListItem` objects when building the content for your list interface, and add them to a [CPListSection](cplistsection.md) object. Specify the text and optional image and accessory information for your row initially, and add an optional [handler](cplistitem/handler.md) to respond when someone selects the row. If your row represents media content, you can also configure any playback-related information using the properties of this type. If you want to associate app-specific data with the row, put that content into the provided [userInfo](cplistitem/userinfo.md) property.
 
-CarPlay doesn’t support custom list item types. Instead, use the [userInfo](cplistitem/userinfo.md) property to attach a value to the list item that provides additional context, such as specifying  a model object that corresponds to the item.
+Use this type for simple lists in which each row corresponds to a single data item or selectable choice in your app. To build a more information-dense interface, create rows using the [CPListImageRowItem](cplistimagerowitem.md) type instead.
 
 ## Topics
 
-### Creating a List Item
+### Creating a list item
 
 - [init(text:detailText:)](cplistitem/init%28text_detailtext_%29.md): Creates a list item with primary and secondary text.
 - [init(text:detailText:image:)](cplistitem/init%28text_detailtext_image_%29.md): Creates a list item with primary text, secondary text, and an image.
 - [init(text:detailText:image:accessoryImage:accessoryType:)](cplistitem/init%28text_detailtext_image_accessoryimage_accessorytype_%29.md): Creates a list item that displays an accessory beside its content.
 
-### Managing Configuration
+### Managing the row’s content
 
-- [isEnabled](cplistitem/isenabled.md): A Boolean value that indicates if the item is enabled.
-- [handler](cplistitem/handler.md): An optional closure that CarPlay invokes when the user selects the list item.
-- [userInfo](cplistitem/userinfo.md): An opaque value for the list item.
+- [text](cplistitem/text.md): The primary text for the list item.
+- [detailText](cplistitem/detailtext.md): The secondary text for the list item.
+- [image](cplistitem/image.md): The image to display on the leading edge of the cell.
+- [setText(\_:)](cplistitem/settext%28__%29.md): Updates the primary text of the list item.
+- [setDetailText(\_:)](cplistitem/setdetailtext%28__%29.md): Updates the secondary text of the list item.
+- [setImage(\_:)](cplistitem/setimage%28__%29.md): Updates the leading image of the list item.
+- [userInfo](cplistitem/userinfo.md): App-specific data you associate with the item.
+- [maximumImageSize](cplistitem/maximumimagesize.md): The maximum dimensions for the list item images.
 
-### Managing Accessories
+### Responding to interactions
 
-- [accessoryType](cplistitem/accessorytype.md): The accessory that the list item displays in its trailing region.
-- [CPListItemAccessoryType](cplistitemaccessorytype.md): The accessory types that a list item can display.
-- [accessoryImage](cplistitem/accessoryimage.md): The image that the list item displays in its trailing region.
-- [setAccessoryImage(\_:)](cplistitem/setaccessoryimage%28__%29.md): Updates the list item’s accessory image.
+- [handler](cplistitem/handler.md): The closure to run when someone interacts with any part of the list item.
+- [isEnabled](cplistitem/isenabled.md): A Boolean value that indicates whether the item is enabled.
 
-### Managing Content
+### Managing accessories
 
-- [text](cplistitem/text.md): The list item’s primary text.
-- [setText(\_:)](cplistitem/settext%28__%29.md): Updates the list item’s primary text.
-- [detailText](cplistitem/detailtext.md): The list item’s secondary text.
-- [setDetailText(\_:)](cplistitem/setdetailtext%28__%29.md): Updates the list item’s secondary text.
-- [image](cplistitem/image.md): The image that the list item displays in its leading region.
-- [setImage(\_:)](cplistitem/setimage%28__%29.md): Updates the list item’s image.
-- [maximumImageSize](cplistitem/maximumimagesize.md): The maximum size of a list item’s image and accessory image.
+- [accessoryType](cplistitem/accessorytype.md): The standard accessory type to display on the trailing edge of the list item.
+- [accessoryImage](cplistitem/accessoryimage.md): The custom accessory image to display on the trailing edge of the list item.
+- [setAccessoryImage(\_:)](cplistitem/setaccessoryimage%28__%29.md): The custom accessory image to display on the trailing edge of the list item.
+- [CPListItemAccessoryType](cplistitemaccessorytype.md): The standard image types a list item can display in its accessory region.
 
-### Managing Playback Information
+### Managing playback information
 
-- [isExplicitContent](cplistitem/isexplicitcontent.md): A Boolean value that determines whether the list item displays its explicit content indicator.
-- [isPlaying](cplistitem/isplaying.md): A Boolean value that determines whether the list item displays its Now Playing indicator.
-- [playingIndicatorLocation](cplistitem/playingindicatorlocation.md): The location where the list item displays its Now Playing indicator.
+- [isPlaying](cplistitem/isplaying.md): A Boolean value that indicates whether the list item displays the Now Playing indicator.
+- [playbackProgress](cplistitem/playbackprogress.md): The current playback progress for a media item.
+- [playingIndicatorLocation](cplistitem/playingindicatorlocation.md): The placement of the Now Playing indicator in the list item’s row.
 - [CPListItemPlayingIndicatorLocation](cplistitemplayingindicatorlocation.md): The locations where a list item can display the Now Playing indicator.
-- [playbackProgress](cplistitem/playbackprogress.md): The playback progress status for the content that the list item represents.
-
-### Managing the Assistant Cell
-
-- [CPListItem.AssistantCellPosition](cplistitem/assistantcellposition.md): Constants to specify the position of the assistant cell.
-- [CPListItem.AssistantCellVisibility](cplistitem/assistantcellvisibility.md): Constants to specify the visibility of the assistant cell.
+- [isExplicitContent](cplistitem/isexplicitcontent.md): A Boolean value that indicates whether the list item displays an explicit content indicator.
 
 ### Deprecated
 
-- [Deprecated Symbols](cplistitem-deprecated-symbols.md): Review unsupported symbols and their replacements.
+- [init(text:detailText:image:showsDisclosureIndicator:)](cplistitem/init%28text_detailtext_image_showsdisclosureindicator_%29.md): Deprecated. Initialize a list item with text, detailtext, an image, and a disclosure indicator.
+- [showsDisclosureIndicator](cplistitem/showsdisclosureindicator.md): Deprecated. If YES, a cell displaying this list item will render with a disclosure indicator in the trailing side of the cell.
+- [showsExplicitLabel](cplistitem/showsexplicitlabel.md): Deprecated. If YES, a cell displaying this list item will render with an explicit label to the trailing edge of the text
 
 ## Relationships
 
@@ -96,13 +93,12 @@ CarPlay doesn’t support custom list item types. Instead, use the [userInfo](cp
 
 ## See Also
 
-### Creating a Section
+### Lists
 
-- [init(items:header:headerSubtitle:headerImage:headerButton:sectionIndexTitle:)](cplistsection/init%28items_header_headersubtitle_headerimage_headerbutton_sectionindextitle_%29.md): Creates a section with list items, a header, a section index title, and section header details.
-- [CPListTemplateItem](cplisttemplateitem.md): A description of the common properties of all list item types.
-- [CPSelectableListItem](cpselectablelistitem.md): A description of a selectable list item.
-- [CPListImageRowItem](cplistimagerowitem.md): A list template row that displays a series of images.
-- [CPMessageListItem](cpmessagelistitem.md): A list template row that represents a conversation or contact.
+- [CPListTemplate](cplisttemplate.md): A template that displays a single-column list of items in one of several visual styles.
+- [CPListSection](cplistsection.md): A container that groups related items in a list interface.
+- [CPListImageRowItem](cplistimagerowitem.md): A row type that displays multiple sub-elements horizontally in a variety of styles.
+- [Supporting types for lists](list-content.md): Create sections, single-line items, multi-element rows, headers, and other content for your list.
 
 # CPListItem (Objective-C)
 
@@ -110,7 +106,7 @@ CarPlay doesn’t support custom list item types. Instead, use the [userInfo](cp
 **Kind:** Class  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-A selectable row in a list template.
+A selectable row in a list interface.
 
 ## Declaration
 
@@ -122,59 +118,56 @@ A selectable row in a list template.
 
 ## Overview
 
-A list item manages the content of a single row in a list template. CarPlay manages the layout of a list item and may adjust its layout to allow for the display of auxiliary content, such as an accessory or a Now Playing indicator. A list item can display primary and secondary text and an image. It can also show an accessory or custom accessory image, and one of several indicators that the system provides.
+A `CPListItem` object manages the content for a single row in a list interface. The row contains primary and secondary text elements and an image to describe one piece of your app’s content. For example, a row of this type might describe a single song, album, or playlist. CarPlay handles the presentation of the data you provide, adjusting the row’s layout automatically to accommodate additional elements such as an accessory or Now Playing indicator.
 
-You assign a [handler](cplistitem/handler.md) to a list item that CarPlay executes when the user selects the item. The handler receives the item and a closure that you must call after you finish processing the selection.
+Create one or more `CPListItem` objects when building the content for your list interface, and add them to a [CPListSection](cplistsection.md) object. Specify the text and optional image and accessory information for your row initially, and add an optional [handler](cplistitem/handler.md) to respond when someone selects the row. If your row represents media content, you can also configure any playback-related information using the properties of this type. If you want to associate app-specific data with the row, put that content into the provided [userInfo](cplistitem/userinfo.md) property.
 
-CarPlay doesn’t support custom list item types. Instead, use the [userInfo](cplistitem/userinfo.md) property to attach a value to the list item that provides additional context, such as specifying  a model object that corresponds to the item.
+Use this type for simple lists in which each row corresponds to a single data item or selectable choice in your app. To build a more information-dense interface, create rows using the [CPListImageRowItem](cplistimagerowitem.md) type instead.
 
 ## Topics
 
-### Creating a List Item
+### Creating a list item
 
 - [initWithText:detailText:](cplistitem/init%28text_detailtext_%29.md): Creates a list item with primary and secondary text.
 - [initWithText:detailText:image:](cplistitem/init%28text_detailtext_image_%29.md): Creates a list item with primary text, secondary text, and an image.
 - [initWithText:detailText:image:accessoryImage:accessoryType:](cplistitem/init%28text_detailtext_image_accessoryimage_accessorytype_%29.md): Creates a list item that displays an accessory beside its content.
 
-### Managing Configuration
+### Managing the row’s content
 
-- [enabled](cplistitem/isenabled.md): A Boolean value that indicates if the item is enabled.
-- [handler](cplistitem/handler.md): An optional closure that CarPlay invokes when the user selects the list item.
-- [userInfo](cplistitem/userinfo.md): An opaque value for the list item.
+- [text](cplistitem/text.md): The primary text for the list item.
+- [detailText](cplistitem/detailtext.md): The secondary text for the list item.
+- [image](cplistitem/image.md): The image to display on the leading edge of the cell.
+- [setText:](cplistitem/settext%28__%29.md): Updates the primary text of the list item.
+- [setDetailText:](cplistitem/setdetailtext%28__%29.md): Updates the secondary text of the list item.
+- [setImage:](cplistitem/setimage%28__%29.md): Updates the leading image of the list item.
+- [userInfo](cplistitem/userinfo.md): App-specific data you associate with the item.
+- [maximumImageSize](cplistitem/maximumimagesize.md): The maximum dimensions for the list item images.
 
-### Managing Accessories
+### Responding to interactions
 
-- [accessoryType](cplistitem/accessorytype.md): The accessory that the list item displays in its trailing region.
-- [CPListItemAccessoryType](cplistitemaccessorytype.md): The accessory types that a list item can display.
-- [accessoryImage](cplistitem/accessoryimage.md): The image that the list item displays in its trailing region.
-- [setAccessoryImage:](cplistitem/setaccessoryimage%28__%29.md): Updates the list item’s accessory image.
+- [handler](cplistitem/handler.md): The closure to run when someone interacts with any part of the list item.
+- [enabled](cplistitem/isenabled.md): A Boolean value that indicates whether the item is enabled.
 
-### Managing Content
+### Managing accessories
 
-- [text](cplistitem/text.md): The list item’s primary text.
-- [setText:](cplistitem/settext%28__%29.md): Updates the list item’s primary text.
-- [detailText](cplistitem/detailtext.md): The list item’s secondary text.
-- [setDetailText:](cplistitem/setdetailtext%28__%29.md): Updates the list item’s secondary text.
-- [image](cplistitem/image.md): The image that the list item displays in its leading region.
-- [setImage:](cplistitem/setimage%28__%29.md): Updates the list item’s image.
-- [maximumImageSize](cplistitem/maximumimagesize.md): The maximum size of a list item’s image and accessory image.
+- [accessoryType](cplistitem/accessorytype.md): The standard accessory type to display on the trailing edge of the list item.
+- [accessoryImage](cplistitem/accessoryimage.md): The custom accessory image to display on the trailing edge of the list item.
+- [setAccessoryImage:](cplistitem/setaccessoryimage%28__%29.md): The custom accessory image to display on the trailing edge of the list item.
+- [CPListItemAccessoryType](cplistitemaccessorytype.md): The standard image types a list item can display in its accessory region.
 
-### Managing Playback Information
+### Managing playback information
 
-- [explicitContent](cplistitem/isexplicitcontent.md): A Boolean value that determines whether the list item displays its explicit content indicator.
-- [playing](cplistitem/isplaying.md): A Boolean value that determines whether the list item displays its Now Playing indicator.
-- [playingIndicatorLocation](cplistitem/playingindicatorlocation.md): The location where the list item displays its Now Playing indicator.
+- [playing](cplistitem/isplaying.md): A Boolean value that indicates whether the list item displays the Now Playing indicator.
+- [playbackProgress](cplistitem/playbackprogress.md): The current playback progress for a media item.
+- [playingIndicatorLocation](cplistitem/playingindicatorlocation.md): The placement of the Now Playing indicator in the list item’s row.
 - [CPListItemPlayingIndicatorLocation](cplistitemplayingindicatorlocation.md): The locations where a list item can display the Now Playing indicator.
-- [playbackProgress](cplistitem/playbackprogress.md): The playback progress status for the content that the list item represents.
-
-### Managing the Assistant Cell
-
-- [CPAssistantCellPosition](cplistitem/assistantcellposition.md): Constants to specify the position of the assistant cell.
-- [CPAssistantCellVisibility](cplistitem/assistantcellvisibility.md): Constants to specify the visibility of the assistant cell.
+- [explicitContent](cplistitem/isexplicitcontent.md): A Boolean value that indicates whether the list item displays an explicit content indicator.
 
 ### Deprecated
 
-- [Deprecated Symbols](cplistitem-deprecated-symbols.md): Review unsupported symbols and their replacements.
+- [initWithText:detailText:image:showsDisclosureIndicator:](cplistitem/init%28text_detailtext_image_showsdisclosureindicator_%29.md): Deprecated. Initialize a list item with text, detailtext, an image, and a disclosure indicator.
+- [showsDisclosureIndicator](cplistitem/showsdisclosureindicator.md): Deprecated. If YES, a cell displaying this list item will render with a disclosure indicator in the trailing side of the cell.
+- [showsExplicitLabel](cplistitem/showsexplicitlabel.md): Deprecated. If YES, a cell displaying this list item will render with an explicit label to the trailing edge of the text
 
 ## Relationships
 
@@ -189,12 +182,9 @@ CarPlay doesn’t support custom list item types. Instead, use the [userInfo](cp
 
 ## See Also
 
-### Creating a Section
+### Lists
 
-- [initWithItems:](cplistsection/initwithitems_.md): Creates a section with list items.
-- [initWithItems:header:sectionIndexTitle:](cplistsection/initwithitems_header_sectionindextitle_.md): Creates a section with list items, a header, and a section index title.
-- [initWithItems:header:headerSubtitle:headerImage:headerButton:sectionIndexTitle:](cplistsection/init%28items_header_headersubtitle_headerimage_headerbutton_sectionindextitle_%29.md): Creates a section with list items, a header, a section index title, and section header details.
-- [CPListTemplateItem](cplisttemplateitem.md): A description of the common properties of all list item types.
-- [CPSelectableListItem](cpselectablelistitem.md): A description of a selectable list item.
-- [CPListImageRowItem](cplistimagerowitem.md): A list template row that displays a series of images.
-- [CPMessageListItem](cpmessagelistitem.md): A list template row that represents a conversation or contact.
+- [CPListTemplate](cplisttemplate.md): A template that displays a single-column list of items in one of several visual styles.
+- [CPListSection](cplistsection.md): A container that groups related items in a list interface.
+- [CPListImageRowItem](cplistimagerowitem.md): A row type that displays multiple sub-elements horizontally in a variety of styles.
+- [Supporting types for lists](list-content.md): Create sections, single-line items, multi-element rows, headers, and other content for your list.

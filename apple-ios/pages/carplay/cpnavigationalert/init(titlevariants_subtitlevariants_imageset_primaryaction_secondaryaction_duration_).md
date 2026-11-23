@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationalert/init(titlevariants:subtitlevariants:imageset:primaryaction:secondaryaction:duration:)
 
 # init(titleVariants:subtitleVariants:imageSet:primaryAction:secondaryAction:duration:) (Swift)
@@ -30,12 +30,6 @@ init(titleVariants: [String], subtitleVariants: [String]?, imageSet: CPImageSet?
 
 A newly initialized navigation alert.
 
-## See Also
-
-### Creating a Navigation Alert
-
-- [init(titleVariants:subtitleVariants:image:primaryAction:secondaryAction:duration:)](init%28titlevariants_subtitlevariants_image_primaryaction_secondaryaction_duration_%29.md): Creates a navigation alert.
-
 # initWithTitleVariants:subtitleVariants:imageSet:primaryAction:secondaryAction:duration: (Objective-C)
 
 **Framework:** CarPlay  
@@ -64,9 +58,3 @@ Creates a navigation alert.
 ## Return Value
 
 A newly initialized navigation alert.
-
-## See Also
-
-### Creating a Navigation Alert
-
-- [initWithTitleVariants:subtitleVariants:image:primaryAction:secondaryAction:duration:](init%28titlevariants_subtitlevariants_image_primaryaction_secondaryaction_duration_%29.md): Creates a navigation alert.

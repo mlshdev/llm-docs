@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitemaccessorytype/none
 
 # CPListItemAccessoryType.none (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Case  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Don’t show an accessory.
+A value that indicates the list item has no standard accessory type.
 
 ## Declaration
 
@@ -15,12 +15,18 @@ Don’t show an accessory.
 case none
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+Specify this value when you don’t want to display an accessory image or when you want to display a custom image you provided. For more information, see [accessoryType](../cplistitem/accessorytype.md).
+
 ## See Also
 
-### Accessory Types
+### Accessory types
 
-- [CPListItemAccessoryType.disclosureIndicator](disclosureindicator.md): Show a chevron icon.
-- [CPListItemAccessoryType.cloud](cloud.md): Show a cloud icon.
+- [CPListItemAccessoryType.disclosureIndicator](disclosureindicator.md): A chevron image that signifies the item displays new content.
+- [CPListItemAccessoryType.cloud](cloud.md): A cloud image that signifies the item contains cloud-based content.
 
 # CPListItemAccessoryTypeNone (Objective-C)
 
@@ -28,7 +34,7 @@ case none
 **Kind:** Enumeration Case  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-Don’t show an accessory.
+A value that indicates the list item has no standard accessory type.
 
 ## Declaration
 
@@ -36,9 +42,15 @@ Don’t show an accessory.
 CPListItemAccessoryTypeNone
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+Specify this value when you don’t want to display an accessory image or when you want to display a custom image you provided. For more information, see [accessoryType](../cplistitem/accessorytype.md).
+
 ## See Also
 
-### Accessory Types
+### Accessory types
 
-- [CPListItemAccessoryTypeDisclosureIndicator](disclosureindicator.md): Show a chevron icon.
-- [CPListItemAccessoryTypeCloud](cloud.md): Show a cloud icon.
+- [CPListItemAccessoryTypeDisclosureIndicator](disclosureindicator.md): A chevron image that signifies the item displays new content.
+- [CPListItemAccessoryTypeCloud](cloud.md): A cloud image that signifies the item contains cloud-based content.

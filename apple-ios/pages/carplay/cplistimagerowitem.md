@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistimagerowitem
 
 # CPListImageRowItem (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Class  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A list template row that displays a series of images.
+A row type that displays multiple sub-elements horizontally in a variety of styles.
 
 ## Declaration
 
@@ -19,53 +19,57 @@ A list template row that displays a series of images.
 
 ## Overview
 
-Use `CPListImageRowItem` to display a series of images as a row in a list template. At runtime, use [CPMaximumNumberOfGridImages](cpmaximumnumberofgridimages.md) to determine the maximum number of images that the row displays. CarPlay may display fewer images, depending on the width of the vehicle’s primary screen. Provide images that are display-ready, and include light and dark variants of each. See [init(text:images:)](cplistimagerowitem/init%28text_images_%29.md) for more information.
+Create a `CPListImageRowItem` to display image-based content in the rows of your list interface. Each `CPListImageRowItem` represents a single row of content and displays one or more images side-by-side, giving the row a more grid-like appearance. You specify the images in each row using row elements, which are subclasses of `CPListImageRowItemElement`. Each row element subclass defines a unique visual style to apply to the image. You use elements to represent part of your app’s content. For example, a music app might display a row for each playlist and fill the row with elements that represent albums in the playlist.
 
-You assign a [handler](cplistimagerowitem/handler.md) to the list item that CarPlay executes when the user selects the item. You can assign a second handler, [listImageRowHandler](cplistimagerowitem/listimagerowhandler.md), which CarPlay calls when the user selects an individual image.
+Create one or more `CPListImageRowItem` types when building the content for your list interface, configure it with elements, and add them to a [CPListSection](cplistsection.md) object. For each element in the row, specify the image to display and any other relevant content. Use the same type for all elements in a single row. Configure the new row with optional closures if you want to respond when someone interacts with the row or one of its elements. Associate any app-specific data with the row using the [userInfo](cplistitem/userinfo.md) property.
 
-CarPlay doesn’t support custom list item types. Instead, use the `userInfo` property to attach a value to the list item that provides additional context, such as specifying  a model object that corresponds to the item.
+Use one of the following types to specify the elements of a row:
+
+- **[CPListImageRowItemRowElement](cplistimagerowitemrowelement.md)**: The type displays an image with some descriptive text.
+- **[CPListImageRowItemCardElement](cplistimagerowitemcardelement.md)**: The type displays an image and text inside a card-like shape.
+- **[CPListImageRowItemCondensedElement](cplistimagerowitemcondensedelement.md)**: The type displays an image and text in a vertically condensed shape.
+- **[CPListImageRowItemGridElement](cplistimagerowitemgridelement.md)**: The type displays an image with a border shape.
+- **[CPListImageRowItemImageGridElement](cplistimagerowitemimagegridelement.md)**: The type displays text and an image with a border shape.
+
+Rows support a variable number of items, either on a single line or spread across multiple lines. The [CPMaximumNumberOfGridImages](cpmaximumnumberofgridimages.md) constant defines the maximum number of items you can include in a single row. If the row supports multiple lines, CarPlay adds extra lines as needed until it displays the items you provided. If the row supports only a single line, CarPlay displays as many elements as it can fit into one line and ignores the rest. Configure a single- or multi-line layout when initializing the row.
+
+To create a simpler layout with only one item per row, use the [CPListItem](cplistitem.md) type instead.
 
 ## Topics
 
-### Creating a List Image Row Item
+### Creating a list image row item
 
-- [init(text:images:)](cplistimagerowitem/init%28text_images_%29.md): Deprecated. Creates a list item that displays a row of images.
-- [init(text:images:imageTitles:)](cplistimagerowitem/init%28text_images_imagetitles_%29.md): Deprecated. Creates a list item that displays a row of images with a title below each image.
+- [init(text:elements:allowsMultipleLines:)](cplistimagerowitem/init%28text_elements_allowsmultiplelines_%29.md): Initializes the row with the specified text and row elements.
+- [init(text:cardElements:allowsMultipleLines:)](cplistimagerowitem/init%28text_cardelements_allowsmultiplelines_%29.md): Initializes the row with the specified text and card-style elements.
+- [init(text:condensedElements:allowsMultipleLines:)](cplistimagerowitem/init%28text_condensedelements_allowsmultiplelines_%29.md): Initializes the row with the specified text and condensed-height elements.
+- [init(text:gridElements:allowsMultipleLines:)](cplistimagerowitem/init%28text_gridelements_allowsmultiplelines_%29.md): Initializes the row with the specified text and grid elements.
+- [init(text:imageGridElements:allowsMultipleLines:)](cplistimagerowitem/init%28text_imagegridelements_allowsmultiplelines_%29.md): Initializes the row with the specified text and image grid elements.
 
-### Managing Content
+### Managing the row’s content
 
-- [text](cplistimagerowitem/text.md): The list item’s primary text.
-- [gridImages](cplistimagerowitem/gridimages.md): Deprecated. The images that appear in the list item’s image row.
-- [update(\_:)](cplistimagerowitem/update%28__%29.md): Deprecated. Adds, removes, reorders, or updates the images in the list item’s image row.
-- [maximumImageSize](cplistimagerowitem/maximumimagesize.md): Deprecated. The maximum size of an image that an image row can display.
+- [text](cplistimagerowitem/text.md): The row’s primary text.
+- [elements](cplistimagerowitem/elements.md): The elements to display in the row.
+- [allowsMultipleLines](cplistimagerowitem/allowsmultiplelines.md): A Boolean value that indicates whether the row displays elements on more than one line.
+- [userInfo](cplistimagerowitem/userinfo.md): App-specific data you associate with the item.
 - [CPMaximumNumberOfGridImages](cpmaximumnumberofgridimages.md): The maximum number of images that an image row can contain.
 
-### Managing Selection
+### Responding to interactions
 
-- [listImageRowHandler](cplistimagerowitem/listimagerowhandler.md): An optional closure that CarPlay invokes when the user selects an image.
-- [handler](cplistimagerowitem/handler.md): An optional closure that CarPlay invokes when the user selects the list item.
+- [listImageRowHandler](cplistimagerowitem/listimagerowhandler.md): The closure to run when someone interacts with one of the elements in the row.
+- [handler](cplistimagerowitem/handler.md): The closure to run when someone interacts with any part of the row.
 
-### Managing Supplementary Information
+### Enabling and disabling the row
 
-- [userInfo](cplistimagerowitem/userinfo.md): An opaque value for the list item.
+- [isEnabled](cplistimagerowitem/isenabled.md): A Boolean value that indicates whether the item is enabled.
 
-### Enabling Items
+### Deprecated
 
-- [isEnabled](cplistimagerowitem/isenabled.md): A Boolean value that indicates if the item is enabled.
-
-### Initializers
-
-- [init(text:cardElements:allowsMultipleLines:)](cplistimagerowitem/init%28text_cardelements_allowsmultiplelines_%29.md): Initialize a list image row item with a text string, an array of @c CPListImageRowItemCardElement and a boolean to allow multiple lines in this row.
-- [init(text:condensedElements:allowsMultipleLines:)](cplistimagerowitem/init%28text_condensedelements_allowsmultiplelines_%29.md): Initialize a list image row item with a text string, an array of @c CPListImageRowItemCondensedElement and a boolean to allow multiple lines in this row.
-- [init(text:elements:allowsMultipleLines:)](cplistimagerowitem/init%28text_elements_allowsmultiplelines_%29.md): Initialize a list image row item with a text string, an array of @c CPListImageRowItemRowElement and a boolean to allow multiple lines in this row.
-- [init(text:gridElements:allowsMultipleLines:)](cplistimagerowitem/init%28text_gridelements_allowsmultiplelines_%29.md): Initialize a list image row item with a text string, an array of @c CPListImageRowItemGridElement and a boolean to allow multiple lines in this row.
-- [init(text:imageGridElements:allowsMultipleLines:)](cplistimagerowitem/init%28text_imagegridelements_allowsmultiplelines_%29.md): Initialize a list image row item with a text string, an array of @c CPListImageRowItemImageGridElement and a boolean to allow multiple lines in this row.
-
-### Instance Properties
-
-- [allowsMultipleLines](cplistimagerowitem/allowsmultiplelines.md): A Boolean value indicating whether the elements should be visible in more than a single line.
-- [elements](cplistimagerowitem/elements.md): The array of elements used to draw visible elements.
+- [init(text:images:)](cplistimagerowitem/init%28text_images_%29.md): Deprecated. Initialize a list image row item with a text string and an array of @c UIImage for the grid of images.
+- [init(text:images:imageTitles:)](cplistimagerowitem/init%28text_images_imagetitles_%29.md): Deprecated. Initialize a list image row item with a text string, an array of @c UIImage for the grid of images, and an array of @c NSString titles, one displayed below each image.
+- [gridImages](cplistimagerowitem/gridimages.md): Deprecated. Read-only access to the grid images shown in a row in the cell.
 - [imageTitles](cplistimagerowitem/imagetitles.md): Deprecated. The titles displayed for each image in this image row item.
+- [maximumImageSize](cplistimagerowitem/maximumimagesize.md): Deprecated. The expected image size for the grid images in your @c CPListImageRowItem. Images provided will be resized to this size.
+- [update(\_:)](cplistimagerowitem/update%28__%29.md): Deprecated. Update the images displayed in this image row item. If this image row item is already displayed in a list template, this image row item will be automatically reloaded.
 
 ## Relationships
 
@@ -87,13 +91,12 @@ CarPlay doesn’t support custom list item types. Instead, use the `userInfo` pr
 
 ## See Also
 
-### Creating a Section
+### Lists
 
-- [init(items:header:headerSubtitle:headerImage:headerButton:sectionIndexTitle:)](cplistsection/init%28items_header_headersubtitle_headerimage_headerbutton_sectionindextitle_%29.md): Creates a section with list items, a header, a section index title, and section header details.
-- [CPListTemplateItem](cplisttemplateitem.md): A description of the common properties of all list item types.
-- [CPSelectableListItem](cpselectablelistitem.md): A description of a selectable list item.
-- [CPListItem](cplistitem.md): A selectable row in a list template.
-- [CPMessageListItem](cpmessagelistitem.md): A list template row that represents a conversation or contact.
+- [CPListTemplate](cplisttemplate.md): A template that displays a single-column list of items in one of several visual styles.
+- [CPListSection](cplistsection.md): A container that groups related items in a list interface.
+- [CPListItem](cplistitem.md): A selectable row in a list interface.
+- [Supporting types for lists](list-content.md): Create sections, single-line items, multi-element rows, headers, and other content for your list.
 
 # CPListImageRowItem (Objective-C)
 
@@ -101,7 +104,7 @@ CarPlay doesn’t support custom list item types. Instead, use the `userInfo` pr
 **Kind:** Class  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A list template row that displays a series of images.
+A row type that displays multiple sub-elements horizontally in a variety of styles.
 
 ## Declaration
 
@@ -113,53 +116,57 @@ A list template row that displays a series of images.
 
 ## Overview
 
-Use `CPListImageRowItem` to display a series of images as a row in a list template. At runtime, use [CPMaximumNumberOfGridImages](cpmaximumnumberofgridimages.md) to determine the maximum number of images that the row displays. CarPlay may display fewer images, depending on the width of the vehicle’s primary screen. Provide images that are display-ready, and include light and dark variants of each. See [initWithText:images:](cplistimagerowitem/init%28text_images_%29.md) for more information.
+Create a `CPListImageRowItem` to display image-based content in the rows of your list interface. Each `CPListImageRowItem` represents a single row of content and displays one or more images side-by-side, giving the row a more grid-like appearance. You specify the images in each row using row elements, which are subclasses of `CPListImageRowItemElement`. Each row element subclass defines a unique visual style to apply to the image. You use elements to represent part of your app’s content. For example, a music app might display a row for each playlist and fill the row with elements that represent albums in the playlist.
 
-You assign a [handler](cplistimagerowitem/handler.md) to the list item that CarPlay executes when the user selects the item. You can assign a second handler, [listImageRowHandler](cplistimagerowitem/listimagerowhandler.md), which CarPlay calls when the user selects an individual image.
+Create one or more `CPListImageRowItem` types when building the content for your list interface, configure it with elements, and add them to a [CPListSection](cplistsection.md) object. For each element in the row, specify the image to display and any other relevant content. Use the same type for all elements in a single row. Configure the new row with optional closures if you want to respond when someone interacts with the row or one of its elements. Associate any app-specific data with the row using the [userInfo](cplistitem/userinfo.md) property.
 
-CarPlay doesn’t support custom list item types. Instead, use the `userInfo` property to attach a value to the list item that provides additional context, such as specifying  a model object that corresponds to the item.
+Use one of the following types to specify the elements of a row:
+
+- **[CPListImageRowItemRowElement](cplistimagerowitemrowelement.md)**: The type displays an image with some descriptive text.
+- **[CPListImageRowItemCardElement](cplistimagerowitemcardelement.md)**: The type displays an image and text inside a card-like shape.
+- **[CPListImageRowItemCondensedElement](cplistimagerowitemcondensedelement.md)**: The type displays an image and text in a vertically condensed shape.
+- **[CPListImageRowItemGridElement](cplistimagerowitemgridelement.md)**: The type displays an image with a border shape.
+- **[CPListImageRowItemImageGridElement](cplistimagerowitemimagegridelement.md)**: The type displays text and an image with a border shape.
+
+Rows support a variable number of items, either on a single line or spread across multiple lines. The [CPMaximumNumberOfGridImages](cpmaximumnumberofgridimages.md) constant defines the maximum number of items you can include in a single row. If the row supports multiple lines, CarPlay adds extra lines as needed until it displays the items you provided. If the row supports only a single line, CarPlay displays as many elements as it can fit into one line and ignores the rest. Configure a single- or multi-line layout when initializing the row.
+
+To create a simpler layout with only one item per row, use the [CPListItem](cplistitem.md) type instead.
 
 ## Topics
 
-### Creating a List Image Row Item
+### Creating a list image row item
 
-- [initWithText:images:](cplistimagerowitem/init%28text_images_%29.md): Deprecated. Creates a list item that displays a row of images.
-- [initWithText:images:imageTitles:](cplistimagerowitem/init%28text_images_imagetitles_%29.md): Deprecated. Creates a list item that displays a row of images with a title below each image.
+- [initWithText:elements:allowsMultipleLines:](cplistimagerowitem/init%28text_elements_allowsmultiplelines_%29.md): Initializes the row with the specified text and row elements.
+- [initWithText:cardElements:allowsMultipleLines:](cplistimagerowitem/init%28text_cardelements_allowsmultiplelines_%29.md): Initializes the row with the specified text and card-style elements.
+- [initWithText:condensedElements:allowsMultipleLines:](cplistimagerowitem/init%28text_condensedelements_allowsmultiplelines_%29.md): Initializes the row with the specified text and condensed-height elements.
+- [initWithText:gridElements:allowsMultipleLines:](cplistimagerowitem/init%28text_gridelements_allowsmultiplelines_%29.md): Initializes the row with the specified text and grid elements.
+- [initWithText:imageGridElements:allowsMultipleLines:](cplistimagerowitem/init%28text_imagegridelements_allowsmultiplelines_%29.md): Initializes the row with the specified text and image grid elements.
 
-### Managing Content
+### Managing the row’s content
 
-- [text](cplistimagerowitem/text.md): The list item’s primary text.
-- [gridImages](cplistimagerowitem/gridimages.md): Deprecated. The images that appear in the list item’s image row.
-- [updateImages:](cplistimagerowitem/update%28__%29.md): Deprecated. Adds, removes, reorders, or updates the images in the list item’s image row.
-- [maximumImageSize](cplistimagerowitem/maximumimagesize.md): Deprecated. The maximum size of an image that an image row can display.
+- [text](cplistimagerowitem/text.md): The row’s primary text.
+- [elements](cplistimagerowitem/elements.md): The elements to display in the row.
+- [allowsMultipleLines](cplistimagerowitem/allowsmultiplelines.md): A Boolean value that indicates whether the row displays elements on more than one line.
+- [userInfo](cplistimagerowitem/userinfo.md): App-specific data you associate with the item.
 - [CPMaximumNumberOfGridImages](cpmaximumnumberofgridimages.md): The maximum number of images that an image row can contain.
 
-### Managing Selection
+### Responding to interactions
 
-- [listImageRowHandler](cplistimagerowitem/listimagerowhandler.md): An optional closure that CarPlay invokes when the user selects an image.
-- [handler](cplistimagerowitem/handler.md): An optional closure that CarPlay invokes when the user selects the list item.
+- [listImageRowHandler](cplistimagerowitem/listimagerowhandler.md): The closure to run when someone interacts with one of the elements in the row.
+- [handler](cplistimagerowitem/handler.md): The closure to run when someone interacts with any part of the row.
 
-### Managing Supplementary Information
+### Enabling and disabling the row
 
-- [userInfo](cplistimagerowitem/userinfo.md): An opaque value for the list item.
+- [enabled](cplistimagerowitem/isenabled.md): A Boolean value that indicates whether the item is enabled.
 
-### Enabling Items
+### Deprecated
 
-- [enabled](cplistimagerowitem/isenabled.md): A Boolean value that indicates if the item is enabled.
-
-### Instance Properties
-
-- [allowsMultipleLines](cplistimagerowitem/allowsmultiplelines.md): A Boolean value indicating whether the elements should be visible in more than a single line.
-- [elements](cplistimagerowitem/elements.md): The array of elements used to draw visible elements.
+- [initWithText:images:](cplistimagerowitem/init%28text_images_%29.md): Deprecated. Initialize a list image row item with a text string and an array of @c UIImage for the grid of images.
+- [initWithText:images:imageTitles:](cplistimagerowitem/init%28text_images_imagetitles_%29.md): Deprecated. Initialize a list image row item with a text string, an array of @c UIImage for the grid of images, and an array of @c NSString titles, one displayed below each image.
+- [gridImages](cplistimagerowitem/gridimages.md): Deprecated. Read-only access to the grid images shown in a row in the cell.
 - [imageTitles](cplistimagerowitem/imagetitles.md): Deprecated. The titles displayed for each image in this image row item.
-
-### Instance Methods
-
-- [initWithText:cardElements:allowsMultipleLines:](cplistimagerowitem/init%28text_cardelements_allowsmultiplelines_%29.md): Initialize a list image row item with a text string, an array of @c CPListImageRowItemCardElement and a boolean to allow multiple lines in this row.
-- [initWithText:condensedElements:allowsMultipleLines:](cplistimagerowitem/init%28text_condensedelements_allowsmultiplelines_%29.md): Initialize a list image row item with a text string, an array of @c CPListImageRowItemCondensedElement and a boolean to allow multiple lines in this row.
-- [initWithText:elements:allowsMultipleLines:](cplistimagerowitem/init%28text_elements_allowsmultiplelines_%29.md): Initialize a list image row item with a text string, an array of @c CPListImageRowItemRowElement and a boolean to allow multiple lines in this row.
-- [initWithText:gridElements:allowsMultipleLines:](cplistimagerowitem/init%28text_gridelements_allowsmultiplelines_%29.md): Initialize a list image row item with a text string, an array of @c CPListImageRowItemGridElement and a boolean to allow multiple lines in this row.
-- [initWithText:imageGridElements:allowsMultipleLines:](cplistimagerowitem/init%28text_imagegridelements_allowsmultiplelines_%29.md): Initialize a list image row item with a text string, an array of @c CPListImageRowItemImageGridElement and a boolean to allow multiple lines in this row.
+- [maximumImageSize](cplistimagerowitem/maximumimagesize.md): Deprecated. The expected image size for the grid images in your @c CPListImageRowItem. Images provided will be resized to this size.
+- [updateImages:](cplistimagerowitem/update%28__%29.md): Deprecated. Update the images displayed in this image row item. If this image row item is already displayed in a list template, this image row item will be automatically reloaded.
 
 ## Relationships
 
@@ -173,12 +180,9 @@ CarPlay doesn’t support custom list item types. Instead, use the `userInfo` pr
 
 ## See Also
 
-### Creating a Section
+### Lists
 
-- [initWithItems:](cplistsection/initwithitems_.md): Creates a section with list items.
-- [initWithItems:header:sectionIndexTitle:](cplistsection/initwithitems_header_sectionindextitle_.md): Creates a section with list items, a header, and a section index title.
-- [initWithItems:header:headerSubtitle:headerImage:headerButton:sectionIndexTitle:](cplistsection/init%28items_header_headersubtitle_headerimage_headerbutton_sectionindextitle_%29.md): Creates a section with list items, a header, a section index title, and section header details.
-- [CPListTemplateItem](cplisttemplateitem.md): A description of the common properties of all list item types.
-- [CPSelectableListItem](cpselectablelistitem.md): A description of a selectable list item.
-- [CPListItem](cplistitem.md): A selectable row in a list template.
-- [CPMessageListItem](cpmessagelistitem.md): A list template row that represents a conversation or contact.
+- [CPListTemplate](cplisttemplate.md): A template that displays a single-column list of items in one of several visual styles.
+- [CPListSection](cplistsection.md): A container that groups related items in a list interface.
+- [CPListItem](cplistitem.md): A selectable row in a list interface.
+- [Supporting types for lists](list-content.md): Create sections, single-line items, multi-element rows, headers, and other content for your list.

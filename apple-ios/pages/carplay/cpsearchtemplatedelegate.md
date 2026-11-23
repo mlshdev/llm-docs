@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpsearchtemplatedelegate
 
 # CPSearchTemplateDelegate (Swift)
@@ -17,15 +17,15 @@ The interface for an object that serves as the search template’s delegate.
 
 ## Topics
 
-### Updating Search Text
+### Updating the search text
 
 - [searchTemplate(\_:updatedSearchText:completionHandler:)](cpsearchtemplatedelegate/searchtemplate%28__updatedsearchtext_completionhandler_%29.md): Tells the delegate that the user updated the search criteria text.
 
-### Selecting a Search Result Item
+### Selecting a search result
 
 - [searchTemplate(\_:selectedResult:completionHandler:)](cpsearchtemplatedelegate/searchtemplate%28__selectedresult_completionhandler_%29.md): Tells the delegate that the user selected an item from the search result.
 
-### Pressing the Search Button
+### Handling button presses
 
 - [searchTemplateSearchButtonPressed(\_:)](cpsearchtemplatedelegate/searchtemplatesearchbuttonpressed%28__%29.md): Tells the delegate that the user tapped the keyboard’s search button.
 
@@ -37,7 +37,7 @@ The interface for an object that serves as the search template’s delegate.
 
 ## See Also
 
-### Providing a Search Template Delegate
+### Managing search behaviors
 
 - [delegate](cpsearchtemplate/delegate.md): The object that serves as the search template’s delegate.
 
@@ -57,15 +57,15 @@ The interface for an object that serves as the search template’s delegate.
 
 ## Topics
 
-### Updating Search Text
+### Updating the search text
 
 - [searchTemplate:updatedSearchText:completionHandler:](cpsearchtemplatedelegate/searchtemplate%28__updatedsearchtext_completionhandler_%29.md): Tells the delegate that the user updated the search criteria text.
 
-### Selecting a Search Result Item
+### Selecting a search result
 
 - [searchTemplate:selectedResult:completionHandler:](cpsearchtemplatedelegate/searchtemplate%28__selectedresult_completionhandler_%29.md): Tells the delegate that the user selected an item from the search result.
 
-### Pressing the Search Button
+### Handling button presses
 
 - [searchTemplateSearchButtonPressed:](cpsearchtemplatedelegate/searchtemplatesearchbuttonpressed%28__%29.md): Tells the delegate that the user tapped the keyboard’s search button.
 
@@ -77,6 +77,6 @@ The interface for an object that serves as the search template’s delegate.
 
 ## See Also
 
-### Providing a Search Template Delegate
+### Managing search behaviors
 
 - [delegate](cpsearchtemplate/delegate.md): The object that serves as the search template’s delegate.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmappanelsection/init(coder:)
 
 # init(coder:)
@@ -12,3 +12,9 @@
 ```swift
 init?(coder: NSCoder)
 ```
+
+## See Also
+
+### Creating a map panel section
+
+- [init(title:items:)](init%28title_items_%29.md): Initializes the section with the specified title and items.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cproutechoice/selectionsummaryvariants
 
 # selectionSummaryVariants (Swift)
@@ -23,7 +23,7 @@ When creating a [CPRouteChoice](../cproutechoice.md) object, localize each varia
 
 ## See Also
 
-### Getting Variants
+### Getting the variant details
 
 - [summaryVariants](summaryvariants.md): An array of summary variants.
 - [additionalInformationVariants](additionalinformationvariants.md): An array of variants providing additional information about the route choice.
@@ -50,7 +50,7 @@ When creating a [CPRouteChoice](../cproutechoice.md) object, localize each varia
 
 ## See Also
 
-### Getting Variants
+### Getting the variant details
 
 - [summaryVariants](summaryvariants.md): An array of summary variants.
 - [additionalInformationVariants](additionalinformationvariants.md): An array of variants providing additional information about the route choice.

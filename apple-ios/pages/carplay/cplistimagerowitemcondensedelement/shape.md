@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistimagerowitemcondensedelement/shape
 
 # CPListImageRowItemCondensedElement.Shape (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Enumeration  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
 
-Types of shape used to draw a condensed row element.
+Shapes you can apply to an element’s image.
 
 ## Declaration
 
@@ -15,12 +15,18 @@ Types of shape used to draw a condensed row element.
 enum Shape
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+When creating a condensed row element, use the constants in this type to specify the shape to apply to the image in each element.
+
 ## Topics
 
 ### Enumeration Cases
 
-- [CPListImageRowItemCondensedElement.Shape.circular](shape/circular.md): The list item will render an element with a circular image.
-- [CPListImageRowItemCondensedElement.Shape.roundedRectangle](shape/roundedrectangle.md): The list item will render an element with a rounded rectangle image.
+- [CPListImageRowItemCondensedElement.Shape.circular](shape/circular.md): A circular shape for the element’s image.
+- [CPListImageRowItemCondensedElement.Shape.roundedRectangle](shape/roundedrectangle.md): A rounded rectangle shape for the element’s image.
 
 ### Initializers
 
@@ -37,13 +43,19 @@ enum Shape
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
+## See Also
+
+### Getting the element’s shape
+
+- [imageShape](imageshape.md): The shape to apply to the current element’s image.
+
 # CPListImageRowItemCondensedElementShape (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Enumeration  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-Types of shape used to draw a condensed row element.
+Shapes you can apply to an element’s image.
 
 ## Declaration
 
@@ -51,9 +63,21 @@ Types of shape used to draw a condensed row element.
 enum CPListImageRowItemCondensedElementShape : NSInteger;
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+When creating a condensed row element, use the constants in this type to specify the shape to apply to the image in each element.
+
 ## Topics
 
 ### Enumeration Cases
 
-- [CPListImageRowItemCondensedElementShapeCircular](shape/circular.md): The list item will render an element with a circular image.
-- [CPListImageRowItemCondensedElementShapeRoundedRectangle](shape/roundedrectangle.md): The list item will render an element with a rounded rectangle image.
+- [CPListImageRowItemCondensedElementShapeCircular](shape/circular.md): A circular shape for the element’s image.
+- [CPListImageRowItemCondensedElementShapeRoundedRectangle](shape/roundedrectangle.md): A rounded rectangle shape for the element’s image.
+
+## See Also
+
+### Getting the element’s shape
+
+- [imageShape](imageshape.md): The shape to apply to the current element’s image.

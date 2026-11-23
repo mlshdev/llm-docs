@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbarbuttonhandler
 
 # CPBarButtonHandler (Swift)
@@ -17,13 +17,11 @@ typealias CPBarButtonHandler = (CPBarButton) -> Void
 
 ## See Also
 
-### Creating a CarPlay Bar Button
+### Creating a bar button
 
-- [init(coder:)](cpbarbutton/init%28coder_%29.md): Creates a button initialized from data in the specified coder object.
-- [init(type:handler:)](cpbarbutton/init%28type_handler_%29.md): Deprecated. Creates a bar button with a type and handler.
 - [init(image:handler:)](cpbarbutton/init%28image_handler_%29.md): Creates a bar button that displays an image.
-- [init(title:handler:)](cpbarbutton/init%28title_handler_%29.md): Creates a bar button that displays a text label.
-- [CPBarButton.Type](cpbarbutton/type.md): Types of bar buttons.
+- [init(title:handler:)](cpbarbutton/init%28title_handler_%29.md): Creates a bar button that displays a text string.
+- [init(coder:)](cpbarbutton/init%28coder_%29.md)
 
 # CPBarButtonHandler (Objective-C)
 
@@ -41,9 +39,7 @@ typedef void (^)(CPBarButton *) CPBarButtonHandler;
 
 ## See Also
 
-### Creating a CarPlay Bar Button
+### Creating a bar button
 
-- [initWithType:handler:](cpbarbutton/init%28type_handler_%29.md): Deprecated. Creates a bar button with a type and handler.
 - [initWithImage:handler:](cpbarbutton/init%28image_handler_%29.md): Creates a bar button that displays an image.
-- [initWithTitle:handler:](cpbarbutton/init%28title_handler_%29.md): Creates a bar button that displays a text label.
-- [CPBarButtonType](cpbarbutton/type.md): Types of bar buttons.
+- [initWithTitle:handler:](cpbarbutton/init%28title_handler_%29.md): Creates a bar button that displays a text string.

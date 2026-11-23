@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptemplateapplicationdashboardscenedelegate/templateapplicationdashboardscene(_:didconnect:to:)
 
 # templateApplicationDashboardScene(\_:didConnect:to:) (Swift)
@@ -21,10 +21,6 @@ optional func templateApplicationDashboardScene(_ templateApplicationDashboardSc
 - `dashboardController`: The controller that manages the scene’s dashboard shortcut buttons.
 - `window`: The window where your app draws its map content.
 
-## Mentioned In
-
-- [Displaying Content in CarPlay](../displaying-content-in-carplay.md)
-
 <a id="Discussion"></a>
 
 ## Discussion
@@ -33,7 +29,7 @@ CarPlay calls this method when it connects a dashboard scene to your navigation 
 
 ## See Also
 
-### Responding to the Scene Life Cycle
+### Responding to the dashboard scene life cycle
 
 - [templateApplicationDashboardScene(\_:didDisconnect:from:)](templateapplicationdashboardscene%28__diddisconnect_from_%29.md): Tells the delegate when CarPlay removes the dashboard scene from your navigation app.
 
@@ -57,10 +53,6 @@ Tells the delegate about the addition of a CarPlay Dashboard scene to your navig
 - `dashboardController`: The controller that manages the scene’s dashboard shortcut buttons.
 - `window`: The window where your app draws its map content.
 
-## Mentioned In
-
-- [Displaying Content in CarPlay](../displaying-content-in-carplay.md)
-
 <a id="Discussion"></a>
 
 ## Discussion
@@ -69,6 +61,6 @@ CarPlay calls this method when it connects a dashboard scene to your navigation 
 
 ## See Also
 
-### Responding to the Scene Life Cycle
+### Responding to the dashboard scene life cycle
 
 - [templateApplicationDashboardScene:didDisconnectDashboardController:fromWindow:](templateapplicationdashboardscene%28__diddisconnect_from_%29.md): Tells the delegate when CarPlay removes the dashboard scene from your navigation app.

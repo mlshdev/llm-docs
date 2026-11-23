@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmultistopcardconfiguration/init(title:buttons:image:)
 
 # init(title:buttons:image:) (Swift)
@@ -25,6 +25,13 @@ When providing an image, your app should provide a @c UIImage that is display-re
 
 UIImageAsset is used to combine multiple UIImages with different trait collections into a single UIImage.
 
+## See Also
+
+### Creating a configuration object
+
+- [init(title:buttons:)](init%28title_buttons_%29.md): Initializes a MultiStopCardConfiguration with an optional title and an array of text buttons
+- [init(coder:)](init%28coder_%29.md)
+
 # initWithTitle:buttons:image: (Objective-C)
 
 **Framework:** CarPlay  
@@ -48,3 +55,9 @@ Your app should provide a @c UIImage that is display-ready, containing two @c UI
 When providing an image, your app should provide a @c UIImage that is display-ready. If necessary for the image, provide light and dark styles by using an asset from your asset catalog, prepared with light and dark styles or by using @c UIImageAsset to combine two @c UIImage instances into a single image with both styles.
 
 UIImageAsset is used to combine multiple UIImages with different trait collections into a single UIImage.
+
+## See Also
+
+### Creating a configuration object
+
+- [initWithTitle:buttons:](init%28title_buttons_%29.md): Initializes a MultiStopCardConfiguration with an optional title and an array of text buttons

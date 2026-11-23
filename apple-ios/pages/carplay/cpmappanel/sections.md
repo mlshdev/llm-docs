@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmappanel/sections
 
 # sections (Swift)
@@ -23,6 +23,13 @@ You specify this information initially when you create the panel, but can also u
 
 If the panel isn’t tall enough to display all of the sections at the same time, it places them in a scrollable interface.
 
+## See Also
+
+### Getting the panel’s content
+
+- [title](title.md): The title to display at the top of the panel.
+- [buttonConfiguration](buttonconfiguration.md): The button information and travel estimates to display in the panel.
+
 # sections (Objective-C)
 
 **Framework:** CarPlay  
@@ -44,3 +51,10 @@ The sections of content to display in the panel.
 You specify this information initially when you create the panel, but can also update the list of sections by assigning a new value to this property. When assigning a new value to this property, the panel discards the previous data and stores a copy of the new sections you provide.
 
 If the panel isn’t tall enough to display all of the sections at the same time, it places them in a scrollable interface.
+
+## See Also
+
+### Getting the panel’s content
+
+- [title](title.md): The title to display at the top of the panel.
+- [buttonConfiguration](buttonconfiguration.md): The button information and travel estimates to display in the panel.

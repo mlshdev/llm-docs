@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbutton/title
 
 # title (Swift)
@@ -17,9 +17,9 @@ var title: String? { get set }
 
 ## See Also
 
-### Configuring the Button’s Attributes
+### Getting the button’s content
 
-- [isEnabled](isenabled.md): A Boolean value that determines whether the button is in an enabled state.
+- [image](image.md): The button’s image.
 
 # title (Objective-C)
 
@@ -37,6 +37,6 @@ The button’s title.
 
 ## See Also
 
-### Configuring the Button’s Attributes
+### Getting the button’s content
 
-- [enabled](isenabled.md): A Boolean value that determines whether the button is in an enabled state.
+- [image](image.md): The button’s image.

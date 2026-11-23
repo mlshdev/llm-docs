@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpactionsheettemplate/title
 
 # title (Swift)
@@ -17,7 +17,7 @@ var title: String? { get }
 
 ## See Also
 
-### Getting Action Sheet Template Information
+### Getting the template content
 
 - [message](message.md): The descriptive message providing details about the reason for displaying the action sheet.
 - [actions](actions.md): The list of actions available on the action sheet.
@@ -38,7 +38,7 @@ The title of the action sheet.
 
 ## See Also
 
-### Getting Action Sheet Template Information
+### Getting the template content
 
 - [message](message.md): The descriptive message providing details about the reason for displaying the action sheet.
 - [actions](actions.md): The list of actions available on the action sheet.

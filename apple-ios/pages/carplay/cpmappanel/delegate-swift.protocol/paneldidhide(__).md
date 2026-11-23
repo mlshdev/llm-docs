@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmappanel/delegate-swift.protocol/paneldidhide(_:)
 
 # panelDidHide(\_:) (Swift)
@@ -25,6 +25,12 @@ optional func panelDidHide(_ panel: CPMapPanel)
 
 Shortly after the system removes a map panel from your CarPlay interface, the system calls this method to give you a chance to respond. Use this method to perform any cleanup tasks associated with the panel’s disappearance. The system calls this method on your app’s main thread.
 
+## See Also
+
+### Responding to panel visibility changes
+
+- [panelDidShow(\_:)](paneldidshow%28__%29.md): Tells the delegate that the system displayed the specified map panel.
+
 # panelDidHide: (Objective-C)
 
 **Framework:** CarPlay  
@@ -48,3 +54,9 @@ Tells the delegate that the system hid the specified map panel.
 ## Discussion
 
 Shortly after the system removes a map panel from your CarPlay interface, the system calls this method to give you a chance to respond. Use this method to perform any cleanup tasks associated with the panel’s disappearance. The system calls this method on your app’s main thread.
+
+## See Also
+
+### Responding to panel visibility changes
+
+- [panelDidShow:](paneldidshow%28__%29.md): Tells the delegate that the system displayed the specified map panel.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitemaccessorytype
 
 # CPListItemAccessoryType (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Enumeration  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The accessory types that a list item can display.
+The standard image types a list item can display in its accessory region.
 
 ## Declaration
 
@@ -19,15 +19,15 @@ enum CPListItemAccessoryType
 
 ## Overview
 
-Use these constants to set the value of a list item’s [accessoryType](cplistitem/accessorytype.md) property. An accessory can provide additional context for a list item’s contents, or help communicate its behavior.
+Use these constants to set the value of a list item’s [accessoryType](cplistitem/accessorytype.md) property. Assigning one of these values displays the specified image in the accessory region of the list item’s row. Choose an accessory type that provides relevant context about the item’s purpose. For example, display a disclosure indicator to signify that tapping the row takes the person to a new page of content.
 
 ## Topics
 
-### Accessory Types
+### Accessory types
 
-- [CPListItemAccessoryType.none](cplistitemaccessorytype/none.md): Don’t show an accessory.
-- [CPListItemAccessoryType.disclosureIndicator](cplistitemaccessorytype/disclosureindicator.md): Show a chevron icon.
-- [CPListItemAccessoryType.cloud](cplistitemaccessorytype/cloud.md): Show a cloud icon.
+- [CPListItemAccessoryType.none](cplistitemaccessorytype/none.md): A value that indicates the list item has no standard accessory type.
+- [CPListItemAccessoryType.disclosureIndicator](cplistitemaccessorytype/disclosureindicator.md): A chevron image that signifies the item displays new content.
+- [CPListItemAccessoryType.cloud](cplistitemaccessorytype/cloud.md): A cloud image that signifies the item contains cloud-based content.
 
 ### Initializers
 
@@ -46,11 +46,11 @@ Use these constants to set the value of a list item’s [accessoryType](cplistit
 
 ## See Also
 
-### Managing Accessories
+### Managing accessories
 
-- [accessoryType](cplistitem/accessorytype.md): The accessory that the list item displays in its trailing region.
-- [accessoryImage](cplistitem/accessoryimage.md): The image that the list item displays in its trailing region.
-- [setAccessoryImage(\_:)](cplistitem/setaccessoryimage%28__%29.md): Updates the list item’s accessory image.
+- [accessoryType](cplistitem/accessorytype.md): The standard accessory type to display on the trailing edge of the list item.
+- [accessoryImage](cplistitem/accessoryimage.md): The custom accessory image to display on the trailing edge of the list item.
+- [setAccessoryImage(\_:)](cplistitem/setaccessoryimage%28__%29.md): The custom accessory image to display on the trailing edge of the list item.
 
 # CPListItemAccessoryType (Objective-C)
 
@@ -58,7 +58,7 @@ Use these constants to set the value of a list item’s [accessoryType](cplistit
 **Kind:** Enumeration  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-The accessory types that a list item can display.
+The standard image types a list item can display in its accessory region.
 
 ## Declaration
 
@@ -70,20 +70,20 @@ enum CPListItemAccessoryType : NSInteger;
 
 ## Overview
 
-Use these constants to set the value of a list item’s [accessoryType](cplistitem/accessorytype.md) property. An accessory can provide additional context for a list item’s contents, or help communicate its behavior.
+Use these constants to set the value of a list item’s [accessoryType](cplistitem/accessorytype.md) property. Assigning one of these values displays the specified image in the accessory region of the list item’s row. Choose an accessory type that provides relevant context about the item’s purpose. For example, display a disclosure indicator to signify that tapping the row takes the person to a new page of content.
 
 ## Topics
 
-### Accessory Types
+### Accessory types
 
-- [CPListItemAccessoryTypeNone](cplistitemaccessorytype/none.md): Don’t show an accessory.
-- [CPListItemAccessoryTypeDisclosureIndicator](cplistitemaccessorytype/disclosureindicator.md): Show a chevron icon.
-- [CPListItemAccessoryTypeCloud](cplistitemaccessorytype/cloud.md): Show a cloud icon.
+- [CPListItemAccessoryTypeNone](cplistitemaccessorytype/none.md): A value that indicates the list item has no standard accessory type.
+- [CPListItemAccessoryTypeDisclosureIndicator](cplistitemaccessorytype/disclosureindicator.md): A chevron image that signifies the item displays new content.
+- [CPListItemAccessoryTypeCloud](cplistitemaccessorytype/cloud.md): A cloud image that signifies the item contains cloud-based content.
 
 ## See Also
 
-### Managing Accessories
+### Managing accessories
 
-- [accessoryType](cplistitem/accessorytype.md): The accessory that the list item displays in its trailing region.
-- [accessoryImage](cplistitem/accessoryimage.md): The image that the list item displays in its trailing region.
-- [setAccessoryImage:](cplistitem/setaccessoryimage%28__%29.md): Updates the list item’s accessory image.
+- [accessoryType](cplistitem/accessorytype.md): The standard accessory type to display on the trailing edge of the list item.
+- [accessoryImage](cplistitem/accessoryimage.md): The custom accessory image to display on the trailing edge of the list item.
+- [setAccessoryImage:](cplistitem/setaccessoryimage%28__%29.md): The custom accessory image to display on the trailing edge of the list item.

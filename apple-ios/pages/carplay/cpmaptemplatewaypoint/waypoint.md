@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplatewaypoint/waypoint
 
 # waypoint (Swift)
@@ -15,6 +15,12 @@ The navigation waypoint containing location-based information and guidance for a
 var waypoint: CPNavigationWaypoint { get set }
 ```
 
+## See Also
+
+### Getting the route information
+
+- [travelEstimates](travelestimates.md): Travel estimates for reaching this waypoint, including time and distance calculations.
+
 # waypoint (Objective-C)
 
 **Framework:** CarPlay  
@@ -28,3 +34,9 @@ The navigation waypoint containing location-based information and guidance for a
 ```objectivec
 @property (nonatomic, strong) CPNavigationWaypoint * waypoint;
 ```
+
+## See Also
+
+### Getting the route information
+
+- [travelEstimates](travelestimates.md): Travel estimates for reaching this waypoint, including time and distance calculations.

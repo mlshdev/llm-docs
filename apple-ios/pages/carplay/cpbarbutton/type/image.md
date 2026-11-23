@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbarbutton/type/image
 
 # CPBarButton.Type.image (Swift)
@@ -7,19 +7,11 @@
 **Kind:** Case  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-An image style bar button.
-
 ## Declaration
 
 ```swift
 case image
 ```
-
-## See Also
-
-### Button Types
-
-- [CPBarButton.Type.text](text.md): A text style bar button.
 
 # CPBarButtonTypeImage (Objective-C)
 
@@ -27,16 +19,8 @@ case image
 **Kind:** Enumeration Case  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-An image style bar button.
-
 ## Declaration
 
 ```objectivec
 CPBarButtonTypeImage
 ```
-
-## See Also
-
-### Button Types
-
-- [CPBarButtonTypeText](text.md): A text style bar button.

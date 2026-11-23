@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationalert/updatetitlevariants(_:subtitlevariants:)
 
 # updateTitleVariants(\_:subtitleVariants:) (Swift)
@@ -28,10 +28,11 @@ You can update the navigation alert with new title and subtitle variants before 
 
 ## See Also
 
-### Getting Titles
+### Getting title values
 
 - [titleVariants](titlevariants.md): An array of title strings.
 - [subtitleVariants](subtitlevariants.md): An array of subtitle strings.
+- [updateTitleVariants(\_:subtitleVariants:avatarImage:alert:actions:duration:)](updatetitlevariants%28__subtitlevariants_avatarimage_alert_actions_duration_%29.md): Update the navigation alert with new title variants, subtitle variants, image, actions, and duration.
 
 # updateTitleVariants:subtitleVariants: (Objective-C)
 
@@ -60,7 +61,8 @@ You can update the navigation alert with new title and subtitle variants before 
 
 ## See Also
 
-### Getting Titles
+### Getting title values
 
 - [titleVariants](titlevariants.md): An array of title strings.
 - [subtitleVariants](subtitlevariants.md): An array of subtitle strings.
+- [updateTitleVariants:subtitleVariants:avatarImage:alertImage:actions:duration:](updatetitlevariants%28__subtitlevariants_avatarimage_alert_actions_duration_%29.md): Update the navigation alert with new title variants, subtitle variants, image, actions, and duration.

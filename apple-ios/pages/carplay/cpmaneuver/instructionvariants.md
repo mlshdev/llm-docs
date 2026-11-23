@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaneuver/instructionvariants
 
 # instructionVariants (Swift)
@@ -25,6 +25,13 @@ Localize each variant for display to the user, and make sure the array contains 
 
 >  If you provide both [instructionVariants](instructionvariants.md) and [attributedInstructionVariants](attributedinstructionvariants.md), the system displays instructions from the attributed instruction variants array.
 
+## See Also
+
+### Providing instructions
+
+- [dashboardInstructionVariants](dashboardinstructionvariants.md): An array of instruction variants for the CarPlay dashboard.
+- [notificationInstructionVariants](notificationinstructionvariants.md): An array of instruction variants for notification banners.
+
 # instructionVariants (Objective-C)
 
 **Framework:** CarPlay  
@@ -48,3 +55,10 @@ Localize each variant for display to the user, and make sure the array contains 
 > **Note**
 
 >  If you provide both [instructionVariants](instructionvariants.md) and [attributedInstructionVariants](attributedinstructionvariants.md), the system displays instructions from the attributed instruction variants array.
+
+## See Also
+
+### Providing instructions
+
+- [dashboardInstructionVariants](dashboardinstructionvariants.md): An array of instruction variants for the CarPlay dashboard.
+- [notificationInstructionVariants](notificationinstructionvariants.md): An array of instruction variants for notification banners.

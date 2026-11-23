@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbarbuttonstyle/rounded
 
 # CPBarButtonStyle.rounded (Swift)
@@ -17,7 +17,7 @@ case rounded
 
 ## See Also
 
-### Button Styles
+### Getting the button style
 
 - [CPBarButtonStyle.none](none.md): A style that provides no additional styling.
 
@@ -37,6 +37,6 @@ CPBarButtonStyleRounded
 
 ## See Also
 
-### Button Styles
+### Getting the button style
 
 - [CPBarButtonStyleNone](none.md): A style that provides no additional styling.

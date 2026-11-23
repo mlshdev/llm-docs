@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingsportsteamlogo
 
 # CPNowPlayingSportsTeamLogo (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Class  
 **Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+
 
-A logo image or, if no image is available, an abbreviation or initialism for this team.
+A type that manages logo information for a sports team.
 
 ## Declaration
 
@@ -15,18 +15,26 @@ A logo image or, if no image is available, an abbreviation or initialism for thi
 @MainActor class CPNowPlayingSportsTeamLogo
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+A `CPNowPlayingSportsTeamLogo` object manages the identifying content for a team. Specify a team’s logo using an image or an abbreviation of the team’s name. For example, an American football team might display an image with the team’s helmet design. CarPlay displays logo information prominently for each team in the Now Playing interface.
+
+Create two `CPNowPlayingSportsTeamLogo` objects during the creation of sports event-related information for the Now Playing interface. Use the logo objects you create to initialize the [CPNowPlayingSportsTeam](cpnowplayingsportsteam.md) objects you use to specify the team information.
+
 ## Topics
 
-### Initializers
+### Creating a team logo
 
+- [init(teamLogo:)](cpnowplayingsportsteamlogo/init%28teamlogo_%29.md): Creates a logo object using a team-specific image.
+- [init(teamInitials:)](cpnowplayingsportsteamlogo/init%28teaminitials_%29.md): Creates a logo object using the team’s initials or the official abbreviation of the team name.
 - [init(coder:)](cpnowplayingsportsteamlogo/init%28coder_%29.md)
-- [init(teamInitials:)](cpnowplayingsportsteamlogo/init%28teaminitials_%29.md): If no team logo image is available, initialize a team logo with an abbreviation or initialism for this team.
-- [init(teamLogo:)](cpnowplayingsportsteamlogo/init%28teamlogo_%29.md): Initialize a team logo with an image representation of this team. Provide an image no larger than 350x350; larger images will be resized down.
 
-### Instance Properties
+### Getting the logo content
 
-- [initials](cpnowplayingsportsteamlogo/initials.md): An abbreviation or initialism for this team, used only if no logo image is available for this team.
-- [logo](cpnowplayingsportsteamlogo/logo.md): A team logo image for this team.
+- [logo](cpnowplayingsportsteamlogo/logo.md): The image with the team’s logo.
+- [initials](cpnowplayingsportsteamlogo/initials.md): The team’s initials or official team-name abbreviation.
 
 ## Relationships
 
@@ -46,13 +54,21 @@ A logo image or, if no image is available, an abbreviation or initialism for thi
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 
+## See Also
+
+### Sports mode content
+
+- [CPNowPlayingSportsTeam](cpnowplayingsportsteam.md): A type that specifies team-specific details, including the name, standings, and current score in the match.
+- [CPNowPlayingSportsEventStatus](cpnowplayingsportseventstatus.md): A type that manages match-focused information, including the event clock.
+- [CPNowPlayingSportsClock](cpnowplayingsportsclock.md): A type that specifies the elapsed or remaining time in a match and the state of the clock.
+
 # CPNowPlayingSportsTeamLogo (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Class  
 **Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+
 
-A logo image or, if no image is available, an abbreviation or initialism for this team.
+A type that manages logo information for a sports team.
 
 ## Declaration
 
@@ -60,17 +76,25 @@ A logo image or, if no image is available, an abbreviation or initialism for thi
 @interface CPNowPlayingSportsTeamLogo : NSObject
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+A `CPNowPlayingSportsTeamLogo` object manages the identifying content for a team. Specify a team’s logo using an image or an abbreviation of the team’s name. For example, an American football team might display an image with the team’s helmet design. CarPlay displays logo information prominently for each team in the Now Playing interface.
+
+Create two `CPNowPlayingSportsTeamLogo` objects during the creation of sports event-related information for the Now Playing interface. Use the logo objects you create to initialize the [CPNowPlayingSportsTeam](cpnowplayingsportsteam.md) objects you use to specify the team information.
+
 ## Topics
 
-### Instance Properties
+### Creating a team logo
 
-- [initials](cpnowplayingsportsteamlogo/initials.md): An abbreviation or initialism for this team, used only if no logo image is available for this team.
-- [logo](cpnowplayingsportsteamlogo/logo.md): A team logo image for this team.
+- [initWithTeamLogo:](cpnowplayingsportsteamlogo/init%28teamlogo_%29.md): Creates a logo object using a team-specific image.
+- [initWithTeamInitials:](cpnowplayingsportsteamlogo/init%28teaminitials_%29.md): Creates a logo object using the team’s initials or the official abbreviation of the team name.
 
-### Instance Methods
+### Getting the logo content
 
-- [initWithTeamInitials:](cpnowplayingsportsteamlogo/init%28teaminitials_%29.md): If no team logo image is available, initialize a team logo with an abbreviation or initialism for this team.
-- [initWithTeamLogo:](cpnowplayingsportsteamlogo/init%28teamlogo_%29.md): Initialize a team logo with an image representation of this team. Provide an image no larger than 350x350; larger images will be resized down.
+- [logo](cpnowplayingsportsteamlogo/logo.md): The image with the team’s logo.
+- [initials](cpnowplayingsportsteamlogo/initials.md): The team’s initials or official team-name abbreviation.
 
 ## Relationships
 
@@ -81,3 +105,11 @@ A logo image or, if no image is available, an abbreviation or initialism for thi
 ### Conforms To
 
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
+
+## See Also
+
+### Sports mode content
+
+- [CPNowPlayingSportsTeam](cpnowplayingsportsteam.md): A type that specifies team-specific details, including the name, standings, and current score in the match.
+- [CPNowPlayingSportsEventStatus](cpnowplayingsportseventstatus.md): A type that manages match-focused information, including the event clock.
+- [CPNowPlayingSportsClock](cpnowplayingsportsclock.md): A type that specifies the elapsed or remaining time in a match and the state of the clock.

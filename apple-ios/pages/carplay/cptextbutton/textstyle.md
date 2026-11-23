@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptextbutton/textstyle
 
 # textStyle (Swift)
@@ -17,7 +17,7 @@ var textStyle: CPTextButtonStyle { get set }
 
 ## See Also
 
-### Managing the Button Style
+### Managing the button style
 
 - [CPTextButtonStyle](../cptextbuttonstyle.md): The styles a button can apply to its title to communicate its action.
 
@@ -37,6 +37,6 @@ The text style the button applies to its title.
 
 ## See Also
 
-### Managing the Button Style
+### Managing the button style
 
 - [CPTextButtonStyle](../cptextbuttonstyle.md): The styles a button can apply to its title to communicate its action.

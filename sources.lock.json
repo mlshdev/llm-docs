@@ -189,16 +189,16 @@
       "contentDigest": "b37471c392a15490eefe07724ec02165879a2030edcf4c23120a65c18ab721d2"
     },
     "apple-xcode": {
-      "tag": "snapshot-ee1c8cbf0f44",
-      "snapshotDigest": "ee1c8cbf0f444324b8d8344f5a1156f029d70a64656a2e18bbd463d6cdfb4480",
-      "capturedAt": "2026-11-08T22:37:20.676Z",
-      "contentDigest": "a185e0d809e86cca76a9e737941229540ade97b52993d4252ec7703050b67f2f"
+      "tag": "snapshot-6bb1532b03d3",
+      "snapshotDigest": "6bb1532b03d3926068d90735187eda38862dcecfa0cfd2ccaae82490796174b1",
+      "capturedAt": "2026-11-22T23:58:10.597Z",
+      "contentDigest": "ee20a4b01464caa985a09dd39085ff55a15f80d183a423cb1eff4c3be184c721"
     },
     "apple-ios": {
-      "tag": "snapshot-0edb2c9c8b69",
-      "snapshotDigest": "0edb2c9c8b6974098c4f5041f38e17d41914df6ce4bf93bd90e9c545a2e4e309",
-      "capturedAt": "2026-11-08T22:37:20.684Z",
-      "contentDigest": "9616d4a18f3cc59853283e700560235e53ce236fee9234296628859f65237bee"
+      "tag": "snapshot-5c9fd14c92ba",
+      "snapshotDigest": "5c9fd14c92baebacda0f5be5ce28d7b7df3a84065a659da9ff912561838c7bcc",
+      "capturedAt": "2026-11-22T23:58:10.606Z",
+      "contentDigest": "15fe73b072f033ccba2d2037d4695a3f7fc5c9b08ae36e56d4be43c62486b28a"
     },
     "apple-macos": {
       "tag": "snapshot-8257b11be327",
@@ -207,10 +207,10 @@
       "contentDigest": "41edb3868bb6a657018aafb557356ddd3f56fdf018e3a85b9e0b68b3c5e76f1d"
     },
     "apple-watchos": {
-      "tag": "snapshot-057e837b5f7a",
-      "snapshotDigest": "057e837b5f7a4453d91bdf0ef930b1b32d547a4244aa854d0b0fbabbed1d67be",
-      "capturedAt": "2026-11-08T22:37:20.768Z",
-      "contentDigest": "d6e9acf1ad1b5da3a9ecede2a7f158c22ad490dbd230b0cebb82a1f788fef828"
+      "tag": "snapshot-a77e67da8d8e",
+      "snapshotDigest": "a77e67da8d8e6a14c754d35a4c8f15d7ee5701d913f5bc2aaec9d3995559645b",
+      "capturedAt": "2026-11-22T23:58:10.730Z",
+      "contentDigest": "d2c5b349e76394b73cdb40a7a19306f3b00bedf048ceb8671ef4a6aca536eafd"
     },
     "apple-frameworks": {
       "tag": "snapshot-2d7a1d789740",

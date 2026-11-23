@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpgridbutton/image
 
 # image (Swift)
@@ -23,9 +23,11 @@ When creating a grid button, don’t provide an animated image. If you do, the b
 
 ## See Also
 
-### Obtaining Grid Button Information
+### Managing the button content
 
+- [updateImage(\_:)](updateimage%28__%29.md)
 - [titleVariants](titlevariants.md): An array of title variants for the button.
+- [updateTitleVariants(\_:)](updatetitlevariants%28__%29.md)
 
 # image (Objective-C)
 
@@ -49,6 +51,8 @@ When creating a grid button, don’t provide an animated image. If you do, the b
 
 ## See Also
 
-### Obtaining Grid Button Information
+### Managing the button content
 
+- [updateImage:](updateimage%28__%29.md)
 - [titleVariants](titlevariants.md): An array of title variants for the button.
+- [updateTitleVariants:](updatetitlevariants%28__%29.md)

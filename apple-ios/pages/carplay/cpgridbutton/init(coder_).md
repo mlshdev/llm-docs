@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpgridbutton/init(coder:)
 
 # init(coder:)
@@ -12,3 +12,10 @@
 ```swift
 init?(coder: NSCoder)
 ```
+
+## See Also
+
+### Creating a grid button
+
+- [init(titleVariants:image:handler:)](init%28titlevariants_image_handler_%29.md): Creates a grid button with the specified title variants, image, and action handler.
+- [init(titleVariants:image:messageConfiguration:handler:)](init%28titlevariants_image_messageconfiguration_handler_%29.md): Initialize a button with a title, image, and message configuration.

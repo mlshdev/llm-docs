@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingbuttonmaximumimagesize
 
 # CPNowPlayingButtonMaximumImageSize (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Global Variable  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-The maximum size CarPlay supports for a button’s image.
+The dimensions for images in custom buttons.
 
 ## Declaration
 
@@ -15,11 +15,17 @@ The maximum size CarPlay supports for a button’s image.
 let CPNowPlayingButtonMaximumImageSize: CGSize
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+This constant specifies the expected dimensions for images you use with a [CPNowPlayingImageButton](cpnowplayingimagebutton.md) object. The image dimensions are in points. To get the image dimensions in pixels, multiple the width and height values by the current display scale from the vehicle’s trait collection. You can get the current traits from the [carTraitCollection](cpinterfacecontroller/cartraitcollection.md) property of your interface controller.
+
 ## See Also
 
-### Creating a Button
+### Creating the button
 
-- [init(image:handler:)](cpnowplayingimagebutton/init%28image_handler_%29.md): Creates a Now Playing button that displays a custom image and invokes a handler.
+- [init(image:handler:)](cpnowplayingimagebutton/init%28image_handler_%29.md): Creates a button with the specified image and handler.
 
 # CPNowPlayingButtonMaximumImageSize (Objective-C)
 
@@ -27,7 +33,7 @@ let CPNowPlayingButtonMaximumImageSize: CGSize
 **Kind:** Global Variable  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-The maximum size CarPlay supports for a button’s image.
+The dimensions for images in custom buttons.
 
 ## Declaration
 
@@ -35,8 +41,14 @@ The maximum size CarPlay supports for a button’s image.
 extern const CGSize CPNowPlayingButtonMaximumImageSize;
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+This constant specifies the expected dimensions for images you use with a [CPNowPlayingImageButton](cpnowplayingimagebutton.md) object. The image dimensions are in points. To get the image dimensions in pixels, multiple the width and height values by the current display scale from the vehicle’s trait collection. You can get the current traits from the [carTraitCollection](cpinterfacecontroller/cartraitcollection.md) property of your interface controller.
+
 ## See Also
 
-### Creating a Button
+### Creating the button
 
-- [initWithImage:handler:](cpnowplayingimagebutton/init%28image_handler_%29.md): Creates a Now Playing button that displays a custom image and invokes a handler.
+- [initWithImage:handler:](cpnowplayingimagebutton/init%28image_handler_%29.md): Creates a button with the specified image and handler.

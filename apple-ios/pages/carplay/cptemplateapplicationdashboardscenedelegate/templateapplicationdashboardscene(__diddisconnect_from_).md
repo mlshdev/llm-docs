@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptemplateapplicationdashboardscenedelegate/templateapplicationdashboardscene(_:diddisconnect:from:)
 
 # templateApplicationDashboardScene(\_:didDisconnect:from:) (Swift)
@@ -29,7 +29,7 @@ CarPlay calls this method after it disconnects your dashboard scene. You can use
 
 ## See Also
 
-### Responding to the Scene Life Cycle
+### Responding to the dashboard scene life cycle
 
 - [templateApplicationDashboardScene(\_:didConnect:to:)](templateapplicationdashboardscene%28__didconnect_to_%29.md): Tells the delegate about the addition of a CarPlay Dashboard scene to your navigation app.
 
@@ -61,6 +61,6 @@ CarPlay calls this method after it disconnects your dashboard scene. You can use
 
 ## See Also
 
-### Responding to the Scene Life Cycle
+### Responding to the dashboard scene life cycle
 
 - [templateApplicationDashboardScene:didConnectDashboardController:toWindow:](templateapplicationdashboardscene%28__didconnect_to_%29.md): Tells the delegate about the addition of a CarPlay Dashboard scene to your navigation app.

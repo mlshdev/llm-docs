@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessorytransportextension
 
 # Accessory Transport Extension
@@ -89,7 +89,3 @@ Your app defines the purpose of the exchanged data and its format; the system ca
 - [Sending data to an accessory in the background](accessorytransportextension/sending-data-to-an-accessory-in-the-background.md): Move data between your accessory and your app when a person’s device is asleep or your app is in the background.
 - [AccessoryWorker](accessorytransportextension/accessoryworker.md): Beta. A feature that carries data between your data provider and transport extensions.
 - [AccessoryGPUWorker](accessorytransportextension/accessorygpuworker.md): Beta. A feature for GPU work that carries data between your data provider and transport extensions.
-
-### Protocols
-
-- [AccessoryFeatureAuthorizing](accessorytransportextension/accessoryfeatureauthorizing.md): Beta. A feature that is authorized separately on each accessory.

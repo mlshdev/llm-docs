@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingsportsclock/countsup
 
 # countsUp (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+
 
-If true, the timer is counting UP, so as to indicate an amount of time elapsed so far in this event.
+A Boolean value that indicates whether the event clock counts up.
 
 ## Declaration
 
@@ -19,7 +19,14 @@ var countsUp: Bool { get }
 
 ## Discussion
 
-If false, the timer is counting DOWN, so as to indicate an amount of time remaining in the event, or a play period of the event (quarter/inning/period).
+When the value of this property is `true`, the clock counts up from [timeValue](timevalue.md) to show the elapsed time of the match or current period. When the value of this property is `false`, the clock counts down from the initial time to show the time remaining in the sports event or in the current period. The clock starts counting from the value you provide at initialization time. If the clock counts down, CarPlay automatically stops the countdown when the number of seconds reaches `0`. CarPlay doesn’t stop a clock that counts upward.
+
+## See Also
+
+### Getting the clock attributes
+
+- [timeValue](timevalue.md): The time value you specify at initialization.
+- [isPaused](ispaused.md): A Boolean value that indicates whether the clock is paused.
 
 # countsUp (Objective-C)
 
@@ -27,7 +34,7 @@ If false, the timer is counting DOWN, so as to indicate an amount of time remain
 **Kind:** Instance Property  
 **Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+
 
-If true, the timer is counting UP, so as to indicate an amount of time elapsed so far in this event.
+A Boolean value that indicates whether the event clock counts up.
 
 ## Declaration
 
@@ -39,4 +46,11 @@ If true, the timer is counting UP, so as to indicate an amount of time elapsed s
 
 ## Discussion
 
-If false, the timer is counting DOWN, so as to indicate an amount of time remaining in the event, or a play period of the event (quarter/inning/period).
+When the value of this property is `true`, the clock counts up from [timeValue](timevalue.md) to show the elapsed time of the match or current period. When the value of this property is `false`, the clock counts down from the initial time to show the time remaining in the sports event or in the current period. The clock starts counting from the value you provide at initialization time. If the clock counts down, CarPlay automatically stops the countdown when the number of seconds reaches `0`. CarPlay doesn’t stop a clock that counts upward.
+
+## See Also
+
+### Getting the clock attributes
+
+- [timeValue](timevalue.md): The time value you specify at initialization.
+- [paused](ispaused.md): A Boolean value that indicates whether the clock is paused.

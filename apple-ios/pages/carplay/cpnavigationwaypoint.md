@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationwaypoint
 
 # CPNavigationWaypoint (Swift)
@@ -17,23 +17,29 @@ class CPNavigationWaypoint
 
 ## Topics
 
-### Initializers
+### Creating a trip
 
 - [init(centerPoint:locationThreshold:name:address:entryPoints:timeZone:)](cpnavigationwaypoint/init%28centerpoint_locationthreshold_name_address_entrypoints_timezone_%29.md)
 - [init(centerPoint:locationThreshold:nameVariants:addressVariants:entryPoints:timeZone:)](cpnavigationwaypoint/init%28centerpoint_locationthreshold_namevariants_addressvariants_entrypoints_timezone_%29.md)
-- [init(coder:)](cpnavigationwaypoint/init%28coder_%29.md)
 - [init(mapItem:locationThreshold:entryPoints:)](cpnavigationwaypoint/init%28mapitem_locationthreshold_entrypoints_%29.md)
+- [init(coder:)](cpnavigationwaypoint/init%28coder_%29.md)
 
-### Instance Properties
+### Getting the route information
 
-- [address](cpnavigationwaypoint/address.md): Deprecated. address is an optional address string for the waypoint, formatted with newline characters separating each address component. Example: “Apple Inc.\\n1 Apple Park Way\\nCupertino, CA 95014\\nUnited States”
 - [addressVariants](cpnavigationwaypoint/addressvariants.md): addressVariants is an array of @c NSString representing variants of the waypoint’s address, arranged from most to least preferred. The variant strings should be provided as localized, displayable content.
+- [nameVariants](cpnavigationwaypoint/namevariants.md): nameVariants is an array of @c NSString representing variants of the waypoint’s display name, arranged from most to least preferred. The variant strings should be provided as localized, displayable content.
+
+### Getting the waypoint location
+
 - [centerPoint](cpnavigationwaypoint/centerpoint.md): centerPoint is a CPLocationCoordinate3D representing the primary coordinate location of the waypoint.
 - [entryPoints](cpnavigationwaypoint/entrypoints-obhb.md)
 - [locationThreshold](cpnavigationwaypoint/locationthreshold.md): locationThreshold is the maximum distance in meters from the centerPoint used to determine if a destination is valid.
-- [name](cpnavigationwaypoint/name.md): Deprecated. name is an optional display name for the waypoint.
-- [nameVariants](cpnavigationwaypoint/namevariants.md): nameVariants is an array of @c NSString representing variants of the waypoint’s display name, arranged from most to least preferred. The variant strings should be provided as localized, displayable content.
 - [timeZone](cpnavigationwaypoint/timezone.md): The timezone for the waypoint.
+
+### Deprecated
+
+- [name](cpnavigationwaypoint/name.md): Deprecated. name is an optional display name for the waypoint.
+- [address](cpnavigationwaypoint/address.md): Deprecated. address is an optional address string for the waypoint, formatted with newline characters separating each address component. Example: “Apple Inc.\\n1 Apple Park Way\\nCupertino, CA 95014\\nUnited States”
 
 ## Relationships
 
@@ -54,6 +60,14 @@ class CPNavigationWaypoint
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
+## See Also
+
+### Trip and waypoints
+
+- [CPTrip](cptrip.md): An object that represents a journey between an origin and a destination.
+- [CPMapTemplateWaypoint](cpmaptemplatewaypoint.md): CPMapTemplateWaypoint represents a waypoint with associated travel estimates
+- [CPMultiStopCardConfiguration](cpmultistopcardconfiguration.md)
+
 # CPNavigationWaypoint (Objective-C)
 
 **Framework:** CarPlay  
@@ -70,17 +84,26 @@ CPNavigationWaypoint represents a point of interest along a route that provides 
 
 ## Topics
 
+### Getting the route information
+
+- [addressVariants](cpnavigationwaypoint/addressvariants.md): addressVariants is an array of @c NSString representing variants of the waypoint’s address, arranged from most to least preferred. The variant strings should be provided as localized, displayable content.
+- [nameVariants](cpnavigationwaypoint/namevariants.md): nameVariants is an array of @c NSString representing variants of the waypoint’s display name, arranged from most to least preferred. The variant strings should be provided as localized, displayable content.
+
+### Getting the waypoint location
+
+- [centerPoint](cpnavigationwaypoint/centerpoint.md): centerPoint is a CPLocationCoordinate3D representing the primary coordinate location of the waypoint.
+- [locationThreshold](cpnavigationwaypoint/locationthreshold.md): locationThreshold is the maximum distance in meters from the centerPoint used to determine if a destination is valid.
+- [timeZone](cpnavigationwaypoint/timezone.md): The timezone for the waypoint.
+
+### Deprecated
+
+- [name](cpnavigationwaypoint/name.md): Deprecated. name is an optional display name for the waypoint.
+- [address](cpnavigationwaypoint/address.md): Deprecated. address is an optional address string for the waypoint, formatted with newline characters separating each address component. Example: “Apple Inc.\\n1 Apple Park Way\\nCupertino, CA 95014\\nUnited States”
+
 ### Instance Properties
 
-- [address](cpnavigationwaypoint/address.md): Deprecated. address is an optional address string for the waypoint, formatted with newline characters separating each address component. Example: “Apple Inc.\\n1 Apple Park Way\\nCupertino, CA 95014\\nUnited States”
-- [addressVariants](cpnavigationwaypoint/addressvariants.md): addressVariants is an array of @c NSString representing variants of the waypoint’s address, arranged from most to least preferred. The variant strings should be provided as localized, displayable content.
-- [centerPoint](cpnavigationwaypoint/centerpoint.md): centerPoint is a CPLocationCoordinate3D representing the primary coordinate location of the waypoint.
 - [entryPoints](cpnavigationwaypoint/entrypoints-6kbqa.md): entryPoints is an optional array of CPLocationCoordinate3D entry points. These represent alternative access points to reach the waypoint.
 - [entryPointsCount](cpnavigationwaypoint/entrypointscount.md): entryPointsCount is the number of entry points available in the entryPoints array.
-- [locationThreshold](cpnavigationwaypoint/locationthreshold.md): locationThreshold is the maximum distance in meters from the centerPoint used to determine if a destination is valid.
-- [name](cpnavigationwaypoint/name.md): Deprecated. name is an optional display name for the waypoint.
-- [nameVariants](cpnavigationwaypoint/namevariants.md): nameVariants is an array of @c NSString representing variants of the waypoint’s display name, arranged from most to least preferred. The variant strings should be provided as localized, displayable content.
-- [timeZone](cpnavigationwaypoint/timezone.md): The timezone for the waypoint.
 
 ### Instance Methods
 
@@ -97,3 +120,11 @@ CPNavigationWaypoint represents a point of interest along a route that provides 
 ### Conforms To
 
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
+
+## See Also
+
+### Trip and waypoints
+
+- [CPTrip](cptrip.md): An object that represents a journey between an origin and a destination.
+- [CPMapTemplateWaypoint](cpmaptemplatewaypoint.md): CPMapTemplateWaypoint represents a waypoint with associated travel estimates
+- [CPMultiStopCardConfiguration](cpmultistopcardconfiguration.md)

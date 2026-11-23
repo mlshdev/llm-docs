@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpgridbutton/titlevariants
 
 # titleVariants (Swift)
@@ -23,9 +23,11 @@ When the system displays the button, it selects the title that best fits the ava
 
 ## See Also
 
-### Obtaining Grid Button Information
+### Managing the button content
 
 - [image](image.md): The image displayed on the button.
+- [updateImage(\_:)](updateimage%28__%29.md)
+- [updateTitleVariants(\_:)](updatetitlevariants%28__%29.md)
 
 # titleVariants (Objective-C)
 
@@ -49,6 +51,8 @@ When the system displays the button, it selects the title that best fits the ava
 
 ## See Also
 
-### Obtaining Grid Button Information
+### Managing the button content
 
 - [image](image.md): The image displayed on the button.
+- [updateImage:](updateimage%28__%29.md)
+- [updateTitleVariants:](updatetitlevariants%28__%29.md)

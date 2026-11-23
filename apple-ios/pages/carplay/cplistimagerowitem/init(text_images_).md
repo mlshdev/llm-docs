@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistimagerowitem/init(text:images:)
 
 # init(text:images:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Initializer  
 **Availability:** iOS 14.0+ (deprecated in 26.0) · iPadOS 14.0+ (deprecated in 26.0) · Mac Catalyst 14.0+ (deprecated in 26.0)
 
-Creates a list item that displays a row of images.
+Initialize a list image row item with a text string and an array of @c UIImage for the grid of images.
 
 > Use initWithText:elements:allowsMultipleLines:
 
@@ -17,26 +17,29 @@ Creates a list item that displays a row of images.
 init(text: String, images: [UIImage])
 ```
 
-## Parameters
-
-- `text`: The list item’s primary text.
-- `images`: An array of images to display in the list item’s image row.
-
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Provide images that are display-ready. If necessary, provide light and dark variants of each image using an asset catalog, or use instances of [UIImageAsset](https://developer.apple.com/documentation/uikit/uiimageasset) and register an image for each interface style.
+When providing an image, your app should provide a @c UIImage that is display-ready. If necessary for the image, provide light and dark styles by using an asset from your asset catalog, prepared with light and dark styles or by using @c UIImageAsset to combine two @c UIImage instances into a single image with both styles.
 
-To properly size your images, use the display scale of the vehicle’s primary screen, which you access from your interface controller’s [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md) property. At runtime, use [maximumImageSize](maximumimagesize.md) to determine the maximum size that CarPlay allows for an image, and [CPMaximumNumberOfGridImages](../cpmaximumnumberofgridimages.md) to establish the total number of images that an image row can display. The list item may display fewer images, depending on the width of the vehicle’s primary screen.
+UIImageAsset is used to combine multiple UIImages with different trait collections into a single UIImage.
 
-CarPlay doesn’t support animated images. If you provide animated images, CarPlay uses only the first image in each animation sequence.
+> **Note**
+
+> The expected image size is given by +\[CPListImageRowItem maximumImageSize\]. Images provided will be resized to this size if necessary.
+
+To properly size your images, your app should size them to the display scale of the car screen. See -\[CPInterfaceController carTraitCollection\].
 
 ## See Also
 
-### Creating a List Image Row Item
+### Deprecated
 
-- [init(text:images:imageTitles:)](init%28text_images_imagetitles_%29.md): Deprecated. Creates a list item that displays a row of images with a title below each image.
+- [init(text:images:imageTitles:)](init%28text_images_imagetitles_%29.md): Deprecated. Initialize a list image row item with a text string, an array of @c UIImage for the grid of images, and an array of @c NSString titles, one displayed below each image.
+- [gridImages](gridimages.md): Deprecated. Read-only access to the grid images shown in a row in the cell.
+- [imageTitles](imagetitles.md): Deprecated. The titles displayed for each image in this image row item.
+- [maximumImageSize](maximumimagesize.md): Deprecated. The expected image size for the grid images in your @c CPListImageRowItem. Images provided will be resized to this size.
+- [update(\_:)](update%28__%29.md): Deprecated. Update the images displayed in this image row item. If this image row item is already displayed in a list template, this image row item will be automatically reloaded.
 
 # initWithText:images: (Objective-C)
 
@@ -44,7 +47,7 @@ CarPlay doesn’t support animated images. If you provide animated images, CarPl
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ (deprecated in 26.0) · iPadOS 14.0+ (deprecated in 26.0) · Mac Catalyst 14.0+ (deprecated in 26.0)
 
-Creates a list item that displays a row of images.
+Initialize a list image row item with a text string and an array of @c UIImage for the grid of images.
 
 > Use initWithText:elements:allowsMultipleLines:
 
@@ -54,23 +57,26 @@ Creates a list item that displays a row of images.
 - (instancetype) initWithText:(NSString *) text images:(NSArray<UIImage *> *) images;
 ```
 
-## Parameters
-
-- `text`: The list item’s primary text.
-- `images`: An array of images to display in the list item’s image row.
-
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Provide images that are display-ready. If necessary, provide light and dark variants of each image using an asset catalog, or use instances of [UIImageAsset](https://developer.apple.com/documentation/uikit/uiimageasset) and register an image for each interface style.
+When providing an image, your app should provide a @c UIImage that is display-ready. If necessary for the image, provide light and dark styles by using an asset from your asset catalog, prepared with light and dark styles or by using @c UIImageAsset to combine two @c UIImage instances into a single image with both styles.
 
-To properly size your images, use the display scale of the vehicle’s primary screen, which you access from your interface controller’s [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md) property. At runtime, use [maximumImageSize](maximumimagesize.md) to determine the maximum size that CarPlay allows for an image, and [CPMaximumNumberOfGridImages](../cpmaximumnumberofgridimages.md) to establish the total number of images that an image row can display. The list item may display fewer images, depending on the width of the vehicle’s primary screen.
+UIImageAsset is used to combine multiple UIImages with different trait collections into a single UIImage.
 
-CarPlay doesn’t support animated images. If you provide animated images, CarPlay uses only the first image in each animation sequence.
+> **Note**
+
+> The expected image size is given by +\[CPListImageRowItem maximumImageSize\]. Images provided will be resized to this size if necessary.
+
+To properly size your images, your app should size them to the display scale of the car screen. See -\[CPInterfaceController carTraitCollection\].
 
 ## See Also
 
-### Creating a List Image Row Item
+### Deprecated
 
-- [initWithText:images:imageTitles:](init%28text_images_imagetitles_%29.md): Deprecated. Creates a list item that displays a row of images with a title below each image.
+- [initWithText:images:imageTitles:](init%28text_images_imagetitles_%29.md): Deprecated. Initialize a list image row item with a text string, an array of @c UIImage for the grid of images, and an array of @c NSString titles, one displayed below each image.
+- [gridImages](gridimages.md): Deprecated. Read-only access to the grid images shown in a row in the cell.
+- [imageTitles](imagetitles.md): Deprecated. The titles displayed for each image in this image row item.
+- [maximumImageSize](maximumimagesize.md): Deprecated. The expected image size for the grid images in your @c CPListImageRowItem. Images provided will be resized to this size.
+- [updateImages:](update%28__%29.md): Deprecated. Update the images displayed in this image row item. If this image row item is already displayed in a list template, this image row item will be automatically reloaded.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes/tn3214-validating-the-fonts-you-ship-in-your-app
 
 # TN3214: Validating the fonts you ship in your app
@@ -199,7 +199,7 @@ To fix this, re-save the font as an ordinary data-fork `.ttf` or `.otf` file.
 
 ### -103 and -104: The app redistributes a font Apple designs or licenses
 
-Your app can’t redistribute fonts Apple designs, such as the San Francisco and New York families, or fonts Apple licenses from a third party. They’re already present on the device or available for download. Remove the bundled copies and access these fonts directly through the system font APIs. For more information, see [Fonts](https://developer.apple.com/documentation/technologyoverviews/fonts) in the Technology Overviews.
+Your app can’t redistribute fonts Apple designs, such as the San Francisco and New York families, or fonts Apple licenses from a third party. They’re already present on the device or available for download. Remove the bundled copies and access these fonts directly through the system font APIs. For more information, see [Fonts](https://developer.apple.com/documentation/technologyoverviews/managing-the-fonts-for-your-app) in the Technology Overviews.
 
 `FontValidator` identifies a font Apple designs or fonts licensed to Apple by content markers in the file. Sharing a name with one of these fonts, such as your own build of a face you licensed independently, doesn’t trigger this error.
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptemplateapplicationdashboardscenedelegate
 
 # CPTemplateApplicationDashboardSceneDelegate (Swift)
@@ -40,7 +40,7 @@ You don’t create instances of your dashboard scene delegate directly. Instead,
 
 ## Topics
 
-### Responding to the Scene Life Cycle
+### Responding to the dashboard scene life cycle
 
 - [templateApplicationDashboardScene(\_:didConnect:to:)](cptemplateapplicationdashboardscenedelegate/templateapplicationdashboardscene%28__didconnect_to_%29.md): Tells the delegate about the addition of a CarPlay Dashboard scene to your navigation app.
 - [templateApplicationDashboardScene(\_:didDisconnect:from:)](cptemplateapplicationdashboardscenedelegate/templateapplicationdashboardscene%28__diddisconnect_from_%29.md): Tells the delegate when CarPlay removes the dashboard scene from your navigation app.
@@ -54,13 +54,12 @@ You don’t create instances of your dashboard scene delegate directly. Instead,
 
 ## See Also
 
-### Navigation
+### Dashboard display
 
-- [Integrating CarPlay with Your Navigation App](integrating-carplay-with-your-navigation-app.md): Configure your navigation app to work with CarPlay by displaying your custom map and directions.
+- [CPDashboardController](cpdashboardcontroller.md): A controller that provides shortcut buttons for the CarPlay Dashboard.
+- [CPDashboardButton](cpdashboardbutton.md): A shortcut button for placement on the CarPlay Dashboard.
 - [CPTemplateApplicationDashboardScene](cptemplateapplicationdashboardscene.md): A CarPlay scene that controls your app’s dashboard navigation window.
-- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
-- [CPSearchTemplate](cpsearchtemplate.md): A template that provides the ability to search for a destination and see a list of search results.
-- [CPVoiceControlTemplate](cpvoicecontroltemplate.md): A template that displays a voice control indicator during audio input.
+- [CPSupportsDashboardNavigationScene](https://developer.apple.com/documentation/bundleresources/information-property-list/uiapplicationscenemanifest/cpsupportsdashboardnavigationscene): A Boolean value that indicates whether your app supports displaying navigation content in the CarPlay Dashboard.
 
 # CPTemplateApplicationDashboardSceneDelegate (Objective-C)
 
@@ -101,7 +100,7 @@ You don’t create instances of your dashboard scene delegate directly. Instead,
 
 ## Topics
 
-### Responding to the Scene Life Cycle
+### Responding to the dashboard scene life cycle
 
 - [templateApplicationDashboardScene:didConnectDashboardController:toWindow:](cptemplateapplicationdashboardscenedelegate/templateapplicationdashboardscene%28__didconnect_to_%29.md): Tells the delegate about the addition of a CarPlay Dashboard scene to your navigation app.
 - [templateApplicationDashboardScene:didDisconnectDashboardController:fromWindow:](cptemplateapplicationdashboardscenedelegate/templateapplicationdashboardscene%28__diddisconnect_from_%29.md): Tells the delegate when CarPlay removes the dashboard scene from your navigation app.
@@ -114,10 +113,9 @@ You don’t create instances of your dashboard scene delegate directly. Instead,
 
 ## See Also
 
-### Navigation
+### Dashboard display
 
-- [Integrating CarPlay with Your Navigation App](integrating-carplay-with-your-navigation-app.md): Configure your navigation app to work with CarPlay by displaying your custom map and directions.
+- [CPDashboardController](cpdashboardcontroller.md): A controller that provides shortcut buttons for the CarPlay Dashboard.
+- [CPDashboardButton](cpdashboardbutton.md): A shortcut button for placement on the CarPlay Dashboard.
 - [CPTemplateApplicationDashboardScene](cptemplateapplicationdashboardscene.md): A CarPlay scene that controls your app’s dashboard navigation window.
-- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
-- [CPSearchTemplate](cpsearchtemplate.md): A template that provides the ability to search for a destination and see a list of search results.
-- [CPVoiceControlTemplate](cpvoicecontroltemplate.md): A template that displays a voice control indicator during audio input.
+- [CPSupportsDashboardNavigationScene](https://developer.apple.com/documentation/bundleresources/information-property-list/uiapplicationscenemanifest/cpsupportsdashboardnavigationscene): A Boolean value that indicates whether your app supports displaying navigation content in the CarPlay Dashboard.

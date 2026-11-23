@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplisttemplate/maximumgridbuttonimagesize
 
 # maximumGridButtonImageSize (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Type Property  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
 
-The expected image size for your @c CPGridButton.
+The expected image size for any grid buttons you add to the header.
 
 ## Declaration
 
@@ -19,7 +19,15 @@ class var maximumGridButtonImageSize: CGSize { get }
 
 ## Discussion
 
-To properly size your list images, your app should size them to the display scale of the car screen. See -\[CPInterfaceController carTraitCollection\].
+This property specifies the size of the image in points. The trait collection in your [CPInterfaceController](../cpinterfacecontroller.md) provides the scale factor to apply to this size to get the image’s dimensions in pixels.
+
+## See Also
+
+### Getting the configuration limits
+
+- [maximumSectionCount](maximumsectioncount.md): The maximum number of sections the template can display.
+- [maximumItemCount](maximumitemcount.md): The maximum number of items, across all sections, that the template can display.
+- [maximumHeaderGridButtonCount](maximumheadergridbuttoncount.md): The maximum number of grid buttons you can display in the header.
 
 # maximumGridButtonImageSize (Objective-C)
 
@@ -27,7 +35,7 @@ To properly size your list images, your app should size them to the display scal
 **Kind:** Type Property  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
 
-The expected image size for your @c CPGridButton.
+The expected image size for any grid buttons you add to the header.
 
 ## Declaration
 
@@ -39,4 +47,12 @@ The expected image size for your @c CPGridButton.
 
 ## Discussion
 
-To properly size your list images, your app should size them to the display scale of the car screen. See -\[CPInterfaceController carTraitCollection\].
+This property specifies the size of the image in points. The trait collection in your [CPInterfaceController](../cpinterfacecontroller.md) provides the scale factor to apply to this size to get the image’s dimensions in pixels.
+
+## See Also
+
+### Getting the configuration limits
+
+- [maximumSectionCount](maximumsectioncount.md): The maximum number of sections the template can display.
+- [maximumItemCount](maximumitemcount.md): The maximum number of items, across all sections, that the template can display.
+- [maximumHeaderGridButtonCount](maximumheadergridbuttoncount.md): The maximum number of grid buttons you can display in the header.

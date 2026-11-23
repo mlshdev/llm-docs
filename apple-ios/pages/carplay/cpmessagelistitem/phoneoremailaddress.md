@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessagelistitem/phoneoremailaddress
 
 # phoneOrEmailAddress (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The contact’s phone number or email address.
+The phone or email address of the contact.
 
 ## Declaration
 
@@ -15,17 +15,17 @@ The contact’s phone number or email address.
 var phoneOrEmailAddress: String? { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-When the user selects the list item, Siri launches the message compose flow and uses this property’s value as the recipient’s contact information.
+This property represents the primary way to communicate with the contact. CarPlay passes this string to your SiriKit intents during message flows, but doesn’t use it otherwise. If you initialized the message list item with a conversation identifier, the value of this property is `nil`.
 
 ## See Also
 
-### Managing the Message Context
+### Getting the message context
 
-- [conversationIdentifier](conversationidentifier.md): The conversation’s unique identifier.
+- [conversationIdentifier](conversationidentifier.md): The app-specific identifier for the message conversation.
 
 # phoneOrEmailAddress (Objective-C)
 
@@ -33,7 +33,7 @@ When the user selects the list item, Siri launches the message compose flow and 
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The contact’s phone number or email address.
+The phone or email address of the contact.
 
 ## Declaration
 
@@ -41,14 +41,14 @@ The contact’s phone number or email address.
 @property (nonatomic, copy, nullable) NSString * phoneOrEmailAddress;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-When the user selects the list item, Siri launches the message compose flow and uses this property’s value as the recipient’s contact information.
+This property represents the primary way to communicate with the contact. CarPlay passes this string to your SiriKit intents during message flows, but doesn’t use it otherwise. If you initialized the message list item with a conversation identifier, the value of this property is `nil`.
 
 ## See Also
 
-### Managing the Message Context
+### Getting the message context
 
-- [conversationIdentifier](conversationidentifier.md): The conversation’s unique identifier.
+- [conversationIdentifier](conversationidentifier.md): The app-specific identifier for the message conversation.

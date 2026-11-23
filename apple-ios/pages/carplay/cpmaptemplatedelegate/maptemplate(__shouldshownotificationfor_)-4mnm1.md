@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplatedelegate/maptemplate(_:shouldshownotificationfor:)-4mnm1
 
 # mapTemplate(\_:shouldShowNotificationFor:) (Swift)
@@ -28,10 +28,9 @@ optional func mapTemplate(_ mapTemplate: CPMapTemplate, shouldShowNotificationFo
 
 ## See Also
 
-### Displaying Notifications
+### Displaying maneuver-related notifications
 
 - [mapTemplate(\_:shouldUpdateNotificationFor:with:)](maptemplate%28__shouldupdatenotificationfor_with_%29.md): Asks the delegate whether the system should display the maneuver with updated travel estimates as a notification when the app is in the background.
-- [mapTemplate(\_:shouldShowNotificationFor:)](maptemplate%28__shouldshownotificationfor_%29-5lu8a.md): Asks the delegate whether the system should display the navigation alert as a notification when the app is in the background.
 
 # mapTemplate:shouldShowNotificationForManeuver: (Objective-C)
 
@@ -60,7 +59,6 @@ Asks the delegate whether the system should display the maneuver as a notificati
 
 ## See Also
 
-### Displaying Notifications
+### Displaying maneuver-related notifications
 
 - [mapTemplate:shouldUpdateNotificationForManeuver:withTravelEstimates:](maptemplate%28__shouldupdatenotificationfor_with_%29.md): Asks the delegate whether the system should display the maneuver with updated travel estimates as a notification when the app is in the background.
-- [mapTemplate:shouldShowNotificationForNavigationAlert:](maptemplate%28__shouldshownotificationfor_%29-5lu8a.md): Asks the delegate whether the system should display the navigation alert as a notification when the app is in the background.

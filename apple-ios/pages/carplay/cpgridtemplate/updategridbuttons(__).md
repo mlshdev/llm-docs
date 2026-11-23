@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpgridtemplate/updategridbuttons(_:)
 
 # updateGridButtons(\_:) (Swift)
@@ -15,9 +15,9 @@ func updateGridButtons(_ gridButtons: [CPGridButton])
 
 ## See Also
 
-### Instance Methods
+### Getting the grid buttons
 
-- [updateTitle(\_:)](updatetitle%28__%29.md)
+- [gridButtons](gridbuttons.md): The array of grid buttons displayed on the template.
 
 # updateGridButtons: (Objective-C)
 
@@ -33,6 +33,6 @@ func updateGridButtons(_ gridButtons: [CPGridButton])
 
 ## See Also
 
-### Instance Methods
+### Getting the grid buttons
 
-- [updateTitle:](updatetitle%28__%29.md)
+- [gridButtons](gridbuttons.md): The array of grid buttons displayed on the template.

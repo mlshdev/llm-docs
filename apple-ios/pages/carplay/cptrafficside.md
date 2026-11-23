@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptrafficside
 
 # CPTrafficSide (Swift)
@@ -17,14 +17,14 @@ enum CPTrafficSide
 
 ## Topics
 
-### Initializers
-
-- [init(rawValue:)](cptrafficside/init%28rawvalue_%29.md): Creates a traffic side-of-the-road enumeration item with the provided value.
-
-### Lane statuses
+### Getting the traffic side
 
 - [CPTrafficSide.right](cptrafficside/right.md): Indicates the traffic drives on the right side of the roadway.
 - [CPTrafficSide.left](cptrafficside/left.md): Indicates the traffic drives on the left side of the roadway.
+
+### Creating a traffic side
+
+- [init(rawValue:)](cptrafficside/init%28rawvalue_%29.md): Creates a traffic side-of-the-road enumeration item with the provided value.
 
 ## Relationships
 
@@ -39,13 +39,15 @@ enum CPTrafficSide
 
 ## See Also
 
-### Enumerations
+### Lanes and junctions
 
-- [CPInstrumentClusterSetting](cpinstrumentclustersetting.md)
-- [CPJunctionType](cpjunctiontype.md): Values that represent types of roadway junctions.
-- [CPManeuverState](cpmaneuverstate.md): Values that describe the state of a maneuver.
-- [CPManeuverType](cpmaneuvertype.md): Values that describe types of navigation maneuvers.
+- [CPLane](cplane.md): A class that describes characteristics of a lane on a roadway.
+- [CPLaneGuidance](cplaneguidance.md): A class that provides information that describes the number of lanes on a roadway and navigation instruction variants.
 - [CPLaneStatus](cplanestatus.md): Values that describe the status or preferability of a lane.
+- [CPJunctionType](cpjunctiontype.md): Values that represent types of roadway junctions.
+- [NSStringFromCPJunctionType(\_:)](nsstringfromcpjunctiontype%28__%29.md)
+- [NSStringFromCPLaneStatus(\_:)](nsstringfromcplanestatus%28__%29.md)
+- [NSStringFromCPTrafficSide(\_:)](nsstringfromcptrafficside%28__%29.md)
 
 # CPTrafficSide (Objective-C)
 
@@ -63,17 +65,19 @@ enum CPTrafficSide : NSUInteger;
 
 ## Topics
 
-### Lane statuses
+### Getting the traffic side
 
 - [CPTrafficSideRight](cptrafficside/right.md): Indicates the traffic drives on the right side of the roadway.
 - [CPTrafficSideLeft](cptrafficside/left.md): Indicates the traffic drives on the left side of the roadway.
 
 ## See Also
 
-### Enumerations
+### Lanes and junctions
 
-- [CPInstrumentClusterSetting](cpinstrumentclustersetting.md)
-- [CPJunctionType](cpjunctiontype.md): Values that represent types of roadway junctions.
-- [CPManeuverState](cpmaneuverstate.md): Values that describe the state of a maneuver.
-- [CPManeuverType](cpmaneuvertype.md): Values that describe types of navigation maneuvers.
+- [CPLane](cplane.md): A class that describes characteristics of a lane on a roadway.
+- [CPLaneGuidance](cplaneguidance.md): A class that provides information that describes the number of lanes on a roadway and navigation instruction variants.
 - [CPLaneStatus](cplanestatus.md): Values that describe the status or preferability of a lane.
+- [CPJunctionType](cpjunctiontype.md): Values that represent types of roadway junctions.
+- [NSStringFromCPJunctionType](nsstringfromcpjunctiontype%28__%29.md)
+- [NSStringFromCPLaneStatus](nsstringfromcplanestatus%28__%29.md)
+- [NSStringFromCPTrafficSide](nsstringfromcptrafficside%28__%29.md)

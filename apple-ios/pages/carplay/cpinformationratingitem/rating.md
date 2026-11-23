@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinformationratingitem/rating
 
 # rating (Swift)
@@ -23,7 +23,7 @@ This property is an [NSNumber](https://developer.apple.com/documentation/foundat
 
 ## See Also
 
-### Accessing the Item’s Attributes
+### Accessing the item’s attributes
 
 - [maximumRating](maximumrating.md): The maximum rating that the template displays.
 
@@ -49,6 +49,6 @@ This property is an [NSNumber](https://developer.apple.com/documentation/foundat
 
 ## See Also
 
-### Accessing the Item’s Attributes
+### Accessing the item’s attributes
 
 - [maximumRating](maximumrating.md): The maximum rating that the template displays.

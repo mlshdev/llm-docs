@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpsearchtemplate/delegate
 
 # delegate (Swift)
@@ -17,7 +17,7 @@ weak var delegate: (any CPSearchTemplateDelegate)? { get set }
 
 ## See Also
 
-### Providing a Search Template Delegate
+### Managing search behaviors
 
 - [CPSearchTemplateDelegate](../cpsearchtemplatedelegate.md): The interface for an object that serves as the search template’s delegate.
 
@@ -37,6 +37,6 @@ The object that serves as the search template’s delegate.
 
 ## See Also
 
-### Providing a Search Template Delegate
+### Managing search behaviors
 
 - [CPSearchTemplateDelegate](../cpsearchtemplatedelegate.md): The interface for an object that serves as the search template’s delegate.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessagelistitemleadingconfiguration/leadingitem
 
 # leadingItem (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The configuration’s item.
+The standard system symbol to display in the row’s leading region.
 
 ## Declaration
 
@@ -15,17 +15,17 @@ The configuration’s item.
 var leadingItem: CPMessageLeadingItem { get }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Configurations are immutable. To change or remove the item that the message list item’s leading region shows, create a new configuration and update the list item’s [leadingConfiguration](../cpmessagelistitem/leadingconfiguration.md) property.
+Specify this information at initialization time.
 
 ## See Also
 
-### Getting the Leading Item
+### Getting the leading item
 
-- [CPMessageLeadingItem](../cpmessageleadingitem.md): The accessories that a message list item can display in its leading region.
+- [CPMessageLeadingItem](../cpmessageleadingitem.md): Constants that indicate the type of symbol to display at the leading edge of a message list row.
 
 # leadingItem (Objective-C)
 
@@ -33,7 +33,7 @@ Configurations are immutable. To change or remove the item that the message list
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The configuration’s item.
+The standard system symbol to display in the row’s leading region.
 
 ## Declaration
 
@@ -41,14 +41,14 @@ The configuration’s item.
 @property (nonatomic, readonly) CPMessageLeadingItem leadingItem;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Configurations are immutable. To change or remove the item that the message list item’s leading region shows, create a new configuration and update the list item’s [leadingConfiguration](../cpmessagelistitem/leadingconfiguration.md) property.
+Specify this information at initialization time.
 
 ## See Also
 
-### Getting the Leading Item
+### Getting the leading item
 
-- [CPMessageLeadingItem](../cpmessageleadingitem.md): The accessories that a message list item can display in its leading region.
+- [CPMessageLeadingItem](../cpmessageleadingitem.md): Constants that indicate the type of symbol to display at the leading edge of a message list row.

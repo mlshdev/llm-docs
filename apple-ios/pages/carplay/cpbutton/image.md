@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbutton/image
 
 # image (Swift)
@@ -23,6 +23,12 @@ This property returns the custom image you provide at initialization, or a syste
 
 CarPlay doesn’t support animated images. If you provide an animated image, this property returns the first image in the animation sequence.
 
+## See Also
+
+### Getting the button’s content
+
+- [title](title.md): The button’s title.
+
 # image (Objective-C)
 
 **Framework:** CarPlay  
@@ -44,3 +50,9 @@ The button’s image.
 This property returns the custom image you provide at initialization, or a system image when using a concrete subclass like [CPContactCallButton](../cpcontactcallbutton.md).
 
 CarPlay doesn’t support animated images. If you provide an animated image, this property returns the first image in the animation sequence.
+
+## See Also
+
+### Getting the button’s content
+
+- [title](title.md): The button’s title.

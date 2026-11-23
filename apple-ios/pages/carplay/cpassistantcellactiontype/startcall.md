@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpassistantcellactiontype/startcall
 
 # CPAssistantCellActionType.startCall (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Case  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+
 
-Provides an action that uses Siri to prompt the user for a person, group, or business to call.
+An option to call a person, group, or business.
 
 ## Declaration
 
@@ -15,21 +15,17 @@ Provides an action that uses Siri to prompt the user for a person, group, or bus
 case startCall
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
+To respond to this action, make sure your app implements an Intents extension capable of handling the [INStartCallIntent](https://developer.apple.com/documentation/intents/instartcallintent) type. When someone chooses this action, Siri prompts the person to specify the person, group, or business to call. Use the information to locate the appropriate contact details and start a voice call.
+
 > **Note**
 
->  This action is only available in communication apps that include an Intents Extension capable of handling [INStartCallIntent](https://developer.apple.com/documentation/intents/instartcallintent). For more information, see [Creating an Intents App Extension](https://developer.apple.com/documentation/sirikit/creating-an-intents-app-extension).
+> This action is available only to communication apps.
 
-The system provides the user’s response to your app’s Intents Extension. Your app must respond by identifying the requested person, group, or business and start a voice call with them.
-
-## See Also
-
-### Siri Actions
-
-- [CPAssistantCellActionType.playMedia](playmedia.md): Provides an action that uses Siri to prompt the user for media playback.
+For more information about how to implement an Intents extension, see [Creating an Intents App Extension](https://developer.apple.com/documentation/sirikit/creating-an-intents-app-extension).
 
 # CPAssistantCellActionTypeStartCall (Objective-C)
 
@@ -37,7 +33,7 @@ The system provides the user’s response to your app’s Intents Extension. You
 **Kind:** Enumeration Case  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+
 
-Provides an action that uses Siri to prompt the user for a person, group, or business to call.
+An option to call a person, group, or business.
 
 ## Declaration
 
@@ -45,18 +41,14 @@ Provides an action that uses Siri to prompt the user for a person, group, or bus
 CPAssistantCellActionTypeStartCall
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
+To respond to this action, make sure your app implements an Intents extension capable of handling the [INStartCallIntent](https://developer.apple.com/documentation/intents/instartcallintent) type. When someone chooses this action, Siri prompts the person to specify the person, group, or business to call. Use the information to locate the appropriate contact details and start a voice call.
+
 > **Note**
 
->  This action is only available in communication apps that include an Intents Extension capable of handling [INStartCallIntent](https://developer.apple.com/documentation/intents/instartcallintent). For more information, see [Creating an Intents App Extension](https://developer.apple.com/documentation/sirikit/creating-an-intents-app-extension).
+> This action is available only to communication apps.
 
-The system provides the user’s response to your app’s Intents Extension. Your app must respond by identifying the requested person, group, or business and start a voice call with them.
-
-## See Also
-
-### Siri Actions
-
-- [CPAssistantCellActionTypePlayMedia](playmedia.md): Provides an action that uses Siri to prompt the user for media playback.
+For more information about how to implement an Intents extension, see [Creating an Intents App Extension](https://developer.apple.com/documentation/sirikit/creating-an-intents-app-extension).

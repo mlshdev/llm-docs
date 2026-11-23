@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptextbuttonstyle/normal
 
 # CPTextButtonStyle.normal (Swift)
@@ -17,7 +17,7 @@ case normal
 
 ## See Also
 
-### Button Text Styles
+### Getting the text button style
 
 - [CPTextButtonStyle.confirm](confirm.md): A style that indicates the button confirms an action and changes data.
 - [CPTextButtonStyle.cancel](cancel.md): A style that indicates the button cancels an action and doesn’t change data.
@@ -38,7 +38,7 @@ CPTextButtonStyleNormal
 
 ## See Also
 
-### Button Text Styles
+### Getting the text button style
 
 - [CPTextButtonStyleConfirm](confirm.md): A style that indicates the button confirms an action and changes data.
 - [CPTextButtonStyleCancel](cancel.md): A style that indicates the button cancels an action and doesn’t change data.

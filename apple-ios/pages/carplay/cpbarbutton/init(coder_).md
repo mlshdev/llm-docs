@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbarbutton/init(coder:)
 
 # init(coder:)
@@ -7,26 +7,16 @@
 **Kind:** Initializer  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-Creates a button initialized  from data in the specified coder object.
-
 ## Declaration
 
 ```swift
 init?(coder: NSCoder)
 ```
 
-<a id="return-value"></a>
-
-## Return Value
-
-A new button.
-
 ## See Also
 
-### Creating a CarPlay Bar Button
+### Creating a bar button
 
-- [init(type:handler:)](init%28type_handler_%29.md): Deprecated. Creates a bar button with a type and handler.
 - [init(image:handler:)](init%28image_handler_%29.md): Creates a bar button that displays an image.
-- [init(title:handler:)](init%28title_handler_%29.md): Creates a bar button that displays a text label.
-- [CPBarButton.Type](type.md): Types of bar buttons.
+- [init(title:handler:)](init%28title_handler_%29.md): Creates a bar button that displays a text string.
 - [CPBarButtonHandler](../cpbarbuttonhandler.md): A block that CarPlay calls when the user taps a bar button.

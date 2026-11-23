@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptrip
 
 # CPTrip (Swift)
@@ -27,35 +27,34 @@ You provide estimates for each trip using the map template’s [updateEstimates(
 
 ## Topics
 
-### Creating a Trip
+### Creating a trip
 
-- [init(origin:destination:routeChoices:)](cptrip/init%28origin_destination_routechoices_%29.md): Deprecated. Creates a trip with an origin, destination, and route choices.
-- [CPRouteChoice](cproutechoice.md): A possible route for a trip.
+- [init(originWaypoint:destinationWaypoint:routeChoices:)](cptrip/init%28originwaypoint_destinationwaypoint_routechoices_%29.md): Initialize a @c CPTrip with an origin waypoint, destination waypoint, and route choices.
 
-### Getting the Trip’s Origin and Destination
+### Getting the route information
 
-- [origin](cptrip/origin.md): Deprecated. The trip’s origin.
-- [destination](cptrip/destination.md): Deprecated. The trip’s destination.
-
-### Getting Route Choices
-
+- [originWaypoint](cptrip/originwaypoint.md)
+- [destinationWaypoint](cptrip/destinationwaypoint.md)
 - [routeChoices](cptrip/routechoices.md): The list of route choices for the trip.
-- [destinationNameVariants](cptrip/destinationnamevariants.md): Deprecated. An array of strings that represents the names of the destination for this trip, arranged from most to least preferred.
 
-### Providing Additional Information
+### Managing app-specific data
 
 - [userInfo](cptrip/userinfo.md): A custom object associated with the trip.
+
+### Deprecated
+
+- [init(origin:destination:routeChoices:)](cptrip/init%28origin_destination_routechoices_%29.md): Deprecated. Creates a trip with an origin, destination, and route choices.
+- [origin](cptrip/origin.md): Deprecated. The trip’s origin.
+- [destination](cptrip/destination.md): Deprecated. The trip’s destination.
+- [destinationNameVariants](cptrip/destinationnamevariants.md): Deprecated. An array of strings that represents the names of the destination for this trip, arranged from most to least preferred.
 
 ### Initializers
 
 - [init(coder:)](cptrip/init%28coder_%29.md)
-- [init(originWaypoint:destinationWaypoint:routeChoices:)](cptrip/init%28originwaypoint_destinationwaypoint_routechoices_%29.md): Initialize a @c CPTrip with an origin waypoint, destination waypoint, and route choices.
 
 ### Instance Properties
 
-- [destinationWaypoint](cptrip/destinationwaypoint.md)
 - [hasShareableDestination](cptrip/hasshareabledestination.md): Set to @YES to enable sharing of the destination of this trip.
-- [originWaypoint](cptrip/originwaypoint.md)
 - [routeSegmentsAvailableForRegion](cptrip/routesegmentsavailableforregion.md): Set to @NO to disable route sharing for this trip when route sharing is not supported in the current region.
 
 ## Relationships
@@ -77,9 +76,11 @@ You provide estimates for each trip using the map template’s [updateEstimates(
 
 ## See Also
 
-### Getting the Trip
+### Trip and waypoints
 
-- [trip](cpnavigationsession/trip.md): The trip associated with the navigation session.
+- [CPMapTemplateWaypoint](cpmaptemplatewaypoint.md): CPMapTemplateWaypoint represents a waypoint with associated travel estimates
+- [CPNavigationWaypoint](cpnavigationwaypoint.md): CPNavigationWaypoint represents a point of interest along a route that provides location-based information and guidance.
+- [CPMultiStopCardConfiguration](cpmultistopcardconfiguration.md)
 
 # CPTrip (Objective-C)
 
@@ -107,35 +108,31 @@ You provide estimates for each trip using the map template’s [updateTravelEsti
 
 ## Topics
 
-### Creating a Trip
+### Creating a trip
 
-- [initWithOrigin:destination:routeChoices:](cptrip/init%28origin_destination_routechoices_%29.md): Deprecated. Creates a trip with an origin, destination, and route choices.
-- [CPRouteChoice](cproutechoice.md): A possible route for a trip.
+- [initWithOriginWaypoint:destinationWaypoint:routeChoices:](cptrip/init%28originwaypoint_destinationwaypoint_routechoices_%29.md): Initialize a @c CPTrip with an origin waypoint, destination waypoint, and route choices.
 
-### Getting the Trip’s Origin and Destination
+### Getting the route information
 
-- [origin](cptrip/origin.md): Deprecated. The trip’s origin.
-- [destination](cptrip/destination.md): Deprecated. The trip’s destination.
-
-### Getting Route Choices
-
+- [originWaypoint](cptrip/originwaypoint.md)
+- [destinationWaypoint](cptrip/destinationwaypoint.md)
 - [routeChoices](cptrip/routechoices.md): The list of route choices for the trip.
-- [destinationNameVariants](cptrip/destinationnamevariants.md): Deprecated. An array of strings that represents the names of the destination for this trip, arranged from most to least preferred.
 
-### Providing Additional Information
+### Managing app-specific data
 
 - [userInfo](cptrip/userinfo.md): A custom object associated with the trip.
 
+### Deprecated
+
+- [initWithOrigin:destination:routeChoices:](cptrip/init%28origin_destination_routechoices_%29.md): Deprecated. Creates a trip with an origin, destination, and route choices.
+- [origin](cptrip/origin.md): Deprecated. The trip’s origin.
+- [destination](cptrip/destination.md): Deprecated. The trip’s destination.
+- [destinationNameVariants](cptrip/destinationnamevariants.md): Deprecated. An array of strings that represents the names of the destination for this trip, arranged from most to least preferred.
+
 ### Instance Properties
 
-- [destinationWaypoint](cptrip/destinationwaypoint.md)
 - [hasShareableDestination](cptrip/hasshareabledestination.md): Set to @YES to enable sharing of the destination of this trip.
-- [originWaypoint](cptrip/originwaypoint.md)
 - [routeSegmentsAvailableForRegion](cptrip/routesegmentsavailableforregion.md): Set to @NO to disable route sharing for this trip when route sharing is not supported in the current region.
-
-### Instance Methods
-
-- [initWithOriginWaypoint:destinationWaypoint:routeChoices:](cptrip/init%28originwaypoint_destinationwaypoint_routechoices_%29.md): Initialize a @c CPTrip with an origin waypoint, destination waypoint, and route choices.
 
 ## Relationships
 
@@ -149,6 +146,8 @@ You provide estimates for each trip using the map template’s [updateTravelEsti
 
 ## See Also
 
-### Getting the Trip
+### Trip and waypoints
 
-- [trip](cpnavigationsession/trip.md): The trip associated with the navigation session.
+- [CPMapTemplateWaypoint](cpmaptemplatewaypoint.md): CPMapTemplateWaypoint represents a waypoint with associated travel estimates
+- [CPNavigationWaypoint](cpnavigationwaypoint.md): CPNavigationWaypoint represents a point of interest along a route that provides location-based information and guidance.
+- [CPMultiStopCardConfiguration](cpmultistopcardconfiguration.md)

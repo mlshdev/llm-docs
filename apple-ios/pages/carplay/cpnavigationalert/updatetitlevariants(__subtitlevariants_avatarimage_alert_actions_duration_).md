@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationalert/updatetitlevariants(_:subtitlevariants:avatarimage:alert:actions:duration:)
 
 # updateTitleVariants(\_:subtitleVariants:avatarImage:alert:actions:duration:) (Swift)
@@ -34,6 +34,14 @@ When providing an image, your app should provide a @c UIImage that is display-re
 
 UIImageAsset is used to combine multiple UIImages with different trait collections into a single UIImage.
 
+## See Also
+
+### Getting title values
+
+- [titleVariants](titlevariants.md): An array of title strings.
+- [subtitleVariants](subtitlevariants.md): An array of subtitle strings.
+- [updateTitleVariants(\_:subtitleVariants:)](updatetitlevariants%28__subtitlevariants_%29.md): Updates title and subtitle variants.
+
 # updateTitleVariants:subtitleVariants:avatarImage:alertImage:actions:duration: (Objective-C)
 
 **Framework:** CarPlay  
@@ -66,3 +74,11 @@ Updating an alert that has already been dismissed has no effect.
 When providing an image, your app should provide a @c UIImage that is display-ready. If necessary for the image, provide light and dark styles by using an asset from your asset catalog, prepared with light and dark styles or by using @c UIImageAsset to combine two @c UIImage instances into a single image with both styles.
 
 UIImageAsset is used to combine multiple UIImages with different trait collections into a single UIImage.
+
+## See Also
+
+### Getting title values
+
+- [titleVariants](titlevariants.md): An array of title strings.
+- [subtitleVariants](subtitlevariants.md): An array of subtitle strings.
+- [updateTitleVariants:subtitleVariants:](updatetitlevariants%28__subtitlevariants_%29.md): Updates title and subtitle variants.

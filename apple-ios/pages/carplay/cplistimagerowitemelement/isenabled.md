@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistimagerowitemelement/isenabled
 
 # isEnabled (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
 
-A Boolean value indicating whether the list element is enabled.
+A Boolean value that indicates whether the item is enabled.
 
 ## Declaration
 
@@ -19,7 +19,7 @@ var isEnabled: Bool { get set }
 
 ## Discussion
 
-Set the value of this property to @c YES to enable the list element or @c NO to disable it. The default value of this property is @c YES.
+When the value of this property is `true`, CarPlay displays the item normally and allows interactions to occur. When the value of this property is `false`, CarPlay displays the item with a dimmed appearance and doesn’t allow interactions. The default value of this property is `true`.
 
 # enabled (Objective-C)
 
@@ -27,7 +27,7 @@ Set the value of this property to @c YES to enable the list element or @c NO to 
 **Kind:** Instance Property  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
 
-A Boolean value indicating whether the list element is enabled.
+A Boolean value that indicates whether the item is enabled.
 
 ## Declaration
 
@@ -39,4 +39,4 @@ A Boolean value indicating whether the list element is enabled.
 
 ## Discussion
 
-Set the value of this property to @c YES to enable the list element or @c NO to disable it. The default value of this property is @c YES.
+When the value of this property is `true`, CarPlay displays the item normally and allows interactions to occur. When the value of this property is `false`, CarPlay displays the item with a dimmed appearance and doesn’t allow interactions. The default value of this property is `true`.

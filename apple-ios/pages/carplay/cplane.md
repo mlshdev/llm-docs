@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplane
 
 # CPLane (Swift)
@@ -17,14 +17,14 @@ class CPLane
 
 ## Topics
 
-### Properties
+### Getting the lane angles
 
 - [primaryAngle](cplane/primaryangle.md): Deprecated. A value that represents the angle the framework highlights if this lane is preferred or good.
 - [secondaryAngles](cplane/secondaryangles.md): Deprecated. A list of the remaining angles of this lane guidance.
+
+### Getting the lane status
+
 - [status](cplane/status.md): A value that describes the lane’s status.
-
-### Lane status
-
 - [CPLaneStatus](cplanestatus.md): Values that describe the status or preferability of a lane.
 
 ### Initializers
@@ -59,12 +59,15 @@ class CPLane
 
 ## See Also
 
-### Routes, lanes and junctions
+### Lanes and junctions
 
-- [CPRouteInformation](cprouteinformation.md): A class that describes the characteristic elements of a route.
 - [CPLaneGuidance](cplaneguidance.md): A class that provides information that describes the number of lanes on a roadway and navigation instruction variants.
 - [CPLaneStatus](cplanestatus.md): Values that describe the status or preferability of a lane.
 - [CPJunctionType](cpjunctiontype.md): Values that represent types of roadway junctions.
+- [CPTrafficSide](cptrafficside.md): Values that represent which side of the road the traffic drives on.
+- [NSStringFromCPJunctionType(\_:)](nsstringfromcpjunctiontype%28__%29.md)
+- [NSStringFromCPLaneStatus(\_:)](nsstringfromcplanestatus%28__%29.md)
+- [NSStringFromCPTrafficSide(\_:)](nsstringfromcptrafficside%28__%29.md)
 
 # CPLane (Objective-C)
 
@@ -82,14 +85,14 @@ A class that describes characteristics of a lane on a roadway.
 
 ## Topics
 
-### Properties
+### Getting the lane angles
 
 - [primaryAngle](cplane/primaryangle.md): Deprecated. A value that represents the angle the framework highlights if this lane is preferred or good.
 - [secondaryAngles](cplane/secondaryangles.md): Deprecated. A list of the remaining angles of this lane guidance.
+
+### Getting the lane status
+
 - [status](cplane/status.md): A value that describes the lane’s status.
-
-### Lane status
-
 - [CPLaneStatus](cplanestatus.md): Values that describe the status or preferability of a lane.
 
 ### Instance Properties
@@ -116,9 +119,12 @@ A class that describes characteristics of a lane on a roadway.
 
 ## See Also
 
-### Routes, lanes and junctions
+### Lanes and junctions
 
-- [CPRouteInformation](cprouteinformation.md): A class that describes the characteristic elements of a route.
 - [CPLaneGuidance](cplaneguidance.md): A class that provides information that describes the number of lanes on a roadway and navigation instruction variants.
 - [CPLaneStatus](cplanestatus.md): Values that describe the status or preferability of a lane.
 - [CPJunctionType](cpjunctiontype.md): Values that represent types of roadway junctions.
+- [CPTrafficSide](cptrafficside.md): Values that represent which side of the road the traffic drives on.
+- [NSStringFromCPJunctionType](nsstringfromcpjunctiontype%28__%29.md)
+- [NSStringFromCPLaneStatus](nsstringfromcplanestatus%28__%29.md)
+- [NSStringFromCPTrafficSide](nsstringfromcptrafficside%28__%29.md)

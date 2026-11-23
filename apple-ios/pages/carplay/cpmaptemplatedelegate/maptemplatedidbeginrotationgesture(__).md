@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplatedelegate/maptemplatedidbeginrotationgesture(_:)
 
 # mapTemplateDidBeginRotationGesture(\_:) (Swift)
@@ -19,6 +19,13 @@ optional func mapTemplateDidBeginRotationGesture(_ mapTemplate: CPMapTemplate)
 
 - `mapTemplate`: The [CPMapTemplate](../cpmaptemplate.md) the gesture applies to.
 
+## See Also
+
+### Rotating the map
+
+- [mapTemplate(\_:didRotateWithCenter:rotation:velocity:)](maptemplate%28__didrotatewithcenter_rotation_velocity_%29.md): Tells the delegate that a person is rotating the map.
+- [mapTemplate(\_:rotationDidEndWithVelocity:)](maptemplate%28__rotationdidendwithvelocity_%29.md): Tells the delegate that a person stopped rotating the map.
+
 # mapTemplateDidBeginRotationGesture: (Objective-C)
 
 **Framework:** CarPlay  
@@ -36,3 +43,10 @@ Tells the delegate that the rotation gesture started.
 ## Parameters
 
 - `mapTemplate`: The [CPMapTemplate](../cpmaptemplate.md) the gesture applies to.
+
+## See Also
+
+### Rotating the map
+
+- [mapTemplate:didRotateWithCenter:rotation:velocity:](maptemplate%28__didrotatewithcenter_rotation_velocity_%29.md): Tells the delegate that a person is rotating the map.
+- [mapTemplate:rotationDidEndWithVelocity:](maptemplate%28__rotationdidendwithvelocity_%29.md): Tells the delegate that a person stopped rotating the map.

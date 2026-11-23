@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplimitableuserinterface
 
 # CPLimitableUserInterface (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Structure  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-The types of limitable user interface elements.
+The types of interfaces to which a vehicle can limit access.
 
 ## Declaration
 
@@ -15,16 +15,22 @@ The types of limitable user interface elements.
 struct CPLimitableUserInterface
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+A vehicle might limit access to specific features for safety reasons or to support vehicle constraints. For example, a vehicle might limit access to virtual keyboards when the vehicle is in motion. A [CPSessionConfiguration](cpsessionconfiguration.md) object reports these limitations in its [limitedUserInterfaces](cpsessionconfiguration/limiteduserinterfaces.md) property, which stores a bitmask of the available constants.
+
 ## Topics
 
-### User Interface Limits
+### Getting the user interface limits
 
-- [keyboard](cplimitableuserinterface/keyboard.md): Indicates that the car is limiting the keyboard display.
-- [lists](cplimitableuserinterface/lists.md): Indicates that the car is limiting the display of lists.
+- [keyboard](cplimitableuserinterface/keyboard.md): A type that indicates the vehicle limits the display of virtual keyboards.
+- [lists](cplimitableuserinterface/lists.md): A type that indicates the vehicle limits the number of items you can display in lists.
 
-### Initializers
+### Creating a limit value
 
-- [init(rawValue:)](cplimitableuserinterface/init%28rawvalue_%29.md): Initializes a limitable user interface element using the specified raw value.
+- [init(rawValue:)](cplimitableuserinterface/init%28rawvalue_%29.md)
 
 ## Relationships
 
@@ -41,9 +47,12 @@ struct CPLimitableUserInterface
 
 ## See Also
 
-### Getting the Limits
+### Getting the configuration details
 
-- [limitedUserInterfaces](cpsessionconfiguration/limiteduserinterfaces.md): A bit mask value that indicates the user interface limits.
+- [contentStyle](cpsessionconfiguration/contentstyle.md): The preferred interface style for your app’s content.
+- [limitedUserInterfaces](cpsessionconfiguration/limiteduserinterfaces.md): A bitmask of the interface restrictions that currently apply to your app.
+- [supportsVideoPlayback](cpsessionconfiguration/supportsvideoplayback.md): A Boolean value that indicates whether CarPlay supports playing video content.
+- [CPContentStyle](cpcontentstyle.md): The types of content style that the vehicle allows.
 
 # CPLimitableUserInterface (Objective-C)
 
@@ -51,7 +60,7 @@ struct CPLimitableUserInterface
 **Kind:** Enumeration  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-The types of limitable user interface elements.
+The types of interfaces to which a vehicle can limit access.
 
 ## Declaration
 
@@ -59,15 +68,24 @@ The types of limitable user interface elements.
 enum CPLimitableUserInterface : NSUInteger;
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+A vehicle might limit access to specific features for safety reasons or to support vehicle constraints. For example, a vehicle might limit access to virtual keyboards when the vehicle is in motion. A [CPSessionConfiguration](cpsessionconfiguration.md) object reports these limitations in its [limitedUserInterfaces](cpsessionconfiguration/limiteduserinterfaces.md) property, which stores a bitmask of the available constants.
+
 ## Topics
 
-### User Interface Limits
+### Getting the user interface limits
 
-- [CPLimitableUserInterfaceKeyboard](cplimitableuserinterface/keyboard.md): Indicates that the car is limiting the keyboard display.
-- [CPLimitableUserInterfaceLists](cplimitableuserinterface/lists.md): Indicates that the car is limiting the display of lists.
+- [CPLimitableUserInterfaceKeyboard](cplimitableuserinterface/keyboard.md): A type that indicates the vehicle limits the display of virtual keyboards.
+- [CPLimitableUserInterfaceLists](cplimitableuserinterface/lists.md): A type that indicates the vehicle limits the number of items you can display in lists.
 
 ## See Also
 
-### Getting the Limits
+### Getting the configuration details
 
-- [limitedUserInterfaces](cpsessionconfiguration/limiteduserinterfaces.md): A bit mask value that indicates the user interface limits.
+- [contentStyle](cpsessionconfiguration/contentstyle.md): The preferred interface style for your app’s content.
+- [limitedUserInterfaces](cpsessionconfiguration/limiteduserinterfaces.md): A bitmask of the interface restrictions that currently apply to your app.
+- [supportsVideoPlayback](cpsessionconfiguration/supportsvideoplayback.md): A Boolean value that indicates whether CarPlay supports playing video content.
+- [CPContentStyle](cpcontentstyle.md): The types of content style that the vehicle allows.

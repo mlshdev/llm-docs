@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationsession/upcomingmaneuvers
 
 # upcomingManeuvers (Swift)
@@ -23,7 +23,7 @@ The system displays multiple maneuvers at the same time. However, the system may
 
 ## See Also
 
-### Managing Upcoming Maneuvers
+### Managing upcoming maneuvers
 
 - [maneuverState](maneuverstate.md): The current maneuver state.
 - [currentRoadNameVariants](currentroadnamevariants.md): An array of strings that describe variants of the current road name.
@@ -54,7 +54,7 @@ The system displays multiple maneuvers at the same time. However, the system may
 
 ## See Also
 
-### Managing Upcoming Maneuvers
+### Managing upcoming maneuvers
 
 - [maneuverState](maneuverstate.md): The current maneuver state.
 - [currentRoadNameVariants](currentroadnamevariants.md): An array of strings that describe variants of the current road name.

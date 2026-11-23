@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpgridtemplate
 
 # CPGridTemplate (Swift)
@@ -25,27 +25,20 @@ When there are more than eight buttons in the array, the template displays only 
 
 ## Topics
 
-### Creating a Grid Template
+### Creating a grid template
 
 - [init(title:gridButtons:)](cpgridtemplate/init%28title_gridbuttons_%29.md): Creates a grid template with a title and a set of buttons.
-- [CPGridButton](cpgridbutton.md): A menu item button displayed on a grid template.
+- [maximumGridButtonImageSize](cpgridtemplate/maximumgridbuttonimagesize.md): The expected image size for your @c CPGridButton.
 
-### Getting the Grid Title
+### Getting the grid title
 
 - [title](cpgridtemplate/title.md): The title shown in the grid template’s navigation bar.
-
-### Getting the Grid Buttons
-
-- [gridButtons](cpgridtemplate/gridbuttons.md): The array of grid buttons displayed on the template.
-
-### Instance Methods
-
-- [updateGridButtons(\_:)](cpgridtemplate/updategridbuttons%28__%29.md)
 - [updateTitle(\_:)](cpgridtemplate/updatetitle%28__%29.md)
 
-### Type Properties
+### Getting the grid buttons
 
-- [maximumGridButtonImageSize](cpgridtemplate/maximumgridbuttonimagesize.md): The expected image size for your @c CPGridButton.
+- [gridButtons](cpgridtemplate/gridbuttons.md): The array of grid buttons displayed on the template.
+- [updateGridButtons(\_:)](cpgridtemplate/updategridbuttons%28__%29.md)
 
 ## Relationships
 
@@ -69,12 +62,20 @@ When there are more than eight buttons in the array, the template displays only 
 
 ## See Also
 
-### General Purpose Templates
+### Interface templates
 
-- [CPListTemplate](cplisttemplate.md): A template that displays and manages a list of items.
 - [CPTabBarTemplate](cptabbartemplate.md): A container template that displays and manages other templates, presenting them as tabs.
-- [CPTemplate](cptemplate.md): An abstract base class for interface templates.
-- [CPBarButtonProviding](cpbarbuttonproviding.md): The methods that templates use to provide buttons for the navigation bar.
+- [CPListTemplate](cplisttemplate.md): A template that displays a single-column list of items in one of several visual styles.
+- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPNowPlayingTemplate](cpnowplayingtemplate.md): A shared system template that shows the currently selected audio content and offers controls to manage playback.
+- [CPPointOfInterestTemplate](cppointofinteresttemplate.md): A template that displays a map with selectable points of interest.
+- [CPInformationTemplate](cpinformationtemplate.md): A template that provides information for a point of interest, food order, parking location, or charging location.
+- [CPContactTemplate](cpcontacttemplate.md): A template that displays information about a person or a business.
+- [CPSearchTemplate](cpsearchtemplate.md): A template that provides the ability to search for a destination and see a list of search results.
+- [CPVoiceControlTemplate](cpvoicecontroltemplate.md): A template that displays a voice control indicator during audio input.
+- [CPActionSheetTemplate](cpactionsheettemplate.md): A template that displays a modal action sheet.
+- [CPAlertTemplate](cpalerttemplate.md): A template that displays a modal alert.
+- [All templates and supporting types](all-templates-and-supporting-types.md): Explore the templates you use to build the interface of your CarPlay app.
 
 # CPGridTemplate (Objective-C)
 
@@ -100,27 +101,20 @@ When there are more than eight buttons in the array, the template displays only 
 
 ## Topics
 
-### Creating a Grid Template
+### Creating a grid template
 
 - [initWithTitle:gridButtons:](cpgridtemplate/init%28title_gridbuttons_%29.md): Creates a grid template with a title and a set of buttons.
-- [CPGridButton](cpgridbutton.md): A menu item button displayed on a grid template.
+- [maximumGridButtonImageSize](cpgridtemplate/maximumgridbuttonimagesize.md): The expected image size for your @c CPGridButton.
 
-### Getting the Grid Title
+### Getting the grid title
 
 - [title](cpgridtemplate/title.md): The title shown in the grid template’s navigation bar.
-
-### Getting the Grid Buttons
-
-- [gridButtons](cpgridtemplate/gridbuttons.md): The array of grid buttons displayed on the template.
-
-### Instance Methods
-
-- [updateGridButtons:](cpgridtemplate/updategridbuttons%28__%29.md)
 - [updateTitle:](cpgridtemplate/updatetitle%28__%29.md)
 
-### Type Properties
+### Getting the grid buttons
 
-- [maximumGridButtonImageSize](cpgridtemplate/maximumgridbuttonimagesize.md): The expected image size for your @c CPGridButton.
+- [gridButtons](cpgridtemplate/gridbuttons.md): The array of grid buttons displayed on the template.
+- [updateGridButtons:](cpgridtemplate/updategridbuttons%28__%29.md)
 
 ## Relationships
 
@@ -134,9 +128,17 @@ When there are more than eight buttons in the array, the template displays only 
 
 ## See Also
 
-### General Purpose Templates
+### Interface templates
 
-- [CPListTemplate](cplisttemplate.md): A template that displays and manages a list of items.
 - [CPTabBarTemplate](cptabbartemplate.md): A container template that displays and manages other templates, presenting them as tabs.
-- [CPTemplate](cptemplate.md): An abstract base class for interface templates.
-- [CPBarButtonProviding](cpbarbuttonproviding.md): The methods that templates use to provide buttons for the navigation bar.
+- [CPListTemplate](cplisttemplate.md): A template that displays a single-column list of items in one of several visual styles.
+- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPNowPlayingTemplate](cpnowplayingtemplate.md): A shared system template that shows the currently selected audio content and offers controls to manage playback.
+- [CPPointOfInterestTemplate](cppointofinteresttemplate.md): A template that displays a map with selectable points of interest.
+- [CPInformationTemplate](cpinformationtemplate.md): A template that provides information for a point of interest, food order, parking location, or charging location.
+- [CPContactTemplate](cpcontacttemplate.md): A template that displays information about a person or a business.
+- [CPSearchTemplate](cpsearchtemplate.md): A template that provides the ability to search for a destination and see a list of search results.
+- [CPVoiceControlTemplate](cpvoicecontroltemplate.md): A template that displays a voice control indicator during audio input.
+- [CPActionSheetTemplate](cpactionsheettemplate.md): A template that displays a modal action sheet.
+- [CPAlertTemplate](cpalerttemplate.md): A template that displays a modal alert.
+- [All templates and supporting types](all-templates-and-supporting-types.md): Explore the templates you use to build the interface of your CarPlay app.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinformationtemplatelayout
 
 # CPInformationTemplateLayout (Swift)
@@ -17,7 +17,7 @@ enum CPInformationTemplateLayout
 
 ## Topics
 
-### Template Layout Styles
+### Getting the template layout style
 
 - [CPInformationTemplateLayout.leading](cpinformationtemplatelayout/leading.md): A layout that displays a template’s items aligned to its leading edge.
 - [CPInformationTemplateLayout.twoColumn](cpinformationtemplatelayout/twocolumn.md): A layout that displays a template’s items in two columns.
@@ -39,7 +39,7 @@ enum CPInformationTemplateLayout
 
 ## See Also
 
-### Accessing the Layout
+### Accessing the layout
 
 - [layout](cpinformationtemplate/layout.md): The layout that the template uses to arrange its items.
 
@@ -59,13 +59,13 @@ enum CPInformationTemplateLayout : NSInteger;
 
 ## Topics
 
-### Template Layout Styles
+### Getting the template layout style
 
 - [CPInformationTemplateLayoutLeading](cpinformationtemplatelayout/leading.md): A layout that displays a template’s items aligned to its leading edge.
 - [CPInformationTemplateLayoutTwoColumn](cpinformationtemplatelayout/twocolumn.md): A layout that displays a template’s items in two columns.
 
 ## See Also
 
-### Accessing the Layout
+### Accessing the layout
 
 - [layout](cpinformationtemplate/layout.md): The layout that the template uses to arrange its items.

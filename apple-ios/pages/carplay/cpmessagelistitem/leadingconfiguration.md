@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessagelistitem/leadingconfiguration
 
 # leadingConfiguration (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The configuration of the list item’s leading region.
+Additional content to display at the leading edge of the row.
 
 ## Declaration
 
@@ -15,19 +15,18 @@ The configuration of the list item’s leading region.
 var leadingConfiguration: CPMessageListItemLeadingConfiguration { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-An instance of [CPMessageListItemLeadingConfiguration](../cpmessagelistitemleadingconfiguration.md) that describes the visual elements of the list item’s leading region. The region can show a [CPMessageLeadingItem](../cpmessageleadingitem.md), an image, and an unread indicator.
+This property specifies visual elements to display before the row text. For example, you can tell CarPlay to display an unread indicator or a custom image.
 
 ## See Also
 
-### Managing Leading and Trailing Configurations
+### Configuring additional details
 
-- [CPMessageListItemLeadingConfiguration](../cpmessagelistitemleadingconfiguration.md): An object that describes the appearance of a message list item’s leading region.
-- [trailingConfiguration](trailingconfiguration.md): The configuration of the list item’s trailing region.
-- [CPMessageListItemTrailingConfiguration](../cpmessagelistitemtrailingconfiguration.md): An object that describes the appearance of a message list item’s trailing region.
+- [trailingConfiguration](trailingconfiguration.md): Additional content to display at the trailing edge of the row.
+- [userInfo](userinfo.md): Custom information you want to store with the message list item.
 
 # leadingConfiguration (Objective-C)
 
@@ -35,7 +34,7 @@ An instance of [CPMessageListItemLeadingConfiguration](../cpmessagelistitemleadi
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The configuration of the list item’s leading region.
+Additional content to display at the leading edge of the row.
 
 ## Declaration
 
@@ -43,16 +42,15 @@ The configuration of the list item’s leading region.
 @property (nonatomic, strong) CPMessageListItemLeadingConfiguration * leadingConfiguration;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-An instance of [CPMessageListItemLeadingConfiguration](../cpmessagelistitemleadingconfiguration.md) that describes the visual elements of the list item’s leading region. The region can show a [CPMessageLeadingItem](../cpmessageleadingitem.md), an image, and an unread indicator.
+This property specifies visual elements to display before the row text. For example, you can tell CarPlay to display an unread indicator or a custom image.
 
 ## See Also
 
-### Managing Leading and Trailing Configurations
+### Configuring additional details
 
-- [CPMessageListItemLeadingConfiguration](../cpmessagelistitemleadingconfiguration.md): An object that describes the appearance of a message list item’s leading region.
-- [trailingConfiguration](trailingconfiguration.md): The configuration of the list item’s trailing region.
-- [CPMessageListItemTrailingConfiguration](../cpmessagelistitemtrailingconfiguration.md): An object that describes the appearance of a message list item’s trailing region.
+- [trailingConfiguration](trailingconfiguration.md): Additional content to display at the trailing edge of the row.
+- [userInfo](userinfo.md): Custom information you want to store with the message list item.

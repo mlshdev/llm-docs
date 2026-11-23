@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistimagerowitemcondensedelement
 
 # CPListImageRowItemCondensedElement (Swift)
@@ -7,28 +7,38 @@
 **Kind:** Class  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
 
+A row element that displays an image and text in a vertically condensed style.
+
 ## Declaration
 
 ```swift
 @MainActor class CPListImageRowItemCondensedElement
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+The `CPListImageRowItemCondensedElement ` class defines an element you add to a row in a list template. Use this class in conjunction with the [CPListImageRowItem](cplistimagerowitem.md) type to include more content in each row of your list. This element type displays a required image, a title string, and an optional subtitle in a vertically compressed layout on a system-provided background.
+
+When building a list interface, create instances of this class and use them to populate your [CPListImageRowItem](cplistimagerowitem.md) type. To handle row-related interactions with elements in a row, configure the [listImageRowHandler](cplistimagerowitem/listimagerowhandler.md) property of the row itself.
+
 ## Topics
 
-### Initializers
+### Creating a condensed element
 
-- [init(image:imageShape:title:subtitle:accessorySymbolName:)](cplistimagerowitemcondensedelement/init%28image_imageshape_title_subtitle_accessorysymbolname_%29.md): Initialize a list image row condensed element with an image, an image shape, a title, subtitle and a system symbol name.
+- [init(image:imageShape:title:subtitle:accessorySymbolName:)](cplistimagerowitemcondensedelement/init%28image_imageshape_title_subtitle_accessorysymbolname_%29.md): Creates a condensed row element with the specified image, text, and attributes.
 
-### Instance Properties
+### Getting the element’s content
 
-- [accessorySymbolName](cplistimagerowitemcondensedelement/accessorysymbolname.md): The name of the system symbol image to use as accessory.
-- [imageShape](cplistimagerowitemcondensedelement/imageshape.md): Shape used to draw the image of the element.
-- [subtitle](cplistimagerowitemcondensedelement/subtitle.md): The subtitle associated with this element.
-- [title](cplistimagerowitemcondensedelement/title.md): The title associated with this element.
+- [title](cplistimagerowitemcondensedelement/title.md): The primary text for the element.
+- [subtitle](cplistimagerowitemcondensedelement/subtitle.md): The secondary text for the element.
+- [accessorySymbolName](cplistimagerowitemcondensedelement/accessorysymbolname.md): The name of an image to display at the trailing edge of the element.
 
-### Enumerations
+### Getting the element’s shape
 
-- [CPListImageRowItemCondensedElement.Shape](cplistimagerowitemcondensedelement/shape.md): Types of shape used to draw a condensed row element.
+- [imageShape](cplistimagerowitemcondensedelement/imageshape.md): The shape to apply to the current element’s image.
+- [CPListImageRowItemCondensedElement.Shape](cplistimagerowitemcondensedelement/shape.md): Shapes you can apply to an element’s image.
 
 ## Relationships
 
@@ -48,11 +58,22 @@
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
+## See Also
+
+### Row elements
+
+- [CPListImageRowItemRowElement](cplistimagerowitemrowelement.md): A row element that displays an image, title, and subtitle.
+- [CPListImageRowItemCardElement](cplistimagerowitemcardelement.md): A row element that displays an image and text on a card-style background.
+- [CPListImageRowItemGridElement](cplistimagerowitemgridelement.md): A row element that displays an image.
+- [CPListImageRowItemImageGridElement](cplistimagerowitemimagegridelement.md): A row element that displays an image with a custom cutout shape and a title.
+
 # CPListImageRowItemCondensedElement (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Class  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
+
+A row element that displays an image and text in a vertically condensed style.
 
 ## Declaration
 
@@ -60,21 +81,42 @@
 @interface CPListImageRowItemCondensedElement : CPListImageRowItemElement
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+The `CPListImageRowItemCondensedElement ` class defines an element you add to a row in a list template. Use this class in conjunction with the [CPListImageRowItem](cplistimagerowitem.md) type to include more content in each row of your list. This element type displays a required image, a title string, and an optional subtitle in a vertically compressed layout on a system-provided background.
+
+When building a list interface, create instances of this class and use them to populate your [CPListImageRowItem](cplistimagerowitem.md) type. To handle row-related interactions with elements in a row, configure the [listImageRowHandler](cplistimagerowitem/listimagerowhandler.md) property of the row itself.
+
 ## Topics
 
-### Instance Properties
+### Creating a condensed element
 
-- [accessorySymbolName](cplistimagerowitemcondensedelement/accessorysymbolname.md): The name of the system symbol image to use as accessory.
-- [imageShape](cplistimagerowitemcondensedelement/imageshape.md): Shape used to draw the image of the element.
-- [subtitle](cplistimagerowitemcondensedelement/subtitle.md): The subtitle associated with this element.
-- [title](cplistimagerowitemcondensedelement/title.md): The title associated with this element.
+- [initWithImage:imageShape:title:subtitle:accessorySymbolName:](cplistimagerowitemcondensedelement/init%28image_imageshape_title_subtitle_accessorysymbolname_%29.md): Creates a condensed row element with the specified image, text, and attributes.
 
-### Instance Methods
+### Getting the element’s content
 
-- [initWithImage:imageShape:title:subtitle:accessorySymbolName:](cplistimagerowitemcondensedelement/init%28image_imageshape_title_subtitle_accessorysymbolname_%29.md): Initialize a list image row condensed element with an image, an image shape, a title, subtitle and a system symbol name.
+- [title](cplistimagerowitemcondensedelement/title.md): The primary text for the element.
+- [subtitle](cplistimagerowitemcondensedelement/subtitle.md): The secondary text for the element.
+- [accessorySymbolName](cplistimagerowitemcondensedelement/accessorysymbolname.md): The name of an image to display at the trailing edge of the element.
+
+### Getting the element’s shape
+
+- [imageShape](cplistimagerowitemcondensedelement/imageshape.md): The shape to apply to the current element’s image.
+- [CPListImageRowItemCondensedElementShape](cplistimagerowitemcondensedelement/shape.md): Shapes you can apply to an element’s image.
 
 ## Relationships
 
 ### Inherits From
 
 - [CPListImageRowItemElement](cplistimagerowitemelement.md)
+
+## See Also
+
+### Row elements
+
+- [CPListImageRowItemRowElement](cplistimagerowitemrowelement.md): A row element that displays an image, title, and subtitle.
+- [CPListImageRowItemCardElement](cplistimagerowitemcardelement.md): A row element that displays an image and text on a card-style background.
+- [CPListImageRowItemGridElement](cplistimagerowitemgridelement.md): A row element that displays an image.
+- [CPListImageRowItemImageGridElement](cplistimagerowitemimagegridelement.md): A row element that displays an image with a custom cutout shape and a title.

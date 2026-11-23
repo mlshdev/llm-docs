@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppointofinteresttemplate/init(title:pointsofinterest:selectedindex:)
 
 # init(title:pointsOfInterest:selectedIndex:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Initializer  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Creates a Point of Interest template with a title, the points of interest to display, and the initial selection’s index.
+Creates a point of interest template with a title, the points of interest to display, and the initial selection’s index.
 
 ## Declaration
 
@@ -29,7 +29,7 @@ init(title: String, pointsOfInterest: [CPPointOfInterest], selectedIndex: Int)
 
 ## See Also
 
-### Creating a Point of Interest Template
+### Creating a point of interest template
 
 - [CPPointOfInterest](../cppointofinterest.md): An object that describes a point of interest on the template’s map and in its scrollable picker.
 
@@ -39,7 +39,7 @@ init(title: String, pointsOfInterest: [CPPointOfInterest], selectedIndex: Int)
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Creates a Point of Interest template with a title, the points of interest to display, and the initial selection’s index.
+Creates a point of interest template with a title, the points of interest to display, and the initial selection’s index.
 
 ## Declaration
 
@@ -61,6 +61,6 @@ Creates a Point of Interest template with a title, the points of interest to dis
 
 ## See Also
 
-### Creating a Point of Interest Template
+### Creating a point of interest template
 
 - [CPPointOfInterest](../cppointofinterest.md): An object that describes a point of interest on the template’s map and in its scrollable picker.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinterfacecontroller/delegate
 
 # delegate (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-An object that serves as the delegate to the interface controller.
+A custom object you use to respond when templates appear and disappear.
 
 ## Declaration
 
@@ -15,13 +15,17 @@ An object that serves as the delegate to the interface controller.
 weak var delegate: (any CPInterfaceControllerDelegate)? { get set }
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+When you push and pop templates from your navigation hierarchy, you change your app’s currently visible content. The interface controller reports these changes to the custom object you assign to this property. You might use your delegate object to perform additional tasks related to the interface changes. For example, you might want to perform additional cleanup only after a template’s content isn’t visible. When defining your custom object, adopt the [CPInterfaceControllerDelegate](../cpinterfacecontrollerdelegate.md) protocol and use its methods to implement your changes.
+
 ## See Also
 
-### Configuring the Interface Controller
+### Responding to interface changes
 
-- [CPInterfaceControllerDelegate](../cpinterfacecontrollerdelegate.md): The interface that an object implements to serve as a delegate to an interface controller.
-- [prefersDarkUserInterfaceStyle](prefersdarkuserinterfacestyle.md): A Boolean value that determines whether the system draws the user interface in Dark Mode.
-- [setRootTemplate(\_:animated:completion:)](setroottemplate%28__animated_completion_%29.md): Sets the root template of the navigation hierarchy.
+- [CPInterfaceControllerDelegate](../cpinterfacecontrollerdelegate.md): The methods you implement to observe the addition and removal of templates in your app’s interface.
 
 # delegate (Objective-C)
 
@@ -29,7 +33,7 @@ weak var delegate: (any CPInterfaceControllerDelegate)? { get set }
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-An object that serves as the delegate to the interface controller.
+A custom object you use to respond when templates appear and disappear.
 
 ## Declaration
 
@@ -37,10 +41,14 @@ An object that serves as the delegate to the interface controller.
 @property (nonatomic, weak) id<CPInterfaceControllerDelegate> delegate;
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+When you push and pop templates from your navigation hierarchy, you change your app’s currently visible content. The interface controller reports these changes to the custom object you assign to this property. You might use your delegate object to perform additional tasks related to the interface changes. For example, you might want to perform additional cleanup only after a template’s content isn’t visible. When defining your custom object, adopt the [CPInterfaceControllerDelegate](../cpinterfacecontrollerdelegate.md) protocol and use its methods to implement your changes.
+
 ## See Also
 
-### Configuring the Interface Controller
+### Responding to interface changes
 
-- [CPInterfaceControllerDelegate](../cpinterfacecontrollerdelegate.md): The interface that an object implements to serve as a delegate to an interface controller.
-- [prefersDarkUserInterfaceStyle](prefersdarkuserinterfacestyle.md): A Boolean value that determines whether the system draws the user interface in Dark Mode.
-- [setRootTemplate:animated:completion:](setroottemplate%28__animated_completion_%29.md): Sets the root template of the navigation hierarchy.
+- [CPInterfaceControllerDelegate](../cpinterfacecontrollerdelegate.md): The methods you implement to observe the addition and removal of templates in your app’s interface.

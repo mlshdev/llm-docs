@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinformationtemplate
 
 # CPInformationTemplate (Swift)
@@ -33,26 +33,26 @@ To display an information template, call your interface controller’s [pushTemp
 
 ## Topics
 
-### Creating an Information Template
+### Creating an information template
 
 - [init(title:layout:items:actions:)](cpinformationtemplate/init%28title_layout_items_actions_%29.md): Creates an information template that displays the provided items using the chosen layout.
 
-### Accessing the Layout
+### Accessing the layout
 
 - [layout](cpinformationtemplate/layout.md): The layout that the template uses to arrange its items.
 - [CPInformationTemplateLayout](cpinformationtemplatelayout.md): The layout that an information template uses to arrange its items.
 
-### Managing the Title
+### Managing the title
 
 - [title](cpinformationtemplate/title.md): The template’s title.
 
-### Managing the Items
+### Managing the items
 
 - [items](cpinformationtemplate/items.md): The items that the template displays.
 - [CPInformationItem](cpinformationitem.md): A data object that provides content for an information template.
 - [CPInformationRatingItem](cpinformationratingitem.md): A data object that provides rated content for an information template.
 
-### Managing the Actions
+### Managing the actions
 
 - [actions](cpinformationtemplate/actions.md): The actions that the template displays.
 
@@ -78,11 +78,20 @@ To display an information template, call your interface controller’s [pushTemp
 
 ## See Also
 
-### Location and Information
+### Interface templates
 
+- [CPTabBarTemplate](cptabbartemplate.md): A container template that displays and manages other templates, presenting them as tabs.
+- [CPListTemplate](cplisttemplate.md): A template that displays a single-column list of items in one of several visual styles.
+- [CPGridTemplate](cpgridtemplate.md): A template that displays and manages a grid of items.
+- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPNowPlayingTemplate](cpnowplayingtemplate.md): A shared system template that shows the currently selected audio content and offers controls to manage playback.
 - [CPPointOfInterestTemplate](cppointofinteresttemplate.md): A template that displays a map with selectable points of interest.
-- [CPTextButton](cptextbutton.md): A button that displays a stylized title.
-- [Integrating CarPlay with your quick-ordering app](integrating-carplay-with-your-quick-ordering-app.md): Configure your food-ordering app to work with CarPlay.
+- [CPContactTemplate](cpcontacttemplate.md): A template that displays information about a person or a business.
+- [CPSearchTemplate](cpsearchtemplate.md): A template that provides the ability to search for a destination and see a list of search results.
+- [CPVoiceControlTemplate](cpvoicecontroltemplate.md): A template that displays a voice control indicator during audio input.
+- [CPActionSheetTemplate](cpactionsheettemplate.md): A template that displays a modal action sheet.
+- [CPAlertTemplate](cpalerttemplate.md): A template that displays a modal alert.
+- [All templates and supporting types](all-templates-and-supporting-types.md): Explore the templates you use to build the interface of your CarPlay app.
 
 # CPInformationTemplate (Objective-C)
 
@@ -116,26 +125,26 @@ To display an information template, call your interface controller’s [pushTemp
 
 ## Topics
 
-### Creating an Information Template
+### Creating an information template
 
 - [initWithTitle:layout:items:actions:](cpinformationtemplate/init%28title_layout_items_actions_%29.md): Creates an information template that displays the provided items using the chosen layout.
 
-### Accessing the Layout
+### Accessing the layout
 
 - [layout](cpinformationtemplate/layout.md): The layout that the template uses to arrange its items.
 - [CPInformationTemplateLayout](cpinformationtemplatelayout.md): The layout that an information template uses to arrange its items.
 
-### Managing the Title
+### Managing the title
 
 - [title](cpinformationtemplate/title.md): The template’s title.
 
-### Managing the Items
+### Managing the items
 
 - [items](cpinformationtemplate/items.md): The items that the template displays.
 - [CPInformationItem](cpinformationitem.md): A data object that provides content for an information template.
 - [CPInformationRatingItem](cpinformationratingitem.md): A data object that provides rated content for an information template.
 
-### Managing the Actions
+### Managing the actions
 
 - [actions](cpinformationtemplate/actions.md): The actions that the template displays.
 
@@ -151,8 +160,17 @@ To display an information template, call your interface controller’s [pushTemp
 
 ## See Also
 
-### Location and Information
+### Interface templates
 
+- [CPTabBarTemplate](cptabbartemplate.md): A container template that displays and manages other templates, presenting them as tabs.
+- [CPListTemplate](cplisttemplate.md): A template that displays a single-column list of items in one of several visual styles.
+- [CPGridTemplate](cpgridtemplate.md): A template that displays and manages a grid of items.
+- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPNowPlayingTemplate](cpnowplayingtemplate.md): A shared system template that shows the currently selected audio content and offers controls to manage playback.
 - [CPPointOfInterestTemplate](cppointofinteresttemplate.md): A template that displays a map with selectable points of interest.
-- [CPTextButton](cptextbutton.md): A button that displays a stylized title.
-- [Integrating CarPlay with your quick-ordering app](integrating-carplay-with-your-quick-ordering-app.md): Configure your food-ordering app to work with CarPlay.
+- [CPContactTemplate](cpcontacttemplate.md): A template that displays information about a person or a business.
+- [CPSearchTemplate](cpsearchtemplate.md): A template that provides the ability to search for a destination and see a list of search results.
+- [CPVoiceControlTemplate](cpvoicecontroltemplate.md): A template that displays a voice control indicator during audio input.
+- [CPActionSheetTemplate](cpactionsheettemplate.md): A template that displays a modal action sheet.
+- [CPAlertTemplate](cpalerttemplate.md): A template that displays a modal alert.
+- [All templates and supporting types](all-templates-and-supporting-types.md): Explore the templates you use to build the interface of your CarPlay app.

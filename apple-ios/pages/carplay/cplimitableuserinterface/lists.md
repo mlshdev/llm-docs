@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplimitableuserinterface/lists
 
 # lists (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Type Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-Indicates that the car is limiting the display of lists.
+A type that indicates the vehicle limits the number of items you can display in lists.
 
 ## Declaration
 
@@ -17,9 +17,9 @@ static var lists: CPLimitableUserInterface { get }
 
 ## See Also
 
-### User Interface Limits
+### Getting the user interface limits
 
-- [keyboard](keyboard.md): Indicates that the car is limiting the keyboard display.
+- [keyboard](keyboard.md): A type that indicates the vehicle limits the display of virtual keyboards.
 
 # CPLimitableUserInterfaceLists (Objective-C)
 
@@ -27,7 +27,7 @@ static var lists: CPLimitableUserInterface { get }
 **Kind:** Enumeration Case  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-Indicates that the car is limiting the display of lists.
+A type that indicates the vehicle limits the number of items you can display in lists.
 
 ## Declaration
 
@@ -37,6 +37,6 @@ CPLimitableUserInterfaceLists
 
 ## See Also
 
-### User Interface Limits
+### Getting the user interface limits
 
-- [CPLimitableUserInterfaceKeyboard](keyboard.md): Indicates that the car is limiting the keyboard display.
+- [CPLimitableUserInterfaceKeyboard](keyboard.md): A type that indicates the vehicle limits the display of virtual keyboards.

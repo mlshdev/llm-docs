@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppointofinteresttemplatedelegate/pointofinteresttemplate(_:didchangemapregion:)
 
 # pointOfInterestTemplate(\_:didChangeMapRegion:) (Swift)
@@ -17,6 +17,7 @@ func pointOfInterestTemplate(_ pointOfInterestTemplate: CPPointOfInterestTemplat
 
 ## Parameters
 
+- `pointOfInterestTemplate`: The point of interest template that displays the map.
 - `region`: The map’s new visible region.
 
 <a id="Discussion"></a>
@@ -41,6 +42,7 @@ Tells the delegate about changes to the visible region of the template’s map.
 
 ## Parameters
 
+- `pointOfInterestTemplate`: The point of interest template that displays the map.
 - `region`: The map’s new visible region.
 
 <a id="Discussion"></a>

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpcontentstyle
 
 # CPContentStyle (Swift)
@@ -25,14 +25,14 @@ You don’t create instances of `CPContentStyle`. Instead, the session configura
 
 ## Topics
 
-### Creating a Content Style
+### Getting the content styles
 
-- [init(rawValue:)](cpcontentstyle/init%28rawvalue_%29.md): Creates a content style from a raw value.
+- [dark](cpcontentstyle/dark.md)
+- [light](cpcontentstyle/light.md)
 
-### Content Styles
+### Creating a content style
 
-- [dark](cpcontentstyle/dark.md): The indication from the vehicle to draw the content in a dark style.
-- [light](cpcontentstyle/light.md): The indication from the vehicle to draw the content in a light style.
+- [init(rawValue:)](cpcontentstyle/init%28rawvalue_%29.md)
 
 ## Relationships
 
@@ -49,9 +49,12 @@ You don’t create instances of `CPContentStyle`. Instead, the session configura
 
 ## See Also
 
-### Getting the Content Style
+### Getting the configuration details
 
-- [contentStyle](cpsessionconfiguration/contentstyle.md): The content style that the vehicle selects.
+- [contentStyle](cpsessionconfiguration/contentstyle.md): The preferred interface style for your app’s content.
+- [limitedUserInterfaces](cpsessionconfiguration/limiteduserinterfaces.md): A bitmask of the interface restrictions that currently apply to your app.
+- [supportsVideoPlayback](cpsessionconfiguration/supportsvideoplayback.md): A Boolean value that indicates whether CarPlay supports playing video content.
+- [CPLimitableUserInterface](cplimitableuserinterface.md): The types of interfaces to which a vehicle can limit access.
 
 # CPContentStyle (Objective-C)
 
@@ -77,13 +80,16 @@ You don’t create instances of `CPContentStyle`. Instead, the session configura
 
 ## Topics
 
-### Content Styles
+### Getting the content styles
 
-- [CPContentStyleDark](cpcontentstyle/dark.md): The indication from the vehicle to draw the content in a dark style.
-- [CPContentStyleLight](cpcontentstyle/light.md): The indication from the vehicle to draw the content in a light style.
+- [CPContentStyleDark](cpcontentstyle/dark.md)
+- [CPContentStyleLight](cpcontentstyle/light.md)
 
 ## See Also
 
-### Getting the Content Style
+### Getting the configuration details
 
-- [contentStyle](cpsessionconfiguration/contentstyle.md): The content style that the vehicle selects.
+- [contentStyle](cpsessionconfiguration/contentstyle.md): The preferred interface style for your app’s content.
+- [limitedUserInterfaces](cpsessionconfiguration/limiteduserinterfaces.md): A bitmask of the interface restrictions that currently apply to your app.
+- [supportsVideoPlayback](cpsessionconfiguration/supportsvideoplayback.md): A Boolean value that indicates whether CarPlay supports playing video content.
+- [CPLimitableUserInterface](cplimitableuserinterface.md): The types of interfaces to which a vehicle can limit access.

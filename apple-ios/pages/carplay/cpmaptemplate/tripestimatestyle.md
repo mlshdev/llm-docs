@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplate/tripestimatestyle
 
 # tripEstimateStyle (Swift)
@@ -23,7 +23,7 @@ The default value is [CPTripEstimateStyle.dark](../cptripestimatestyle/dark.md).
 
 ## See Also
 
-### Providing Trip Estimates
+### Providing trip estimates
 
 - [updateEstimates(\_:for:)](updateestimates%28__for_%29.md): Updates travel estimates, such as arrival time and the remaining time and distance for a trip.
 - [update(\_:for:with:)](update%28__for_with_%29.md): Updates travel estimates, such as arrival time and the remaining time and distance for a trip, with the specified time-remaining color.
@@ -52,7 +52,7 @@ The default value is [CPTripEstimateStyleDark](../cptripestimatestyle/dark.md).
 
 ## See Also
 
-### Providing Trip Estimates
+### Providing trip estimates
 
 - [updateTravelEstimates:forTrip:](updateestimates%28__for_%29.md): Updates travel estimates, such as arrival time and the remaining time and distance for a trip.
 - [updateTravelEstimates:forTrip:withTimeRemainingColor:](update%28__for_with_%29.md): Updates travel estimates, such as arrival time and the remaining time and distance for a trip, with the specified time-remaining color.

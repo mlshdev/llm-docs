@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessageleadingitem/none
 
 # CPMessageLeadingItem.none (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Case  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-Don’t show a leading item.
+An option to display no symbol.
 
 ## Declaration
 
@@ -19,8 +19,8 @@ case none
 
 ### Leading Items
 
-- [CPMessageLeadingItem.pin](pin.md): Show a pin icon.
-- [CPMessageLeadingItem.star](star.md): Show a star icon.
+- [CPMessageLeadingItem.pin](pin.md): An option to display a pin image in the row.
+- [CPMessageLeadingItem.star](star.md): An option to display a star image in the row.
 
 # CPMessageLeadingItemNone (Objective-C)
 
@@ -28,7 +28,7 @@ case none
 **Kind:** Enumeration Case  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-Don’t show a leading item.
+An option to display no symbol.
 
 ## Declaration
 
@@ -40,5 +40,5 @@ CPMessageLeadingItemNone
 
 ### Leading Items
 
-- [CPMessageLeadingItemPin](pin.md): Show a pin icon.
-- [CPMessageLeadingItemStar](star.md): Show a star icon.
+- [CPMessageLeadingItemPin](pin.md): An option to display a pin image in the row.
+- [CPMessageLeadingItemStar](star.md): An option to display a star image in the row.

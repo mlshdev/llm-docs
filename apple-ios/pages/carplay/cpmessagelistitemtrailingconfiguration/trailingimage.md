@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessagelistitemtrailingconfiguration/trailingimage
 
 # trailingImage (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The configuration’s image.
+The custom image to display in the row’s trailing region.
 
 ## Declaration
 
@@ -15,13 +15,11 @@ The configuration’s image.
 var trailingImage: UIImage? { get }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Configurations are immutable. To change or remove the image that the message list item’s trailing region shows, create a new configuration and update the list item’s [trailingConfiguration](../cpmessagelistitem/trailingconfiguration.md) property.
-
-A configuration’s image can’t be larger than [CPMaximumMessageItemImageSize](../cpmaximummessageitemimagesize.md). If you use an animated image, this property returns the first image in the animation sequence.
+Specify this image at initialization time.
 
 # trailingImage (Objective-C)
 
@@ -29,7 +27,7 @@ A configuration’s image can’t be larger than [CPMaximumMessageItemImageSize]
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The configuration’s image.
+The custom image to display in the row’s trailing region.
 
 ## Declaration
 
@@ -37,10 +35,8 @@ The configuration’s image.
 @property (nonatomic, readonly, nullable) UIImage * trailingImage;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Configurations are immutable. To change or remove the image that the message list item’s trailing region shows, create a new configuration and update the list item’s [trailingConfiguration](../cpmessagelistitem/trailingconfiguration.md) property.
-
-A configuration’s image can’t be larger than [CPMaximumMessageItemImageSize](../cpmaximummessageitemimagesize.md). If you use an animated image, this property returns the first image in the animation sequence.
+Specify this image at initialization time.

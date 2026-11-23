@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessagelistitem/userinfo
 
 # userInfo (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-An opaque value for the list item.
+Custom information you want to store with the message list item.
 
 ## Declaration
 
@@ -15,11 +15,18 @@ An opaque value for the list item.
 var userInfo: Any? { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Use this property to attach a value that provides additional context to the list item.
+Store any app-specific data for the item in this property. For example, store the unique ID of the conversation or contact object. The item maintains a strong reference to the object you specify.
+
+## See Also
+
+### Configuring additional details
+
+- [leadingConfiguration](leadingconfiguration.md): Additional content to display at the leading edge of the row.
+- [trailingConfiguration](trailingconfiguration.md): Additional content to display at the trailing edge of the row.
 
 # userInfo (Objective-C)
 
@@ -27,7 +34,7 @@ Use this property to attach a value that provides additional context to the list
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-An opaque value for the list item.
+Custom information you want to store with the message list item.
 
 ## Declaration
 
@@ -35,8 +42,15 @@ An opaque value for the list item.
 @property (nonatomic, strong, nullable) id userInfo;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Use this property to attach a value that provides additional context to the list item.
+Store any app-specific data for the item in this property. For example, store the unique ID of the conversation or contact object. The item maintains a strong reference to the object you specify.
+
+## See Also
+
+### Configuring additional details
+
+- [leadingConfiguration](leadingconfiguration.md): Additional content to display at the leading edge of the row.
+- [trailingConfiguration](trailingconfiguration.md): Additional content to display at the trailing edge of the row.

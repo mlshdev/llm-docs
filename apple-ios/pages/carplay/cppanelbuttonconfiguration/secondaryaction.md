@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppanelbuttonconfiguration/secondaryaction
 
 # secondaryAction (Swift)
@@ -21,6 +21,12 @@ An optional action button to display in the panel.
 
 Specify this button at initialization time and use this property to retrieve it later.
 
+## See Also
+
+### Getting the action buttons
+
+- [primaryAction](primaryaction.md): The primary action button for the panel.
+
 # secondaryAction (Objective-C)
 
 **Framework:** CarPlay  
@@ -40,3 +46,9 @@ An optional action button to display in the panel.
 ## Discussion
 
 Specify this button at initialization time and use this property to retrieve it later.
+
+## See Also
+
+### Getting the action buttons
+
+- [primaryAction](primaryaction.md): The primary action button for the panel.

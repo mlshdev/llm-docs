@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplaneguidance/lanes
 
 # lanes (Swift)
@@ -17,7 +17,7 @@ var lanes: [CPLane] { get set }
 
 ## See Also
 
-### Properties
+### Getting the lane guidance
 
 - [instructionVariants](instructionvariants.md): An array of strings that represent the instruction for this lane guidance, arranged from most- to least-preferred.
 
@@ -37,6 +37,6 @@ An array of lane objects, each describing a single lane.
 
 ## See Also
 
-### Properties
+### Getting the lane guidance
 
 - [instructionVariants](instructionvariants.md): An array of strings that represent the instruction for this lane guidance, arranged from most- to least-preferred.

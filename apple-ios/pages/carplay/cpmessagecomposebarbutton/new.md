@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessagecomposebarbutton/new
 
 # new
@@ -9,25 +9,15 @@
 **Kind:** Type Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Creates a message compose button with a system-provided image.
-
 ## Declaration
 
 ```objectivec
 + (instancetype) new;
 ```
 
-<a id="Discussion"></a>
-
-## Discussion
-
-> **Note**
-
->  This button type does not use a handler. Instead, tapping this button activates Siri and initiates the compose message flow.
-
 ## See Also
 
-### Creating a Message Compose Bar Button
+### Creating a message compose bar button
 
-- [init](init%28%29.md): Creates a message compose button with a system-provided image.
-- [initWithImage:](init%28image_%29.md): Creates a message compose button that displays a custom image.
+- [init](init%28%29.md): Creates a button for composing messages that uses the system-provided image.
+- [initWithImage:](init%28image_%29.md): Creates a button for composing messages that uses a custom image you provide.

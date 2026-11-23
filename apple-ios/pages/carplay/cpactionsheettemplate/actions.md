@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpactionsheettemplate/actions
 
 # actions (Swift)
@@ -23,7 +23,7 @@ The array must include at least one action.
 
 ## See Also
 
-### Getting Action Sheet Template Information
+### Getting the template content
 
 - [title](title.md): The title of the action sheet.
 - [message](message.md): The descriptive message providing details about the reason for displaying the action sheet.
@@ -50,7 +50,7 @@ The array must include at least one action.
 
 ## See Also
 
-### Getting Action Sheet Template Information
+### Getting the template content
 
 - [title](title.md): The title of the action sheet.
 - [message](message.md): The descriptive message providing details about the reason for displaying the action sheet.

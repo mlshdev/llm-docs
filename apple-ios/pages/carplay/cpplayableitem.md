@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpplayableitem
 
 # CPPlayableItem (Swift)
@@ -7,17 +7,31 @@
 **Kind:** Protocol  
 **Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.4+
 
+An interface that adds media-based metadata to items with audio or video content.
+
 ## Declaration
 
 ```swift
 protocol CPPlayableItem : NSObjectProtocol
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+In list interfaces, row and row elements adopt this protocol to support audio and video content. This protocol allows items to display playback progress, and it allows the system to perform automatic actions on your app’s behalf. For example, the system can open the appropriate player interface and automatically start playing an item in response to interactions. These behaviors improve the experience of viewing media in CarPlay and minimize the amount of code you need to provide.
+
+Don’t adopt this protocol in custom types you define. The system uses this protocol only with the following types:
+
+[CPListItem](cplistitem.md) [CPListImageRowItem](cplistimagerowitem.md) [CPListTemplateDetailsHeader](cplisttemplatedetailsheader.md)
+
+When creating a list interface with the above items, configure the playback configuration data for each item. This data includes the item’s duration and elapsed time. It also includes the actions you want the system to perform automatically.
+
 ## Topics
 
 ### Instance Properties
 
-- [playbackConfiguration](cpplayableitem/playbackconfiguration.md)
+- [playbackConfiguration](cpplayableitem/playbackconfiguration.md): The media-related metadata to associate with the item.
 
 ## Relationships
 
@@ -36,11 +50,19 @@ protocol CPPlayableItem : NSObjectProtocol
 - [CPListItem](cplistitem.md)
 - [CPListTemplateDetailsHeader](cplisttemplatedetailsheader.md)
 
+## See Also
+
+### Playback configuration
+
+- [CPPlaybackConfiguration](cpplaybackconfiguration.md): Media metadata you add to audio or video items to support automatic system behaviors.
+
 # CPPlayableItem (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Protocol  
 **Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.4+
+
+An interface that adds media-based metadata to items with audio or video content.
 
 ## Declaration
 
@@ -48,11 +70,23 @@ protocol CPPlayableItem : NSObjectProtocol
 @protocol CPPlayableItem <NSObject>
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+In list interfaces, row and row elements adopt this protocol to support audio and video content. This protocol allows items to display playback progress, and it allows the system to perform automatic actions on your app’s behalf. For example, the system can open the appropriate player interface and automatically start playing an item in response to interactions. These behaviors improve the experience of viewing media in CarPlay and minimize the amount of code you need to provide.
+
+Don’t adopt this protocol in custom types you define. The system uses this protocol only with the following types:
+
+[CPListItem](cplistitem.md) [CPListImageRowItem](cplistimagerowitem.md) [CPListTemplateDetailsHeader](cplisttemplatedetailsheader.md)
+
+When creating a list interface with the above items, configure the playback configuration data for each item. This data includes the item’s duration and elapsed time. It also includes the actions you want the system to perform automatically.
+
 ## Topics
 
 ### Instance Properties
 
-- [playbackConfiguration](cpplayableitem/playbackconfiguration.md)
+- [playbackConfiguration](cpplayableitem/playbackconfiguration.md): The media-related metadata to associate with the item.
 
 ## Relationships
 
@@ -65,3 +99,9 @@ protocol CPPlayableItem : NSObjectProtocol
 - [CPListImageRowItemElement](cplistimagerowitemelement.md)
 - [CPListItem](cplistitem.md)
 - [CPListTemplateDetailsHeader](cplisttemplatedetailsheader.md)
+
+## See Also
+
+### Playback configuration
+
+- [CPPlaybackConfiguration](cpplaybackconfiguration.md): Media metadata you add to audio or video items to support automatic system behaviors.

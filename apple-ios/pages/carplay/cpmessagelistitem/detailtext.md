@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessagelistitem/detailtext
 
 # detailText (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The list item’s secondary text.
+Additional text to display less prominently below the row’s main text.
 
 ## Declaration
 
@@ -15,18 +15,19 @@ The list item’s secondary text.
 var detailText: String? { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The list item displays any secondary text below its primary text.
+Specify the detail text at initialization time.
 
 ## See Also
 
-### Managing Content
+### Getting the row content
 
-- [text](text.md): The list item’s primary text.
-- [trailingText](trailingtext.md): The list item’s supplementary text.
+- [text](text.md): The primary text to display in the message list item’s row.
+- [trailingText](trailingtext.md): Additional text to display after the trailing configuration items.
+- [leadingDetailTextImage](leadingdetailtextimage.md): An image to display before the row’s detail text.
 
 # detailText (Objective-C)
 
@@ -34,7 +35,7 @@ The list item displays any secondary text below its primary text.
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The list item’s secondary text.
+Additional text to display less prominently below the row’s main text.
 
 ## Declaration
 
@@ -42,15 +43,16 @@ The list item’s secondary text.
 @property (nonatomic, copy, nullable) NSString * detailText;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The list item displays any secondary text below its primary text.
+Specify the detail text at initialization time.
 
 ## See Also
 
-### Managing Content
+### Getting the row content
 
-- [text](text.md): The list item’s primary text.
-- [trailingText](trailingtext.md): The list item’s supplementary text.
+- [text](text.md): The primary text to display in the message list item’s row.
+- [trailingText](trailingtext.md): Additional text to display after the trailing configuration items.
+- [leadingDetailTextImage](leadingdetailtextimage.md): An image to display before the row’s detail text.

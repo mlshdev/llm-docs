@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpvoicecontroltemplate/init(voicecontrolstates:)
 
 # init(voiceControlStates:) (Swift)
@@ -33,7 +33,7 @@ When presenting the voice control template for the first time, the template defa
 
 ## See Also
 
-### Creating a Voice Control Template
+### Creating a voice control template
 
 - [CPVoiceControlState](../cpvoicecontrolstate.md): A voice control state containing title variants and images for use by a voice control template.
 
@@ -69,6 +69,6 @@ When presenting the voice control template for the first time, the template defa
 
 ## See Also
 
-### Creating a Voice Control Template
+### Creating a voice control template
 
 - [CPVoiceControlState](../cpvoicecontrolstate.md): A voice control state containing title variants and images for use by a voice control template.

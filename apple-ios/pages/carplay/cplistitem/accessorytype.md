@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitem/accessorytype
 
 # accessoryType (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The accessory that the list item displays in its trailing region.
+The standard accessory type to display on the trailing edge of the list item.
 
 ## Declaration
 
@@ -15,19 +15,19 @@ The accessory that the list item displays in its trailing region.
 var accessoryType: CPListItemAccessoryType { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-If you update the list item to display an accessory image using the [setAccessoryImage(\_:)](setaccessoryimage%28__%29.md) method, CarPlay sets this property’s value to [CPListItemAccessoryType.none](../cplistitemaccessorytype/none.md).
+The value in this property determines whether to show a standard accessory image such as a disclosure chevron or a custom image you supply. When the value in this property is a value other than [CPListItemAccessoryType.none](../cplistitemaccessorytype/none.md), the list item displays the specified standard accessory image. Setting the value to [CPListItemAccessoryType.none](../cplistitemaccessorytype/none.md) displays the custom image in the [accessoryImage](accessoryimage.md) property if you provided one; otherwise, the item omits the accessory image.
 
 ## See Also
 
-### Managing Accessories
+### Managing accessories
 
-- [CPListItemAccessoryType](../cplistitemaccessorytype.md): The accessory types that a list item can display.
-- [accessoryImage](accessoryimage.md): The image that the list item displays in its trailing region.
-- [setAccessoryImage(\_:)](setaccessoryimage%28__%29.md): Updates the list item’s accessory image.
+- [accessoryImage](accessoryimage.md): The custom accessory image to display on the trailing edge of the list item.
+- [setAccessoryImage(\_:)](setaccessoryimage%28__%29.md): The custom accessory image to display on the trailing edge of the list item.
+- [CPListItemAccessoryType](../cplistitemaccessorytype.md): The standard image types a list item can display in its accessory region.
 
 # accessoryType (Objective-C)
 
@@ -35,7 +35,7 @@ If you update the list item to display an accessory image using the [setAccessor
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The accessory that the list item displays in its trailing region.
+The standard accessory type to display on the trailing edge of the list item.
 
 ## Declaration
 
@@ -43,16 +43,16 @@ The accessory that the list item displays in its trailing region.
 @property (nonatomic, assign) CPListItemAccessoryType accessoryType;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-If you update the list item to display an accessory image using the [setAccessoryImage:](setaccessoryimage%28__%29.md) method, CarPlay sets this property’s value to [CPListItemAccessoryTypeNone](../cplistitemaccessorytype/none.md).
+The value in this property determines whether to show a standard accessory image such as a disclosure chevron or a custom image you supply. When the value in this property is a value other than [CPListItemAccessoryTypeNone](../cplistitemaccessorytype/none.md), the list item displays the specified standard accessory image. Setting the value to [CPListItemAccessoryTypeNone](../cplistitemaccessorytype/none.md) displays the custom image in the [accessoryImage](accessoryimage.md) property if you provided one; otherwise, the item omits the accessory image.
 
 ## See Also
 
-### Managing Accessories
+### Managing accessories
 
-- [CPListItemAccessoryType](../cplistitemaccessorytype.md): The accessory types that a list item can display.
-- [accessoryImage](accessoryimage.md): The image that the list item displays in its trailing region.
-- [setAccessoryImage:](setaccessoryimage%28__%29.md): Updates the list item’s accessory image.
+- [accessoryImage](accessoryimage.md): The custom accessory image to display on the trailing edge of the list item.
+- [setAccessoryImage:](setaccessoryimage%28__%29.md): The custom accessory image to display on the trailing edge of the list item.
+- [CPListItemAccessoryType](../cplistitemaccessorytype.md): The standard image types a list item can display in its accessory region.

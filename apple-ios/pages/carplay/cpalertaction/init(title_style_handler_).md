@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpalertaction/init(title:style:handler:)
 
 # init(title:style:handler:) (Swift)
@@ -27,6 +27,13 @@ init(title: String, style: CPAlertAction.Style, handler: @escaping CPAlertAction
 
 A newly initialized alert action.
 
+## See Also
+
+### Creating an alert action
+
+- [init(title:color:handler:)](init%28title_color_handler_%29.md)
+- [init(coder:)](init%28coder_%29.md)
+
 # initWithTitle:style:handler: (Objective-C)
 
 **Framework:** CarPlay  
@@ -52,3 +59,9 @@ Creates an alert action with a title, style, and action handler.
 ## Return Value
 
 A newly initialized alert action.
+
+## See Also
+
+### Creating an alert action
+
+- [initWithTitle:color:handler:](init%28title_color_handler_%29.md)

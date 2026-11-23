@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessorytransportextension/accessoryfeatureauthorizationstatus/unknown
 
 # AccessoryFeatureAuthorizationStatus.unknown
@@ -19,7 +19,7 @@ case unknown
 
 ## Discussion
 
-Enroll a feature by using `AccessoryWorker/requestAuthorization(for:)` or `AccessoryGPUWorker/requestAuthorization(for:)`.
+Enroll a feature by using [requestAuthorization(for:)](../accessoryworker/requestauthorization%28for_%29.md) or [requestAuthorization(for:)](../accessorygpuworker/requestauthorization%28for_%29.md).
 
 ## See Also
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplisttemplatedelegate/listtemplate(_:didselect:completionhandler:)
 
 # listTemplate(\_:didSelect:completionHandler:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ (deprecated in 14.0) · iPadOS 12.0+ (deprecated in 14.0) · Mac Catalyst 13.1+ (deprecated in 14.0)
 
-Tells the delegate when the user selects a list item.
+The user has selected an item in the list template.
 
 ## Declaration
 
@@ -21,25 +21,17 @@ func listTemplate(_ listTemplate: CPListTemplate, didSelect item: CPListItem) as
 
 ## Parameters
 
-- `listTemplate`: The list template that contains the selected item.
-- `item`: The item that the user selects.
-- `completionHandler`: The block that your app must call after handling the selected item.
+- `listTemplate`: The list template containing this item
+- `item`: The item selected by the user
+- `completionHandler`: A completion block you must call after you have updated your UI.
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-> **Important**
+Your app has an opportunity to perform any necessary operations to prepare for completing this item selection. The list template will display a spinner after a short delay.
 
->  You can call this method from synchronous code using a completion handler, as shown on this page, or you can call it as an asynchronous method that has the following declaration:
->
-> ```swift
-> func listTemplate(_ listTemplate: CPListTemplate, didSelect item: CPListItem) async
-> ```
->
-> For information about concurrency and asynchronous code in Swift, see [Calling Objective-C APIs Asynchronously](https://developer.apple.com/documentation/swift/calling-objective-c-apis-asynchronously).
-
-When implementing this method, perform any necessary operations to prepare for completing the item selection, including updating your user interface. You must call `completionHandler` after handling the selected item to tell the system that it can continue. The list template displays an activity indicator—after a short delay—while it waits for your implementation to call the completion handler.
+You must call the completion block after your app has finished loading and updated its UI.
 
 # listTemplate:didSelectListItem:completionHandler: (Objective-C)
 
@@ -47,7 +39,7 @@ When implementing this method, perform any necessary operations to prepare for c
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ (deprecated in 14.0) · iPadOS 12.0+ (deprecated in 14.0) · Mac Catalyst 13.1+ (deprecated in 14.0)
 
-Tells the delegate when the user selects a list item.
+The user has selected an item in the list template.
 
 ## Declaration
 
@@ -57,22 +49,14 @@ Tells the delegate when the user selects a list item.
 
 ## Parameters
 
-- `listTemplate`: The list template that contains the selected item.
-- `item`: The item that the user selects.
-- `completionHandler`: The block that your app must call after handling the selected item.
+- `listTemplate`: The list template containing this item
+- `item`: The item selected by the user
+- `completionHandler`: A completion block you must call after you have updated your UI.
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-> **Important**
+Your app has an opportunity to perform any necessary operations to prepare for completing this item selection. The list template will display a spinner after a short delay.
 
->  You can call this method from synchronous code using a completion handler, as shown on this page, or you can call it as an asynchronous method that has the following declaration:
->
-> ```swift
-> func listTemplate(_ listTemplate: CPListTemplate, didSelect item: CPListItem) async
-> ```
->
-> For information about concurrency and asynchronous code in Swift, see [Calling Objective-C APIs Asynchronously](https://developer.apple.com/documentation/swift/calling-objective-c-apis-asynchronously).
-
-When implementing this method, perform any necessary operations to prepare for completing the item selection, including updating your user interface. You must call `completionHandler` after handling the selected item to tell the system that it can continue. The list template displays an activity indicator—after a short delay—while it waits for your implementation to call the completion handler.
+You must call the completion block after your app has finished loading and updated its UI.

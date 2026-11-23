@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistimagerowitemelement/maximumimagesize
 
 # maximumImageSize (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Type Property  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
 
-The expected image size for the image in your @c CPListImageRowItemElement. Images provided will be resized to this size.
+The maximum dimensions for the element’s image.
 
 ## Declaration
 
@@ -19,7 +19,15 @@ class var maximumImageSize: CGSize { get }
 
 ## Discussion
 
-To properly size your images, your app should size them to the display scale of the car screen. See -\[CPInterfaceController carTraitCollection\].
+Use this property to retrieve the standard maximum image dimensions for images. Card elements define an additional set of dimensions for images that fill the content.
+
+When the [showsImageFullHeight](../cplistimagerowitemcardelement/showsimagefullheight.md) property is `false`, this property defines the maximum size for images. When creating images, adjust the size of your image based on the current maximum value.
+
+## See Also
+
+### Getting the element’s content
+
+- [image](image.md): The image associated with the element.
 
 # maximumImageSize (Objective-C)
 
@@ -27,7 +35,7 @@ To properly size your images, your app should size them to the display scale of 
 **Kind:** Type Property  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
 
-The expected image size for the image in your @c CPListImageRowItemElement. Images provided will be resized to this size.
+The maximum dimensions for the element’s image.
 
 ## Declaration
 
@@ -39,4 +47,12 @@ The expected image size for the image in your @c CPListImageRowItemElement. Imag
 
 ## Discussion
 
-To properly size your images, your app should size them to the display scale of the car screen. See -\[CPInterfaceController carTraitCollection\].
+Use this property to retrieve the standard maximum image dimensions for images. Card elements define an additional set of dimensions for images that fill the content.
+
+When the [showsImageFullHeight](../cplistimagerowitemcardelement/showsimagefullheight.md) property is `false`, this property defines the maximum size for images. When creating images, adjust the size of your image based on the current maximum value.
+
+## See Also
+
+### Getting the element’s content
+
+- [image](image.md): The image associated with the element.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpjunctiontype/roundabout
 
 # CPJunctionType.roundabout (Swift)
@@ -17,7 +17,7 @@ case roundabout
 
 ## See Also
 
-### Junction types
+### Getting the junction types
 
 - [CPJunctionType.intersection](intersection.md): A single intersection with roads coming to a common point.
 
@@ -37,6 +37,6 @@ CPJunctionTypeRoundabout
 
 ## See Also
 
-### Junction types
+### Getting the junction types
 
 - [CPJunctionTypeIntersection](intersection.md): A single intersection with roads coming to a common point.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpalertaction/color
 
 # color (Swift)
@@ -13,6 +13,13 @@
 @NSCopying var color: UIColor? { get }
 ```
 
+## See Also
+
+### Getting the action style
+
+- [style](style-swift.property.md): The display style for the action button.
+- [CPAlertAction.Style](style-swift.enum.md): Display styles for an alert’s action button.
+
 # color (Objective-C)
 
 **Framework:** CarPlay  
@@ -24,3 +31,10 @@
 ```objectivec
 @property (nonatomic, copy, readonly, nullable) UIColor * color;
 ```
+
+## See Also
+
+### Getting the action style
+
+- [style](style-swift.property.md): The display style for the action button.
+- [CPAlertActionStyle](style-swift.enum.md): Display styles for an alert’s action button.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingsportsclock
 
 # CPNowPlayingSportsClock (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Class  
 **Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+
 
-A representation of the amount of time elapsed so far in this event, for events where the clock counts UP.
+A type that specifies the elapsed or remaining time in a match and the state of the clock.
 
 ## Declaration
 
@@ -19,21 +19,25 @@ A representation of the amount of time elapsed so far in this event, for events 
 
 ## Overview
 
-Or, a representation of the amount of time remaining in the event, or a section of the event (period/quarter/etc.) for events where the clock counts DOWN.
+Use a `CPNowPlayingSportsClock` object to specify clock-related information for the current section of a sporting event. Clocks in sporting events either count up to reflect the elapsed time of the match or count down to indicate the amount of time remaining. For example, the clock in a hockey game counts down from an initial value of 20 minutes.
+
+Create a `CPNowPlayingSportsClock` object with the initial time information when configuring the Now Playing interface. Create additional instances throughout the match when gameplay pauses or resumes, or when you need to adjust the time on the clock. Assign your clock objects to the [CPNowPlayingSportsEventStatus](cpnowplayingsportseventstatus.md) object you use to report the state of the match to the Now Playing interface.
+
+Keep the clock in the Now Playing interface synchronized with the rest of your content. When the [isPaused](cpnowplayingsportsclock/ispaused.md) property is `false`, CarPlay increments and decrements the clock value once a second as a convenience so you don’t have to update the clock information yourself. However, CarPlay doesn’t make the updated clock value available to your app. When you need to create new [CPNowPlayingSportsClock](cpnowplayingsportsclock.md) objects, initialize them with actual game data to ensure the displayed clock remains synchronized with the rest of your content.
 
 ## Topics
 
-### Initializers
+### Creating a sports mode type
 
+- [init(elapsedTime:paused:)](cpnowplayingsportsclock/init%28elapsedtime_paused_%29.md): Creates a clock that counts up to measure the elapsed time from the specified value.
+- [init(timeRemaining:paused:)](cpnowplayingsportsclock/init%28timeremaining_paused_%29.md): Creates a clock that counts down from the specified value.
 - [init(coder:)](cpnowplayingsportsclock/init%28coder_%29.md)
-- [init(elapsedTime:paused:)](cpnowplayingsportsclock/init%28elapsedtime_paused_%29.md): Represents a duration of time that has elapsed so far in this event, or play period of the event (quarter/inning/period).
-- [init(timeRemaining:paused:)](cpnowplayingsportsclock/init%28timeremaining_paused_%29.md): Represents an amount of time remaining in the event, or play period of the event (quarter/inning/period).
 
-### Instance Properties
+### Getting the clock attributes
 
-- [countsUp](cpnowplayingsportsclock/countsup.md): If true, the timer is counting UP, so as to indicate an amount of time elapsed so far in this event.
-- [isPaused](cpnowplayingsportsclock/ispaused.md): Whether the clock should be paused, e.g. due to a stoppage in play.
-- [timeValue](cpnowplayingsportsclock/timevalue.md): The time value in the clock; either elapsed time or time remaining.
+- [timeValue](cpnowplayingsportsclock/timevalue.md): The time value you specify at initialization.
+- [countsUp](cpnowplayingsportsclock/countsup.md): A Boolean value that indicates whether the event clock counts up.
+- [isPaused](cpnowplayingsportsclock/ispaused.md): A Boolean value that indicates whether the clock is paused.
 
 ## Relationships
 
@@ -53,13 +57,21 @@ Or, a representation of the amount of time remaining in the event, or a section 
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 
+## See Also
+
+### Sports mode content
+
+- [CPNowPlayingSportsTeam](cpnowplayingsportsteam.md): A type that specifies team-specific details, including the name, standings, and current score in the match.
+- [CPNowPlayingSportsTeamLogo](cpnowplayingsportsteamlogo.md): A type that manages logo information for a sports team.
+- [CPNowPlayingSportsEventStatus](cpnowplayingsportseventstatus.md): A type that manages match-focused information, including the event clock.
+
 # CPNowPlayingSportsClock (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Class  
 **Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+
 
-A representation of the amount of time elapsed so far in this event, for events where the clock counts UP.
+A type that specifies the elapsed or remaining time in a match and the state of the clock.
 
 ## Declaration
 
@@ -71,20 +83,24 @@ A representation of the amount of time elapsed so far in this event, for events 
 
 ## Overview
 
-Or, a representation of the amount of time remaining in the event, or a section of the event (period/quarter/etc.) for events where the clock counts DOWN.
+Use a `CPNowPlayingSportsClock` object to specify clock-related information for the current section of a sporting event. Clocks in sporting events either count up to reflect the elapsed time of the match or count down to indicate the amount of time remaining. For example, the clock in a hockey game counts down from an initial value of 20 minutes.
+
+Create a `CPNowPlayingSportsClock` object with the initial time information when configuring the Now Playing interface. Create additional instances throughout the match when gameplay pauses or resumes, or when you need to adjust the time on the clock. Assign your clock objects to the [CPNowPlayingSportsEventStatus](cpnowplayingsportseventstatus.md) object you use to report the state of the match to the Now Playing interface.
+
+Keep the clock in the Now Playing interface synchronized with the rest of your content. When the [paused](cpnowplayingsportsclock/ispaused.md) property is `false`, CarPlay increments and decrements the clock value once a second as a convenience so you don’t have to update the clock information yourself. However, CarPlay doesn’t make the updated clock value available to your app. When you need to create new [CPNowPlayingSportsClock](cpnowplayingsportsclock.md) objects, initialize them with actual game data to ensure the displayed clock remains synchronized with the rest of your content.
 
 ## Topics
 
-### Instance Properties
+### Creating a sports mode type
 
-- [countsUp](cpnowplayingsportsclock/countsup.md): If true, the timer is counting UP, so as to indicate an amount of time elapsed so far in this event.
-- [paused](cpnowplayingsportsclock/ispaused.md): Whether the clock should be paused, e.g. due to a stoppage in play.
-- [timeValue](cpnowplayingsportsclock/timevalue.md): The time value in the clock; either elapsed time or time remaining.
+- [initWithElapsedTime:paused:](cpnowplayingsportsclock/init%28elapsedtime_paused_%29.md): Creates a clock that counts up to measure the elapsed time from the specified value.
+- [initWithTimeRemaining:paused:](cpnowplayingsportsclock/init%28timeremaining_paused_%29.md): Creates a clock that counts down from the specified value.
 
-### Instance Methods
+### Getting the clock attributes
 
-- [initWithElapsedTime:paused:](cpnowplayingsportsclock/init%28elapsedtime_paused_%29.md): Represents a duration of time that has elapsed so far in this event, or play period of the event (quarter/inning/period).
-- [initWithTimeRemaining:paused:](cpnowplayingsportsclock/init%28timeremaining_paused_%29.md): Represents an amount of time remaining in the event, or play period of the event (quarter/inning/period).
+- [timeValue](cpnowplayingsportsclock/timevalue.md): The time value you specify at initialization.
+- [countsUp](cpnowplayingsportsclock/countsup.md): A Boolean value that indicates whether the event clock counts up.
+- [paused](cpnowplayingsportsclock/ispaused.md): A Boolean value that indicates whether the clock is paused.
 
 ## Relationships
 
@@ -95,3 +111,11 @@ Or, a representation of the amount of time remaining in the event, or a section 
 ### Conforms To
 
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
+
+## See Also
+
+### Sports mode content
+
+- [CPNowPlayingSportsTeam](cpnowplayingsportsteam.md): A type that specifies team-specific details, including the name, standings, and current score in the match.
+- [CPNowPlayingSportsTeamLogo](cpnowplayingsportsteamlogo.md): A type that manages logo information for a sports team.
+- [CPNowPlayingSportsEventStatus](cpnowplayingsportseventstatus.md): A type that manages match-focused information, including the event clock.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpimageoverlay
 
 # CPImageOverlay (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Class  
 **Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.4+
 
-An overlay that displays information over an image.
+A type that manages content you layer on top of a thumbnail image.
 
 ## Declaration
 
@@ -15,25 +15,33 @@ An overlay that displays information over an image.
 @MainActor class CPImageOverlay
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+Use a `CPImageOverlay` object to place text or a small image on top of the main image in a [CPThumbnailImage](cpthumbnailimage.md) object. Add text content when you want to display a badge on one of the thumbnail images you display in a list interface. Add an image to display an icon or other indicator on top of the thumbnail image instead. Because overlay content is separate from the thumbnail image, you can update it periodically. For example, you might update the badge value when someone reads some messages or plays some songs.
+
+You can add a `CPImageOverlay` object to a thumbnail image at creation time or any time later. Configure the content for the overlay and specify how you want to align the content. Overlays appear inside the top edge of the thumbnail image and with the alignment you specify.
+
 ## Topics
 
-### Initializers
+### Creating an image overlay
 
+- [init(image:alignment:)](cpimageoverlay/init%28image_alignment_%29.md): Creates an overlay that displays an image.
+- [init(text:textColor:backgroundColor:alignment:)](cpimageoverlay/init%28text_textcolor_backgroundcolor_alignment_%29.md): Creates an overlay that displays text in a colored badge.
 - [init(coder:)](cpimageoverlay/init%28coder_%29.md)
-- [init(image:alignment:)](cpimageoverlay/init%28image_alignment_%29.md): Initialize an overlay with a UIImage.
-- [init(text:textColor:backgroundColor:alignment:)](cpimageoverlay/init%28text_textcolor_backgroundcolor_alignment_%29.md): Initialize an overlay with properties that control the overlay’s appearance and text contents.
 
-### Instance Properties
+### Getting the overlay details
 
-- [alignment](cpimageoverlay/alignment-swift.property.md): The alignment for positioning the overlay.
-- [backgroundColor](cpimageoverlay/backgroundcolor.md): The background color of the overlay.
-- [image](cpimageoverlay/image.md): An optional image to display in the overlay.
-- [text](cpimageoverlay/text.md): The text displayed in the overlay.
-- [textColor](cpimageoverlay/textcolor.md): The color of the overlay text.
+- [image](cpimageoverlay/image.md): The image to display at top of the thumbnail.
+- [text](cpimageoverlay/text.md): The text to display in a badge at the top of the thumbnail.
+- [textColor](cpimageoverlay/textcolor.md): The color to apply to the badge’s text.
+- [backgroundColor](cpimageoverlay/backgroundcolor.md): The color to display behind the badge’s text.
 
-### Enumerations
+### Getting the overlay position
 
-- [CPImageOverlay.Alignment](cpimageoverlay/alignment-swift.enum.md): Alignment options for positioning.
+- [alignment](cpimageoverlay/alignment-swift.property.md): The alignment of the overlay inside the top edge of the thumbnail.
+- [CPImageOverlay.Alignment](cpimageoverlay/alignment-swift.enum.md): Constants that specify the placement of overlay images in a thumbnail.
 
 ## Relationships
 
@@ -53,13 +61,19 @@ An overlay that displays information over an image.
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 
+## See Also
+
+### Element overlays
+
+- [CPSportsOverlay](cpsportsoverlay.md): A type that displays sporting event details on top of a thumbnail image.
+
 # CPImageOverlay (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Class  
 **Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.4+
 
-An overlay that displays information over an image.
+A type that manages content you layer on top of a thumbnail image.
 
 ## Declaration
 
@@ -67,20 +81,32 @@ An overlay that displays information over an image.
 @interface CPImageOverlay : NSObject
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+Use a `CPImageOverlay` object to place text or a small image on top of the main image in a [CPThumbnailImage](cpthumbnailimage.md) object. Add text content when you want to display a badge on one of the thumbnail images you display in a list interface. Add an image to display an icon or other indicator on top of the thumbnail image instead. Because overlay content is separate from the thumbnail image, you can update it periodically. For example, you might update the badge value when someone reads some messages or plays some songs.
+
+You can add a `CPImageOverlay` object to a thumbnail image at creation time or any time later. Configure the content for the overlay and specify how you want to align the content. Overlays appear inside the top edge of the thumbnail image and with the alignment you specify.
+
 ## Topics
 
-### Instance Properties
+### Creating an image overlay
 
-- [alignment](cpimageoverlay/alignment-swift.property.md): The alignment for positioning the overlay.
-- [backgroundColor](cpimageoverlay/backgroundcolor.md): The background color of the overlay.
-- [image](cpimageoverlay/image.md): An optional image to display in the overlay.
-- [text](cpimageoverlay/text.md): The text displayed in the overlay.
-- [textColor](cpimageoverlay/textcolor.md): The color of the overlay text.
+- [initWithImage:alignment:](cpimageoverlay/init%28image_alignment_%29.md): Creates an overlay that displays an image.
+- [initWithText:textColor:backgroundColor:alignment:](cpimageoverlay/init%28text_textcolor_backgroundcolor_alignment_%29.md): Creates an overlay that displays text in a colored badge.
 
-### Instance Methods
+### Getting the overlay details
 
-- [initWithImage:alignment:](cpimageoverlay/init%28image_alignment_%29.md): Initialize an overlay with a UIImage.
-- [initWithText:textColor:backgroundColor:alignment:](cpimageoverlay/init%28text_textcolor_backgroundcolor_alignment_%29.md): Initialize an overlay with properties that control the overlay’s appearance and text contents.
+- [image](cpimageoverlay/image.md): The image to display at top of the thumbnail.
+- [text](cpimageoverlay/text.md): The text to display in a badge at the top of the thumbnail.
+- [textColor](cpimageoverlay/textcolor.md): The color to apply to the badge’s text.
+- [backgroundColor](cpimageoverlay/backgroundcolor.md): The color to display behind the badge’s text.
+
+### Getting the overlay position
+
+- [alignment](cpimageoverlay/alignment-swift.property.md): The alignment of the overlay inside the top edge of the thumbnail.
+- [CPImageOverlayAlignment](cpimageoverlay/alignment-swift.enum.md): Constants that specify the placement of overlay images in a thumbnail.
 
 ## Relationships
 
@@ -91,3 +117,9 @@ An overlay that displays information over an image.
 ### Conforms To
 
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
+
+## See Also
+
+### Element overlays
+
+- [CPSportsOverlay](cpsportsoverlay.md): A type that displays sporting event details on top of a thumbnail image.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptemplateapplicationscene/carwindow
 
 # carWindow (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+
 
-The window that belongs to the scene.
+The window that displays the scene’s content.
 
 ## Declaration
 
@@ -15,17 +15,11 @@ The window that belongs to the scene.
 var carWindow: CPWindow { get }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Use this property to access the window CarPlay creates for your scene. Only navigation apps have access to that window, and use it to draw their map content. All other categories of apps must use templates exclusively to draw their user interfaces.
-
-## See Also
-
-### Accessing the Window
-
-- [CPWindow](../cpwindow.md): A window that displays its content on the CarPlay screen.
+The system uses the scene’s window to manage its content. Navigation apps also use this window to display their custom map content. All other apps use a [CPInterfaceController](../cpinterfacecontroller.md) to present their interface content and don’t use this window.
 
 # carWindow (Objective-C)
 
@@ -33,7 +27,7 @@ Use this property to access the window CarPlay creates for your scene. Only navi
 **Kind:** Instance Property  
 **Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+
 
-The window that belongs to the scene.
+The window that displays the scene’s content.
 
 ## Declaration
 
@@ -41,14 +35,8 @@ The window that belongs to the scene.
 @property (nonatomic, strong, readonly, nonnull) CPWindow * carWindow;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Use this property to access the window CarPlay creates for your scene. Only navigation apps have access to that window, and use it to draw their map content. All other categories of apps must use templates exclusively to draw their user interfaces.
-
-## See Also
-
-### Accessing the Window
-
-- [CPWindow](../cpwindow.md): A window that displays its content on the CarPlay screen.
+The system uses the scene’s window to manage its content. Navigation apps also use this window to display their custom map content. All other apps use a [CPInterfaceController](../cpinterfacecontroller.md) to present their interface content and don’t use this window.

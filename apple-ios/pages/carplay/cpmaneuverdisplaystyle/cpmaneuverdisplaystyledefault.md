@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaneuverdisplaystyle/cpmaneuverdisplaystyledefault
 
 # CPManeuverDisplayStyleDefault
@@ -25,7 +25,7 @@ The visual layout for this display style is the same as [CPManeuverDisplayStyleL
 
 ## See Also
 
-### Display Styles
+### Getting the display styles
 
 - [CPManeuverDisplayStyleLeadingSymbol](leadingsymbol.md): The symbol appears before the instructions for the maneuver.
 - [CPManeuverDisplayStyleTrailingSymbol](trailingsymbol.md): The symbol appears after the instructions for the maneuver.

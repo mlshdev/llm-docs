@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplate/hidepanel(completion:)
 
 # hidePanel(completion:) (Swift)
@@ -23,6 +23,14 @@ func hidePanel() async throws -> Bool
 
 - `completion`: An optional block called when the overlay has been hidden.
 
+## See Also
+
+### Displaying overlay panels
+
+- [showPanel(\_:completion:)](showpanel%28__completion_%29.md): Shows an overlay with the specified panel.
+- [pushPanel(\_:completion:)](pushpanel%28__completion_%29.md): Pushes a new panel.
+- [popPanel(completion:)](poppanel%28completion_%29.md): Pops the top panel from the overlay’s panel stack.
+
 # hidePanelWithCompletion: (Objective-C)
 
 **Framework:** CarPlay  
@@ -40,3 +48,11 @@ Hides the overlay.
 ## Parameters
 
 - `completion`: An optional block called when the overlay has been hidden.
+
+## See Also
+
+### Displaying overlay panels
+
+- [showPanel:completion:](showpanel%28__completion_%29.md): Shows an overlay with the specified panel.
+- [pushPanel:completion:](pushpanel%28__completion_%29.md): Pushes a new panel.
+- [popPanelWithCompletion:](poppanel%28completion_%29.md): Pops the top panel from the overlay’s panel stack.

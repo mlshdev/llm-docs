@@ -1,7 +1,7 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-27_3-release-notes
 
-# iOS & iPadOS 27.3 Beta Release Notes
+# iOS & iPadOS 27.3 Beta 2 Release Notes
 
 **Kind:** Article
 
@@ -11,17 +11,43 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-The iOS & iPadOS 27.3 SDK provides support to develop apps for iPhone and iPad running iOS & iPadOS 27.3 beta. The SDK comes bundled with Xcode 27.3. For information on the compatibility requirements for Xcode 27.3, see [Xcode 27.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_3-release-notes).
+The iOS & iPadOS 27.3 SDK provides support to develop apps for iPhone and iPad running iOS & iPadOS 27.3 beta 2. The SDK comes bundled with Xcode 27.3. For information on the compatibility requirements for Xcode 27.3, see [Xcode 27.3 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-27_3-release-notes).
 
 <a id="App-Intents"></a>
 
 ### App Intents
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- The Video schema domain is now available for apps to integrate with Siri AI on tvOS, iOS, macOS, and visionOS. (189805051)
 
 <a id="Known-Issues"></a>
 
 #### Known Issues
 
 - If you define `authenticationPolicy` on an `AppEntity` or `AppEntity` property that requires unlock, Siri AI might not request an unlock before it displays these entities. (190573761)
+
+<a id="Apple-Video-Podcasts-in-the-TV-App"></a>
+
+### Apple Video Podcasts in the TV App
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- Apple Video Podcasts are now available in the Apple TV app. Watch full episodes of your favorite video podcasts, and pick up where you left off from Apple Podcasts. (192370477)
+
+<a id="CoreImage"></a>
+
+### CoreImage
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- CIRAWFilter now relies on resources that aren’t included with the operating system. To download them, use the `downloadresources` and `downloadallresources` methods of CIRAWFilter. (190766743)
 
 <a id="Live-Caller-ID-Lookup"></a>
 
@@ -37,7 +63,7 @@ The iOS & iPadOS 27.3 SDK provides support to develop apps for iPhone and iPad r
 
 #### Deprecations
 
-- Live Caller ID Lookup now requires the shard count in a service’s PIR configuration to be a power of two, for example 256, 512, 1024, or 2048. The system rejects a configuration whose shard count isn’t a power of two. Configurations that already use a power-of-two shard count work with earlier releases and need no changes. (191651833)
+- Live Caller ID Lookup now requires the shard count in a service’s PIR configuration to be a power of two, for example, 256, 512, 1024, or 2048. The system rejects a configuration whose shard count isn’t a power of two. Configurations that already use a power-of-two shard count work with earlier releases and need no changes. (191651833)
 
 <a id="NEURLFilter"></a>
 
@@ -57,6 +83,16 @@ The iOS & iPadOS 27.3 SDK provides support to develop apps for iPhone and iPad r
 - NEURLFilter now limits a service’s PIR configuration to at most 65,536 shards and requires the shard count to be a power of two, for example, 256, 512, 1024, or 2048. The system rejects a configuration that exceeds the limit or whose shard count isn’t a power of two. Configurations that already meet both constraints work with earlier releases and need no changes. (191651462)
 - Your NEURLFilter service URL and Privacy Pass issuer URL must now be declared statically in your app’s Info.plist, and providing them only at runtime is deprecated. Add an `NSPIRConfiguration` dictionary to your app’s Info.plist (not the URL filter extension’s) with a `PIRServerURL` key and a `PrivacyPassIssuerURL` key. `PIRServerURL` corresponds to `pirServerURL`, and `PrivacyPassIssuerURL` corresponds to `pirPrivacyPassIssuerURL` and defaults to `PIRServerURL` when absent. Each value should contain only the host name of your server. If you also set these values at runtime, they must match the Info.plist values exactly, or the system fails to start the filter with an invalid configuration error. (191651632)
 
+<a id="Siri"></a>
+
+### Siri
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- Siri AI on HomeView might not be set up properly when paired with an iPhone or iPad running the iOS or iPadOS 27.3 beta. (192952891)
+
 <a id="StoreKit"></a>
 
 ### StoreKit
@@ -72,6 +108,7 @@ The iOS & iPadOS 27.3 SDK provides support to develop apps for iPhone and iPad r
 #### Resolved Issues
 
 - Fixed: If you test Ask to Buy in the Sandbox environment while signed in to an iCloud account that is a member of a Family Sharing group, you might be unable to view or approve sandbox Ask to Buy requests. (190639717)
+- Multiseat invitation and data sharing consent APIs now take the original transaction ID of a multiseat subscription instead of its subscription group ID. `AppStore.presentMultiSeatInvitationSheet(from:originalTransactionID:)`, `AppStore.presentMultiSeatDataSharingConsentSheet(from:originalTransactionID:)`, `Product.SubscriptionInfo.multiSeatDataSharingConsentEligibility(originalTransactionID:)`, and the SwiftUI `multiSeatInvitationSheet(isPresented:originalTransactionID:onCompletion:)` and `multiSeatDataSharingConsentSheet(isPresented:originalTransactionID:onCompletion:)` modifiers accept the `originalID` of the subscription’s transaction, and the `multiSeatDataSharingConsentEligibility` instance property of `Product.SubscriptionInfo` is no longer available. To avoid a missing symbol crash, recompile your app with the latest SDK. (191322945)
 
 <a id="StoreKit-Testing-in-Xcode"></a>
 
@@ -82,14 +119,17 @@ The iOS & iPadOS 27.3 SDK provides support to develop apps for iPhone and iPad r
 #### Resolved Issues
 
 - Fixed: Making an in-app purchase for a subscription that is a member of a subscription bundle incorrectly allows the user to unbundle instead of throwing an error. (186018916)
+- Fixed: When you launch an app that uses `SKTestSession` for the first time, some StoreKit Test API calls might hang. (186670057) (FB24651858)
 
-<a id="Known-Issues"></a>
+<a id="SwiftUI"></a>
 
-#### Known Issues
+### SwiftUI
 
-- When you launch an app that uses `SKTestSession` for the first time, some StoreKit Test API calls might hang. (186670057) (FB24651858)
+<a id="Resolved-Issues"></a>
 
-  **Workaround:** Set a StoreKit configuration file in your scheme’s run options, then rerun the tests.
+#### Resolved Issues
+
+- In apps built with the iOS 26 SDK, `ScrollEdgeEffectStyle.soft` renders a fully transparent edge above a `safeAreaBar(edge:)` when run on iOS 27. In iOS 27.3 and later, these apps get the iOS 27 soft edge effect. (188312290)
 
 <a id="SwiftUI"></a>
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplatedelegate/maptemplate(_:displaystylefor:)
 
 # mapTemplate(\_:displayStyleFor:) (Swift)
@@ -34,7 +34,7 @@ The display style only applies to the second maneuver that you provide in the na
 
 ## See Also
 
-### Setting the Display Style
+### Configuring the map’s appearance
 
 - [CPManeuverDisplayStyle](../cpmaneuverdisplaystyle.md): A display style that determines the visual layout for a maneuver.
 
@@ -71,6 +71,6 @@ The display style only applies to the second maneuver that you provide in the na
 
 ## See Also
 
-### Setting the Display Style
+### Configuring the map’s appearance
 
 - [CPManeuverDisplayStyle](../cpmaneuverdisplaystyle.md): A display style that determines the visual layout for a maneuver.

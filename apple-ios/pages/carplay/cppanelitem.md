@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppanelitem
 
 # CPPanelItem (Swift)
@@ -23,16 +23,19 @@ The `CPPanelItem` type defines the default behaviors for content you display in 
 
 ## Topics
 
-### Initializers
+### Initializing the panel
 
-- [init(coder:)](cppanelitem/init%28coder_%29.md)
-- [init(gridButtons:)](cppanelitem/init%28gridbuttons_%29.md): Initialize the item using one or more grid buttons.
 - [init(listItem:)](cppanelitem/init%28listitem_%29.md): Initialize the item using a list item.
+- [init(gridButtons:)](cppanelitem/init%28gridbuttons_%29.md): Initialize the item using one or more grid buttons.
+- [init(coder:)](cppanelitem/init%28coder_%29.md)
 
-### Instance Properties
+### Configuring the panel’s behavior
 
 - [isEnabled](cppanelitem/isenabled.md): A Boolean value that indicates whether the item supports interactions.
 - [showsBottomSeparator](cppanelitem/showsbottomseparator.md): A Boolean value that indicates whether a separator line appears at the bottom edge of the item.
+
+### Accessing app-specific data
+
 - [userInfo](cppanelitem/userinfo.md): Custom information you want to store with the item.
 
 ## Relationships
@@ -56,6 +59,17 @@ The `CPPanelItem` type defines the default behaviors for content you display in 
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
 
+## See Also
+
+### Common types
+
+- [CPTemplate](cptemplate.md): An abstract base class for interface templates.
+- [CPTextButton](cptextbutton.md): A button that displays a stylized title.
+- [CPButton](cpbutton.md): A button that displays an image and invokes a handler when the user taps it.
+- [CPImageSet](cpimageset.md): Light and dark representations of an image.
+- [CPPanel](cppanel.md): A type that provides the common behaviors for panels you display on top of your app’s content.
+- [CPPanelButtonConfiguration](cppanelbuttonconfiguration.md): A type that provides the common behaviors for a button layout in a panel.
+
 # CPPanelItem (Objective-C)
 
 **Framework:** CarPlay  
@@ -78,16 +92,19 @@ The `CPPanelItem` type defines the default behaviors for content you display in 
 
 ## Topics
 
-### Instance Properties
+### Initializing the panel
+
+- [initWithListItem:](cppanelitem/init%28listitem_%29.md): Initialize the item using a list item.
+- [initWithGridButtons:](cppanelitem/init%28gridbuttons_%29.md): Initialize the item using one or more grid buttons.
+
+### Configuring the panel’s behavior
 
 - [enabled](cppanelitem/isenabled.md): A Boolean value that indicates whether the item supports interactions.
 - [showsBottomSeparator](cppanelitem/showsbottomseparator.md): A Boolean value that indicates whether a separator line appears at the bottom edge of the item.
+
+### Accessing app-specific data
+
 - [userInfo](cppanelitem/userinfo.md): Custom information you want to store with the item.
-
-### Instance Methods
-
-- [initWithGridButtons:](cppanelitem/init%28gridbuttons_%29.md): Initialize the item using one or more grid buttons.
-- [initWithListItem:](cppanelitem/init%28listitem_%29.md): Initialize the item using a list item.
 
 ## Relationships
 
@@ -102,3 +119,14 @@ The `CPPanelItem` type defines the default behaviors for content you display in 
 ### Conforms To
 
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
+
+## See Also
+
+### Common types
+
+- [CPTemplate](cptemplate.md): An abstract base class for interface templates.
+- [CPTextButton](cptextbutton.md): A button that displays a stylized title.
+- [CPButton](cpbutton.md): A button that displays an image and invokes a handler when the user taps it.
+- [CPImageSet](cpimageset.md): Light and dark representations of an image.
+- [CPPanel](cppanel.md): A type that provides the common behaviors for panels you display on top of your app’s content.
+- [CPPanelButtonConfiguration](cppanelbuttonconfiguration.md): A type that provides the common behaviors for a button layout in a panel.

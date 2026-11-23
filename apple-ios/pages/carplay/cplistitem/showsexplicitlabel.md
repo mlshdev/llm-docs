@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitem/showsexplicitlabel
 
 # showsExplicitLabel (Swift)
@@ -7,9 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ (deprecated in 14.0) · iPadOS 14.0+ (deprecated in 14.0) · Mac Catalyst 14.0+ (deprecated in 14.0)
 
-A Boolean value that determines whether the list item displays its explicit content indicator.
-
-> Use [isExplicitContent](isexplicitcontent.md) instead.
+If YES, a cell displaying this list item will render with an explicit label to the trailing edge of the text
 
 ## Declaration
 
@@ -17,18 +15,18 @@ A Boolean value that determines whether the list item displays its explicit cont
 var showsExplicitLabel: Bool { get set }
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+Defaults to NO.
+
 ## See Also
 
-### Deprecated Properties
+### Deprecated
 
-- [showsDisclosureIndicator](showsdisclosureindicator.md): Deprecated. A Boolean value that indicates whether the list item cell shows a disclosure indicator on its trailing edge.
-- [setRootTemplate(\_:animated:)](../cpinterfacecontroller/setroottemplate%28__animated_%29.md): Deprecated. Sets the root template, starting a new stack for the template navigation hierarchy.
-- [pushTemplate(\_:animated:)](../cpinterfacecontroller/pushtemplate%28__animated_%29.md): Deprecated. Pushes a template onto the navigation stack and updates the CarPlay display.
-- [popTemplate(animated:)](../cpinterfacecontroller/poptemplate%28animated_%29.md): Deprecated. Pops the top template from the navigation stack and updates the CarPlay display.
-- [popToRootTemplate(animated:)](../cpinterfacecontroller/poptoroottemplate%28animated_%29.md): Deprecated. Pops all templates on the stack—except the root template—and updates the CarPlay display.
-- [pop(to:animated:)](../cpinterfacecontroller/pop%28to_animated_%29.md): Deprecated. Pops templates until the specified template is at the top of the navigation stack.
-- [presentTemplate(\_:animated:)](../cpinterfacecontroller/presenttemplate%28__animated_%29.md): Deprecated. Presents a template modally.
-- [dismissTemplate(animated:)](../cpinterfacecontroller/dismisstemplate%28animated_%29.md): Deprecated. Dismisses the template that the interface controller is displaying modally.
+- [init(text:detailText:image:showsDisclosureIndicator:)](init%28text_detailtext_image_showsdisclosureindicator_%29.md): Deprecated. Initialize a list item with text, detailtext, an image, and a disclosure indicator.
+- [showsDisclosureIndicator](showsdisclosureindicator.md): Deprecated. If YES, a cell displaying this list item will render with a disclosure indicator in the trailing side of the cell.
 
 # showsExplicitLabel (Objective-C)
 
@@ -36,9 +34,7 @@ var showsExplicitLabel: Bool { get set }
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ (deprecated in 14.0) · iPadOS 14.0+ (deprecated in 14.0) · Mac Catalyst 14.0+ (deprecated in 14.0)
 
-A Boolean value that determines whether the list item displays its explicit content indicator.
-
-> Use [explicitContent](isexplicitcontent.md) instead.
+If YES, a cell displaying this list item will render with an explicit label to the trailing edge of the text
 
 ## Declaration
 
@@ -46,15 +42,15 @@ A Boolean value that determines whether the list item displays its explicit cont
 @property (nonatomic, assign) BOOL showsExplicitLabel;
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+Defaults to NO.
+
 ## See Also
 
-### Deprecated Properties
+### Deprecated
 
-- [showsDisclosureIndicator](showsdisclosureindicator.md): Deprecated. A Boolean value that indicates whether the list item cell shows a disclosure indicator on its trailing edge.
-- [setRootTemplate:animated:](../cpinterfacecontroller/setroottemplate%28__animated_%29.md): Deprecated. Sets the root template, starting a new stack for the template navigation hierarchy.
-- [pushTemplate:animated:](../cpinterfacecontroller/pushtemplate%28__animated_%29.md): Deprecated. Pushes a template onto the navigation stack and updates the CarPlay display.
-- [popTemplateAnimated:](../cpinterfacecontroller/poptemplate%28animated_%29.md): Deprecated. Pops the top template from the navigation stack and updates the CarPlay display.
-- [popToRootTemplateAnimated:](../cpinterfacecontroller/poptoroottemplate%28animated_%29.md): Deprecated. Pops all templates on the stack—except the root template—and updates the CarPlay display.
-- [popToTemplate:animated:](../cpinterfacecontroller/pop%28to_animated_%29.md): Deprecated. Pops templates until the specified template is at the top of the navigation stack.
-- [presentTemplate:animated:](../cpinterfacecontroller/presenttemplate%28__animated_%29.md): Deprecated. Presents a template modally.
-- [dismissTemplateAnimated:](../cpinterfacecontroller/dismisstemplate%28animated_%29.md): Deprecated. Dismisses the template that the interface controller is displaying modally.
+- [initWithText:detailText:image:showsDisclosureIndicator:](init%28text_detailtext_image_showsdisclosureindicator_%29.md): Deprecated. Initialize a list item with text, detailtext, an image, and a disclosure indicator.
+- [showsDisclosureIndicator](showsdisclosureindicator.md): Deprecated. If YES, a cell displaying this list item will render with a disclosure indicator in the trailing side of the cell.

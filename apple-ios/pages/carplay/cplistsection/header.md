@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistsection/header
 
 # header (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-The section’s header text.
+The main text to display in the header area of the section.
 
 ## Declaration
 
@@ -17,9 +17,11 @@ var header: String? { get }
 
 ## See Also
 
-### Getting Supplementary Information
+### Getting the section’s header content
 
-- [sectionIndexTitle](sectionindextitle.md): The section’s index title.
+- [headerSubtitle](headersubtitle.md): The secondary text to display in the header area of the section.
+- [headerButton](headerbutton.md): The button to display in the header area of the section.
+- [headerImage](headerimage.md): The image to display in the header area of the section.
 
 # header (Objective-C)
 
@@ -27,7 +29,7 @@ var header: String? { get }
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-The section’s header text.
+The main text to display in the header area of the section.
 
 ## Declaration
 
@@ -37,6 +39,8 @@ The section’s header text.
 
 ## See Also
 
-### Getting Supplementary Information
+### Getting the section’s header content
 
-- [sectionIndexTitle](sectionindextitle.md): The section’s index title.
+- [headerSubtitle](headersubtitle.md): The secondary text to display in the header area of the section.
+- [headerButton](headerbutton.md): The button to display in the header area of the section.
+- [headerImage](headerimage.md): The image to display in the header area of the section.

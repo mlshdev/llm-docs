@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpgridtemplate/maximumgridbuttonimagesize
 
 # maximumGridButtonImageSize (Swift)
@@ -21,6 +21,12 @@ class var maximumGridButtonImageSize: CGSize { get }
 
 To properly size your list images, your app should size them to the display scale of the car screen. See -\[CPInterfaceController carTraitCollection\].
 
+## See Also
+
+### Creating a grid template
+
+- [init(title:gridButtons:)](init%28title_gridbuttons_%29.md): Creates a grid template with a title and a set of buttons.
+
 # maximumGridButtonImageSize (Objective-C)
 
 **Framework:** CarPlay  
@@ -40,3 +46,9 @@ The expected image size for your @c CPGridButton.
 ## Discussion
 
 To properly size your list images, your app should size them to the display scale of the car screen. See -\[CPInterfaceController carTraitCollection\].
+
+## See Also
+
+### Creating a grid template
+
+- [initWithTitle:gridButtons:](init%28title_gridbuttons_%29.md): Creates a grid template with a title and a set of buttons.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessagelistitem/conversationidentifier
 
 # conversationIdentifier (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The conversation’s unique identifier.
+The app-specific identifier for the message conversation.
 
 ## Declaration
 
@@ -15,19 +15,17 @@ The conversation’s unique identifier.
 var conversationIdentifier: String? { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Provide the value that your app uses to identify the conversation. Siri passes this value to your app when the user selects the list item so that you can take any necessary action, such as, updating your message store to mark the conversation as read.
-
-CarPlay doesn’t display this value to the user.
+This property represents a unique string your app can use to identify the message conversation. CarPlay passes this string to your SiriKit intents during the message flows, but doesn’t use it otherwise. If you initialized the message list item with a contact, the value of this property is `nil`.
 
 ## See Also
 
-### Managing the Message Context
+### Getting the message context
 
-- [phoneOrEmailAddress](phoneoremailaddress.md): The contact’s phone number or email address.
+- [phoneOrEmailAddress](phoneoremailaddress.md): The phone or email address of the contact.
 
 # conversationIdentifier (Objective-C)
 
@@ -35,7 +33,7 @@ CarPlay doesn’t display this value to the user.
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The conversation’s unique identifier.
+The app-specific identifier for the message conversation.
 
 ## Declaration
 
@@ -43,16 +41,14 @@ The conversation’s unique identifier.
 @property (nonatomic, copy, nullable) NSString * conversationIdentifier;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Provide the value that your app uses to identify the conversation. Siri passes this value to your app when the user selects the list item so that you can take any necessary action, such as, updating your message store to mark the conversation as read.
-
-CarPlay doesn’t display this value to the user.
+This property represents a unique string your app can use to identify the message conversation. CarPlay passes this string to your SiriKit intents during the message flows, but doesn’t use it otherwise. If you initialized the message list item with a contact, the value of this property is `nil`.
 
 ## See Also
 
-### Managing the Message Context
+### Getting the message context
 
-- [phoneOrEmailAddress](phoneoremailaddress.md): The contact’s phone number or email address.
+- [phoneOrEmailAddress](phoneoremailaddress.md): The phone or email address of the contact.

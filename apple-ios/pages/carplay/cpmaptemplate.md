@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplate
 
 # CPMapTemplate (Swift)
@@ -14,6 +14,10 @@ A template that displays a navigation overlay that your app draws on the map.
 ```swift
 @MainActor class CPMapTemplate
 ```
+
+## Mentioned In
+
+- [Building your app’s initial CarPlay interface](building-your-apps-initial-carplay-interface.md)
 
 <a id="overview"></a>
 
@@ -35,23 +39,19 @@ You can display additional map buttons by providing an array of [CPMapButton](cp
 
 ## Topics
 
-### Configuring Map Templates
+### Configuring the map template
 
 - [automaticallyHidesNavigationBar](cpmaptemplate/automaticallyhidesnavigationbar.md): A Boolean value that indicates whether the template should automatically hide the navigation bar.
 - [hidesButtonsWithNavigationBar](cpmaptemplate/hidesbuttonswithnavigationbar.md): A Boolean value that tells the system to hide the map buttons when hiding the navigation bar.
 - [guidanceBackgroundColor](cpmaptemplate/guidancebackgroundcolor.md): The background color the map template uses when displaying guidance.
+- [mapButtons](cpmaptemplate/mapbuttons.md): An array of map buttons on the trailing bottom corner of the map template.
 
-### Handling Map Template Events
+### Responding to map-related events
 
 - [mapDelegate](cpmaptemplate/mapdelegate.md): The object that serves as the delegate of the map template.
 - [CPMapTemplateDelegate](cpmaptemplatedelegate.md): The protocol an object implements to handle events from a map template.
 
-### Managing Map Buttons
-
-- [mapButtons](cpmaptemplate/mapbuttons.md): An array of map buttons on the trailing bottom corner of the map template.
-- [CPMapButton](cpmapbutton.md): A button that represents an action that a map template displays on the CarPlay screen.
-
-### Displaying Trip Previews
+### Displaying trip previews
 
 - [showTripPreviews(\_:textConfiguration:)](cpmaptemplate/showtrippreviews%28__textconfiguration_%29.md): Displays the preview for one or more trips, and allows route selection.
 - [showTripPreviews(\_:selectedTrip:textConfiguration:)](cpmaptemplate/showtrippreviews%28__selectedtrip_textconfiguration_%29.md): Displays the previews for a collection of trips, with a single selected trip.
@@ -59,12 +59,7 @@ You can display additional map buttons by providing an array of [CPMapButton](cp
 - [showRouteChoicesPreview(for:textConfiguration:)](cpmaptemplate/showroutechoicespreview%28for_textconfiguration_%29.md): Displays the route choices for a single trip.
 - [CPTripPreviewTextConfiguration](cptrippreviewtextconfiguration.md): A configuration object for changing the button titles on a trip preview.
 
-### Navigating a Trip
-
-- [startNavigationSession(for:)](cpmaptemplate/startnavigationsession%28for_%29.md): Begins navigational guidance for a trip.
-- [CPNavigationSession](cpnavigationsession.md): An object that represents an active route guidance session.
-
-### Providing Trip Estimates
+### Providing trip estimates
 
 - [updateEstimates(\_:for:)](cpmaptemplate/updateestimates%28__for_%29.md): Updates travel estimates, such as arrival time and the remaining time and distance for a trip.
 - [update(\_:for:with:)](cpmaptemplate/update%28__for_with_%29.md): Updates travel estimates, such as arrival time and the remaining time and distance for a trip, with the specified time-remaining color.
@@ -72,25 +67,28 @@ You can display additional map buttons by providing an array of [CPMapButton](cp
 - [tripEstimateStyle](cpmaptemplate/tripestimatestyle.md): The style that the map template uses when displaying trip estimates during active nagivation.
 - [CPTripEstimateStyle](cptripestimatestyle.md): The set of display styles for trip estimates.
 
-### Displaying a Navigation Alert
+### Starting navigation for a trip
+
+- [startNavigationSession(for:)](cpmaptemplate/startnavigationsession%28for_%29.md): Begins navigational guidance for a trip.
+
+### Displaying navigation alerts
 
 - [present(navigationAlert:animated:)](cpmaptemplate/present%28navigationalert_animated_%29.md): Displays a navigation alert on the map template.
 - [dismissNavigationAlert(animated:completion:)](cpmaptemplate/dismissnavigationalert%28animated_completion_%29.md): Tells the map template to dismiss the visable navigation alert.
 - [currentNavigationAlert](cpmaptemplate/currentnavigationalert.md): The visible navigation alert.
-- [CPNavigationAlert](cpnavigationalert.md): An alert that displays map- or navigation-related information to the user.
 
-### Panning the Map
+### Displaying overlay panels
+
+- [showPanel(\_:completion:)](cpmaptemplate/showpanel%28__completion_%29.md): Shows an overlay with the specified panel.
+- [hidePanel(completion:)](cpmaptemplate/hidepanel%28completion_%29.md): Hides the overlay.
+- [pushPanel(\_:completion:)](cpmaptemplate/pushpanel%28__completion_%29.md): Pushes a new panel.
+- [popPanel(completion:)](cpmaptemplate/poppanel%28completion_%29.md): Pops the top panel from the overlay’s panel stack.
+
+### Displaying the panning interface
 
 - [showPanningInterface(animated:)](cpmaptemplate/showpanninginterface%28animated_%29.md): Shows the panning interface on the map.
 - [dismissPanningInterface(animated:)](cpmaptemplate/dismisspanninginterface%28animated_%29.md): Dismisses the panning interface.
 - [isPanningInterfaceVisible](cpmaptemplate/ispanninginterfacevisible.md): A Boolean value that indicates whether the map template is displaying the panning interface.
-
-### Instance Methods
-
-- [hidePanel(completion:)](cpmaptemplate/hidepanel%28completion_%29.md): Hides the overlay.
-- [popPanel(completion:)](cpmaptemplate/poppanel%28completion_%29.md): Pops the top panel from the overlay’s panel stack.
-- [pushPanel(\_:completion:)](cpmaptemplate/pushpanel%28__completion_%29.md): Pushes a new panel.
-- [showPanel(\_:completion:)](cpmaptemplate/showpanel%28__completion_%29.md): Shows an overlay with the specified panel.
 
 ## Relationships
 
@@ -114,13 +112,20 @@ You can display additional map buttons by providing an array of [CPMapButton](cp
 
 ## See Also
 
-### Navigation
+### Interface templates
 
-- [Integrating CarPlay with Your Navigation App](integrating-carplay-with-your-navigation-app.md): Configure your navigation app to work with CarPlay by displaying your custom map and directions.
-- [CPTemplateApplicationDashboardScene](cptemplateapplicationdashboardscene.md): A CarPlay scene that controls your app’s dashboard navigation window.
-- [CPTemplateApplicationDashboardSceneDelegate](cptemplateapplicationdashboardscenedelegate.md): The methods for responding to the life-cycle events of your navigation app’s dashboard scene.
+- [CPTabBarTemplate](cptabbartemplate.md): A container template that displays and manages other templates, presenting them as tabs.
+- [CPListTemplate](cplisttemplate.md): A template that displays a single-column list of items in one of several visual styles.
+- [CPGridTemplate](cpgridtemplate.md): A template that displays and manages a grid of items.
+- [CPNowPlayingTemplate](cpnowplayingtemplate.md): A shared system template that shows the currently selected audio content and offers controls to manage playback.
+- [CPPointOfInterestTemplate](cppointofinteresttemplate.md): A template that displays a map with selectable points of interest.
+- [CPInformationTemplate](cpinformationtemplate.md): A template that provides information for a point of interest, food order, parking location, or charging location.
+- [CPContactTemplate](cpcontacttemplate.md): A template that displays information about a person or a business.
 - [CPSearchTemplate](cpsearchtemplate.md): A template that provides the ability to search for a destination and see a list of search results.
 - [CPVoiceControlTemplate](cpvoicecontroltemplate.md): A template that displays a voice control indicator during audio input.
+- [CPActionSheetTemplate](cpactionsheettemplate.md): A template that displays a modal action sheet.
+- [CPAlertTemplate](cpalerttemplate.md): A template that displays a modal alert.
+- [All templates and supporting types](all-templates-and-supporting-types.md): Explore the templates you use to build the interface of your CarPlay app.
 
 # CPMapTemplate (Objective-C)
 
@@ -135,6 +140,10 @@ A template that displays a navigation overlay that your app draws on the map.
 ```objectivec
 @interface CPMapTemplate : CPTemplate
 ```
+
+## Mentioned In
+
+- [Building your app’s initial CarPlay interface](building-your-apps-initial-carplay-interface.md)
 
 <a id="overview"></a>
 
@@ -156,23 +165,19 @@ You can display additional map buttons by providing an array of [CPMapButton](cp
 
 ## Topics
 
-### Configuring Map Templates
+### Configuring the map template
 
 - [automaticallyHidesNavigationBar](cpmaptemplate/automaticallyhidesnavigationbar.md): A Boolean value that indicates whether the template should automatically hide the navigation bar.
 - [hidesButtonsWithNavigationBar](cpmaptemplate/hidesbuttonswithnavigationbar.md): A Boolean value that tells the system to hide the map buttons when hiding the navigation bar.
 - [guidanceBackgroundColor](cpmaptemplate/guidancebackgroundcolor.md): The background color the map template uses when displaying guidance.
+- [mapButtons](cpmaptemplate/mapbuttons.md): An array of map buttons on the trailing bottom corner of the map template.
 
-### Handling Map Template Events
+### Responding to map-related events
 
 - [mapDelegate](cpmaptemplate/mapdelegate.md): The object that serves as the delegate of the map template.
 - [CPMapTemplateDelegate](cpmaptemplatedelegate.md): The protocol an object implements to handle events from a map template.
 
-### Managing Map Buttons
-
-- [mapButtons](cpmaptemplate/mapbuttons.md): An array of map buttons on the trailing bottom corner of the map template.
-- [CPMapButton](cpmapbutton.md): A button that represents an action that a map template displays on the CarPlay screen.
-
-### Displaying Trip Previews
+### Displaying trip previews
 
 - [showTripPreviews:textConfiguration:](cpmaptemplate/showtrippreviews%28__textconfiguration_%29.md): Displays the preview for one or more trips, and allows route selection.
 - [showTripPreviews:selectedTrip:textConfiguration:](cpmaptemplate/showtrippreviews%28__selectedtrip_textconfiguration_%29.md): Displays the previews for a collection of trips, with a single selected trip.
@@ -180,12 +185,7 @@ You can display additional map buttons by providing an array of [CPMapButton](cp
 - [showRouteChoicesPreviewForTrip:textConfiguration:](cpmaptemplate/showroutechoicespreview%28for_textconfiguration_%29.md): Displays the route choices for a single trip.
 - [CPTripPreviewTextConfiguration](cptrippreviewtextconfiguration.md): A configuration object for changing the button titles on a trip preview.
 
-### Navigating a Trip
-
-- [startNavigationSessionForTrip:](cpmaptemplate/startnavigationsession%28for_%29.md): Begins navigational guidance for a trip.
-- [CPNavigationSession](cpnavigationsession.md): An object that represents an active route guidance session.
-
-### Providing Trip Estimates
+### Providing trip estimates
 
 - [updateTravelEstimates:forTrip:](cpmaptemplate/updateestimates%28__for_%29.md): Updates travel estimates, such as arrival time and the remaining time and distance for a trip.
 - [updateTravelEstimates:forTrip:withTimeRemainingColor:](cpmaptemplate/update%28__for_with_%29.md): Updates travel estimates, such as arrival time and the remaining time and distance for a trip, with the specified time-remaining color.
@@ -193,25 +193,28 @@ You can display additional map buttons by providing an array of [CPMapButton](cp
 - [tripEstimateStyle](cpmaptemplate/tripestimatestyle.md): The style that the map template uses when displaying trip estimates during active nagivation.
 - [CPTripEstimateStyle](cptripestimatestyle.md): The set of display styles for trip estimates.
 
-### Displaying a Navigation Alert
+### Starting navigation for a trip
+
+- [startNavigationSessionForTrip:](cpmaptemplate/startnavigationsession%28for_%29.md): Begins navigational guidance for a trip.
+
+### Displaying navigation alerts
 
 - [presentNavigationAlert:animated:](cpmaptemplate/present%28navigationalert_animated_%29.md): Displays a navigation alert on the map template.
 - [dismissNavigationAlertAnimated:completion:](cpmaptemplate/dismissnavigationalert%28animated_completion_%29.md): Tells the map template to dismiss the visable navigation alert.
 - [currentNavigationAlert](cpmaptemplate/currentnavigationalert.md): The visible navigation alert.
-- [CPNavigationAlert](cpnavigationalert.md): An alert that displays map- or navigation-related information to the user.
 
-### Panning the Map
+### Displaying overlay panels
+
+- [showPanel:completion:](cpmaptemplate/showpanel%28__completion_%29.md): Shows an overlay with the specified panel.
+- [hidePanelWithCompletion:](cpmaptemplate/hidepanel%28completion_%29.md): Hides the overlay.
+- [pushPanel:completion:](cpmaptemplate/pushpanel%28__completion_%29.md): Pushes a new panel.
+- [popPanelWithCompletion:](cpmaptemplate/poppanel%28completion_%29.md): Pops the top panel from the overlay’s panel stack.
+
+### Displaying the panning interface
 
 - [showPanningInterfaceAnimated:](cpmaptemplate/showpanninginterface%28animated_%29.md): Shows the panning interface on the map.
 - [dismissPanningInterfaceAnimated:](cpmaptemplate/dismisspanninginterface%28animated_%29.md): Dismisses the panning interface.
 - [panningInterfaceVisible](cpmaptemplate/ispanninginterfacevisible.md): A Boolean value that indicates whether the map template is displaying the panning interface.
-
-### Instance Methods
-
-- [hidePanelWithCompletion:](cpmaptemplate/hidepanel%28completion_%29.md): Hides the overlay.
-- [popPanelWithCompletion:](cpmaptemplate/poppanel%28completion_%29.md): Pops the top panel from the overlay’s panel stack.
-- [pushPanel:completion:](cpmaptemplate/pushpanel%28__completion_%29.md): Pushes a new panel.
-- [showPanel:completion:](cpmaptemplate/showpanel%28__completion_%29.md): Shows an overlay with the specified panel.
 
 ## Relationships
 
@@ -225,10 +228,17 @@ You can display additional map buttons by providing an array of [CPMapButton](cp
 
 ## See Also
 
-### Navigation
+### Interface templates
 
-- [Integrating CarPlay with Your Navigation App](integrating-carplay-with-your-navigation-app.md): Configure your navigation app to work with CarPlay by displaying your custom map and directions.
-- [CPTemplateApplicationDashboardScene](cptemplateapplicationdashboardscene.md): A CarPlay scene that controls your app’s dashboard navigation window.
-- [CPTemplateApplicationDashboardSceneDelegate](cptemplateapplicationdashboardscenedelegate.md): The methods for responding to the life-cycle events of your navigation app’s dashboard scene.
+- [CPTabBarTemplate](cptabbartemplate.md): A container template that displays and manages other templates, presenting them as tabs.
+- [CPListTemplate](cplisttemplate.md): A template that displays a single-column list of items in one of several visual styles.
+- [CPGridTemplate](cpgridtemplate.md): A template that displays and manages a grid of items.
+- [CPNowPlayingTemplate](cpnowplayingtemplate.md): A shared system template that shows the currently selected audio content and offers controls to manage playback.
+- [CPPointOfInterestTemplate](cppointofinteresttemplate.md): A template that displays a map with selectable points of interest.
+- [CPInformationTemplate](cpinformationtemplate.md): A template that provides information for a point of interest, food order, parking location, or charging location.
+- [CPContactTemplate](cpcontacttemplate.md): A template that displays information about a person or a business.
 - [CPSearchTemplate](cpsearchtemplate.md): A template that provides the ability to search for a destination and see a list of search results.
 - [CPVoiceControlTemplate](cpvoicecontroltemplate.md): A template that displays a voice control indicator during audio input.
+- [CPActionSheetTemplate](cpactionsheettemplate.md): A template that displays a modal action sheet.
+- [CPAlertTemplate](cpalerttemplate.md): A template that displays a modal alert.
+- [All templates and supporting types](all-templates-and-supporting-types.md): Explore the templates you use to build the interface of your CarPlay app.

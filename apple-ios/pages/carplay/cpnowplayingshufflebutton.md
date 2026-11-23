@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingshufflebutton
 
 # CPNowPlayingShuffleButton (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Class  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A button for cycling through the available shuffle modes.
+A button for toggling shuffle mode on and off.
 
 ## Declaration
 
@@ -19,9 +19,13 @@ A button for cycling through the available shuffle modes.
 
 ## Overview
 
-`CPNowPlayingShuffleButton` is a concrete subclass of [CPNowPlayingButton](cpnowplayingbutton.md). Use the button’s handler to invoke your existing functionality for cycling through shuffle modes, using the same [MPChangeShuffleModeCommand](https://developer.apple.com/documentation/mediaplayer/mpchangeshufflemodecommand) that you provide to [MPRemoteCommandCenter](https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter).
+Include the `CPNowPlayingShuffleButton` in your Now Playing template if your app supports different shuffle modes. The system provides the appearance of the button and automatically updates the appearance in response to interactions. You use the button to update your app’s behavior when someone enables or disables shuffle mode.
 
-CarPlay uses `MPRemoteCommandCenter` to observe changes to the shuffle mode and updates the button’s appearance accordingly.
+Create the button and add it as one of the [nowPlayingButtons](cpnowplayingtemplate/nowplayingbuttons.md) in your Now Playing template. At creation time, provide a handler you want the system to call when someone interacts with the button, and use your handler to enable and disable shuffle mode for your app’s playback queue.
+
+> **Note**
+
+> CarPlay uses the shared [MPRemoteCommandCenter](https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter) object to observe changes to shuffle mode and update the button’s appearance. If your app supports the command center object, provide the same behavior in your button’s handler as you provide for the [MPChangeShuffleModeCommand](https://developer.apple.com/documentation/mediaplayer/mpchangeshufflemodecommand) type.
 
 ## Relationships
 
@@ -44,16 +48,14 @@ CarPlay uses `MPRemoteCommandCenter` to observe changes to the shuffle mode and 
 
 ## See Also
 
-### Managing the Template’s Buttons
+### Now Playing buttons
 
-- [nowPlayingButtons](cpnowplayingtemplate/nowplayingbuttons.md): The Now Playing template’s playback control buttons.
-- [updateNowPlayingButtons(\_:)](cpnowplayingtemplate/updatenowplayingbuttons%28__%29.md): Updates the playback control buttons the template displays.
-- [CPNowPlayingButton](cpnowplayingbutton.md): The abstract base class that Now Playing template buttons use.
-- [CPNowPlayingImageButton](cpnowplayingimagebutton.md): A button that displays an image.
-- [CPNowPlayingAddToLibraryButton](cpnowplayingaddtolibrarybutton.md): A button for adding the current playing item to a collection.
-- [CPNowPlayingMoreButton](cpnowplayingmorebutton.md): A button for presenting more options to the user.
-- [CPNowPlayingPlaybackRateButton](cpnowplayingplaybackratebutton.md): A button for cycling through the available playback rates.
 - [CPNowPlayingRepeatButton](cpnowplayingrepeatbutton.md): A button for cycling through the available repeat modes.
+- [CPNowPlayingPlaybackRateButton](cpnowplayingplaybackratebutton.md): A button for changing the playback rate of the media.
+- [CPNowPlayingAddToLibraryButton](cpnowplayingaddtolibrarybutton.md): A button for adding the current item to a collection, such as the person’s library.
+- [CPNowPlayingMoreButton](cpnowplayingmorebutton.md): A button for displaying additional playback options.
+- [CPNowPlayingImageButton](cpnowplayingimagebutton.md): A custom Now Playing button that displays an image.
+- [CPNowPlayingButton](cpnowplayingbutton.md): The abstract base class for buttons in the Now Playing interface.
 
 # CPNowPlayingShuffleButton (Objective-C)
 
@@ -61,7 +63,7 @@ CarPlay uses `MPRemoteCommandCenter` to observe changes to the shuffle mode and 
 **Kind:** Class  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A button for cycling through the available shuffle modes.
+A button for toggling shuffle mode on and off.
 
 ## Declaration
 
@@ -73,9 +75,13 @@ A button for cycling through the available shuffle modes.
 
 ## Overview
 
-`CPNowPlayingShuffleButton` is a concrete subclass of [CPNowPlayingButton](cpnowplayingbutton.md). Use the button’s handler to invoke your existing functionality for cycling through shuffle modes, using the same [MPChangeShuffleModeCommand](https://developer.apple.com/documentation/mediaplayer/mpchangeshufflemodecommand) that you provide to [MPRemoteCommandCenter](https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter).
+Include the `CPNowPlayingShuffleButton` in your Now Playing template if your app supports different shuffle modes. The system provides the appearance of the button and automatically updates the appearance in response to interactions. You use the button to update your app’s behavior when someone enables or disables shuffle mode.
 
-CarPlay uses `MPRemoteCommandCenter` to observe changes to the shuffle mode and updates the button’s appearance accordingly.
+Create the button and add it as one of the [nowPlayingButtons](cpnowplayingtemplate/nowplayingbuttons.md) in your Now Playing template. At creation time, provide a handler you want the system to call when someone interacts with the button, and use your handler to enable and disable shuffle mode for your app’s playback queue.
+
+> **Note**
+
+> CarPlay uses the shared [MPRemoteCommandCenter](https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter) object to observe changes to shuffle mode and update the button’s appearance. If your app supports the command center object, provide the same behavior in your button’s handler as you provide for the [MPChangeShuffleModeCommand](https://developer.apple.com/documentation/mediaplayer/mpchangeshufflemodecommand) type.
 
 ## Relationships
 
@@ -85,13 +91,11 @@ CarPlay uses `MPRemoteCommandCenter` to observe changes to the shuffle mode and 
 
 ## See Also
 
-### Managing the Template’s Buttons
+### Now Playing buttons
 
-- [nowPlayingButtons](cpnowplayingtemplate/nowplayingbuttons.md): The Now Playing template’s playback control buttons.
-- [updateNowPlayingButtons:](cpnowplayingtemplate/updatenowplayingbuttons%28__%29.md): Updates the playback control buttons the template displays.
-- [CPNowPlayingButton](cpnowplayingbutton.md): The abstract base class that Now Playing template buttons use.
-- [CPNowPlayingImageButton](cpnowplayingimagebutton.md): A button that displays an image.
-- [CPNowPlayingAddToLibraryButton](cpnowplayingaddtolibrarybutton.md): A button for adding the current playing item to a collection.
-- [CPNowPlayingMoreButton](cpnowplayingmorebutton.md): A button for presenting more options to the user.
-- [CPNowPlayingPlaybackRateButton](cpnowplayingplaybackratebutton.md): A button for cycling through the available playback rates.
 - [CPNowPlayingRepeatButton](cpnowplayingrepeatbutton.md): A button for cycling through the available repeat modes.
+- [CPNowPlayingPlaybackRateButton](cpnowplayingplaybackratebutton.md): A button for changing the playback rate of the media.
+- [CPNowPlayingAddToLibraryButton](cpnowplayingaddtolibrarybutton.md): A button for adding the current item to a collection, such as the person’s library.
+- [CPNowPlayingMoreButton](cpnowplayingmorebutton.md): A button for displaying additional playback options.
+- [CPNowPlayingImageButton](cpnowplayingimagebutton.md): A custom Now Playing button that displays an image.
+- [CPNowPlayingButton](cpnowplayingbutton.md): The abstract base class for buttons in the Now Playing interface.

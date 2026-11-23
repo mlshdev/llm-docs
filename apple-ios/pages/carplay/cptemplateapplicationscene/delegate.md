@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptemplateapplicationscene/delegate
 
 # delegate (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+
 
-The object that receives the scene’s life-cycle events.
+The custom object you provide to handle scene’s life-cycle events.
 
 ## Declaration
 
@@ -15,17 +15,17 @@ The object that receives the scene’s life-cycle events.
 var delegate: (any CPTemplateApplicationSceneDelegate)? { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Use this property to access the delegate object CarPlay creates from the class name you provide in the scene manifest of your app’s `Info.plist` file.
+The scene’s delegate object serves as the entry point to your CarPlay app and handles high-level interactions involving the scene. The delegate is a custom type you define in your app and associate with your scene in the scene manifest of your app’s information property list file. When launching your CarPlay app, the system instantiates your delegate type and places the resulting object in this property.
 
 ## See Also
 
-### Responding to the Scene Life Cycle
+### Responding to scene life-cycle events
 
-- [CPTemplateApplicationSceneDelegate](../cptemplateapplicationscenedelegate.md): The methods for responding to the life cycle events of your app’s scene.
+- [CPTemplateApplicationSceneDelegate](../cptemplateapplicationscenedelegate.md): Methods for responding to life-cycle events in your app’s scene.
 
 # delegate (Objective-C)
 
@@ -33,7 +33,7 @@ Use this property to access the delegate object CarPlay creates from the class n
 **Kind:** Instance Property  
 **Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+
 
-The object that receives the scene’s life-cycle events.
+The custom object you provide to handle scene’s life-cycle events.
 
 ## Declaration
 
@@ -41,14 +41,14 @@ The object that receives the scene’s life-cycle events.
 @property (nonatomic, strong, nullable) id<CPTemplateApplicationSceneDelegate> delegate;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Use this property to access the delegate object CarPlay creates from the class name you provide in the scene manifest of your app’s `Info.plist` file.
+The scene’s delegate object serves as the entry point to your CarPlay app and handles high-level interactions involving the scene. The delegate is a custom type you define in your app and associate with your scene in the scene manifest of your app’s information property list file. When launching your CarPlay app, the system instantiates your delegate type and places the resulting object in this property.
 
 ## See Also
 
-### Responding to the Scene Life Cycle
+### Responding to scene life-cycle events
 
-- [CPTemplateApplicationSceneDelegate](../cptemplateapplicationscenedelegate.md): The methods for responding to the life cycle events of your app’s scene.
+- [CPTemplateApplicationSceneDelegate](../cptemplateapplicationscenedelegate.md): Methods for responding to life-cycle events in your app’s scene.

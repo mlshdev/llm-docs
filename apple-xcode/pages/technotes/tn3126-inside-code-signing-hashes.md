@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes/tn3126-inside-code-signing-hashes
 
 # TN3126: Inside Code Signing: Hashes
@@ -103,7 +103,7 @@ The code signature for an item is stored in one of four ways:
 
 > Storing a code signature in EAs is brittle because many file transfer mechanisms drop these.  To avoid this potential pitfall, follow the rules in [Placing content in a bundle](https://developer.apple.com/documentation/bundleresources/placing-content-in-a-bundle).
 
-For more information about the tools used in these examples, read their man pages.  If you’re unfamiliar with that process, see .  Specifically, the `codesign` man page is the key reference if you’re working at this level.
+For more information about the tools used in these examples, read their man pages.  If you’re unfamiliar with that process, see [TN3215: Reading man pages](tn3215-reading-man-pages.md).  Specifically, the `codesign` man page is the key reference if you’re working at this level.
 
 <a id="Code-directory"></a>
 

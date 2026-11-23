@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/accessorynotifications/alertingcontext/kind-swift.enum
 
 # AlertingContext.Kind
@@ -23,6 +23,10 @@ enum Kind
 - [AlertingContext.Kind.incomingCall](kind-swift.enum/incomingcall.md): An incoming call notification.
 - [AlertingContext.Kind.alarm](kind-swift.enum/alarm.md): A classification for alarm notifications.
 - [AlertingContext.Kind.timer](kind-swift.enum/timer.md): A timer notification.
+
+### Enumeration Cases
+
+- [AlertingContext.Kind.activeCall](kind-swift.enum/activecall.md): Beta. An active call notification.
 
 ## Relationships
 

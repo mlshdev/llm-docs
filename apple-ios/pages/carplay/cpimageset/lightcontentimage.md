@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpimageset/lightcontentimage
 
 # lightContentImage (Swift)
@@ -17,7 +17,7 @@ var lightContentImage: UIImage { get }
 
 ## See Also
 
-### Getting Content Images
+### Getting the images
 
 - [darkContentImage](darkcontentimage.md): The image the system displays when the user interface style is dark.
 
@@ -37,6 +37,6 @@ The image the system displays when the user interface style is light.
 
 ## See Also
 
-### Getting Content Images
+### Getting the images
 
 - [darkContentImage](darkcontentimage.md): The image the system displays when the user interface style is dark.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingsportseventstatus/eventstatustext
 
 # eventStatusText (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+
 
-Up to three separate strings for event status may be displayed.
+One to three strings you use to convey event-related details in the Now Playing interface.
 
 ## Declaration
 
@@ -19,11 +19,14 @@ var eventStatusText: [String]? { get }
 
 ## Discussion
 
-The first string should always be used to show the play period (quarter, inning, period) using as few characters as possible; e.g. “2nd” for the 2nd quarter.
+If the array contains more than three strings, CarPlay displays only the first three. If the sport has an event clock, CarPlay combines the clock information with the first string in this array before displaying it. In that situation, choose an initial string that combines well with the event. For example, specify a string with the current period of a basketball or hockey game.
 
-The second and third strings can be used to display additional information, like “1st & 10” and “SF 15” for an American football game.
+## See Also
 
-All three strings should be kept as brief as possible to ensure they display well on car screens of various sizes.
+### Getting the event status
+
+- [eventStatusImage](eventstatusimage.md): An image you use to convey event-related details in the Now Playing interface.
+- [eventClock](eventclock.md): The clock information you provided for the event.
 
 # eventStatusText (Objective-C)
 
@@ -31,7 +34,7 @@ All three strings should be kept as brief as possible to ensure they display wel
 **Kind:** Instance Property  
 **Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+
 
-Up to three separate strings for event status may be displayed.
+One to three strings you use to convey event-related details in the Now Playing interface.
 
 ## Declaration
 
@@ -43,8 +46,11 @@ Up to three separate strings for event status may be displayed.
 
 ## Discussion
 
-The first string should always be used to show the play period (quarter, inning, period) using as few characters as possible; e.g. “2nd” for the 2nd quarter.
+If the array contains more than three strings, CarPlay displays only the first three. If the sport has an event clock, CarPlay combines the clock information with the first string in this array before displaying it. In that situation, choose an initial string that combines well with the event. For example, specify a string with the current period of a basketball or hockey game.
 
-The second and third strings can be used to display additional information, like “1st & 10” and “SF 15” for an American football game.
+## See Also
 
-All three strings should be kept as brief as possible to ensure they display well on car screens of various sizes.
+### Getting the event status
+
+- [eventStatusImage](eventstatusimage.md): An image you use to convey event-related details in the Now Playing interface.
+- [eventClock](eventclock.md): The clock information you provided for the event.

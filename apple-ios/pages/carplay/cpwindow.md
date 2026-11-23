@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpwindow
 
 # CPWindow (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Class  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-A window that displays its content on the CarPlay screen.
+A type that navigation apps use to present their map content.
 
 ## Declaration
 
@@ -15,25 +15,29 @@ A window that displays its content on the CarPlay screen.
 class CPWindow
 ```
 
+## Mentioned In
+
+- [Building your app’s initial CarPlay interface](building-your-apps-initial-carplay-interface.md)
+
 <a id="overview"></a>
 
 ## Overview
 
-Navigation apps use a window to render their maps, and CarPlay provides one via the scene delegate’s [templateApplicationScene(\_:didConnect:to:)](cptemplateapplicationscenedelegate/templateapplicationscene%28__didconnect_to_%29.md) method. For all other categories of apps, you use templates exclusively to draw your user interface, and your scene delegate must implement [templateApplicationScene(\_:didConnect:)](cptemplateapplicationscenedelegate/templateapplicationscene%28__didconnect_%29.md) instead.
+The `CPWindow` type provides navigation apps with the environment for displaying their map imagery. When implementing a navigation app, fetch this type and assign a view controller with your map content to the window’s [rootViewController](https://developer.apple.com/documentation/uikit/uiwindow/rootviewcontroller) property. For the rest of your navigation app’s content, present templates using the [CPInterfaceController](cpinterfacecontroller.md) object of your app’s main scene. If you’re not implementing a navigation app, don’t use this type at all.
 
-When CarPlay launches your navigation app, instantiate your map-drawing view controller and assign it to the window’s [rootViewController](https://developer.apple.com/documentation/uikit/uiwindow/rootviewcontroller) property. This becomes the base CarPlay view and is for drawing maps exclusively. You use templates for all other user interface elements.
+You don’t create `CPWindow` objects directly. When CarPlay creates the scene for your navigation app, it creates a window object and delivers it to the [templateApplicationScene(\_:didConnect:to:)](cptemplateapplicationscenedelegate/templateapplicationscene%28__didconnect_to_%29.md) method of your scene delegate. In that method, configure a view controller with your map content and assign it as the window’s root view controller. The window provides a layout guide for its *safe area*, which you use to ensure important content remains visible. If you need to change your content, you can access the window from the scene’s [carWindow](cptemplateapplicationscene/carwindow.md) property.
 
-The base view of a navigation app does not receive tap or drag events.
+CarPlay doesn’t deliver tap or drag events to the view controller you associate with a `CPWindow` object. All interactions with your map content occur through the [CPMapTemplate](cpmaptemplate.md) type you add as the root template of your app’s interface. When interactions occur, the map template reports them to its delegate object. Implement a custom type that adopts the [CPMapTemplateDelegate](cpmaptemplatedelegate.md) protocol to receive the data you need to update your view controller’s content.
 
 ## Topics
 
-### Accessing the Scene
+### Getting the CarPlay scene
 
-- [templateApplicationScene](cpwindow/templateapplicationscene.md): The application scene that contains the window.
+- [templateApplicationScene](cpwindow/templateapplicationscene.md): The scene associated with the window.
 
-### Layout
+### Getting the layout guide
 
-- [mapButtonSafeAreaLayoutGuide](cpwindow/mapbuttonsafearealayoutguide.md): The layout guide that represents the portion of the map template that map buttons don’t obscure.
+- [mapButtonSafeAreaLayoutGuide](cpwindow/mapbuttonsafearealayoutguide.md): A layout guide that represents the portion of the window unobscured by other content.
 
 ## Relationships
 
@@ -75,9 +79,13 @@ The base view of a navigation app does not receive tap or drag events.
 
 ## See Also
 
-### Accessing the Window
+### App management
 
-- [carWindow](cptemplateapplicationscene/carwindow.md): The window that belongs to the scene.
+- [Building your app’s initial CarPlay interface](building-your-apps-initial-carplay-interface.md): Build the interface for your CarPlay app using scenes and templates from the CarPlay framework.
+- [CPTemplateApplicationScene](cptemplateapplicationscene.md): A CarPlay scene that manages your app’s interface on the vehicle’s center display.
+- [CPTemplateApplicationSceneDelegate](cptemplateapplicationscenedelegate.md): Methods for responding to life-cycle events in your app’s scene.
+- [CPInterfaceController](cpinterfacecontroller.md): The type you use to present your app’s CarPlay interface and change what appears on the vehicle’s display.
+- [CPSessionConfiguration](cpsessionconfiguration.md): An object that keeps you informed of changes to the CarPlay environment.
 
 # CPWindow (Objective-C)
 
@@ -85,7 +93,7 @@ The base view of a navigation app does not receive tap or drag events.
 **Kind:** Class  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-A window that displays its content on the CarPlay screen.
+A type that navigation apps use to present their map content.
 
 ## Declaration
 
@@ -93,25 +101,29 @@ A window that displays its content on the CarPlay screen.
 @interface CPWindow : UIWindow
 ```
 
+## Mentioned In
+
+- [Building your app’s initial CarPlay interface](building-your-apps-initial-carplay-interface.md)
+
 <a id="overview"></a>
 
 ## Overview
 
-Navigation apps use a window to render their maps, and CarPlay provides one via the scene delegate’s [templateApplicationScene:didConnectInterfaceController:toWindow:](cptemplateapplicationscenedelegate/templateapplicationscene%28__didconnect_to_%29.md) method. For all other categories of apps, you use templates exclusively to draw your user interface, and your scene delegate must implement [templateApplicationScene:didConnectInterfaceController:](cptemplateapplicationscenedelegate/templateapplicationscene%28__didconnect_%29.md) instead.
+The `CPWindow` type provides navigation apps with the environment for displaying their map imagery. When implementing a navigation app, fetch this type and assign a view controller with your map content to the window’s [rootViewController](https://developer.apple.com/documentation/uikit/uiwindow/rootviewcontroller) property. For the rest of your navigation app’s content, present templates using the [CPInterfaceController](cpinterfacecontroller.md) object of your app’s main scene. If you’re not implementing a navigation app, don’t use this type at all.
 
-When CarPlay launches your navigation app, instantiate your map-drawing view controller and assign it to the window’s [rootViewController](https://developer.apple.com/documentation/uikit/uiwindow/rootviewcontroller) property. This becomes the base CarPlay view and is for drawing maps exclusively. You use templates for all other user interface elements.
+You don’t create `CPWindow` objects directly. When CarPlay creates the scene for your navigation app, it creates a window object and delivers it to the [templateApplicationScene:didConnectInterfaceController:toWindow:](cptemplateapplicationscenedelegate/templateapplicationscene%28__didconnect_to_%29.md) method of your scene delegate. In that method, configure a view controller with your map content and assign it as the window’s root view controller. The window provides a layout guide for its *safe area*, which you use to ensure important content remains visible. If you need to change your content, you can access the window from the scene’s [carWindow](cptemplateapplicationscene/carwindow.md) property.
 
-The base view of a navigation app does not receive tap or drag events.
+CarPlay doesn’t deliver tap or drag events to the view controller you associate with a `CPWindow` object. All interactions with your map content occur through the [CPMapTemplate](cpmaptemplate.md) type you add as the root template of your app’s interface. When interactions occur, the map template reports them to its delegate object. Implement a custom type that adopts the [CPMapTemplateDelegate](cpmaptemplatedelegate.md) protocol to receive the data you need to update your view controller’s content.
 
 ## Topics
 
-### Accessing the Scene
+### Getting the CarPlay scene
 
-- [templateApplicationScene](cpwindow/templateapplicationscene.md): The application scene that contains the window.
+- [templateApplicationScene](cpwindow/templateapplicationscene.md): The scene associated with the window.
 
-### Layout
+### Getting the layout guide
 
-- [mapButtonSafeAreaLayoutGuide](cpwindow/mapbuttonsafearealayoutguide.md): The layout guide that represents the portion of the map template that map buttons don’t obscure.
+- [mapButtonSafeAreaLayoutGuide](cpwindow/mapbuttonsafearealayoutguide.md): A layout guide that represents the portion of the window unobscured by other content.
 
 ## Relationships
 
@@ -121,6 +133,10 @@ The base view of a navigation app does not receive tap or drag events.
 
 ## See Also
 
-### Accessing the Window
+### App management
 
-- [carWindow](cptemplateapplicationscene/carwindow.md): The window that belongs to the scene.
+- [Building your app’s initial CarPlay interface](building-your-apps-initial-carplay-interface.md): Build the interface for your CarPlay app using scenes and templates from the CarPlay framework.
+- [CPTemplateApplicationScene](cptemplateapplicationscene.md): A CarPlay scene that manages your app’s interface on the vehicle’s center display.
+- [CPTemplateApplicationSceneDelegate](cptemplateapplicationscenedelegate.md): Methods for responding to life-cycle events in your app’s scene.
+- [CPInterfaceController](cpinterfacecontroller.md): The type you use to present your app’s CarPlay interface and change what appears on the vehicle’s display.
+- [CPSessionConfiguration](cpsessionconfiguration.md): An object that keeps you informed of changes to the CarPlay environment.

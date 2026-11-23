@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplate/startnavigationsession(for:)
 
 # startNavigationSession(for:) (Swift)
@@ -31,12 +31,6 @@ A navigation session for the specified trip.
 
 Keep a reference to the navigation session to perform guidance updates.
 
-## See Also
-
-### Navigating a Trip
-
-- [CPNavigationSession](../cpnavigationsession.md): An object that represents an active route guidance session.
-
 # startNavigationSessionForTrip: (Objective-C)
 
 **Framework:** CarPlay  
@@ -66,9 +60,3 @@ A navigation session for the specified trip.
 ## Discussion
 
 Keep a reference to the navigation session to perform guidance updates.
-
-## See Also
-
-### Navigating a Trip
-
-- [CPNavigationSession](../cpnavigationsession.md): An object that represents an active route guidance session.

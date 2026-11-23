@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptabbartemplate/delegate
 
 # delegate (Swift)
@@ -23,7 +23,7 @@ The delegate must conform to the [CPTabBarTemplateDelegate](../cptabbartemplated
 
 ## See Also
 
-### Managing Tab Bar Interactions
+### Responding to tab selections
 
 - [CPTabBarTemplateDelegate](../cptabbartemplatedelegate.md): The methods an object implements to act as the delegate for a tab bar template.
 
@@ -49,6 +49,6 @@ The delegate must conform to the [CPTabBarTemplateDelegate](../cptabbartemplated
 
 ## See Also
 
-### Managing Tab Bar Interactions
+### Responding to tab selections
 
 - [CPTabBarTemplateDelegate](../cptabbartemplatedelegate.md): The methods an object implements to act as the delegate for a tab bar template.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistimagerowitemimagegridelement/init(image:imageshape:title:accessorysymbolname:)
 
 # init(image:imageShape:title:accessorySymbolName:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Initializer  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
 
-Initialize an element that is constituted of an image and an image shape.
+Creates a row element with the specified image, text, and attributes.
 
 ## Declaration
 
@@ -17,24 +17,16 @@ init(image: UIImage, imageShape: CPListImageRowItemImageGridElement.Shape, title
 
 ## Parameters
 
-- `image`: The image associated to the element.
-- `imageShape`: The @c CPListImageRowItemImageGridElementShape shape being applied on the image.
-- `title`: The title of the element.
-- `accessorySymbolName`: The system symbol used as an accessory view.
+- `image`: The image to display as the element’s primary content. If the image originates from an asset catalog, CarPlay manages the light and dark variants of your image and switches them when needed. Specify images with the dimensions listed in the [maximumImageSize](../cplistimagerowitemcardelement/maximumimagesize.md) property. If your image is smaller or larger than the maximum dimensions, CarPlay scales the image as needed to fit the space. Don’t specify an image object with an animated sequence of images.
+- `imageShape`: The shape to apply to `image`.
+- `title`: The primary text to display beneath the image. CarPlay displays this string with a visually prominent style.
+- `accessorySymbolName`: The name of an image to display next to the title. Specify the name of an SF Symbol or the name of a custom image resource in your app’s main bundle. Specify `nil` to omit this image.
 
-<a id="discussion"></a>
+<a id="return-value"></a>
 
-## Discussion
+## Return Value
 
-When providing an image, your app should provide a @c UIImage that is display-ready. If necessary for the image, provide light and dark styles by using an asset from your asset catalog, prepared with light and dark styles or by using @c UIImageAsset to combine two @c UIImage instances into a single image with both styles.
-
-UIImageAsset is used to combine multiple UIImages with different trait collections into a single UIImage.
-
-> **Note**
-
-> The expected image size is given by +\[CPListImageRowItemImageGridElement maximumImageSize\]. Images provided will be resized to this size if necessary.
-
-To properly size your images, your app should size them to the display scale of the car screen. See -\[CPInterfaceController carTraitCollection\].
+An initialized element you can add to a row.
 
 # initWithImage:imageShape:title:accessorySymbolName: (Objective-C)
 
@@ -42,7 +34,7 @@ To properly size your images, your app should size them to the display scale of 
 **Kind:** Instance Method  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
 
-Initialize an element that is constituted of an image and an image shape.
+Creates a row element with the specified image, text, and attributes.
 
 ## Declaration
 
@@ -52,21 +44,13 @@ Initialize an element that is constituted of an image and an image shape.
 
 ## Parameters
 
-- `image`: The image associated to the element.
-- `imageShape`: The @c CPListImageRowItemImageGridElementShape shape being applied on the image.
-- `title`: The title of the element.
-- `accessorySymbolName`: The system symbol used as an accessory view.
+- `image`: The image to display as the element’s primary content. If the image originates from an asset catalog, CarPlay manages the light and dark variants of your image and switches them when needed. Specify images with the dimensions listed in the [maximumImageSize](../cplistimagerowitemcardelement/maximumimagesize.md) property. If your image is smaller or larger than the maximum dimensions, CarPlay scales the image as needed to fit the space. Don’t specify an image object with an animated sequence of images.
+- `imageShape`: The shape to apply to `image`.
+- `title`: The primary text to display beneath the image. CarPlay displays this string with a visually prominent style.
+- `accessorySymbolName`: The name of an image to display next to the title. Specify the name of an SF Symbol or the name of a custom image resource in your app’s main bundle. Specify `nil` to omit this image.
 
-<a id="discussion"></a>
+<a id="return-value"></a>
 
-## Discussion
+## Return Value
 
-When providing an image, your app should provide a @c UIImage that is display-ready. If necessary for the image, provide light and dark styles by using an asset from your asset catalog, prepared with light and dark styles or by using @c UIImageAsset to combine two @c UIImage instances into a single image with both styles.
-
-UIImageAsset is used to combine multiple UIImages with different trait collections into a single UIImage.
-
-> **Note**
-
-> The expected image size is given by +\[CPListImageRowItemImageGridElement maximumImageSize\]. Images provided will be resized to this size if necessary.
-
-To properly size your images, your app should size them to the display scale of the car screen. See -\[CPInterfaceController carTraitCollection\].
+An initialized element you can add to a row.

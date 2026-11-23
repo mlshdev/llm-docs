@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplisttemplate/itemcount
 
 # itemCount (Swift)
@@ -15,19 +15,17 @@ The total number of items, across all sections, in the list.
 var itemCount: Int { get }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-This value never exceeds [maximumItemCount](maximumitemcount.md). If you initialize a list where the total number of items, across all sections, is greater than [maximumItemCount](maximumitemcount.md), CarPlay only displays items up to this limit and discards the rest.
+The value in this property never exceeds the maximum number of items, as set in the [maximumItemCount](maximumitemcount.md) property. If you initialize or update the list with more items than the allowed maximum, CarPlay adds items until it reaches the maximum and discards the rest.
 
 ## See Also
 
-### Getting Supplementary Information
+### Getting item details
 
-- [maximumItemCount](maximumitemcount.md): The maximum number of items, across all sections, that the template can display.
 - [indexPath(for:)](indexpath%28for_%29.md): Returns the index path for the specified item.
-- [title](title.md): The title that the navigation bar displays when the template is visible.
 
 # itemCount (Objective-C)
 
@@ -43,16 +41,14 @@ The total number of items, across all sections, in the list.
 @property (nonatomic, readonly) NSUInteger itemCount;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-This value never exceeds [maximumItemCount](maximumitemcount.md). If you initialize a list where the total number of items, across all sections, is greater than [maximumItemCount](maximumitemcount.md), CarPlay only displays items up to this limit and discards the rest.
+The value in this property never exceeds the maximum number of items, as set in the [maximumItemCount](maximumitemcount.md) property. If you initialize or update the list with more items than the allowed maximum, CarPlay adds items until it reaches the maximum and discards the rest.
 
 ## See Also
 
-### Getting Supplementary Information
+### Getting item details
 
-- [maximumItemCount](maximumitemcount.md): The maximum number of items, across all sections, that the template can display.
 - [indexPathForItem:](indexpath%28for_%29.md): Returns the index path for the specified item.
-- [title](title.md): The title that the navigation bar displays when the template is visible.

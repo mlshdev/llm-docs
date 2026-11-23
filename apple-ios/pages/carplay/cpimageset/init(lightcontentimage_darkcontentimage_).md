@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpimageset/init(lightcontentimage:darkcontentimage:)
 
 # init(lightContentImage:darkContentImage:) (Swift)
@@ -14,6 +14,11 @@ Creates an image set with light and dark versions of an image.
 ```swift
 init(lightContentImage lightImage: UIImage, darkContentImage darkImage: UIImage)
 ```
+
+## Parameters
+
+- `lightImage`: The image the system displays for an image set when [userInterfaceStyle](https://developer.apple.com/documentation/uikit/uitraitcollection/userinterfacestyle) is [UIUserInterfaceStyle.light](https://developer.apple.com/documentation/uikit/uiuserinterfacestyle/light).
+- `darkImage`: The image the system displays for an image set when [userInterfaceStyle](https://developer.apple.com/documentation/uikit/uitraitcollection/userinterfacestyle) is [UIUserInterfaceStyle.dark](https://developer.apple.com/documentation/uikit/uiuserinterfacestyle/dark).
 
 <a id="return-value"></a>
 
@@ -34,6 +39,11 @@ Creates an image set with light and dark versions of an image.
 ```objectivec
 - (instancetype) initWithLightContentImage:(UIImage *) lightImage darkContentImage:(UIImage *) darkImage;
 ```
+
+## Parameters
+
+- `lightImage`: The image the system displays for an image set when [userInterfaceStyle](https://developer.apple.com/documentation/uikit/uitraitcollection/userinterfacestyle) is [UIUserInterfaceStyleLight](https://developer.apple.com/documentation/uikit/uiuserinterfacestyle/light).
+- `darkImage`: The image the system displays for an image set when [userInterfaceStyle](https://developer.apple.com/documentation/uikit/uitraitcollection/userinterfacestyle) is [UIUserInterfaceStyleDark](https://developer.apple.com/documentation/uikit/uiuserinterfacestyle/dark).
 
 <a id="return-value"></a>
 

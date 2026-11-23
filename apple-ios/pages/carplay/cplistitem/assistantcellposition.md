@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitem/assistantcellposition
 
 # CPListItem.AssistantCellPosition (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Enumeration  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+
 
-Constants to specify the position of the assistant cell.
+The supported placement options for the assistant cell.
 
 ## Declaration
 
@@ -15,12 +15,18 @@ Constants to specify the position of the assistant cell.
 enum AssistantCellPosition
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+The assistant cell supports a specific set of placement options, and you use these constants to indicate whether to place the cell before or after your app’s content.
+
 ## Topics
 
-### Controlling the Assistant Cell Position
+### Enumeration Cases
 
-- [CPListItem.AssistantCellPosition.bottom](assistantcellposition/bottom.md): Positions the assistant cell at the bottom of all visible cells.
-- [CPListItem.AssistantCellPosition.top](assistantcellposition/top.md): Positions the assistant cell at the top of all visible cells.
+- [CPListItem.AssistantCellPosition.bottom](assistantcellposition/bottom.md): An option to place the assistant cell above all visible cells in your list template.
+- [CPListItem.AssistantCellPosition.top](assistantcellposition/top.md): An option to place the assistant cell below all visible cells in your list template.
 
 ### Initializers
 
@@ -39,9 +45,13 @@ enum AssistantCellPosition
 
 ## See Also
 
-### Managing the Assistant Cell
+### Getting the configuration attributes
 
-- [CPListItem.AssistantCellVisibility](assistantcellvisibility.md): Constants to specify the visibility of the assistant cell.
+- [assistantAction](../cpassistantcellconfiguration/assistantaction.md): The action that Siri performs when the user selects the assistant cell.
+- [position](../cpassistantcellconfiguration/position.md): The position of the assistant cell in the list template.
+- [visibility](../cpassistantcellconfiguration/visibility.md): The visibility of the assistant cell in the list template.
+- [CPAssistantCellActionType](../cpassistantcellactiontype.md): The supported actions of the assistant cell.
+- [CPListItem.AssistantCellVisibility](assistantcellvisibility.md): The visibility options for the assistant cell.
 
 # CPAssistantCellPosition (Objective-C)
 
@@ -49,7 +59,7 @@ enum AssistantCellPosition
 **Kind:** Enumeration  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+
 
-Constants to specify the position of the assistant cell.
+The supported placement options for the assistant cell.
 
 ## Declaration
 
@@ -57,15 +67,25 @@ Constants to specify the position of the assistant cell.
 enum CPAssistantCellPosition : NSInteger;
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+The assistant cell supports a specific set of placement options, and you use these constants to indicate whether to place the cell before or after your app’s content.
+
 ## Topics
 
-### Controlling the Assistant Cell Position
+### Enumeration Cases
 
-- [CPAssistantCellPositionBottom](assistantcellposition/bottom.md): Positions the assistant cell at the bottom of all visible cells.
-- [CPAssistantCellPositionTop](assistantcellposition/top.md): Positions the assistant cell at the top of all visible cells.
+- [CPAssistantCellPositionBottom](assistantcellposition/bottom.md): An option to place the assistant cell above all visible cells in your list template.
+- [CPAssistantCellPositionTop](assistantcellposition/top.md): An option to place the assistant cell below all visible cells in your list template.
 
 ## See Also
 
-### Managing the Assistant Cell
+### Getting the configuration attributes
 
-- [CPAssistantCellVisibility](assistantcellvisibility.md): Constants to specify the visibility of the assistant cell.
+- [assistantAction](../cpassistantcellconfiguration/assistantaction.md): The action that Siri performs when the user selects the assistant cell.
+- [position](../cpassistantcellconfiguration/position.md): The position of the assistant cell in the list template.
+- [visibility](../cpassistantcellconfiguration/visibility.md): The visibility of the assistant cell in the list template.
+- [CPAssistantCellActionType](../cpassistantcellactiontype.md): The supported actions of the assistant cell.
+- [CPAssistantCellVisibility](assistantcellvisibility.md): The visibility options for the assistant cell.

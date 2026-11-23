@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplatewaypoint
 
 # CPMapTemplateWaypoint (Swift)
@@ -17,15 +17,15 @@ class CPMapTemplateWaypoint
 
 ## Topics
 
-### Initializers
+### Creating a trip
 
-- [init(coder:)](cpmaptemplatewaypoint/init%28coder_%29.md)
 - [init(waypoint:travelEstimates:)](cpmaptemplatewaypoint/init%28waypoint_travelestimates_%29.md): Initializes a new CPMapTemplateWaypoint with the specified waypoint and travel estimates.
+- [init(coder:)](cpmaptemplatewaypoint/init%28coder_%29.md)
 
-### Instance Properties
+### Getting the route information
 
-- [travelEstimates](cpmaptemplatewaypoint/travelestimates.md): Travel estimates for reaching this waypoint, including time and distance calculations.
 - [waypoint](cpmaptemplatewaypoint/waypoint.md): The navigation waypoint containing location-based information and guidance for a point of interest along a route.
+- [travelEstimates](cpmaptemplatewaypoint/travelestimates.md): Travel estimates for reaching this waypoint, including time and distance calculations.
 
 ## Relationships
 
@@ -44,6 +44,14 @@ class CPMapTemplateWaypoint
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
 
+## See Also
+
+### Trip and waypoints
+
+- [CPTrip](cptrip.md): An object that represents a journey between an origin and a destination.
+- [CPNavigationWaypoint](cpnavigationwaypoint.md): CPNavigationWaypoint represents a point of interest along a route that provides location-based information and guidance.
+- [CPMultiStopCardConfiguration](cpmultistopcardconfiguration.md)
+
 # CPMapTemplateWaypoint (Objective-C)
 
 **Framework:** CarPlay  
@@ -60,14 +68,14 @@ CPMapTemplateWaypoint represents a waypoint with associated travel estimates
 
 ## Topics
 
-### Instance Properties
-
-- [travelEstimates](cpmaptemplatewaypoint/travelestimates.md): Travel estimates for reaching this waypoint, including time and distance calculations.
-- [waypoint](cpmaptemplatewaypoint/waypoint.md): The navigation waypoint containing location-based information and guidance for a point of interest along a route.
-
-### Instance Methods
+### Creating a trip
 
 - [initWithWaypoint:travelEstimates:](cpmaptemplatewaypoint/init%28waypoint_travelestimates_%29.md): Initializes a new CPMapTemplateWaypoint with the specified waypoint and travel estimates.
+
+### Getting the route information
+
+- [waypoint](cpmaptemplatewaypoint/waypoint.md): The navigation waypoint containing location-based information and guidance for a point of interest along a route.
+- [travelEstimates](cpmaptemplatewaypoint/travelestimates.md): Travel estimates for reaching this waypoint, including time and distance calculations.
 
 ## Relationships
 
@@ -78,3 +86,11 @@ CPMapTemplateWaypoint represents a waypoint with associated travel estimates
 ### Conforms To
 
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
+
+## See Also
+
+### Trip and waypoints
+
+- [CPTrip](cptrip.md): An object that represents a journey between an origin and a destination.
+- [CPNavigationWaypoint](cpnavigationwaypoint.md): CPNavigationWaypoint represents a point of interest along a route that provides location-based information and guidance.
+- [CPMultiStopCardConfiguration](cpmultistopcardconfiguration.md)

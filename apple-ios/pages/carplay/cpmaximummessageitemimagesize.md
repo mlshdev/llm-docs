@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaximummessageitemimagesize
 
 # CPMaximumMessageItemImageSize (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Global Variable  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-The maximum size of a message list item’s image.
+The maximum size for images in the leading and trailing regions of a message list item.
 
 ## Declaration
 
@@ -15,17 +15,20 @@ The maximum size of a message list item’s image.
 let CPMaximumMessageItemImageSize: CGSize
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-At runtime, use this value to determine the maximum size of an image that a message list item can display in its leading and trailing regions.
+This constant contains the maximum size for custom images you use with the [CPMessageListItemLeadingConfiguration](cpmessagelistitemleadingconfiguration.md) and [CPMessageListItemTrailingConfiguration](cpmessagelistitemtrailingconfiguration.md) types. The size values are in points. To get the pixel values, multiply this constant by the scale factor in the current traits collection for the vehicle, which you can get from the current [CPInterfaceController](cpinterfacecontroller.md) object.
 
 ## See Also
 
-### Creating a Configuration
+### List items
 
-- [init(leadingItem:leadingImage:unread:)](cpmessagelistitemleadingconfiguration/init%28leadingitem_leadingimage_unread_%29.md): Creates a leading configuration that contains an item and an image.
+- [CPMessageListItem](cpmessagelistitem.md): A list template row that manages a text message thread or contact.
+- [CPMessageListItemLeadingConfiguration](cpmessagelistitemleadingconfiguration.md): A type that defines the content at the leading edge of a message list item’s row.
+- [CPMessageListItemTrailingConfiguration](cpmessagelistitemtrailingconfiguration.md): A type that defines the content at the trailing edge of a message list item’s row.
+- [CPMaximumMessageItemLeadingDetailTextImageSize](cpmaximummessageitemleadingdetailtextimagesize.md): The maximum size for images in the detail text image of a message list item.
 
 # CPMaximumMessageItemImageSize (Objective-C)
 
@@ -33,7 +36,7 @@ At runtime, use this value to determine the maximum size of an image that a mess
 **Kind:** Global Variable  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-The maximum size of a message list item’s image.
+The maximum size for images in the leading and trailing regions of a message list item.
 
 ## Declaration
 
@@ -41,14 +44,17 @@ The maximum size of a message list item’s image.
 extern const CGSize CPMaximumMessageItemImageSize;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-At runtime, use this value to determine the maximum size of an image that a message list item can display in its leading and trailing regions.
+This constant contains the maximum size for custom images you use with the [CPMessageListItemLeadingConfiguration](cpmessagelistitemleadingconfiguration.md) and [CPMessageListItemTrailingConfiguration](cpmessagelistitemtrailingconfiguration.md) types. The size values are in points. To get the pixel values, multiply this constant by the scale factor in the current traits collection for the vehicle, which you can get from the current [CPInterfaceController](cpinterfacecontroller.md) object.
 
 ## See Also
 
-### Creating a Configuration
+### List items
 
-- [initWithLeadingItem:leadingImage:unread:](cpmessagelistitemleadingconfiguration/init%28leadingitem_leadingimage_unread_%29.md): Creates a leading configuration that contains an item and an image.
+- [CPMessageListItem](cpmessagelistitem.md): A list template row that manages a text message thread or contact.
+- [CPMessageListItemLeadingConfiguration](cpmessagelistitemleadingconfiguration.md): A type that defines the content at the leading edge of a message list item’s row.
+- [CPMessageListItemTrailingConfiguration](cpmessagelistitemtrailingconfiguration.md): A type that defines the content at the trailing edge of a message list item’s row.
+- [CPMaximumMessageItemLeadingDetailTextImageSize](cpmaximummessageitemleadingdetailtextimagesize.md): The maximum size for images in the detail text image of a message list item.

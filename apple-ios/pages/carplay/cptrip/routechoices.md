@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptrip/routechoices
 
 # routeChoices (Swift)
@@ -17,9 +17,10 @@ var routeChoices: [CPRouteChoice] { get }
 
 ## See Also
 
-### Getting Route Choices
+### Getting the route information
 
-- [destinationNameVariants](destinationnamevariants.md): Deprecated. An array of strings that represents the names of the destination for this trip, arranged from most to least preferred.
+- [originWaypoint](originwaypoint.md)
+- [destinationWaypoint](destinationwaypoint.md)
 
 # routeChoices (Objective-C)
 
@@ -37,6 +38,7 @@ The list of route choices for the trip.
 
 ## See Also
 
-### Getting Route Choices
+### Getting the route information
 
-- [destinationNameVariants](destinationnamevariants.md): Deprecated. An array of strings that represents the names of the destination for this trip, arranged from most to least preferred.
+- [originWaypoint](originwaypoint.md)
+- [destinationWaypoint](destinationwaypoint.md)

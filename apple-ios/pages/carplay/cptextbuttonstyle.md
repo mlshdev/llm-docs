@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptextbuttonstyle
 
 # CPTextButtonStyle (Swift)
@@ -17,7 +17,7 @@ enum CPTextButtonStyle
 
 ## Topics
 
-### Button Text Styles
+### Getting the text button style
 
 - [CPTextButtonStyle.normal](cptextbuttonstyle/normal.md): A style that indicates the button performs an action other than to confirm or cancel.
 - [CPTextButtonStyle.confirm](cptextbuttonstyle/confirm.md): A style that indicates the button confirms an action and changes data.
@@ -40,7 +40,7 @@ enum CPTextButtonStyle
 
 ## See Also
 
-### Managing the Button Style
+### Managing the button style
 
 - [textStyle](cptextbutton/textstyle.md): The text style the button applies to its title.
 
@@ -60,7 +60,7 @@ enum CPTextButtonStyle : NSInteger;
 
 ## Topics
 
-### Button Text Styles
+### Getting the text button style
 
 - [CPTextButtonStyleNormal](cptextbuttonstyle/normal.md): A style that indicates the button performs an action other than to confirm or cancel.
 - [CPTextButtonStyleConfirm](cptextbuttonstyle/confirm.md): A style that indicates the button confirms an action and changes data.
@@ -68,6 +68,6 @@ enum CPTextButtonStyle : NSInteger;
 
 ## See Also
 
-### Managing the Button Style
+### Managing the button style
 
 - [textStyle](cptextbutton/textstyle.md): The text style the button applies to its title.

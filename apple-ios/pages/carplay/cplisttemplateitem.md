@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplisttemplateitem
 
 # CPListTemplateItem (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Protocol  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A description of the common properties of all list item types.
+An interface that describes the common properties of all list item types.
 
 ## Declaration
 
@@ -19,20 +19,18 @@ protocol CPListTemplateItem : NSObjectProtocol
 
 ## Overview
 
-> **Important**
-
->  You don’t create custom classes that conform to `CPListItemTemplate`. Instead, you use one of the prebuilt list item types that adopt this protocol, such as [CPMessageListItem](cpmessagelistitem.md).
+This protocol adds key behaviors to all system-provided list item types. Don’t add this protocol directly to your custom types. Instead, use it through a system type such as [CPListItem](cplistitem.md), [CPListImageRowItem](cplistimagerowitem.md), or [CPMessageListItem](cpmessagelistitem.md).
 
 ## Topics
 
-### Managing Content
+### Managing content
 
-- [text](cplisttemplateitem/text.md): The item’s primary text.
-- [userInfo](cplisttemplateitem/userinfo.md): An opaque value for the list item.
+- [text](cplisttemplateitem/text.md): The primary text to display for the item.
+- [userInfo](cplisttemplateitem/userinfo.md): App-specific data you associate with the item.
 
-### Enabling Items
+### Enabling items
 
-- [isEnabled](cplisttemplateitem/isenabled.md): A Boolean value that indicates if the item is enabled.
+- [isEnabled](cplisttemplateitem/isenabled.md): A Boolean value that indicates whether the item is enabled.
 
 ## Relationships
 
@@ -52,13 +50,11 @@ protocol CPListTemplateItem : NSObjectProtocol
 
 ## See Also
 
-### Creating a Section
+### Common types
 
-- [init(items:header:headerSubtitle:headerImage:headerButton:sectionIndexTitle:)](cplistsection/init%28items_header_headersubtitle_headerimage_headerbutton_sectionindextitle_%29.md): Creates a section with list items, a header, a section index title, and section header details.
-- [CPSelectableListItem](cpselectablelistitem.md): A description of a selectable list item.
-- [CPListItem](cplistitem.md): A selectable row in a list template.
-- [CPListImageRowItem](cplistimagerowitem.md): A list template row that displays a series of images.
-- [CPMessageListItem](cpmessagelistitem.md): A list template row that represents a conversation or contact.
+- [CPThumbnailImage](cpthumbnailimage.md): An image that can display overlays and metadata on top of the image.
+- [CPListImageRowItemElement](cplistimagerowitemelement.md): An abstract class for an element in a row of a list.
+- [CPSelectableListItem](cpselectablelistitem.md): An interface for responding to selections in list items.
 
 # CPListTemplateItem (Objective-C)
 
@@ -66,7 +62,7 @@ protocol CPListTemplateItem : NSObjectProtocol
 **Kind:** Protocol  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A description of the common properties of all list item types.
+An interface that describes the common properties of all list item types.
 
 ## Declaration
 
@@ -78,20 +74,18 @@ A description of the common properties of all list item types.
 
 ## Overview
 
-> **Important**
-
->  You don’t create custom classes that conform to `CPListItemTemplate`. Instead, you use one of the prebuilt list item types that adopt this protocol, such as [CPMessageListItem](cpmessagelistitem.md).
+This protocol adds key behaviors to all system-provided list item types. Don’t add this protocol directly to your custom types. Instead, use it through a system type such as [CPListItem](cplistitem.md), [CPListImageRowItem](cplistimagerowitem.md), or [CPMessageListItem](cpmessagelistitem.md).
 
 ## Topics
 
-### Managing Content
+### Managing content
 
-- [text](cplisttemplateitem/text.md): The item’s primary text.
-- [userInfo](cplisttemplateitem/userinfo.md): An opaque value for the list item.
+- [text](cplisttemplateitem/text.md): The primary text to display for the item.
+- [userInfo](cplisttemplateitem/userinfo.md): App-specific data you associate with the item.
 
-### Enabling Items
+### Enabling items
 
-- [enabled](cplisttemplateitem/isenabled.md): A Boolean value that indicates if the item is enabled.
+- [enabled](cplisttemplateitem/isenabled.md): A Boolean value that indicates whether the item is enabled.
 
 ## Relationships
 
@@ -109,12 +103,8 @@ A description of the common properties of all list item types.
 
 ## See Also
 
-### Creating a Section
+### Common types
 
-- [initWithItems:](cplistsection/initwithitems_.md): Creates a section with list items.
-- [initWithItems:header:sectionIndexTitle:](cplistsection/initwithitems_header_sectionindextitle_.md): Creates a section with list items, a header, and a section index title.
-- [initWithItems:header:headerSubtitle:headerImage:headerButton:sectionIndexTitle:](cplistsection/init%28items_header_headersubtitle_headerimage_headerbutton_sectionindextitle_%29.md): Creates a section with list items, a header, a section index title, and section header details.
-- [CPSelectableListItem](cpselectablelistitem.md): A description of a selectable list item.
-- [CPListItem](cplistitem.md): A selectable row in a list template.
-- [CPListImageRowItem](cplistimagerowitem.md): A list template row that displays a series of images.
-- [CPMessageListItem](cpmessagelistitem.md): A list template row that represents a conversation or contact.
+- [CPThumbnailImage](cpthumbnailimage.md): An image that can display overlays and metadata on top of the image.
+- [CPListImageRowItemElement](cplistimagerowitemelement.md): An abstract class for an element in a row of a list.
+- [CPSelectableListItem](cpselectablelistitem.md): An interface for responding to selections in list items.

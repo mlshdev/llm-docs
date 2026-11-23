@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplate/mapdelegate
 
 # mapDelegate (Swift)
@@ -17,7 +17,7 @@ weak var mapDelegate: (any CPMapTemplateDelegate)? { get set }
 
 ## See Also
 
-### Handling Map Template Events
+### Responding to map-related events
 
 - [CPMapTemplateDelegate](../cpmaptemplatedelegate.md): The protocol an object implements to handle events from a map template.
 
@@ -37,6 +37,6 @@ The object that serves as the delegate of the map template.
 
 ## See Also
 
-### Handling Map Template Events
+### Responding to map-related events
 
 - [CPMapTemplateDelegate](../cpmaptemplatedelegate.md): The protocol an object implements to handle events from a map template.

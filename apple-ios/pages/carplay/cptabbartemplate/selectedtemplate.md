@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptabbartemplate/selectedtemplate
 
 # selectedTemplate (Swift)
@@ -15,6 +15,13 @@ The currently selected template in the tab bar.
 var selectedTemplate: CPTemplate? { get }
 ```
 
+## See Also
+
+### Selecting a tab
+
+- [select(\_:)](select%28__%29.md)
+- [selectTemplate(at:)](selecttemplate%28at_%29.md)
+
 # selectedTemplate (Objective-C)
 
 **Framework:** CarPlay  
@@ -28,3 +35,10 @@ The currently selected template in the tab bar.
 ```objectivec
 @property (nonatomic, strong, readonly, nullable) CPTemplate * selectedTemplate;
 ```
+
+## See Also
+
+### Selecting a tab
+
+- [selectTemplate:](select%28__%29.md)
+- [selectTemplateAtIndex:](selecttemplate%28at_%29.md)

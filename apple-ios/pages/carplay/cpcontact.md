@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpcontact
 
 # CPContact (Swift)
@@ -27,18 +27,18 @@ The framework provides specialized buttons for common actions, such as [CPContac
 
 ## Topics
 
-### Creating a Contact
+### Creating a contact
 
 - [init(name:image:)](cpcontact/init%28name_image_%29.md): Creates a contact with a name and an image.
 
-### Configuring the Contact’s Attributes
+### Configuring the contact’s attributes
 
 - [image](cpcontact/image.md): The contact’s image.
 - [name](cpcontact/name.md): The contact’s name.
 - [subtitle](cpcontact/subtitle.md): A subtitle that the template displays in addition to the contact’s name.
 - [informativeText](cpcontact/informativetext.md): Additional text that the template displays.
 
-### Managing Interactions with the Contact
+### Managing interactions with the contact
 
 - [actions](cpcontact/actions.md): The actions that the template displays for this contact.
 - [CPContactCallButton](cpcontactcallbutton.md): A button for calling the contact.
@@ -68,7 +68,7 @@ The framework provides specialized buttons for common actions, such as [CPContac
 
 ## See Also
 
-### Configuring the Contact
+### Configuring the contact
 
 - [contact](cpcontacttemplate/contact.md): The contact that the template displays.
 
@@ -98,18 +98,18 @@ The framework provides specialized buttons for common actions, such as [CPContac
 
 ## Topics
 
-### Creating a Contact
+### Creating a contact
 
 - [initWithName:image:](cpcontact/init%28name_image_%29.md): Creates a contact with a name and an image.
 
-### Configuring the Contact’s Attributes
+### Configuring the contact’s attributes
 
 - [image](cpcontact/image.md): The contact’s image.
 - [name](cpcontact/name.md): The contact’s name.
 - [subtitle](cpcontact/subtitle.md): A subtitle that the template displays in addition to the contact’s name.
 - [informativeText](cpcontact/informativetext.md): Additional text that the template displays.
 
-### Managing Interactions with the Contact
+### Managing interactions with the contact
 
 - [actions](cpcontact/actions.md): The actions that the template displays for this contact.
 - [CPContactCallButton](cpcontactcallbutton.md): A button for calling the contact.
@@ -128,6 +128,6 @@ The framework provides specialized buttons for common actions, such as [CPContac
 
 ## See Also
 
-### Configuring the Contact
+### Configuring the contact
 
 - [contact](cpcontacttemplate/contact.md): The contact that the template displays.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpcontact/actions
 
 # actions (Swift)
@@ -25,7 +25,7 @@ Contact actions are optional, and the default value is [nil](https://developer.a
 
 ## See Also
 
-### Managing Interactions with the Contact
+### Managing interactions with the contact
 
 - [CPContactCallButton](../cpcontactcallbutton.md): A button for calling the contact.
 - [CPContactDirectionsButton](../cpcontactdirectionsbutton.md): A button for getting directions to the contact’s location.
@@ -55,7 +55,7 @@ Contact actions are optional, and the default value is [nil](https://developer.a
 
 ## See Also
 
-### Managing Interactions with the Contact
+### Managing interactions with the contact
 
 - [CPContactCallButton](../cpcontactcallbutton.md): A button for calling the contact.
 - [CPContactDirectionsButton](../cpcontactdirectionsbutton.md): A button for getting directions to the contact’s location.

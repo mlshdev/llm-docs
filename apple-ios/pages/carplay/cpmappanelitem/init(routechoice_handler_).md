@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmappanelitem/init(routechoice:handler:)
 
 # init(routeChoice:handler:) (Swift)
@@ -32,6 +32,16 @@ A map panel item initialized with a route choice.
 
 For this type of item, the map panel displays the relevant route choice summaries.
 
+## See Also
+
+### Creating map panel items
+
+- [init(trip:handler:)](init%28trip_handler_%29.md): Creates a map panel item with trip-related details.
+- [init(travelEstimates:handler:)](init%28travelestimates_handler_%29.md): Creates a map panel item with travel estimate information.
+- [init(routeDetails:handler:)](init%28routedetails_handler_%29.md): Creates a map panel item with route details.
+- [init(chargingStationConnection:handler:)](init%28chargingstationconnection_handler_%29.md): Creates a map panel item with charging connection details.
+- [init(mapTemplateWaypoint:image:handler:)](init%28maptemplatewaypoint_image_handler_%29.md): Creates a map panel item with waypoint information.
+
 # initWithRouteChoice:handler: (Objective-C)
 
 **Framework:** CarPlay  
@@ -62,3 +72,13 @@ A map panel item initialized with a route choice.
 ## Discussion
 
 For this type of item, the map panel displays the relevant route choice summaries.
+
+## See Also
+
+### Creating map panel items
+
+- [initWithTrip:handler:](init%28trip_handler_%29.md): Creates a map panel item with trip-related details.
+- [initWithTravelEstimates:handler:](init%28travelestimates_handler_%29.md): Creates a map panel item with travel estimate information.
+- [initWithRouteDetails:handler:](init%28routedetails_handler_%29.md): Creates a map panel item with route details.
+- [initWithChargingStationConnection:handler:](init%28chargingstationconnection_handler_%29.md): Creates a map panel item with charging connection details.
+- [initWithMapTemplateWaypoint:image:handler:](init%28maptemplatewaypoint_image_handler_%29.md): Creates a map panel item with waypoint information.

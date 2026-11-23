@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpalerttemplate/actions
 
 # actions (Swift)
@@ -23,7 +23,7 @@ The array must include at least one action.
 
 ## See Also
 
-### Getting the Alert Information
+### Getting the alert details
 
 - [titleVariants](titlevariants.md): The array of title variants.
 
@@ -49,6 +49,6 @@ The array must include at least one action.
 
 ## See Also
 
-### Getting the Alert Information
+### Getting the alert details
 
 - [titleVariants](titlevariants.md): The array of title variants.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmapbutton/focusedimage
 
 # focusedImage (Swift)
@@ -23,7 +23,7 @@ If `focusedImage` is nil, the button uses [image](image.md) as the default, crea
 
 ## See Also
 
-### Providing Button Images
+### Managing the images
 
 - [image](image.md): The image to display on the button.
 
@@ -49,6 +49,6 @@ If `focusedImage` is nil, the button uses [image](image.md) as the default, crea
 
 ## See Also
 
-### Providing Button Images
+### Managing the images
 
 - [image](image.md): The image to display on the button.

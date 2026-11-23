@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptrippreviewtextconfiguration
 
 # CPTripPreviewTextConfiguration (Swift)
@@ -17,11 +17,11 @@ class CPTripPreviewTextConfiguration
 
 ## Topics
 
-### Creating a Text Configuration Object
+### Creating a text configuration object
 
 - [init(startButtonTitle:additionalRoutesButtonTitle:overviewButtonTitle:)](cptrippreviewtextconfiguration/init%28startbuttontitle_additionalroutesbuttontitle_overviewbuttontitle_%29.md): Creates a trip preview text configuration object.
 
-### Setting Button Titles
+### Accessing button titles
 
 - [startButtonTitle](cptrippreviewtextconfiguration/startbuttontitle.md): The title displayed on the start button.
 - [additionalRoutesButtonTitle](cptrippreviewtextconfiguration/additionalroutesbuttontitle.md): The title displayed on the routes button.
@@ -50,7 +50,7 @@ class CPTripPreviewTextConfiguration
 
 ## See Also
 
-### Displaying Trip Previews
+### Displaying trip previews
 
 - [showTripPreviews(\_:textConfiguration:)](cpmaptemplate/showtrippreviews%28__textconfiguration_%29.md): Displays the preview for one or more trips, and allows route selection.
 - [showTripPreviews(\_:selectedTrip:textConfiguration:)](cpmaptemplate/showtrippreviews%28__selectedtrip_textconfiguration_%29.md): Displays the previews for a collection of trips, with a single selected trip.
@@ -73,11 +73,11 @@ A configuration object for changing the button titles on a trip preview.
 
 ## Topics
 
-### Creating a Text Configuration Object
+### Creating a text configuration object
 
 - [initWithStartButtonTitle:additionalRoutesButtonTitle:overviewButtonTitle:](cptrippreviewtextconfiguration/init%28startbuttontitle_additionalroutesbuttontitle_overviewbuttontitle_%29.md): Creates a trip preview text configuration object.
 
-### Setting Button Titles
+### Accessing button titles
 
 - [startButtonTitle](cptrippreviewtextconfiguration/startbuttontitle.md): The title displayed on the start button.
 - [additionalRoutesButtonTitle](cptrippreviewtextconfiguration/additionalroutesbuttontitle.md): The title displayed on the routes button.
@@ -95,7 +95,7 @@ A configuration object for changing the button titles on a trip preview.
 
 ## See Also
 
-### Displaying Trip Previews
+### Displaying trip previews
 
 - [showTripPreviews:textConfiguration:](cpmaptemplate/showtrippreviews%28__textconfiguration_%29.md): Displays the preview for one or more trips, and allows route selection.
 - [showTripPreviews:selectedTrip:textConfiguration:](cpmaptemplate/showtrippreviews%28__selectedtrip_textconfiguration_%29.md): Displays the previews for a collection of trips, with a single selected trip.

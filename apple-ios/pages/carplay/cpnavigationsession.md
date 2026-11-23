@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationsession
 
 # CPNavigationSession (Swift)
@@ -29,21 +29,20 @@ When CarPlay pauses, finishes, or cancels route guidance, you must call the corr
 
 ## Topics
 
-### Getting the Trip
+### Getting the trip
 
 - [trip](cpnavigationsession/trip.md): The trip associated with the navigation session.
-- [CPTrip](cptrip.md): An object that represents a journey between an origin and a destination.
 
-### Managing Trip Navigation
+### Managing trip navigation
 
-- [cancelTrip()](cpnavigationsession/canceltrip%28%29.md): Tells the navigation session to cancel the trip.
-- [finishTrip()](cpnavigationsession/finishtrip%28%29.md): Tells the navigation session to finish the trip.
 - [pauseTrip(for:description:)](cpnavigationsession/pausetrip%28for_description_%29.md): Tells the navigation session to pause the trip for the specified reason.
 - [pauseTrip(for:description:turnCardColor:)](cpnavigationsession/pausetrip%28for_description_turncardcolor_%29.md)
 - [CPNavigationSession.PauseReason](cpnavigationsession/pausereason.md): A set of reasons for pausing a trip.
 - [resumeTrip(updatedRouteInformation:)](cpnavigationsession/resumetrip%28updatedrouteinformation_%29.md): Resumes the current trip with updated route information.
+- [finishTrip()](cpnavigationsession/finishtrip%28%29.md): Tells the navigation session to finish the trip.
+- [cancelTrip()](cpnavigationsession/canceltrip%28%29.md): Tells the navigation session to cancel the trip.
 
-### Managing Upcoming Maneuvers
+### Managing upcoming maneuvers
 
 - [upcomingManeuvers](cpnavigationsession/upcomingmaneuvers.md): The next set of maneuvers the user should perform while following the current route.
 - [maneuverState](cpnavigationsession/maneuverstate.md): The current maneuver state.
@@ -53,7 +52,7 @@ When CarPlay pauses, finishes, or cancels route guidance, you must call the corr
 - [add(\_:)](cpnavigationsession/add%28__%29-93qpu.md): Adds one or more lane guidance instances to the navigation session.
 - [CPManeuver](cpmaneuver.md): An object that describes a single navigation instruction.
 
-### Updating Travel Estimates
+### Updating travel estimates
 
 - [updateEstimates(\_:for:)](cpnavigationsession/updateestimates%28__for_%29.md): Updates the travel estimates for the specified maneuver.
 - [CPTravelEstimates](cptravelestimates.md): An object that describes the time and distance remaining for a maneuver in a navigation session.
@@ -88,12 +87,6 @@ When CarPlay pauses, finishes, or cancels route guidance, you must call the corr
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 
-## See Also
-
-### Navigating a Trip
-
-- [startNavigationSession(for:)](cpmaptemplate/startnavigationsession%28for_%29.md): Begins navigational guidance for a trip.
-
 # CPNavigationSession (Objective-C)
 
 **Framework:** CarPlay  
@@ -122,21 +115,20 @@ When CarPlay pauses, finishes, or cancels route guidance, you must call the corr
 
 ## Topics
 
-### Getting the Trip
+### Getting the trip
 
 - [trip](cpnavigationsession/trip.md): The trip associated with the navigation session.
-- [CPTrip](cptrip.md): An object that represents a journey between an origin and a destination.
 
-### Managing Trip Navigation
+### Managing trip navigation
 
-- [cancelTrip](cpnavigationsession/canceltrip%28%29.md): Tells the navigation session to cancel the trip.
-- [finishTrip](cpnavigationsession/finishtrip%28%29.md): Tells the navigation session to finish the trip.
 - [pauseTripForReason:description:](cpnavigationsession/pausetrip%28for_description_%29.md): Tells the navigation session to pause the trip for the specified reason.
 - [pauseTripForReason:description:turnCardColor:](cpnavigationsession/pausetrip%28for_description_turncardcolor_%29.md)
 - [CPTripPauseReason](cpnavigationsession/pausereason.md): A set of reasons for pausing a trip.
 - [resumeTripWithUpdatedRouteInformation:](cpnavigationsession/resumetrip%28updatedrouteinformation_%29.md): Resumes the current trip with updated route information.
+- [finishTrip](cpnavigationsession/finishtrip%28%29.md): Tells the navigation session to finish the trip.
+- [cancelTrip](cpnavigationsession/canceltrip%28%29.md): Tells the navigation session to cancel the trip.
 
-### Managing Upcoming Maneuvers
+### Managing upcoming maneuvers
 
 - [upcomingManeuvers](cpnavigationsession/upcomingmaneuvers.md): The next set of maneuvers the user should perform while following the current route.
 - [maneuverState](cpnavigationsession/maneuverstate.md): The current maneuver state.
@@ -146,7 +138,7 @@ When CarPlay pauses, finishes, or cancels route guidance, you must call the corr
 - [addLaneGuidances:](cpnavigationsession/add%28__%29-93qpu.md): Adds one or more lane guidance instances to the navigation session.
 - [CPManeuver](cpmaneuver.md): An object that describes a single navigation instruction.
 
-### Updating Travel Estimates
+### Updating travel estimates
 
 - [updateTravelEstimates:forManeuver:](cpnavigationsession/updateestimates%28__for_%29.md): Updates the travel estimates for the specified maneuver.
 - [CPTravelEstimates](cptravelestimates.md): An object that describes the time and distance remaining for a maneuver in a navigation session.
@@ -170,9 +162,3 @@ When CarPlay pauses, finishes, or cancels route guidance, you must call the corr
 ### Inherits From
 
 - [NSObject](https://developer.apple.com/documentation/objectivec/nsobject-swift.class)
-
-## See Also
-
-### Navigating a Trip
-
-- [startNavigationSessionForTrip:](cpmaptemplate/startnavigationsession%28for_%29.md): Begins navigational guidance for a trip.

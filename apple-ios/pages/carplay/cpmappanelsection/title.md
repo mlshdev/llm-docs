@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmappanelsection/title
 
 # title (Swift)
@@ -21,6 +21,12 @@ var title: String? { get set }
 
 Set this property to `nil` if you don’t want to display a title for the section.
 
+## See Also
+
+### Accessing the section’s content
+
+- [items](items.md): The items to display in the section.
+
 # title (Objective-C)
 
 **Framework:** CarPlay  
@@ -40,3 +46,9 @@ The localized string to display for the section title.
 ## Discussion
 
 Set this property to `nil` if you don’t want to display a title for the section.
+
+## See Also
+
+### Accessing the section’s content
+
+- [items](items.md): The items to display in the section.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplatedelegate/maptemplate(_:waypoint:accepted:forsegment:)
 
 # mapTemplate(\_:waypoint:accepted:forSegment:) (Swift)
@@ -15,6 +15,13 @@ Called when the user responds to a proposal to add a waypoint as a stop on their
 optional func mapTemplate(_ mapTemplate: CPMapTemplate, waypoint: CPNavigationWaypoint, accepted: Bool, forSegment segment: CPRouteSegment?)
 ```
 
+## See Also
+
+### Adding and removing waypoints
+
+- [mapTemplate(\_:didRequestToInsert:into:completion:)](maptemplate%28__didrequesttoinsert_into_completion_%29.md): Called when the built-in navigation system sends a waypoint to the device for a specific segment.
+- [mapTemplate(\_:didRequestToRemove:)](maptemplate%28__didrequesttoremove_%29.md): Called when the user removes a waypoint. Perform a reroute to update the route accordingly.
+
 # mapTemplate:mapTemplateWaypoint:accepted:forSegment: (Objective-C)
 
 **Framework:** CarPlay  
@@ -28,3 +35,10 @@ Called when the user responds to a proposal to add a waypoint as a stop on their
 ```objectivec
 - (void) mapTemplate:(CPMapTemplate *) mapTemplate mapTemplateWaypoint:(CPNavigationWaypoint *) waypoint accepted:(BOOL) accepted forSegment:(CPRouteSegment *) segment;
 ```
+
+## See Also
+
+### Adding and removing waypoints
+
+- [mapTemplate:didRequestToInsertWaypoint:intoSegment:completion:](maptemplate%28__didrequesttoinsert_into_completion_%29.md): Called when the built-in navigation system sends a waypoint to the device for a specific segment.
+- [mapTemplate:didRequestToRemoveWaypoint:](maptemplate%28__didrequesttoremove_%29.md): Called when the user removes a waypoint. Perform a reroute to update the route accordingly.

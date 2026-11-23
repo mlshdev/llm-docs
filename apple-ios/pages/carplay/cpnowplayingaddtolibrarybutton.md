@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingaddtolibrarybutton
 
 # CPNowPlayingAddToLibraryButton (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Class  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A button for adding the current playing item to a collection.
+A button for adding the current item to a collection, such as the person’s library.
 
 ## Declaration
 
@@ -19,7 +19,9 @@ A button for adding the current playing item to a collection.
 
 ## Overview
 
-`CPNowPlayingAddToLibraryButton` is a concrete subclass of [CPNowPlayingButton](cpnowplayingbutton.md). Use this button to allow a user to add the current playing item to a collection, such as their library. You implement this functionality in the button’s handler, or use the handler to invoke existing code that performs this function.
+Include the `CPNowPlayingAddToLibraryButton ` in your Now Playing template if your app supports adding items to playlists or other collections. The system provides the appearance of the button. Respond to button interactions by adding the item to the appropriate collection in your app.
+
+Create the button and add it as one of the [nowPlayingButtons](cpnowplayingtemplate/nowplayingbuttons.md) in your Now Playing template. At creation time, provide a handler you want the system to call when someone interacts with the button, and use your handler to update your app’s data structures.
 
 ## Relationships
 
@@ -40,16 +42,14 @@ A button for adding the current playing item to a collection.
 
 ## See Also
 
-### Managing the Template’s Buttons
+### Now Playing buttons
 
-- [nowPlayingButtons](cpnowplayingtemplate/nowplayingbuttons.md): The Now Playing template’s playback control buttons.
-- [updateNowPlayingButtons(\_:)](cpnowplayingtemplate/updatenowplayingbuttons%28__%29.md): Updates the playback control buttons the template displays.
-- [CPNowPlayingButton](cpnowplayingbutton.md): The abstract base class that Now Playing template buttons use.
-- [CPNowPlayingImageButton](cpnowplayingimagebutton.md): A button that displays an image.
-- [CPNowPlayingMoreButton](cpnowplayingmorebutton.md): A button for presenting more options to the user.
-- [CPNowPlayingPlaybackRateButton](cpnowplayingplaybackratebutton.md): A button for cycling through the available playback rates.
+- [CPNowPlayingShuffleButton](cpnowplayingshufflebutton.md): A button for toggling shuffle mode on and off.
 - [CPNowPlayingRepeatButton](cpnowplayingrepeatbutton.md): A button for cycling through the available repeat modes.
-- [CPNowPlayingShuffleButton](cpnowplayingshufflebutton.md): A button for cycling through the available shuffle modes.
+- [CPNowPlayingPlaybackRateButton](cpnowplayingplaybackratebutton.md): A button for changing the playback rate of the media.
+- [CPNowPlayingMoreButton](cpnowplayingmorebutton.md): A button for displaying additional playback options.
+- [CPNowPlayingImageButton](cpnowplayingimagebutton.md): A custom Now Playing button that displays an image.
+- [CPNowPlayingButton](cpnowplayingbutton.md): The abstract base class for buttons in the Now Playing interface.
 
 # CPNowPlayingAddToLibraryButton (Objective-C)
 
@@ -57,7 +57,7 @@ A button for adding the current playing item to a collection.
 **Kind:** Class  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A button for adding the current playing item to a collection.
+A button for adding the current item to a collection, such as the person’s library.
 
 ## Declaration
 
@@ -69,7 +69,9 @@ A button for adding the current playing item to a collection.
 
 ## Overview
 
-`CPNowPlayingAddToLibraryButton` is a concrete subclass of [CPNowPlayingButton](cpnowplayingbutton.md). Use this button to allow a user to add the current playing item to a collection, such as their library. You implement this functionality in the button’s handler, or use the handler to invoke existing code that performs this function.
+Include the `CPNowPlayingAddToLibraryButton ` in your Now Playing template if your app supports adding items to playlists or other collections. The system provides the appearance of the button. Respond to button interactions by adding the item to the appropriate collection in your app.
+
+Create the button and add it as one of the [nowPlayingButtons](cpnowplayingtemplate/nowplayingbuttons.md) in your Now Playing template. At creation time, provide a handler you want the system to call when someone interacts with the button, and use your handler to update your app’s data structures.
 
 ## Relationships
 
@@ -79,13 +81,11 @@ A button for adding the current playing item to a collection.
 
 ## See Also
 
-### Managing the Template’s Buttons
+### Now Playing buttons
 
-- [nowPlayingButtons](cpnowplayingtemplate/nowplayingbuttons.md): The Now Playing template’s playback control buttons.
-- [updateNowPlayingButtons:](cpnowplayingtemplate/updatenowplayingbuttons%28__%29.md): Updates the playback control buttons the template displays.
-- [CPNowPlayingButton](cpnowplayingbutton.md): The abstract base class that Now Playing template buttons use.
-- [CPNowPlayingImageButton](cpnowplayingimagebutton.md): A button that displays an image.
-- [CPNowPlayingMoreButton](cpnowplayingmorebutton.md): A button for presenting more options to the user.
-- [CPNowPlayingPlaybackRateButton](cpnowplayingplaybackratebutton.md): A button for cycling through the available playback rates.
+- [CPNowPlayingShuffleButton](cpnowplayingshufflebutton.md): A button for toggling shuffle mode on and off.
 - [CPNowPlayingRepeatButton](cpnowplayingrepeatbutton.md): A button for cycling through the available repeat modes.
-- [CPNowPlayingShuffleButton](cpnowplayingshufflebutton.md): A button for cycling through the available shuffle modes.
+- [CPNowPlayingPlaybackRateButton](cpnowplayingplaybackratebutton.md): A button for changing the playback rate of the media.
+- [CPNowPlayingMoreButton](cpnowplayingmorebutton.md): A button for displaying additional playback options.
+- [CPNowPlayingImageButton](cpnowplayingimagebutton.md): A custom Now Playing button that displays an image.
+- [CPNowPlayingButton](cpnowplayingbutton.md): The abstract base class for buttons in the Now Playing interface.

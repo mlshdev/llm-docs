@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppointofinteresttemplate/pointsofinterest
 
 # pointsOfInterest (Swift)
@@ -23,7 +23,7 @@ You must call the [setPointsOfInterest(\_:selectedIndex:)](setpointsofinterest%2
 
 ## See Also
 
-### Managing the Points of Interest
+### Managing the points of interest
 
 - [setPointsOfInterest(\_:selectedIndex:)](setpointsofinterest%28__selectedindex_%29.md): Updates the points of interest and the current selection.
 - [selectedIndex](selectedindex.md): The current selection’s index.
@@ -50,7 +50,7 @@ You must call the [setPointsOfInterest:selectedIndex:](setpointsofinterest%28__s
 
 ## See Also
 
-### Managing the Points of Interest
+### Managing the points of interest
 
 - [setPointsOfInterest:selectedIndex:](setpointsofinterest%28__selectedindex_%29.md): Updates the points of interest and the current selection.
 - [selectedIndex](selectedindex.md): The current selection’s index.

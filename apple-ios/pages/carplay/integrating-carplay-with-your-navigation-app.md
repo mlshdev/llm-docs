@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/integrating-carplay-with-your-navigation-app
 
 # Integrating CarPlay with Your Navigation App
@@ -96,10 +96,6 @@ See [`CPMapTemplateDelegate`](cpmaptemplatedelegate.md) for more information.
 
 ## See Also
 
-### Navigation
+### Essentials
 
-- [CPTemplateApplicationDashboardScene](cptemplateapplicationdashboardscene.md): A CarPlay scene that controls your app’s dashboard navigation window.
-- [CPTemplateApplicationDashboardSceneDelegate](cptemplateapplicationdashboardscenedelegate.md): The methods for responding to the life-cycle events of your navigation app’s dashboard scene.
-- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
-- [CPSearchTemplate](cpsearchtemplate.md): A template that provides the ability to search for a destination and see a list of search results.
-- [CPVoiceControlTemplate](cpvoicecontroltemplate.md): A template that displays a voice control indicator during audio input.
+- [CarPlay Navigation app](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.carplay-maps): A Boolean value that indicates whether the CarPlay app provides turn-by-turn directions.

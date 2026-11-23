@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitem/setdetailtext(_:)
 
 # setDetailText(\_:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Updates the list item’s secondary text.
+Updates the secondary text of the list item.
 
 ## Declaration
 
@@ -17,18 +17,19 @@ func setDetailText(_ detailText: String?)
 
 ## Parameters
 
-- `detailText`: The list item’s secondary text.
+- `detailText`: The secondary text to display below the primary text in the list item’s row.
 
 ## See Also
 
-### Managing Content
+### Managing the row’s content
 
-- [text](text.md): The list item’s primary text.
-- [setText(\_:)](settext%28__%29.md): Updates the list item’s primary text.
-- [detailText](detailtext.md): The list item’s secondary text.
-- [image](image.md): The image that the list item displays in its leading region.
-- [setImage(\_:)](setimage%28__%29.md): Updates the list item’s image.
-- [maximumImageSize](maximumimagesize.md): The maximum size of a list item’s image and accessory image.
+- [text](text.md): The primary text for the list item.
+- [detailText](detailtext.md): The secondary text for the list item.
+- [image](image.md): The image to display on the leading edge of the cell.
+- [setText(\_:)](settext%28__%29.md): Updates the primary text of the list item.
+- [setImage(\_:)](setimage%28__%29.md): Updates the leading image of the list item.
+- [userInfo](userinfo.md): App-specific data you associate with the item.
+- [maximumImageSize](maximumimagesize.md): The maximum dimensions for the list item images.
 
 # setDetailText: (Objective-C)
 
@@ -36,7 +37,7 @@ func setDetailText(_ detailText: String?)
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Updates the list item’s secondary text.
+Updates the secondary text of the list item.
 
 ## Declaration
 
@@ -46,15 +47,16 @@ Updates the list item’s secondary text.
 
 ## Parameters
 
-- `detailText`: The list item’s secondary text.
+- `detailText`: The secondary text to display below the primary text in the list item’s row.
 
 ## See Also
 
-### Managing Content
+### Managing the row’s content
 
-- [text](text.md): The list item’s primary text.
-- [setText:](settext%28__%29.md): Updates the list item’s primary text.
-- [detailText](detailtext.md): The list item’s secondary text.
-- [image](image.md): The image that the list item displays in its leading region.
-- [setImage:](setimage%28__%29.md): Updates the list item’s image.
-- [maximumImageSize](maximumimagesize.md): The maximum size of a list item’s image and accessory image.
+- [text](text.md): The primary text for the list item.
+- [detailText](detailtext.md): The secondary text for the list item.
+- [image](image.md): The image to display on the leading edge of the cell.
+- [setText:](settext%28__%29.md): Updates the primary text of the list item.
+- [setImage:](setimage%28__%29.md): Updates the leading image of the list item.
+- [userInfo](userinfo.md): App-specific data you associate with the item.
+- [maximumImageSize](maximumimagesize.md): The maximum dimensions for the list item images.

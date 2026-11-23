@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistsection/sectionindextitle
 
 # sectionIndexTitle (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-The section’s index title.
+The string that identifies the current session in an index.
 
 ## Declaration
 
@@ -15,17 +15,11 @@ The section’s index title.
 var sectionIndexTitle: String? { get }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The system displays only the first character of the section index title.
-
-## See Also
-
-### Getting Supplementary Information
-
-- [header](header.md): The section’s header text.
+For long lists, an index helps people navigate quickly to specific sections of content. This property contains the string you specified at initialization time. If your string contains more than one character, CarPlay displays only the first character in the index.
 
 # sectionIndexTitle (Objective-C)
 
@@ -33,7 +27,7 @@ The system displays only the first character of the section index title.
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-The section’s index title.
+The string that identifies the current session in an index.
 
 ## Declaration
 
@@ -41,14 +35,8 @@ The section’s index title.
 @property (nonatomic, copy, readonly, nullable) NSString * sectionIndexTitle;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The system displays only the first character of the section index title.
-
-## See Also
-
-### Getting Supplementary Information
-
-- [header](header.md): The section’s header text.
+For long lists, an index helps people navigate quickly to specific sections of content. This property contains the string you specified at initialization time. If your string contains more than one character, CarPlay displays only the first character in the index.

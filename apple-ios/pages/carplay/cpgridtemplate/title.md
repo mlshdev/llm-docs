@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpgridtemplate/title
 
 # title (Swift)
@@ -15,6 +15,12 @@ The title shown in the grid template’s navigation bar.
 var title: String { get }
 ```
 
+## See Also
+
+### Getting the grid title
+
+- [updateTitle(\_:)](updatetitle%28__%29.md)
+
 # title (Objective-C)
 
 **Framework:** CarPlay  
@@ -28,3 +34,9 @@ The title shown in the grid template’s navigation bar.
 ```objectivec
 @property (nonatomic, readonly) NSString * title;
 ```
+
+## See Also
+
+### Getting the grid title
+
+- [updateTitle:](updatetitle%28__%29.md)

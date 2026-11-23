@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplisttemplate/maximumitemcount
 
 # maximumItemCount (Swift)
@@ -15,19 +15,19 @@ The maximum number of items, across all sections, that the template can display.
 class var maximumItemCount: Int { get }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-This property’s value is dependent on any user interface limits that the vehicle imposes. See [CPSessionConfiguration](../cpsessionconfiguration.md) for more information. At runtime, use this value to determine the maximum number of items, across all sections, that your list can display.
+When building your content, use this value to determine the maximum number of items to create. A vehicle can provide a specific value for this property to accommodate any user interface limits. You can determine if vehicle-specific limits are in place using the [limitedUserInterfaces](../cpsessionconfiguration/limiteduserinterfaces.md) property of [CPSessionConfiguration](../cpsessionconfiguration.md). Even without vehicle-specific limits, different app types support different limits on the amount of information to display.
 
 ## See Also
 
-### Getting Supplementary Information
+### Getting the configuration limits
 
-- [itemCount](itemcount.md): The total number of items, across all sections, in the list.
-- [indexPath(for:)](indexpath%28for_%29.md): Returns the index path for the specified item.
-- [title](title.md): The title that the navigation bar displays when the template is visible.
+- [maximumSectionCount](maximumsectioncount.md): The maximum number of sections the template can display.
+- [maximumGridButtonImageSize](maximumgridbuttonimagesize.md): The expected image size for any grid buttons you add to the header.
+- [maximumHeaderGridButtonCount](maximumheadergridbuttoncount.md): The maximum number of grid buttons you can display in the header.
 
 # maximumItemCount (Objective-C)
 
@@ -43,16 +43,16 @@ The maximum number of items, across all sections, that the template can display.
 @property (class, nonatomic, readonly) NSUInteger maximumItemCount;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-This property’s value is dependent on any user interface limits that the vehicle imposes. See [CPSessionConfiguration](../cpsessionconfiguration.md) for more information. At runtime, use this value to determine the maximum number of items, across all sections, that your list can display.
+When building your content, use this value to determine the maximum number of items to create. A vehicle can provide a specific value for this property to accommodate any user interface limits. You can determine if vehicle-specific limits are in place using the [limitedUserInterfaces](../cpsessionconfiguration/limiteduserinterfaces.md) property of [CPSessionConfiguration](../cpsessionconfiguration.md). Even without vehicle-specific limits, different app types support different limits on the amount of information to display.
 
 ## See Also
 
-### Getting Supplementary Information
+### Getting the configuration limits
 
-- [itemCount](itemcount.md): The total number of items, across all sections, in the list.
-- [indexPathForItem:](indexpath%28for_%29.md): Returns the index path for the specified item.
-- [title](title.md): The title that the navigation bar displays when the template is visible.
+- [maximumSectionCount](maximumsectioncount.md): The maximum number of sections the template can display.
+- [maximumGridButtonImageSize](maximumgridbuttonimagesize.md): The expected image size for any grid buttons you add to the header.
+- [maximumHeaderGridButtonCount](maximumheadergridbuttoncount.md): The maximum number of grid buttons you can display in the header.

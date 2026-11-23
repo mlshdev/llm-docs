@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmappanel/delegate-swift.property
 
 # delegate (Swift)
@@ -21,6 +21,12 @@ weak var delegate: (any CPMapPanel.Delegate)? { get set }
 
 Specify a custom object that adopts the [CPMapPanel.Delegate](delegate-swift.protocol.md) protocol if you want to know when the map panel appears or disappears from your CarPlay interface. The system maintains a weak reference to the object you provide, so keep a reference to the object in your own code.
 
+## See Also
+
+### Responding to the panel’s appearance and disappearance
+
+- [CPMapPanel.Delegate](delegate-swift.protocol.md): The interface you use to respond to the appearance and disappearance of the panel.
+
 # delegate (Objective-C)
 
 **Framework:** CarPlay  
@@ -40,3 +46,9 @@ The app-specific object that the system notifies when it hides and shows the pan
 ## Discussion
 
 Specify a custom object that adopts the [CPMapPanelDelegate](delegate-swift.protocol.md) protocol if you want to know when the map panel appears or disappears from your CarPlay interface. The system maintains a weak reference to the object you provide, so keep a reference to the object in your own code.
+
+## See Also
+
+### Responding to the panel’s appearance and disappearance
+
+- [CPMapPanelDelegate](delegate-swift.protocol.md): The interface you use to respond to the appearance and disappearance of the panel.

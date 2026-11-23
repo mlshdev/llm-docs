@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistimagerowitemelement
 
 # CPListImageRowItemElement (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Class  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
 
-Abstract superclass for a a row item element object.
+An abstract class for an element in a row of a list.
 
 ## Declaration
 
@@ -15,17 +15,28 @@ Abstract superclass for a a row item element object.
 @MainActor class CPListImageRowItemElement
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+The `CPListImageRowItemElement ` class is an abstract class that defines the shared behavior for row elements. Use properties of this type to access common information about an element, such as the image it displays. You can also change the state of the item to enable or disable interactions.
+
+Row item elements adopt the [CPPlayableItem](cpplayableitem.md) protocol, which adds media-related metadata to each element. Use this metadata to display playback-related information for each element. For example, add duration and elapsed time details to convey someone’s playback progress.
+
 ## Topics
 
-### Instance Properties
+### Getting the element’s content
 
-- [accessibilityLabel](cplistimagerowitemelement/accessibilitylabel.md)
-- [image](cplistimagerowitemelement/image.md): The image associated with this element.
-- [isEnabled](cplistimagerowitemelement/isenabled.md): A Boolean value indicating whether the list element is enabled.
+- [image](cplistimagerowitemelement/image.md): The image associated with the element.
+- [maximumImageSize](cplistimagerowitemelement/maximumimagesize.md): The maximum dimensions for the element’s image.
 
-### Type Properties
+### Describing the image
 
-- [maximumImageSize](cplistimagerowitemelement/maximumimagesize.md): The expected image size for the image in your @c CPListImageRowItemElement. Images provided will be resized to this size.
+- [accessibilityLabel](cplistimagerowitemelement/accessibilitylabel.md): Accessibility text to apply to the element’s image.
+
+### Enabling and disabling the element
+
+- [isEnabled](cplistimagerowitemelement/isenabled.md): A Boolean value that indicates whether the item is enabled.
 
 ## Relationships
 
@@ -54,13 +65,21 @@ Abstract superclass for a a row item element object.
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 
+## See Also
+
+### Common types
+
+- [CPThumbnailImage](cpthumbnailimage.md): An image that can display overlays and metadata on top of the image.
+- [CPSelectableListItem](cpselectablelistitem.md): An interface for responding to selections in list items.
+- [CPListTemplateItem](cplisttemplateitem.md): An interface that describes the common properties of all list item types.
+
 # CPListImageRowItemElement (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Class  
 **Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
 
-Abstract superclass for a a row item element object.
+An abstract class for an element in a row of a list.
 
 ## Declaration
 
@@ -68,17 +87,28 @@ Abstract superclass for a a row item element object.
 @interface CPListImageRowItemElement : NSObject
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+The `CPListImageRowItemElement ` class is an abstract class that defines the shared behavior for row elements. Use properties of this type to access common information about an element, such as the image it displays. You can also change the state of the item to enable or disable interactions.
+
+Row item elements adopt the [CPPlayableItem](cpplayableitem.md) protocol, which adds media-related metadata to each element. Use this metadata to display playback-related information for each element. For example, add duration and elapsed time details to convey someone’s playback progress.
+
 ## Topics
 
-### Instance Properties
+### Getting the element’s content
 
-- [accessibilityLabel](cplistimagerowitemelement/accessibilitylabel.md)
-- [image](cplistimagerowitemelement/image.md): The image associated with this element.
-- [enabled](cplistimagerowitemelement/isenabled.md): A Boolean value indicating whether the list element is enabled.
+- [image](cplistimagerowitemelement/image.md): The image associated with the element.
+- [maximumImageSize](cplistimagerowitemelement/maximumimagesize.md): The maximum dimensions for the element’s image.
 
-### Type Properties
+### Describing the image
 
-- [maximumImageSize](cplistimagerowitemelement/maximumimagesize.md): The expected image size for the image in your @c CPListImageRowItemElement. Images provided will be resized to this size.
+- [accessibilityLabel](cplistimagerowitemelement/accessibilitylabel.md): Accessibility text to apply to the element’s image.
+
+### Enabling and disabling the element
+
+- [enabled](cplistimagerowitemelement/isenabled.md): A Boolean value that indicates whether the item is enabled.
 
 ## Relationships
 
@@ -97,3 +127,11 @@ Abstract superclass for a a row item element object.
 ### Conforms To
 
 - [CPPlayableItem](cpplayableitem.md)
+
+## See Also
+
+### Common types
+
+- [CPThumbnailImage](cpthumbnailimage.md): An image that can display overlays and metadata on top of the image.
+- [CPSelectableListItem](cpselectablelistitem.md): An interface for responding to selections in list items.
+- [CPListTemplateItem](cplisttemplateitem.md): An interface that describes the common properties of all list item types.

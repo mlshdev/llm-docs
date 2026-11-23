@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appclip/creating-an-app-clip-with-xcode
 
 # Creating an App Clip with Xcode (Swift)
@@ -73,7 +73,7 @@ For more information on measuring your app’s size, see [Reducing your app’s 
 
 App Clips can use [Background Assets](https://developer.apple.com/documentation/backgroundassets) to download additional content. If your App Clip offers an in-the-moment experience, ensure instant availability by keeping the App Clip as small as possible and avoiding usage of Background Assets.
 
-If you create an App Clip to offer a demo version of your app or your game, and are confident that people have a reliable and fast network connection when they invoke your App Clip, use Background Assets to down additional content. For example, the App Clip demo of a game might include assets needed for people to start the demo and create their in-game hero. To keep the App Clip small, it might not include the assets needed to play the first three levels of the game but downloads them while people create their hero.
+If you create an App Clip to offer a demo version of your app or your game, and are confident that people have a reliable and fast network connection when they invoke your App Clip, use Background Assets to download additional content. For example, the App Clip demo of a game might include assets needed for people to start the demo and create their in-game hero. To keep the App Clip small, it might not include the assets needed to play the first three levels of the game but downloads them while people create their hero.
 
 To download additional assets in the background, make sure you configure Background Assets for your app and App Clip targets. Note that your App Clip can’t set a background asset download’s priority to essential with [isEssential](https://developer.apple.com/documentation/backgroundassets/badownload/isessential).
 
@@ -203,7 +203,7 @@ For more information on measuring your app’s size, see [Reducing your app’s 
 
 App Clips can use [Background Assets](https://developer.apple.com/documentation/backgroundassets) to download additional content. If your App Clip offers an in-the-moment experience, ensure instant availability by keeping the App Clip as small as possible and avoiding usage of Background Assets.
 
-If you create an App Clip to offer a demo version of your app or your game, and are confident that people have a reliable and fast network connection when they invoke your App Clip, use Background Assets to down additional content. For example, the App Clip demo of a game might include assets needed for people to start the demo and create their in-game hero. To keep the App Clip small, it might not include the assets needed to play the first three levels of the game but downloads them while people create their hero.
+If you create an App Clip to offer a demo version of your app or your game, and are confident that people have a reliable and fast network connection when they invoke your App Clip, use Background Assets to download additional content. For example, the App Clip demo of a game might include assets needed for people to start the demo and create their in-game hero. To keep the App Clip small, it might not include the assets needed to play the first three levels of the game but downloads them while people create their hero.
 
 To download additional assets in the background, make sure you configure Background Assets for your app and App Clip targets. Note that your App Clip can’t set a background asset download’s priority to essential with [isEssential](https://developer.apple.com/documentation/backgroundassets/badownload/isessential).
 

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationalert
 
 # CPNavigationAlert (Swift)
@@ -25,58 +25,52 @@ The system displays the primary and secondary actions as buttons on the alert. A
 
 ## Topics
 
-### Creating a Navigation Alert
+### Creating a navigation alert
 
 - [init(titleVariants:subtitleVariants:image:primaryAction:secondaryAction:duration:)](cpnavigationalert/init%28titlevariants_subtitlevariants_image_primaryaction_secondaryaction_duration_%29.md): Creates a navigation alert.
-- [init(titleVariants:subtitleVariants:imageSet:primaryAction:secondaryAction:duration:)](cpnavigationalert/init%28titlevariants_subtitlevariants_imageset_primaryaction_secondaryaction_duration_%29.md): Deprecated. Creates a navigation alert.
+- [init(titleVariants:subtitleVariants:avatarImage:alert:actions:duration:)](cpnavigationalert/init%28titlevariants_subtitlevariants_avatarimage_alert_actions_duration_%29.md): Initialize a @c CPNavigationAlert with a title, image, an array of actions, and duration.
+- [init(titleVariants:subtitleVariants:avatarImage:alertImage:actions:duration:)](cpnavigationalert/init%28titlevariants_subtitlevariants_avatarimage_alertimage_actions_duration_%29.md)
+- [init(coder:)](cpnavigationalert/init%28coder_%29.md)
 
-### Getting Titles
+### Getting title values
 
 - [titleVariants](cpnavigationalert/titlevariants.md): An array of title strings.
 - [subtitleVariants](cpnavigationalert/subtitlevariants.md): An array of subtitle strings.
 - [updateTitleVariants(\_:subtitleVariants:)](cpnavigationalert/updatetitlevariants%28__subtitlevariants_%29.md): Updates title and subtitle variants.
+- [updateTitleVariants(\_:subtitleVariants:avatarImage:alert:actions:duration:)](cpnavigationalert/updatetitlevariants%28__subtitlevariants_avatarimage_alert_actions_duration_%29.md): Update the navigation alert with new title variants, subtitle variants, image, actions, and duration.
 
-### Getting the Alert Image
+### Getting the alert image
 
 - [image](cpnavigationalert/image.md): An image displayed in the navigation alert.
 - [imageSet](cpnavigationalert/imageset.md): An image set displayed in the navigation alert.
+- [alertImage](cpnavigationalert/alertimage.md)
+- [avatarImage](cpnavigationalert/avatarimage.md)
+- [maximumAlertImageSize](cpnavigationalert/maximumalertimagesize.md): The maximum image size for the alert image that a @c CPNavigationAlert can display.
+- [maximumAvatarImageSize](cpnavigationalert/maximumavatarimagesize.md): The maximum image size for the avatar image that a @c CPNavigationAlert can display.
 
-### Getting the Actions
+### Getting the actions
 
+- [actions](cpnavigationalert/actions.md): The array of actions associated with this navigation alert.
 - [primaryAction](cpnavigationalert/primaryaction.md): The primary action, and button, for the navigation alert.
 - [secondaryAction](cpnavigationalert/secondaryaction.md): An optional secondary action, and button, for the navigation alert.
+- [maximumActionsCount](cpnavigationalert/maximumactionscount.md): The maximum number of actions that a @c CPNavigationAlert can display.
 
-### Getting the Alert Duration
+### Configuring the alert behavior
+
+- [showsCloseButton](cpnavigationalert/showsclosebutton.md): A Boolean value indicating whether the close button is allowed to appear.
+
+### Getting the alert duration
 
 - [duration](cpnavigationalert/duration.md): The amount of time, in seconds, that the alert is visible.
 - [CPNavigationAlertMinimumDuration](cpnavigationalertminimumduration.md): A constant that defines the minimum amount of time that an alert is visible.
 
-### Enumerations
+### Getting the dismissal context
 
 - [CPNavigationAlert.DismissalContext](cpnavigationalert/dismissalcontext.md): A set of reasons for dismissing a navigation alert.
 
-### Initializers
+### Deprecated
 
-- [init(coder:)](cpnavigationalert/init%28coder_%29.md)
-- [init(titleVariants:subtitleVariants:avatarImage:alert:actions:duration:)](cpnavigationalert/init%28titlevariants_subtitlevariants_avatarimage_alert_actions_duration_%29.md): Initialize a @c CPNavigationAlert with a title, image, an array of actions, and duration.
-- [init(titleVariants:subtitleVariants:avatarImage:alertImage:actions:duration:)](cpnavigationalert/init%28titlevariants_subtitlevariants_avatarimage_alertimage_actions_duration_%29.md)
-
-### Instance Properties
-
-- [actions](cpnavigationalert/actions.md): The array of actions associated with this navigation alert.
-- [alertImage](cpnavigationalert/alertimage.md)
-- [avatarImage](cpnavigationalert/avatarimage.md)
-- [showsCloseButton](cpnavigationalert/showsclosebutton.md): A Boolean value indicating whether the close button is allowed to appear.
-
-### Instance Methods
-
-- [updateTitleVariants(\_:subtitleVariants:avatarImage:alert:actions:duration:)](cpnavigationalert/updatetitlevariants%28__subtitlevariants_avatarimage_alert_actions_duration_%29.md): Update the navigation alert with new title variants, subtitle variants, image, actions, and duration.
-
-### Type Properties
-
-- [maximumActionsCount](cpnavigationalert/maximumactionscount.md): The maximum number of actions that a @c CPNavigationAlert can display.
-- [maximumAlertImageSize](cpnavigationalert/maximumalertimagesize.md): The maximum image size for the alert image that a @c CPNavigationAlert can display.
-- [maximumAvatarImageSize](cpnavigationalert/maximumavatarimagesize.md): The maximum image size for the avatar image that a @c CPNavigationAlert can display.
+- [init(titleVariants:subtitleVariants:imageSet:primaryAction:secondaryAction:duration:)](cpnavigationalert/init%28titlevariants_subtitlevariants_imageset_primaryaction_secondaryaction_duration_%29.md): Deprecated. Creates a navigation alert.
 
 ## Relationships
 
@@ -95,14 +89,6 @@ The system displays the primary and secondary actions as buttons on the alert. A
 - [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
-
-## See Also
-
-### Displaying a Navigation Alert
-
-- [present(navigationAlert:animated:)](cpmaptemplate/present%28navigationalert_animated_%29.md): Displays a navigation alert on the map template.
-- [dismissNavigationAlert(animated:completion:)](cpmaptemplate/dismissnavigationalert%28animated_completion_%29.md): Tells the map template to dismiss the visable navigation alert.
-- [currentNavigationAlert](cpmaptemplate/currentnavigationalert.md): The visible navigation alert.
 
 # CPNavigationAlert (Objective-C)
 
@@ -128,53 +114,50 @@ The system displays the primary and secondary actions as buttons on the alert. A
 
 ## Topics
 
-### Creating a Navigation Alert
+### Creating a navigation alert
 
 - [initWithTitleVariants:subtitleVariants:image:primaryAction:secondaryAction:duration:](cpnavigationalert/init%28titlevariants_subtitlevariants_image_primaryaction_secondaryaction_duration_%29.md): Creates a navigation alert.
-- [initWithTitleVariants:subtitleVariants:imageSet:primaryAction:secondaryAction:duration:](cpnavigationalert/init%28titlevariants_subtitlevariants_imageset_primaryaction_secondaryaction_duration_%29.md): Deprecated. Creates a navigation alert.
+- [initWithTitleVariants:subtitleVariants:avatarImage:alertImage:actions:duration:](cpnavigationalert/init%28titlevariants_subtitlevariants_avatarimage_alert_actions_duration_%29.md): Initialize a @c CPNavigationAlert with a title, image, an array of actions, and duration.
 
-### Getting Titles
+### Getting title values
 
 - [titleVariants](cpnavigationalert/titlevariants.md): An array of title strings.
 - [subtitleVariants](cpnavigationalert/subtitlevariants.md): An array of subtitle strings.
 - [updateTitleVariants:subtitleVariants:](cpnavigationalert/updatetitlevariants%28__subtitlevariants_%29.md): Updates title and subtitle variants.
+- [updateTitleVariants:subtitleVariants:avatarImage:alertImage:actions:duration:](cpnavigationalert/updatetitlevariants%28__subtitlevariants_avatarimage_alert_actions_duration_%29.md): Update the navigation alert with new title variants, subtitle variants, image, actions, and duration.
 
-### Getting the Alert Image
+### Getting the alert image
 
 - [image](cpnavigationalert/image.md): An image displayed in the navigation alert.
 - [imageSet](cpnavigationalert/imageset.md): An image set displayed in the navigation alert.
+- [alertImage](cpnavigationalert/alertimage.md)
+- [avatarImage](cpnavigationalert/avatarimage.md)
+- [maximumAlertImageSize](cpnavigationalert/maximumalertimagesize.md): The maximum image size for the alert image that a @c CPNavigationAlert can display.
+- [maximumAvatarImageSize](cpnavigationalert/maximumavatarimagesize.md): The maximum image size for the avatar image that a @c CPNavigationAlert can display.
 
-### Getting the Actions
+### Getting the actions
 
+- [actions](cpnavigationalert/actions.md): The array of actions associated with this navigation alert.
 - [primaryAction](cpnavigationalert/primaryaction.md): The primary action, and button, for the navigation alert.
 - [secondaryAction](cpnavigationalert/secondaryaction.md): An optional secondary action, and button, for the navigation alert.
+- [maximumActionsCount](cpnavigationalert/maximumactionscount.md): The maximum number of actions that a @c CPNavigationAlert can display.
 
-### Getting the Alert Duration
+### Configuring the alert behavior
+
+- [showsCloseButton](cpnavigationalert/showsclosebutton.md): A Boolean value indicating whether the close button is allowed to appear.
+
+### Getting the alert duration
 
 - [duration](cpnavigationalert/duration.md): The amount of time, in seconds, that the alert is visible.
 - [CPNavigationAlertMinimumDuration](cpnavigationalertminimumduration.md): A constant that defines the minimum amount of time that an alert is visible.
 
-### Enumerations
+### Getting the dismissal context
 
 - [CPNavigationAlertDismissalContext](cpnavigationalert/dismissalcontext.md): A set of reasons for dismissing a navigation alert.
 
-### Instance Properties
+### Deprecated
 
-- [actions](cpnavigationalert/actions.md): The array of actions associated with this navigation alert.
-- [alertImage](cpnavigationalert/alertimage.md)
-- [avatarImage](cpnavigationalert/avatarimage.md)
-- [showsCloseButton](cpnavigationalert/showsclosebutton.md): A Boolean value indicating whether the close button is allowed to appear.
-
-### Instance Methods
-
-- [initWithTitleVariants:subtitleVariants:avatarImage:alertImage:actions:duration:](cpnavigationalert/init%28titlevariants_subtitlevariants_avatarimage_alert_actions_duration_%29.md): Initialize a @c CPNavigationAlert with a title, image, an array of actions, and duration.
-- [updateTitleVariants:subtitleVariants:avatarImage:alertImage:actions:duration:](cpnavigationalert/updatetitlevariants%28__subtitlevariants_avatarimage_alert_actions_duration_%29.md): Update the navigation alert with new title variants, subtitle variants, image, actions, and duration.
-
-### Type Properties
-
-- [maximumActionsCount](cpnavigationalert/maximumactionscount.md): The maximum number of actions that a @c CPNavigationAlert can display.
-- [maximumAlertImageSize](cpnavigationalert/maximumalertimagesize.md): The maximum image size for the alert image that a @c CPNavigationAlert can display.
-- [maximumAvatarImageSize](cpnavigationalert/maximumavatarimagesize.md): The maximum image size for the avatar image that a @c CPNavigationAlert can display.
+- [initWithTitleVariants:subtitleVariants:imageSet:primaryAction:secondaryAction:duration:](cpnavigationalert/init%28titlevariants_subtitlevariants_imageset_primaryaction_secondaryaction_duration_%29.md): Deprecated. Creates a navigation alert.
 
 ## Relationships
 
@@ -185,11 +168,3 @@ The system displays the primary and secondary actions as buttons on the alert. A
 ### Conforms To
 
 - [NSSecureCoding](https://developer.apple.com/documentation/foundation/nssecurecoding)
-
-## See Also
-
-### Displaying a Navigation Alert
-
-- [presentNavigationAlert:animated:](cpmaptemplate/present%28navigationalert_animated_%29.md): Displays a navigation alert on the map template.
-- [dismissNavigationAlertAnimated:completion:](cpmaptemplate/dismissnavigationalert%28animated_completion_%29.md): Tells the map template to dismiss the visable navigation alert.
-- [currentNavigationAlert](cpmaptemplate/currentnavigationalert.md): The visible navigation alert.

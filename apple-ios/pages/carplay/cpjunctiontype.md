@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpjunctiontype
 
 # CPJunctionType (Swift)
@@ -17,14 +17,14 @@ enum CPJunctionType
 
 ## Topics
 
-### Initializers
-
-- [init(rawValue:)](cpjunctiontype/init%28rawvalue_%29.md): Creates a junction type with the provided integer value.
-
-### Junction types
+### Getting the junction types
 
 - [CPJunctionType.intersection](cpjunctiontype/intersection.md): A single intersection with roads coming to a common point.
 - [CPJunctionType.roundabout](cpjunctiontype/roundabout.md): Junction elements that represent roads exiting the roundabout.
+
+### Creating a junction type
+
+- [init(rawValue:)](cpjunctiontype/init%28rawvalue_%29.md): Creates a junction type with the provided integer value.
 
 ## Relationships
 
@@ -39,12 +39,15 @@ enum CPJunctionType
 
 ## See Also
 
-### Routes, lanes and junctions
+### Lanes and junctions
 
-- [CPRouteInformation](cprouteinformation.md): A class that describes the characteristic elements of a route.
 - [CPLane](cplane.md): A class that describes characteristics of a lane on a roadway.
 - [CPLaneGuidance](cplaneguidance.md): A class that provides information that describes the number of lanes on a roadway and navigation instruction variants.
 - [CPLaneStatus](cplanestatus.md): Values that describe the status or preferability of a lane.
+- [CPTrafficSide](cptrafficside.md): Values that represent which side of the road the traffic drives on.
+- [NSStringFromCPJunctionType(\_:)](nsstringfromcpjunctiontype%28__%29.md)
+- [NSStringFromCPLaneStatus(\_:)](nsstringfromcplanestatus%28__%29.md)
+- [NSStringFromCPTrafficSide(\_:)](nsstringfromcptrafficside%28__%29.md)
 
 # CPJunctionType (Objective-C)
 
@@ -62,16 +65,19 @@ enum CPJunctionType : NSUInteger;
 
 ## Topics
 
-### Junction types
+### Getting the junction types
 
 - [CPJunctionTypeIntersection](cpjunctiontype/intersection.md): A single intersection with roads coming to a common point.
 - [CPJunctionTypeRoundabout](cpjunctiontype/roundabout.md): Junction elements that represent roads exiting the roundabout.
 
 ## See Also
 
-### Routes, lanes and junctions
+### Lanes and junctions
 
-- [CPRouteInformation](cprouteinformation.md): A class that describes the characteristic elements of a route.
 - [CPLane](cplane.md): A class that describes characteristics of a lane on a roadway.
 - [CPLaneGuidance](cplaneguidance.md): A class that provides information that describes the number of lanes on a roadway and navigation instruction variants.
 - [CPLaneStatus](cplanestatus.md): Values that describe the status or preferability of a lane.
+- [CPTrafficSide](cptrafficside.md): Values that represent which side of the road the traffic drives on.
+- [NSStringFromCPJunctionType](nsstringfromcpjunctiontype%28__%29.md)
+- [NSStringFromCPLaneStatus](nsstringfromcplanestatus%28__%29.md)
+- [NSStringFromCPTrafficSide](nsstringfromcptrafficside%28__%29.md)

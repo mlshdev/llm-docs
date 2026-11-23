@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptravelestimates
 
 # CPTravelEstimates (Swift)
@@ -17,20 +17,18 @@ class CPTravelEstimates
 
 ## Topics
 
-### Getting the trip
+### Creating travel estimates
 
-- [CPTrip](cptrip.md): An object that represents a journey between an origin and a destination.
+- [init(distanceRemaining:timeRemaining:)](cptravelestimates/init%28distanceremaining_timeremaining_%29.md): Creates travel estimates with the remaining distance and time.
+- [init(distanceRemaining:distanceRemainingToDisplay:timeRemaining:)](cptravelestimates/init%28distanceremaining_distanceremainingtodisplay_timeremaining_%29.md): Creates a travel estimates instance with the distance remaining that the framework displays to a person.
+- [init(distanceRemaining:distanceRemainingToDisplay:timeRemaining:routeDetails:)](cptravelestimates/init%28distanceremaining_distanceremainingtodisplay_timeremaining_routedetails_%29.md): Initialize a @c CPTravelEstimates with distance, distance to display, time remaining, and additional trip information.
+- [init(coder:)](cptravelestimates/init%28coder_%29.md)
 
 ### Managing upcoming maneuvers
 
 - [add(\_:)](cpnavigationsession/add%28__%29-17l62.md): Adds one or more maneuvers, in chronological order, to the navigation session.
 - [add(\_:)](cpnavigationsession/add%28__%29-93qpu.md): Adds one or more lane guidance instances to the navigation session.
 - [CPManeuver](cpmaneuver.md): An object that describes a single navigation instruction.
-
-### Creating a Travel Estimates Object
-
-- [init(distanceRemaining:timeRemaining:)](cptravelestimates/init%28distanceremaining_timeremaining_%29.md): Creates travel estimates with the remaining distance and time.
-- [init(distanceRemaining:distanceRemainingToDisplay:timeRemaining:)](cptravelestimates/init%28distanceremaining_distanceremainingtodisplay_timeremaining_%29.md): Creates a travel estimates instance with the distance remaining that the framework displays to a person.
 
 ### Updating travel estimates
 
@@ -45,19 +43,11 @@ class CPTravelEstimates
 - [resumeTrip(updatedRouteInformation:)](cpnavigationsession/resumetrip%28updatedrouteinformation_%29.md): Resumes the current trip with updated route information.
 - [CPNavigationSession.PauseReason](cpnavigationsession/pausereason.md): A set of reasons for pausing a trip.
 
-### Getting Travel Estimates
+### Getting travel estimates
 
 - [distanceRemaining](cptravelestimates/distanceremaining.md): The remaining distance for the travel estimate.
 - [distanceRemainingToDisplay](cptravelestimates/distanceremainingtodisplay.md): The distance remaining that the framework displays to a person, in the default units of measurement.
 - [timeRemaining](cptravelestimates/timeremaining.md): The remaining time for the travel estimate.
-
-### Initializers
-
-- [init(coder:)](cptravelestimates/init%28coder_%29.md)
-- [init(distanceRemaining:distanceRemainingToDisplay:timeRemaining:routeDetails:)](cptravelestimates/init%28distanceremaining_distanceremainingtodisplay_timeremaining_routedetails_%29.md): Initialize a @c CPTravelEstimates with distance, distance to display, time remaining, and additional trip information.
-
-### Instance Properties
-
 - [routeDetails](cptravelestimates/routedetails.md): Additional trip information such as battery, fuel, or toll information to display with travel estimates.
 
 ## Relationships
@@ -79,9 +69,14 @@ class CPTravelEstimates
 
 ## See Also
 
-### Updating Travel Estimates
+### Maneuvers
 
-- [updateEstimates(\_:for:)](cpnavigationsession/updateestimates%28__for_%29.md): Updates the travel estimates for the specified maneuver.
+- [CPManeuver](cpmaneuver.md): An object that describes a single navigation instruction.
+- [CPManeuverState](cpmaneuverstate.md): Values that describe the state of a maneuver.
+- [CPManeuverType](cpmaneuvertype.md): Values that describe types of navigation maneuvers.
+- [CPTripPreviewTextConfiguration](cptrippreviewtextconfiguration.md): A configuration object for changing the button titles on a trip preview.
+- [NSStringFromCPManeuverType(\_:)](nsstringfromcpmaneuvertype%28__%29.md)
+- [CPLocationCoordinate3D](cplocationcoordinate3d.md): CPLocationCoordinate3D represents a three-dimensional coordinate with latitude, longitude, and altitude components.
 
 # CPTravelEstimates (Objective-C)
 
@@ -99,20 +94,17 @@ An object that describes the time and distance remaining for a maneuver in a nav
 
 ## Topics
 
-### Getting the trip
+### Creating travel estimates
 
-- [CPTrip](cptrip.md): An object that represents a journey between an origin and a destination.
+- [initWithDistanceRemaining:timeRemaining:](cptravelestimates/init%28distanceremaining_timeremaining_%29.md): Creates travel estimates with the remaining distance and time.
+- [initWithDistanceRemaining:distanceRemainingToDisplay:timeRemaining:](cptravelestimates/init%28distanceremaining_distanceremainingtodisplay_timeremaining_%29.md): Creates a travel estimates instance with the distance remaining that the framework displays to a person.
+- [initWithDistanceRemaining:distanceRemainingToDisplay:timeRemaining:routeDetails:](cptravelestimates/init%28distanceremaining_distanceremainingtodisplay_timeremaining_routedetails_%29.md): Initialize a @c CPTravelEstimates with distance, distance to display, time remaining, and additional trip information.
 
 ### Managing upcoming maneuvers
 
 - [addManeuvers:](cpnavigationsession/add%28__%29-17l62.md): Adds one or more maneuvers, in chronological order, to the navigation session.
 - [addLaneGuidances:](cpnavigationsession/add%28__%29-93qpu.md): Adds one or more lane guidance instances to the navigation session.
 - [CPManeuver](cpmaneuver.md): An object that describes a single navigation instruction.
-
-### Creating a Travel Estimates Object
-
-- [initWithDistanceRemaining:timeRemaining:](cptravelestimates/init%28distanceremaining_timeremaining_%29.md): Creates travel estimates with the remaining distance and time.
-- [initWithDistanceRemaining:distanceRemainingToDisplay:timeRemaining:](cptravelestimates/init%28distanceremaining_distanceremainingtodisplay_timeremaining_%29.md): Creates a travel estimates instance with the distance remaining that the framework displays to a person.
 
 ### Updating travel estimates
 
@@ -127,19 +119,12 @@ An object that describes the time and distance remaining for a maneuver in a nav
 - [resumeTripWithUpdatedRouteInformation:](cpnavigationsession/resumetrip%28updatedrouteinformation_%29.md): Resumes the current trip with updated route information.
 - [CPTripPauseReason](cpnavigationsession/pausereason.md): A set of reasons for pausing a trip.
 
-### Getting Travel Estimates
+### Getting travel estimates
 
 - [distanceRemaining](cptravelestimates/distanceremaining.md): The remaining distance for the travel estimate.
 - [distanceRemainingToDisplay](cptravelestimates/distanceremainingtodisplay.md): The distance remaining that the framework displays to a person, in the default units of measurement.
 - [timeRemaining](cptravelestimates/timeremaining.md): The remaining time for the travel estimate.
-
-### Instance Properties
-
 - [routeDetails](cptravelestimates/routedetails.md): Additional trip information such as battery, fuel, or toll information to display with travel estimates.
-
-### Instance Methods
-
-- [initWithDistanceRemaining:distanceRemainingToDisplay:timeRemaining:routeDetails:](cptravelestimates/init%28distanceremaining_distanceremainingtodisplay_timeremaining_routedetails_%29.md): Initialize a @c CPTravelEstimates with distance, distance to display, time remaining, and additional trip information.
 
 ## Relationships
 
@@ -153,6 +138,11 @@ An object that describes the time and distance remaining for a maneuver in a nav
 
 ## See Also
 
-### Updating Travel Estimates
+### Maneuvers
 
-- [updateTravelEstimates:forManeuver:](cpnavigationsession/updateestimates%28__for_%29.md): Updates the travel estimates for the specified maneuver.
+- [CPManeuver](cpmaneuver.md): An object that describes a single navigation instruction.
+- [CPManeuverState](cpmaneuverstate.md): Values that describe the state of a maneuver.
+- [CPManeuverType](cpmaneuvertype.md): Values that describe types of navigation maneuvers.
+- [CPTripPreviewTextConfiguration](cptrippreviewtextconfiguration.md): A configuration object for changing the button titles on a trip preview.
+- [NSStringFromCPManeuverType](nsstringfromcpmaneuvertype%28__%29.md)
+- [CPLocationCoordinate3D](cplocationcoordinate3d.md): CPLocationCoordinate3D represents a three-dimensional coordinate with latitude, longitude, and altitude components.

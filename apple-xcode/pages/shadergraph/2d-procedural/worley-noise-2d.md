@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/shadergraph/2d-procedural/worley-noise-2d
 
 # Worley Noise 2D
@@ -52,8 +52,6 @@ A 2D Worley noise generator.
 
 - **`Texture Coordinates`**: The 2D coordinate at which the data is read for mapping a texture to a surface. The default uses the current UV coordinates, in which U is the horizontal axis and V is the vertical axis.
 - **`Jitter`**: The amount to *jitter* or shift the center of each cell experiences. The default value is `1.0`. A smaller value creates a more regular pattern, and `0` creates perfect squares.
-
-## 
 
 <a id="Discussion"></a>
 

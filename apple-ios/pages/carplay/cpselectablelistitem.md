@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpselectablelistitem
 
 # CPSelectableListItem (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Protocol  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A description of a selectable list item.
+An interface for responding to selections in list items.
 
 ## Declaration
 
@@ -19,15 +19,13 @@ protocol CPSelectableListItem : CPListTemplateItem
 
 ## Overview
 
-> **Important**
-
->  You don’t create custom classes that conform to `CPSelectableListItem`. Instead, you use one of the prebuilt list item types that adopt this protocol, such as [CPListItem](cplistitem.md) or [CPListImageRowItem](cplistimagerowitem.md).
+This protocol provides system-provided list item types with the support they need to handle interactions. Don’t add this protocol directly to your custom types. Instead, use it through a system type such as [CPListItem](cplistitem.md) or [CPListImageRowItem](cplistimagerowitem.md).
 
 ## Topics
 
-### Managing Selection
+### Responding to a selection
 
-- [handler](cpselectablelistitem/handler.md): An optional closure that CarPlay invokes when the user selects the list item.
+- [handler](cpselectablelistitem/handler.md): The closure to run when someone interacts with any part of the item.
 
 ## Relationships
 
@@ -43,13 +41,11 @@ protocol CPSelectableListItem : CPListTemplateItem
 
 ## See Also
 
-### Creating a Section
+### Common types
 
-- [init(items:header:headerSubtitle:headerImage:headerButton:sectionIndexTitle:)](cplistsection/init%28items_header_headersubtitle_headerimage_headerbutton_sectionindextitle_%29.md): Creates a section with list items, a header, a section index title, and section header details.
-- [CPListTemplateItem](cplisttemplateitem.md): A description of the common properties of all list item types.
-- [CPListItem](cplistitem.md): A selectable row in a list template.
-- [CPListImageRowItem](cplistimagerowitem.md): A list template row that displays a series of images.
-- [CPMessageListItem](cpmessagelistitem.md): A list template row that represents a conversation or contact.
+- [CPThumbnailImage](cpthumbnailimage.md): An image that can display overlays and metadata on top of the image.
+- [CPListImageRowItemElement](cplistimagerowitemelement.md): An abstract class for an element in a row of a list.
+- [CPListTemplateItem](cplisttemplateitem.md): An interface that describes the common properties of all list item types.
 
 # CPSelectableListItem (Objective-C)
 
@@ -57,7 +53,7 @@ protocol CPSelectableListItem : CPListTemplateItem
 **Kind:** Protocol  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A description of a selectable list item.
+An interface for responding to selections in list items.
 
 ## Declaration
 
@@ -69,15 +65,13 @@ A description of a selectable list item.
 
 ## Overview
 
-> **Important**
-
->  You don’t create custom classes that conform to `CPSelectableListItem`. Instead, you use one of the prebuilt list item types that adopt this protocol, such as [CPListItem](cplistitem.md) or [CPListImageRowItem](cplistimagerowitem.md).
+This protocol provides system-provided list item types with the support they need to handle interactions. Don’t add this protocol directly to your custom types. Instead, use it through a system type such as [CPListItem](cplistitem.md) or [CPListImageRowItem](cplistimagerowitem.md).
 
 ## Topics
 
-### Managing Selection
+### Responding to a selection
 
-- [handler](cpselectablelistitem/handler.md): An optional closure that CarPlay invokes when the user selects the list item.
+- [handler](cpselectablelistitem/handler.md): The closure to run when someone interacts with any part of the item.
 
 ## Relationships
 
@@ -92,12 +86,8 @@ A description of a selectable list item.
 
 ## See Also
 
-### Creating a Section
+### Common types
 
-- [initWithItems:](cplistsection/initwithitems_.md): Creates a section with list items.
-- [initWithItems:header:sectionIndexTitle:](cplistsection/initwithitems_header_sectionindextitle_.md): Creates a section with list items, a header, and a section index title.
-- [initWithItems:header:headerSubtitle:headerImage:headerButton:sectionIndexTitle:](cplistsection/init%28items_header_headersubtitle_headerimage_headerbutton_sectionindextitle_%29.md): Creates a section with list items, a header, a section index title, and section header details.
-- [CPListTemplateItem](cplisttemplateitem.md): A description of the common properties of all list item types.
-- [CPListItem](cplistitem.md): A selectable row in a list template.
-- [CPListImageRowItem](cplistimagerowitem.md): A list template row that displays a series of images.
-- [CPMessageListItem](cpmessagelistitem.md): A list template row that represents a conversation or contact.
+- [CPThumbnailImage](cpthumbnailimage.md): An image that can display overlays and metadata on top of the image.
+- [CPListImageRowItemElement](cplistimagerowitemelement.md): An abstract class for an element in a row of a list.
+- [CPListTemplateItem](cplisttemplateitem.md): An interface that describes the common properties of all list item types.

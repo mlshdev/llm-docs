@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpcontactmessagebutton
 
 # CPContactMessageButton (Swift)
@@ -25,11 +25,11 @@ class CPContactMessageButton
 
 ## Topics
 
-### Creating a Contact Message Button
+### Creating a contact message button
 
 - [init(phoneOrEmail:)](cpcontactmessagebutton/init%28phoneoremail_%29.md): Creates a contact message button with the provided contact information.
 
-### Getting the Contact Information
+### Getting the contact information
 
 - [phoneOrEmail](cpcontactmessagebutton/phoneoremail.md): The contact’s phone number or email address.
 
@@ -50,9 +50,10 @@ class CPContactMessageButton
 
 ## See Also
 
-### Managing Interactions with the Contact
+### Contacts
 
-- [actions](cpcontact/actions.md): The actions that the template displays for this contact.
+- [CPContactTemplate](cpcontacttemplate.md): A template that displays information about a person or a business.
+- [CPContact](cpcontact.md): A data object that contains information about a contact.
 - [CPContactCallButton](cpcontactcallbutton.md): A button for calling the contact.
 - [CPContactDirectionsButton](cpcontactdirectionsbutton.md): A button for getting directions to the contact’s location.
 
@@ -80,11 +81,11 @@ A button that activates Siri and initiates the compose message flow.
 
 ## Topics
 
-### Creating a Contact Message Button
+### Creating a contact message button
 
 - [initWithPhoneOrEmail:](cpcontactmessagebutton/init%28phoneoremail_%29.md): Creates a contact message button with the provided contact information.
 
-### Getting the Contact Information
+### Getting the contact information
 
 - [phoneOrEmail](cpcontactmessagebutton/phoneoremail.md): The contact’s phone number or email address.
 
@@ -96,8 +97,9 @@ A button that activates Siri and initiates the compose message flow.
 
 ## See Also
 
-### Managing Interactions with the Contact
+### Contacts
 
-- [actions](cpcontact/actions.md): The actions that the template displays for this contact.
+- [CPContactTemplate](cpcontacttemplate.md): A template that displays information about a person or a business.
+- [CPContact](cpcontact.md): A data object that contains information about a contact.
 - [CPContactCallButton](cpcontactcallbutton.md): A button for calling the contact.
 - [CPContactDirectionsButton](cpcontactdirectionsbutton.md): A button for getting directions to the contact’s location.

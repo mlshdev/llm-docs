@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingbutton/isenabled
 
 # isEnabled (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A Boolean value that indicates whether the button is in an enabled state.
+A Boolean value that indicates whether the button is enabled.
 
 ## Declaration
 
@@ -15,17 +15,17 @@ A Boolean value that indicates whether the button is in an enabled state.
 var isEnabled: Bool { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The default value is [true](https://developer.apple.com/documentation/swift/true).
+When the value of this property is `true`, CarPlay draws the button with an enabled appearance and reports interactions to the handler you provided at initialization time. When the value of this property is `false`, CarPlay draws the button with a dimmed appearance and doesn’t report interactions. The default value of this property is `true`.
 
 ## See Also
 
-### Managing the Button State
+### Managing the button state
 
-- [isSelected](isselected.md): A Boolean value that indicates whether the button is in a selected state.
+- [isSelected](isselected.md): A Boolean value that indicates the selected state of a custom button.
 
 # enabled (Objective-C)
 
@@ -33,7 +33,7 @@ The default value is [true](https://developer.apple.com/documentation/swift/true
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A Boolean value that indicates whether the button is in an enabled state.
+A Boolean value that indicates whether the button is enabled.
 
 ## Declaration
 
@@ -41,14 +41,14 @@ A Boolean value that indicates whether the button is in an enabled state.
 @property (nonatomic, assign, getter=isEnabled) BOOL enabled;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The default value is [true](https://developer.apple.com/documentation/swift/true).
+When the value of this property is `true`, CarPlay draws the button with an enabled appearance and reports interactions to the handler you provided at initialization time. When the value of this property is `false`, CarPlay draws the button with a dimmed appearance and doesn’t report interactions. The default value of this property is `true`.
 
 ## See Also
 
-### Managing the Button State
+### Managing the button state
 
-- [selected](isselected.md): A Boolean value that indicates whether the button is in a selected state.
+- [selected](isselected.md): A Boolean value that indicates the selected state of a custom button.

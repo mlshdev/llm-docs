@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationalert/actions
 
 # actions (Swift)
@@ -25,6 +25,14 @@ If the alert was created with the older @c primaryAction / @c secondaryAction in
 
 > CPAlertActionStyleCancel actions are rendered as standard labeled buttons in the primary action row.
 
+## See Also
+
+### Getting the actions
+
+- [primaryAction](primaryaction.md): The primary action, and button, for the navigation alert.
+- [secondaryAction](secondaryaction.md): An optional secondary action, and button, for the navigation alert.
+- [maximumActionsCount](maximumactionscount.md): The maximum number of actions that a @c CPNavigationAlert can display.
+
 # actions (Objective-C)
 
 **Framework:** CarPlay  
@@ -48,3 +56,11 @@ If the alert was created with the older @c primaryAction / @c secondaryAction in
 > **Note**
 
 > CPAlertActionStyleCancel actions are rendered as standard labeled buttons in the primary action row.
+
+## See Also
+
+### Getting the actions
+
+- [primaryAction](primaryaction.md): The primary action, and button, for the navigation alert.
+- [secondaryAction](secondaryaction.md): An optional secondary action, and button, for the navigation alert.
+- [maximumActionsCount](maximumactionscount.md): The maximum number of actions that a @c CPNavigationAlert can display.

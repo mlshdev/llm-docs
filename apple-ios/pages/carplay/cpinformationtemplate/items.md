@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinformationtemplate/items
 
 # items (Swift)
@@ -23,7 +23,7 @@ Assign a new array to this property to update the items that the template displa
 
 ## See Also
 
-### Managing the Items
+### Managing the items
 
 - [CPInformationItem](../cpinformationitem.md): A data object that provides content for an information template.
 - [CPInformationRatingItem](../cpinformationratingitem.md): A data object that provides rated content for an information template.
@@ -50,7 +50,7 @@ Assign a new array to this property to update the items that the template displa
 
 ## See Also
 
-### Managing the Items
+### Managing the items
 
 - [CPInformationItem](../cpinformationitem.md): A data object that provides content for an information template.
 - [CPInformationRatingItem](../cpinformationratingitem.md): A data object that provides rated content for an information template.

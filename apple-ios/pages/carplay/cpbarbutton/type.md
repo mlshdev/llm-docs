@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbarbutton/type
 
 # CPBarButton.Type (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Enumeration  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-Types of bar buttons.
+Specifies the type of a @c CPBarButton.
 
 ## Declaration
 
@@ -17,10 +17,10 @@ enum `Type`
 
 ## Topics
 
-### Button Types
+### Enumeration Cases
 
-- [CPBarButton.Type.text](type/text.md): A text style bar button.
-- [CPBarButton.Type.image](type/image.md): An image style bar button.
+- [CPBarButton.Type.image](type/image.md)
+- [CPBarButton.Type.text](type/text.md)
 
 ### Initializers
 
@@ -39,13 +39,10 @@ enum `Type`
 
 ## See Also
 
-### Creating a CarPlay Bar Button
+### Deprecated
 
-- [init(coder:)](init%28coder_%29.md): Creates a button initialized from data in the specified coder object.
-- [init(type:handler:)](init%28type_handler_%29.md): Deprecated. Creates a bar button with a type and handler.
-- [init(image:handler:)](init%28image_handler_%29.md): Creates a bar button that displays an image.
-- [init(title:handler:)](init%28title_handler_%29.md): Creates a bar button that displays a text label.
-- [CPBarButtonHandler](../cpbarbuttonhandler.md): A block that CarPlay calls when the user taps a bar button.
+- [init(type:handler:)](init%28type_handler_%29.md): Deprecated.
+- [buttonType](buttontype.md): Deprecated.
 
 # CPBarButtonType (Objective-C)
 
@@ -53,7 +50,7 @@ enum `Type`
 **Kind:** Enumeration  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-Types of bar buttons.
+Specifies the type of a @c CPBarButton.
 
 ## Declaration
 
@@ -63,16 +60,14 @@ enum CPBarButtonType : NSUInteger;
 
 ## Topics
 
-### Button Types
+### Enumeration Cases
 
-- [CPBarButtonTypeText](type/text.md): A text style bar button.
-- [CPBarButtonTypeImage](type/image.md): An image style bar button.
+- [CPBarButtonTypeImage](type/image.md)
+- [CPBarButtonTypeText](type/text.md)
 
 ## See Also
 
-### Creating a CarPlay Bar Button
+### Deprecated
 
-- [initWithType:handler:](init%28type_handler_%29.md): Deprecated. Creates a bar button with a type and handler.
-- [initWithImage:handler:](init%28image_handler_%29.md): Creates a bar button that displays an image.
-- [initWithTitle:handler:](init%28title_handler_%29.md): Creates a bar button that displays a text label.
-- [CPBarButtonHandler](../cpbarbuttonhandler.md): A block that CarPlay calls when the user taps a bar button.
+- [initWithType:handler:](init%28type_handler_%29.md): Deprecated.
+- [buttonType](buttontype.md): Deprecated.

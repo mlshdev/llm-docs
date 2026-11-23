@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmapbutton
 
 # CPMapButton (Swift)
@@ -17,16 +17,16 @@ A button that represents an action that a map template displays on the CarPlay s
 
 ## Topics
 
-### Creating a Map Button
+### Creating a map button
 
 - [init(handler:)](cpmapbutton/init%28handler_%29.md): Creates a new map button.
 
-### Providing Button Images
+### Managing the images
 
 - [image](cpmapbutton/image.md): The image to display on the button.
 - [focusedImage](cpmapbutton/focusedimage.md): The image to display when focus is on the button.
 
-### Controlling the Button
+### Configuring the button
 
 - [isEnabled](cpmapbutton/isenabled.md): A Boolean value that enables and disables the map button.
 - [isHidden](cpmapbutton/ishidden.md): A Boolean value that hides and shows the map button.
@@ -55,9 +55,14 @@ A button that represents an action that a map template displays on the CarPlay s
 
 ## See Also
 
-### Managing Map Buttons
+### Maps
 
-- [mapButtons](cpmaptemplate/mapbuttons.md): An array of map buttons on the trailing bottom corner of the map template.
+- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPMapPanel](cpmappanel.md): An overlay for a custom map interface that shows navigation-related instructions or information over a portion of the map.
+- [CPMapPanelSection](cpmappanelsection.md): A single section of a map panel that you fill with a title and one or more items.
+- [CPMapPanelItem](cpmappanelitem.md): A type that manages the waypoint, route, trip, and other information you display in a map panel.
+- [CPMapPanelButtonConfiguration](cpmappanelbuttonconfiguration.md): A type that manages the action buttons and travel estimates in a map panel.
+- [CPChargingStationConnection](cpchargingstationconnection.md): Details about the equipment at an electric vehicle charging station.
 
 # CPMapButton (Objective-C)
 
@@ -75,16 +80,16 @@ A button that represents an action that a map template displays on the CarPlay s
 
 ## Topics
 
-### Creating a Map Button
+### Creating a map button
 
 - [initWithHandler:](cpmapbutton/init%28handler_%29.md): Creates a new map button.
 
-### Providing Button Images
+### Managing the images
 
 - [image](cpmapbutton/image.md): The image to display on the button.
 - [focusedImage](cpmapbutton/focusedimage.md): The image to display when focus is on the button.
 
-### Controlling the Button
+### Configuring the button
 
 - [enabled](cpmapbutton/isenabled.md): A Boolean value that enables and disables the map button.
 - [hidden](cpmapbutton/ishidden.md): A Boolean value that hides and shows the map button.
@@ -101,6 +106,11 @@ A button that represents an action that a map template displays on the CarPlay s
 
 ## See Also
 
-### Managing Map Buttons
+### Maps
 
-- [mapButtons](cpmaptemplate/mapbuttons.md): An array of map buttons on the trailing bottom corner of the map template.
+- [CPMapTemplate](cpmaptemplate.md): A template that displays a navigation overlay that your app draws on the map.
+- [CPMapPanel](cpmappanel.md): An overlay for a custom map interface that shows navigation-related instructions or information over a portion of the map.
+- [CPMapPanelSection](cpmappanelsection.md): A single section of a map panel that you fill with a title and one or more items.
+- [CPMapPanelItem](cpmappanelitem.md): A type that manages the waypoint, route, trip, and other information you display in a map panel.
+- [CPMapPanelButtonConfiguration](cpmappanelbuttonconfiguration.md): A type that manages the action buttons and travel estimates in a map panel.
+- [CPChargingStationConnection](cpchargingstationconnection.md): Details about the equipment at an electric vehicle charging station.

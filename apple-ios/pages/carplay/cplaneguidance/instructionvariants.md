@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplaneguidance/instructionvariants
 
 # instructionVariants (Swift)
@@ -23,7 +23,7 @@ You need to provide at least one variant. Provide the variant strings as localiz
 
 ## See Also
 
-### Properties
+### Getting the lane guidance
 
 - [lanes](lanes.md): An array of lane objects, each describing a single lane.
 
@@ -49,6 +49,6 @@ You need to provide at least one variant. Provide the variant strings as localiz
 
 ## See Also
 
-### Properties
+### Getting the lane guidance
 
 - [lanes](lanes.md): An array of lane objects, each describing a single lane.

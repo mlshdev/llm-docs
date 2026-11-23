@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaximumnumberofgridimages
 
 # CPMaximumNumberOfGridImages (Swift)
@@ -23,12 +23,12 @@ At runtime, use this value to determine the total number of images that CarPlay 
 
 ## See Also
 
-### Managing Content
+### Managing the row’s content
 
-- [text](cplistimagerowitem/text.md): The list item’s primary text.
-- [gridImages](cplistimagerowitem/gridimages.md): Deprecated. The images that appear in the list item’s image row.
-- [update(\_:)](cplistimagerowitem/update%28__%29.md): Deprecated. Adds, removes, reorders, or updates the images in the list item’s image row.
-- [maximumImageSize](cplistimagerowitem/maximumimagesize.md): Deprecated. The maximum size of an image that an image row can display.
+- [text](cplistimagerowitem/text.md): The row’s primary text.
+- [elements](cplistimagerowitem/elements.md): The elements to display in the row.
+- [allowsMultipleLines](cplistimagerowitem/allowsmultiplelines.md): A Boolean value that indicates whether the row displays elements on more than one line.
+- [userInfo](cplistimagerowitem/userinfo.md): App-specific data you associate with the item.
 
 # CPMaximumNumberOfGridImages (Objective-C)
 
@@ -52,9 +52,9 @@ At runtime, use this value to determine the total number of images that CarPlay 
 
 ## See Also
 
-### Managing Content
+### Managing the row’s content
 
-- [text](cplistimagerowitem/text.md): The list item’s primary text.
-- [gridImages](cplistimagerowitem/gridimages.md): Deprecated. The images that appear in the list item’s image row.
-- [updateImages:](cplistimagerowitem/update%28__%29.md): Deprecated. Adds, removes, reorders, or updates the images in the list item’s image row.
-- [maximumImageSize](cplistimagerowitem/maximumimagesize.md): Deprecated. The maximum size of an image that an image row can display.
+- [text](cplistimagerowitem/text.md): The row’s primary text.
+- [elements](cplistimagerowitem/elements.md): The elements to display in the row.
+- [allowsMultipleLines](cplistimagerowitem/allowsmultiplelines.md): A Boolean value that indicates whether the row displays elements on more than one line.
+- [userInfo](cplistimagerowitem/userinfo.md): App-specific data you associate with the item.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes/tn3147-migrating-to-the-latest-notarization-tool
 
 # TN3147: Migrating to the latest notarization tool
@@ -125,7 +125,7 @@ In this command:
 
 > **Note**
 
-> For details on the search path used by `altool`, see its man page.  If you’re unfamiliar with man pages, see .
+> For details on the search path used by `altool`, see its man page.  If you’re unfamiliar with man pages, see [TN3215: Reading man pages](tn3215-reading-man-pages.md).
 
 The equivalent for `notarytool` is:
 
@@ -301,7 +301,7 @@ OPTIONS:
 …
 ```
 
-For comprehensive help, see the `notarytool` man page.  If you’re unfamiliar with man pages, see .
+For comprehensive help, see the `notarytool` man page.  If you’re unfamiliar with man pages, see [TN3215: Reading man pages](tn3215-reading-man-pages.md).
 
 <a id="Save-credentials-in-the-keychain"></a>
 

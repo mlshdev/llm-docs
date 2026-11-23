@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes/tn3187-migrating-to-the-uikit-scene-based-life-cycle
 
 # TN3187: Migrating to the UIKit scene-based life cycle
@@ -53,7 +53,7 @@ Alternatively, you can specify the class name when creating a [UISceneConfigurat
 In a scene-based app:
 
 - UIKit usually creates a `UIWindowScene` object instead of a [UIScene](https://developer.apple.com/documentation/uikit/uiscene) object. When configuring your app’s scene support, specify `UIWindowScene` objects instead of `UIScene` objects.
-- Use [CPTemplateApplicationScene](https://developer.apple.com/documentation/carplay/cptemplateapplicationscene) if your app is adopting scenes for CarPlay. To learn how to add a CarPlay scene see [Displaying Content in CarPlay](https://developer.apple.com/documentation/carplay/displaying-content-in-carplay).
+- Use [CPTemplateApplicationScene](https://developer.apple.com/documentation/carplay/cptemplateapplicationscene) if your app is adopting scenes for CarPlay. To learn how to add a CarPlay scene see [Building your app’s initial CarPlay interface](https://developer.apple.com/documentation/carplay/building-your-apps-initial-carplay-interface).
 - [UISceneSession](https://developer.apple.com/documentation/uikit/uiscenesession) contains a unique identifier and the configuration details of the scene.
 - `UISceneDelegate` and [UIWindowSceneDelegate](https://developer.apple.com/documentation/uikit/uiwindowscenedelegate) both handle scene-specific life-cycle events.
 - `UISceneConfiguration` defines how to create and configure scenes.

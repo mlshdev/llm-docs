@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistsection/initwithitems:
 
 # initWithItems:
@@ -9,7 +9,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-Creates a section with list items.
+Creates a section with the provided items.
 
 ## Declaration
 
@@ -19,22 +19,10 @@ Creates a section with list items.
 
 ## Parameters
 
-- `items`: A list of items to include in the section.
+- `items`: The items to include in the section. CarPlay displays your items in the same order as your array. You can specify only [CPListItem](../cplistitem.md), [CPListImageRowItem](../cplistimagerowitem.md), and [CPMessageListItem](../cpmessagelistitem.md) types in your array. You can’t specify custom types that conform to the [CPListTemplateItem](../cplisttemplateitem.md) protocol. If you specify an empty array, the list interface hides the section. Empty sections count against the maximum number of allowed sections.
 
-<a id="return-value"></a>
+<a id="discussion"></a>
 
-## Return Value
+## Discussion
 
-A newly initialized list section.
-
-## See Also
-
-### Creating a Section
-
-- [initWithItems:header:sectionIndexTitle:](initwithitems_header_sectionindextitle_.md): Creates a section with list items, a header, and a section index title.
-- [initWithItems:header:headerSubtitle:headerImage:headerButton:sectionIndexTitle:](init%28items_header_headersubtitle_headerimage_headerbutton_sectionindextitle_%29.md): Creates a section with list items, a header, a section index title, and section header details.
-- [CPListTemplateItem](../cplisttemplateitem.md): A description of the common properties of all list item types.
-- [CPSelectableListItem](../cpselectablelistitem.md): A description of a selectable list item.
-- [CPListItem](../cplistitem.md): A selectable row in a list template.
-- [CPListImageRowItem](../cplistimagerowitem.md): A list template row that displays a series of images.
-- [CPMessageListItem](../cpmessagelistitem.md): A list template row that represents a conversation or contact.
+- Return: An initialized section object.

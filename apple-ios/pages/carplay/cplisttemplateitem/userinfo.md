@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplisttemplateitem/userinfo
 
 # userInfo (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-An opaque value for the list item.
+App-specific data you associate with the item.
 
 ## Declaration
 
@@ -15,11 +15,17 @@ An opaque value for the list item.
 var userInfo: Any? { get set }
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+Use this property to attach app-specific data to the item. For example, you might attach the model object from your app that corresponds to the item’s content. This information is just for your app, and CarPlay doesn’t use it. The default value of this property is `nil`.
+
 ## See Also
 
-### Managing Content
+### Managing content
 
-- [text](text.md): The item’s primary text.
+- [text](text.md): The primary text to display for the item.
 
 # userInfo (Objective-C)
 
@@ -27,7 +33,7 @@ var userInfo: Any? { get set }
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-An opaque value for the list item.
+App-specific data you associate with the item.
 
 ## Declaration
 
@@ -35,8 +41,14 @@ An opaque value for the list item.
 @property (nonatomic, strong, nullable) id userInfo;
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+Use this property to attach app-specific data to the item. For example, you might attach the model object from your app that corresponds to the item’s content. This information is just for your app, and CarPlay doesn’t use it. The default value of this property is `nil`.
+
 ## See Also
 
-### Managing Content
+### Managing content
 
-- [text](text.md): The item’s primary text.
+- [text](text.md): The primary text to display for the item.

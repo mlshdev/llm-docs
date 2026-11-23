@@ -6,36 +6,36 @@
   "title": "Apple iOS and iPadOS",
   "homepage": "https://developer.apple.com/ios/",
   "catalog": "ios",
-  "tag": "snapshot-0edb2c9c8b69",
-  "snapshotDigest": "0edb2c9c8b6974098c4f5041f38e17d41914df6ce4bf93bd90e9c545a2e4e309",
-  "contentDigest": "9616d4a18f3cc59853283e700560235e53ce236fee9234296628859f65237bee",
-  "capturedAt": "2026-11-08T22:37:20.684Z",
-  "documentCount": 7324,
+  "tag": "snapshot-5c9fd14c92ba",
+  "snapshotDigest": "5c9fd14c92baebacda0f5be5ce28d7b7df3a84065a659da9ff912561838c7bcc",
+  "contentDigest": "15fe73b072f033ccba2d2037d4695a3f7fc5c9b08ae36e56d4be43c62486b28a",
+  "capturedAt": "2026-11-22T23:58:10.606Z",
+  "documentCount": 7332,
   "indexComplete": false,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
       "byteLength": 697,
       "documentCount": 0,
-      "sha256": "60698d4a4ed0e9a12fb0e7f92f198f79e54306adbcb5898c0ec7bc3071ac2e45"
+      "sha256": "62bb8e826c4b1af33334458dc3621d84c17847439f5430788dd33d3f81941a4d"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8388411,
-      "documentCount": 4036,
-      "sha256": "e71d5257482aaca9c9fef723d2bc854cea8793ea63ca0f4acf39424e17867202"
+      "byteLength": 8384488,
+      "documentCount": 3878,
+      "sha256": "2aeb5eefad24ea0fceda3303bae615878da91bb54ec91e766f6674ec2b1561ea"
     },
     {
       "name": "llms-full.002.txt",
-      "byteLength": 6483791,
-      "documentCount": 3288,
-      "sha256": "cecf79a488bee7fc79e3a31a4a74dd5e56fec298e609ac63eb31a14725a92696"
+      "byteLength": 7026146,
+      "documentCount": 3454,
+      "sha256": "54711aee8f00a56c15e8d0b09bcdbd034772714b6bddaadf3f178846ce329960"
     }
   ],
-  "outputDigest": "fac1c8538270807da47969dec21e797e294401c95d5451b1204d28d9ee27528d",
+  "outputDigest": "3864c5685582412a88012acc80301b2d3e5ebf1df2a4c4e5c358b35adc40bedd",
   "notes": [
     "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
-    "45 frameworks in this catalog, captured at 2026-11-08T22:37:20.684Z.",
+    "45 frameworks in this catalog, captured at 2026-11-22T23:58:10.606Z.",
     "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
     "Weekly reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive weekly check.",
     "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinstrumentclustercontrollerdelegate/instrumentclustercontroller(_:didchangespeedlimitsetting:)
 
 # instrumentClusterController(\_:didChangeSpeedLimitSetting:) (Swift)
@@ -7,21 +7,30 @@
 **Kind:** Instance Method  
 **Availability:** iOS 15.4+ · iPadOS 15.4+ · Mac Catalyst 15.4+
 
+Tells the delegate to adjust how your app displays speed limit information.
+
 ## Declaration
 
 ```swift
 optional func instrumentClusterController(_ instrumentClusterController: CPInstrumentClusterController, didChangeSpeedLimitSetting speedLimitSetting: CPInstrumentClusterSetting)
 ```
 
+## Parameters
+
+- `instrumentClusterController`: The controller object with the new setting.
+- `speedLimitSetting`: The new setting to apply to your content.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Some vehicles can ask your app to display speed limit information along with the app’s other content. Use this method to either show or hide the information based on the provided setting value.
+
 ## See Also
 
-### Instance Methods
+### Responding to setting changes
 
-- [instrumentClusterController(\_:didChangeCompassSetting:)](instrumentclustercontroller%28__didchangecompasssetting_%29.md)
-- [instrumentClusterControllerDidConnect(\_:)](instrumentclustercontrollerdidconnect%28__%29.md)
-- [instrumentClusterControllerDidDisconnectWindow(\_:)](instrumentclustercontrollerdiddisconnectwindow%28__%29.md)
-- [instrumentClusterControllerDidZoom(in:)](instrumentclustercontrollerdidzoom%28in_%29.md)
-- [instrumentClusterControllerDidZoomOut(\_:)](instrumentclustercontrollerdidzoomout%28__%29.md)
+- [instrumentClusterController(\_:didChangeCompassSetting:)](instrumentclustercontroller%28__didchangecompasssetting_%29.md): Tells the delegate to adjust how your app displays compass information.
 
 # instrumentClusterController:didChangeSpeedLimitSetting: (Objective-C)
 
@@ -29,18 +38,27 @@ optional func instrumentClusterController(_ instrumentClusterController: CPInstr
 **Kind:** Instance Method  
 **Availability:** iOS 15.4+ · iPadOS 15.4+ · Mac Catalyst 15.4+
 
+Tells the delegate to adjust how your app displays speed limit information.
+
 ## Declaration
 
 ```objectivec
 - (void) instrumentClusterController:(CPInstrumentClusterController *) instrumentClusterController didChangeSpeedLimitSetting:(CPInstrumentClusterSetting) speedLimitSetting;
 ```
 
+## Parameters
+
+- `instrumentClusterController`: The controller object with the new setting.
+- `speedLimitSetting`: The new setting to apply to your content.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Some vehicles can ask your app to display speed limit information along with the app’s other content. Use this method to either show or hide the information based on the provided setting value.
+
 ## See Also
 
-### Instance Methods
+### Responding to setting changes
 
-- [instrumentClusterController:didChangeCompassSetting:](instrumentclustercontroller%28__didchangecompasssetting_%29.md)
-- [instrumentClusterControllerDidConnectWindow:](instrumentclustercontrollerdidconnect%28__%29.md)
-- [instrumentClusterControllerDidDisconnectWindow:](instrumentclustercontrollerdiddisconnectwindow%28__%29.md)
-- [instrumentClusterControllerDidZoomIn:](instrumentclustercontrollerdidzoom%28in_%29.md)
-- [instrumentClusterControllerDidZoomOut:](instrumentclustercontrollerdidzoomout%28__%29.md)
+- [instrumentClusterController:didChangeCompassSetting:](instrumentclustercontroller%28__didchangecompasssetting_%29.md): Tells the delegate to adjust how your app displays compass information.

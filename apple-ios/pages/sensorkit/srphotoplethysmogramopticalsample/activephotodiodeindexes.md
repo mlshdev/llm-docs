@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/sensorkit/srphotoplethysmogramopticalsample/activephotodiodeindexes
 
 # activePhotodiodeIndexes (Swift)
@@ -35,7 +35,7 @@ To map the spatial location of the active photodiodes, see the Apple Watch diagr
 - [SRPhotoplethysmogramOpticalSample.Condition](condition.md): The conditions that may occur when recording photoplethysmogram optical data.
 - [noiseTerms](noiseterms-swift.property.md): The mathematical terms for computing the noise in this sample.
 - [SRPhotoplethysmogramOpticalSample.NoiseTerms](noiseterms-swift.struct.md): The mathematical terms that you use to compute the photoplethysmogram (PPG) noise.
-- [normalizedReflectance](normalizedreflectance-15f2k.md)
+- [normalizedReflectance](normalizedreflectance-15f2k.md): The photoplethysmogram waveform in normalized units.
 
 # activePhotodiodeIndexes (Objective-C)
 

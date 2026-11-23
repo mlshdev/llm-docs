@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingplaybackratebutton
 
 # CPNowPlayingPlaybackRateButton (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Class  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A button for cycling through the available playback rates.
+A button for changing the playback rate of the media.
 
 ## Declaration
 
@@ -19,9 +19,13 @@ A button for cycling through the available playback rates.
 
 ## Overview
 
-`CPNowPlayingPlaybackRateButton` is a concrete subclass of [CPNowPlayingButton](cpnowplayingbutton.md). Use the button’s handler to invoke your existing functionality for cycling through playback rates, using the same [MPChangePlaybackRateCommand](https://developer.apple.com/documentation/mediaplayer/mpchangeplaybackratecommand) that you provide to [MPRemoteCommandCenter](https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter).
+Include the `CPNowPlayingRepeatButton ` in your Now Playing template if your app supports different playback rates for content. The system provides the appearance of the button and automatically updates the appearance to reflect the playback rate of the current media file. When someone interacts with the button, respond by changing the playback rate programmatically from your app.
 
-CarPlay uses `MPRemoteCommandCenter` to observe changes to the playback rate and updates the button’s appearance accordingly.
+Create the button and add it as one of the [nowPlayingButtons](cpnowplayingtemplate/nowplayingbuttons.md) in your Now Playing template. At creation time, provide a handler you want the system to call when someone interacts with the button, and use your handler to change the current playback speed.
+
+> **Note**
+
+> CarPlay uses the shared [MPRemoteCommandCenter](https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter) object to observe changes to the playback rate and update the button’s appearance. If your app supports the command center object, provide the same behavior in your button’s handler as you provide for the [MPChangePlaybackRateCommand](https://developer.apple.com/documentation/mediaplayer/mpchangeplaybackratecommand) type.
 
 ## Relationships
 
@@ -44,16 +48,14 @@ CarPlay uses `MPRemoteCommandCenter` to observe changes to the playback rate and
 
 ## See Also
 
-### Managing the Template’s Buttons
+### Now Playing buttons
 
-- [nowPlayingButtons](cpnowplayingtemplate/nowplayingbuttons.md): The Now Playing template’s playback control buttons.
-- [updateNowPlayingButtons(\_:)](cpnowplayingtemplate/updatenowplayingbuttons%28__%29.md): Updates the playback control buttons the template displays.
-- [CPNowPlayingButton](cpnowplayingbutton.md): The abstract base class that Now Playing template buttons use.
-- [CPNowPlayingImageButton](cpnowplayingimagebutton.md): A button that displays an image.
-- [CPNowPlayingAddToLibraryButton](cpnowplayingaddtolibrarybutton.md): A button for adding the current playing item to a collection.
-- [CPNowPlayingMoreButton](cpnowplayingmorebutton.md): A button for presenting more options to the user.
+- [CPNowPlayingShuffleButton](cpnowplayingshufflebutton.md): A button for toggling shuffle mode on and off.
 - [CPNowPlayingRepeatButton](cpnowplayingrepeatbutton.md): A button for cycling through the available repeat modes.
-- [CPNowPlayingShuffleButton](cpnowplayingshufflebutton.md): A button for cycling through the available shuffle modes.
+- [CPNowPlayingAddToLibraryButton](cpnowplayingaddtolibrarybutton.md): A button for adding the current item to a collection, such as the person’s library.
+- [CPNowPlayingMoreButton](cpnowplayingmorebutton.md): A button for displaying additional playback options.
+- [CPNowPlayingImageButton](cpnowplayingimagebutton.md): A custom Now Playing button that displays an image.
+- [CPNowPlayingButton](cpnowplayingbutton.md): The abstract base class for buttons in the Now Playing interface.
 
 # CPNowPlayingPlaybackRateButton (Objective-C)
 
@@ -61,7 +63,7 @@ CarPlay uses `MPRemoteCommandCenter` to observe changes to the playback rate and
 **Kind:** Class  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A button for cycling through the available playback rates.
+A button for changing the playback rate of the media.
 
 ## Declaration
 
@@ -73,9 +75,13 @@ A button for cycling through the available playback rates.
 
 ## Overview
 
-`CPNowPlayingPlaybackRateButton` is a concrete subclass of [CPNowPlayingButton](cpnowplayingbutton.md). Use the button’s handler to invoke your existing functionality for cycling through playback rates, using the same [MPChangePlaybackRateCommand](https://developer.apple.com/documentation/mediaplayer/mpchangeplaybackratecommand) that you provide to [MPRemoteCommandCenter](https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter).
+Include the `CPNowPlayingRepeatButton ` in your Now Playing template if your app supports different playback rates for content. The system provides the appearance of the button and automatically updates the appearance to reflect the playback rate of the current media file. When someone interacts with the button, respond by changing the playback rate programmatically from your app.
 
-CarPlay uses `MPRemoteCommandCenter` to observe changes to the playback rate and updates the button’s appearance accordingly.
+Create the button and add it as one of the [nowPlayingButtons](cpnowplayingtemplate/nowplayingbuttons.md) in your Now Playing template. At creation time, provide a handler you want the system to call when someone interacts with the button, and use your handler to change the current playback speed.
+
+> **Note**
+
+> CarPlay uses the shared [MPRemoteCommandCenter](https://developer.apple.com/documentation/mediaplayer/mpremotecommandcenter) object to observe changes to the playback rate and update the button’s appearance. If your app supports the command center object, provide the same behavior in your button’s handler as you provide for the [MPChangePlaybackRateCommand](https://developer.apple.com/documentation/mediaplayer/mpchangeplaybackratecommand) type.
 
 ## Relationships
 
@@ -85,13 +91,11 @@ CarPlay uses `MPRemoteCommandCenter` to observe changes to the playback rate and
 
 ## See Also
 
-### Managing the Template’s Buttons
+### Now Playing buttons
 
-- [nowPlayingButtons](cpnowplayingtemplate/nowplayingbuttons.md): The Now Playing template’s playback control buttons.
-- [updateNowPlayingButtons:](cpnowplayingtemplate/updatenowplayingbuttons%28__%29.md): Updates the playback control buttons the template displays.
-- [CPNowPlayingButton](cpnowplayingbutton.md): The abstract base class that Now Playing template buttons use.
-- [CPNowPlayingImageButton](cpnowplayingimagebutton.md): A button that displays an image.
-- [CPNowPlayingAddToLibraryButton](cpnowplayingaddtolibrarybutton.md): A button for adding the current playing item to a collection.
-- [CPNowPlayingMoreButton](cpnowplayingmorebutton.md): A button for presenting more options to the user.
+- [CPNowPlayingShuffleButton](cpnowplayingshufflebutton.md): A button for toggling shuffle mode on and off.
 - [CPNowPlayingRepeatButton](cpnowplayingrepeatbutton.md): A button for cycling through the available repeat modes.
-- [CPNowPlayingShuffleButton](cpnowplayingshufflebutton.md): A button for cycling through the available shuffle modes.
+- [CPNowPlayingAddToLibraryButton](cpnowplayingaddtolibrarybutton.md): A button for adding the current item to a collection, such as the person’s library.
+- [CPNowPlayingMoreButton](cpnowplayingmorebutton.md): A button for displaying additional playback options.
+- [CPNowPlayingImageButton](cpnowplayingimagebutton.md): A custom Now Playing button that displays an image.
+- [CPNowPlayingButton](cpnowplayingbutton.md): The abstract base class for buttons in the Now Playing interface.

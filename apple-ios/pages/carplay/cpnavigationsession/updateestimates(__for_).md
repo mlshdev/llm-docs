@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationsession/updateestimates(_:for:)
 
 # updateEstimates(\_:for:) (Swift)
@@ -22,7 +22,7 @@ func updateEstimates(_ estimates: CPTravelEstimates, for maneuver: CPManeuver)
 
 ## See Also
 
-### Updating Travel Estimates
+### Updating travel estimates
 
 - [CPTravelEstimates](../cptravelestimates.md): An object that describes the time and distance remaining for a maneuver in a navigation session.
 
@@ -47,6 +47,6 @@ Updates the travel estimates for the specified maneuver.
 
 ## See Also
 
-### Updating Travel Estimates
+### Updating travel estimates
 
 - [CPTravelEstimates](../cptravelestimates.md): An object that describes the time and distance remaining for a maneuver in a navigation session.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/carplayerrordomain
 
 # CarPlayErrorDomain (Swift)
@@ -15,13 +15,6 @@ The domain that CarPlay uses for any errors it provides.
 let CarPlayErrorDomain: String
 ```
 
-## See Also
-
-### Related Types
-
-- [CPButton](cpbutton.md): A button that displays an image and invokes a handler when the user taps it.
-- [CPImageSet](cpimageset.md): Light and dark representations of an image.
-
 # CarPlayErrorDomain (Objective-C)
 
 **Framework:** CarPlay  
@@ -35,10 +28,3 @@ The domain that CarPlay uses for any errors it provides.
 ```objectivec
 extern NSString * const CarPlayErrorDomain;
 ```
-
-## See Also
-
-### Related Types
-
-- [CPButton](cpbutton.md): A button that displays an image and invokes a handler when the user taps it.
-- [CPImageSet](cpimageset.md): Light and dark representations of an image.

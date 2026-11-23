@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationsession/pausereason
 
 # CPNavigationSession.PauseReason (Swift)
@@ -42,13 +42,13 @@ enum PauseReason
 
 ## See Also
 
-### Managing Trip Navigation
+### Managing trip navigation
 
-- [cancelTrip()](canceltrip%28%29.md): Tells the navigation session to cancel the trip.
-- [finishTrip()](finishtrip%28%29.md): Tells the navigation session to finish the trip.
 - [pauseTrip(for:description:)](pausetrip%28for_description_%29.md): Tells the navigation session to pause the trip for the specified reason.
 - [pauseTrip(for:description:turnCardColor:)](pausetrip%28for_description_turncardcolor_%29.md)
 - [resumeTrip(updatedRouteInformation:)](resumetrip%28updatedrouteinformation_%29.md): Resumes the current trip with updated route information.
+- [finishTrip()](finishtrip%28%29.md): Tells the navigation session to finish the trip.
+- [cancelTrip()](canceltrip%28%29.md): Tells the navigation session to cancel the trip.
 
 # CPTripPauseReason (Objective-C)
 
@@ -76,10 +76,10 @@ enum CPTripPauseReason : NSUInteger;
 
 ## See Also
 
-### Managing Trip Navigation
+### Managing trip navigation
 
-- [cancelTrip](canceltrip%28%29.md): Tells the navigation session to cancel the trip.
-- [finishTrip](finishtrip%28%29.md): Tells the navigation session to finish the trip.
 - [pauseTripForReason:description:](pausetrip%28for_description_%29.md): Tells the navigation session to pause the trip for the specified reason.
 - [pauseTripForReason:description:turnCardColor:](pausetrip%28for_description_turncardcolor_%29.md)
 - [resumeTripWithUpdatedRouteInformation:](resumetrip%28updatedrouteinformation_%29.md): Resumes the current trip with updated route information.
+- [finishTrip](finishtrip%28%29.md): Tells the navigation session to finish the trip.
+- [cancelTrip](canceltrip%28%29.md): Tells the navigation session to cancel the trip.

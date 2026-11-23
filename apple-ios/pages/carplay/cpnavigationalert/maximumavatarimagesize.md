@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationalert/maximumavatarimagesize
 
 # maximumAvatarImageSize (Swift)
@@ -15,6 +15,16 @@ The maximum image size for the avatar image that a @c CPNavigationAlert can disp
 class var maximumAvatarImageSize: CGSize { get }
 ```
 
+## See Also
+
+### Getting the alert image
+
+- [image](image.md): An image displayed in the navigation alert.
+- [imageSet](imageset.md): An image set displayed in the navigation alert.
+- [alertImage](alertimage.md)
+- [avatarImage](avatarimage.md)
+- [maximumAlertImageSize](maximumalertimagesize.md): The maximum image size for the alert image that a @c CPNavigationAlert can display.
+
 # maximumAvatarImageSize (Objective-C)
 
 **Framework:** CarPlay  
@@ -28,3 +38,13 @@ The maximum image size for the avatar image that a @c CPNavigationAlert can disp
 ```objectivec
 @property (class, nonatomic, readonly) CGSize maximumAvatarImageSize;
 ```
+
+## See Also
+
+### Getting the alert image
+
+- [image](image.md): An image displayed in the navigation alert.
+- [imageSet](imageset.md): An image set displayed in the navigation alert.
+- [alertImage](alertimage.md)
+- [avatarImage](avatarimage.md)
+- [maximumAlertImageSize](maximumalertimagesize.md): The maximum image size for the alert image that a @c CPNavigationAlert can display.

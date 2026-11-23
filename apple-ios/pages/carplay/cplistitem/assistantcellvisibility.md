@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitem/assistantcellvisibility
 
 # CPListItem.AssistantCellVisibility (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Enumeration  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+
 
-Constants to specify the visibility of the assistant cell.
+The visibility options for the assistant cell.
 
 ## Declaration
 
@@ -15,13 +15,19 @@ Constants to specify the visibility of the assistant cell.
 enum AssistantCellVisibility
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+Specify when you want the assistant cell to be visible from your list interface. You can show or hide the cell at all times, or enable it only at relevant moments.
+
 ## Topics
 
-### Controlling the Assistant Cell Visibility
+### Enumeration Cases
 
-- [CPListItem.AssistantCellVisibility.off](assistantcellvisibility/off.md): The assistant cell isn’t visible.
-- [CPListItem.AssistantCellVisibility.always](assistantcellvisibility/always.md): The assistant cell is always visible.
-- [CPListItem.AssistantCellVisibility.whileLimitedUIActive](assistantcellvisibility/whilelimiteduiactive.md): The assistant cell is visible only while Limited UI mode is active.
+- [CPListItem.AssistantCellVisibility.always](assistantcellvisibility/always.md): An option to always show the assistant cell.
+- [CPListItem.AssistantCellVisibility.off](assistantcellvisibility/off.md): An option to hide the assistant cell.
+- [CPListItem.AssistantCellVisibility.whileLimitedUIActive](assistantcellvisibility/whilelimiteduiactive.md): An option to show the assistant cell only when Limited UI mode is active.
 
 ### Initializers
 
@@ -40,9 +46,13 @@ enum AssistantCellVisibility
 
 ## See Also
 
-### Managing the Assistant Cell
+### Getting the configuration attributes
 
-- [CPListItem.AssistantCellPosition](assistantcellposition.md): Constants to specify the position of the assistant cell.
+- [assistantAction](../cpassistantcellconfiguration/assistantaction.md): The action that Siri performs when the user selects the assistant cell.
+- [position](../cpassistantcellconfiguration/position.md): The position of the assistant cell in the list template.
+- [visibility](../cpassistantcellconfiguration/visibility.md): The visibility of the assistant cell in the list template.
+- [CPAssistantCellActionType](../cpassistantcellactiontype.md): The supported actions of the assistant cell.
+- [CPListItem.AssistantCellPosition](assistantcellposition.md): The supported placement options for the assistant cell.
 
 # CPAssistantCellVisibility (Objective-C)
 
@@ -50,7 +60,7 @@ enum AssistantCellVisibility
 **Kind:** Enumeration  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+
 
-Constants to specify the visibility of the assistant cell.
+The visibility options for the assistant cell.
 
 ## Declaration
 
@@ -58,16 +68,26 @@ Constants to specify the visibility of the assistant cell.
 enum CPAssistantCellVisibility : NSInteger;
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+Specify when you want the assistant cell to be visible from your list interface. You can show or hide the cell at all times, or enable it only at relevant moments.
+
 ## Topics
 
-### Controlling the Assistant Cell Visibility
+### Enumeration Cases
 
-- [CPAssistantCellVisibilityOff](assistantcellvisibility/off.md): The assistant cell isn’t visible.
-- [CPAssistantCellVisibilityAlways](assistantcellvisibility/always.md): The assistant cell is always visible.
-- [CPAssistantCellVisibilityWhileLimitedUIActive](assistantcellvisibility/whilelimiteduiactive.md): The assistant cell is visible only while Limited UI mode is active.
+- [CPAssistantCellVisibilityAlways](assistantcellvisibility/always.md): An option to always show the assistant cell.
+- [CPAssistantCellVisibilityOff](assistantcellvisibility/off.md): An option to hide the assistant cell.
+- [CPAssistantCellVisibilityWhileLimitedUIActive](assistantcellvisibility/whilelimiteduiactive.md): An option to show the assistant cell only when Limited UI mode is active.
 
 ## See Also
 
-### Managing the Assistant Cell
+### Getting the configuration attributes
 
-- [CPAssistantCellPosition](assistantcellposition.md): Constants to specify the position of the assistant cell.
+- [assistantAction](../cpassistantcellconfiguration/assistantaction.md): The action that Siri performs when the user selects the assistant cell.
+- [position](../cpassistantcellconfiguration/position.md): The position of the assistant cell in the list template.
+- [visibility](../cpassistantcellconfiguration/visibility.md): The visibility of the assistant cell in the list template.
+- [CPAssistantCellActionType](../cpassistantcellactiontype.md): The supported actions of the assistant cell.
+- [CPAssistantCellPosition](assistantcellposition.md): The supported placement options for the assistant cell.

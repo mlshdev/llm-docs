@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplate/pandirection
 
 # CPMapTemplate.PanDirection (Swift)
@@ -43,11 +43,8 @@ struct PanDirection
 
 ## See Also
 
-### Panning the Map
+### Panning the map content
 
-- [mapTemplateDidShowPanningInterface(\_:)](../cpmaptemplatedelegate/maptemplatedidshowpanninginterface%28__%29.md): Tells the delegate that the panning interface is visible on the map.
-- [mapTemplateWillDismissPanningInterface(\_:)](../cpmaptemplatedelegate/maptemplatewilldismisspanninginterface%28__%29.md): Tells the delegate that the panning interface will disappear from the map.
-- [mapTemplateDidDismissPanningInterface(\_:)](../cpmaptemplatedelegate/maptemplatediddismisspanninginterface%28__%29.md): Tells the delegate that the panning interface is no longer visible on the map.
 - [mapTemplateDidBeginPanGesture(\_:)](../cpmaptemplatedelegate/maptemplatedidbeginpangesture%28__%29.md): Tells the delegate that the pan gesture has started.
 - [mapTemplate(\_:panBeganWith:)](../cpmaptemplatedelegate/maptemplate%28__panbeganwith_%29.md): Tells the delegate that the user is starting to pan the map.
 - [mapTemplate(\_:panWith:)](../cpmaptemplatedelegate/maptemplate%28__panwith_%29.md): Tells the delegate that the user is panning in a certain direction on the map.
@@ -81,11 +78,8 @@ enum CPPanDirection : NSInteger;
 
 ## See Also
 
-### Panning the Map
+### Panning the map content
 
-- [mapTemplateDidShowPanningInterface:](../cpmaptemplatedelegate/maptemplatedidshowpanninginterface%28__%29.md): Tells the delegate that the panning interface is visible on the map.
-- [mapTemplateWillDismissPanningInterface:](../cpmaptemplatedelegate/maptemplatewilldismisspanninginterface%28__%29.md): Tells the delegate that the panning interface will disappear from the map.
-- [mapTemplateDidDismissPanningInterface:](../cpmaptemplatedelegate/maptemplatediddismisspanninginterface%28__%29.md): Tells the delegate that the panning interface is no longer visible on the map.
 - [mapTemplateDidBeginPanGesture:](../cpmaptemplatedelegate/maptemplatedidbeginpangesture%28__%29.md): Tells the delegate that the pan gesture has started.
 - [mapTemplate:panBeganWithDirection:](../cpmaptemplatedelegate/maptemplate%28__panbeganwith_%29.md): Tells the delegate that the user is starting to pan the map.
 - [mapTemplate:panWithDirection:](../cpmaptemplatedelegate/maptemplate%28__panwith_%29.md): Tells the delegate that the user is panning in a certain direction on the map.

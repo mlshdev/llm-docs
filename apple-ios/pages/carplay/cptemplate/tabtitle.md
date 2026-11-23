@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptemplate/tabtitle
 
 # tabTitle (Swift)
@@ -23,7 +23,7 @@ CarPlay only uses the title when the template is a root-template of a tab bar, o
 
 ## See Also
 
-### Accessing Tab Information
+### Accessing tab information
 
 - [tabImage](tabimage.md): An image that represents the content of the tab.
 - [tabSystemItem](tabsystemitem.md): A system object that provides a title and image for common tab content, such as contacts or favorites.
@@ -51,7 +51,7 @@ CarPlay only uses the title when the template is a root-template of a tab bar, o
 
 ## See Also
 
-### Accessing Tab Information
+### Accessing tab information
 
 - [tabImage](tabimage.md): An image that represents the content of the tab.
 - [tabSystemItem](tabsystemitem.md): A system object that provides a title and image for common tab content, such as contacts or favorites.

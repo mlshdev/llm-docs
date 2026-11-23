@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistsection/items
 
 # items (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-The list of items for the section.
+The items in the section.
 
 ## Declaration
 
@@ -15,12 +15,18 @@ The list of items for the section.
 var items: [any CPListTemplateItem] { get }
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+CarPlay displays items in the same order as the array in this property. This property contains only [CPListItem](../cplistitem.md), [CPListImageRowItem](../cplistimagerowitem.md), and [CPMessageListItem](../cpmessagelistitem.md) item types.
+
 ## See Also
 
-### Getting Items
+### Locating items in the section
 
-- [index(of:)](index%28of_%29.md): Returns the index of the specified item.
-- [item(at:)](item%28at_%29.md): Returns the item at the specified index.
+- [index(of:)](index%28of_%29.md): Returns the zero-based index of an item in the section.
+- [item(at:)](item%28at_%29.md): Returns the item at the specified index in the section.
 
 # items (Objective-C)
 
@@ -28,7 +34,7 @@ var items: [any CPListTemplateItem] { get }
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-The list of items for the section.
+The items in the section.
 
 ## Declaration
 
@@ -36,9 +42,15 @@ The list of items for the section.
 @property (nonatomic, copy, readonly) NSArray<id<CPListTemplateItem>> * items;
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+CarPlay displays items in the same order as the array in this property. This property contains only [CPListItem](../cplistitem.md), [CPListImageRowItem](../cplistimagerowitem.md), and [CPMessageListItem](../cpmessagelistitem.md) item types.
+
 ## See Also
 
-### Getting Items
+### Locating items in the section
 
-- [indexOfItem:](index%28of_%29.md): Returns the index of the specified item.
-- [itemAtIndex:](item%28at_%29.md): Returns the item at the specified index.
+- [indexOfItem:](index%28of_%29.md): Returns the zero-based index of an item in the section.
+- [itemAtIndex:](item%28at_%29.md): Returns the item at the specified index in the section.

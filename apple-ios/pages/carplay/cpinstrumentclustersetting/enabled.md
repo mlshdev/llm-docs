@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpinstrumentclustersetting/enabled
 
 # CPInstrumentClusterSetting.enabled (Swift)
@@ -7,19 +7,27 @@
 **Kind:** Case  
 **Availability:** iOS 15.4+ · iPadOS 15.4+ · Mac Catalyst 15.4+
 
+An option to enable the specified setting.
+
 ## Declaration
 
 ```swift
 case enabled
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+Display information for the associated setting if you’re able to do so.
+
 ## See Also
 
-### Enumeration Cases
+### Getting the instrument cluster settings
 
-- [CPInstrumentClusterSetting.disabled](disabled.md)
-- [CPInstrumentClusterSetting.unspecified](unspecified.md)
-- [CPInstrumentClusterSetting.userPreference](userpreference.md)
+- [CPInstrumentClusterSetting.disabled](disabled.md): An option to disable the specified setting.
+- [CPInstrumentClusterSetting.unspecified](unspecified.md): An option that represents no configured value.
+- [CPInstrumentClusterSetting.userPreference](userpreference.md): An option to enable the setting according to personal preferences your app manages.
 
 # CPInstrumentClusterSettingEnabled (Objective-C)
 
@@ -27,16 +35,24 @@ case enabled
 **Kind:** Enumeration Case  
 **Availability:** iOS 15.4+ · iPadOS 15.4+ · Mac Catalyst 15.4+
 
+An option to enable the specified setting.
+
 ## Declaration
 
 ```objectivec
 CPInstrumentClusterSettingEnabled
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+Display information for the associated setting if you’re able to do so.
+
 ## See Also
 
-### Enumeration Cases
+### Getting the instrument cluster settings
 
-- [CPInstrumentClusterSettingDisabled](disabled.md)
-- [CPInstrumentClusterSettingUnspecified](unspecified.md)
-- [CPInstrumentClusterSettingUserPreference](userpreference.md)
+- [CPInstrumentClusterSettingDisabled](disabled.md): An option to disable the specified setting.
+- [CPInstrumentClusterSettingUnspecified](unspecified.md): An option that represents no configured value.
+- [CPInstrumentClusterSettingUserPreference](userpreference.md): An option to enable the setting according to personal preferences your app manages.

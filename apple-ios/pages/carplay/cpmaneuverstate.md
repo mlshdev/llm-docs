@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaneuverstate
 
 # CPManeuverState (Swift)
@@ -17,7 +17,7 @@ enum CPManeuverState
 
 ## Topics
 
-### Enumeration Cases
+### Getting the maneuver state
 
 - [CPManeuverState.prepare](cpmaneuverstate/prepare.md)
 - [CPManeuverState.initial](cpmaneuverstate/initial.md)
@@ -45,6 +45,10 @@ enum CPManeuverState
 
 - [CPManeuver](cpmaneuver.md): An object that describes a single navigation instruction.
 - [CPManeuverType](cpmaneuvertype.md): Values that describe types of navigation maneuvers.
+- [CPTravelEstimates](cptravelestimates.md): An object that describes the time and distance remaining for a maneuver in a navigation session.
+- [CPTripPreviewTextConfiguration](cptrippreviewtextconfiguration.md): A configuration object for changing the button titles on a trip preview.
+- [NSStringFromCPManeuverType(\_:)](nsstringfromcpmaneuvertype%28__%29.md)
+- [CPLocationCoordinate3D](cplocationcoordinate3d.md): CPLocationCoordinate3D represents a three-dimensional coordinate with latitude, longitude, and altitude components.
 
 # CPManeuverState (Objective-C)
 
@@ -62,7 +66,7 @@ enum CPManeuverState : NSInteger;
 
 ## Topics
 
-### Enumeration Cases
+### Getting the maneuver state
 
 - [CPManeuverStatePrepare](cpmaneuverstate/prepare.md)
 - [CPManeuverStateInitial](cpmaneuverstate/initial.md)
@@ -75,3 +79,7 @@ enum CPManeuverState : NSInteger;
 
 - [CPManeuver](cpmaneuver.md): An object that describes a single navigation instruction.
 - [CPManeuverType](cpmaneuvertype.md): Values that describe types of navigation maneuvers.
+- [CPTravelEstimates](cptravelestimates.md): An object that describes the time and distance remaining for a maneuver in a navigation session.
+- [CPTripPreviewTextConfiguration](cptrippreviewtextconfiguration.md): A configuration object for changing the button titles on a trip preview.
+- [NSStringFromCPManeuverType](nsstringfromcpmaneuvertype%28__%29.md)
+- [CPLocationCoordinate3D](cplocationcoordinate3d.md): CPLocationCoordinate3D represents a three-dimensional coordinate with latitude, longitude, and altitude components.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmappanel/buttonconfiguration
 
 # buttonConfiguration (Swift)
@@ -23,6 +23,13 @@ You specify this information initially when you create the panel, but can also u
 
 The system pins the information in this type to the bottom of the map panel, keeping it visible at all times.
 
+## See Also
+
+### Getting the panel’s content
+
+- [title](title.md): The title to display at the top of the panel.
+- [sections](sections.md): The sections of content to display in the panel.
+
 # buttonConfiguration (Objective-C)
 
 **Framework:** CarPlay  
@@ -44,3 +51,10 @@ The button information and travel estimates to display in the panel.
 You specify this information initially when you create the panel, but can also update it by assigning a new value to this property. The property stores the buttons and other map-related information to display in the panel.
 
 The system pins the information in this type to the bottom of the map panel, keeping it visible at all times.
+
+## See Also
+
+### Getting the panel’s content
+
+- [title](title.md): The title to display at the top of the panel.
+- [sections](sections.md): The sections of content to display in the panel.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpgridtemplatemaximumitems
 
 # CPGridTemplateMaximumItems (Swift)
@@ -17,9 +17,11 @@ let CPGridTemplateMaximumItems: Int
 
 ## See Also
 
-### Constants
+### Grids
 
-- [CPMaximumListSectionImageSize](cpmaximumlistsectionimagesize.md): The maximum size of an image in a list section.
+- [CPGridTemplate](cpgridtemplate.md): A template that displays and manages a grid of items.
+- [CPGridButton](cpgridbutton.md): A menu item button displayed on a grid template.
+- [CPMessageGridItemConfiguration](cpmessagegriditemconfiguration.md): A type that associates message-related information with a grid button.
 
 # CPGridTemplateMaximumItems (Objective-C)
 
@@ -37,6 +39,8 @@ extern const NSUInteger CPGridTemplateMaximumItems;
 
 ## See Also
 
-### Constants
+### Grids
 
-- [CPMaximumListSectionImageSize](cpmaximumlistsectionimagesize.md): The maximum size of an image in a list section.
+- [CPGridTemplate](cpgridtemplate.md): A template that displays and manages a grid of items.
+- [CPGridButton](cpgridbutton.md): A menu item button displayed on a grid template.
+- [CPMessageGridItemConfiguration](cpmessagegriditemconfiguration.md): A type that associates message-related information with a grid button.

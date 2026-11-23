@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingbutton/init(handler:)
 
 # init(handler:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Initializer  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Creates a Now Playing button that invokes a handler.
+Creates a button and sets its action to the provided handler.
 
 ## Declaration
 
@@ -17,7 +17,19 @@ init(handler: ((CPNowPlayingButton) -> Void)? = nil)
 
 ## Parameters
 
-- `handler`: A closure that the button invokes when the user taps it.
+- `handler`: The handler to run when someone interacts with the button. This closure takes the button as a parameter and returns no value.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized button.
+
+<a id="discussion"></a>
+
+## Discussion
+
+When you instantiate a concrete subclass of [CPNowPlayingButton](../cpnowplayingbutton.md), use this initializer to specify the code to run when someone interacts with the button.
 
 # initWithHandler: (Objective-C)
 
@@ -25,7 +37,7 @@ init(handler: ((CPNowPlayingButton) -> Void)? = nil)
 **Kind:** Instance Method  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Creates a Now Playing button that invokes a handler.
+Creates a button and sets its action to the provided handler.
 
 ## Declaration
 
@@ -35,4 +47,16 @@ Creates a Now Playing button that invokes a handler.
 
 ## Parameters
 
-- `handler`: A closure that the button invokes when the user taps it.
+- `handler`: The handler to run when someone interacts with the button. This closure takes the button as a parameter and returns no value.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized button.
+
+<a id="discussion"></a>
+
+## Discussion
+
+When you instantiate a concrete subclass of [CPNowPlayingButton](../cpnowplayingbutton.md), use this initializer to specify the code to run when someone interacts with the button.

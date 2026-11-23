@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitem/init(text:detailtext:image:showsdisclosureindicator:)
 
 # init(text:detailText:image:showsDisclosureIndicator:) (Swift)
@@ -7,9 +7,7 @@
 **Kind:** Initializer  
 **Availability:** iOS 12.0+ (deprecated in 14.0) · iPadOS 12.0+ (deprecated in 14.0) · Mac Catalyst 13.1+ (deprecated in 14.0)
 
-Creates a list item with primary text, secondary text, an image, and a disclosure indicator.
-
-> Use [init(text:detailText:image:accessoryImage:accessoryType:)](init%28text_detailtext_image_accessoryimage_accessorytype_%29.md) instead.
+Initialize a list item with text, detailtext, an image, and a disclosure indicator.
 
 ## Declaration
 
@@ -17,18 +15,22 @@ Creates a list item with primary text, secondary text, an image, and a disclosur
 init(text: String?, detailText: String?, image: UIImage?, showsDisclosureIndicator: Bool)
 ```
 
-## Parameters
+<a id="discussion"></a>
 
-- `text`: The primary text to show in the list item cell.
-- `detailText`: Additional text to display below the primary text in the list item cell.
-- `image`: The image to display on the leading edge of the list item cell. If the image is larger than `CPMaximumListItemImageSize`, the list item scales down the image to maximum size. If you provide an animated image, the list item uses the first image in the animation sequence.
-- `showsDisclosureIndicator`: A Boolean value that indicates whether the list item cell displays a disclosure indicator. Set to [true](https://developer.apple.com/documentation/swift/true) to display the indicator on the trailing edge of the list item cell.
+## Discussion
 
-<a id="return-value"></a>
+> **Note**
 
-## Return Value
+> The maximum size of the image is given by +\[CPListItem maximumImageSize\].
 
-A newly initialized list item.
+To properly size your list images, your app should size them to the display scale of the car screen. See -\[CPInterfaceController carTraitCollection\].
+
+## See Also
+
+### Deprecated
+
+- [showsDisclosureIndicator](showsdisclosureindicator.md): Deprecated. If YES, a cell displaying this list item will render with a disclosure indicator in the trailing side of the cell.
+- [showsExplicitLabel](showsexplicitlabel.md): Deprecated. If YES, a cell displaying this list item will render with an explicit label to the trailing edge of the text
 
 # initWithText:detailText:image:showsDisclosureIndicator: (Objective-C)
 
@@ -36,9 +38,7 @@ A newly initialized list item.
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ (deprecated in 14.0) · iPadOS 12.0+ (deprecated in 14.0) · Mac Catalyst 13.1+ (deprecated in 14.0)
 
-Creates a list item with primary text, secondary text, an image, and a disclosure indicator.
-
-> Use [initWithText:detailText:image:accessoryImage:accessoryType:](init%28text_detailtext_image_accessoryimage_accessorytype_%29.md) instead.
+Initialize a list item with text, detailtext, an image, and a disclosure indicator.
 
 ## Declaration
 
@@ -46,15 +46,19 @@ Creates a list item with primary text, secondary text, an image, and a disclosur
 - (instancetype) initWithText:(NSString *) text detailText:(NSString *) detailText image:(UIImage *) image showsDisclosureIndicator:(BOOL) showsDisclosureIndicator;
 ```
 
-## Parameters
+<a id="discussion"></a>
 
-- `text`: The primary text to show in the list item cell.
-- `detailText`: Additional text to display below the primary text in the list item cell.
-- `image`: The image to display on the leading edge of the list item cell. If the image is larger than `CPMaximumListItemImageSize`, the list item scales down the image to maximum size. If you provide an animated image, the list item uses the first image in the animation sequence.
-- `showsDisclosureIndicator`: A Boolean value that indicates whether the list item cell displays a disclosure indicator. Set to [true](https://developer.apple.com/documentation/swift/true) to display the indicator on the trailing edge of the list item cell.
+## Discussion
 
-<a id="return-value"></a>
+> **Note**
 
-## Return Value
+> The maximum size of the image is given by +\[CPListItem maximumImageSize\].
 
-A newly initialized list item.
+To properly size your list images, your app should size them to the display scale of the car screen. See -\[CPInterfaceController carTraitCollection\].
+
+## See Also
+
+### Deprecated
+
+- [showsDisclosureIndicator](showsdisclosureindicator.md): Deprecated. If YES, a cell displaying this list item will render with a disclosure indicator in the trailing side of the cell.
+- [showsExplicitLabel](showsexplicitlabel.md): Deprecated. If YES, a cell displaying this list item will render with an explicit label to the trailing edge of the text

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbarbuttonproviding/leadingnavigationbarbuttons
 
 # leadingNavigationBarButtons (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-An array of bar buttons to display on the leading side of the navigation bar.
+Additional buttons to display at the leading edge of the navigation bar.
 
 ## Declaration
 
@@ -15,20 +15,20 @@ An array of bar buttons to display on the leading side of the navigation bar.
 var leadingNavigationBarButtons: [CPBarButton] { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The navigation bar displays up to two buttons in the leading space. When including more than two buttons in the array, the system displays only the first two buttons.
+Add no more than two buttons to this property. If you specify more than two buttons, CarPlay displays the first two in the array and ignores the rest. In CarPlay template implementations, the default value of this property is an empty array.
 
 ## See Also
 
-### Providing Navigation Bar Buttons
+### Providing navigation bar buttons
 
-- [backButton](backbutton.md): A button to display as the Back button on the navigation bar.
-- [trailingNavigationBarButtons](trailingnavigationbarbuttons.md): An array of bar buttons to display on the trailing side of the navigation bar.
-- [CPBarButton](../cpbarbutton.md): A button for placement in a navigation bar.
-- [CPMessageComposeBarButton](../cpmessagecomposebarbutton.md): A button that activates Siri and initiates the compose message flow.
+- [backButton](backbutton.md): A button you use to implement custom transitions.
+- [trailingNavigationBarButtons](trailingnavigationbarbuttons.md): Additional buttons to display at the trailing edge of the navigation bar.
+- [CPBarButton](../cpbarbutton.md): A button that appears in a navigation bar.
+- [CPMessageComposeBarButton](../cpmessagecomposebarbutton.md): A button that activates Siri and initiates the process for composing a message.
 
 # leadingNavigationBarButtons (Objective-C)
 
@@ -36,7 +36,7 @@ The navigation bar displays up to two buttons in the leading space. When includi
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-An array of bar buttons to display on the leading side of the navigation bar.
+Additional buttons to display at the leading edge of the navigation bar.
 
 ## Declaration
 
@@ -44,17 +44,17 @@ An array of bar buttons to display on the leading side of the navigation bar.
 @property (nonatomic, strong) NSArray<CPBarButton *> * leadingNavigationBarButtons;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The navigation bar displays up to two buttons in the leading space. When including more than two buttons in the array, the system displays only the first two buttons.
+Add no more than two buttons to this property. If you specify more than two buttons, CarPlay displays the first two in the array and ignores the rest. In CarPlay template implementations, the default value of this property is an empty array.
 
 ## See Also
 
-### Providing Navigation Bar Buttons
+### Providing navigation bar buttons
 
-- [backButton](backbutton.md): A button to display as the Back button on the navigation bar.
-- [trailingNavigationBarButtons](trailingnavigationbarbuttons.md): An array of bar buttons to display on the trailing side of the navigation bar.
-- [CPBarButton](../cpbarbutton.md): A button for placement in a navigation bar.
-- [CPMessageComposeBarButton](../cpmessagecomposebarbutton.md): A button that activates Siri and initiates the compose message flow.
+- [backButton](backbutton.md): A button you use to implement custom transitions.
+- [trailingNavigationBarButtons](trailingnavigationbarbuttons.md): Additional buttons to display at the trailing edge of the navigation bar.
+- [CPBarButton](../cpbarbutton.md): A button that appears in a navigation bar.
+- [CPMessageComposeBarButton](../cpmessagecomposebarbutton.md): A button that activates Siri and initiates the process for composing a message.

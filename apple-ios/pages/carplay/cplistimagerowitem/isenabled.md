@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistimagerowitem/isenabled
 
 # isEnabled (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+
 
-A Boolean value that indicates if the item is enabled.
+A Boolean value that indicates whether the item is enabled.
 
 ## Declaration
 
@@ -15,11 +15,11 @@ A Boolean value that indicates if the item is enabled.
 var isEnabled: Bool { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The default value is [true](https://developer.apple.com/documentation/swift/true).
+When the value of this property is `true`, CarPlay displays the item normally and forwards interactions to the [handler](handler.md) and [listImageRowHandler](listimagerowhandler.md) handlers. When the value of this property is `false`, CarPlay displays the item with a dimmed appearance and doesn’t forward interactions to your handlers. The default value of this property is `true`.
 
 # enabled (Objective-C)
 
@@ -27,7 +27,7 @@ The default value is [true](https://developer.apple.com/documentation/swift/true
 **Kind:** Instance Property  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+
 
-A Boolean value that indicates if the item is enabled.
+A Boolean value that indicates whether the item is enabled.
 
 ## Declaration
 
@@ -35,8 +35,8 @@ A Boolean value that indicates if the item is enabled.
 @property (nonatomic, assign, getter=isEnabled) BOOL enabled;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The default value is [true](https://developer.apple.com/documentation/swift/true).
+When the value of this property is `true`, CarPlay displays the item normally and forwards interactions to the [handler](handler.md) and [listImageRowHandler](listimagerowhandler.md) handlers. When the value of this property is `false`, CarPlay displays the item with a dimmed appearance and doesn’t forward interactions to your handlers. The default value of this property is `true`.

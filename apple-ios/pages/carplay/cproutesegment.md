@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cproutesegment
 
 # CPRouteSegment (Swift)
@@ -52,6 +52,17 @@ class CPRouteSegment
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
+## See Also
+
+### Route details
+
+- [CPRouteChoice](cproutechoice.md): A possible route for a trip.
+- [CPRouteInformation](cprouteinformation.md): A class that describes the characteristic elements of a route.
+- [CPRouteDetail](cproutedetail.md)
+- [CPRerouteReason](cpreroutereason.md): Values that represent reasons for navigation rerouting.
+- [CPRouteSource](cproutesource.md)
+- [NSStringFromCPRerouteReason(\_:)](nsstringfromcpreroutereason%28__%29.md)
+
 # CPRouteSegment (Objective-C)
 
 **Framework:** CarPlay  
@@ -95,3 +106,14 @@ CPRouteSegment describes information pertaining to a segment of a route.
 ### Conforms To
 
 - [NSCopying](https://developer.apple.com/documentation/foundation/nscopying)
+
+## See Also
+
+### Route details
+
+- [CPRouteChoice](cproutechoice.md): A possible route for a trip.
+- [CPRouteInformation](cprouteinformation.md): A class that describes the characteristic elements of a route.
+- [CPRouteDetail](cproutedetail.md)
+- [CPRerouteReason](cpreroutereason.md): Values that represent reasons for navigation rerouting.
+- [CPRouteSource](cproutesource.md)
+- [NSStringFromCPRerouteReason](nsstringfromcpreroutereason%28__%29.md)

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpapplicationdelegate/application(_:didselect:)-6ybyy
 
 # application(\_:didSelect:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ (deprecated in 13.0) · iPadOS 12.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
 
-Tells the app delegate that the user selected a maneuver.
+If your application posts a @c CPManeuver while backgrounded, a notification banner may be presented to the user. If the user taps on that banner, your application will launch on the car screen and this method will be called with the maneuver the user tapped.
 
 ## Declaration
 
@@ -15,38 +15,16 @@ Tells the app delegate that the user selected a maneuver.
 optional func application(_ application: UIApplication, didSelect maneuver: CPManeuver)
 ```
 
-## Parameters
-
-- `application`: Your singleton app object.
-- `maneuver`: The maneuver selected by the user.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When your app posts a maneuver while running in the background, CarPlay may display a notification banner. If the user taps the banner, the system displays your app on the CarPlay screen, then calls this method.
-
 # application:didSelectManeuver: (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ (deprecated in 13.0) · iPadOS 12.0+ (deprecated in 13.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
 
-Tells the app delegate that the user selected a maneuver.
+If your application posts a @c CPManeuver while backgrounded, a notification banner may be presented to the user. If the user taps on that banner, your application will launch on the car screen and this method will be called with the maneuver the user tapped.
 
 ## Declaration
 
 ```objectivec
 - (void) application:(UIApplication *) application didSelectManeuver:(CPManeuver *) maneuver;
 ```
-
-## Parameters
-
-- `application`: Your singleton app object.
-- `maneuver`: The maneuver selected by the user.
-
-<a id="Discussion"></a>
-
-## Discussion
-
-When your app posts a maneuver while running in the background, CarPlay may display a notification banner. If the user taps the banner, the system displays your app on the CarPlay screen, then calls this method.

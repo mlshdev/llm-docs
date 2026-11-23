@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppointofinterest/detailsubtitle
 
 # detailSubtitle (Swift)
@@ -23,7 +23,7 @@ The template only displays a detail card when the user selects a point of intere
 
 ## See Also
 
-### Managing the Detail Card’s Data
+### Managing the detail card
 
 - [detailTitle](detailtitle.md): The detail card’s title.
 - [detailSummary](detailsummary.md): The detail card’s summary.
@@ -50,7 +50,7 @@ The template only displays a detail card when the user selects a point of intere
 
 ## See Also
 
-### Managing the Detail Card’s Data
+### Managing the detail card
 
 - [detailTitle](detailtitle.md): The detail card’s title.
 - [detailSummary](detailsummary.md): The detail card’s summary.

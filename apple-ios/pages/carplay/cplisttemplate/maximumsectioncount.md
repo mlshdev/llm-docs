@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplisttemplate/maximumsectioncount
 
 # maximumSectionCount (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Type Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The maximum number of sections that the template can display.
+The maximum number of sections the template can display.
 
 ## Declaration
 
@@ -15,20 +15,19 @@ The maximum number of sections that the template can display.
 class var maximumSectionCount: Int { get }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-This property’s value is dependent on any user interface limits that the vehicle imposes. See [CPSessionConfiguration](../cpsessionconfiguration.md) for more information. At runtime, use this value to determine the maximum number of sections that your list can display.
+When building your content, use this value to determine the maximum number of sections to create. A vehicle can provide a specific value for this property to accommodate any user interface limits. Determine if vehicle-specific limits are in place using the [limitedUserInterfaces](../cpsessionconfiguration/limiteduserinterfaces.md) property of [CPSessionConfiguration](../cpsessionconfiguration.md).
 
 ## See Also
 
-### Managing Sections
+### Getting the configuration limits
 
-- [sectionCount](sectioncount.md): The number of sections in the list.
-- [sections](sections.md): The sections that the list displays.
-- [updateSections(\_:)](updatesections%28__%29.md): Adds, removes, reorders, or updates the list’s sections.
-- [CPListSection](../cplistsection.md): A container that groups your list items into sections.
+- [maximumItemCount](maximumitemcount.md): The maximum number of items, across all sections, that the template can display.
+- [maximumGridButtonImageSize](maximumgridbuttonimagesize.md): The expected image size for any grid buttons you add to the header.
+- [maximumHeaderGridButtonCount](maximumheadergridbuttoncount.md): The maximum number of grid buttons you can display in the header.
 
 # maximumSectionCount (Objective-C)
 
@@ -36,7 +35,7 @@ This property’s value is dependent on any user interface limits that the vehic
 **Kind:** Type Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The maximum number of sections that the template can display.
+The maximum number of sections the template can display.
 
 ## Declaration
 
@@ -44,17 +43,16 @@ The maximum number of sections that the template can display.
 @property (class, nonatomic, readonly) NSUInteger maximumSectionCount;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-This property’s value is dependent on any user interface limits that the vehicle imposes. See [CPSessionConfiguration](../cpsessionconfiguration.md) for more information. At runtime, use this value to determine the maximum number of sections that your list can display.
+When building your content, use this value to determine the maximum number of sections to create. A vehicle can provide a specific value for this property to accommodate any user interface limits. Determine if vehicle-specific limits are in place using the [limitedUserInterfaces](../cpsessionconfiguration/limiteduserinterfaces.md) property of [CPSessionConfiguration](../cpsessionconfiguration.md).
 
 ## See Also
 
-### Managing Sections
+### Getting the configuration limits
 
-- [sectionCount](sectioncount.md): The number of sections in the list.
-- [sections](sections.md): The sections that the list displays.
-- [updateSections:](updatesections%28__%29.md): Adds, removes, reorders, or updates the list’s sections.
-- [CPListSection](../cplistsection.md): A container that groups your list items into sections.
+- [maximumItemCount](maximumitemcount.md): The maximum number of items, across all sections, that the template can display.
+- [maximumGridButtonImageSize](maximumgridbuttonimagesize.md): The expected image size for any grid buttons you add to the header.
+- [maximumHeaderGridButtonCount](maximumheadergridbuttoncount.md): The maximum number of grid buttons you can display in the header.

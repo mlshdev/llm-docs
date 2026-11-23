@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppointofinteresttemplate/pointofinterestdelegate
 
 # pointOfInterestDelegate (Swift)
@@ -17,9 +17,9 @@ weak var pointOfInterestDelegate: (any CPPointOfInterestTemplateDelegate)? { get
 
 ## See Also
 
-### Handling Template Events
+### Handling events
 
-- [CPPointOfInterestTemplateDelegate](../cppointofinteresttemplatedelegate.md): The methods to handle a Point of Interest template’s events.
+- [CPPointOfInterestTemplateDelegate](../cppointofinteresttemplatedelegate.md): The methods to handle a point of interest template’s events.
 
 # pointOfInterestDelegate (Objective-C)
 
@@ -37,6 +37,6 @@ The object that serves as the template’s delegate.
 
 ## See Also
 
-### Handling Template Events
+### Handling events
 
-- [CPPointOfInterestTemplateDelegate](../cppointofinteresttemplatedelegate.md): The methods to handle a Point of Interest template’s events.
+- [CPPointOfInterestTemplateDelegate](../cppointofinteresttemplatedelegate.md): The methods to handle a point of interest template’s events.

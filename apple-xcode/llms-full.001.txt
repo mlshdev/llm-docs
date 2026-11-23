@@ -1,9 +1,9 @@
-# Apple Xcode and developer tools snapshot-ee1c8cbf0f44: full documentation
+# Apple Xcode and developer tools snapshot-6bb1532b03d3: full documentation
 
 Source: https://developer.apple.com/documentation/xcode
-Catalog snapshot: ee1c8cbf0f444324b8d8344f5a1156f029d70a64656a2e18bbd463d6cdfb4480
-Content digest: a185e0d809e86cca76a9e737941229540ade97b52993d4252ec7703050b67f2f
-Captured at: 2026-11-08T22:37:20.676Z
+Catalog snapshot: 6bb1532b03d3926068d90735187eda38862dcecfa0cfd2ccaae82490796174b1
+Content digest: ee20a4b01464caa985a09dd39085ff55a15f80d183a423cb1eff4c3be184c721
+Captured at: 2026-11-22T23:58:10.597Z
 Volume 1
 
 # Document: Analytics Reports
@@ -14427,7 +14427,12 @@ let redCase = colorEnum.makeCase("red") // Matches `Color.red`.
 
 - [AppIntentTypeDefinition](appintenttypedefinition.md)
 - [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [Decodable](https://developer.apple.com/documentation/swift/decodable)
+- [Encodable](https://developer.apple.com/documentation/swift/encodable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
 - [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
 ## See Also
 
@@ -16835,9 +16840,9 @@ protocol ResolvableIntentValueExpectation : IntentValueExpectation
 
 ## Overview
 
-Intent parameters hold values as the caller passed them, so [expect](appintentdefinition/expect.md) accepts only expectations that conform to this protocol. For an entity parameter, you can check its type with an [AppEntityDefinition](appentitydefinition.md) or its identifier with an [AppEntityIdentifierExpectation](appentityidentifierexpectation.md), but not its properties, because no query has run to populate them.
+Intent parameters hold values as the caller passed them, so [expect](appintentdefinition/expect.md) accepts only expectations that conform to this protocol.
 
-You get resolvable expectations from the static members that the framework provides, such as [contains(\_:)](intentvalueexpectation/contains%28__%29.md) and [isNil](intentvalueexpectation/isnil.md), and from entity definitions and identifier expectations. Don’t declare new conformances to this protocol.
+You get resolvable expectations from the framework, such as [contains(\_:)](intentvalueexpectation/contains%28__%29.md) and [isNil](intentvalueexpectation/isnil.md). Don’t declare new conformances to this protocol.
 
 ## Relationships
 
@@ -53906,8 +53911,6 @@ A 2D Worley noise generator.
 
 - **`Texture Coordinates`**: The 2D coordinate at which the data is read for mapping a texture to a surface. The default uses the current UV coordinates, in which U is the horizontal axis and V is the vertical axis.
 - **`Jitter`**: The amount to *jitter* or shift the center of each cell experiences. The default value is `1.0`. A smaller value creates a more regular pattern, and `0` creates perfect squares.
-
-## 
 
 <a id="Discussion"></a>
 
@@ -96726,7 +96729,7 @@ If token decryption fails or produces unparsable data rather than JSON, verify t
 - The private key used for decryption must match that public key. If you recently renewed or regenerated your Payment Processing Certificate, confirm that your payment processor updated their system with the new private key.
 - To verify key consistency, extract the public key from the private key file and compute its SHA-256 hash. Compare this hash against the public key extracted from your Payment Processing Certificate. If the hashes differ, the private key does not match the certificate.
 
-For detailed token schema definitions and cryptographic specifications, see [Payment Token Format Reference](https://developer.apple.com/library/archive/documentation/PassKit/Reference/PaymentTokenJSON/PaymentTokenJSON.html). To learn more about Payment Processing Certificates, see doc://tn3206-updating-apple-pay-certificates#Payment-processing-certificates.
+For detailed token schema definitions and cryptographic specifications, see [Payment Token Format Reference](https://developer.apple.com/library/archive/documentation/PassKit/Reference/PaymentTokenJSON/PaymentTokenJSON.html). To learn more about Payment Processing Certificates, see [Payment processing certificates](tn3206-updating-apple-pay-certificates.md#Payment-processing-certificates).
 
 <a id="Revision-History"></a>
 
@@ -98640,7 +98643,7 @@ To illustrate this point, the traditional property list view of a profile is no 
 
 Still, the property list is easier to read and so the bulk of this technote focuses on that.
 
-For more information about the tools used in these examples, read their man pages.  If you’re unfamiliar with that process, see .
+For more information about the tools used in these examples, read their man pages.  If you’re unfamiliar with that process, see [TN3215: Reading man pages](tn3215-reading-man-pages.md).
 
 <a id="The-who"></a>
 
@@ -99039,7 +99042,7 @@ The code signature for an item is stored in one of four ways:
 
 > Storing a code signature in EAs is brittle because many file transfer mechanisms drop these.  To avoid this potential pitfall, follow the rules in [Placing content in a bundle](https://developer.apple.com/documentation/bundleresources/placing-content-in-a-bundle).
 
-For more information about the tools used in these examples, read their man pages.  If you’re unfamiliar with that process, see .  Specifically, the `codesign` man page is the key reference if you’re working at this level.
+For more information about the tools used in these examples, read their man pages.  If you’re unfamiliar with that process, see [TN3215: Reading man pages](tn3215-reading-man-pages.md).  Specifically, the `codesign` man page is the key reference if you’re working at this level.
 
 <a id="Code-directory"></a>
 
@@ -99443,7 +99446,7 @@ Compiling requirements is relatively expensive so, if you do this a lot, cache t
 
 The code signing requirement language is very flexible.  It can express a very specific requirement or a very general one.  For example, the requirement `cdhash H"ff19a91b272a49d1a0f16ee54c672da60f0e116f"` is satisfied only by code with a specific cdhash value.  On the other hand, the requirement `anchor apple generic` is satisfied by any code signed with any code signing identity issued by Apple.  When you craft a custom requirement, think carefully about how specific you want it to be.
 
-For a detailed explanation of the code signing requirement language, see [Code Signing Requirement Language](https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/RequirementLang/RequirementLang.html#//apple_ref/doc/uid/TP40005929-CH5-SW1).  For more on cdhash values, see [TN3126: Inside Code Signing: Hashes](tn3126-inside-code-signing-hashes.md).  For more information about the tools used in these examples, read their man pages.  If you’re unfamiliar with that process, see .  Specifically, the `codesign` man page is the key reference if you’re working at this level.
+For a detailed explanation of the code signing requirement language, see [Code Signing Requirement Language](https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/RequirementLang/RequirementLang.html#//apple_ref/doc/uid/TP40005929-CH5-SW1).  For more on cdhash values, see [TN3126: Inside Code Signing: Hashes](tn3126-inside-code-signing-hashes.md).  For more information about the tools used in these examples, read their man pages.  If you’re unfamiliar with that process, see [TN3215: Reading man pages](tn3215-reading-man-pages.md).  Specifically, the `codesign` man page is the key reference if you’re working at this level.
 
 <a id="Designated-requirement"></a>
 
@@ -101224,7 +101227,7 @@ In this command:
 
 > **Note**
 
-> For details on the search path used by `altool`, see its man page.  If you’re unfamiliar with man pages, see .
+> For details on the search path used by `altool`, see its man page.  If you’re unfamiliar with man pages, see [TN3215: Reading man pages](tn3215-reading-man-pages.md).
 
 The equivalent for `notarytool` is:
 
@@ -101400,7 +101403,7 @@ OPTIONS:
 …
 ```
 
-For comprehensive help, see the `notarytool` man page.  If you’re unfamiliar with man pages, see .
+For comprehensive help, see the `notarytool` man page.  If you’re unfamiliar with man pages, see [TN3215: Reading man pages](tn3215-reading-man-pages.md).
 
 <a id="Save-credentials-in-the-keychain"></a>
 
@@ -101759,7 +101762,7 @@ if (iopolicy >= 0) {
 }
 ```
 
-For more information about the functions and constants in the above code, see their man pages. doc://com.apple.documentation/documentation/os/reading-unix-manual-pages covers how to read man pages.
+For more information about the functions and constants in the above code, see their man pages. [TN3215: Reading man pages](tn3215-reading-man-pages.md) covers how to read man pages.
 
 <a id="Revision-History"></a>
 
@@ -102124,7 +102127,7 @@ BSD Sockets has a number of limitations.  Your life will be easier if you use [N
 
 If your primary reason for using BSD Sockets is cross-platform support, consider using a network abstraction layer that adapts to the target platform.  One such option is [SwiftNIO Transport Services](https://github.com/apple/swift-nio-transport-services), which makes it straightforward to use Network framework on Apple platforms and BSD Sockets elsewhere.
 
-Apple’s BSD Sockets implementation is documented in the man pages.  If you’re unfamiliar with that term, see doc://com.apple.documentation/documentation/os/reading-unix-manual-pages.  Man pages are notoriously succinct.  If you’re getting started with BSD Sockets, take advantage of the wide range of non-Apple resources out there.  A classic work in the field is the book *UNIX Network Programming* by Stevens et al.
+Apple’s BSD Sockets implementation is documented in the man pages.  If you’re unfamiliar with that term, see [TN3215: Reading man pages](tn3215-reading-man-pages.md).  Man pages are notoriously succinct.  If you’re getting started with BSD Sockets, take advantage of the wide range of non-Apple resources out there.  A classic work in the field is the book *UNIX Network Programming* by Stevens et al.
 
 One traditional challenge with BSD Sockets is how best to handle nonblocking sockets.  For cross-platform code you have all the usual options (`select`, `poll`, `kqueue`).  For Apple-specific code you have one more: a Dispatch read source.  Use this to integrate a nonblocking socket into existing code that uses Dispatch queues.  For more details, see [Dispatch Source](https://developer.apple.com/documentation/dispatch/dispatch-source).
 
@@ -103536,7 +103539,7 @@ When you sign code, you pass `codesign` the name of a code-signing identity usin
 
 By default `codesign` searches all keychains for a code-signing identity whose certificate matches the supplied name.  If multiple identities match, `codesign` complains about the ambiguity.  To resolve this, either pass in the full name or pass in the SHA-1 hash of the identity’s certificate.
 
-The `codesign` man page explains this search process in detail.  For general information about man pages, see doc://com.apple.documentation/documentation/os/reading-unix-manual-pages.
+The `codesign` man page explains this search process in detail.  For general information about man pages, see [TN3215: Reading man pages](tn3215-reading-man-pages.md).
 
 When searching for code-signing identities, `codesign` checks certain aspects of each identity’s certificate:
 
@@ -105539,7 +105542,7 @@ Load command 8
 
 > **Note**
 
-> To learn more about these tools, see the UNIX online manual, known as *man pages*.  For information on how to access that documentation, see doc://com.apple.documentation/documentation/os/reading-unix-manual-pages.
+> To learn more about these tools, see the UNIX online manual, known as *man pages*.  For information on how to access that documentation, see [TN3215: Reading man pages](tn3215-reading-man-pages.md).
 
 By default the Apple linker sets the build UUID based on a hash of the built code.  This promotes reproducible builds.
 
@@ -105868,7 +105871,7 @@ macOS uses the responsible code to:
 - Record the user’s choice for the whole app, not just that specific helper tool
 - Present that choice in System Settings
 
-If you ship a `launchd` agent that’s not installed using `SMAppService`, make macOS aware of the responsible code by setting the `AssociatedBundleIdentifiers` property in your `launchd` property list.  See the `launchd.plist` man page for details.  For information on how to access that documentation, see doc://com.apple.documentation/documentation/os/reading-unix-manual-pages.
+If you ship a `launchd` agent that’s not installed using `SMAppService`, make macOS aware of the responsible code by setting the `AssociatedBundleIdentifiers` property in your `launchd` property list.  See the `launchd.plist` man page for details.  For information on how to access that documentation, see [TN3215: Reading man pages](tn3215-reading-man-pages.md).
 
 Most standalone executables—that is, executables that aren’t the main executable for a bundle—don’t need the [NSLocalNetworkUsageDescription](https://developer.apple.com/documentation/bundleresources/information-property-list/nslocalnetworkusagedescription) property because they’re either:
 
@@ -107390,7 +107393,7 @@ To use In-App Purchases in your app, you must sign your app with a provisioning 
 
 > Provisioning profiles that contain a revoked certificate or a modified App ID are invalid and cannot be used to sign your app. If your provisioning profile is invalid or expires, sign your app updates with a [regenerated provisioning profile](https://developer.apple.com/help/account/manage-provisioning-profiles/edit-download-or-delete-profiles#regenerate-a-provisioning-profile). After you renew your developer account, sign your app updates with new or updated [certificates](https://developer.apple.com/help/account/certificates/certificates-overview) and [provisioning profiles](https://developer.apple.com/help/account/manage-provisioning-profiles/edit-download-or-delete-profiles#edit-a-provisioning-profile). If your development or distribution certificate expires or you revoke it, sign your app updates with a new certificate and updated provisioning profiles. For more information, see [Edit a provisioning profile](https://developer.apple.com/help/account/manage-provisioning-profiles/edit-download-or-delete-profiles#edit-a-provisioning-profile). After you accept and complete an app transfer, sign updates of the transferred app with new provisioning profiles.
 
-Use [automatic signing](https://help.apple.com/xcode/mac/current/#/dev80cc24546) to allow Xcode to manage code signing for you. For more information, see [Configure code signing](../xcode/distributing-your-app-to-registered-devices.md).
+Use [automatic signing](https://help.apple.com/xcode/mac/current/#/dev80cc24546) to allow Xcode to manage code signing for you. For more information, see [Configure code signing](../xcode/distributing-apps-to-your-development-devices.md).
 
 <a id="Review-your-Apple-Developer-Program-membership"></a>
 
@@ -107500,7 +107503,7 @@ Alternatively, you can specify the class name when creating a [UISceneConfigurat
 In a scene-based app:
 
 - UIKit usually creates a `UIWindowScene` object instead of a [UIScene](https://developer.apple.com/documentation/uikit/uiscene) object. When configuring your app’s scene support, specify `UIWindowScene` objects instead of `UIScene` objects.
-- Use [CPTemplateApplicationScene](https://developer.apple.com/documentation/carplay/cptemplateapplicationscene) if your app is adopting scenes for CarPlay. To learn how to add a CarPlay scene see [Displaying Content in CarPlay](https://developer.apple.com/documentation/carplay/displaying-content-in-carplay).
+- Use [CPTemplateApplicationScene](https://developer.apple.com/documentation/carplay/cptemplateapplicationscene) if your app is adopting scenes for CarPlay. To learn how to add a CarPlay scene see [Building your app’s initial CarPlay interface](https://developer.apple.com/documentation/carplay/building-your-apps-initial-carplay-interface).
 - [UISceneSession](https://developer.apple.com/documentation/uikit/uiscenesession) contains a unique identifier and the configuration details of the scene.
 - `UISceneDelegate` and [UIWindowSceneDelegate](https://developer.apple.com/documentation/uikit/uiwindowscenedelegate) both handle scene-specific life-cycle events.
 - `UISceneConfiguration` defines how to create and configure scenes.
@@ -112372,7 +112375,7 @@ To fix this, re-save the font as an ordinary data-fork `.ttf` or `.otf` file.
 
 ### -103 and -104: The app redistributes a font Apple designs or licenses
 
-Your app can’t redistribute fonts Apple designs, such as the San Francisco and New York families, or fonts Apple licenses from a third party. They’re already present on the device or available for download. Remove the bundled copies and access these fonts directly through the system font APIs. For more information, see [Fonts](https://developer.apple.com/documentation/technologyoverviews/fonts) in the Technology Overviews.
+Your app can’t redistribute fonts Apple designs, such as the San Francisco and New York families, or fonts Apple licenses from a third party. They’re already present on the device or available for download. Remove the bundled copies and access these fonts directly through the system font APIs. For more information, see [Fonts](https://developer.apple.com/documentation/technologyoverviews/managing-the-fonts-for-your-app) in the Technology Overviews.
 
 `FontValidator` identifies a font Apple designs or fonts licensed to Apple by content markers in the file. Sharing a name with one of these fonts, such as your own build of a face you licensed independently, doesn’t trigger this error.
 
@@ -123354,11 +123357,6 @@ Xcode also includes several tools to help you rapidly develop and test your app:
 - [Apple silicon](https://developer.apple.com/documentation/apple-silicon): Get the resources you need to create software for Macs with Apple silicon.
 - [Application binary interfaces](xcode/application-binary-interfaces.md): Write assembly instructions that adhere to the application binary interfaces of Apple platforms.
 
-### Articles
-
-- [Managing files and folders in your Xcode project](xcode/managing-files-and-folders-in-your-xcode-project.md): Add new or existing files to your project, and use groups to organize the files and folders in the Project navigator.
-- [Managing multiple projects and their dependencies](xcode/managing-multiple-projects-and-their-dependencies.md): Manage related projects in one place using a workspace, or configure build-time dependencies between different Xcode projects using cross-project references.
-
 # Document: Xcode Release Notes
 
 Source path: documentation/xcode-release-notes
@@ -123383,7 +123381,7 @@ For information about Xcode Cloud releases, see [Xcode Cloud release notes](http
 
 ### Xcode 27
 
-- [Xcode 27.3 Beta Release Notes](xcode-release-notes/xcode-27_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.3 Beta 2 Release Notes](xcode-release-notes/xcode-27_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27.2 Release Notes](xcode-release-notes/xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27.1 Release Notes](xcode-release-notes/xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27 Release Notes](xcode-release-notes/xcode-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
@@ -134502,7 +134500,7 @@ Xcode 14 includes Swift 5.7 and SDKs for iOS 16, iPadOS 16, tvOS 16, watchOS 9, 
 - Simplify an app icon with a single 1024x1024 image that is automatically resized for its target. Choose the Single Size option in the app icon’s Attributes inspector in the asset catalog. You can still override individual sizes with the All Sizes option. (18475136) (FB5503050)
 - You can now paste copied images from the Finder directly into the asset catalog outline. (58980721)
 - You can now double-click an image slot to show the open file panel and choose a replacement asset. (81365822)
-- You can specify the default rendering mode for custom symbols in an Asset Catalog. Set the Render As attribute to automatic, template, multicolor, or hierarchical. The system then uses the default rendering mode for the symbol, unless you explicitly override it. For more information on custom symbols, see [Creating custom symbols](https://developer.apple.com/documentation/technologyoverviews/custom-sf-symbols). (84513859)
+- You can specify the default rendering mode for custom symbols in an Asset Catalog. Set the Render As attribute to automatic, template, multicolor, or hierarchical. The system then uses the default rendering mode for the symbol, unless you explicitly override it. For more information on custom symbols, see [Creating custom SF Symbols](https://developer.apple.com/documentation/technologyoverviews/creating-custom-sf-symbols). (84513859)
 
 <a id="Resolved-Issues"></a>
 
@@ -145186,7 +145184,7 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 ### Xcode 27
 
-- [Xcode 27.3 Beta Release Notes](xcode-27_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.3 Beta 2 Release Notes](xcode-27_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27.2 Release Notes](xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27.1 Release Notes](xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
@@ -145252,7 +145250,7 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 ### Xcode 27
 
-- [Xcode 27.3 Beta Release Notes](xcode-27_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.3 Beta 2 Release Notes](xcode-27_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27.2 Release Notes](xcode-27_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27 Release Notes](xcode-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
@@ -145442,17 +145440,17 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 ### Xcode 27
 
-- [Xcode 27.3 Beta Release Notes](xcode-27_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 27.3 Beta 2 Release Notes](xcode-27_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27.1 Release Notes](xcode-27_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 - [Xcode 27 Release Notes](xcode-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
-# Document: Xcode 27.3 Beta Release Notes
+# Document: Xcode 27.3 Beta 2 Release Notes
 
 Source path: documentation/xcode-release-notes/xcode-27_3-release-notes
 Canonical documentation: https://developer.apple.com/documentation/xcode-release-notes/xcode-27_3-release-notes
 Description: Kind: Article
 
-# Xcode 27.3 Beta Release Notes
+# Xcode 27.3 Beta 2 Release Notes
 
 **Kind:** Article
 
@@ -145462,36 +145460,13 @@ Update your apps to use new features, and test your apps against API changes.
 
 ## Overview
 
-Xcode 27.3 beta includes Swift 6.4 and SDKs for iOS 27.3, iPadOS 27.3, tvOS 27.3, watchOS 27.3, macOS 27.3, and visionOS 27.3. Xcode 27.3 beta supports on-device debugging in iOS 17 and later, tvOS 17 and later, watchOS 10 and later, and visionOS. Xcode 27.3 beta requires a Mac running macOS Tahoe 26.6 or later.
+Xcode 27.3 beta 2 includes Swift 6.4 and SDKs for iOS 27.3, iPadOS 27.3, tvOS 27.3, watchOS 27.3, macOS 27.3, and visionOS 27.3. Xcode 27.3 beta 2 supports on-device debugging in iOS 17 and later, tvOS 17 and later, watchOS 10 and later, and visionOS. Xcode 27.3 beta 2 requires a Mac running macOS Tahoe 26.6 or later.
 
 See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more about compatible platforms and deployment targets.
-
-<a id="Coding-Intelligence"></a>
-
-### Coding Intelligence
-
-<a id="New-Features"></a>
-
-#### New Features
-
-- GitHub Copilot is now available in the coding assistant. (185837709)
 
 <a id="Device-Hub"></a>
 
 ### Device Hub
-
-<a id="New-Features"></a>
-
-#### New Features
-
-- You can now drag items onto a device in Device Hub. Drop an app (`.app` or `.ipa`) to install it, or drop a link to open it on the device. On iOS simulators, drop any other file to save it with the Files app. (179246120) (FB23037189)
-
-<a id="Resolved-Issues"></a>
-
-#### Resolved Issues
-
-- Device Hub now supports using option-drag to simulate two-finger touch gestures for iPhones and iPads. (169537162)
-- Device Hub now accepts keyboard and mouse input for OS simulators earlier than iOS 18.0, tvOS 18.0, watchOS 11.0, and visionOS 2.0. (190652440)
 
 <a id="Known-Issues"></a>
 
@@ -145502,20 +145477,157 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
   **Workaround:** Turn off touch gestures in Settings under Touch Display.
 
-<a id="Previews"></a>
+<a id="Instruments"></a>
 
-### Previews
+### Instruments
 
 <a id="New-Features"></a>
 
 #### New Features
 
-- RenderPreview MCP tool snapshot filenames and metadata now include the applied overrides. (176531615)
-- RenderPreview MCP tool now supports interactive delayed snapshots for macOS previews. (181244878)
+- A new Standard Input File option in Launch Options lets a process launched on your Mac read its standard input from a file, matching `xctrace record --target-stdin`. (73743507)
+- The Source Viewer now has copy buttons for copying the current function or the entire file along with its cost annotations. (166028723)
+- The Time Profiler and Display instruments now include summary views that show the average CPU usage and average frame time for the selected time range. (FB23507969) (181104725) (FB23507969)
+- `xctrace record --recording-options` and `--show-recording-options` now support the Allocations, Leaks, and VM Tracker instruments, so their recording options can be configured from the command line. (FB23554683) (181351150) (FB23554683)
+- The new `xctrace triage` subcommand generates a report of the hangs in your trace. It combines data from multiple instruments into a concise overview of each hang, along with the context you need to investigate it. (182217728)
+- A new ‘Always import as this template’ checkbox in File → Import to Template… makes Instruments use the chosen template every time you open that type of file. You can change the template later under Templates for Import in Settings → General. (184136239)
+- The `xctrace` command-line tool can now export call trees, summaries, lists, and cost-annotated source code from traces, in plain text or Markdown. Use the new filtering, sorting, and data mining options to narrow the output to what you need. (184951123)
+- `xctrace list templates` and `xctrace list instruments` now print a description of each template or instrument when you add the `--verbose` (`-v`) flag. (188404842)
+- The Recording Information panel now includes a Target CPU Cores row showing the CPU core layout of the target device, and `xctrace export --toc` includes the same data in a new `cpu-cores` element. (188637563)
 
 <a id="Resolved-Issues"></a>
 
 #### Resolved Issues
+
+- Fixed an issue where the Allocations instrument would show 0 bytes in the Self Bytes column for allocation functions like `malloc` when Invert Call Tree was enabled. (125683004)
+- Fixed an issue where the Processor Trace instrument would occasionally show “-0.0000” in the Instructions Per Cycle column. (149570087)
+- Fixed an issue where `xctrace symbolicate` would leave some symbols unresolved, even when other symbols from the same library were resolved successfully. (FB17511755) (150743344) (FB17511755)
+- Fixed an issue where an app bundle couldn’t be chosen as a launch target, and dragging one from Finder could select a different copy of the app with the same bundle identifier. (161272736)
+- Fixed: The Power Profiler instrument no longer reports a 0% battery drain rate while the device is connected to power, and shows the rate as unavailable instead. To measure battery drain, record a ‘Performance Trace’ on the iOS device and open the resulting .atrc file in Instruments. (163944448)
+- Fixed an issue where `xctrace record --launch` would also start a second, suspended copy of the app, leaving an extra Dock icon and a lingering process after recording. (174176781)
+- Fixed an issue where call trees could intermittently be missing a small number of samples. (184136318)
+- Fixed: Improved the performance of processing SwiftUI instrument data, which could previously take a very long time or appear stuck after recording or importing a trace. (184293877)
+- Fixed an issue where reopening a file that was still being imported would start a second import instead of bringing the existing import progress to the front. (185058492)
+- Fixed an issue where pressing the arrow keys in the Call Tree could leave the selection and scroll position of the weight columns out of sync with the symbol names. (186292599)
+- Fixed an issue where windowed mode was unavailable for the RealityKit Trace template. (186506854)
+- Fixed an issue where Instruments would hang when resizing the inspector while viewing a call tree. (187518651)
+- Fixed a crash that occurred when stopping a recording that included the Network Connections instrument. (188127762)
+- Fixed a crash that occurred when recording with the CPU Counters instrument in the Discarded guided mode. (188841714)
+- Fixed an issue where stopping a recording in immediate mode could discard the recorded data, causing the saved trace to open without any data. (FB25375680) (191979844)
+- Fixed an issue where Instruments would hang when opening traces of processes that created a very large number of threads. (191997867)
+- Fixed an issue where `xctrace import` could hang instead of reporting an error when the input file could not be accessed. (192011544)
+
+<a id="Deprecations"></a>
+
+#### Deprecations
+
+- The View Body and View Properties instruments have been removed. To profile SwiftUI apps, use the SwiftUI instrument, which supports iOS 26, iPadOS 26, macOS 26, tvOS 26, watchOS 26, visionOS 26, and later. (188227249)
+
+<a id="Localization"></a>
+
+### Localization
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- New tools allow coding agents to manipulate String Catalogs in the same ways that the String Catalog Editor does. For example, agents can add and remove strings, change state, and reference strings by Swift symbol. (184511781)
+- A new skill in Xcode aids coding agents in writing localizable code and detecting common localization problems. (184951217)
+- Translating projects with coding agents now uses fewer tokens. (190440819)
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Improved performance when compiling String Catalogs with many locales. (188024317) (FB24882338)
+- Resolved a crash that could occur when viewing an xcstrings diff in the stash viewer. (188813700)
+- Fixed an issue where running `xcstringstool sync` on the command line would use a different key order than the IDE. This also fixes key order when using String Catalog MCP tools outside of Xcode. This requires macOS 27.3 Beta 2. (190849755)
+
+<a id="Previews"></a>
+
+### Previews
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Previews now render correctly on iPhone Duo. (185995983)
+- Fixed: Xcode could crash when a preview updated after its scheme was reloaded from disk. (187067572)
+- Fixed: Previewing on a device could erase the app’s existing data. (190012895) (FB25185762)
+- Fixed: Snapshots from the RenderPreview MCP tool could have the wrong resolution when the image was downscaled. (190043246)
+- Fixed: The software keyboard did not work in previews running on an iOS device. (190043382)
+
+<a id="Simulator"></a>
+
+### Simulator
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Simulator runtime authenticity validation has been improved. As part of this effort, Xcode now includes checks that protect simulator runtimes from modification. Users who have relaxed their filesystem permissions on `/Library`, `/Library/Developer`, or `/Library/Developer/CoreSimulator` might find that simulators are not discovered. To fix this, restore permissions and ownership back to shipping defaults (`root:wheel 755`). (187122954)
+- Fixed: Standby mode might render fully blank. (192294186)
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- A simulator device might be shut down without warning if its runtime was mounted as a disk image and subsequently remounted as a cryptex. (191574717) (FB25398296)
+
+<a id="Xcode"></a>
+
+### Xcode
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- Xcode now includes two Apple specialists for coding agents. The `xctrace` specialists helps agents use the tool’s new export and filtering options to navigate trace data. The hangs specialist helps agents find hangs in your traces and fix them. (187385971)
+
+<a id="Updates-in-Xcode-273-Beta"></a>
+
+## Updates in Xcode 27.3 Beta
+
+<a id="Coding-Intelligence"></a>
+
+### Coding Intelligence
+
+<a id="New-Features-in-Xcode-273-Beta"></a>
+
+#### New Features in Xcode 27.3 Beta
+
+- GitHub Copilot is now available in the coding assistant. (185837709)
+
+<a id="Device-Hub"></a>
+
+### Device Hub
+
+<a id="New-Features-in-Xcode-273-Beta"></a>
+
+#### New Features in Xcode 27.3 Beta
+
+- You can now drag items onto a device in Device Hub. Drop an app (`.app` or `.ipa`) to install it, or drop a link to open it on the device. On iOS simulators, drop any other file to save it with the Files app. (179246120) (FB23037189)
+
+<a id="Resolved-Issues-in-Xcode-273-Beta"></a>
+
+#### Resolved Issues in Xcode 27.3 Beta
+
+- Device Hub now supports using option-drag to simulate two-finger touch gestures for iPhones and iPads. (169537162)
+
+<a id="Previews"></a>
+
+### Previews
+
+<a id="New-Features-in-Xcode-273-Beta"></a>
+
+#### New Features in Xcode 27.3 Beta
+
+- RenderPreview MCP tool snapshot filenames and metadata now include the applied overrides. (176531615)
+- RenderPreview MCP tool now supports interactive delayed snapshots for macOS previews. (181244878)
+
+<a id="Resolved-Issues-in-Xcode-273-Beta"></a>
+
+#### Resolved Issues in Xcode 27.3 Beta
 
 - A clearer error is now shown when the sandbox blocks a library from loading in a preview. (147269145)
 - macOS widget previews now fail with a clear error. (178635433)
@@ -145531,9 +145643,9 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 ### Simulator
 
-<a id="Resolved-Issues"></a>
+<a id="Resolved-Issues-in-Xcode-273-Beta"></a>
 
-#### Resolved Issues
+#### Resolved Issues in Xcode 27.3 Beta
 
 - Fixed: Simulator runtimes might be inaccessible to users who are in the `daemon` group. (User accounts should not be added to the `daemon` group.) (190649396)
 
@@ -145541,9 +145653,9 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 ### Swift Testing
 
-<a id="New-Features"></a>
+<a id="New-Features-in-Xcode-273-Beta"></a>
 
-#### New Features
+#### New Features in Xcode 27.3 Beta
 
 - Xcode now supports writing UI tests with Swift Testing and `XCUIAutomation`. (95593221)
 
@@ -145551,9 +145663,9 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 ### UI Automation
 
-<a id="New-Features"></a>
+<a id="New-Features-in-Xcode-273-Beta"></a>
 
-#### New Features
+#### New Features in Xcode 27.3 Beta
 
 - `XCUIAutomation` supports setting the hinge angle on iPhone Duo with a new `XCUIHinge` class. (187479559)
 
@@ -145561,11 +145673,11 @@ See [Xcode Support](https://developer.apple.com/support/xcode/) to learn more ab
 
 ### Xcode AEA
 
-<a id="New-Features"></a>
+<a id="New-Features-in-Xcode-273-Beta"></a>
 
-#### New Features
+#### New Features in Xcode 27.3 Beta
 
-- Xcode is now available as an Apple Encrypted Archive (`.aea`).  If you’re installing Xcode from the command line, use `archiveutil extractXcodeAEA` to extract the Xcode archive.
+- Xcode is now available as an Apple Encrypted Archive (`.aea`). If you’re installing Xcode from the command line, use `archiveutil extractXcodeAEA` to extract the Xcode archive.
 
   Xcode 27.3 is the final release supporting the `.xip` format. (111337953)
 
@@ -146660,7 +146772,7 @@ let image = NSImage(named: "ImageName")
 
 ### Images
 
-- [Creating custom symbols](https://developer.apple.com/documentation/technologyoverviews/custom-sf-symbols): Design a symbol image with the same behavior as system-provided symbols.
+- [Creating custom SF Symbols](https://developer.apple.com/documentation/technologyoverviews/creating-custom-sf-symbols): Design a symbol image with the same behavior as system-provided symbols.
 
 # Document: Adding package dependencies to your app
 
@@ -150744,7 +150856,7 @@ Xcode also provides interactive editors for certain types of assets, like partic
 ### Images
 
 - [Adding images to your Xcode project](adding-images-to-your-xcode-project.md): Import images into your project, manage their appearances and variations, and load them at runtime.
-- [Creating custom symbols](https://developer.apple.com/documentation/technologyoverviews/custom-sf-symbols): Design a symbol image with the same behavior as system-provided symbols.
+- [Creating custom SF Symbols](https://developer.apple.com/documentation/technologyoverviews/creating-custom-sf-symbols): Design a symbol image with the same behavior as system-provided symbols.
 
 ### Colors
 
@@ -157950,7 +158062,7 @@ Update any other settings in App Store Connect that use the bundle ID, such as i
 
 If you use manual provisioning, update the App ID in those provisioning files to match the bundle ID in your project. For more information, see [Edit, download, or delete provisioning profiles](https://developer.apple.com/help/account/provisioning-profiles/edit-download-or-delete-profiles) in Developer Account Help. After you update your provisioning profile in your developer account, you can download it from Xcode \> Settings \> Apple Accounts, using the Download Manual Profiles button when you select your account.
 
-If you toggle the “Automatically manage signing” checkbox in the Signing & Capabilities pane, Xcode updates your provisioning profiles for you.
+If you select the “Automatically manage signing” checkbox in the Signing & Capabilities pane, Xcode updates your provisioning profiles for you.
 
 ## See Also
 
@@ -158973,7 +159085,7 @@ If your app target doesn’t include an entitlements file, remove then re-add th
 
 After you add the Family Controls capability to your app’s target in Xcode, generate a provisioning profile, and re-sign your app with the profile. Use automatic signing to let Xcode manage signing for you. If you use automatic signing, Xcode automatically enables Family Controls for your app’s App ID in [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources/identifiers/list) and requests a new provisioning profile for your app. For more information, see [Edit, download, or delete provisioning profiles](https://developer.apple.com/help/account/provisioning-profiles/edit-download-or-delete-profiles).
 
-If you manually sign your app, enable the Family Controls capability for your app’s App ID in [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources/identifiers/list), then [regenerate your provisioning profile](https://developer.apple.com/help/account/provisioning-profiles/edit-download-or-delete-profiles#regenerate-a-provisioning-profile). For more information, see [Enable app capabilities](https://developer.apple.com/help/account/identifiers/enable-app-capabilities). After you regenerate the profile, download it or select Download Profile from the Provisioning Profile dropdown menu in Xcode to install it. For more information, see [Distributing your app to registered devices](distributing-your-app-to-registered-devices.md).
+If you manually sign your app, enable the Family Controls capability for your app’s App ID in [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources/identifiers/list), then [regenerate your provisioning profile](https://developer.apple.com/help/account/provisioning-profiles/edit-download-or-delete-profiles#regenerate-a-provisioning-profile). For more information, see [Enable app capabilities](https://developer.apple.com/help/account/identifiers/enable-app-capabilities). After you regenerate the profile, download it or select Download Profile from the Provisioning Profile dropdown menu in Xcode to install it. For more information, see [Distributing apps to your development devices](distributing-apps-to-your-development-devices.md).
 
 If your app includes a Screen Time API extension, use the same steps to update the provisioning profile of the extension.
 

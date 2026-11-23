@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpimageset
 
 # CPImageSet (Swift)
@@ -23,11 +23,11 @@ CarPlay is set to dark appearance by default in most vehicles, but does provide 
 
 ## Topics
 
-### Creating an Image Set
+### Creating an image set
 
 - [init(lightContentImage:darkContentImage:)](cpimageset/init%28lightcontentimage_darkcontentimage_%29.md): Creates an image set with light and dark versions of an image.
 
-### Getting Content Images
+### Getting the images
 
 - [lightContentImage](cpimageset/lightcontentimage.md): The image the system displays when the user interface style is light.
 - [darkContentImage](cpimageset/darkcontentimage.md): The image the system displays when the user interface style is dark.
@@ -55,10 +55,14 @@ CarPlay is set to dark appearance by default in most vehicles, but does provide 
 
 ## See Also
 
-### Related Types
+### Common types
 
+- [CPTemplate](cptemplate.md): An abstract base class for interface templates.
+- [CPTextButton](cptextbutton.md): A button that displays a stylized title.
 - [CPButton](cpbutton.md): A button that displays an image and invokes a handler when the user taps it.
-- [CarPlayErrorDomain](carplayerrordomain.md): The domain that CarPlay uses for any errors it provides.
+- [CPPanel](cppanel.md): A type that provides the common behaviors for panels you display on top of your app’s content.
+- [CPPanelItem](cppanelitem.md): A type that provides the common behaviors for items you display in a section of a panel.
+- [CPPanelButtonConfiguration](cppanelbuttonconfiguration.md): A type that provides the common behaviors for a button layout in a panel.
 
 # CPImageSet (Objective-C)
 
@@ -82,11 +86,11 @@ CarPlay is set to dark appearance by default in most vehicles, but does provide 
 
 ## Topics
 
-### Creating an Image Set
+### Creating an image set
 
 - [initWithLightContentImage:darkContentImage:](cpimageset/init%28lightcontentimage_darkcontentimage_%29.md): Creates an image set with light and dark versions of an image.
 
-### Getting Content Images
+### Getting the images
 
 - [lightContentImage](cpimageset/lightcontentimage.md): The image the system displays when the user interface style is light.
 - [darkContentImage](cpimageset/darkcontentimage.md): The image the system displays when the user interface style is dark.
@@ -103,7 +107,11 @@ CarPlay is set to dark appearance by default in most vehicles, but does provide 
 
 ## See Also
 
-### Related Types
+### Common types
 
+- [CPTemplate](cptemplate.md): An abstract base class for interface templates.
+- [CPTextButton](cptextbutton.md): A button that displays a stylized title.
 - [CPButton](cpbutton.md): A button that displays an image and invokes a handler when the user taps it.
-- [CarPlayErrorDomain](carplayerrordomain.md): The domain that CarPlay uses for any errors it provides.
+- [CPPanel](cppanel.md): A type that provides the common behaviors for panels you display on top of your app’s content.
+- [CPPanelItem](cppanelitem.md): A type that provides the common behaviors for items you display in a section of a panel.
+- [CPPanelButtonConfiguration](cppanelbuttonconfiguration.md): A type that provides the common behaviors for a button layout in a panel.

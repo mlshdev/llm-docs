@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmappanelsection/items
 
 # items (Swift)
@@ -21,6 +21,12 @@ var items: [CPMapPanelItem] { get set }
 
 You specify the set of items at initialization time, but can change the items at any time. If you change the value of this property while the panel is visible, the system updates your CarPlay interface to reflect the changes.
 
+## See Also
+
+### Accessing the section’s content
+
+- [title](title.md): The localized string to display for the section title.
+
 # items (Objective-C)
 
 **Framework:** CarPlay  
@@ -40,3 +46,9 @@ The items to display in the section.
 ## Discussion
 
 You specify the set of items at initialization time, but can change the items at any time. If you change the value of this property while the panel is visible, the system updates your CarPlay interface to reflect the changes.
+
+## See Also
+
+### Accessing the section’s content
+
+- [title](title.md): The localized string to display for the section title.

@@ -1,11 +1,11 @@
-# Apple Xcode and developer tools snapshot-ee1c8cbf0f44
+# Apple Xcode and developer tools snapshot-6bb1532b03d3
 
-> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/documentation/xcode](https://developer.apple.com/documentation/xcode) and pinned to catalog snapshot `ee1c8cbf0f444324b8d8344f5a1156f029d70a64656a2e18bbd463d6cdfb4480` captured at 2026-11-08T22:37:20.676Z.
+> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/documentation/xcode](https://developer.apple.com/documentation/xcode) and pinned to catalog snapshot `6bb1532b03d3926068d90735187eda38862dcecfa0cfd2ccaae82490796174b1` captured at 2026-11-22T23:58:10.597Z.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Apple Xcode and developer tools snapshot-ee1c8cbf0f44.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Apple Xcode and developer tools snapshot-6bb1532b03d3.
 - [Provenance manifest](manifest.json): Snapshot digest, capture time, document count, and generation notes.
 - Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.
-- 21 frameworks in this catalog, captured at 2026-11-08T22:37:20.676Z.
+- 21 frameworks in this catalog, captured at 2026-11-22T23:58:10.597Z.
 - Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.
 - Weekly reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive weekly check.
 - Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream.

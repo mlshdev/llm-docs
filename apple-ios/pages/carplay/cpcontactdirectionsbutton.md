@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpcontactdirectionsbutton
 
 # CPContactDirectionsButton (Swift)
@@ -25,7 +25,7 @@ If your app doesn’t provide turn-by-turn navigation, use the `maps` URL scheme
 
 ## Topics
 
-### Creating a Contact Directions Button
+### Creating a contact directions button
 
 - [init(handler:)](cpcontactdirectionsbutton/init%28handler_%29.md): Creates a button that invokes a handler when the user taps it.
 
@@ -46,9 +46,10 @@ If your app doesn’t provide turn-by-turn navigation, use the `maps` URL scheme
 
 ## See Also
 
-### Managing Interactions with the Contact
+### Contacts
 
-- [actions](cpcontact/actions.md): The actions that the template displays for this contact.
+- [CPContactTemplate](cpcontacttemplate.md): A template that displays information about a person or a business.
+- [CPContact](cpcontact.md): A data object that contains information about a contact.
 - [CPContactCallButton](cpcontactcallbutton.md): A button for calling the contact.
 - [CPContactMessageButton](cpcontactmessagebutton.md): A button that activates Siri and initiates the compose message flow.
 
@@ -76,7 +77,7 @@ If your app doesn’t provide turn-by-turn navigation, use the `maps` URL scheme
 
 ## Topics
 
-### Creating a Contact Directions Button
+### Creating a contact directions button
 
 - [initWithHandler:](cpcontactdirectionsbutton/init%28handler_%29.md): Creates a button that invokes a handler when the user taps it.
 
@@ -88,8 +89,9 @@ If your app doesn’t provide turn-by-turn navigation, use the `maps` URL scheme
 
 ## See Also
 
-### Managing Interactions with the Contact
+### Contacts
 
-- [actions](cpcontact/actions.md): The actions that the template displays for this contact.
+- [CPContactTemplate](cpcontacttemplate.md): A template that displays information about a person or a business.
+- [CPContact](cpcontact.md): A data object that contains information about a contact.
 - [CPContactCallButton](cpcontactcallbutton.md): A button for calling the contact.
 - [CPContactMessageButton](cpcontactmessagebutton.md): A button that activates Siri and initiates the compose message flow.

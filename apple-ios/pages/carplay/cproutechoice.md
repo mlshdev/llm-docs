@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cproutechoice
 
 # CPRouteChoice (Swift)
@@ -17,17 +17,17 @@ class CPRouteChoice
 
 ## Topics
 
-### Creating a Route Choice
+### Creating a route choice
 
 - [init(summaryVariants:additionalInformationVariants:selectionSummaryVariants:)](cproutechoice/init%28summaryvariants_additionalinformationvariants_selectionsummaryvariants_%29.md): Creates a route choice.
 
-### Getting Variants
+### Getting the variant details
 
 - [summaryVariants](cproutechoice/summaryvariants.md): An array of summary variants.
 - [additionalInformationVariants](cproutechoice/additionalinformationvariants.md): An array of variants providing additional information about the route choice.
 - [selectionSummaryVariants](cproutechoice/selectionsummaryvariants.md): An array of selection summary variants.
 
-### Providing Additional Information
+### Providing app-specific data
 
 - [userInfo](cproutechoice/userinfo.md): An object containing custom information associated with the route choice.
 
@@ -60,9 +60,14 @@ class CPRouteChoice
 
 ## See Also
 
-### Creating a Trip
+### Route details
 
-- [init(origin:destination:routeChoices:)](cptrip/init%28origin_destination_routechoices_%29.md): Deprecated. Creates a trip with an origin, destination, and route choices.
+- [CPRouteInformation](cprouteinformation.md): A class that describes the characteristic elements of a route.
+- [CPRouteDetail](cproutedetail.md)
+- [CPRouteSegment](cproutesegment.md): CPRouteSegment describes information pertaining to a segment of a route.
+- [CPRerouteReason](cpreroutereason.md): Values that represent reasons for navigation rerouting.
+- [CPRouteSource](cproutesource.md)
+- [NSStringFromCPRerouteReason(\_:)](nsstringfromcpreroutereason%28__%29.md)
 
 # CPRouteChoice (Objective-C)
 
@@ -80,17 +85,17 @@ A possible route for a trip.
 
 ## Topics
 
-### Creating a Route Choice
+### Creating a route choice
 
 - [initWithSummaryVariants:additionalInformationVariants:selectionSummaryVariants:](cproutechoice/init%28summaryvariants_additionalinformationvariants_selectionsummaryvariants_%29.md): Creates a route choice.
 
-### Getting Variants
+### Getting the variant details
 
 - [summaryVariants](cproutechoice/summaryvariants.md): An array of summary variants.
 - [additionalInformationVariants](cproutechoice/additionalinformationvariants.md): An array of variants providing additional information about the route choice.
 - [selectionSummaryVariants](cproutechoice/selectionsummaryvariants.md): An array of selection summary variants.
 
-### Providing Additional Information
+### Providing app-specific data
 
 - [userInfo](cproutechoice/userinfo.md): An object containing custom information associated with the route choice.
 
@@ -115,6 +120,11 @@ A possible route for a trip.
 
 ## See Also
 
-### Creating a Trip
+### Route details
 
-- [initWithOrigin:destination:routeChoices:](cptrip/init%28origin_destination_routechoices_%29.md): Deprecated. Creates a trip with an origin, destination, and route choices.
+- [CPRouteInformation](cprouteinformation.md): A class that describes the characteristic elements of a route.
+- [CPRouteDetail](cproutedetail.md)
+- [CPRouteSegment](cproutesegment.md): CPRouteSegment describes information pertaining to a segment of a route.
+- [CPRerouteReason](cpreroutereason.md): Values that represent reasons for navigation rerouting.
+- [CPRouteSource](cproutesource.md)
+- [NSStringFromCPRerouteReason](nsstringfromcpreroutereason%28__%29.md)

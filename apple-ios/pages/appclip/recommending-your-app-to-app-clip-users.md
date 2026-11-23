@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/appclip/recommending-your-app-to-app-clip-users
 
 # Recommending your app to App Clip users (Swift)
@@ -12,7 +12,7 @@ Display an overlay in your App Clip to recommend your app to users.
 
 ## Overview
 
-App Clips only remain on a device for a limited amount of time. If someone uses an App Clip regularly, they might want to get the corresponding app to use additional features and have the app on their home screen. With [SKOverlay](https://developer.apple.com/documentation/storekit/skoverlay), you can recommend your full app to users and enable them to install it from within your App Clip.
+App Clips only remain on a device for a limited amount of time. If someone uses an App Clip regularly, they might want to get the corresponding app to use additional features and have the app on their Home Screen. With [SKOverlay](https://developer.apple.com/documentation/storekit/skoverlay), you can recommend your full app to users and enable them to install it from within your App Clip.
 
 > **Note**
 
@@ -57,7 +57,7 @@ Display an overlay in your App Clip to recommend your app to users.
 
 ## Overview
 
-App Clips only remain on a device for a limited amount of time. If someone uses an App Clip regularly, they might want to get the corresponding app to use additional features and have the app on their home screen. With [SKOverlay](https://developer.apple.com/documentation/storekit/skoverlay), you can recommend your full app to users and enable them to install it from within your App Clip.
+App Clips only remain on a device for a limited amount of time. If someone uses an App Clip regularly, they might want to get the corresponding app to use additional features and have the app on their Home Screen. With [SKOverlay](https://developer.apple.com/documentation/storekit/skoverlay), you can recommend your full app to users and enable them to install it from within your App Clip.
 
 > **Note**
 

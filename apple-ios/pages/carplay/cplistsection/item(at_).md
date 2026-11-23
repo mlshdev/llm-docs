@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistsection/item(at:)
 
 # item(at:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-Returns the item at the specified index.
+Returns the item at the specified index in the section.
 
 ## Declaration
 
@@ -17,20 +17,20 @@ func item(at index: Int) -> any CPListTemplateItem
 
 ## Parameters
 
-- `index`: The item’s index in the section.
+- `index`: The item’s zero-based index in the section. If you specify an index outside of the bounds of the [items](items.md) array, this method raises an exception.
 
-<a id="Discussion"></a>
+<a id="return-value"></a>
 
-## Discussion
+## Return Value
 
-The index must be within the bounds of the [items](items.md) array, otherwise, your app throws an exception.
+The item at the specified index.
 
 ## See Also
 
-### Getting Items
+### Locating items in the section
 
-- [items](items.md): The list of items for the section.
-- [index(of:)](index%28of_%29.md): Returns the index of the specified item.
+- [items](items.md): The items in the section.
+- [index(of:)](index%28of_%29.md): Returns the zero-based index of an item in the section.
 
 # itemAtIndex: (Objective-C)
 
@@ -38,7 +38,7 @@ The index must be within the bounds of the [items](items.md) array, otherwise, y
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-Returns the item at the specified index.
+Returns the item at the specified index in the section.
 
 ## Declaration
 
@@ -48,17 +48,17 @@ Returns the item at the specified index.
 
 ## Parameters
 
-- `index`: The item’s index in the section.
+- `index`: The item’s zero-based index in the section. If you specify an index outside of the bounds of the [items](items.md) array, this method raises an exception.
 
-<a id="Discussion"></a>
+<a id="return-value"></a>
 
-## Discussion
+## Return Value
 
-The index must be within the bounds of the [items](items.md) array, otherwise, your app throws an exception.
+The item at the specified index.
 
 ## See Also
 
-### Getting Items
+### Locating items in the section
 
-- [items](items.md): The list of items for the section.
-- [indexOfItem:](index%28of_%29.md): Returns the index of the specified item.
+- [items](items.md): The items in the section.
+- [indexOfItem:](index%28of_%29.md): Returns the zero-based index of an item in the section.

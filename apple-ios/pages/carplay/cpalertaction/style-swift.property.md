@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpalertaction/style-swift.property
 
 # style (Swift)
@@ -23,9 +23,10 @@ The combination of [style](style-swift.property.md) and the template type, [CPAc
 
 ## See Also
 
-### Getting the Action Style
+### Getting the action style
 
 - [CPAlertAction.Style](style-swift.enum.md): Display styles for an alert’s action button.
+- [color](color.md)
 
 # style (Objective-C)
 
@@ -49,6 +50,7 @@ The combination of [style](style-swift.property.md) and the template type, [CPAc
 
 ## See Also
 
-### Getting the Action Style
+### Getting the action style
 
 - [CPAlertActionStyle](style-swift.enum.md): Display styles for an alert’s action button.
+- [color](color.md)

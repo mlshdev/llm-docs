@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpsessionconfiguration/supportsvideoplayback
 
 # supportsVideoPlayback (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.4+
 
-The connected CarPlay system supports video playback.
+A Boolean value that indicates whether CarPlay supports playing video content.
 
 ## Declaration
 
@@ -19,9 +19,16 @@ var supportsVideoPlayback: Bool { get }
 
 ## Discussion
 
-> **Note**
+Use this property to determine when to enable your app’s video playback interface. The value of this property doesn’t change while your app runs. If a vehicle supports video playback, that support remains available throughout the current session. However, the system might disable the rendering of video content to ensure the safe operation of the vehicle. For example, the vehicle might play only the audio portion of a video while it’s in motion.
 
-> Video playback will remain supported throughout the session but the availability of video playback may change at any time.
+## See Also
+
+### Getting the configuration details
+
+- [contentStyle](contentstyle.md): The preferred interface style for your app’s content.
+- [limitedUserInterfaces](limiteduserinterfaces.md): A bitmask of the interface restrictions that currently apply to your app.
+- [CPContentStyle](../cpcontentstyle.md): The types of content style that the vehicle allows.
+- [CPLimitableUserInterface](../cplimitableuserinterface.md): The types of interfaces to which a vehicle can limit access.
 
 # supportsVideoPlayback (Objective-C)
 
@@ -29,7 +36,7 @@ var supportsVideoPlayback: Bool { get }
 **Kind:** Instance Property  
 **Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.4+
 
-The connected CarPlay system supports video playback.
+A Boolean value that indicates whether CarPlay supports playing video content.
 
 ## Declaration
 
@@ -41,6 +48,13 @@ The connected CarPlay system supports video playback.
 
 ## Discussion
 
-> **Note**
+Use this property to determine when to enable your app’s video playback interface. The value of this property doesn’t change while your app runs. If a vehicle supports video playback, that support remains available throughout the current session. However, the system might disable the rendering of video content to ensure the safe operation of the vehicle. For example, the vehicle might play only the audio portion of a video while it’s in motion.
 
-> Video playback will remain supported throughout the session but the availability of video playback may change at any time.
+## See Also
+
+### Getting the configuration details
+
+- [contentStyle](contentstyle.md): The preferred interface style for your app’s content.
+- [limitedUserInterfaces](limiteduserinterfaces.md): A bitmask of the interface restrictions that currently apply to your app.
+- [CPContentStyle](../cpcontentstyle.md): The types of content style that the vehicle allows.
+- [CPLimitableUserInterface](../cplimitableuserinterface.md): The types of interfaces to which a vehicle can limit access.

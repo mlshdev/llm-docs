@@ -1,11 +1,11 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
-> Canonical documentation: https://developer.apple.com/documentation/xcode/distributing-your-app-to-registered-devices
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/xcode/distributing-apps-to-your-development-devices
 
-# Distributing your app to registered devices
+# Distributing apps to your development devices
 
 **Kind:** Article
 
-Test your app on devices that you register in your developer account.
+Test apps on your own devices that you register in your developer account.
 
 <a id="Overview"></a>
 
@@ -23,9 +23,11 @@ Alternatively, distribute your app to testers using TestFlight. For more informa
 
 Xcode can manage the certificates, identifiers, and profiles for you.
 
-First, use Device Hub to pair the physical devices with your Mac, either wirelessly or with a cable. For more information, see [Managing your simulated and physical devices in Device Hub](managing-your-simulated-and-physical-devices-in-device-hub.md).
+First, use Device Hub to pair your physical devices with your Mac, either wirelessly or with a cable. For more information, see [Managing your simulated and physical devices in Device Hub](managing-your-simulated-and-physical-devices-in-device-hub.md).
 
-In the Signing & Capabilities pane under Signing, toggle “Automatically manage signing” on. For each device, choose it as the run destination, click the Register Device button under Signing or in the popover if it appears, and click Run. Xcode registers and adds the device to the provisioning profile.
+The first time you run your app on a physical device, set up code signing in the Signing & Capabilities pane of the project editor. For more information, see doc:running-your-app-on-simulated-or-physical-devices#set-up-cod-signing-for-physical-devices.
+
+To register devices using Xcode, toggle on “Automatically manage signing” under Signing. For each device, choose it as the run destination, click the Register Device button under Signing or in the popover if it appears, and click Run. Xcode registers and adds the device to the provisioning profile.
 
 For more information on running apps through Xcode, see [Running your app on simulated or physical devices](running-your-app-on-simulated-or-physical-devices.md).
 
@@ -45,6 +47,8 @@ For more information on managing your devices, including disabling devices you n
 
 In the project window, choose a target and a run destination from the Scheme toolbar menu. Choose Product \> Archive to build the target. Xcode then displays the archive in the Archives organizer. If you select a simulator for your run destination, Xcode builds an archive matching the build-only device type for that simulator.
 
+![A screenshot of the Archives organizer showing an archive selected and Distribute App button.](https://developer.apple.com/images/com.apple.Xcode/distributing-apps-archives-organizer@2x.png)
+
 > **Note**
 
 > For an app built with Mac Catalyst, create separate archives for the iPad and Mac Catalyst builds. When creating the archive for the Mac Catalyst build, choose the run destination that includes Mac Catalyst in its name. For an app built with Designed for iPad, create a single archive using iPad as the run destination or any run destination that includes Designed for iPad in its name. These run destinations produce the same archive.
@@ -56,21 +60,21 @@ In the project window, choose a target and a run destination from the Scheme too
 In the Archives organizer, export a version of the app to distribute to testers:
 
 1. Select the archive and click Distribute App.
-2. Select Debugging and click Distribute.
+2. Select Release Testing or Debugging as the method of distribution and then click Distribute.
 3. Review the build details in the next sheet and click Export.
 4. Select a location to save the exported app and click Export.
 
 Xcode creates a folder that contains a few files. For iOS, iPadOS, tvOS, visionOS, or watchOS apps, the folder contains the iOS Package Archive file (with an `.ipa` extension). For macOS apps, it contains the app bundle.
 
+> **Note**
+
+> The Release Testing distribution method isn’t available for macOS apps.
+
 <a id="Install-the-app-on-registered-devices"></a>
 
 ## Install the app on registered devices
 
-Next, give the exported files to testers so they can install the app on their registered devices using Device Hub or Apple Configurator. For more information, see [Install apps on devices](managing-apps-on-devices.md#Install-apps-on-devices). For macOS apps, drag the app bundle to the `/Applications` folder or another folder of your choice on the Mac.
-
-> **Important**
-
-> To run your iOS, iPadOS, visionOS, or watchOS app that you install from an iOS Package Archive, enable Developer Mode on that device. For more information, see [Enabling Developer Mode on a device](enabling-developer-mode-on-a-device.md).
+Give the exported files to testers so they can install the app on their registered devices using Device Hub or Apple Configurator. For more information on using Device Hub, see [Install apps on devices](managing-apps-on-devices.md#Install-apps-on-devices). For macOS apps, drag the app bundle to the `/Applications` folder or another folder of your choice on the Mac.
 
 <a id="Test-your-app-on-specific-devices"></a>
 

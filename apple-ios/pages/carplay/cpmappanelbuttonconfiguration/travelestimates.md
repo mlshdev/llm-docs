@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmappanelbuttonconfiguration/travelestimates
 
 # travelEstimates (Swift)
@@ -21,6 +21,12 @@ The travel estimates to display alongside the action buttons.
 
 Specify this information at initialization time and access it using this property.
 
+## See Also
+
+### Accessing the configuration details
+
+- [secondaryButton](secondarybutton.md): The optional button you use to perform a secondary action.
+
 # travelEstimates (Objective-C)
 
 **Framework:** CarPlay  
@@ -40,3 +46,9 @@ The travel estimates to display alongside the action buttons.
 ## Discussion
 
 Specify this information at initialization time and access it using this property.
+
+## See Also
+
+### Accessing the configuration details
+
+- [secondaryButton](secondarybutton.md): The optional button you use to perform a secondary action.

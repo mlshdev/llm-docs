@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbutton/isenabled
 
 # isEnabled (Swift)
@@ -23,12 +23,6 @@ When [false](https://developer.apple.com/documentation/swift/false), CarPlay doe
 
 The default value is [true](https://developer.apple.com/documentation/swift/true).
 
-## See Also
-
-### Configuring the Button’s Attributes
-
-- [title](title.md): The button’s title.
-
 # enabled (Objective-C)
 
 **Framework:** CarPlay  
@@ -50,9 +44,3 @@ A Boolean value that determines whether the button is in an enabled state.
 When [false](https://developer.apple.com/documentation/swift/false), CarPlay doesn’t call the button’s handler, and it changes the button’s appearance to reflect its disabled state.
 
 The default value is [true](https://developer.apple.com/documentation/swift/true).
-
-## See Also
-
-### Configuring the Button’s Attributes
-
-- [title](title.md): The button’s title.

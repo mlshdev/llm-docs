@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptimeremainingcolor
 
 # CPTimeRemainingColor (Swift)
@@ -23,7 +23,7 @@ The system determines the shade of each color based on the [tripEstimateStyle](c
 
 ## Topics
 
-### Colors
+### Getting the color
 
 - [CPTimeRemainingColor.default](cptimeremainingcolor/default.md): The system default color.
 - [CPTimeRemainingColor.green](cptimeremainingcolor/green.md): A shade of green.
@@ -47,7 +47,7 @@ The system determines the shade of each color based on the [tripEstimateStyle](c
 
 ## See Also
 
-### Providing Trip Estimates
+### Providing trip estimates
 
 - [updateEstimates(\_:for:)](cpmaptemplate/updateestimates%28__for_%29.md): Updates travel estimates, such as arrival time and the remaining time and distance for a trip.
 - [update(\_:for:with:)](cpmaptemplate/update%28__for_with_%29.md): Updates travel estimates, such as arrival time and the remaining time and distance for a trip, with the specified time-remaining color.
@@ -76,7 +76,7 @@ The system determines the shade of each color based on the [tripEstimateStyle](c
 
 ## Topics
 
-### Colors
+### Getting the color
 
 - [CPTimeRemainingColorDefault](cptimeremainingcolor/default.md): The system default color.
 - [CPTimeRemainingColorGreen](cptimeremainingcolor/green.md): A shade of green.
@@ -85,7 +85,7 @@ The system determines the shade of each color based on the [tripEstimateStyle](c
 
 ## See Also
 
-### Providing Trip Estimates
+### Providing trip estimates
 
 - [updateTravelEstimates:forTrip:](cpmaptemplate/updateestimates%28__for_%29.md): Updates travel estimates, such as arrival time and the remaining time and distance for a trip.
 - [updateTravelEstimates:forTrip:withTimeRemainingColor:](cpmaptemplate/update%28__for_with_%29.md): Updates travel estimates, such as arrival time and the remaining time and distance for a trip, with the specified time-remaining color.

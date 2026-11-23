@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplisttemplate/indexpath(for:)
 
 # indexPath(for:) (Swift)
@@ -17,21 +17,19 @@ func indexPath(for item: any CPListTemplateItem) -> IndexPath?
 
 ## Parameters
 
-- `item`: The item to find in the list.
+- `item`: A row in the list.
 
 <a id="return-value"></a>
 
 ## Return Value
 
-The item’s index path in the list, or [nil](https://developer.apple.com/documentation/objectivec/nil-227m0) if the list doesn’t contain the item.
+The index path to the item, or `nil` if `item` doesn’t appear in the list. This method configures the [section](https://developer.apple.com/documentation/foundation/nsindexpath/section) and [row](https://developer.apple.com/documentation/foundation/nsindexpath/row) properties of the returned type with the index and row information.
 
 ## See Also
 
-### Getting Supplementary Information
+### Getting item details
 
-- [maximumItemCount](maximumitemcount.md): The maximum number of items, across all sections, that the template can display.
 - [itemCount](itemcount.md): The total number of items, across all sections, in the list.
-- [title](title.md): The title that the navigation bar displays when the template is visible.
 
 # indexPathForItem: (Objective-C)
 
@@ -49,18 +47,16 @@ Returns the index path for the specified item.
 
 ## Parameters
 
-- `item`: The item to find in the list.
+- `item`: A row in the list.
 
 <a id="return-value"></a>
 
 ## Return Value
 
-The item’s index path in the list, or [nil](https://developer.apple.com/documentation/objectivec/nil-227m0) if the list doesn’t contain the item.
+The index path to the item, or `nil` if `item` doesn’t appear in the list. This method configures the [section](https://developer.apple.com/documentation/foundation/nsindexpath/section) and [row](https://developer.apple.com/documentation/foundation/nsindexpath/row) properties of the returned type with the index and row information.
 
 ## See Also
 
-### Getting Supplementary Information
+### Getting item details
 
-- [maximumItemCount](maximumitemcount.md): The maximum number of items, across all sections, that the template can display.
 - [itemCount](itemcount.md): The total number of items, across all sections, in the list.
-- [title](title.md): The title that the navigation bar displays when the template is visible.

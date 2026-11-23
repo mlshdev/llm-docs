@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplanestatus/preferred
 
 # CPLaneStatus.preferred (Swift)
@@ -17,7 +17,7 @@ case preferred
 
 ## See Also
 
-### Lane statuses
+### Getting the lane status
 
 - [CPLaneStatus.notGood](notgood.md): The lane status is not good.
 - [CPLaneStatus.good](good.md): The lane status is good.
@@ -38,7 +38,7 @@ CPLaneStatusPreferred
 
 ## See Also
 
-### Lane statuses
+### Getting the lane status
 
 - [CPLaneStatusNotGood](notgood.md): The lane status is not good.
 - [CPLaneStatusGood](good.md): The lane status is good.

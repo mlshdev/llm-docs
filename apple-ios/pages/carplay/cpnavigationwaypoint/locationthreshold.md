@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationwaypoint/locationthreshold
 
 # locationThreshold (Swift)
@@ -15,6 +15,14 @@ locationThreshold is the maximum distance in meters from the centerPoint used to
 var locationThreshold: Measurement<UnitLength>? { get }
 ```
 
+## See Also
+
+### Getting the waypoint location
+
+- [centerPoint](centerpoint.md): centerPoint is a CPLocationCoordinate3D representing the primary coordinate location of the waypoint.
+- [entryPoints](entrypoints-obhb.md)
+- [timeZone](timezone.md): The timezone for the waypoint.
+
 # locationThreshold (Objective-C)
 
 **Framework:** CarPlay  
@@ -28,3 +36,10 @@ locationThreshold is the maximum distance in meters from the centerPoint used to
 ```objectivec
 @property (nonatomic, readonly, nullable) NSMeasurement<NSUnitLength *> * locationThreshold;
 ```
+
+## See Also
+
+### Getting the waypoint location
+
+- [centerPoint](centerpoint.md): centerPoint is a CPLocationCoordinate3D representing the primary coordinate location of the waypoint.
+- [timeZone](timezone.md): The timezone for the waypoint.

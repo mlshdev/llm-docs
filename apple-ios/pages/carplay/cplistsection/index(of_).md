@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistsection/index(of:)
 
 # index(of:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-Returns the index of the specified item.
+Returns the zero-based index of an item in the section.
 
 ## Declaration
 
@@ -23,14 +23,20 @@ func index(of item: any CPListTemplateItem) -> Int
 
 ## Return Value
 
-The item’s index in the section, or [NSNotFound](https://developer.apple.com/documentation/foundation/nsnotfound-4qp9h) if the section doesn’t contain the item.
+The zero-based index of the item, or [NSNotFound](https://developer.apple.com/documentation/foundation/nsnotfound-4qp9h) if the item isn’t in the section.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Call this method to retrieve the index of an item in the [items](items.md) array.
 
 ## See Also
 
-### Getting Items
+### Locating items in the section
 
-- [items](items.md): The list of items for the section.
-- [item(at:)](item%28at_%29.md): Returns the item at the specified index.
+- [items](items.md): The items in the section.
+- [item(at:)](item%28at_%29.md): Returns the item at the specified index in the section.
 
 # indexOfItem: (Objective-C)
 
@@ -38,7 +44,7 @@ The item’s index in the section, or [NSNotFound](https://developer.apple.com/d
 **Kind:** Instance Method  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-Returns the index of the specified item.
+Returns the zero-based index of an item in the section.
 
 ## Declaration
 
@@ -54,11 +60,17 @@ Returns the index of the specified item.
 
 ## Return Value
 
-The item’s index in the section, or [NSNotFound](https://developer.apple.com/documentation/foundation/nsnotfound-4qp9h) if the section doesn’t contain the item.
+The zero-based index of the item, or [NSNotFound](https://developer.apple.com/documentation/foundation/nsnotfound-4qp9h) if the item isn’t in the section.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Call this method to retrieve the index of an item in the [items](items.md) array.
 
 ## See Also
 
-### Getting Items
+### Locating items in the section
 
-- [items](items.md): The list of items for the section.
-- [itemAtIndex:](item%28at_%29.md): Returns the item at the specified index.
+- [items](items.md): The items in the section.
+- [itemAtIndex:](item%28at_%29.md): Returns the item at the specified index in the section.

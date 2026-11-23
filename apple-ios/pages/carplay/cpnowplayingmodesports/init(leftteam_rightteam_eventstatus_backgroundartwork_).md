@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnowplayingmodesports/init(leftteam:rightteam:eventstatus:backgroundartwork:)
 
 # init(leftTeam:rightTeam:eventStatus:backgroundArtwork:) (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Initializer  
 **Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+
 
-Initialize a sports mode for display on the CarPlay now playing screen.
+Creates an object with information about a sporting event and the teams playing.
 
 ## Declaration
 
@@ -17,10 +17,22 @@ init(leftTeam: CPNowPlayingSportsTeam, rightTeam: CPNowPlayingSportsTeam, eventS
 
 ## Parameters
 
-- `leftTeam`: The sports team that should appear on the left side of the now playing screen. This is commonly (but not always) the AWAY or VISITING team. This team will be on the left in all layouts; it does not flip to the right side when in a right-to-left language or a right-hand-drive vehicle.
-- `rightTeam`: The sports team that should appear on the right side of the now playing screen. This is commonly (but not always) the HOME team. This team will be on the right in all layouts; it does not flip to the left side when in a right-to-left language or a right-hand-drive vehicle.
-- `eventStatus`: A representation of the current event status. See
-- `backgroundArtwork`: A large colorful image for the background of the now playing screen. A gradient or crossfade image works best, especially when it includes the primary colors of each team. Provide an image no larger than 500x500.
+- `leftTeam`: The visiting team information to display on the left side of the display.
+- `rightTeam`: The home team information to display on the right side of the display.
+- `eventStatus`: The current state of the match. Specify the match clock information and match-specific details. For example, a baseball game might display the inning number, the current runner positions, the number of outs, and the number of balls and strikes for the current batter.
+- `backgroundArtwork`: An image to display behind the match information. Specify an image that is 500 by 500 points in size. CarPlay scales images to the expected size.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized sports mode object.
+
+<a id="discussion"></a>
+
+## Discussion
+
+After creating this object, assign it to the [nowPlayingMode](../cpnowplayingtemplate/nowplayingmode.md) property of your app’s [CPNowPlayingTemplate](../cpnowplayingtemplate.md) object to display the information.
 
 # initWithLeftTeam:rightTeam:eventStatus:backgroundArtwork: (Objective-C)
 
@@ -28,7 +40,7 @@ init(leftTeam: CPNowPlayingSportsTeam, rightTeam: CPNowPlayingSportsTeam, eventS
 **Kind:** Instance Method  
 **Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+
 
-Initialize a sports mode for display on the CarPlay now playing screen.
+Creates an object with information about a sporting event and the teams playing.
 
 ## Declaration
 
@@ -38,7 +50,19 @@ Initialize a sports mode for display on the CarPlay now playing screen.
 
 ## Parameters
 
-- `leftTeam`: The sports team that should appear on the left side of the now playing screen. This is commonly (but not always) the AWAY or VISITING team. This team will be on the left in all layouts; it does not flip to the right side when in a right-to-left language or a right-hand-drive vehicle.
-- `rightTeam`: The sports team that should appear on the right side of the now playing screen. This is commonly (but not always) the HOME team. This team will be on the right in all layouts; it does not flip to the left side when in a right-to-left language or a right-hand-drive vehicle.
-- `eventStatus`: A representation of the current event status. See
-- `backgroundArtwork`: A large colorful image for the background of the now playing screen. A gradient or crossfade image works best, especially when it includes the primary colors of each team. Provide an image no larger than 500x500.
+- `leftTeam`: The visiting team information to display on the left side of the display.
+- `rightTeam`: The home team information to display on the right side of the display.
+- `eventStatus`: The current state of the match. Specify the match clock information and match-specific details. For example, a baseball game might display the inning number, the current runner positions, the number of outs, and the number of balls and strikes for the current batter.
+- `backgroundArtwork`: An image to display behind the match information. Specify an image that is 500 by 500 points in size. CarPlay scales images to the expected size.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized sports mode object.
+
+<a id="discussion"></a>
+
+## Discussion
+
+After creating this object, assign it to the [nowPlayingMode](../cpnowplayingtemplate/nowplayingmode.md) property of your app’s [CPNowPlayingTemplate](../cpnowplayingtemplate.md) object to display the information.

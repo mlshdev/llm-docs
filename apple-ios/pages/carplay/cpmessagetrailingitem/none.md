@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessagetrailingitem/none
 
 # CPMessageTrailingItem.none (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Case  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-Don’t show a trailing item.
+An option to display no symbol.
 
 ## Declaration
 
@@ -19,7 +19,7 @@ case none
 
 ### Trailing Items
 
-- [CPMessageTrailingItem.mute](mute.md): Show a muted speaker icon.
+- [CPMessageTrailingItem.mute](mute.md): An option to display a mute symbol.
 
 # CPMessageTrailingItemNone (Objective-C)
 
@@ -27,7 +27,7 @@ case none
 **Kind:** Enumeration Case  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-Don’t show a trailing item.
+An option to display no symbol.
 
 ## Declaration
 
@@ -39,4 +39,4 @@ CPMessageTrailingItemNone
 
 ### Trailing Items
 
-- [CPMessageTrailingItemMute](mute.md): Show a muted speaker icon.
+- [CPMessageTrailingItemMute](mute.md): An option to display a mute symbol.

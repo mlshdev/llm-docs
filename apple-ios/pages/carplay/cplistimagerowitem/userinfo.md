@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistimagerowitem/userinfo
 
 # userInfo (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-An opaque value for the list item.
+App-specific data you associate with the item.
 
 ## Declaration
 
@@ -15,11 +15,20 @@ An opaque value for the list item.
 var userInfo: Any? { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Use this property to attach a value that provides additional context to the list item. For example, you can attach a model object and reference it in the list item’s [handler](handler.md) or [listImageRowHandler](listimagerowhandler.md) when processing either selection.
+Use this property to attach app-specific data to the row. For example, you might attach the model object from your app that corresponds to the data for the row and its elements. This information is strictly for your app’s usage, and CarPlay doesn’t use it. The default value of this property is `nil`.
+
+## See Also
+
+### Managing the row’s content
+
+- [text](text.md): The row’s primary text.
+- [elements](elements.md): The elements to display in the row.
+- [allowsMultipleLines](allowsmultiplelines.md): A Boolean value that indicates whether the row displays elements on more than one line.
+- [CPMaximumNumberOfGridImages](../cpmaximumnumberofgridimages.md): The maximum number of images that an image row can contain.
 
 # userInfo (Objective-C)
 
@@ -27,7 +36,7 @@ Use this property to attach a value that provides additional context to the list
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-An opaque value for the list item.
+App-specific data you associate with the item.
 
 ## Declaration
 
@@ -35,8 +44,17 @@ An opaque value for the list item.
 @property (nonatomic, strong, nullable) id userInfo;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Use this property to attach a value that provides additional context to the list item. For example, you can attach a model object and reference it in the list item’s [handler](handler.md) or [listImageRowHandler](listimagerowhandler.md) when processing either selection.
+Use this property to attach app-specific data to the row. For example, you might attach the model object from your app that corresponds to the data for the row and its elements. This information is strictly for your app’s usage, and CarPlay doesn’t use it. The default value of this property is `nil`.
+
+## See Also
+
+### Managing the row’s content
+
+- [text](text.md): The row’s primary text.
+- [elements](elements.md): The elements to display in the row.
+- [allowsMultipleLines](allowsmultiplelines.md): A Boolean value that indicates whether the row displays elements on more than one line.
+- [CPMaximumNumberOfGridImages](../cpmaximumnumberofgridimages.md): The maximum number of images that an image row can contain.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmappanelbuttonconfiguration/secondarybutton
 
 # secondaryButton (Swift)
@@ -21,6 +21,12 @@ The optional button you use to perform a secondary action.
 
 Specify this button at initialization time and access it using this property. The value of this property can be `nil`.
 
+## See Also
+
+### Accessing the configuration details
+
+- [travelEstimates](travelestimates.md): The travel estimates to display alongside the action buttons.
+
 # secondaryButton (Objective-C)
 
 **Framework:** CarPlay  
@@ -40,3 +46,9 @@ The optional button you use to perform a secondary action.
 ## Discussion
 
 Specify this button at initialization time and access it using this property. The value of this property can be `nil`.
+
+## See Also
+
+### Accessing the configuration details
+
+- [travelEstimates](travelestimates.md): The travel estimates to display alongside the action buttons.

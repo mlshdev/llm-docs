@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes/tn3178-checking-for-and-resolving-build-uuid-problems
 
 # TN3178: Checking for and resolving build UUID problems
@@ -52,7 +52,7 @@ Load command 8
 
 > **Note**
 
-> To learn more about these tools, see the UNIX online manual, known as *man pages*.  For information on how to access that documentation, see doc://com.apple.documentation/documentation/os/reading-unix-manual-pages.
+> To learn more about these tools, see the UNIX online manual, known as *man pages*.  For information on how to access that documentation, see [TN3215: Reading man pages](tn3215-reading-man-pages.md).
 
 By default the Apple linker sets the build UUID based on a hash of the built code.  This promotes reproducible builds.
 

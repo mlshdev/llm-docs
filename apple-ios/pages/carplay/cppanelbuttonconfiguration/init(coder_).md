@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppanelbuttonconfiguration/init(coder:)
 
 # init(coder:)
@@ -12,3 +12,9 @@
 ```swift
 init?(coder: NSCoder)
 ```
+
+## See Also
+
+### Initializing the panel
+
+- [init(primaryAction:secondaryAction:)](init%28primaryaction_secondaryaction_%29.md): Initializes the button configuration object with the specified buttons.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistsection/headerimage
 
 # headerImage (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+
 
-An image that the section header displays.
+The image to display in the header area of the section.
 
 ## Declaration
 
@@ -15,22 +15,21 @@ An image that the section header displays.
 @NSCopying var headerImage: UIImage? { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The maximum size of the section header image is [CPMaximumListSectionImageSize](../cpmaximumlistsectionimagesize.md).
+This property contains the image you specified at initialization time. If you assign a new image to this property, create your [UIImage](https://developer.apple.com/documentation/uikit/uiimage) type with an asset catalog resource whenever possible. From the asset catalog resources, CarPlay chooses the appropriate image resource automatically. For example, CarPlay chooses the light and dark variant of your image to match the vehicle settings.
 
-Provide a [UIImage](https://developer.apple.com/documentation/uikit/uiimage) that is display-ready. To provide an image that includes light and dark styles, use an asset from your asset catalog that includes both styles, or use a [UIImageAsset](https://developer.apple.com/documentation/uikit/uiimageasset) to combine two [UIImage](https://developer.apple.com/documentation/uikit/uiimage) instances into a single image with both styles.
-
-To size your header image properly, consider the display scale of the car screen. Use [UIImageAsset](https://developer.apple.com/documentation/uikit/uiimageasset) to combine multiple images with different trait collections into a single image. For more information about trait collections for CarPlay, see [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md).
+The [CPMaximumListSectionImageSize](../cpmaximumlistsectionimagesize.md) constant contains the maximum supported size for images. To get the maximum image dimensions in pixels, multiple the maximum size values by the scale factor in the [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md) property of your interface controller.
 
 ## See Also
 
-### Configuring Section Headers
+### Getting the section’s header content
 
-- [headerButton](headerbutton.md): A button that the section header displays.
-- [headerSubtitle](headersubtitle.md): A string that the header displays as a subtitle.
+- [header](header.md): The main text to display in the header area of the section.
+- [headerSubtitle](headersubtitle.md): The secondary text to display in the header area of the section.
+- [headerButton](headerbutton.md): The button to display in the header area of the section.
 
 # headerImage (Objective-C)
 
@@ -38,7 +37,7 @@ To size your header image properly, consider the display scale of the car screen
 **Kind:** Instance Property  
 **Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+
 
-An image that the section header displays.
+The image to display in the header area of the section.
 
 ## Declaration
 
@@ -46,19 +45,18 @@ An image that the section header displays.
 @property (nonatomic, copy, nullable) UIImage * headerImage;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-The maximum size of the section header image is [CPMaximumListSectionImageSize](../cpmaximumlistsectionimagesize.md).
+This property contains the image you specified at initialization time. If you assign a new image to this property, create your [UIImage](https://developer.apple.com/documentation/uikit/uiimage) type with an asset catalog resource whenever possible. From the asset catalog resources, CarPlay chooses the appropriate image resource automatically. For example, CarPlay chooses the light and dark variant of your image to match the vehicle settings.
 
-Provide a [UIImage](https://developer.apple.com/documentation/uikit/uiimage) that is display-ready. To provide an image that includes light and dark styles, use an asset from your asset catalog that includes both styles, or use a [UIImageAsset](https://developer.apple.com/documentation/uikit/uiimageasset) to combine two [UIImage](https://developer.apple.com/documentation/uikit/uiimage) instances into a single image with both styles.
-
-To size your header image properly, consider the display scale of the car screen. Use [UIImageAsset](https://developer.apple.com/documentation/uikit/uiimageasset) to combine multiple images with different trait collections into a single image. For more information about trait collections for CarPlay, see [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md).
+The [CPMaximumListSectionImageSize](../cpmaximumlistsectionimagesize.md) constant contains the maximum supported size for images. To get the maximum image dimensions in pixels, multiple the maximum size values by the scale factor in the [carTraitCollection](../cpinterfacecontroller/cartraitcollection.md) property of your interface controller.
 
 ## See Also
 
-### Configuring Section Headers
+### Getting the section’s header content
 
-- [headerButton](headerbutton.md): A button that the section header displays.
-- [headerSubtitle](headersubtitle.md): A string that the header displays as a subtitle.
+- [header](header.md): The main text to display in the header area of the section.
+- [headerSubtitle](headersubtitle.md): The secondary text to display in the header area of the section.
+- [headerButton](headerbutton.md): The button to display in the header area of the section.

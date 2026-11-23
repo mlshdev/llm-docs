@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/xcode/adding-images-to-your-xcode-project
 
 # Adding images to your Xcode project
@@ -75,4 +75,4 @@ let image = NSImage(named: "ImageName")
 
 ### Images
 
-- [Creating custom symbols](https://developer.apple.com/documentation/technologyoverviews/custom-sf-symbols): Design a symbol image with the same behavior as system-provided symbols.
+- [Creating custom SF Symbols](https://developer.apple.com/documentation/technologyoverviews/creating-custom-sf-symbols): Design a symbol image with the same behavior as system-provided symbols.

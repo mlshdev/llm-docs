@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessagecomposebarbutton
 
 # CPMessageComposeBarButton (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Class  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A button that activates Siri and initiates the compose message flow.
+A button that activates Siri and initiates the process for composing a message.
 
 ## Declaration
 
@@ -19,16 +19,18 @@ class CPMessageComposeBarButton
 
 ## Overview
 
+Include a `CPMessageComposeBarButton` in your template’s navigation bar to support the creation of new messages in your communication app. When someone taps the button, CarPlay launches Siri to compose the message. The message composition workflow relies on your app’s SiriKit support for messages to build and send the message.
+
 > **Note**
 
->  This button type does not use a handler. Instead, tapping this button activates Siri and initiates the compose message flow.
+> This button works only in communication apps.
 
 ## Topics
 
-### Creating a Message Compose Bar Button
+### Creating a message compose bar button
 
-- [init()](cpmessagecomposebarbutton/init%28%29.md): Creates a message compose button with a system-provided image.
-- [init(image:)](cpmessagecomposebarbutton/init%28image_%29.md): Creates a message compose button that displays a custom image.
+- [init()](cpmessagecomposebarbutton/init%28%29.md): Creates a button for composing messages that uses the system-provided image.
+- [init(image:)](cpmessagecomposebarbutton/init%28image_%29.md): Creates a button for composing messages that uses a custom image you provide.
 
 ## Relationships
 
@@ -49,12 +51,10 @@ class CPMessageComposeBarButton
 
 ## See Also
 
-### Providing Navigation Bar Buttons
+### Navigation bar
 
-- [backButton](cpbarbuttonproviding/backbutton.md): A button to display as the Back button on the navigation bar.
-- [leadingNavigationBarButtons](cpbarbuttonproviding/leadingnavigationbarbuttons.md): An array of bar buttons to display on the leading side of the navigation bar.
-- [trailingNavigationBarButtons](cpbarbuttonproviding/trailingnavigationbarbuttons.md): An array of bar buttons to display on the trailing side of the navigation bar.
-- [CPBarButton](cpbarbutton.md): A button for placement in a navigation bar.
+- [CPBarButtonProviding](cpbarbuttonproviding.md): The interface templates you use to manage buttons in the navigation bar.
+- [CPBarButton](cpbarbutton.md): A button that appears in a navigation bar.
 
 # CPMessageComposeBarButton (Objective-C)
 
@@ -62,7 +62,7 @@ class CPMessageComposeBarButton
 **Kind:** Class  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-A button that activates Siri and initiates the compose message flow.
+A button that activates Siri and initiates the process for composing a message.
 
 ## Declaration
 
@@ -74,17 +74,19 @@ A button that activates Siri and initiates the compose message flow.
 
 ## Overview
 
+Include a `CPMessageComposeBarButton` in your template’s navigation bar to support the creation of new messages in your communication app. When someone taps the button, CarPlay launches Siri to compose the message. The message composition workflow relies on your app’s SiriKit support for messages to build and send the message.
+
 > **Note**
 
->  This button type does not use a handler. Instead, tapping this button activates Siri and initiates the compose message flow.
+> This button works only in communication apps.
 
 ## Topics
 
-### Creating a Message Compose Bar Button
+### Creating a message compose bar button
 
-- [init](cpmessagecomposebarbutton/init%28%29.md): Creates a message compose button with a system-provided image.
-- [initWithImage:](cpmessagecomposebarbutton/init%28image_%29.md): Creates a message compose button that displays a custom image.
-- [new](cpmessagecomposebarbutton/new.md): Creates a message compose button with a system-provided image.
+- [init](cpmessagecomposebarbutton/init%28%29.md): Creates a button for composing messages that uses the system-provided image.
+- [initWithImage:](cpmessagecomposebarbutton/init%28image_%29.md): Creates a button for composing messages that uses a custom image you provide.
+- [new](cpmessagecomposebarbutton/new.md)
 
 ## Relationships
 
@@ -94,9 +96,7 @@ A button that activates Siri and initiates the compose message flow.
 
 ## See Also
 
-### Providing Navigation Bar Buttons
+### Navigation bar
 
-- [backButton](cpbarbuttonproviding/backbutton.md): A button to display as the Back button on the navigation bar.
-- [leadingNavigationBarButtons](cpbarbuttonproviding/leadingnavigationbarbuttons.md): An array of bar buttons to display on the leading side of the navigation bar.
-- [trailingNavigationBarButtons](cpbarbuttonproviding/trailingnavigationbarbuttons.md): An array of bar buttons to display on the trailing side of the navigation bar.
-- [CPBarButton](cpbarbutton.md): A button for placement in a navigation bar.
+- [CPBarButtonProviding](cpbarbuttonproviding.md): The interface templates you use to manage buttons in the navigation bar.
+- [CPBarButton](cpbarbutton.md): A button that appears in a navigation bar.

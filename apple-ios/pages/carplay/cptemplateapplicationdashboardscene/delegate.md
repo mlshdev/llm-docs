@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cptemplateapplicationdashboardscene/delegate
 
 # delegate (Swift)
@@ -23,7 +23,7 @@ Use this property to access the delegate object CarPlay creates from the class n
 
 ## See Also
 
-### Responding to the Dashboard Scene Life Cycle
+### Responding to the dashboard scene life cycle
 
 - [CPTemplateApplicationDashboardSceneDelegate](../cptemplateapplicationdashboardscenedelegate.md): The methods for responding to the life-cycle events of your navigation app’s dashboard scene.
 
@@ -49,6 +49,6 @@ Use this property to access the delegate object CarPlay creates from the class n
 
 ## See Also
 
-### Responding to the Dashboard Scene Life Cycle
+### Responding to the dashboard scene life cycle
 
 - [CPTemplateApplicationDashboardSceneDelegate](../cptemplateapplicationdashboardscenedelegate.md): The methods for responding to the life-cycle events of your navigation app’s dashboard scene.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaptemplate/showtrippreviews(_:textconfiguration:)
 
 # showTripPreviews(\_:textConfiguration:) (Swift)
@@ -28,7 +28,7 @@ Use this method to display upcoming trips or multiple trip options, such as for 
 
 ## See Also
 
-### Displaying Trip Previews
+### Displaying trip previews
 
 - [showTripPreviews(\_:selectedTrip:textConfiguration:)](showtrippreviews%28__selectedtrip_textconfiguration_%29.md): Displays the previews for a collection of trips, with a single selected trip.
 - [hideTripPreviews()](hidetrippreviews%28%29.md): Hides the display of trip previews.
@@ -62,7 +62,7 @@ Use this method to display upcoming trips or multiple trip options, such as for 
 
 ## See Also
 
-### Displaying Trip Previews
+### Displaying trip previews
 
 - [showTripPreviews:selectedTrip:textConfiguration:](showtrippreviews%28__selectedtrip_textconfiguration_%29.md): Displays the previews for a collection of trips, with a single selected trip.
 - [hideTripPreviews](hidetrippreviews%28%29.md): Hides the display of trip previews.

@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpdashboardbutton/image
 
 # image (Swift)
@@ -23,7 +23,7 @@ CarPlays doesn’t support animated images. If you provide an animated image, th
 
 ## See Also
 
-### Accessing the Button Configuration
+### Accessing the button configuration
 
 - [titleVariants](titlevariants.md): The array of title variants for the button.
 - [subtitleVariants](subtitlevariants.md): The array of subtitle variants for the button.
@@ -50,7 +50,7 @@ CarPlays doesn’t support animated images. If you provide an animated image, th
 
 ## See Also
 
-### Accessing the Button Configuration
+### Accessing the button configuration
 
 - [titleVariants](titlevariants.md): The array of title variants for the button.
 - [subtitleVariants](subtitlevariants.md): The array of subtitle variants for the button.

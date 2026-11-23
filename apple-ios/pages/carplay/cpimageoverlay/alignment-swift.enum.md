@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpimageoverlay/alignment-swift.enum
 
 # CPImageOverlay.Alignment (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Enumeration  
 **Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.4+
 
-Alignment options for positioning.
+Constants that specify the placement of overlay images in a thumbnail.
 
 ## Declaration
 
@@ -15,13 +15,19 @@ Alignment options for positioning.
 enum Alignment
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+CarPlay displays overlays inside the bounds of the thumbnail image and along the top edge. The constants in this type specify whether the overlay aligns to the leading or trailing edges of the thumbnail or to the center.
+
 ## Topics
 
 ### Enumeration Cases
 
-- [CPImageOverlay.Alignment.center](alignment-swift.enum/center.md)
-- [CPImageOverlay.Alignment.leading](alignment-swift.enum/leading.md)
-- [CPImageOverlay.Alignment.trailing](alignment-swift.enum/trailing.md)
+- [CPImageOverlay.Alignment.center](alignment-swift.enum/center.md): An option to align the overlay to the top center of the thumbnail.
+- [CPImageOverlay.Alignment.leading](alignment-swift.enum/leading.md): An option to align the overlay to the top leading edge of the thumbnail.
+- [CPImageOverlay.Alignment.trailing](alignment-swift.enum/trailing.md): An option to align the overlay to the top trailing edge of the thumbnail.
 
 ### Initializers
 
@@ -38,13 +44,19 @@ enum Alignment
 - [Sendable](https://developer.apple.com/documentation/swift/sendable)
 - [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
 
+## See Also
+
+### Getting the overlay position
+
+- [alignment](alignment-swift.property.md): The alignment of the overlay inside the top edge of the thumbnail.
+
 # CPImageOverlayAlignment (Objective-C)
 
 **Framework:** CarPlay  
 **Kind:** Enumeration  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-Alignment options for positioning.
+Constants that specify the placement of overlay images in a thumbnail.
 
 ## Declaration
 
@@ -52,10 +64,22 @@ Alignment options for positioning.
 enum CPImageOverlayAlignment : NSInteger;
 ```
 
+<a id="overview"></a>
+
+## Overview
+
+CarPlay displays overlays inside the bounds of the thumbnail image and along the top edge. The constants in this type specify whether the overlay aligns to the leading or trailing edges of the thumbnail or to the center.
+
 ## Topics
 
 ### Enumeration Cases
 
-- [CPImageOverlayAlignmentCenter](alignment-swift.enum/center.md)
-- [CPImageOverlayAlignmentLeading](alignment-swift.enum/leading.md)
-- [CPImageOverlayAlignmentTrailing](alignment-swift.enum/trailing.md)
+- [CPImageOverlayAlignmentCenter](alignment-swift.enum/center.md): An option to align the overlay to the top center of the thumbnail.
+- [CPImageOverlayAlignmentLeading](alignment-swift.enum/leading.md): An option to align the overlay to the top leading edge of the thumbnail.
+- [CPImageOverlayAlignmentTrailing](alignment-swift.enum/trailing.md): An option to align the overlay to the top trailing edge of the thumbnail.
+
+## See Also
+
+### Getting the overlay position
+
+- [alignment](alignment-swift.property.md): The alignment of the overlay inside the top edge of the thumbnail.

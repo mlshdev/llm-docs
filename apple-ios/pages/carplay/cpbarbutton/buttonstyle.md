@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpbarbutton/buttonstyle
 
 # buttonStyle (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The style to use when displaying the button.
+The style to apply to the button.
 
 ## Declaration
 
@@ -15,11 +15,16 @@ The style to use when displaying the button.
 var buttonStyle: CPBarButtonStyle { get set }
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+The default value of this property is [CPBarButtonStyle.none](../cpbarbuttonstyle/none.md).
+
 ## See Also
 
-### Getting the Button Style
+### Getting the display style
 
-- [buttonType](buttontype.md): Deprecated. The display type for the bar button.
 - [CPBarButtonStyle](../cpbarbuttonstyle.md): The display style of a bar button.
 
 # buttonStyle (Objective-C)
@@ -28,7 +33,7 @@ var buttonStyle: CPBarButtonStyle { get set }
 **Kind:** Instance Property  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-The style to use when displaying the button.
+The style to apply to the button.
 
 ## Declaration
 
@@ -36,9 +41,14 @@ The style to use when displaying the button.
 @property (nonatomic, assign) CPBarButtonStyle buttonStyle;
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+The default value of this property is [CPBarButtonStyleNone](../cpbarbuttonstyle/none.md).
+
 ## See Also
 
-### Getting the Button Style
+### Getting the display style
 
-- [buttonType](buttontype.md): Deprecated. The display type for the bar button.
 - [CPBarButtonStyle](../cpbarbuttonstyle.md): The display style of a bar button.

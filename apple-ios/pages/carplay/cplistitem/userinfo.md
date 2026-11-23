@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitem/userinfo
 
 # userInfo (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-An opaque value for the list item.
+App-specific data you associate with the item.
 
 ## Declaration
 
@@ -15,18 +15,23 @@ An opaque value for the list item.
 var userInfo: Any? { get set }
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Use this property to attach a value that provides additional context to the list item. For example, you can attach a model object and reference it in the list item’s [handler](handler.md) when processing the selection.
+Use this property to attach app-specific data to the list item. For example, you might attach the model object from your app that corresponds to the list item’s content. This information is just for your app, and CarPlay doesn’t use it. The default value of this property is `nil`.
 
 ## See Also
 
-### Managing Configuration
+### Managing the row’s content
 
-- [isEnabled](isenabled.md): A Boolean value that indicates if the item is enabled.
-- [handler](handler.md): An optional closure that CarPlay invokes when the user selects the list item.
+- [text](text.md): The primary text for the list item.
+- [detailText](detailtext.md): The secondary text for the list item.
+- [image](image.md): The image to display on the leading edge of the cell.
+- [setText(\_:)](settext%28__%29.md): Updates the primary text of the list item.
+- [setDetailText(\_:)](setdetailtext%28__%29.md): Updates the secondary text of the list item.
+- [setImage(\_:)](setimage%28__%29.md): Updates the leading image of the list item.
+- [maximumImageSize](maximumimagesize.md): The maximum dimensions for the list item images.
 
 # userInfo (Objective-C)
 
@@ -34,7 +39,7 @@ Use this property to attach a value that provides additional context to the list
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-An opaque value for the list item.
+App-specific data you associate with the item.
 
 ## Declaration
 
@@ -42,15 +47,20 @@ An opaque value for the list item.
 @property (nonatomic, strong, nullable) id userInfo;
 ```
 
-<a id="Discussion"></a>
+<a id="discussion"></a>
 
 ## Discussion
 
-Use this property to attach a value that provides additional context to the list item. For example, you can attach a model object and reference it in the list item’s [handler](handler.md) when processing the selection.
+Use this property to attach app-specific data to the list item. For example, you might attach the model object from your app that corresponds to the list item’s content. This information is just for your app, and CarPlay doesn’t use it. The default value of this property is `nil`.
 
 ## See Also
 
-### Managing Configuration
+### Managing the row’s content
 
-- [enabled](isenabled.md): A Boolean value that indicates if the item is enabled.
-- [handler](handler.md): An optional closure that CarPlay invokes when the user selects the list item.
+- [text](text.md): The primary text for the list item.
+- [detailText](detailtext.md): The secondary text for the list item.
+- [image](image.md): The image to display on the leading edge of the cell.
+- [setText:](settext%28__%29.md): Updates the primary text of the list item.
+- [setDetailText:](setdetailtext%28__%29.md): Updates the secondary text of the list item.
+- [setImage:](setimage%28__%29.md): Updates the leading image of the list item.
+- [maximumImageSize](maximumimagesize.md): The maximum dimensions for the list item images.

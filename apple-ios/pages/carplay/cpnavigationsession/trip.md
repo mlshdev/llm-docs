@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpnavigationsession/trip
 
 # trip (Swift)
@@ -15,12 +15,6 @@ The trip associated with the navigation session.
 var trip: CPTrip { get }
 ```
 
-## See Also
-
-### Getting the Trip
-
-- [CPTrip](../cptrip.md): An object that represents a journey between an origin and a destination.
-
 # trip (Objective-C)
 
 **Framework:** CarPlay  
@@ -34,9 +28,3 @@ The trip associated with the navigation session.
 ```objectivec
 @property (nonatomic, strong, readonly) CPTrip * trip;
 ```
-
-## See Also
-
-### Getting the Trip
-
-- [CPTrip](../cptrip.md): An object that represents a journey between an origin and a destination.

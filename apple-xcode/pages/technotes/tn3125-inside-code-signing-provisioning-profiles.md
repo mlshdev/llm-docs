@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-ee1c8cbf0f44; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple Xcode and developer tools snapshot-6bb1532b03d3; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/technotes/tn3125-inside-code-signing-provisioning-profiles
 
 # TN3125: Inside Code Signing: Provisioning Profiles
@@ -75,7 +75,7 @@ To illustrate this point, the traditional property list view of a profile is no 
 
 Still, the property list is easier to read and so the bulk of this technote focuses on that.
 
-For more information about the tools used in these examples, read their man pages.  If you’re unfamiliar with that process, see .
+For more information about the tools used in these examples, read their man pages.  If you’re unfamiliar with that process, see [TN3215: Reading man pages](tn3215-reading-man-pages.md).
 
 <a id="The-who"></a>
 

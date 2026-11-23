@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitem/init(text:detailtext:)
 
 # init(text:detailText:) (Swift)
@@ -17,8 +17,8 @@ init(text: String?, detailText: String?)
 
 ## Parameters
 
-- `text`: The primary text to show in the list item cell.
-- `detailText`: Additional text to display below the primary text in the list item cell.
+- `text`: The primary text to show in the list item’s row.
+- `detailText`: Secondary text to display below the primary text.
 
 <a id="return-value"></a>
 
@@ -28,7 +28,7 @@ A newly initialized list item.
 
 ## See Also
 
-### Creating a List Item
+### Creating a list item
 
 - [init(text:detailText:image:)](init%28text_detailtext_image_%29.md): Creates a list item with primary text, secondary text, and an image.
 - [init(text:detailText:image:accessoryImage:accessoryType:)](init%28text_detailtext_image_accessoryimage_accessorytype_%29.md): Creates a list item that displays an accessory beside its content.
@@ -49,8 +49,8 @@ Creates a list item with primary and secondary text.
 
 ## Parameters
 
-- `text`: The primary text to show in the list item cell.
-- `detailText`: Additional text to display below the primary text in the list item cell.
+- `text`: The primary text to show in the list item’s row.
+- `detailText`: Secondary text to display below the primary text.
 
 <a id="return-value"></a>
 
@@ -60,7 +60,7 @@ A newly initialized list item.
 
 ## See Also
 
-### Creating a List Item
+### Creating a list item
 
 - [initWithText:detailText:image:](init%28text_detailtext_image_%29.md): Creates a list item with primary text, secondary text, and an image.
 - [initWithText:detailText:image:accessoryImage:accessoryType:](init%28text_detailtext_image_accessoryimage_accessorytype_%29.md): Creates a list item that displays an accessory beside its content.

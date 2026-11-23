@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmessageleadingitem
 
 # CPMessageLeadingItem (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Enumeration  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-The accessories that a message list item can display in its leading region.
+Constants that indicate the type of symbol to display at the leading edge of a message list row.
 
 ## Declaration
 
@@ -19,15 +19,15 @@ enum CPMessageLeadingItem
 
 ## Overview
 
-Use these constants when creating instances of [CPMessageListItemLeadingConfiguration](cpmessagelistitemleadingconfiguration.md). A leading item can provide additional context for a list item’s contents, or help communicate its behavior.
+Use these constants to specify symbols that are common to conversations and contacts.
 
 ## Topics
 
 ### Leading Items
 
-- [CPMessageLeadingItem.none](cpmessageleadingitem/none.md): Don’t show a leading item.
-- [CPMessageLeadingItem.pin](cpmessageleadingitem/pin.md): Show a pin icon.
-- [CPMessageLeadingItem.star](cpmessageleadingitem/star.md): Show a star icon.
+- [CPMessageLeadingItem.none](cpmessageleadingitem/none.md): An option to display no symbol.
+- [CPMessageLeadingItem.pin](cpmessageleadingitem/pin.md): An option to display a pin image in the row.
+- [CPMessageLeadingItem.star](cpmessageleadingitem/star.md): An option to display a star image in the row.
 
 ### Initializers
 
@@ -46,9 +46,9 @@ Use these constants when creating instances of [CPMessageListItemLeadingConfigur
 
 ## See Also
 
-### Getting the Leading Item
+### Getting the leading item
 
-- [leadingItem](cpmessagelistitemleadingconfiguration/leadingitem.md): The configuration’s item.
+- [leadingItem](cpmessagelistitemleadingconfiguration/leadingitem.md): The standard system symbol to display in the row’s leading region.
 
 # CPMessageLeadingItem (Objective-C)
 
@@ -56,7 +56,7 @@ Use these constants when creating instances of [CPMessageListItemLeadingConfigur
 **Kind:** Enumeration  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-The accessories that a message list item can display in its leading region.
+Constants that indicate the type of symbol to display at the leading edge of a message list row.
 
 ## Declaration
 
@@ -68,18 +68,18 @@ enum CPMessageLeadingItem : NSInteger;
 
 ## Overview
 
-Use these constants when creating instances of [CPMessageListItemLeadingConfiguration](cpmessagelistitemleadingconfiguration.md). A leading item can provide additional context for a list item’s contents, or help communicate its behavior.
+Use these constants to specify symbols that are common to conversations and contacts.
 
 ## Topics
 
 ### Leading Items
 
-- [CPMessageLeadingItemNone](cpmessageleadingitem/none.md): Don’t show a leading item.
-- [CPMessageLeadingItemPin](cpmessageleadingitem/pin.md): Show a pin icon.
-- [CPMessageLeadingItemStar](cpmessageleadingitem/star.md): Show a star icon.
+- [CPMessageLeadingItemNone](cpmessageleadingitem/none.md): An option to display no symbol.
+- [CPMessageLeadingItemPin](cpmessageleadingitem/pin.md): An option to display a pin image in the row.
+- [CPMessageLeadingItemStar](cpmessageleadingitem/star.md): An option to display a star image in the row.
 
 ## See Also
 
-### Getting the Leading Item
+### Getting the leading item
 
-- [leadingItem](cpmessagelistitemleadingconfiguration/leadingitem.md): The configuration’s item.
+- [leadingItem](cpmessagelistitemleadingconfiguration/leadingitem.md): The standard system symbol to display in the row’s leading region.

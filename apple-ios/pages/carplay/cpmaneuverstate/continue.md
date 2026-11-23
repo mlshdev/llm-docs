@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaneuverstate/continue
 
 # CPManeuverState.continue (Swift)
@@ -15,7 +15,7 @@ case `continue`
 
 ## See Also
 
-### Enumeration Cases
+### Getting the maneuver state
 
 - [CPManeuverState.prepare](prepare.md)
 - [CPManeuverState.initial](initial.md)
@@ -35,7 +35,7 @@ CPManeuverStateContinue
 
 ## See Also
 
-### Enumeration Cases
+### Getting the maneuver state
 
 - [CPManeuverStatePrepare](prepare.md)
 - [CPManeuverStateInitial](initial.md)

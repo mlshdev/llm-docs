@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitem/text
 
 # text (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-The list item’s primary text.
+The primary text for the list item.
 
 ## Declaration
 
@@ -15,16 +15,23 @@ The list item’s primary text.
 var text: String? { get }
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+CarPlay displays this text prominently in the row, starting at the leading edge. To change the value of this property after creating the list item, call the [setText(\_:)](settext%28__%29.md) method.
+
 ## See Also
 
-### Managing Content
+### Managing the row’s content
 
-- [setText(\_:)](settext%28__%29.md): Updates the list item’s primary text.
-- [detailText](detailtext.md): The list item’s secondary text.
-- [setDetailText(\_:)](setdetailtext%28__%29.md): Updates the list item’s secondary text.
-- [image](image.md): The image that the list item displays in its leading region.
-- [setImage(\_:)](setimage%28__%29.md): Updates the list item’s image.
-- [maximumImageSize](maximumimagesize.md): The maximum size of a list item’s image and accessory image.
+- [detailText](detailtext.md): The secondary text for the list item.
+- [image](image.md): The image to display on the leading edge of the cell.
+- [setText(\_:)](settext%28__%29.md): Updates the primary text of the list item.
+- [setDetailText(\_:)](setdetailtext%28__%29.md): Updates the secondary text of the list item.
+- [setImage(\_:)](setimage%28__%29.md): Updates the leading image of the list item.
+- [userInfo](userinfo.md): App-specific data you associate with the item.
+- [maximumImageSize](maximumimagesize.md): The maximum dimensions for the list item images.
 
 # text (Objective-C)
 
@@ -32,7 +39,7 @@ var text: String? { get }
 **Kind:** Instance Property  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
 
-The list item’s primary text.
+The primary text for the list item.
 
 ## Declaration
 
@@ -40,13 +47,20 @@ The list item’s primary text.
 @property (nonatomic, copy, readonly, nullable) NSString * text;
 ```
 
+<a id="discussion"></a>
+
+## Discussion
+
+CarPlay displays this text prominently in the row, starting at the leading edge. To change the value of this property after creating the list item, call the [setText:](settext%28__%29.md) method.
+
 ## See Also
 
-### Managing Content
+### Managing the row’s content
 
-- [setText:](settext%28__%29.md): Updates the list item’s primary text.
-- [detailText](detailtext.md): The list item’s secondary text.
-- [setDetailText:](setdetailtext%28__%29.md): Updates the list item’s secondary text.
-- [image](image.md): The image that the list item displays in its leading region.
-- [setImage:](setimage%28__%29.md): Updates the list item’s image.
-- [maximumImageSize](maximumimagesize.md): The maximum size of a list item’s image and accessory image.
+- [detailText](detailtext.md): The secondary text for the list item.
+- [image](image.md): The image to display on the leading edge of the cell.
+- [setText:](settext%28__%29.md): Updates the primary text of the list item.
+- [setDetailText:](setdetailtext%28__%29.md): Updates the secondary text of the list item.
+- [setImage:](setimage%28__%29.md): Updates the leading image of the list item.
+- [userInfo](userinfo.md): App-specific data you associate with the item.
+- [maximumImageSize](maximumimagesize.md): The maximum dimensions for the list item images.

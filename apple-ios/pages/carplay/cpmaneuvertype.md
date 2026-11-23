@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpmaneuvertype
 
 # CPManeuverType (Swift)
@@ -17,11 +17,7 @@ enum CPManeuverType
 
 ## Topics
 
-### Initializers
-
-- [init(rawValue:)](cpmaneuvertype/init%28rawvalue_%29.md): Creates a new maneuver type with the provided value.
-
-### Maneuver types
+### Getting the maneuver type
 
 - [CPManeuverType.arriveAtDestination](cpmaneuvertype/arriveatdestination.md)
 - [CPManeuverType.arriveAtDestinationLeft](cpmaneuvertype/arriveatdestinationleft.md)
@@ -78,6 +74,10 @@ enum CPManeuverType
 - [CPManeuverType.uTurnAtRoundabout](cpmaneuvertype/uturnatroundabout.md)
 - [CPManeuverType.uTurnWhenPossible](cpmaneuvertype/uturnwhenpossible.md)
 
+### Creating a maneuver type
+
+- [init(rawValue:)](cpmaneuvertype/init%28rawvalue_%29.md): Creates a new maneuver type with the provided value.
+
 ## Relationships
 
 ### Conforms To
@@ -95,6 +95,10 @@ enum CPManeuverType
 
 - [CPManeuver](cpmaneuver.md): An object that describes a single navigation instruction.
 - [CPManeuverState](cpmaneuverstate.md): Values that describe the state of a maneuver.
+- [CPTravelEstimates](cptravelestimates.md): An object that describes the time and distance remaining for a maneuver in a navigation session.
+- [CPTripPreviewTextConfiguration](cptrippreviewtextconfiguration.md): A configuration object for changing the button titles on a trip preview.
+- [NSStringFromCPManeuverType(\_:)](nsstringfromcpmaneuvertype%28__%29.md)
+- [CPLocationCoordinate3D](cplocationcoordinate3d.md): CPLocationCoordinate3D represents a three-dimensional coordinate with latitude, longitude, and altitude components.
 
 # CPManeuverType (Objective-C)
 
@@ -112,7 +116,7 @@ enum CPManeuverType : NSUInteger;
 
 ## Topics
 
-### Maneuver types
+### Getting the maneuver type
 
 - [CPManeuverTypeArriveAtDestination](cpmaneuvertype/arriveatdestination.md)
 - [CPManeuverTypeArriveAtDestinationLeft](cpmaneuvertype/arriveatdestinationleft.md)
@@ -175,3 +179,7 @@ enum CPManeuverType : NSUInteger;
 
 - [CPManeuver](cpmaneuver.md): An object that describes a single navigation instruction.
 - [CPManeuverState](cpmaneuverstate.md): Values that describe the state of a maneuver.
+- [CPTravelEstimates](cptravelestimates.md): An object that describes the time and distance remaining for a maneuver in a navigation session.
+- [CPTripPreviewTextConfiguration](cptrippreviewtextconfiguration.md): A configuration object for changing the button titles on a trip preview.
+- [NSStringFromCPManeuverType](nsstringfromcpmaneuvertype%28__%29.md)
+- [CPLocationCoordinate3D](cplocationcoordinate3d.md): CPLocationCoordinate3D represents a three-dimensional coordinate with latitude, longitude, and altitude components.

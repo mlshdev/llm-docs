@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cplistitemplayingindicatorlocation/leading
 
 # CPListItemPlayingIndicatorLocation.leading (Swift)
@@ -7,7 +7,7 @@
 **Kind:** Case  
 **Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
 
-Align the Now Playing indicator with the leading edge of the list item.
+An option to display the Now Playing indicator on the leading edge of the list item’s row.
 
 ## Declaration
 
@@ -17,9 +17,9 @@ case leading
 
 ## See Also
 
-### Now Playing Indicator Locations
+### Now Playing indicator locations
 
-- [CPListItemPlayingIndicatorLocation.trailing](trailing.md): Align the Now Playing indicator with the trailing edge of the list item.
+- [CPListItemPlayingIndicatorLocation.trailing](trailing.md): An option to display the Now Playing indicator on the trailing edge of the list item’s row.
 
 # CPListItemPlayingIndicatorLocationLeading (Objective-C)
 
@@ -27,7 +27,7 @@ case leading
 **Kind:** Enumeration Case  
 **Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 14.0+
 
-Align the Now Playing indicator with the leading edge of the list item.
+An option to display the Now Playing indicator on the leading edge of the list item’s row.
 
 ## Declaration
 
@@ -37,6 +37,6 @@ CPListItemPlayingIndicatorLocationLeading
 
 ## See Also
 
-### Now Playing Indicator Locations
+### Now Playing indicator locations
 
-- [CPListItemPlayingIndicatorLocationTrailing](trailing.md): Align the Now Playing indicator with the trailing edge of the list item.
+- [CPListItemPlayingIndicatorLocationTrailing](trailing.md): An option to display the Now Playing indicator on the trailing edge of the list item’s row.

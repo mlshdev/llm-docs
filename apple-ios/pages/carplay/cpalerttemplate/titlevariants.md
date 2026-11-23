@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpalerttemplate/titlevariants
 
 # titleVariants (Swift)
@@ -23,7 +23,7 @@ When the system displays the alert, it selects the title that best fits the avai
 
 ## See Also
 
-### Getting the Alert Information
+### Getting the alert details
 
 - [actions](actions.md): The array of actions available on the alert.
 
@@ -49,6 +49,6 @@ When the system displays the alert, it selects the title that best fits the avai
 
 ## See Also
 
-### Getting the Alert Information
+### Getting the alert details
 
 - [actions](actions.md): The array of actions available on the alert.

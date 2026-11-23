@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cpvoicecontrolstate/titlevariants
 
 # titleVariants (Swift)
@@ -23,7 +23,7 @@ When creating a voice control state, arrange the titles from most to least prefe
 
 ## See Also
 
-### Getting State Information
+### Getting the state information
 
 - [identifier](identifier.md): The string that your app uses to identify the voice control state.
 - [image](image.md): The image displayed while the voice control template is in this state.
@@ -51,7 +51,7 @@ When creating a voice control state, arrange the titles from most to least prefe
 
 ## See Also
 
-### Getting State Information
+### Getting the state information
 
 - [identifier](identifier.md): The string that your app uses to identify the voice control state.
 - [image](image.md): The image displayed while the voice control template is in this state.

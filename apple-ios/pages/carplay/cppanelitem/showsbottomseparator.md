@@ -1,4 +1,4 @@
-> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-0edb2c9c8b69; integrity is recorded in the provenance manifest.
+> Snapshot-pinned source payload for Apple iOS and iPadOS snapshot-5c9fd14c92ba; integrity is recorded in the provenance manifest.
 > Canonical documentation: https://developer.apple.com/documentation/carplay/cppanelitem/showsbottomseparator
 
 # showsBottomSeparator (Swift)
@@ -23,6 +23,12 @@ When the value of this property is `true`, CarPlay draws a line along the bottom
 
 When drawing the last section in the map panel, the system doesn’t draw a separator line, even if this property is `true`.
 
+## See Also
+
+### Configuring the panel’s behavior
+
+- [isEnabled](isenabled.md): A Boolean value that indicates whether the item supports interactions.
+
 # showsBottomSeparator (Objective-C)
 
 **Framework:** CarPlay  
@@ -44,3 +50,9 @@ A Boolean value that indicates whether a separator line appears at the bottom ed
 When the value of this property is `true`, CarPlay draws a line along the bottom edge of the item to separate it from the next item. Set this property to `false` if you don’t want to draw the separator. The default value of this property is `true`.
 
 When drawing the last section in the map panel, the system doesn’t draw a separator line, even if this property is `true`.
+
+## See Also
+
+### Configuring the panel’s behavior
+
+- [enabled](isenabled.md): A Boolean value that indicates whether the item supports interactions.
