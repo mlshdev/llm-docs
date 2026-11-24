@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/secure/secure-api-access-with-jwt.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/secure/secure-api-access-with-jwt.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/secure/secure-api-access-with-jwt.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/secure/secure-api-access-with-jwt.md)
 
 # Secure API Access with JWT
 
@@ -22,7 +22,7 @@ Traefik Hub API Gateway provides many kinds of sources to perform the token vali
 > A JWT can contain metadata in the form of claims (key-value pairs).
 > The claims contained in the JWT can be used for advanced use-cases such as adding an Authorization layer using the `claims`.
 >
-> More information in the [dedicated section](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/jwt#claims).
+> More information in the [dedicated section](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/jwt#claims).
 
 ## Verify a JWT with a secret
 
@@ -207,7 +207,7 @@ spec:
 ```
 
 > **Advanced Configuration**
-> Advanced options are described in the [reference page](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/jwt).
+> Advanced options are described in the [reference page](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/jwt).
 >
 > For example, the metadata recovered from the Identity Provider can be used to restrict the access to the applications.
-> To do so, you can use the `claims` option, more information in the [dedicated section](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/jwt#claims).
+> To do so, you can use the `claims` option, more information in the [dedicated section](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/jwt#claims).

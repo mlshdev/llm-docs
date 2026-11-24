@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/contributing/maintainers.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/contributing/maintainers.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/contributing/maintainers.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/contributing/maintainers.md)
 
 # Maintainers
 
@@ -38,4 +38,4 @@ People who have had an incredibly positive impact on the project, and are now fo
 
 ## Maintainer's Guidelines
 
-Please read the [maintainer's guidelines](https://doc.traefik.io/traefik/v3.7/contributing/maintainers-guidelines).
+Please read the [maintainer's guidelines](https://doc.traefik.io/traefik/v3.8/contributing/maintainers-guidelines).

@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/http/tls/tls-options.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/http/tls/tls-options.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/http/tls/tls-options.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/http/tls/tls-options.md)
 
 The TLS options allow one to configure some parameters of the TLS connection.
 
@@ -10,11 +10,11 @@ The TLS options allow one to configure some parameters of the TLS connection.
 > you must specify the provider namespace, for example:
 > `traefik.http.routers.myrouter.tls.options=myoptions@file`
 > **Providers**
-> TLS options are not supported by label or tag-based providers. However, you can define them when using a [KV provider](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/other-providers/kv).
+> TLS options are not supported by label or tag-based providers. However, you can define them when using a [KV provider](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/other-providers/kv).
 > **TLSOption in Kubernetes**
-> With the [TLSOption resource](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/tls/tlsoption), the option named `default` applies to every router
+> With the [TLSOption resource](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/tls/tlsoption), the option named `default` applies to every router
 > that does not reference a TLSOption explicitly, whatever the namespace it is defined in.
-> The [`defaultTLSResourcesNamespace`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd#defaulttlsresourcesnamespace) provider option
+> The [`defaultTLSResourcesNamespace`](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-crd#defaulttlsresourcesnamespace) provider option
 > restricts the namespace this cluster-wide default can be defined in.
 
 ### Server Name Association
@@ -89,7 +89,7 @@ the same host name on the same entry point.
 
 #### Strict TLS Options
 
-The [`core.strictTLSOptions`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/configuration-options#opt-core-stricttlsoptions)
+The [`core.strictTLSOptions`](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/configuration-options#opt-core-stricttlsoptions)
 install configuration option disables the fallback to the `default` TLS options.
 When it is enabled, the routers involved in the conflict are marked in error and are not built at all,
 and the host name is no longer mapped to any TLS options.
@@ -313,7 +313,7 @@ Traefik supports mutual authentication, through the `clientAuth` section.
 
 For authentication policies that require verification of the client certificate, the certificate authority for the certificates should be set in `clientAuth.caFiles`.
 
-In Kubernetes environment, CA certificate can be set in `clientAuth.secretNames`. See [TLSOption resource](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/tls/tlsoption) for more details.
+In Kubernetes environment, CA certificate can be set in `clientAuth.secretNames`. See [TLSOption resource](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/tls/tlsoption) for more details.
 
 The `clientAuth.clientAuthType` option governs the behaviour as follows:
 

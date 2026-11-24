@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/http/load-balancing/serverstransport.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/http/load-balancing/serverstransport.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/http/load-balancing/serverstransport.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/http/load-balancing/serverstransport.md)
 
 ServersTransport allows you to configure the transport between Traefik and your HTTP servers.
 
@@ -22,10 +22,16 @@ http:
         - "/path/to/rootca2.pem"
       maxIdleConnsPerHost: 100
       disableHTTP2: true
-      peerCertURI: "spiffe://example.org/peer"
+      peerCertSANs:
+        - type: DNSName
+          value: foo.com
+        - type: URI
+          value: spiffe://example.org/peer
       forwardingTimeouts:
         dialTimeout: "30s"
         responseHeaderTimeout: "10s"
+        readTimeout: "30s"
+        writeTimeout: "30s"
         idleConnTimeout: "60s"
         readIdleTimeout: "5s"
         pingTimeout: "15s"
@@ -51,7 +57,7 @@ http:
   rootCAs = ["/path/to/rootca1.pem", "/path/to/rootca2.pem"]
   maxIdleConnsPerHost = 100
   disableHTTP2 = true
-  peerCertURI = "spiffe://example.org/peer"
+  peerCertSANs = [{type = "DNSName", value = "foo.com"}, {type = "URI", value = "spiffe://example.org/peer"}]
   cipherSuites = ["TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256","TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"]
   minVersion = "VersionTLS12"
   maxVersion = "VersionTLS12"
@@ -59,6 +65,8 @@ http:
   [http.serversTransports.mytransport.forwardingTimeouts]
     dialTimeout = "30s"
     responseHeaderTimeout = "10s"
+    readTimeout = "30s"
+    writeTimeout = "30s"
     idleConnTimeout = "60s"
     readIdleTimeout = "5s"
     pingTimeout = "15s"
@@ -111,23 +119,27 @@ labels:
 
 ## Configuration Options
 
-| Field                                                                                               | Description                                                                                                                              | Default | Required |
-| :-------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------- | :------ | :------- |
-| <a id="opt-serverName"></a>`serverName`                                                             | Configures the server name that will be used as the SNI.                                                                                 | ""      | No       |
-| <a id="opt-certificates"></a>`certificates`                                                         | Defines the list of certificates (as file paths, or data bytes) that will be set as client certificates for mTLS.                        | \[]     | No       |
-| <a id="opt-insecureSkipVerify"></a>`insecureSkipVerify`                                             | Controls whether the server's certificate chain and host name is verified.                                                               | false   | No       |
-| <a id="opt-rootCAs"></a>`rootCAs`                                                                   | Set of root certificate authorities to use when verifying server certificates. (for mTLS connections).                                   | \[]     | No       |
-| <a id="opt-cipherSuites"></a>`cipherSuites`                                                         | Defines the cipher suites to use when contacting backend servers.                                                                        | \[]     | No       |
-| <a id="opt-minVersion"></a>`minVersion`                                                             | Defines the minimum TLS version to use when contacting backend servers.                                                                  | ""      | No       |
-| <a id="opt-maxVersion"></a>`maxVersion`                                                             | Defines the maximum TLS version to use when contacting backend servers.                                                                  | ""      | No       |
-| <a id="opt-maxIdleConnsPerHost"></a>`maxIdleConnsPerHost`                                           | Maximum idle (keep-alive) connections to keep per-host. If zero, `DefaultMaxIdleConnsPerHost` (2) is used.                               | 0       | No       |
-| <a id="opt-disableHTTP2"></a>`disableHTTP2`                                                         | Disables HTTP/2 for connections with servers.                                                                                            | false   | No       |
-| <a id="opt-peerCertURI"></a>`peerCertURI`                                                           | Defines the URI used to match against SAN URIs during the server's certificate verification.                                             | ""      | No       |
-| <a id="opt-forwardingTimeouts-dialTimeout"></a>`forwardingTimeouts.dialTimeout`                     | Amount of time to wait until a connection to a server can be established.<br />0 = no timeout                                            | 30s     | No       |
-| <a id="opt-forwardingTimeouts-responseHeaderTimeout"></a>`forwardingTimeouts.responseHeaderTimeout` | Amount of time to wait for a server's response headers after fully writing the request (including its body, if any).<br />0 = no timeout | 0s      | No       |
-| <a id="opt-forwardingTimeouts-idleConnTimeout"></a>`forwardingTimeouts.idleConnTimeout`             | Maximum amount of time an idle (keep-alive) connection will remain idle before closing itself.<br />0 = no timeout                       | 90s     | No       |
-| <a id="opt-forwardingTimeouts-readIdleTimeout"></a>`forwardingTimeouts.readIdleTimeout`             | Defines the timeout after which a health check using ping frame will be carried out if no frame is received on the HTTP/2 connection.    | 0s      | No       |
-| <a id="opt-forwardingTimeouts-pingTimeout"></a>`forwardingTimeouts.pingTimeout`                     | Defines the timeout after which the HTTP/2 connection will be closed if a response to ping is not received.                              | 15s     | No       |
-| <a id="opt-spiffe"></a>`spiffe`                                                                     | Defines the SPIFFE configuration. An empty `spiffe` section enables SPIFFE (that allows any SPIFFE ID).                                  |         | No       |
-| <a id="opt-spiffe-ids"></a>`spiffe.ids`                                                             | Defines the allowed SPIFFE IDs.<br />This takes precedence over the SPIFFE TrustDomain.                                                  | \[]     | No       |
-| <a id="opt-spiffe-trustDomain"></a>`spiffe.trustDomain`                                             | Defines the SPIFFE trust domain.                                                                                                         | ""      | No       |
+| Field                                                                                               | Description                                                                                                                                                                                                       | Default | Required |
+| :-------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ | :------- |
+| <a id="opt-serverName"></a>`serverName`                                                             | Configures the server name that will be used as the SNI.                                                                                                                                                          | ""      | No       |
+| <a id="opt-certificates"></a>`certificates`                                                         | Defines the list of certificates (as file paths, or data bytes) that will be set as client certificates for mTLS.                                                                                                 | \[]     | No       |
+| <a id="opt-insecureSkipVerify"></a>`insecureSkipVerify`                                             | Controls whether the server's certificate chain and host name is verified.                                                                                                                                        | false   | No       |
+| <a id="opt-rootCAs"></a>`rootCAs`                                                                   | Set of root certificate authorities to use when verifying server certificates. (for mTLS connections).                                                                                                            | \[]     | No       |
+| <a id="opt-cipherSuites"></a>`cipherSuites`                                                         | Defines the cipher suites to use when contacting backend servers.                                                                                                                                                 | \[]     | No       |
+| <a id="opt-minVersion"></a>`minVersion`                                                             | Defines the minimum TLS version to use when contacting backend servers.                                                                                                                                           | ""      | No       |
+| <a id="opt-maxVersion"></a>`maxVersion`                                                             | Defines the maximum TLS version to use when contacting backend servers.                                                                                                                                           | ""      | No       |
+| <a id="opt-maxIdleConnsPerHost"></a>`maxIdleConnsPerHost`                                           | Maximum idle (keep-alive) connections to keep per-host. If zero, `DefaultMaxIdleConnsPerHost` (2) is used.                                                                                                        | 0       | No       |
+| <a id="opt-disableHTTP2"></a>`disableHTTP2`                                                         | Disables HTTP/2 for connections with servers.                                                                                                                                                                     | false   | No       |
+| <a id="opt-peerCertSANs"></a>`peerCertSANs`                                                         | Defines the SANs (Subject Alternative Names) used to match against SANs during the peer certificate verification.                                                                                                 | \[]     | No       |
+| <a id="opt-peerCertSANs-type"></a>`peerCertSANs[].type`                                             | Defines the SAN type (`URI` or `DNSName`) to match against the peer certificate's Subject Alternative Names.                                                                                                      | ""      | No       |
+| <a id="opt-peerCertSANs-value"></a>`peerCertSANs[].value`                                           | Defines the SAN value to match against the peer certificate's Subject Alternative Names.                                                                                                                          | ""      | No       |
+| <a id="opt-forwardingTimeouts-dialTimeout"></a>`forwardingTimeouts.dialTimeout`                     | Amount of time to wait until a connection to a server can be established.<br />0 = no timeout                                                                                                                     | 30s     | No       |
+| <a id="opt-forwardingTimeouts-responseHeaderTimeout"></a>`forwardingTimeouts.responseHeaderTimeout` | Amount of time to wait for a server's response headers after fully writing the request (including its body, if any).<br />0 = no timeout                                                                          | 0s      | No       |
+| <a id="opt-forwardingTimeouts-readTimeout"></a>`forwardingTimeouts.readTimeout`                     | Defines a timeout for reading a response from the proxied server. The timeout between two successive read operations. The connection is closed if nothing is transmitted within this time.<br />0 = no timeout    | 0s      | No       |
+| <a id="opt-forwardingTimeouts-writeTimeout"></a>`forwardingTimeouts.writeTimeout`                   | Defines a timeout for transmitting a request to the proxied server. The timeout between two successive write operations. The connection is closed if nothing is transmitted within this time.<br />0 = no timeout | 0s      | No       |
+| <a id="opt-forwardingTimeouts-idleConnTimeout"></a>`forwardingTimeouts.idleConnTimeout`             | Maximum amount of time an idle (keep-alive) connection will remain idle before closing itself.<br />0 = no timeout                                                                                                | 90s     | No       |
+| <a id="opt-forwardingTimeouts-readIdleTimeout"></a>`forwardingTimeouts.readIdleTimeout`             | Defines the timeout after which a health check using ping frame will be carried out if no frame is received on the HTTP/2 connection.                                                                             | 0s      | No       |
+| <a id="opt-forwardingTimeouts-pingTimeout"></a>`forwardingTimeouts.pingTimeout`                     | Defines the timeout after which the HTTP/2 connection will be closed if a response to ping is not received.                                                                                                       | 15s     | No       |
+| <a id="opt-spiffe"></a>`spiffe`                                                                     | Defines the SPIFFE configuration. An empty `spiffe` section enables SPIFFE (that allows any SPIFFE ID).                                                                                                           |         | No       |
+| <a id="opt-spiffe-ids"></a>`spiffe.ids`                                                             | Defines the allowed SPIFFE IDs.<br />This takes precedence over the SPIFFE TrustDomain.                                                                                                                           | \[]     | No       |
+| <a id="opt-spiffe-trustDomain"></a>`spiffe.trustDomain`                                             | Defines the SPIFFE trust domain.                                                                                                                                                                                  | ""      | No       |

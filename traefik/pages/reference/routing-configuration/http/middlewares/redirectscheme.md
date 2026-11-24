@@ -1,10 +1,10 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/http/middlewares/redirectscheme.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/http/middlewares/redirectscheme.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/http/middlewares/redirectscheme.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/http/middlewares/redirectscheme.md)
 
 The `RedirectScheme` middleware redirects the request if the request scheme is different from the configured scheme.
 
 > **When behind another reverse-proxy**
 > When there is at least one other reverse-proxy between the client and Traefik,
-> the other reverse-proxy (i.e. the last hop) needs to be a [trusted](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints#configuration-options) one.
+> the other reverse-proxy (i.e. the last hop) needs to be a [trusted](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints#configuration-options) one.
 >
 > Otherwise, Traefik would clean up the `X-Forwarded` headers coming from this last hop,
 > and as the RedirectScheme middleware relies on them to determine the scheme used,

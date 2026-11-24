@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.156.0: [docs/victoriametrics/stream-aggregation/configuration.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/stream-aggregation/configuration.md)
+> Pinned source for VictoriaMetrics v1.157.0: [docs/victoriametrics/stream-aggregation/configuration.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/stream-aggregation/configuration.md)
 
 Stream aggregation can be configured via the following command-line flags:
 
@@ -107,8 +107,9 @@ specified individually per each `-remoteWrite.url`:
   # no_align_flush_to_interval: false
 
   # flush_on_shutdown instructs to flush aggregated data to the storage on the first and the last intervals
-  # during vmagent starts, restarts or configuration reloads.
+  # during vmagent starts, restarts or configuration reloads, which change this aggregation config.
   # Incomplete aggregated data isn't flushed to the storage by default, since it is usually confusing.
+  # See https://docs.victoriametrics.com/victoriametrics/stream-aggregation/#flush-time-alignment
   #
   # flush_on_shutdown: false
 
@@ -142,6 +143,8 @@ specified individually per each `-remoteWrite.url`:
   # ignore_old_samples: false
 
   # ignore_first_intervals instructs ignoring the first N aggregation intervals after process start.
+  # Only complete intervals are counted. If N > 0, then the incomplete first interval after the start is ignored as well,
+  # even if flush_on_shutdown is set.
   # See https://docs.victoriametrics.com/victoriametrics/stream-aggregation/#ignore-aggregation-intervals-on-start
   # See also -remoteWrite.streamAggr.ignoreFirstIntervals and -streamAggr.ignoreFirstIntervals command-line flags.
   #
@@ -187,6 +190,9 @@ support the following approaches for hot reloading stream aggregation configs fr
 
 - By sending HTTP request to `/-/reload` endpoint (e.g. `http://vmagent:8429/-/reload` or `http://victoria-metrics:8428/-/reload`).
 
+Only the changed aggregation configs are restarted on reload. *(available from v1.157.0)* The aggregation config is considered unchanged
+if it stays identical and keeps the same position in the config file. Unchanged aggregation configs keep their aggregation state.
+
 ## Aggregation outputs
 
 The aggregations are calculated during the `interval` specified in the [config](https://docs.victoriametrics.com/victoriametrics/stream-aggregation/configuration/#stream-aggregation-config)
@@ -230,7 +236,7 @@ sum(sum_over_time(some_metric[interval])) / sum(count_over_time(some_metric[inte
 
 For example, see below time series produced by config with aggregation interval `1m` and `by: ["instance"]` and  the regular query:
 
-![avg aggregation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/stream-aggregation/configuration-avg.webp)
+![avg aggregation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/stream-aggregation/configuration-avg.webp)
 
 See also:
 
@@ -307,7 +313,7 @@ then take a look at [increase\_prometheus](#increaseprometheus).
 
 For example, see below time series produced by config with aggregation interval `1m` and `by: ["instance"]` and the regular query:
 
-![increase aggregation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/stream-aggregation/configuration-increase.webp)
+![increase aggregation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/stream-aggregation/configuration-increase.webp)
 
 Aggregating irregular and sporadic metrics (received from [Lambdas](https://aws.amazon.com/lambda/)
 or [Cloud Functions](https://cloud.google.com/functions)) can be controlled via [staleness\_interval](https://docs.victoriametrics.com/victoriametrics/stream-aggregation/#staleness) option.
@@ -373,7 +379,7 @@ max(max_over_time(some_metric[interval]))
 
 For example, see below time series produced by config with aggregation interval `1m` and the regular query:
 
-![total aggregation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/stream-aggregation/configuration-max.webp)
+![total aggregation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/stream-aggregation/configuration-max.webp)
 
 See also:
 
@@ -394,7 +400,7 @@ min(min_over_time(some_metric[interval]))
 
 For example, see below time series produced by config with aggregation interval `1m` and the regular query:
 
-![min aggregation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/stream-aggregation/configuration-min.webp)
+![min aggregation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/stream-aggregation/configuration-min.webp)
 
 See also:
 
@@ -469,7 +475,7 @@ histogram_stdvar(sum(histogram_over_time(some_metric[interval])) by (vmrange))
 
 For example, see below time series produced by config with aggregation interval `1m` and the regular query:
 
-![stdvar aggregation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/stream-aggregation/configuration-stdvar.webp)
+![stdvar aggregation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/stream-aggregation/configuration-stdvar.webp)
 
 See also:
 
@@ -490,7 +496,7 @@ sum(sum_over_time(some_metric[interval]))
 
 For example, see below time series produced by config with aggregation interval `1m` and the regular query:
 
-![sum\_samples aggregation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/stream-aggregation/configuration-sum-samples.webp)
+![sum\_samples aggregation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/stream-aggregation/configuration-sum-samples.webp)
 
 See also:
 
@@ -528,7 +534,7 @@ then take a look at [total\_prometheus](#totalprometheus).
 
 For example, see below time series produced by config with aggregation interval `1m` and `by: ["instance"]` and the regular query:
 
-![total aggregation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/stream-aggregation/configuration-total.webp)
+![total aggregation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/stream-aggregation/configuration-total.webp)
 
 `total` is not affected by [counter resets](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#counter) -
 it continues to increase monotonically with respect to the previous value.
@@ -536,7 +542,7 @@ The counters are most often reset when the application is restarted.
 
 For example:
 
-![total aggregation counter reset](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/stream-aggregation/configuration-total-reset.webp)
+![total aggregation counter reset](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/stream-aggregation/configuration-total-reset.webp)
 
 The same behavior occurs when creating or deleting new series in an aggregation group -
 `total` output increases monotonically considering the values of the series set.

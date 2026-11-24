@@ -1,11 +1,11 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/contributing/submitting-pull-requests.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/contributing/submitting-pull-requests.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/contributing/submitting-pull-requests.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/contributing/submitting-pull-requests.md)
 
 # Before You Submit a Pull Request
 
 This guide is for contributors who already have a pull request to submit.
 If you are looking for information on setting up your developer environment
 and creating code to contribute to Traefik Proxy or related projects,
-see the [development guide](https://doc.traefik.io/traefik/v3.7/contributing/building-testing).
+see the [development guide](https://doc.traefik.io/traefik/v3.8/contributing/building-testing).
 
 Looking for a way to contribute to Traefik Proxy?
 Check out this list of [Priority Issues](https://github.com/traefik/traefik/labels/contributor%2Fwanted),
@@ -43,7 +43,7 @@ Read more about the [Triage process](https://github.com/traefik/contributors-gui
 Merging a PR requires the following steps to be completed before it is merged automatically.
 
 - Make sure your pull request adheres to our best practices. These include:
-  - [Following project conventions](https://doc.traefik.io/traefik/v3.7/contributing/maintainers-guidelines); including using the PR Template.
+  - [Following project conventions](https://doc.traefik.io/traefik/v3.8/contributing/maintainers-guidelines); including using the PR Template.
   - Make small pull requests.
   - Solve only one problem at a time.
   - Comment thoroughly.

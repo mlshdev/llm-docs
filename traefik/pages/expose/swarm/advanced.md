@@ -1,8 +1,8 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/expose/swarm/advanced.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/expose/swarm/advanced.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/expose/swarm/advanced.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/expose/swarm/advanced.md)
 
 # Exposing Services with Traefik on Docker Swarm - Advanced
 
-This guide builds on the concepts and setup from the [Basic Guide](https://doc.traefik.io/traefik/v3.7/expose/swarm/basic). Make sure you've completed the basic guide and have a working Traefik setup with Docker Swarm before proceeding.
+This guide builds on the concepts and setup from the [Basic Guide](https://doc.traefik.io/traefik/v3.8/expose/swarm/basic). Make sure you've completed the basic guide and have a working Traefik setup with Docker Swarm before proceeding.
 
 In this advanced guide, you'll learn how to enhance your Traefik deployment with:
 
@@ -14,13 +14,13 @@ In this advanced guide, you'll learn how to enhance your Traefik deployment with
 
 ## Prerequisites
 
-- Completed the [Basic Guide](https://doc.traefik.io/traefik/v3.7/expose/swarm/basic)
+- Completed the [Basic Guide](https://doc.traefik.io/traefik/v3.8/expose/swarm/basic)
 - Docker Swarm cluster initialized
 - Working Traefik setup from the basic guide
 
 ## Add Middlewares
 
-Middlewares allow you to modify requests or responses as they pass through Traefik. Let's add two useful middlewares: [Headers](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/headers) for security and [IP allowlisting](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/ipallowlist) for access control.
+Middlewares allow you to modify requests or responses as they pass through Traefik. Let's add two useful middlewares: [Headers](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/headers) for security and [IP allowlisting](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/ipallowlist) for access control.
 
 Add the following labels to your whoami service deployment section in `docker-compose.yml`:
 
@@ -212,7 +212,7 @@ You should see different `Hostname` values in these responses, as each request i
 
 > **Browser Testing**
 > When testing in browsers, you need to use the same browser session to maintain the cookie. The cookie is set with `httpOnly` and `secure` flags for security, so it will only be sent over HTTPS connections and won't be accessible via JavaScript.
-> For more advanced configuration options, see the [reference documentation](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/service).
+> For more advanced configuration options, see the [reference documentation](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/load-balancing/service).
 
 ## Multi-Layer Routing
 
@@ -380,7 +380,7 @@ You should see the response from the admin-backend service when authenticating a
 4. **Child router** (`api-admin` or `api-user`) matches based on the header value
 5. **Request forwarded** to the appropriate Swarm service
 
-For more details about multi-layer routing, see the [Multi-Layer Routing documentation](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/routing/multi-layer-routing).
+For more details about multi-layer routing, see the [Multi-Layer Routing documentation](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/routing/multi-layer-routing).
 
 ## Service Middlewares
 
@@ -446,7 +446,7 @@ In the response from whoami, you should see the custom header that was added by 
 X-Service-Middleware: applied
 ```
 
-For more details on service middlewares, see the [reference documentation](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/service#middlewares).
+For more details on service middlewares, see the [reference documentation](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/load-balancing/service#middlewares).
 
 ## Conclusion
 
@@ -464,9 +464,9 @@ These advanced capabilities allow you to build production-ready Traefik deployme
 
 Now that you've mastered both basic and advanced Traefik features with Docker Swarm, you might want to explore:
 
-- [Advanced routing options](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/routing/rules-and-priority) like query parameter matching, header-based routing, and more
-- [Additional middlewares](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/overview) for authentication, rate limiting, and request modifications
-- [Observability features](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/metrics) for monitoring and debugging your Traefik deployment
-- [TCP services](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/service) for exposing TCP services
-- [UDP services](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/udp/service) for exposing UDP services
-- [Docker Swarm provider documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/swarm) for more details about the Docker Swarm integration
+- [Advanced routing options](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/routing/rules-and-priority) like query parameter matching, header-based routing, and more
+- [Additional middlewares](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/overview) for authentication, rate limiting, and request modifications
+- [Observability features](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/metrics) for monitoring and debugging your Traefik deployment
+- [TCP services](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/tcp/service) for exposing TCP services
+- [UDP services](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/udp/service) for exposing UDP services
+- [Docker Swarm provider documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/swarm) for more details about the Docker Swarm integration

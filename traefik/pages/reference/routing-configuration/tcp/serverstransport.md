@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/tcp/serverstransport.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/tcp/serverstransport.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/tcp/serverstransport.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/tcp/serverstransport.md)
 
 ServersTransport allows configuring the transport between Traefik and your TCP servers.
 
@@ -23,7 +23,11 @@ tcp:
         insecureSkipVerify: true
         rootCAs:
           - "/path/to/rootca.pem"
-        peerCertURI: "spiffe://example.org/peer"
+        peerCertSANs:
+          - type: DNSName
+            value: foo.com
+          - type: URI
+            value: spiffe://example.org/peer
         spiffe:
           ids:
             - "spiffe://example.org/id1"
@@ -44,7 +48,7 @@ tcp:
     certificates = ["/path/to/cert1.pem", "/path/to/cert2.pem"]
     insecureSkipVerify = true
     rootCAs = ["/path/to/rootca.pem"]
-    peerCertURI = "spiffe://example.org/peer"
+    peerCertSANs = [{type = "DNSName", value = "foo.com"}, {type = "URI", value = "spiffe://example.org/peer"}]
 
   [tcp.serversTransports.mytransport.tls.spiffe]
     ids = ["spiffe://example.org/id1", "spiffe://example.org/id2"]
@@ -93,25 +97,27 @@ labels:
 
 ## Configuration Options
 
-| Field                                                                                                             | Description                                                                                                                                                                                                        | Default | Required |
-| :---------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ | :------- |
-| <a id="opt-serverstransport-dialTimeout"></a>`serverstransport.`<br />`dialTimeout`                               | Defines the timeout when dialing the backend TCP service. If zero, no timeout exists.                                                                                                                              | 30s     | No       |
-| <a id="opt-serverstransport-dialKeepAlive"></a>`serverstransport.`<br />`dialKeepAlive`                           | Defines the interval between keep-alive probes for an active network connection.                                                                                                                                   | 15s     | No       |
-| <a id="opt-serverstransport-terminationDelay"></a>`serverstransport.`<br />`terminationDelay`                     | Sets the time limit for the proxy to fully terminate connections on both sides after initiating the termination sequence, with a negative value indicating no deadline. More Information [here](#terminationdelay) | 100ms   | No       |
-| <a id="opt-serverstransport-proxyProtocol"></a>`serverstransport.`<br />`proxyProtocol`                           | Defines the Proxy Protocol configuration. An empty `proxyProtocol` section enables Proxy Protocol version 2.                                                                                                       |         | No       |
-| <a id="opt-serverstransport-proxyProtocol-version"></a>`serverstransport.`<br />`proxyProtocol.version`           | Traefik supports PROXY Protocol version 1 and 2 on TCP Services. More Information [here](#proxyprotocolversion)                                                                                                    | 2       | No       |
-| <a id="opt-serverstransport-tls"></a>`serverstransport.`<br />`tls`                                               | Defines the TLS configuration. An empty `tls` section enables TLS.                                                                                                                                                 |         | No       |
-| <a id="opt-serverstransport-tls-serverName"></a>`serverstransport.`<br />`tls`<br />`.serverName`                 | Configures the server name that will be used for SNI.                                                                                                                                                              |         | No       |
-| <a id="opt-serverstransport-tls-certificates"></a>`serverstransport.`<br />`tls`<br />`.certificates`             | Defines the list of certificates (as file paths, or data bytes) that will be set as client certificates for mTLS.                                                                                                  |         | No       |
-| <a id="opt-serverstransport-tls-insecureSkipVerify"></a>`serverstransport.`<br />`tls`<br />`.insecureSkipVerify` | Controls whether the server's certificate chain and host name is verified.                                                                                                                                         | false   | No       |
-| <a id="opt-serverstransport-tls-rootCAs"></a>`serverstransport.`<br />`tls`<br />`.rootCAs`                       | Defines the root certificate authorities to use when verifying server certificates. (for mTLS connections).                                                                                                        |         | No       |
-| <a id="opt-serverstransport-tls-peerCertURI"></a>`serverstransport.`<br />`tls.`<br />`peerCertURI`               | Defines the URI used to match against SAN URIs during the server's certificate verification.                                                                                                                       | ""      | No       |
-| <a id="opt-serverstransport-tls-spiffe"></a>`serverstransport.`<br />`tls.spiffe`                                 | Defines the SPIFFE configuration. An empty `spiffe` section enables SPIFFE (that allows any SPIFFE ID).                                                                                                            |         | No       |
-| <a id="opt-serverstransport-tls-spiffe-ids"></a>`serverstransport.`<br />`tls.spiffe`<br />`.ids`                 | Allow SPIFFE IDs.<br />This takes precedence over the SPIFFE TrustDomain.                                                                                                                                          |         | No       |
-| <a id="opt-serverstransport-tls-spiffe-trustDomain"></a>`serverstransport.`<br />`tls.spiffe`<br />`.trustDomain` | Allow SPIFFE trust domain.                                                                                                                                                                                         | ""      | No       |
+| Field                                                                                                               | Description                                                                                                                                                                                                        | Default | Required |
+| :------------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ | :------- |
+| <a id="opt-serverstransport-dialTimeout"></a>`serverstransport.`<br />`dialTimeout`                                 | Defines the timeout when dialing the backend TCP service. If zero, no timeout exists.                                                                                                                              | 30s     | No       |
+| <a id="opt-serverstransport-dialKeepAlive"></a>`serverstransport.`<br />`dialKeepAlive`                             | Defines the interval between keep-alive probes for an active network connection.                                                                                                                                   | 15s     | No       |
+| <a id="opt-serverstransport-terminationDelay"></a>`serverstransport.`<br />`terminationDelay`                       | Sets the time limit for the proxy to fully terminate connections on both sides after initiating the termination sequence, with a negative value indicating no deadline. More Information [here](#terminationdelay) | 100ms   | No       |
+| <a id="opt-serverstransport-proxyProtocol"></a>`serverstransport.`<br />`proxyProtocol`                             | Defines the Proxy Protocol configuration. An empty `proxyProtocol` section enables Proxy Protocol version 2.                                                                                                       |         | No       |
+| <a id="opt-serverstransport-proxyProtocol-version"></a>`serverstransport.`<br />`proxyProtocol.version`             | Traefik supports PROXY Protocol version 1 and 2 on TCP Services. More Information [here](#proxyprotocolversion)                                                                                                    | 2       | No       |
+| <a id="opt-serverstransport-tls"></a>`serverstransport.`<br />`tls`                                                 | Defines the TLS configuration. An empty `tls` section enables TLS.                                                                                                                                                 |         | No       |
+| <a id="opt-serverstransport-tls-serverName"></a>`serverstransport.`<br />`tls`<br />`.serverName`                   | Configures the server name that will be used for SNI.                                                                                                                                                              |         | No       |
+| <a id="opt-serverstransport-tls-certificates"></a>`serverstransport.`<br />`tls`<br />`.certificates`               | Defines the list of certificates (as file paths, or data bytes) that will be set as client certificates for mTLS.                                                                                                  |         | No       |
+| <a id="opt-serverstransport-tls-insecureSkipVerify"></a>`serverstransport.`<br />`tls`<br />`.insecureSkipVerify`   | Controls whether the server's certificate chain and host name is verified.                                                                                                                                         | false   | No       |
+| <a id="opt-serverstransport-tls-rootCAs"></a>`serverstransport.`<br />`tls`<br />`.rootCAs`                         | Defines the root certificate authorities to use when verifying server certificates. (for mTLS connections).                                                                                                        |         | No       |
+| <a id="opt-serverstransport-tls-peerCertSANs"></a>`serverstransport.`<br />`tls.`<br />`peerCertSANs`               | Defines the SANs (Subject Alternative Names) used to match against SANs during the peer certificate verification.                                                                                                  | \[]     | No       |
+| <a id="opt-serverstransport-tls-peerCertSANs-type"></a>`serverstransport.`<br />`tls.`<br />`peerCertSANs[].type`   | Defines the SAN type (`URI` or `DNSName`) to match against the peer certificate's Subject Alternative Names.                                                                                                       | ""      | No       |
+| <a id="opt-serverstransport-tls-peerCertSANs-value"></a>`serverstransport.`<br />`tls.`<br />`peerCertSANs[].value` | Defines the SAN value to match against the peer certificate's Subject Alternative Names.                                                                                                                           | ""      | No       |
+| <a id="opt-serverstransport-tls-spiffe"></a>`serverstransport.`<br />`tls.spiffe`                                   | Defines the SPIFFE configuration. An empty `spiffe` section enables SPIFFE (that allows any SPIFFE ID).                                                                                                            |         | No       |
+| <a id="opt-serverstransport-tls-spiffe-ids"></a>`serverstransport.`<br />`tls.spiffe`<br />`.ids`                   | Allow SPIFFE IDs.<br />This takes precedence over the SPIFFE TrustDomain.                                                                                                                                          |         | No       |
+| <a id="opt-serverstransport-tls-spiffe-trustDomain"></a>`serverstransport.`<br />`tls.spiffe`<br />`.trustDomain`   | Allow SPIFFE trust domain.                                                                                                                                                                                         | ""      | No       |
 
 > **SPIFFE**
-> Please note that SPIFFE must be enabled in the [install configuration](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/tls/spiffe) (formerly known as static configuration) before using it to secure the connection between Traefik and the backends.
+> Please note that SPIFFE must be enabled in the [install configuration](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/tls/spiffe) (formerly known as static configuration) before using it to secure the connection between Traefik and the backends.
 
 ### `terminationDelay`
 

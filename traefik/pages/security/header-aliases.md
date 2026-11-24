@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/security/header-aliases.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/security/header-aliases.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/security/header-aliases.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/security/header-aliases.md)
 
 # Headers with Aliasing Names
 
@@ -27,7 +27,7 @@ and have such a backend read the spoofed value instead of the value asserted by 
 
 ## Configuration
 
-The [`aliasHeadersStrategy`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints#opt-http-aliasHeadersStrategy) entry point option is the mitigation
+The [`aliasHeadersStrategy`](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints#opt-http-aliasHeadersStrategy) entry point option is the mitigation
 against this class of spoofing. It controls how the request headers whose name aliases another header name are
 handled before routing:
 
@@ -82,5 +82,5 @@ entryPoints:
 > **Deprecated option**
 > The `underscoreHeadersStrategy` option is deprecated in favor of `aliasHeadersStrategy`, which handles every
 > aliasing character instead of the underscore only.
-> See the [feature deprecation notices](https://doc.traefik.io/traefik/v3.7/deprecation/features#entry-point-underscoreheadersstrategy-option)
+> See the [feature deprecation notices](https://doc.traefik.io/traefik/v3.8/deprecation/features#entry-point-underscoreheadersstrategy-option)
 > for more details.

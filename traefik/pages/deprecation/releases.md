@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/deprecation/releases.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/deprecation/releases.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/deprecation/releases.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/deprecation/releases.md)
 
 # Releases
 
@@ -25,7 +25,7 @@ Below is a non-exhaustive list of versions and their maintenance status:
 > - **Security support**: Receives only critical bug and security fixes.
 >   This page is maintained and updated periodically to reflect our roadmap and any decisions affecting the end of support for Traefik Proxy.
 
-Please refer to our migration guides for specific instructions on upgrading between versions, an example is the [v2 to v3 migration guide](https://doc.traefik.io/traefik/v3.7/migrate/v2-to-v3).
+Please refer to our migration guides for specific instructions on upgrading between versions, an example is the [v2 to v3 migration guide](https://doc.traefik.io/traefik/v3.8/migrate/v2-to-v3).
 
 > **All target dates for end of support or feature removal announcements may be subject to change.**
 

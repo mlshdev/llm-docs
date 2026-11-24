@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/migrate/v2-to-v3.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/migrate/v2-to-v3.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/migrate/v2-to-v3.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/migrate/v2-to-v3.md)
 
 # Migration Guide: From v2 to v3
 
@@ -6,7 +6,7 @@ How to Migrate from Traefik v2 to Traefik v3.
 
 > **Streamlined Migration Process**
 > Traefik v3 introduces minimal breaking changes and maintains backward compatibility with v2 syntax in routing configuration, offering a gradual migration path.
-> With Traefik v3, we are introducing a streamlined transition process from v2. Minimal breaking changes have been made to specific options in the [install configuration](https://doc.traefik.io/traefik/v3.7/migrate/v2-to-v3-details#install-configuration-changes "Link to install configuration changes"), and we are ensuring backward compatibility with v2 syntax in the [routing configuration](https://doc.traefik.io/traefik/v3.7/migrate/v2-to-v3-details#routing-configuration-changes "Link to routing configuration changes"). This will offer a gradual path for adopting the v3 syntax, allowing users to progressively migrate their Kubernetes ingress resources, Docker labels, etc., to the new format.
+> With Traefik v3, we are introducing a streamlined transition process from v2. Minimal breaking changes have been made to specific options in the [install configuration](https://doc.traefik.io/traefik/v3.8/migrate/v2-to-v3-details#install-configuration-changes "Link to install configuration changes"), and we are ensuring backward compatibility with v2 syntax in the [routing configuration](https://doc.traefik.io/traefik/v3.8/migrate/v2-to-v3-details#routing-configuration-changes "Link to routing configuration changes"). This will offer a gradual path for adopting the v3 syntax, allowing users to progressively migrate their Kubernetes ingress resources, Docker labels, etc., to the new format.
 
 ## Migration Overview
 
@@ -28,7 +28,7 @@ The migration process consists of three progressive steps designed to minimize r
 
 **Review and Update install Configuration**
 
-Check the changes in [install configurations](https://doc.traefik.io/traefik/v3.7/migrate/v2-to-v3-details#install-configuration-changes "Link to install configuration changes") and [operations](https://doc.traefik.io/traefik/v3.7/migrate/v2-to-v3-details#operations-changes "Link to operations changes") brought by Traefik v3. Modify your configurations accordingly.
+Check the changes in [install configurations](https://doc.traefik.io/traefik/v3.8/migrate/v2-to-v3-details#install-configuration-changes "Link to install configuration changes") and [operations](https://doc.traefik.io/traefik/v3.8/migrate/v2-to-v3-details#operations-changes "Link to operations changes") brought by Traefik v3. Modify your configurations accordingly.
 
 **Enable v2 Compatibility Mode**
 
@@ -41,7 +41,7 @@ core:
 ```
 
 > **Backward Compatibility**
-> This snippet in the install configuration makes the [v2 format](https://doc.traefik.io/traefik/v3.7/migrate/v2-to-v3-details#configure-the-default-syntax-in-install-configuration "Link to configure default syntax in install config") the default rule matchers syntax.
+> This snippet in the install configuration makes the [v2 format](https://doc.traefik.io/traefik/v3.8/migrate/v2-to-v3-details#configure-the-default-syntax-in-install-configuration "Link to configure default syntax in install config") the default rule matchers syntax.
 
 ### Testing Phase
 
@@ -105,18 +105,18 @@ We strongly advise you to follow a progressive migration strategy ([Kubernetes r
 ## Step 3: Progressively Migrate Routing Configuration
 
 > **Optional Immediate Step**
-> This step can be done later in the process, as Traefik v3 is compatible with the v2 format for [routing configuration](https://doc.traefik.io/traefik/v3.7/migrate/v2-to-v3-details#routing-configuration-changes "Link to routing configuration changes"). Enable Traefik logs to get some help if any deprecated option is in use.
+> This step can be done later in the process, as Traefik v3 is compatible with the v2 format for [routing configuration](https://doc.traefik.io/traefik/v3.8/migrate/v2-to-v3-details#routing-configuration-changes "Link to routing configuration changes"). Enable Traefik logs to get some help if any deprecated option is in use.
 
 ### Migration Process
 
 **Review Routing Configuration Changes**
 
-Check the changes in [routing configuration](https://doc.traefik.io/traefik/v3.7/migrate/v2-to-v3-details#routing-configuration-changes "Link to routing configuration changes") to understand what updates are needed.
+Check the changes in [routing configuration](https://doc.traefik.io/traefik/v3.8/migrate/v2-to-v3-details#routing-configuration-changes "Link to routing configuration changes") to understand what updates are needed.
 
 **Progressive Router Migration**
 
 1. **Select a router** to migrate first (start with non-critical services)
-2. **[Switch to v3 syntax](https://doc.traefik.io/traefik/v3.7/migrate/v2-to-v3-details#configure-the-syntax-per-router "Link to configuring the syntax per router")** for that specific router
+2. **[Switch to v3 syntax](https://doc.traefik.io/traefik/v3.8/migrate/v2-to-v3-details#configure-the-syntax-per-router "Link to configuring the syntax per router")** for that specific router
 3. **Test thoroughly** to ensure ingress traffic is not impacted
 4. **Deploy and validate** the updated resource
 5. **Remove the old v2 resource** once validation is complete

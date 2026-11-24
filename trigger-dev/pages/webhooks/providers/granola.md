@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.8: [docs/webhooks/providers/granola.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/webhooks/providers/granola.mdx)
+> Pinned source for Trigger.dev v4.8.10: [docs/webhooks/providers/granola.mdx](https://github.com/triggerdotdev/trigger.dev/blob/523400fcb4d65f3f24303b92566862a72817907c/docs/webhooks/providers/granola.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/providers/granola
 
 # Granola webhooks
@@ -43,3 +43,7 @@ export const granolaEvents = webhook({
 ## Fetching the note
 
 Deliveries carry the note id but not its content. Fetch the note with Granola's API inside `onEvent`.
+
+## Example project
+
+[How to trigger an AI agent from a new Granola note](https://trigger.dev/docs/guides/example-projects/granola-meeting-agent) fetches each new note's transcript and runs an AI agent on it.

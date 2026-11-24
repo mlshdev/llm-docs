@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [migrate/fireworks-ai.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/migrate/fireworks-ai.mdx)
+> Pinned source for Runpod main: [migrate/fireworks-ai.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/migrate/fireworks-ai.mdx)
 > Canonical documentation: https://docs.runpod.io/migrate/fireworks-ai
 
 # Migrate from Fireworks AI to Runpod

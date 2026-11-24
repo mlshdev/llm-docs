@@ -1,10 +1,10 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/install-configuration/api-dashboard.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/install-configuration/api-dashboard.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/install-configuration/api-dashboard.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/install-configuration/api-dashboard.md)
 
 Traefik exposes a number of information through API endpoints, such as the configuration of your routers, services, middlewares, etc.
 
 The dashboard, which is the central place that displays the current active routes handled by Traefik, fetches the data from this API.
 
-![Dashboard - Providers](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/webui-dashboard.png)
+![Dashboard - Providers](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/webui-dashboard.png)
 *The dashboard in action*
 
 ## Security
@@ -234,21 +234,21 @@ The dashboard is available by default on the path  `/dashboard/`.
 
 > **Note**
 >
-> - The trailing slash `/` in `/dashboard/` is mandatory. This limitation can be mitigated using the [RedirectRegex Middleware](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/redirectregex).
+> - The trailing slash `/` in `/dashboard/` is mandatory. This limitation can be mitigated using the [RedirectRegex Middleware](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/redirectregex).
 >   \- There is also a redirect from the path `/` to `/dashboard/`, but you should not rely on this behavior, as it is subject to change and may complicate routing rules.
 
 As mentioned above in the [Security](#security) section, it is important to secure access to both the dashboard and the API.
 You need to define a routing configuration within Traefik.
 This involves setting up a router attached to the service `api@internal`, which allows you to:
 
-- Implement security features using [middlewares](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/overview), such as authentication ([basicAuth](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/basicauth), [digestAuth](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/digestauth),
-  [forwardAuth](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/forwardauth)) or [allowlisting](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/ipallowlist).
+- Implement security features using [middlewares](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/overview), such as authentication ([basicAuth](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/basicauth), [digestAuth](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/digestauth),
+  [forwardAuth](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/forwardauth)) or [allowlisting](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/ipallowlist).
 
 - Define a [router rule](#dashboard-router-rule) for accessing the dashboard through Traefik.
 
 ### Dashboard Router Rule
 
-To ensure proper access to the dashboard, the [router rule](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/routing/rules-and-priority#rules) you define must match requests intended for the `/api` and `/dashboard` paths.
+To ensure proper access to the dashboard, the [router rule](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/routing/rules-and-priority#rules) you define must match requests intended for the `/api` and `/dashboard` paths.
 We recommend using either a *Host-based rule* to match all requests on the desired domain or explicitly defining a rule that includes both path prefixes.
 Here are some examples:
 

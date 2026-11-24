@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/tcp/tls.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/tcp/tls.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/tcp/tls.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/tcp/tls.md)
 
 ## General
 
@@ -100,13 +100,13 @@ labels:
 | Field                                       | Description                                                                                                                                                                                                                                                                                                                                                                                                         | Default | Required |
 | :------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------ | :------- |
 | <a id="opt-passthrough"></a>`passthrough`   | Defines whether the requests should be forwarded "as is", keeping all data encrypted.                                                                                                                                                                                                                                                                                                                               | false   | No       |
-| <a id="opt-options"></a>`options`           | enables fine-grained control of the TLS parameters. It refers to a [TLS Options](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/tls/tls-options) and will be applied only if a `HostSNI` rule is defined.<br/>Unlike HTTP routers, several TCP routers can serve the same `HostSNI` with different TLS options. See [TLS Options and HostSNI](#tls-options-and-hostsni) for more details. | ""      | No       |
-| <a id="opt-certResolver"></a>`certResolver` | The name of the certificate resolver to use for automatic certificate generation via ACME providers (such as Let's Encrypt). See the [Certificate Resolver](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/#certificate-resolver) section for more details.                                                                                                                                | ""      | No       |
-| <a id="opt-domains"></a>`domains`           | List of domains and Subject Alternative Names (SANs) for explicit certificate domain specification. See the [Custom Domains](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/#custom-domains) section for more details.                                                                                                                                                                     | \[]     | No       |
+| <a id="opt-options"></a>`options`           | enables fine-grained control of the TLS parameters. It refers to a [TLS Options](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/tls/tls-options) and will be applied only if a `HostSNI` rule is defined.<br/>Unlike HTTP routers, several TCP routers can serve the same `HostSNI` with different TLS options. See [TLS Options and HostSNI](#tls-options-and-hostsni) for more details. | ""      | No       |
+| <a id="opt-certResolver"></a>`certResolver` | The name of the certificate resolver to use for automatic certificate generation via ACME providers (such as Let's Encrypt). See the [Certificate Resolver](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/tcp/#certificate-resolver) section for more details.                                                                                                                                | ""      | No       |
+| <a id="opt-domains"></a>`domains`           | List of domains and Subject Alternative Names (SANs) for explicit certificate domain specification. See the [Custom Domains](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/tcp/#custom-domains) section for more details.                                                                                                                                                                     | \[]     | No       |
 
 ## TLS Options and HostSNI
 
-Contrary to the [HTTP routers](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/tls/tls-options#conflicting-tls-options),
+Contrary to the [HTTP routers](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/tls/tls-options#conflicting-tls-options),
 several TCP routers can serve the same `HostSNI` with different TLS options,
 and this is not a conflict.
 
@@ -159,7 +159,7 @@ Traefik will automatically obtain and manage TLS certificates for the domains sp
 
 > **Prerequisites**
 >
-> - Certificate resolvers must be defined in the [static configuration](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/tls/certificate-resolvers/acme)
+> - Certificate resolvers must be defined in the [static configuration](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/tls/certificate-resolvers/acme)
 > - The router must have `tls` enabled
 > - An ACME challenge type must be configured for the certificate resolver
 

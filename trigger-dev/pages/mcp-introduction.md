@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.8: [docs/mcp-introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/mcp-introduction.mdx)
+> Pinned source for Trigger.dev v4.8.10: [docs/mcp-introduction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/523400fcb4d65f3f24303b92566862a72817907c/docs/mcp-introduction.mdx)
 > Canonical documentation: https://trigger.dev/docs/mcp-introduction
 
 # MCP Introduction
@@ -19,7 +19,7 @@ The Trigger.dev MCP (Model Context Protocol) Server enables AI assistants to int
 
 > **Note**
 >
-> This page covers the CLI MCP server, which runs locally and can deploy and run your dev server. To connect over HTTP without installing anything, use the [remote MCP server](https://trigger.dev/docs/mcp-remote).
+> This page covers the CLI MCP server, which runs locally and can deploy and run your dev server.
 
 ## Installation
 

@@ -1,8 +1,8 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/setup/swarm.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/setup/swarm.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/setup/swarm.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/setup/swarm.md)
 
 This guide provides an in‑depth walkthrough for installing and configuring Traefik Proxy as a **Swarm service** using `docker stack deploy`. It follows the same structure as the standalone‑Docker tutorial and covers:
 
-- Enable the [Swarm provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/swarm)
+- Enable the [Swarm provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/swarm)
 - Expose **web** (HTTP :80) and **websecure** (HTTPS :443) entrypoints
 - Redirect all HTTP traffic to HTTPS
 - Secure the Traefik dashboard with **basic‑auth**
@@ -57,7 +57,7 @@ In the same directory, create `docker‑compose‑swarm.yaml`:
 ```yaml
 services:
   traefik:
-    image: traefik:v3.7
+    image: traefik:v3.8
     
     networks:
     # Connect to the 'traefik_proxy' overlay network for inter-container communication across nodes
@@ -198,7 +198,7 @@ Swarm schedules the services on a manager node and binds ports 80/443.
 
 Open **<https://dashboard.swarm.localhost/>** in your browser — the dashboard should prompt for the basic‑auth credentials you configured.
 
-![Traefik Dashboard](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/setup/traefik-dashboard-swarm.png)
+![Traefik Dashboard](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/setup/traefik-dashboard-swarm.png)
 
 ## Test the whoami Application
 
@@ -240,7 +240,7 @@ Requesting the HTTP endpoint redirects to HTTPS, confirming the setup works.
 
 You can also open a browser and navigate to <https://whoami.swarm.localhost> to see a JSON dump from the service:
 
-![Whoami](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/setup/whoami-json-dump.png)
+![Whoami](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/setup/whoami-json-dump.png)
 
 ### Other Key Configuration Areas
 
@@ -259,7 +259,7 @@ command:
   - "--entrypoints.websecure.http.tls.certresolver=le"
 ```
 
-This defines a resolver named `le`, sets the required email and storage path (within the mounted `/letsencrypt` volume), and enables the HTTP challenge. Refer to the [HTTPS/TLS Documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/tls/certificate-resolvers/overview) and [Let's Encrypt Documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/tls/certificate-resolvers/acme) for details on challenges and DNS provider configuration.
+This defines a resolver named `le`, sets the required email and storage path (within the mounted `/letsencrypt` volume), and enables the HTTP challenge. Refer to the [HTTPS/TLS Documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/tls/certificate-resolvers/overview) and [Let's Encrypt Documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/tls/certificate-resolvers/acme) for details on challenges and DNS provider configuration.
 
 > **Note**
 >
@@ -285,7 +285,7 @@ command:
   - "--metrics.prometheus.addrouterslabels=true"
 ```
 
-This enables the `/metrics` endpoint (typically accessed via the internal API port, often 8080 by default if not secured, or via a dedicated entry point). See the [Metrics Documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/metrics) for options.
+This enables the `/metrics` endpoint (typically accessed via the internal API port, often 8080 by default if not secured, or via a dedicated entry point). See the [Metrics Documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/metrics) for options.
 
 #### Tracing (OTel)
 
@@ -300,7 +300,7 @@ command:
 ```
 
 > **Note**
-> This option requires a running OTEL collector accessible by Traefik. Consult the [Tracing Documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/tracing).
+> This option requires a running OTEL collector accessible by Traefik. Consult the [Tracing Documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/tracing).
 
 #### Access Logs
 

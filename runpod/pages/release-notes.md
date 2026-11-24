@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [release-notes.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/release-notes.mdx)
+> Pinned source for Runpod main: [release-notes.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/release-notes.mdx)
 > Canonical documentation: https://docs.runpod.io/release-notes
 
 # Product updates
@@ -39,7 +39,7 @@ New features, fixes, and improvements for the Runpod platform. Review setup, con
 
 **October 2, 2026**
 
-\*\*\*\* [AstaBrief 8B on Serverless](https://console.runpod.io/hub/runpod-workers/astabrief?utm_source=hub\&utm_medium=product\&utm_campaign=202610_activation_indie-ml-dev_allen-ai-astabrief-8b\&utm_content=readme)  AstaBrief 8B from Allen AI is available on Runpod Serverless with a validated vLLM recipe.
+\*\*\*\* [AstaBrief 8B on Serverless](https://console.runpod.io/hub/listing/runpod-workers/astabrief?utm_source=hub\&utm_medium=product\&utm_campaign=202610_activation_indie-ml-dev_allen-ai-astabrief-8b\&utm_content=readme)  AstaBrief 8B from Allen AI is available on Runpod Serverless with a validated vLLM recipe.
 
 **September 25, 2026**
 

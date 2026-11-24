@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [examples/ai-agents/openclaw.mdx](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/examples/ai-agents/openclaw.mdx)
+> Pinned source for Vast.ai main: [examples/ai-agents/openclaw.mdx](https://github.com/vast-ai/docs/blob/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/examples/ai-agents/openclaw.mdx)
 > Canonical documentation: https://docs.vast.ai/examples/ai-agents/openclaw
 
 # OpenClaw AI Assistant with vLLM on Vast.ai

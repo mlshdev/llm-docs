@@ -1,9 +1,9 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/install-configuration/providers/docker.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/install-configuration/providers/docker.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/install-configuration/providers/docker.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/install-configuration/providers/docker.md)
 
 # Traefik & Docker
 
 > **The Quick Start Uses Docker**
-> If you have not already read it, maybe you would like to go through the [quick start guide](https://doc.traefik.io/traefik/v3.7/getting-started/) that uses the Docker provider.
+> If you have not already read it, maybe you would like to go through the [quick start guide](https://doc.traefik.io/traefik/v3.8/getting-started/) that uses the Docker provider.
 
 ## Configuration Example
 
@@ -47,13 +47,13 @@ services:
 | <a id="opt-providers-docker-username"></a>`providers.docker.username`                             | Defines the username for Basic HTTP authentication. This should be used when the Docker daemon socket is exposed through an HTTP proxy that requires Basic HTTP authentication.                                                                                                                                                                                                      | ""                                  | No       |
 | <a id="opt-providers-docker-password"></a>`providers.docker.password`                             | Defines the password for Basic HTTP authentication. This should be used when the Docker daemon socket is exposed through an HTTP proxy that requires Basic HTTP authentication.                                                                                                                                                                                                      | ""                                  | No       |
 | <a id="opt-providers-docker-useBindPortIP"></a>`providers.docker.useBindPortIP`                   | Instructs Traefik to use the IP/Port attached to the container's binding instead of its inner network IP/Port. See [here](#usebindportip) for more information                                                                                                                                                                                                                       | false                               | No       |
-| <a id="opt-providers-docker-exposedByDefault"></a>`providers.docker.exposedByDefault`             | Expose containers by default through Traefik. If set to *false*, containers that do not have a `traefik.enable=true` label are ignored from the resulting routing configuration.<br>See [here](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview#restrict-the-scope-of-service-discovery) for additional information                            | true                                | No       |
+| <a id="opt-providers-docker-exposedByDefault"></a>`providers.docker.exposedByDefault`             | Expose containers by default through Traefik. If set to *false*, containers that do not have a `traefik.enable=true` label are ignored from the resulting routing configuration.<br>See [here](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/overview#restrict-the-scope-of-service-discovery) for additional information                            | true                                | No       |
 | <a id="opt-providers-docker-network"></a>`providers.docker.network`                               | Defines a default docker network to use for connections to all containers. This option can be overridden on a per-container basis with the `traefik.docker.network` label.                                                                                                                                                                                                           | ""                                  | No       |
 | <a id="opt-providers-docker-defaultRule"></a>`providers.docker.defaultRule`                       | Defines what routing rule to apply to a container if no rule is defined by a label. See [here](#defaultrule) for more information.                                                                                                                                                                                                                                                   | ``"Host(`{{ normalize .Name }}`)"`` | No       |
 | <a id="opt-providers-docker-httpClientTimeout"></a>`providers.docker.httpClientTimeout`           | Defines the client timeout for HTTP connections. Accepts a duration string (e.g., `30s`, `1m30s`) or an integer value in seconds. If its value is 0, no timeout is set.                                                                                                                                                                                                              | 0                                   | No       |
 | <a id="opt-providers-docker-watch"></a>`providers.docker.watch`                                   | Instructs Traefik to watch Docker events or not.                                                                                                                                                                                                                                                                                                                                     | true                                | No       |
 | <a id="opt-providers-docker-constraints"></a>`providers.docker.constraints`                       | Defines an expression that Traefik matches against the container labels to determine whether to create any route for that container. See [here](#constraints) for more information.                                                                                                                                                                                                  | ""                                  | No       |
-| <a id="opt-providers-docker-allowEmptyServices"></a>`providers.docker.allowEmptyServices`         | Instructs the provider to create any [servers load balancer](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/service#service-load-balancer) defined for Docker containers regardless of the [healthiness](https://docs.docker.com/reference/dockerfile#healthcheck) of the corresponding containers.                                         | false                               | No       |
+| <a id="opt-providers-docker-allowEmptyServices"></a>`providers.docker.allowEmptyServices`         | Instructs the provider to create any [servers load balancer](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/load-balancing/service#service-load-balancer) defined for Docker containers regardless of the [healthiness](https://docs.docker.com/reference/dockerfile#healthcheck) of the corresponding containers.                                         | false                               | No       |
 | <a id="opt-providers-docker-tls-ca"></a>`providers.docker.tls.ca`                                 | Defines the path to the certificate authority used for the secure connection to Docker, it defaults to the system bundle.                                                                                                                                                                                                                                                            | ""                                  | No       |
 | <a id="opt-providers-docker-tls-cert"></a>`providers.docker.tls.cert`                             | Defines the path to the public certificate used for the secure connection to Docker. When using this option, setting the `key` option is required.                                                                                                                                                                                                                                   | ""                                  | Yes      |
 | <a id="opt-providers-docker-tls-key"></a>`providers.docker.tls.key`                               | Defines the path to the private key used for the secure connection to Docker. When using this option, setting the `cert` option is required.                                                                                                                                                                                                                                         | ""                                  | Yes      |
@@ -342,7 +342,7 @@ as well as the usual boolean logic, as shown in examples below.
 > constraints = "LabelRegex(`a.label.name`, `a.+`)"
 > ```
 
-For additional information, refer to [Restrict the Scope of Service Discovery](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview#restrict-the-scope-of-service-discovery).
+For additional information, refer to [Restrict the Scope of Service Discovery](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/overview#restrict-the-scope-of-service-discovery).
 
 **File (YAML)**
 
@@ -370,10 +370,10 @@ providers:
 
 ## Routing Configuration
 
-When using Docker as a [provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview),
+When using Docker as a [provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/overview),
 Traefik uses [container labels](https://docs.docker.com/reference/cli/docker/container/run/#label) to retrieve its routing configuration.
 
-See the list of labels in the dedicated [routing](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/other-providers/docker) section.
+See the list of labels in the dedicated [routing](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/other-providers/docker) section.
 
 ### Routing Configuration with Labels
 
@@ -401,7 +401,7 @@ Port detection for private communication works as follows:
 - If a container does not expose any port, or the selection from multiple ports does not fit,
   then you must manually specify which port Traefik should use for communication
   by using the label `traefik.http.services.<service_name>.loadbalancer.server.port`
-  (Read more on this label in the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/other-providers/docker#services)).
+  (Read more on this label in the dedicated section in [routing](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/other-providers/docker#services)).
 
 ### Host networking
 

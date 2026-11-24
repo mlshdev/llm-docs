@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/kubernetes/knative.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/kubernetes/knative.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/kubernetes/knative.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/kubernetes/knative.md)
 
 # Traefik & Knative
 
@@ -42,7 +42,7 @@ Hello Go Sample v1!
 
 > **Note**
 > The `example.com` domain is the public domain configured when deploying the Traefik controller.
-> Check out [the install configuration](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/knative) for more details.
+> Check out [the install configuration](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/knative) for more details.
 
 ### Tag based routing
 

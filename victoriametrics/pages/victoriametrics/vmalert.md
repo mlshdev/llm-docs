@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.156.0: [docs/victoriametrics/vmalert.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/vmalert.md)
+> Pinned source for VictoriaMetrics v1.157.0: [docs/victoriametrics/vmalert.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/vmalert.md)
 
 `vmalert` executes a list of the given [alerting](https://docs.victoriametrics.com/victoriametrics/vmalert/#alerting-rules)
 or [recording](https://docs.victoriametrics.com/victoriametrics/vmalert/#recording-rules)
@@ -619,7 +619,7 @@ rules execution, storing recording rules results and alerts state.
     -notifier.url=http://alertmanager:9093          # AlertManager addr to send alerts when they trigger
 ```
 
-![vmalert single](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/vmalert_single.webp)
+![vmalert single](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/vmalert_single.webp)
 
 ### Cluster VictoriaMetrics
 
@@ -639,7 +639,7 @@ Cluster mode could have multiple `vminsert` and `vmselect` components.
     -notifier.url=http://alertmanager:9093                      # AlertManager addr to send alerts when they trigger
 ```
 
-![vmalert cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/vmalert_cluster.webp)
+![vmalert cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/vmalert_cluster.webp)
 
 In case when you want to spread the load on these components - add balancers before them and configure
 `vmalert` with balancer addresses. Please, see more about [VictoriaMetrics cluster architecture](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#architecture-overview).
@@ -662,7 +662,7 @@ Alertmanagers.
     -notifier.url=http://alertmanagerN:9093         # The same alert will be sent to all configured notifiers
 ```
 
-![vmalert ha](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/vmalert_ha.webp)
+![vmalert ha](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/vmalert_ha.webp)
 
 To avoid recording rules results and alerts state duplication in VictoriaMetrics server
 don't forget to configure [deduplication](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#deduplication).
@@ -738,7 +738,7 @@ or reducing resolution) and push results to "cold" cluster.
     -remoteWrite.url=http://aggregated-cluster-vminsert:8480/insert/0/prometheus    # vminsert addr to persist recording rules results
 ```
 
-![vmalert multi cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/vmalert_multicluster.webp)
+![vmalert multi cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/vmalert_multicluster.webp)
 
 Please note, [replay](#rules-backfilling) feature may be used for transforming historical data.
 
@@ -752,7 +752,7 @@ For persisting recording or alerting rule results `vmalert` requires `-remoteWri
 But this flag supports only one destination. To persist rule results to multiple destinations
 we recommend using [vmagent](https://docs.victoriametrics.com/victoriametrics/vmagent/) as fan-out proxy:
 
-![vmalert multiple remote write destinations](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/vmalert_multiple_rw.webp)
+![vmalert multiple remote write destinations](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/vmalert_multiple_rw.webp)
 
 In this topology, `vmalert` is configured to persist rule results to `vmagent`. And `vmagent`
 is configured to fan-out received data to two or more destinations.
@@ -1023,7 +1023,7 @@ for each rule. You can see these updates in vmalert's [web UI](#web):
 2. Find the Group and rule you're interested in
 3. Click the `Details` link next to rule's name and look at the `Last N updates` section:
 
-![vmalert state](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/vmalert_state.webp)
+![vmalert state](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/vmalert_state.webp)
 
 The rows in this section show the rule's evaluations in order, along with their results.
 
@@ -1087,12 +1087,12 @@ Data delay is one of the most common problems when running rules.
 vmalert runs the configured rules at specific timestamps.
 It expects that the needed data is already available in the configured `-datasource.url` **at the time** the rule is evaluated.
 
-![vmalert expected evaluation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/vmalert_ts_normal.gif)
+![vmalert expected evaluation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/vmalert_ts_normal.gif)
 
 Usually, troubles begin when data in `-datasource.url` is delayed or absent. In such cases, evaluations
 may get an empty response from the datasource, produce empty recording rules or reset alerts state:
 
-![vmalert evaluation when data is delayed](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/vmalert_ts_data_delay.gif)
+![vmalert evaluation when data is delayed](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/vmalert_ts_data_delay.gif)
 
 > Please note, data delay is inevitable in distributed systems. And it is better to account for it rather than ignore it.
 
@@ -1306,6 +1306,8 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/vmalert/ .
      Optional OAuth2 tokenURL to use for -datasource.url
   -datasource.queryStep duration
      How far a value can fallback to when evaluating queries to the configured -datasource.url and -remoteRead.url. Only valid for prometheus datasource. For example, if -datasource.queryStep=15s then param "step" with value "15s" will be added to every query. If set to 0, rule's evaluation interval will be used instead. (default 5m0s)
+  -datasource.queryTimeout duration
+     Timeout for a single request to -datasource.url and -remoteRead.url. If set to 0, the evaluation interval of the rule's group is used for rule evaluation, and no timeout is applied in replay mode.
   -datasource.roundDigits int
      Adds "round_digits" GET param to datasource requests which limits the number of digits after the decimal point in response values. Only valid for VictoriaMetrics as the datasource.
   -datasource.showURL
@@ -1765,15 +1767,15 @@ These flags are available only in [VictoriaMetrics enterprise](https://docs.vict
   -defaultTenant.prometheus string
      Default tenant for Prometheus alerting groups. See https://docs.victoriametrics.com/victoriametrics/vmalert/#multitenancy . This flag is available only in Enterprise binaries. See https://docs.victoriametrics.com/victoriametrics/enterprise/
   -eula
-     Deprecated, please use -license or -licenseFile flags instead. By specifying this flag, you confirm that you have an enterprise license and accept the ESA https://victoriametrics.com/legal/esa/ . This flag is available only in Enterprise binaries. See https://docs.victoriametrics.com/victoriametrics/enterprise/
+     By specifying this flag, you accept the ESA https://victoriametrics.com/legal/esa/ . This flag is available only in Enterprise binaries. See https://docs.victoriametrics.com/victoriametrics/enterprise/
   -license string
-     License key for VictoriaMetrics Enterprise. See https://victoriametrics.com/products/enterprise/ . Trial Enterprise license can be obtained from https://victoriametrics.com/products/enterprise/trial/ . This flag is available only in Enterprise binaries. The license key can be also passed via file specified by -licenseFile command-line flag
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version.
   -license.forceOffline
-     Whether to enable offline verification for VictoriaMetrics Enterprise license key, which has been passed either via -license or via -licenseFile command-line flag. The issued license key must support offline verification feature. Contact info@victoriametrics.com if you need offline license verification. This flag is available only in Enterprise binaries
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version.
   -licenseFile string
-     Path to file with license key for VictoriaMetrics Enterprise. See https://victoriametrics.com/products/enterprise/ . Trial Enterprise license can be obtained from https://victoriametrics.com/products/enterprise/trial/ . This flag is available only in Enterprise binaries. The license key can be also passed inline via -license command-line flag
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version.
   -licenseFile.reloadInterval duration
-     Interval for reloading the license file specified via -licenseFile. A non-positive value disables periodic and SIGHUP-triggered reloads of -licenseFile. See https://victoriametrics.com/products/enterprise/ . This flag is available only in Enterprise binaries (default 1h0m0s)
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version. (default 1h0m0s)
   -mtls array
      Whether to require valid client certificate for https requests to the corresponding -httpListenAddr . This flag works only if -tls flag is set. See also -mtlsCAFile . This flag is available only in Enterprise binaries. See https://docs.victoriametrics.com/victoriametrics/enterprise/
      Supports array of values separated by comma or specified via multiple flags.

@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/getting-started/configuration-overview.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/getting-started/configuration-overview.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/getting-started/configuration-overview.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/getting-started/configuration-overview.md)
 
 # Configuration Introduction
 
@@ -9,7 +9,7 @@ Configuration in Traefik can refer to two different things:
 - The install (startup) configuration (formerly known as the *static configuration*)
 - The routing configuration (formerly known as the *dynamic configuration*)
 
-Elements in the *install configuration* set up connections to [providers](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview) and define the [entrypoints](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints) Traefik will listen to (these elements don't change often).
+Elements in the *install configuration* set up connections to [providers](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/overview) and define the [entrypoints](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints) Traefik will listen to (these elements don't change often).
 
 The *routing configuration* contains everything that defines how the requests are handled by your system.
 This configuration can change and is seamlessly hot-reloaded, without any request interruption or connection loss.
@@ -20,12 +20,12 @@ This configuration can change and is seamlessly hot-reloaded, without any reques
 
 ## The Routing Configuration
 
-Traefik gets its *routing configuration* from [providers](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview): whether an orchestrator, a service registry, or a plain old configuration file.
+Traefik gets its *routing configuration* from [providers](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/overview): whether an orchestrator, a service registry, or a plain old configuration file.
 
-Since this configuration is specific to your infrastructure choices, we invite you to refer to the [dedicated section of this documentation](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/dynamic-configuration-methods).
+Since this configuration is specific to your infrastructure choices, we invite you to refer to the [dedicated section of this documentation](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/dynamic-configuration-methods).
 
 > **Info**
-> In the [Quick Start example](https://doc.traefik.io/traefik/v3.7/getting-started/docker), the whoami application routing configuration comes from docker in the form of a label attached to the whoami container.
+> In the [Quick Start example](https://doc.traefik.io/traefik/v3.8/getting-started/docker), the whoami application routing configuration comes from docker in the form of a label attached to the whoami container.
 > **HTTPS Certificates also belong to the routing configuration.**
 > You can add / update / remove them without restarting your Traefik instance.
 
@@ -70,17 +70,17 @@ traefik --help
 # or
 
 docker run traefik[:version] --help
-# ex: docker run traefik:v3.7 --help
+# ex: docker run traefik:v3.8 --help
 ```
 
-Check the [CLI reference](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/configuration-options "Link to CLI reference overview") for an overview about all available arguments.
+Check the [CLI reference](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/configuration-options "Link to CLI reference overview") for an overview about all available arguments.
 
 ### Environment Variables
 
-All available environment variables can be found in the [install configuration environment overview](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/configuration-options).
+All available environment variables can be found in the [install configuration environment overview](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/configuration-options).
 
 ## Available Configuration Options
 
 All the configuration options are documented in their related section.
 
-You can browse the available features in the menu, the [providers](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview), or the [routing section](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/dynamic-configuration-methods) to see them in action.
+You can browse the available features in the menu, the [providers](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/overview), or the [routing section](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/dynamic-configuration-methods) to see them in action.

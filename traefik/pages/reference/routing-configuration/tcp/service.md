@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/tcp/service.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/tcp/service.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/tcp/service.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/tcp/service.md)
 
 ## General
 
@@ -10,7 +10,7 @@ The servers load balancer is in charge of balancing the requests between the ser
 
 ### Configuration Examples
 
-Declaring a Service with Two Servers -- Using the [File Provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file)
+Declaring a Service with Two Servers -- Using the [File Provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file)
 
 **Structured (YAML)**
 
@@ -81,7 +81,7 @@ labels:
 | <a id="opt-servers"></a>`servers`                   | Servers declare a single instance of your program.                                                                                                                                                                                                                                                      | ""      |    |
 | <a id="opt-servers-address"></a>`servers.address`   | The address option (IP:Port) point to a specific instance.                                                                                                                                                                                                                                              | ""      |    |
 | <a id="opt-servers-tls"></a>`servers.tls`           | The `tls` option determines whether to use TLS when dialing with the backend.                                                                                                                                                                                                                           | false   |    |
-| <a id="opt-serversTransport"></a>`serversTransport` | `serversTransport` allows referencing a TCP [ServersTransport](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/serverstransport) configuration for the communication between Traefik and your servers. If no serversTransport is specified, the default\@internal will be used. | ""      |    |
+| <a id="opt-serversTransport"></a>`serversTransport` | `serversTransport` allows referencing a TCP [ServersTransport](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/tcp/serverstransport) configuration for the communication between Traefik and your servers. If no serversTransport is specified, the default\@internal will be used. | ""      |    |
 | <a id="opt-healthCheck"></a>`healthCheck`           | Configures health check to remove unhealthy servers from the load balancing rotation. See [HealthCheck](#health-check) for details.                                                                                                                                                                     |         | No |
 
 ### Health Check
@@ -107,10 +107,10 @@ Below are the available options for the health check mechanism:
 
 The Weighted Round Robin (alias `WRR`) load-balancer of services is in charge of balancing the connections between multiple services based on provided weights.
 
-This strategy is only available to load balance between [services](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/service) and not between servers.
+This strategy is only available to load balance between [services](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/tcp/service) and not between servers.
 
 > **Supported Providers**
-> This strategy can be defined currently with the [File provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file).
+> This strategy can be defined currently with the [File provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file).
 > **Weights**
 > A weight must be a non-negative integer, and a `0` weight takes the child service out of the rotation.
 > A weighted service declaring a negative weight is disabled, and the routers referencing it are not created.
@@ -170,7 +170,7 @@ In addition, if the parent of this service also has HealthCheck enabled, this se
 > **Behavior**
 > If HealthCheck is enabled for a given service and any of its descendants does not have it enabled, the creation of the service will fail.
 >
-> HealthCheck on Weighted services can be defined currently only with the [File provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file).
+> HealthCheck on Weighted services can be defined currently only with the [File provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file).
 > **Structured (YAML)**
 
 ```yaml

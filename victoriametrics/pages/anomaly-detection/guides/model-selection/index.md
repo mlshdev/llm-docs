@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.156.0: [docs/anomaly-detection/guides/model-selection/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/guides/model-selection/_index.md)
+> Pinned source for VictoriaMetrics v1.157.0: [docs/anomaly-detection/guides/model-selection/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/anomaly-detection/guides/model-selection/_index.md)
 
 Start with the operational question you want to answer, then choose a recipe that matches your data. You do not need a machine learning background: each recipe explains what to look for, which model to use, and how to try it before connecting your own metrics.
 
@@ -24,7 +24,7 @@ For individual parameters, use the [model reference](https://docs.victoriametric
 
 Use this **when each series has its own definition of normal**. For example, a query can return one CPU-utilization series for each of two instances. A separate model is fitted for each series, and anomaly scores are then produced for each instance.
 
-![Univariate example: one CPU-utilization series stays near 40 percent, with an earlier unusual rise and a new rise to about 55 percent highlighted against its historical range.](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/guides/model-selection/univariate-comparison.webp)
+![Univariate example: one CPU-utilization series stays near 40 percent, with an earlier unusual rise and a new rise to about 55 percent highlighted against its historical range.](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/anomaly-detection/guides/model-selection/univariate-comparison.webp)
 
 *Suspicious values are compared with this instance's historical range.*
 
@@ -543,7 +543,7 @@ For range width, reactivity, shift detection, and warmup settings, use the [Temp
 
 Use [multivariate models](https://docs.victoriametrics.com/anomaly-detection/components/models/#multivariate-models) **when the relationship between aligned inputs matters**. Start with multivariate [Temporal Envelope](https://docs.victoriametrics.com/anomaly-detection/components/models/#temporal-envelope) (`temporal_envelope_multivariate`). The related series in each group are modeled together, and one joint anomaly score is produced per group.
 
-![Multivariate example: CPU and RAM normally rise and fall together. The highlighted interval pairs low CPU with high RAM. A relationship plot shows this new combination outside the earlier pairs, although each value has occurred before.](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/guides/model-selection/multivariate-comparison.webp)
+![Multivariate example: CPU and RAM normally rise and fall together. The highlighted interval pairs low CPU with high RAM. A relationship plot shows this new combination outside the earlier pairs, although each value has occurred before.](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/anomaly-detection/guides/model-selection/multivariate-comparison.webp)
 
 *CPU and RAM normally rise and fall together. Low CPU with high RAM is a suspicious combination, even though both values have occurred before.*
 
@@ -726,7 +726,7 @@ Replace the generated expressions with your completed-job rates and CPU query fo
 
 Use [peer-group models](https://docs.victoriametrics.com/anomaly-detection/components/models/#peer-group-models) **when similar entities should behave alike at the same timestamp**. Start with [Peer Outlier](https://docs.victoriametrics.com/anomaly-detection/components/models/#peer-outlier) (`peer_outlier`, experimental, available from v1.31.0). Peer values are compared at the same timestamp, and a separate anomaly score is produced for each peer.
 
-![Peer-group example: seven comparable checkout replicas use about 50 percent CPU, while checkout-08 stays near 84 percent. The steady but unusually high peer is highlighted.](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/guides/model-selection/peer-group-comparison.webp)
+![Peer-group example: seven comparable checkout replicas use about 50 percent CPU, while checkout-08 stays near 84 percent. The steady but unusually high peer is highlighted.](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/anomaly-detection/guides/model-selection/peer-group-comparison.webp)
 
 *checkout-08 stays steady but differs from seven comparable replicas at the same timestamp.*
 

@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/install-configuration/providers/kubernetes/knative.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/install-configuration/providers/kubernetes/knative.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/install-configuration/providers/kubernetes/knative.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/install-configuration/providers/kubernetes/knative.md)
 
 # Traefik & Knative
 
@@ -46,10 +46,10 @@ General functionality cannot be guaranteed for older versions.
      -p='{"data":{"example.com":""}}'
    ```
 
-5. Install/update the Traefik [RBAC](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/dynamic-configuration/kubernetes-knative-rbac.yml).
+5. Install/update the Traefik [RBAC](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/dynamic-configuration/kubernetes-knative-rbac.yml).
 
    ```bash
-   kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v3.7/docs/content/reference/dynamic-configuration/kubernetes-knative-rbac.yml
+   kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v3.8/docs/content/reference/dynamic-configuration/kubernetes-knative-rbac.yml
    ```
 
 ## Configuration Example
@@ -145,4 +145,4 @@ providers:
 
 ## Routing Configuration
 
-See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/knative).
+See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/knative).

@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.156.0: [docs/victoriametrics/url-examples.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/url-examples.md)
+> Pinned source for VictoriaMetrics v1.157.0: [docs/victoriametrics/url-examples.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/url-examples.md)
 
 ## General information
 
@@ -883,6 +883,16 @@ so it reads the same environment variables. For example:
 healthcheck:
   test: ["CMD", "/victoria-metrics-prod", "-healthcheck", "-envflag.enable"]
 ```
+
+The `-healthcheck` flag doesn't request the `/health` page. It only checks that the process accepts connections.
+This is why it works with any `-tls` and `-mtls` settings.
+
+The check passes in the following cases, while the `/health` page doesn't return `OK`:
+
+- The process accepts connections, but doesn't respond.
+- The process is shutting down, but still serves requests during `-http.shutdownDelay`.
+
+Request the `/health` page over HTTP if you need to catch these cases.
 
 ### /-/healthy
 

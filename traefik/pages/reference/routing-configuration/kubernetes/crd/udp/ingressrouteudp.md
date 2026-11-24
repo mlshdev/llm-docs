@@ -1,8 +1,8 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp.md)
 
-`IngressRouteUDP` is the CRD implementation of a [Traefik UDP router](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/udp/routing/rules-priority).
+`IngressRouteUDP` is the CRD implementation of a [Traefik UDP router](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/udp/routing/rules-priority).
 
-Before creating `IngressRouteUDP` objects, you need to apply the [Traefik Kubernetes CRDs](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd#requirements) to your Kubernetes cluster.
+Before creating `IngressRouteUDP` objects, you need to apply the [Traefik Kubernetes CRDs](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-crd#requirements) to your Kubernetes cluster.
 
 This registers the `IngressRouteUDP` kind and other Traefik-specific resources.
 

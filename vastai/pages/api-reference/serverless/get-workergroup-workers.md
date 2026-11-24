@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /get_workergroup_workers](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/api-reference/openapi.yaml%23post%20/get_workergroup_workers)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /get_workergroup_workers](https://github.com/vast-ai/docs/blob/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/api-reference/openapi.yaml%23post%20/get_workergroup_workers)
 > Canonical documentation: https://docs.vast.ai/api-reference/serverless/get-workergroup-workers
 
 # get workergroup workers

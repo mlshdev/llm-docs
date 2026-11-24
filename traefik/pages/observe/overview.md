@@ -1,14 +1,14 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/observe/overview.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/observe/overview.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/observe/overview.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/observe/overview.md)
 
 # Observability Overview
 
 Traefik Proxy provides comprehensive monitoring and observability capabilities to maintain reliability and efficiency:
 
-- [Logs and Access Logs](https://doc.traefik.io/traefik/v3.7/observe/logs-and-access-logs) provide real-time insight into the health of your system. They enable swift error detection and intervention through alerts. By centralizing logs, you can streamline the debugging process during incident resolution.
+- [Logs and Access Logs](https://doc.traefik.io/traefik/v3.8/observe/logs-and-access-logs) provide real-time insight into the health of your system. They enable swift error detection and intervention through alerts. By centralizing logs, you can streamline the debugging process during incident resolution.
 
-- [Metrics](https://doc.traefik.io/traefik/v3.7/observe/metrics) offer a comprehensive view of your infrastructure's health. They allow you to monitor critical indicators like incoming traffic volume. Metrics graphs and visualizations are helpful during incident triage in understanding the causes and implementing proactive measures.
+- [Metrics](https://doc.traefik.io/traefik/v3.8/observe/metrics) offer a comprehensive view of your infrastructure's health. They allow you to monitor critical indicators like incoming traffic volume. Metrics graphs and visualizations are helpful during incident triage in understanding the causes and implementing proactive measures.
 
-- [Tracing](https://doc.traefik.io/traefik/v3.7/observe/tracing) enables tracking the flow of operations within your system. Using traces and spans, you can identify performance bottlenecks and pinpoint applications causing slowdowns to optimize response times effectively.
+- [Tracing](https://doc.traefik.io/traefik/v3.8/observe/tracing) enables tracking the flow of operations within your system. Using traces and spans, you can identify performance bottlenecks and pinpoint applications causing slowdowns to optimize response times effectively.
 
 ## Configuration Example
 
@@ -51,7 +51,7 @@ tracing:
     enabled: true
 ```
 
-You can disable access logs, metrics, and tracing for a specific [entrypoint](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints):
+You can disable access logs, metrics, and tracing for a specific [entrypoint](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints):
 
 **Structured (YAML)**
 

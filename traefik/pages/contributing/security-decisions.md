@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/contributing/security-decisions.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/contributing/security-decisions.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/contributing/security-decisions.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/contributing/security-decisions.md)
 
 # Security Decisions
 
@@ -10,7 +10,7 @@ It is organised by the surface a report touches. Each entry states our position,
 is**: the neighbouring variant we do treat as a vulnerability, with the advisories that prove it. That
 line is the useful part. Almost every surface below has produced both closures and CVEs.
 
-This page applies the [threat model](https://doc.traefik.io/traefik/v3.7/contributing/submitting-security-issues#threat-model), which defines the
+This page applies the [threat model](https://doc.traefik.io/traefik/v3.8/contributing/submitting-security-issues#threat-model), which defines the
 boundary itself. Start there if you want the short version.
 
 > **Why only some cases are linked**
@@ -163,6 +163,17 @@ works **without** that opt-in, or defeats it, it is in scope. Equally, a report 
 create or edit the Kubernetes objects involved is not a boundary crossing: that actor already controls
 routing in the namespace.
 
+**Gateways served by a single instance.** A single Traefik instance serves every Gateway it watches
+from one shared routing configuration, so a route attached to one Gateway can match requests intended
+for another Gateway on the same instance. Gateways served by the same instance are not isolated from
+each other: a report showing a route crossing Gateways on a single instance describes a documented
+limit, not a vulnerability. For isolation between Gateways, the
+[Traefik Operator](https://doc.traefik.io/traefik/v3.8/security/multi-tenant-kubernetes#traefik-operator) provisions a dedicated data
+plane for each Gateway, or you can deploy
+[one Traefik instance per Gateway](https://doc.traefik.io/traefik/v3.8/security/multi-tenant-kubernetes#one-traefik-instance-per-gateway)
+scoped with [`providers.kubernetesGateway.gateways`](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-gateway#opt-providers-kubernetesGateway-gateways), as described in
+[Multi-Tenancy in Kubernetes](https://doc.traefik.io/traefik/v3.8/security/multi-tenant-kubernetes#gateway-api).
+
 **Decided in this class.**
 [GHSA-62fc-8686-hfmq](https://github.com/traefik/traefik/security/advisories/GHSA-62fc-8686-hfmq) (CVE-2026-71325, `allowCrossNamespace=false` bypassed
 via `@kubernetescrd`), [GHSA-3g6v-2r68-prfc](https://github.com/traefik/traefik/security/advisories/GHSA-3g6v-2r68-prfc) (CVE-2026-54761, `crossProviderNamespaces` allow-list defeated),
@@ -298,7 +309,7 @@ explicitly: that is the part that determines the answer.
 ## Non-GA Code
 
 Vulnerabilities affecting only release candidates, betas, or development branches are fixed without a
-CVE, as stated in the [CVE policy](https://doc.traefik.io/traefik/v3.7/contributing/submitting-security-issues#cve).
+CVE, as stated in the [CVE policy](https://doc.traefik.io/traefik/v3.8/contributing/submitting-security-issues#cve).
 
 **Open a normal issue for these, not a security advisory.** Once you have confirmed the defect is absent
 from every GA release, there is no released version to protect, so there is nothing to keep private, and

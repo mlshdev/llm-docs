@@ -1,8 +1,8 @@
-> Pinned source for VictoriaMetrics v1.156.0: [docs/victoriametrics/Single-server-VictoriaMetrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/Single-server-VictoriaMetrics.md)
+> Pinned source for VictoriaMetrics v1.157.0: [docs/victoriametrics/Single-server-VictoriaMetrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/Single-server-VictoriaMetrics.md)
 
 VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes.
 
-![README-components.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/README-components.webp)
+![README-components.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/README-components.webp)
 
 - **Case studies**: [Grammarly, Roblox, Wix, Spotify,...](https://docs.victoriametrics.com/victoriametrics/casestudies/).
 - **Available**: [Binary releases](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/latest), Docker images on [Docker Hub](https://hub.docker.com/r/victoriametrics/victoria-metrics/) and [Quay](https://quay.io/repository/victoriametrics/victoria-metrics), [Source code](https://github.com/VictoriaMetrics/VictoriaMetrics).
@@ -265,7 +265,7 @@ VMUI provides the following features:
 - Tools:
   - [Trace analyzer](#query-tracing) - explore query traces loaded from JSON;
   - [Query analyzer](#query-tracing) - explore query results and traces loaded from JSON. See `Export query` button below;
-  - [WITH expressions playground](https://play.victoriametrics.com/select/accounting/1/6a716b0f-38bc-4856-90ce-448fd713e3fe/prometheus/graph/#/expand-with-exprs) - test how WITH expressions work;
+  - [WITH expressions playground](https://play.victoriametrics.com/select/accounting/1/6a716b0f-38bc-4856-90ce-448fd713e3fe/prometheus/graph/#/expand-with-exprs) - test how [WITH expressions](https://docs.victoriametrics.com/victoriametrics/metricsql/#with-templates) work;
   - [Metric relabel debugger](https://play.victoriametrics.com/select/accounting/1/6a716b0f-38bc-4856-90ce-448fd713e3fe/prometheus/graph/#/relabeling) - debug [relabeling](#relabeling) rules.
   - [Downsampling filters debugger](https://play.victoriametrics.com/select/accounting/1/6a716b0f-38bc-4856-90ce-448fd713e3fe/prometheus/graph/#/downsampling-filters-debug) *(available from v1.105.0)* - debug [downsampling](#downsampling) configs.
   - [Retention filters debugger](https://play.victoriametrics.com/select/accounting/1/6a716b0f-38bc-4856-90ce-448fd713e3fe/prometheus/graph/#/retention-filters-debug) *(available from v1.105.0)* - debug [retention filter](#retention-filters) configs.
@@ -472,6 +472,10 @@ set by auth proxy sitting in front of VictoriaMetrics.
 See [vmauth](https://docs.victoriametrics.com/victoriametrics/vmauth/) and [vmgateway](https://docs.victoriametrics.com/victoriametrics/vmgateway/) as examples of such proxies.
 
 VictoriaMetrics accepts multiple formats for `time`, `start` and `end` query args - see [these docs](#timestamp-formats).
+
+VictoriaMetrics accepts `merge_latest_label` query arg for [/api/v1/query](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#instant-query)
+and [/api/v1/query\_range](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#range-query) handlers. It applies updates
+to the selected time series based on the given revision label. See [series updates](#series-updates).
 
 VictoriaMetrics accepts `round_digits` query arg for [/api/v1/query](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#instant-query)
 and [/api/v1/query\_range](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#range-query) handlers. It can be used for rounding response values
@@ -1138,7 +1142,7 @@ curl http://<victoriametrics-addr>:8428/federate -d 'match[]=<timeseries_selecto
 curl http://<victoriametrics-addr>:8428/federate -d 'match[]=<timeseries_selector_for_export>' -d 'start=2022-06-06T19:25:48' -d 'end=2022-06-06T19:29:07'
 ```
 
-By default, the last point on the interval `[now - max_lookback ... now]` is scraped for each time series. The default value for `max_lookback` is `5m` (5 minutes), but it can be overridden with `max_lookback` query arg.
+By default, the last point on the interval `[now - max_lookback ... now]` is scraped for each time series. The default value for `max_lookback` is `5m` (5 minutes), but it can be overridden with `max_lookback` query arg (or its Prometheus alias `lookback_delta`).
 For instance, `/federate?match[]=up&max_lookback=1h` would return last points on the `[now - 1h ... now]` interval. This may be useful for time series federation
 with scrape intervals exceeding `5m`.
 
@@ -2496,10 +2500,109 @@ cache when samples with timestamps older than `now - search.cacheTimestampOffset
 
 ## Data updates
 
-VictoriaMetrics doesn't support updating already existing sample values to new ones. It stores all the ingested data points
+VictoriaMetrics doesn't support updating already existing sample values to new ones at storage level. It stores all the ingested data points
 for the same time series with identical timestamps. While it is possible substituting old time series with new time series via
 [removal of old time series](#how-to-delete-time-series) and then [writing new time series](#backfilling), this approach
 should be used only for one-off updates. It shouldn't be used for frequent updates because of non-zero overhead related to data removal.
+
+An alternative is to write updates as separate time series and apply them at query time.
+See [series updates](#series-updates).
+
+## Series updates
+
+[VictoriaMetrics Enterprise](https://docs.victoriametrics.com/victoriametrics/enterprise/) can apply updates to already stored [time series](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#time-series)
+at query time. An update is a regular time series with the same labels as the original series plus an extra revision label
+with an integer value. Pass the name of the revision label via `merge_latest_label` *(available from v1.157.0)* query arg
+to [/api/v1/query](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#instant-query)
+and [/api/v1/query\_range](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#range-query) in order to apply it.
+
+Updates are applied in the following way:
+
+- Updates are applied to the original series in ascending order of revision label values.
+- Each update replaces the original samples from its first through last timestamp with the update's samples; timestamps present only in the update are added.
+- The revision label is removed from the resulting series.
+- Series without updates are returned as is.
+- Updates without the original series (the series without revision label) are ignored.
+- The revision label value must be an integer. Otherwise, the query fails with an error.
+
+For example, the original series `temperature{sensor="1"}` was ingested with the following samples:
+
+```sh
+curl http://<victoriametrics-addr>:8428/api/v1/import/prometheus -d '
+temperature{sensor="1"} 10 1704067200000
+temperature{sensor="1"} 11 1704067260000
+temperature{sensor="1"} 50000 1704067320000
+temperature{sensor="1"} 13 1704067380000
+'
+```
+
+Later it turned out that the sample at timestamp `1704067320000` is invalid.
+The invalid time series could be updated with a new series that has corrected values and a `rev="1"` label:
+
+```sh
+curl http://<victoriametrics-addr>:8428/api/v1/import/prometheus -d '
+temperature{sensor="1",rev="1"} 12 1704067320000
+'
+```
+
+Query the series with `merge_latest_label=rev` query arg:
+
+```sh
+curl http://<victoriametrics-addr>:8428/api/v1/query_range -d 'query=temperature{sensor="1"}' -d 'start=1704067200' -d 'end=1704067380' -d 'step=1m' -d 'merge_latest_label=rev'
+```
+
+The response contains a single `temperature{sensor="1"}` series with the following values: `[10,11,12,13]`.
+
+Without `merge_latest_label` query arg the original series and the updates are returned as separate series:
+
+```text
+{"status":"success","data":{"resultType":"matrix","result":[
+    {"metric":{"__name__":"temperature","rev":"1","sensor":"1"},"values":[[1704067260,"11"],[1704067320,"12"],[1704067380,"12"]]},
+    {"metric":{"__name__":"temperature","sensor":"1"},"values":[[1704067200,"10"],[1704067260,"11"],[1704067320,"50000"],[1704067380,"13"]]}]},
+"stats":{"seriesFetched": "2","executionTimeMsec":1}}
+```
+
+Series update works on time series and replaces the whole specific timestamp range
+For example, the original series `temperature{sensor="2"}` was ingested with the following samples:
+
+```sh
+curl http://<victoriametrics-addr>:8428/api/v1/import/prometheus -d '
+temperature{sensor="2"} 10 1704067200000
+temperature{sensor="2"} 11 1704067260000
+temperature{sensor="2"} -50000 1704067320000
+temperature{sensor="2"} 50000 1704067321234
+temperature{sensor="2"} 13 1704067380000
+'
+```
+
+Time series has incorrect sample value at `1704067320000` and extra sample at `1704067321234`.
+The invalid time series could be updated with a new series that has corrected values at specific timestamp range and a `rev="2"` label:
+
+```sh
+curl http://<victoriametrics-addr>:8428/api/v1/import/prometheus -d '
+temperature{sensor="2",rev="2"} 12 1704067320000
+temperature{sensor="2",rev="2"} 13 1704067380000
+'
+```
+
+Query the series with `merge_latest_label=rev` query arg:
+
+```sh
+curl http://<victoriametrics-addr>:8428/api/v1/query -d 'query=max_over_time(temperature{sensor="2"}[3m])' -d 'time=1704067380'  -d 'merge_latest_label=rev'
+```
+
+The response contains a single `temperature{sensor="2"}` series with correct max value `13`.
+
+`merge_latest_label` query arg is supported only by `/api/v1/query` and `/api/v1/query_range` handlers.
+Other handlers such as [/api/v1/export](https://docs.victoriametrics.com/victoriametrics/url-examples/#apiv1export)
+and [/api/v1/series](https://docs.victoriametrics.com/victoriametrics/url-examples/#apiv1series) ignore it
+and return the original series and the updates as separate series.
+
+Note that updates aren't free and it's not recommended to perform them frequently:
+
+- Every update is stored as a separate time series. This increases disk space usage and the number of entries in [IndexDB](#indexdb).
+- Updates are merged with the original series on every query. This could slightly increase query duration and resource usage
+  proportionally to the number of updates for the selected series.
 
 ## Replication
 
@@ -3140,7 +3243,7 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/
   -search.maxLabelsAPISeries int
      The maximum number of time series, which could be scanned when searching for the matching time series at /api/v1/labels and /api/v1/label/.../values. This option allows limiting memory usage and CPU usage. See also -search.maxLabelsAPIDuration, -search.maxTagKeys, -search.maxTagValues and -search.ignoreExtraFiltersAtLabelsAPI (default 1000000)
   -search.maxLookback duration
-     Synonym to -query.lookback-delta from Prometheus. The value is dynamically detected from interval between time series datapoints if not set. It can be overridden on per-query basis via max_lookback arg. See also '-search.maxStalenessInterval' flag, which has the same meaning due to historical reasons
+     Synonym to -query.lookback-delta from Prometheus. The value is dynamically detected from interval between time series datapoints if not set. It can be overridden on per-query basis via max_lookback or lookback_delta arg. See also '-search.maxStalenessInterval' flag, which has the same meaning due to historical reasons
   -search.maxMemoryPerQuery size
      The maximum amounts of memory a single query may consume. Queries requiring more memory are rejected. The total memory limit for concurrently executed queries can be estimated as -search.maxMemoryPerQuery multiplied by -search.maxConcurrentRequests . See also -search.logQueryMemoryUsage
      Supports the following optional suffixes for size values: KB, MB, GB, TB, KiB, MiB, GiB, TiB (default 0)
@@ -3341,15 +3444,15 @@ These flags are available only in [VictoriaMetrics enterprise](https://docs.vict
      Supports an array of values separated by comma or specified via multiple flags.
      Each array item can contain comma inside single-quoted or double-quoted string, {}, [] and () braces.
   -eula
-     Deprecated, please use -license or -licenseFile flags instead. By specifying this flag, you confirm that you have an enterprise license and accept the ESA https://victoriametrics.com/legal/esa/ . This flag is available only in Enterprise binaries. See https://docs.victoriametrics.com/victoriametrics/enterprise/
+     By specifying this flag, you accept the ESA https://victoriametrics.com/legal/esa/ . This flag is available only in Enterprise binaries. See https://docs.victoriametrics.com/victoriametrics/enterprise/
   -license string
-     License key for VictoriaMetrics Enterprise. See https://victoriametrics.com/products/enterprise/ . Trial Enterprise license can be obtained from https://victoriametrics.com/products/enterprise/trial/ . This flag is available only in Enterprise binaries. The license key can be also passed via file specified by -licenseFile command-line flag
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version.
   -license.forceOffline
-     Whether to enable offline verification for VictoriaMetrics Enterprise license key, which has been passed either via -license or via -licenseFile command-line flag. The issued license key must support offline verification feature. Contact info@victoriametrics.com if you need offline license verification. This flag is available only in Enterprise binaries
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version.
   -licenseFile string
-     Path to file with license key for VictoriaMetrics Enterprise. See https://victoriametrics.com/products/enterprise/ . Trial Enterprise license can be obtained from https://victoriametrics.com/products/enterprise/trial/ . This flag is available only in Enterprise binaries. The license key can be also passed inline via -license command-line flag
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version.
   -licenseFile.reloadInterval duration
-     Interval for reloading the license file specified via -licenseFile. A non-positive value disables periodic and SIGHUP-triggered reloads of -licenseFile. See https://victoriametrics.com/products/enterprise/ . This flag is available only in Enterprise binaries (default 1h0m0s)
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version. (default 1h0m0s)
   -mtls array
      Whether to require valid client certificate for https requests to the corresponding -httpListenAddr . This flag works only if -tls flag is set. See also -mtlsCAFile . This flag is available only in Enterprise binaries. See https://docs.victoriametrics.com/victoriametrics/enterprise/
      Supports array of values separated by comma or specified via multiple flags.

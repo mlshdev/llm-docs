@@ -1,8 +1,8 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/setup/docker.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/setup/docker.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/setup/docker.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/setup/docker.md)
 
 This guide provides an in-depth walkthrough for installing and configuring Traefik Proxy within a Docker container using the official Traefik Docker image & Docker Compose. In this guide, we'll cover the following:
 
-- Enable the [Docker provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/docker)
+- Enable the [Docker provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/docker)
 - Expose **web** (HTTP :80) and **websecure** (HTTPS :443) entrypoints
 - Redirect all HTTP traffic to HTTPS
 - Secure the Traefik dashboard with **basic‑auth**
@@ -32,7 +32,7 @@ The `certs` folder now holds `local.crt` and `local.key`, which will be mounted 
 
 ## Create the Traefik Dashboard Credentials
 
-In production, it is advisable to have some form of authentication/security for the Traefik dashboard. Traefik can be secured with the [basic‑auth middleware](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/basicauth). To do this, generate a hashed username / password pair that Traefik’s middleware will validate:
+In production, it is advisable to have some form of authentication/security for the Traefik dashboard. Traefik can be secured with the [basic‑auth middleware](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/basicauth). To do this, generate a hashed username / password pair that Traefik’s middleware will validate:
 
 ```bash
 htpasswd -nb admin "P@ssw0rd" | sed -e 's/\$/\$\$/g'
@@ -60,7 +60,7 @@ In your project root folder (the parent folder to the `dynamic/tls.yaml` file), 
 ```yaml
 services:
   traefik:
-    image: traefik:v3.7
+    image: traefik:v3.8
     container_name: traefik
     restart: unless-stopped
     security_opt:
@@ -157,7 +157,7 @@ Traefik will start, read its static configuration from the `command` arguments, 
 
 Now that Traefik is deployed, you can access the dashboard at <https://dashboard.docker.localhost> and it should prompt for the Basic Authentication credentials you configured:
 
-![Traefik Dashboard](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/setup/traefik-dashboard-docker.png)
+![Traefik Dashboard](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/setup/traefik-dashboard-docker.png)
 
 ## Test the whoami Application
 
@@ -199,7 +199,7 @@ The above confirms that a redirection has taken place which means our setup work
 
 You can also open a browser and navigate to <https://whoami.docker.localhost> to see a JSON dump from the service:
 
-![Whoami](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/setup/whoami-json-dump.png)
+![Whoami](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/setup/whoami-json-dump.png)
 
 > **Info**
 > You can also navigate to the Traefik Dashboard at <https://dashboard.docker.localhost> to see that the route has been created.
@@ -227,7 +227,7 @@ command:
   - "--entrypoints.websecure.http.tls.certresolver=le"
 ```
 
-This defines a resolver named `le`, sets the required email and storage path (within the mounted `/letsencrypt` volume), and enables the HTTP challenge. Refer to the [HTTPS/TLS Documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/tls/certificate-resolvers/overview) and [Let's Encrypt Documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/tls/certificate-resolvers/acme) for details on challenges and DNS provider configuration.
+This defines a resolver named `le`, sets the required email and storage path (within the mounted `/letsencrypt` volume), and enables the HTTP challenge. Refer to the [HTTPS/TLS Documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/tls/certificate-resolvers/overview) and [Let's Encrypt Documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/tls/certificate-resolvers/acme) for details on challenges and DNS provider configuration.
 
 ### Metrics (Prometheus)
 
@@ -250,7 +250,7 @@ command:
   - "--metrics.prometheus.addserviceslabels=true"
 ```
 
-This enables the `/metrics` endpoint (typically accessed via the internal API port, often 8080 by default if not secured, or via a dedicated entry point). See the [Metrics Documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/metrics) for options.
+This enables the `/metrics` endpoint (typically accessed via the internal API port, often 8080 by default if not secured, or via a dedicated entry point). See the [Metrics Documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/metrics) for options.
 
 ### Tracing (OTel):
 
@@ -266,7 +266,7 @@ command:
 ```
 
 > **Note**
-> This option requires a running OTEL collector accessible by Traefik. Consult the [Tracing Documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/tracing).
+> This option requires a running OTEL collector accessible by Traefik. Consult the [Tracing Documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/tracing).
 
 ### Access Logs
 
@@ -286,7 +286,7 @@ command:
   - "--accesslog.filters.statuscodes=400-599"
 ```
 
-This enables access logs to the container's standard output (viewable via `docker compose logs <traefik-container-id>`). See the [Access Logs Documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/logs-and-accesslogs).
+This enables access logs to the container's standard output (viewable via `docker compose logs <traefik-container-id>`). See the [Access Logs Documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/logs-and-accesslogs).
 
 ### Conclusion
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [accounts-billing/add-tax-id.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/accounts-billing/add-tax-id.mdx)
+> Pinned source for Runpod main: [accounts-billing/add-tax-id.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/accounts-billing/add-tax-id.mdx)
 > Canonical documentation: https://docs.runpod.io/accounts-billing/add-tax-id
 
 # Adding your tax ID

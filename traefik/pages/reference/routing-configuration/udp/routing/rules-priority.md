@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/udp/routing/rules-priority.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/udp/routing/rules-priority.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/udp/routing/rules-priority.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/udp/routing/rules-priority.md)
 
 A router is in charge of connecting incoming requests to the services that can handle them.
 
@@ -22,7 +22,7 @@ notably so that the proxy knows where to forward a response packet from a backen
 As expected, a `timeout` is associated to each of these sessions,
 so that they get cleaned out if they go through a period of inactivity longer than a given duration.
 
-Timeout can be configured using the `entryPoints.name.udp.timeout` option as described under [EntryPoints](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints)
+Timeout can be configured using the `entryPoints.name.udp.timeout` option as described under [EntryPoints](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints)
 
 ## EntryPoints
 
@@ -116,5 +116,5 @@ labels:
 ```
 
 > **Service**
-> There must be one (and only one) UDP [service](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/udp/service) referenced per UDP router.
+> There must be one (and only one) UDP [service](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/udp/service) referenced per UDP router.
 > Services are the target for the router.

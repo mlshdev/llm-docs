@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `e4b64f14b14cea0c05ab6977e1843b891202d4b9`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `f1803c4438f689fd05a79ba9965c5fe8ef971f20`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -84,7 +84,7 @@
 - [Aggregate streaming outputs](pages/serverless/development/aggregate-outputs.md): Automatically collect and aggregate yielded results from streaming handler functions. See Runpod Serverless setup and usage details. (9108 bytes)
 - [Fitness checks and preflight checks](pages/serverless/development/fitness-checks.md): Validate Serverless worker dependencies at startup with custom and automatic fitness checks, failure handling, configuration, and operations guidance. (10688 bytes)
 - [Build a concurrent handler](pages/serverless/workers/concurrent-handler.md): Build a concurrent handler function to process multiple requests simultaneously on a single worker. See Runpod Serverless setup and usage details. (8883 bytes)
-- [Overview](pages/serverless/workers/overview.md): Package your handler function for deployment. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (8279 bytes)
+- [Overview](pages/serverless/workers/overview.md): Package your handler function for deployment. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (9179 bytes)
 - [Create a Dockerfile](pages/serverless/workers/create-dockerfile.md): Package your handler function for deployment. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (6281 bytes)
 - [Deploy workers from Docker Hub](pages/serverless/workers/deploy.md): Build, test, and deploy your worker image from Docker Hub. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (5893 bytes)
 - [Deploy workers from GitHub](pages/serverless/workers/github-integration.md): Speed up development by deploying workers directly from GitHub. Review configuration and operations guidance for Runpod Serverless. (10594 bytes)
@@ -107,18 +107,18 @@
 - [Build a load balancing worker](pages/serverless/load-balancing/build-a-worker.md): Learn how to implement and deploy a load balancing worker with FastAPI. Review configuration and operations guidance for Runpod Serverless. (11776 bytes)
 - [Build a load balancing vLLM endpoint](pages/serverless/load-balancing/vllm-worker.md): Learn how to deploy a custom vLLM server to a load balancing Serverless endpoint. Review configuration and operations guidance for Runpod Serverless. (22276 bytes)
 - [Worker affinity](pages/serverless/load-balancing/worker-affinity.md): Pin follow-up requests to a specific worker using the X-Runpod-Worker-Id header. Review configuration and operations guidance for Runpod Serverless. (4171 bytes)
-- [Overview](pages/serverless/vllm/overview.md): Deploy scalable LLM inference endpoints using vLLM workers. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (2680 bytes)
-- [Deploy vLLM on Runpod Serverless](pages/serverless/vllm/get-started.md): Create a Serverless endpoint to serve LLM inference via API request. Review configuration and operations guidance for Runpod Serverless. (6362 bytes)
+- [Overview](pages/serverless/vllm/overview.md): Deploy scalable LLM inference endpoints using vLLM workers. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (2688 bytes)
+- [Deploy vLLM on Runpod Serverless](pages/serverless/vllm/get-started.md): Create a Serverless endpoint to serve LLM inference via API request. Review configuration and operations guidance for Runpod Serverless. (6370 bytes)
 - [Configure vLLM to work with your model](pages/serverless/vllm/configuration.md): Learn how to set up vLLM endpoints to work with your chosen model. Review configuration and operations guidance for Runpod Serverless. (5942 bytes)
 - [Send requests to vLLM workers](pages/serverless/vllm/vllm-requests.md): Use Runpod's native API to send requests to vLLM workers. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (8170 bytes)
 - [OpenAI API compatibility](pages/serverless/vllm/openai-compatibility.md): Use OpenAI client libraries with your vLLM workers. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (7397 bytes)
 - [vLLM environment variables](pages/serverless/vllm/environment-variables.md): Configure your vLLM workers using environment variables. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (29290 bytes)
 - [Troubleshooting](pages/serverless/troubleshooting.md): Common issues and solutions for Serverless endpoints and workers. Review configuration and operations guidance for Runpod Serverless. (9817 bytes)
-- [Generate images with Serverless and SDXL](pages/tutorials/serverless/run-your-first.md): Learn how to deploy a Serverless endpoint running SDXL from the Runpod Hub and use it to generate images. (8206 bytes)
-- [Deploy ComfyUI on Serverless](pages/tutorials/serverless/comfyui.md): Learn how to deploy a Serverless endpoint running ComfyUI from the Runpod Hub and use it to generate images with FLUX Dev. (13714 bytes)
+- [Generate images with Serverless and SDXL](pages/tutorials/serverless/run-your-first.md): Learn how to deploy a Serverless endpoint running SDXL from the Runpod Hub and use it to generate images. (8214 bytes)
+- [Deploy ComfyUI on Serverless](pages/tutorials/serverless/comfyui.md): Learn how to deploy a Serverless endpoint running ComfyUI from the Runpod Hub and use it to generate images with FLUX Dev. (13722 bytes)
 - [Deploy Phi-3 using model caching](pages/tutorials/serverless/model-caching-text.md): Learn how to create a custom Serverless endpoint that uses model caching to serve Phi-3 with reduced cost and cold start times. (16189 bytes)
 - [Integrate Serverless with a web application](pages/tutorials/serverless/generate-sdxl-turbo.md): Deploy an image generation endpoint from the Hub and integrate it into a web application. Follow the implementation steps in this Runpod tutorial. (13107 bytes)
-- [Deploy a Gemma 3 chatbot with the OpenAI API](pages/tutorials/serverless/run-gemma-7b.md): Deploy a Serverless endpoint with Google's Gemma 3 model using vLLM and the OpenAI API to build an interactive chatbot. (8085 bytes)
+- [Deploy a Gemma 3 chatbot with the OpenAI API](pages/tutorials/serverless/run-gemma-7b.md): Deploy a Serverless endpoint with Google's Gemma 3 model using vLLM and the OpenAI API to build an interactive chatbot. (8093 bytes)
 - [List Serverless Endpoints](pages/api-reference-v2/serverless/list-serverless-endpoints.md): List all Runpod Serverless endpoints owned by the authenticated user, including compute, worker, scaling, and deployment settings. (24286 bytes)
 - [Create A Serverless Endpoint](pages/api-reference-v2/serverless/create-a-serverless-endpoint.md): Create a Runpod Serverless endpoint with GPU or CPU compute, container or template settings, worker limits, and scaling policies. (39636 bytes)
 - [Get A Serverless Endpoint](pages/api-reference-v2/serverless/get-a-serverless-endpoint.md): Retrieve a Runpod Serverless endpoint by ID with its compute, worker, scaling, container, storage, and current status settings. (20288 bytes)
@@ -211,7 +211,7 @@
 ## Accounts and billing
 
 - [Manage accounts](pages/accounts-billing/manage-accounts.md): Create accounts, manage teams, and configure user permissions in Runpod. Review account, billing, and management details for Runpod. (7588 bytes)
-- [Billing overview](pages/accounts-billing/billing.md): Understand how Runpod billing works, manage your credits, and configure payment methods. Review account, billing, and management details for Runpod. (7548 bytes)
+- [Billing overview](pages/accounts-billing/billing.md): Understand how Runpod billing works, manage your credits, and configure payment methods. Review account, billing, and management details for Runpod. (7819 bytes)
 - [Cost centers](pages/accounts-billing/cost-centers.md): Track and organize Runpod spending by team, project, or department. Review account, billing, and management details for Runpod. (6433 bytes)
 - [Referral, affiliate, and creator programs](pages/accounts-billing/referrals.md): Earn additional revenue through Runpod's referral, affiliate, and creator programs. Review account, billing, and management details for Runpod. (6764 bytes)
 - [Troubleshoot payment card declines](pages/accounts-billing/manage-payment-cards.md): Resolve declined payment cards and prevent service interruptions on Runpod. Review account, billing, and management details for Runpod. (4017 bytes)
@@ -254,8 +254,8 @@
 - [Migrate from Modal to Runpod](pages/migrate/modal.md): Move Modal Functions, Clses, web endpoints, Volumes, and Secrets to the Runpod SDK and Serverless, with before and after code. (100144 bytes)
 - [Migrate from Replicate to Runpod](pages/migrate/replicate.md): Move Replicate models, Cog predictors, deployments, and client code to Runpod Public Endpoints and Serverless. (90026 bytes)
 - [Migrate from Baseten to Runpod](pages/migrate/baseten.md): Move Truss models, custom servers, Model APIs calls, Chains, and training jobs from Baseten to Runpod Serverless, Public Endpoints, and Pods. (95896 bytes)
-- [Migrate from fal to Runpod](pages/migrate/fal.md): Move fal Model API calls, fal Serverless apps, and fal Compute instances to Runpod Public Endpoints, Serverless, Pods, and Instant Clusters. (104702 bytes)
-- [Migrate from Together AI to Runpod](pages/migrate/together-ai.md): Move Together AI serverless models, dedicated endpoints, fine-tunes, batch jobs, and GPU clusters to Runpod. (106314 bytes)
+- [Migrate from fal to Runpod](pages/migrate/fal.md): Move fal Model API calls, fal Serverless apps, and fal Compute instances to Runpod Public Endpoints, Serverless, Pods, and Instant Clusters. (104710 bytes)
+- [Migrate from Together AI to Runpod](pages/migrate/together-ai.md): Move Together AI serverless models, dedicated endpoints, fine-tunes, batch jobs, and GPU clusters to Runpod. (106322 bytes)
 - [Migrate from Fireworks AI to Runpod](pages/migrate/fireworks-ai.md): Move Fireworks AI serverless inference, on-demand deployments, custom models, and fine-tuning to Runpod Serverless, Public Endpoints, and Pods. (87742 bytes)
 - [Migrate from Hugging Face Inference Endpoints to Runpod](pages/migrate/hugging-face.md): Move Hugging Face Inference Endpoints, Inference Providers calls, GPU Spaces, and Jobs to Runpod while your models stay on the Hugging Face Hub. (86721 bytes)
 - [Migrate from AWS to Runpod](pages/migrate/aws.md): Move GPU training, inference, and batch workloads from EC2, SageMaker AI, and Bedrock to Runpod while keeping data and auth on AWS. (100199 bytes)
@@ -394,12 +394,12 @@
 
 ## Templates
 
-- [List Templates](pages/api-reference-v2/templates/list-templates.md): List all reusable Runpod templates owned by the authenticated user, including Pod and Serverless container configuration details. (11446 bytes)
+- [List Templates](pages/api-reference-v2/templates/list-templates.md): List all reusable Runpod templates owned by the authenticated user, including Pod and Serverless container configuration details. (11361 bytes)
 - [Create A Template](pages/api-reference-v2/templates/create-a-template.md): Create a reusable Runpod template for Pod and Serverless container settings, including images, storage, ports, environment, and mounts. (17046 bytes)
 - [Get A Template](pages/api-reference-v2/templates/get-a-template.md): Retrieve the complete configuration of an owned or public Runpod template by ID, including settings used to create Pods and endpoints. (9586 bytes)
 - [Delete A Template](pages/api-reference-v2/templates/delete-a-template.md): Permanently delete an owned Runpod template by ID and understand restrictions when Pods or Serverless endpoints still reference it. (5232 bytes)
 - [Update A Template](pages/api-reference-v2/templates/update-a-template.md): Update selected fields on a Runpod template while preserving omitted settings, with ownership rules and behavior for existing resources. (17081 bytes)
-- [Get A Template Readme](pages/api-reference-v2/templates/get-a-template-readme.md): Retrieve the Markdown README of an owned or public Runpod template, with setup and usage instructions. (4697 bytes)
+- [Get A Template Readme](pages/api-reference-v2/templates/get-a-template-readme.md): Retrieve the Markdown README of an owned or public Runpod template, with setup and usage instructions. (4686 bytes)
 
 ## Network Volumes
 
@@ -430,14 +430,22 @@
 
 ## Catalog
 
-- [List Gpu Types](pages/api-reference-v2/catalog/list-gpu-types.md): List available Runpod GPU types with pricing and optional availability filters by product, country, and deployment context. (11525 bytes)
-- [Get A Gpu Type](pages/api-reference-v2/catalog/get-a-gpu-type.md): Retrieve one Runpod GPU type with pricing and optional availability details for a specified product and deployment context. (12030 bytes)
+- [List Gpu Types](pages/api-reference-v2/catalog/list-gpu-types.md): List available Runpod GPU types with pricing and optional availability filters by product, country, and deployment context. (12072 bytes)
+- [Get A Gpu Type](pages/api-reference-v2/catalog/get-a-gpu-type.md): Retrieve one Runpod GPU type with pricing and optional availability details for a specified product and deployment context. (12577 bytes)
 - [List Cpu Types](pages/api-reference-v2/catalog/list-cpu-types.md): List available Runpod CPU types with pricing and optional availability details for a specified product and deployment context. (6392 bytes)
 - [Get A Cpu Type](pages/api-reference-v2/catalog/get-a-cpu-type.md): Retrieve one Runpod CPU type with pricing and optional availability details for a specified product and deployment context. (7065 bytes)
 - [List Data Centers](pages/api-reference-v2/catalog/list-data-centers.md): List Runpod data centers with region, compliance, storage, networking, and optional GPU or CPU availability details. (7407 bytes)
 - [Get A Data Center](pages/api-reference-v2/catalog/get-a-data-center.md): Retrieve a single Runpod data center by ID, optionally including current GPU or CPU availability for Pod deployment. (6931 bytes)
-- [List Public Templates](pages/api-reference-v2/catalog/list-public-templates.md): List Runpod public templates by official, verified, or community source and inspect reusable Pod and Serverless configurations. (10020 bytes)
-- [Get A Public Template Readme](pages/api-reference-v2/catalog/get-a-public-template-readme.md): Retrieve the Markdown README of a public Runpod template, with setup and usage instructions. (4714 bytes)
+- [List Public Templates](pages/api-reference-v2/catalog/list-public-templates.md): Search Runpod public templates by official, verified, or community source and inspect reusable Pod and Serverless configurations. (18363 bytes)
+- [Get A Public Template Readme](pages/api-reference-v2/catalog/get-a-public-template-readme.md): Retrieve the Markdown README of a public Runpod template, with setup and usage instructions. (4862 bytes)
+- [Get A Public Template](pages/api-reference-v2/catalog/get-a-public-template.md): Retrieve a Runpod public template with its health, deploy stats and, for a versioned line, every version and tag. (15622 bytes)
+- [List Skills](pages/api-reference-v2/catalog/list-skills.md): Search Runpod skills: step-by-step guides an agent follows to set up a workload on Runpod, such as ComfyUI on a pod. (10048 bytes)
+- [Get A Skill](pages/api-reference-v2/catalog/get-a-skill.md): Retrieve a Runpod skill with its variants, the default marked, and the skills it relies on. (7898 bytes)
+- [Get A Skill Readme](pages/api-reference-v2/catalog/get-a-skill-readme.md): Retrieve the Markdown README of a Runpod skill for an agent to follow. (4597 bytes)
+- [Get A Skill Variant](pages/api-reference-v2/catalog/get-a-skill-variant.md): Retrieve one variant of a Runpod skill as Markdown. (4773 bytes)
+- [List Hub Repos](pages/api-reference-v2/catalog/list-hub-repos.md): Search Runpod Hub repos: GitHub repositories Runpod builds into deployable images, with reliability scores and deploy counts. (12410 bytes)
+- [Get A Hub Repo](pages/api-reference-v2/catalog/get-a-hub-repo.md): Retrieve a Runpod Hub repo with its listed release and the defaults it deploys with. (13159 bytes)
+- [Get A Hub Repo Readme](pages/api-reference-v2/catalog/get-a-hub-repo-readme.md): Retrieve the Markdown README of a Runpod Hub repo's listed release. (4619 bytes)
 
 ## Cost Centers
 
@@ -532,4 +540,4 @@
 
 ## Release notes
 
-- [Product updates](pages/release-notes.md): New features, fixes, and improvements for the Runpod platform. Review setup, configuration, workflows, and usage guidance in the Runpod documentation. (36417 bytes)
+- [Product updates](pages/release-notes.md): New features, fixes, and improvements for the Runpod platform. Review setup, configuration, workflows, and usage guidance in the Runpod documentation. (36425 bytes)

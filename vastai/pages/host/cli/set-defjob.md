@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/cli/set-defjob.mdx](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/host/cli/set-defjob.mdx)
+> Pinned source for Vast.ai main: [host/cli/set-defjob.mdx](https://github.com/vast-ai/docs/blob/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/host/cli/set-defjob.mdx)
 > Canonical documentation: https://docs.vast.ai/host/cli/set-defjob
 
 # vastai set defjob

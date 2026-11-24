@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/tcp/middlewares/overview.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/tcp/middlewares/overview.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/tcp/middlewares/overview.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/tcp/middlewares/overview.md)
 
 # TCP Middleware Overview
 
@@ -116,5 +116,5 @@ spec:
 
 | Middleware                                                                                                                                    | Purpose                                        | Area                        |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | --------------------------- |
-| <a id="opt-InFlightConn"></a>[InFlightConn](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/middlewares/inflightconn) | Limits the number of simultaneous connections. | Security, Request lifecycle |
-| <a id="opt-IPAllowList"></a>[IPAllowList](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/middlewares/ipallowlist)    | Limit the allowed client IPs.                  | Security, Request lifecycle |
+| <a id="opt-InFlightConn"></a>[InFlightConn](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/tcp/middlewares/inflightconn) | Limits the number of simultaneous connections. | Security, Request lifecycle |
+| <a id="opt-IPAllowList"></a>[IPAllowList](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/tcp/middlewares/ipallowlist)    | Limit the allowed client IPs.                  | Security, Request lifecycle |

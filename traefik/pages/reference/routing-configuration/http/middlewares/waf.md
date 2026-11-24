@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/http/middlewares/waf.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/http/middlewares/waf.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/http/middlewares/waf.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/http/middlewares/waf.md)
 
 > **Traefik Hub Feature**
 > This middleware is available exclusively in [Traefik Hub](https://traefik.io/traefik-hub/). Learn more about [Traefik Hub's advanced features](https://doc.traefik.io/traefik-hub/api-gateway/intro).
@@ -55,7 +55,7 @@ spec:
 
 ## Configuration Options
 
-| Field                                   | Description                                                                                                                                                               | Default | Required |
-| :-------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------ | :------- |
-| <a id="opt-directives"></a>`directives` | List of WAF rules to enforce.                                                                                                                                             |         | Yes      |
-| <a id="opt-crsEnabled"></a>`crsEnabled` | Enable [CRS rulesets](https://github.com/corazawaf/coraza-coreruleset/tree/main/rules/%40owasp_crs).<br /> Once the ruleset is enabled, it can be used in the middleware. | false   | False    |
+| Field                                   | Description                                                                                                                                                                      | Default | Required |
+| :-------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ | :------- |
+| <a id="opt-directives"></a>`directives` | List of WAF rules to enforce.                                                                                                                                                    |         | Yes      |
+| <a id="opt-crsEnabled"></a>`crsEnabled` | Enable [CRS rulesets](https://github.com/corazawaf/coraza-coreruleset/tree/main/crs/v4/rules/%40owasp_crs).<br /> Once the ruleset is enabled, it can be used in the middleware. | false   | False    |

@@ -1,14 +1,14 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/index.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/index.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/index.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/index.md)
 
 # What is Traefik?
 
-![Architecture](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/traefik-architecture.png)
+![Architecture](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/traefik-architecture.png)
 
 Traefik is an [open-source](https://github.com/traefik/traefik) Application Proxy and the core of the Traefik Hub Runtime Platform.
 
 If you start with Traefik for service discovery and routing, you can seamlessly add [API management](https://traefik.io/solutions/api-management/), [API gateway](https://traefik.io/solutions/api-gateway/), [AI gateway](https://traefik.io/solutions/ai-gateway/), and [API mocking](https://traefik.io/solutions/api-mocking/) capabilities as needed.
 
-For a detailed comparison of all Traefik products and their capabilities, see our [Product Features Comparison](https://doc.traefik.io/traefik/v3.7/features/).
+For a detailed comparison of all Traefik products and their capabilities, see our [Product Features Comparison](https://doc.traefik.io/traefik/v3.8/features/).
 
 With 3.5 billion downloads and over 65k stars on GitHub, Traefik is used globally across hybrid cloud, multi-cloud, on prem, and bare metal environments running Kubernetes, Docker Swarm, AWS, [the list goes on](https://doc.traefik.io/traefik/reference/install-configuration/providers/overview/).
 
@@ -31,10 +31,10 @@ Traefik supports different needs depending on your background. We keep three use
 
 Traefik’s main concepts help you understand how requests flow to your services:
 
-- [Entrypoints](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints) are the network entry points into Traefik. They define the port that will receive the packets and whether to listen for TCP or UDP.
-- [Routers](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/routing/rules-and-priority) are in charge of connecting incoming requests to the services that can handle them. In the process, routers may use pieces of [middleware](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/overview) to update the request or act before forwarding the request to the service.
-- [Services](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/service) are responsible for configuring how to reach the actual services that will eventually handle the incoming requests.
-- [Providers](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview) are infrastructure components, whether orchestrators, container engines, cloud providers, or key-value stores. The idea is that Traefik queries the provider APIs in order to find relevant information about routing, and when Traefik detects a change, it dynamically updates the routes.
+- [Entrypoints](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints) are the network entry points into Traefik. They define the port that will receive the packets and whether to listen for TCP or UDP.
+- [Routers](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/routing/rules-and-priority) are in charge of connecting incoming requests to the services that can handle them. In the process, routers may use pieces of [middleware](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/overview) to update the request or act before forwarding the request to the service.
+- [Services](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/load-balancing/service) are responsible for configuring how to reach the actual services that will eventually handle the incoming requests.
+- [Providers](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/overview) are infrastructure components, whether orchestrators, container engines, cloud providers, or key-value stores. The idea is that Traefik queries the provider APIs in order to find relevant information about routing, and when Traefik detects a change, it dynamically updates the routes.
 
 These concepts work together to manage your traffic from the moment a request arrives until it reaches your application.
 

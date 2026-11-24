@@ -1,13 +1,13 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md)
 
-`MiddlewareTCP` is the CRD implementation of a [Traefik TCP middleware](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/middlewares/overview).
+`MiddlewareTCP` is the CRD implementation of a [Traefik TCP middleware](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/tcp/middlewares/overview).
 
-Before creating `MiddlewareTCP` objects, you need to apply the [Traefik Kubernetes CRDs](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd#requirements) to your Kubernetes cluster.
+Before creating `MiddlewareTCP` objects, you need to apply the [Traefik Kubernetes CRDs](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-crd#requirements) to your Kubernetes cluster.
 
 This registers the `MiddlewareTCP` kind and other Traefik-specific resources.
 
 > **Cross-provider namespace**
-> As Kubernetes also has its own notion of namespace, one should not confuse the kubernetes namespace of a resource (in the reference to the middleware) with the [provider namespace](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview#provider-namespace), when the definition of the middleware comes from another provider. In this context, specifying a namespace when referring to the resource does not make any sense, and will be ignored. Additionally, when you want to reference a Middleware from the CRD Provider, you have to append the namespace of the resource in the resource-name as Traefik appends the namespace internally automatically.
+> As Kubernetes also has its own notion of namespace, one should not confuse the kubernetes namespace of a resource (in the reference to the middleware) with the [provider namespace](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/overview#provider-namespace), when the definition of the middleware comes from another provider. In this context, specifying a namespace when referring to the resource does not make any sense, and will be ignored. Additionally, when you want to reference a Middleware from the CRD Provider, you have to append the namespace of the resource in the resource-name as Traefik appends the namespace internally automatically.
 
 ## Configuration Example
 
@@ -47,4 +47,4 @@ spec:
       namespace: foo
 ```
 
-More information about available TCP middlewares in the dedicated [middlewares section](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/middlewares/overview).
+More information about available TCP middlewares in the dedicated [middlewares section](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/tcp/middlewares/overview).

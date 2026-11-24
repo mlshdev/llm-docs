@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/serverless/comfyui.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/tutorials/serverless/comfyui.mdx)
+> Pinned source for Runpod main: [tutorials/serverless/comfyui.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/tutorials/serverless/comfyui.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/serverless/comfyui
 
 # Deploy ComfyUI on Serverless
@@ -36,7 +36,7 @@ Replace `<version>` with the latest release version from GitHub Releases.
 
 If you need a model that's not listed here, or have your own LoRA, or need custom nodes, you can use this [customization guide](https://github.com/runpod-workers/worker-comfyui/blob/main/docs/customization.md) to create your own custom worker.
 
-1. Navigate to the [ComfyUI Hub listing](https://console.runpod.io/hub/runpod-workers/worker-comfyui) in the Runpod web interface.
+1. Navigate to the [ComfyUI Hub listing](https://console.runpod.io/hub/listing/runpod-workers/worker-comfyui) in the Runpod web interface.
 2. Click **Deploy \[VERSION\_NUMBER]**, then click **Next** and then **Create Endpoint** to confirm. This creates a fully configured endpoint with the FLUX.1-dev-fp8 model pre-installed and appropriate GPU settings for running ComfyUI workflows.
 3. On the endpoint page, make a note of the **Endpoint ID**. You'll need this value to submit jobs and retrieve results. You can find your endpoint by navigating to **Resources > Serverless** in the left-hand navigation and clicking the relevant card to view the endpoint detail page. The Endpoint ID is displayed below the Quick Start section, or you can find it at the end of the page URL.
 

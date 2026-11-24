@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/security/http2-header-memory.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/security/http2-header-memory.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/security/http2-header-memory.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/security/http2-header-memory.md)
 
 # HTTP/2 Header Memory Exhaustion
 
@@ -12,7 +12,7 @@ Two entry point options bound this exposure. It is recommended to use them toget
 
 ## Limit the Request Header Size
 
-The [`maxHeaderBytes`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints#opt-http-maxHeaderBytes) option caps the size, in bytes, of the request headers Traefik reads for each request.
+The [`maxHeaderBytes`](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints#opt-http-maxHeaderBytes) option caps the size, in bytes, of the request headers Traefik reads for each request.
 Lowering it from the default (`1048576`, that is 1 MiB) to the smallest value your largest legitimate headers need lets Traefik reject an oversized header block before it can be amplified.
 
 **File (YAML)**
@@ -44,7 +44,7 @@ entryPoints:
 
 ## Limit Concurrent Streams per Connection
 
-The [`maxConcurrentStreams`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints#opt-http2-maxConcurrentStreams) option caps the number of concurrent HTTP/2 streams each client is allowed to initiate on a single connection (default `250`).
+The [`maxConcurrentStreams`](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints#opt-http2-maxConcurrentStreams) option caps the number of concurrent HTTP/2 streams each client is allowed to initiate on a single connection (default `250`).
 Lowering it reduces the amount of memory a single connection can pin.
 
 **File (YAML)**

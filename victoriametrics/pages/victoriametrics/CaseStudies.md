@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.156.0: [docs/victoriametrics/CaseStudies.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/CaseStudies.md)
+> Pinned source for VictoriaMetrics v1.157.0: [docs/victoriametrics/CaseStudies.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/CaseStudies.md)
 
 Below please find public case studies and talks from VictoriaMetrics users. You can also join our [community Slack channel](https://slack.victoriametrics.com/)
 where you can chat with VictoriaMetrics users to get additional references, reviews and case studies.
@@ -452,20 +452,20 @@ VictoriaMetrics has allowed us to extend data retention for our metrics effortle
 
 Across our production VictoriaMetrics clusters, in a 12 months period we go beyond the following figures.
 
-- Active time series: 25M
-- Ingestion rate: 1M samples per second (2M before stream aggregation)
-- Total number of datapoints: \~20T
+- Active time series: 50M
+- Ingestion rate: 1M samples per second (3M before stream aggregation)
+- Total number of datapoints: \~35T
 - Data size on disk: \~20 TiB
-- Available memory: \~2 TiB as seen by kubernetes (1024 GiB physical memory for the hosts)
-- CPU: 128 cores (AMD EPYC 9004), about 60 % idle
+- Available memory: \~2 TiB as seen by kubernetes (1536 GiB physical memory for the hosts)
+- CPU: 192 cores (AMD EPYC 9005), about 60 % idle
 - Retention period: \~1 year
-- Churn rate: 16M new time series per day (monthly average)
+- Churn rate: 40M new time series per day (monthly average)
 - Query rate:
-  - `/api/v1/query_range`: 6 queries per second
-  - `/api/v1/query`: 20 queries per second
+  - `/api/v1/query_range`: 5 queries per second
+  - `/api/v1/query`: 30 queries per second
 - Query duration for `/api/v1/query_range` (weekly mean):
-  - 99th percentile: 2 s
-  - median: 15 ms
+  - 99th percentile: 700 ms
+  - median: 6 ms
 
 ## Roblox
 

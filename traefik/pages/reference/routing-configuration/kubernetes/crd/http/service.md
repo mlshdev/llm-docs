@@ -1,13 +1,13 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/kubernetes/crd/http/service.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/kubernetes/crd/http/service.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/kubernetes/crd/http/service.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/kubernetes/crd/http/service.md)
 
-`Service` is the implementation of a [Traefik HTTP service](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/service).
+`Service` is the implementation of a [Traefik HTTP service](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/load-balancing/service).
 
 There is no dedicated CRD, a `Service` is part of:
 
-- [`IngressRoute`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/ingressroute)
-- [`TraefikService`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/traefikservice)
+- [`IngressRoute`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/ingressroute)
+- [`TraefikService`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/traefikservice)
 
-Note that, before creating `IngressRoute` or `TraefikService` objects, you need to apply the [Traefik Kubernetes CRDs](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd#requirements) to your Kubernetes cluster.
+Note that, before creating `IngressRoute` or `TraefikService` objects, you need to apply the [Traefik Kubernetes CRDs](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-crd#requirements) to your Kubernetes cluster.
 
 This registers the Traefik-specific resources.
 
@@ -117,7 +117,7 @@ spec:
 | <a id="opt-strategy"></a>`strategy`                                                         | Strategy defines the load balancing strategy between the servers.<br />Supported values are: wrr (Weighed round-robin), p2c (Power of two choices), hrw (Highest Random Weight), and leasttime (Least-Time).<br />Evaluated only if the kind is **Service**.                                                                                                                                                                                                                                                                                               | "wrr"                                                                | No       |
 | <a id="opt-nativeLB"></a>`nativeLB`                                                         | Allow using the Kubernetes Service load balancing between the pods instead of the one provided by Traefik.<br /> Evaluated only if the kind is **Service**.                                                                                                                                                                                                                                                                                                                                                                                                | false                                                                | No       |
 | <a id="opt-nodePortLB"></a>`nodePortLB`                                                     | Use the nodePort IP address when the service type is NodePort.<br />It allows services to be reachable when Traefik runs externally from the Kubernetes cluster but within the same network of the nodes.<br />Evaluated only if the kind is **Service**.                                                                                                                                                                                                                                                                                                  | false                                                                | No       |
-| <a id="opt-middlewares"></a>`middlewares`                                                   | List of references to [Middleware](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/middleware) resources to apply to the service.<br />The middlewares will take effect for all requests handled by the service, regardless of which router forwards the request.<br />Evaluated only if the kind is **Service**.<br />More information [here](#middlewares).                                                                                                                                                      |                                                                      | No       |
+| <a id="opt-middlewares"></a>`middlewares`                                                   | List of references to [Middleware](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/middleware) resources to apply to the service.<br />The middlewares will take effect for all requests handled by the service, regardless of which router forwards the request.<br />Evaluated only if the kind is **Service**.<br />More information [here](#middlewares).                                                                                                                                                      |                                                                      | No       |
 | <a id="opt-middlewaresn-name"></a>`middlewares[n].name`                                     | Middleware name.<br />The character `@` is not authorized.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |                                                                      | Yes      |
 | <a id="opt-middlewaresn-namespace"></a>`middlewares[n].namespace`                           | Middleware namespace.<br />Can be empty if the middleware belongs to the same namespace as the IngressRoute.                                                                                                                                                                                                                                                                                                                                                                                                                                               |                                                                      | No       |
 
@@ -456,10 +456,10 @@ spec:
 
 ### Middlewares
 
-You can attach a list of [middlewares](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/middleware) to each service.
+You can attach a list of [middlewares](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/middleware) to each service.
 The middlewares will take effect for all requests handled by the service, regardless of which router forwards the request.
 
-For more information on service-level middlewares, see [service middlewares](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/service#middlewares).
+For more information on service-level middlewares, see [service middlewares](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/load-balancing/service#middlewares).
 
 > **Attaching Middlewares to a Service**
 > **IngressRoute**

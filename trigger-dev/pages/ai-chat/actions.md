@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.8: [docs/ai-chat/actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/ai-chat/actions.mdx)
+> Pinned source for Trigger.dev v4.8.10: [docs/ai-chat/actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/523400fcb4d65f3f24303b92566862a72817907c/docs/ai-chat/actions.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/actions
 
 # Actions
@@ -135,6 +135,14 @@ const stream = await agentChat.sendAction({ type: "rollback", targetMessageId: "
 ```
 
 The action payload is validated against `actionSchema` on the backend; invalid actions throw and surface as a stream error. The `action` parameter in `onAction` is fully typed from the schema.
+
+When `onAction` returns nothing, no turn runs and the stream completes once the action has been applied. From a server, `await stream.text()` waits for that:
+
+```ts Your backend code
+// e.g. reset the session before a new meeting starts
+const stream = await agentChat.sendAction({ type: "reset" });
+await stream.text(); // resolves once onAction has run
+```
 
 > **Note**
 >

@@ -1,10 +1,10 @@
-> Pinned source for yt-dlp 2026.10.26: [Maintainers.md](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/Maintainers.md)
+> Pinned source for yt-dlp 2026.11.23: [Maintainers.md](https://github.com/yt-dlp/yt-dlp/blob/6f73a8d1664a58cdef8c25f01ffb5ab9cf730408/Maintainers.md)
 
 # Maintainers
 
-This file lists the maintainers of yt-dlp and their major contributions. See the [Changelog](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/Changelog.md) for more details.
+This file lists the maintainers of yt-dlp and their major contributions. See the [Changelog](https://github.com/yt-dlp/yt-dlp/blob/6f73a8d1664a58cdef8c25f01ffb5ab9cf730408/Changelog.md) for more details.
 
-You can also find lists of all [contributors of yt-dlp](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/CONTRIBUTORS) and [authors of youtube-dl](https://github.com/ytdl-org/youtube-dl/blob/master/AUTHORS)
+You can also find lists of all [contributors of yt-dlp](https://github.com/yt-dlp/yt-dlp/blob/6f73a8d1664a58cdef8c25f01ffb5ab9cf730408/CONTRIBUTORS) and [authors of youtube-dl](https://github.com/ytdl-org/youtube-dl/blob/master/AUTHORS)
 
 ## Core Maintainers
 

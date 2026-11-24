@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/kubernetes/crd/http/traefikservice.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/kubernetes/crd/http/traefikservice.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/kubernetes/crd/http/traefikservice.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/kubernetes/crd/http/traefikservice.md)
 
 A `TraefikService` is a custom resource that sits on top of the Kubernetes Services. It enables advanced load-balancing features such as a [Weighted Round Robin](#weighted-round-robin) load balancing, a [Highest Random Weight](#highest-random-weight) load balancing, a [Mirroring](#mirroring), or a [Failover](#failover) between your Kubernetes Services.
 
@@ -159,7 +159,7 @@ data:
 
 | Field                                                                   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Default                                     | Required |
 | :---------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------ | :------- |
-| <a id="opt-services"></a>`services`                                     | List of any combination of TraefikService and [Kubernetes service](https://kubernetes.io/docs/concepts/services-networking/service/). <br />. Exhaustive list of option in the [`Service`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/service#configuration-options) documentation.                                                                                                                                                                                                                                                                                      |                                             | No       |
+| <a id="opt-services"></a>`services`                                     | List of any combination of TraefikService and [Kubernetes service](https://kubernetes.io/docs/concepts/services-networking/service/). <br />. Exhaustive list of option in the [`Service`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/service#configuration-options) documentation.                                                                                                                                                                                                                                                                                      |                                             | No       |
 | <a id="opt-servicesm-weight"></a>`services[m].weight`                   | Service weight.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | ""                                          | No       |
 | <a id="opt-sticky-cookie-name"></a>`sticky.`<br />`cookie.name`         | Name of the cookie used for the stickiness at the WRR service level.<br />When sticky sessions are enabled, a `Set-Cookie` header is set on the initial response to let the client know which server handles the first response.<br />On subsequent requests, to keep the session alive with the same server, the client should send the cookie with the value set.<br />If the server specified in the cookie becomes unhealthy, the request will be forwarded to a new server (and the cookie will keep track of the new server).<br />More information about WRR stickiness [here](#stickiness-on-multiple-levels) | Abbreviation of a sha1<br />(ex: `_1d52e`). | No       |
 | <a id="opt-sticky-cookie-httpOnly"></a>`sticky.`<br />`cookie.httpOnly` | Allow the cookie used for the stickiness at the WRR service level to be accessed by client-side APIs, such as JavaScript.<br />More information about WRR stickiness [here](#stickiness-on-multiple-levels)                                                                                                                                                                                                                                                                                                                                                                                                           | false                                       | No       |
@@ -398,7 +398,8 @@ Thus you can start testing the behavior of the new version keeping the current v
 The mirroring `TraefikService` allows you to reference Kubernetes Services and other instances of `TraefikService` (another WRR service -, or a mirroring service).
 
 Please note that by default the whole request is buffered in memory while it is being mirrored.
-See the `maxBodySize` option in the example below for how to modify this behavior.
+See the `maxBodySize` option in the example below for how to modify this behavior,
+or the `streamBody` option to stream the body to the mirrors instead of buffering it.
 
 ### Configuration Example
 
@@ -509,24 +510,25 @@ spec:
 
 The main service properties are set as the option root level.
 
-The main service provides the same options as a [`Service`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/service).
+The main service provides the same options as a [`Service`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/service).
 
-The exhaustive list of the service options is described in the [`Service`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/service#configuration-options) documentation.
+The exhaustive list of the service options is described in the [`Service`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/service#configuration-options) documentation.
 The mirror main service dedicated option are described below.
 
 | Field                                     | Description                                                                                                                                                                                                                                                                                                                                                                 | Default | Required |
 | :---------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------ | :------- |
 | <a id="opt-mirrorBody"></a>`mirrorBody`   | Defines whether the request body should be mirrored.                                                                                                                                                                                                                                                                                                                        | true    | No       |
 | <a id="opt-maxBodySize"></a>`maxBodySize` | Maximum size allowed for the body of the request.<br />If the body is larger, the request is not mirrored.<br />-1 means unlimited size.                                                                                                                                                                                                                                    | -1      | No       |
-| <a id="opt-mirrors"></a>`mirrors`         | List of mirrored services to target.<br /> It can be any combination of TraefikService and [Kubernetes service](https://kubernetes.io/docs/concepts/services-networking/service/). <br />Exhaustive list of option in the [`Service`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/service#configuration-options) documentation. |         | Yes      |
+| <a id="opt-streamBody"></a>`streamBody`   | Defines whether the request body is streamed to the mirrors while the main service reads it, instead of being buffered in memory.<br />A mirror falling more than 1 MiB behind the main service is aborted.<br />It has no effect when `mirrorBody` is false, and cannot be used with `maxBodySize`.                                                                        | false   | No       |
+| <a id="opt-mirrors"></a>`mirrors`         | List of mirrored services to target.<br /> It can be any combination of TraefikService and [Kubernetes service](https://kubernetes.io/docs/concepts/services-networking/service/). <br />Exhaustive list of option in the [`Service`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/service#configuration-options) documentation. |         | Yes      |
 
 #### Mirrored Services Options
 
 The mirrored services properties are set in the `mirrors` list.
 
-A mirrored service provides the same options as a [`Service`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/service).
+A mirrored service provides the same options as a [`Service`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/service).
 
-The exhaustive list of the service options is described in the [`Service`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/service#configuration-options) documentation.
+The exhaustive list of the service options is described in the [`Service`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/service#configuration-options) documentation.
 The mirrorerd service dedicated option are described below.
 
 | Field                                                 | Description                                 | Default | Required |
@@ -538,7 +540,7 @@ The mirrorerd service dedicated option are described below.
 The failover service forwards all requests to a fallback service when the main service responds with specific HTTP status codes defined in the `errors` configuration.
 
 > **on Heathcheck Status**
-> HealthCheck on a Failover service can be defined currently only with the [File provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file).
+> HealthCheck on a Failover service can be defined currently only with the [File provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file).
 
 ### Configuration Examples
 
@@ -669,15 +671,15 @@ spec:
 
 #### Main Service and Fallback Options
 
-The `service` and `fallback` fields each define a target service using the same options as a [`Service`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/service).
+The `service` and `fallback` fields each define a target service using the same options as a [`Service`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/service).
 
-The exhaustive list of the service options is described in the [`Service`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/service#configuration-options) documentation.
+The exhaustive list of the service options is described in the [`Service`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/service#configuration-options) documentation.
 
 #### Failover Dedicated Options
 
 | Field                                                                           | Description                                                                                                                                                                                                                     | Default | Required |
 | :------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------ | :------- |
-| <a id="opt-service"></a>`service`                                               | Main service to forward requests to. Provides the same options as a [`Service`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/service).                                               |         | Yes      |
-| <a id="opt-fallback"></a>`fallback`                                             | Fallback service to use when the main service returns matching error status codes. Provides the same options as a [`Service`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/service). |         | Yes      |
+| <a id="opt-service"></a>`service`                                               | Main service to forward requests to. Provides the same options as a [`Service`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/service).                                               |         | Yes      |
+| <a id="opt-fallback"></a>`fallback`                                             | Fallback service to use when the main service returns matching error status codes. Provides the same options as a [`Service`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/service). |         | Yes      |
 | <a id="opt-errors-status"></a>`errors.status`                                   | List of HTTP status code ranges for which the fallback service should be used.<br />Each entry can be a single code (e.g. `"429"`) or a range (e.g. `"500-503"`).                                                               |         | No       |
 | <a id="opt-errors-maxRequestBodyBytes"></a>`errors.`<br />`maxRequestBodyBytes` | Maximum size allowed for the body of the request.<br />If the body is larger, the request is not replayed to the fallback service.<br />-1 means unlimited size.                                                                | -1      | No       |

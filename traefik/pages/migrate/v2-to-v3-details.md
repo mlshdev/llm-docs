@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/migrate/v2-to-v3-details.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/migrate/v2-to-v3-details.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/migrate/v2-to-v3-details.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/migrate/v2-to-v3-details.md)
 
 # Configuration Details for Migrating from Traefik v2 to v3
 
@@ -157,7 +157,7 @@ It is now unsupported and would prevent Traefik to start.
 ##### Remediation
 
 The `http3` option should be removed from the install configuration experimental section.
-To configure `http3`, please checkout the [entrypoint configuration documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints#opt-http3).
+To configure `http3`, please checkout the [entrypoint configuration documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints#opt-http3).
 
 ### Consul provider
 
@@ -446,7 +446,7 @@ This configuration is now unsupported and would prevent Traefik to start.
 #### Remediation
 
 Rancher 2.x requires Kubernetes and does not have a metadata endpoint of its own for Traefik to query.
-As such, Rancher 2.x users should utilize the [Kubernetes CRD provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd) directly.
+As such, Rancher 2.x users should utilize the [Kubernetes CRD provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-crd) directly.
 
 Also, all Rancher provider related configuration should be removed from the install configuration.
 
@@ -652,16 +652,16 @@ In v3, the Kubernetes Ingress default path matching does not support regexes any
 Two levels of remediation are possible:
 
 - Interpret the default path matcher `PathPrefix` with v2 syntax.
-  This can done globally for all routers with the [install configuration](#configure-the-default-syntax-in-install-configuration) or on a per-router basis by using the [traefik.ingress.kubernetes.io/router.rulesyntax](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/ingress#annotations) annotation.
+  This can done globally for all routers with the [install configuration](#configure-the-default-syntax-in-install-configuration) or on a per-router basis by using the [traefik.ingress.kubernetes.io/router.rulesyntax](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/ingress#annotations) annotation.
 
-- Adapt the path regex to be compatible with the Go regex syntax and change the default path matcher to use the `PathRegexp` matcher with the [`traefik.ingress.kubernetes.io/router.pathmatcher`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/ingress#annotations) annotation.
+- Adapt the path regex to be compatible with the Go regex syntax and change the default path matcher to use the `PathRegexp` matcher with the [`traefik.ingress.kubernetes.io/router.pathmatcher`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/ingress#annotations) annotation.
 
 ## Operations Changes
 
 ### Traefik RBAC Update
 
 In v3, the support of `TCPServersTransport` has been introduced.
-When using the KubernetesCRD provider, it is therefore necessary to update RBAC and CRDs ([See requirements](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd#requirements)).
+When using the KubernetesCRD provider, it is therefore necessary to update RBAC and CRDs ([See requirements](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-crd#requirements)).
 
 ### Content-Type Auto-Detection
 
@@ -704,7 +704,7 @@ In v3, the tracing feature has been revamped and is now powered exclusively by [
    using OpenTelemetry (OTel) collectors with appropriate exporters configuration is a viable solution.
    This allows continued compatibility with the existing infrastructure.
 
-Please check the [OpenTelemetry Tracing provider documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/tracing) for more information.
+Please check the [OpenTelemetry Tracing provider documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/tracing) for more information.
 
 #### Internal Resources Observability
 
@@ -712,9 +712,9 @@ In v3, observability for internal routers or services (e.g.: `ping@internal`) is
 To enable it one should use the new `addInternals` option for AccessLogs, Metrics or Tracing.
 Please take a look at the observability documentation for more information:
 
-- [AccessLogs](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/logs-and-accesslogs#accesslogs)
-- [Metrics](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/metrics)
-- [Tracing](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/tracing)
+- [AccessLogs](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/logs-and-accesslogs#accesslogs)
+- [Metrics](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/metrics)
+- [Tracing](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/tracing)
 
 #### Access logs
 
@@ -884,7 +884,7 @@ In v3, we renamed the `IPWhiteList` middleware to `IPAllowList` without changing
 ### TCP LoadBalancer `terminationDelay` option
 
 The TCP LoadBalancer `terminationDelay` option has been deprecated.
-This option can now be configured directly on the `TCPServersTransport` level, please take a look at this [documentation](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/serverstransport#opt-serverstransport-terminationDelay)
+This option can now be configured directly on the `TCPServersTransport` level, please take a look at this [documentation](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/tcp/serverstransport#opt-serverstransport-terminationDelay)
 
 ### Kubernetes CRDs API Group `traefik.containo.us`
 

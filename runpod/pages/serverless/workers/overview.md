@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/workers/overview.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/serverless/workers/overview.mdx)
+> Pinned source for Runpod main: [serverless/workers/overview.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/serverless/workers/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/workers/overview
 
 # Overview
@@ -94,7 +94,7 @@ View worker states in the **Workers** tab of your endpoint in the [Runpod consol
 
 ## Max worker limits
 
-Account balance determines your maximum workers (flex + active combined):
+Your account has a worker limit: the highest total of max workers (flex + active combined) across all your endpoints. To raise the limit, your account balance must meet the minimum for the next tier:
 
 | Balance | Max workers |
 | ------- | ----------- |
@@ -106,7 +106,19 @@ Account balance determines your maximum workers (flex + active combined):
 | $700+   | 50          |
 | $900+   | 60          |
 
-Need more capacity? [Contact support](https://www.runpod.io/contact).
+To raise your limit, go to the [Serverless section](https://www.console.runpod.io/serverless) of the Runpod console and upgrade your total workers. The limit does not go up automatically when you add funds. Each upgrade moves you to the highest tier your balance qualifies for.
+
+The balance requirement is a one-time check, not a charge or a hold:
+
+- Runpod checks your balance only at the moment you upgrade.
+- After you upgrade, the new limit is permanent. It does not go down if your balance later drops below the tier minimum.
+- You can spend the balance as normal after you upgrade.
+
+> **Note**
+>
+> These tiers apply to personal and team accounts. If your account belongs to an organization, the organization's worker limit applies instead, and Runpod sets it.
+
+Need more than 60 workers? [Contact support](https://www.runpod.io/contact).
 
 ## Best practices
 

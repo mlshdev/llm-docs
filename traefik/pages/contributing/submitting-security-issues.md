@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/contributing/submitting-security-issues.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/contributing/submitting-security-issues.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/contributing/submitting-security-issues.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/contributing/submitting-security-issues.md)
 
 # Security
 
@@ -60,7 +60,7 @@ With no configuration-write access and no operator privilege required:
 
 A boundary stated this briefly does not resolve a concrete report on its own. The surfaces where we
 have already settled a position, each with the neighbouring variant we **do** treat as a vulnerability
-and the CVEs that prove it, are on the [Security Decisions](https://doc.traefik.io/traefik/v3.7/contributing/security-decisions) page. Check your
+and the CVEs that prove it, are on the [Security Decisions](https://doc.traefik.io/traefik/v3.8/contributing/security-decisions) page. Check your
 finding there before submitting.
 
 ## Handled as a Bug, Without an Advisory
@@ -68,7 +68,7 @@ finding there before submitting.
 Some reports describe real defects that we fix, often at high priority, but that do not receive an
 advisory or a CVE, because they do not cross the boundary above. We say so explicitly rather than
 leaving it implicit, and we will point at a specific entry in
-[Security Decisions](https://doc.traefik.io/traefik/v3.7/contributing/security-decisions) when we close a report on these grounds.
+[Security Decisions](https://doc.traefik.io/traefik/v3.8/contributing/security-decisions) when we close a report on these grounds.
 
 ## Report a Vulnerability
 

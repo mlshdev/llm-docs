@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.156.0: [docs/victoriametrics/BestPractices.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/BestPractices.md)
+> Pinned source for VictoriaMetrics v1.157.0: [docs/victoriametrics/BestPractices.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/BestPractices.md)
 
 ## Install Recommendation
 
@@ -54,7 +54,7 @@ VictoriaMetrics can also run on macOS for testing and development purposes.
 - **OpenBSD**: i386, amd64, arm
 - **Solaris/SmartOS**: i386, amd64
 - **macOS**: amd64, arm64 (for testing and development purposes)
-- **Windows**: amd64
+- **Windows**: amd64, arm64
 
 ## Kubernetes
 

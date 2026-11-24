@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/udp/routing/router.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/udp/routing/router.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/udp/routing/router.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/udp/routing/router.md)
 
 ## UDP Router
 
@@ -58,7 +58,7 @@ labels:
 | Field                                     | Description                                                                                                                                                                                                                                                                              | Default              | Required |
 | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | -------- |
 | <a id="opt-entryPoints"></a>`entryPoints` | The list of entry points to which the router is attached. If not specified, UDP routers are attached to all UDP entry points.                                                                                                                                                            | All UDP entry points | No       |
-| <a id="opt-service"></a>`service`         | The name of the service that will handle the matched UDP packets. UDP services are typically load balancer services that distribute packets to multiple backend servers. See [UDP Service](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/udp/service) for details. |                      | Yes      |
+| <a id="opt-service"></a>`service`         | The name of the service that will handle the matched UDP packets. UDP services are typically load balancer services that distribute packets to multiple backend servers. See [UDP Service](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/udp/service) for details. |                      | Yes      |
 
 ## Sessions and Timeout
 
@@ -66,7 +66,7 @@ Even though UDP is connectionless, Traefik's UDP router implementation relies on
 
 Each session has an associated timeout that cleans up inactive sessions after a specified duration of inactivity.
 
-Session timeout can be configured using the `entryPoints.name.udp.timeout` option in the static configuration. See [EntryPoints documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints) for details.
+Session timeout can be configured using the `entryPoints.name.udp.timeout` option in the static configuration. See [EntryPoints documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints) for details.
 
 ## Router Naming
 

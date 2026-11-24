@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [instant-clusters/slurm-clusters.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/instant-clusters/slurm-clusters.mdx)
+> Pinned source for Runpod main: [instant-clusters/slurm-clusters.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/instant-clusters/slurm-clusters.mdx)
 > Canonical documentation: https://docs.runpod.io/instant-clusters/slurm-clusters
 
 # Slurm Clusters

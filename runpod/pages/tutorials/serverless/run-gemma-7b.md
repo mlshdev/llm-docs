@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/serverless/run-gemma-7b.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/tutorials/serverless/run-gemma-7b.mdx)
+> Pinned source for Runpod main: [tutorials/serverless/run-gemma-7b.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/tutorials/serverless/run-gemma-7b.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/serverless/run-gemma-7b
 
 # Deploy a Gemma 3 chatbot with the OpenAI API
@@ -31,7 +31,7 @@ Gemma 3 is a gated model on Hugging Face. Before deploying, go to the [Gemma 3 1
 
 Deploy a vLLM worker through the Runpod Hub with Gemma 3 as your model:
 
-1. Open the [vLLM worker listing](https://console.runpod.io/hub/runpod-workers/worker-vllm) in the Runpod Hub.
+1. Open the [vLLM worker listing](https://console.runpod.io/hub/listing/runpod-workers/worker-vllm) in the Runpod Hub.
 2. Click **Deploy**, using the latest vLLM worker version.
 3. In the **Model** field, enter: `google/gemma-3-1b-it`.
 4. Under **Hugging Face access token**, enter your Hugging Face access token.
@@ -52,7 +52,7 @@ Your endpoint will begin initializing. This may take several minutes while Runpo
 
 Once your endpoint is deployed, make a note of your **Endpoint ID** from the endpoint details page. You'll need this to construct your API base URL.
 
-![](https://raw.githubusercontent.com/runpod/docs/e4b64f14b14cea0c05ab6977e1843b891202d4b9/images/4a0706af-serverless-endpoint-id.png)
+![](https://raw.githubusercontent.com/runpod/docs/f1803c4438f689fd05a79ba9965c5fe8ef971f20/images/4a0706af-serverless-endpoint-id.png)
 
 Your API base URL will follow this pattern:
 

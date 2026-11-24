@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/install-configuration/providers/kubernetes/kubernetes-crd.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-crd.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/install-configuration/providers/kubernetes/kubernetes-crd.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/install-configuration/providers/kubernetes/kubernetes-crd.md)
 
 Traefik provides some Kubernetes Custom Resources, such as `IngressRoute`, `Middleware`, etc.
 
@@ -17,10 +17,10 @@ When you install Traefik without using the Helm Chart, or when you are upgrading
 
 ```bash
 # Install Traefik Resource Definitions:
-kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v3.7/docs/content/reference/dynamic-configuration/kubernetes-crd-definition-v1.yml
+kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v3.8/docs/content/reference/dynamic-configuration/kubernetes-crd-definition-v1.yml
 
 # Install RBAC for Traefik:
-kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v3.7/docs/content/reference/dynamic-configuration/kubernetes-crd-rbac.yml
+kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v3.8/docs/content/reference/dynamic-configuration/kubernetes-crd-rbac.yml
 ```
 
 ## Configuration Example
@@ -71,7 +71,7 @@ providers:
 | <a id="opt-providers-kubernetesCRD-allowCrossNamespace"></a>`providers.kubernetesCRD.allowCrossNamespace`                   | Allows the `IngressRoutes` to reference resources in namespaces other than theirs.                                                                                                                                                                                                                                                                                                                                                                                        | false   | No       |
 | <a id="opt-providers-kubernetesCRD-allowExternalNameServices"></a>`providers.kubernetesCRD.allowExternalNameServices`       | Allows the `IngressRoutes` to reference ExternalName services.                                                                                                                                                                                                                                                                                                                                                                                                            | false   | No       |
 | <a id="opt-providers-kubernetesCRD-crossProviderNamespaces"></a>`providers.kubernetesCRD.crossProviderNamespaces`           | List of namespaces from which `IngressRoute`, `IngressRouteTCP`, `IngressRouteUDP`, and `TraefikService` are allowed to declare cross-provider references (e.g. `myservice@file`).<br />When unset, all namespaces are allowed. When set to `[]`, every cross-provider reference is rejected.                                                                                                                                                                             | \[]     | No       |
-| <a id="opt-providers-kubernetesCRD-nativeLBByDefault"></a>`providers.kubernetesCRD.nativeLBByDefault`                       | Allow using the Kubernetes Service load balancing between the pods instead of the one provided by Traefik for every `IngressRoute` by default.<br />It can be overridden in the [`Service`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/service#opt-nativeLB).                                                                                                                                                                | false   | No       |
+| <a id="opt-providers-kubernetesCRD-nativeLBByDefault"></a>`providers.kubernetesCRD.nativeLBByDefault`                       | Allow using the Kubernetes Service load balancing between the pods instead of the one provided by Traefik for every `IngressRoute` by default.<br />It can be overridden in the [`Service`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/service#opt-nativeLB).                                                                                                                                                                | false   | No       |
 | <a id="opt-providers-kubernetesCRD-disableClusterScopeResources"></a>`providers.kubernetesCRD.disableClusterScopeResources` | Prevent from discovering cluster scope resources (`IngressClass` and `Nodes`).<br />By doing so, it alleviates the requirement of giving Traefik the rights to look up for cluster resources.<br />Furthermore, Traefik will not handle IngressRoutes with IngressClass references, therefore such Ingresses will be ignored (please note that annotations are not affected by this option).<br />This will also prevent from using the `NodePortLB` options on services. | false   | No       |
 | <a id="opt-providers-kubernetesCRD-defaultTLSResourcesNamespace"></a>`providers.kubernetesCRD.defaultTLSResourcesNamespace` | Restricts the namespace in which the `TLSOption` and the `TLSStore` named `default` can be defined.<br />More information [here](#defaulttlsresourcesnamespace).                                                                                                                                                                                                                                                                                                          | ""      | No       |
 | <a id="opt-providers-kubernetesCRD-safeNaming"></a>`providers.kubernetesCRD.safeNaming`                                     | Enables collision-safe naming for the routers, middlewares and services generated by the provider.<br />When unset, the legacy naming scheme is used and a warning is logged on startup. More information [here](#safenaming).                                                                                                                                                                                                                                            | false   | No       |
@@ -160,7 +160,7 @@ objects, one silently replacing the other.
 
 `safeNaming` enables collision-safe naming instead: generated names are derived from the identity of the object
 they come from, and Kubernetes Services referenced from several parents (a route with several services, or a
-Weighted/Mirroring/HighestRandomWeight TraefikService) are scoped to their parent instead of being shared by identity.
+Weighted/Mirroring/HighestRandomWeight/Failover TraefikService) are scoped to their parent instead of being shared by identity.
 
 | Value                           | Behavior                                                                                   |
 | ------------------------------- | ------------------------------------------------------------------------------------------ |
@@ -238,16 +238,16 @@ The available custom resources are in the table below:
 
 | Resource                                                                                                                                                              | Purpose                                                           |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| <a id="opt-IngressRoute"></a>[IngressRoute](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/ingressroute)                     | HTTP Routing                                                      |
-| <a id="opt-Middleware"></a>[Middleware](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/middleware)                           | Tweaks the HTTP requests before they are sent to your service     |
-| <a id="opt-TraefikService"></a>[TraefikService](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/traefikservice)               | Abstraction for HTTP loadbalancing/mirroring                      |
-| <a id="opt-TLSOptions"></a>[TLSOptions](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/tls/tlsoption)                             | Allows configuring some parameters of the TLS connection          |
-| <a id="opt-TLSStores"></a>[TLSStores](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/tls/tlsstore)                                | Allows configuring the default TLS store                          |
-| <a id="opt-ServersTransport"></a>[ServersTransport](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/serverstransport)         | Allows configuring the transport between Traefik and the backends |
-| <a id="opt-IngressRouteTCP"></a>[IngressRouteTCP](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp)             | TCP Routing                                                       |
-| <a id="opt-MiddlewareTCP"></a>[MiddlewareTCP](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp)                   | Tweaks the TCP requests before they are sent to your service      |
-| <a id="opt-ServersTransportTCP"></a>[ServersTransportTCP](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp) | Allows configuring the transport between Traefik and the backends |
-| <a id="opt-IngressRouteUDP"></a>[IngressRouteUDP](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp)             | UDP Routing                                                       |
+| <a id="opt-IngressRoute"></a>[IngressRoute](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/ingressroute)                     | HTTP Routing                                                      |
+| <a id="opt-Middleware"></a>[Middleware](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/middleware)                           | Tweaks the HTTP requests before they are sent to your service     |
+| <a id="opt-TraefikService"></a>[TraefikService](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/traefikservice)               | Abstraction for HTTP loadbalancing/mirroring                      |
+| <a id="opt-TLSOptions"></a>[TLSOptions](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/tls/tlsoption)                             | Allows configuring some parameters of the TLS connection          |
+| <a id="opt-TLSStores"></a>[TLSStores](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/tls/tlsstore)                                | Allows configuring the default TLS store                          |
+| <a id="opt-ServersTransport"></a>[ServersTransport](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/serverstransport)         | Allows configuring the transport between Traefik and the backends |
+| <a id="opt-IngressRouteTCP"></a>[IngressRouteTCP](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp)             | TCP Routing                                                       |
+| <a id="opt-MiddlewareTCP"></a>[MiddlewareTCP](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp)                   | Tweaks the TCP requests before they are sent to your service      |
+| <a id="opt-ServersTransportTCP"></a>[ServersTransportTCP](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp) | Allows configuring the transport between Traefik and the backends |
+| <a id="opt-IngressRouteUDP"></a>[IngressRouteUDP](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp)             | UDP Routing                                                       |
 
 ## Particularities
 
@@ -256,4 +256,4 @@ The available custom resources are in the table below:
 
 ## Full Example
 
-For additional information on exposing services with Kubernetes, refer to the [Kubernetes guide](https://doc.traefik.io/traefik/v3.7/expose/kubernetes/basic).
+For additional information on exposing services with Kubernetes, refer to the [Kubernetes guide](https://doc.traefik.io/traefik/v3.8/expose/kubernetes/basic).

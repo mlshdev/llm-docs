@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/catalog/list-gpu-types.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/api-reference-v2/catalog/list-gpu-types.mdx)
+> Pinned source for Runpod main: [api-reference-v2/catalog/list-gpu-types.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/api-reference-v2/catalog/list-gpu-types.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/catalog/list-gpu-types
 
 # List Gpu Types
@@ -28,6 +28,10 @@ Returns available GPU types with pricing. Availability is included only when req
   - Example: `["12.8","12.6"]`
 - `minCudaVersion` (query; string; pattern: `^\d+(\.\d+)?$`): Lowest acceptable CUDA version to scope availability and lowest-price calculations to, compared numerically. Format: integer major or major.minor, e.g. 12 or 12.1 — unlike the `gpu.minCudaVersion` body field on pod and endpoint create, a bare major is accepted here and means any release of that major, because this filter only widens a read. Valid only with include=AVAILABILITY (400 otherwise) and mutually exclusive with cudaVersions (400 if both are sent); a malformed value is a 422. Use this for an open-ended floor and cudaVersions for an exact set.
   - Example: `12.1`
+- `minVcpuCountPerGpu` (query; integer; minimum: `1`; maximum: `4096`): Minimum host vCPUs per GPU for availability filtering, multiplied by `count` to match pod create's placement. Requires include=AVAILABILITY (400 otherwise).
+  - Example: `8`
+- `minRamPerGpu` (query; integer; minimum: `1`; maximum: `65536`): Minimum host system RAM (GB) per GPU for availability filtering, multiplied by `count` to match pod create's placement. This is host RAM, not the GPU VRAM in `memory`. Requires include=AVAILABILITY (400 otherwise).
+  - Example: `100`
 
 **Responses**
 

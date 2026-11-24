@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.8: [docs/management/runs/list.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/management/runs/list.mdx)
+> Pinned source for Trigger.dev v4.8.10: [docs/management/runs/list.mdx](https://github.com/triggerdotdev/trigger.dev/blob/523400fcb4d65f3f24303b92566862a72817907c/docs/management/runs/list.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/runs/list
 
 # List runs
@@ -63,6 +63,13 @@ List runs in a specific environment. You can filter the runs by status, created 
           - Example: `run_1234`
         - `previous` (string): The run ID to start the previous page before. This should be used as the `page[before]` parameter in the next request.
           - Example: `run_5678`
+      - `appliedFilters` (object): The filters the list was run with, including defaults the request didn't set.
+        - `createdAt` (object): The creation-time window the list used.
+          - `period` (string): The period, when the list used one.
+            - Example: `7d`
+          - `from` (string; format: date-time): The start of the window, when the request set `filter[createdAt][from]`.
+          - `to` (string; format: date-time): The end of the window, when the request set `filter[createdAt][to]`.
+          - `isDefault` (boolean): True when the request set no period, from or to, so the default 7-day period applied.
 - `400`: Invalid query parameters
   - Media type: `application/json`
     - Schema (object)

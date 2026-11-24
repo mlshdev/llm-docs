@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/install-configuration/providers/kv/zk.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/install-configuration/providers/kv/zk.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/install-configuration/providers/kv/zk.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/install-configuration/providers/kv/zk.md)
 
 # Traefik & ZooKeeper
 
@@ -37,4 +37,4 @@ providers:
 
 ## Routing Configuration
 
-See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/other-providers/kv).
+See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/other-providers/kv).

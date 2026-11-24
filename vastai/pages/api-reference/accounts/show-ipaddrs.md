@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/users/{user_id}/ipaddrs](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/api-reference/openapi.yaml%23get%20/api/v0/users/%7Buser_id%7D/ipaddrs)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/users/{user_id}/ipaddrs](https://github.com/vast-ai/docs/blob/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/api-reference/openapi.yaml%23get%20/api/v0/users/%7Buser_id%7D/ipaddrs)
 > Canonical documentation: https://docs.vast.ai/api-reference/accounts/show-ipaddrs
 
 # show ipaddrs

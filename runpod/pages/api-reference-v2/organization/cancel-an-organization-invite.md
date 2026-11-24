@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/organization/cancel-an-organization-invite.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/api-reference-v2/organization/cancel-an-organization-invite.mdx)
+> Pinned source for Runpod main: [api-reference-v2/organization/cancel-an-organization-invite.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/api-reference-v2/organization/cancel-an-organization-invite.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/organization/cancel-an-organization-invite
 
 # Cancel An Organization Invite

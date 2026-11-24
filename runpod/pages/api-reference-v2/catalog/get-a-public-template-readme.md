@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/catalog/get-a-public-template-readme.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/api-reference-v2/catalog/get-a-public-template-readme.mdx)
+> Pinned source for Runpod main: [api-reference-v2/catalog/get-a-public-template-readme.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/api-reference-v2/catalog/get-a-public-template-readme.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/catalog/get-a-public-template-readme
 
 # Get A Public Template Readme
@@ -10,9 +10,12 @@ Retrieve the Markdown README of a public Runpod template, with setup and usage i
 **Get a public template README**
 
 Returns the README of a public catalog template as raw Markdown.
-Only public templates are served. Returns `404` when the template does
-not exist, is not public, or has no README. Use
-`GET /v2/templates/{id}/readme` for your private templates.
+`id` is a template ID, a versioned tag's ID or a versioned line's
+`versionedTemplateId`. A line returns its own README, or its current
+tag's when it has none. Only public templates are served. Returns
+`404` when the template does not exist, is not public, or has no
+README. Use `GET /v2/templates/{id}/readme` for your private
+templates.
 
 **Authentication:** `bearerAuth`
 
@@ -23,7 +26,7 @@ not exist, is not public, or has no README. Use
 
 **Responses**
 
-- `200`: The template's README, as Markdown.
+- `200`: The README, as Markdown.
   - Header `RateLimit` (string): Live quota state for the caller, per the IETF ratelimit-headers draft.
   - Header `RateLimit-Policy` (string): The quota policy behind `RateLimit`, per the IETF ratelimit-headers draft.
   - Media type: `text/markdown; charset=utf-8`

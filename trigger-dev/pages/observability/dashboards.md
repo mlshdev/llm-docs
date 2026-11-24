@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.8: [docs/observability/dashboards.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/observability/dashboards.mdx)
+> Pinned source for Trigger.dev v4.8.10: [docs/observability/dashboards.mdx](https://github.com/triggerdotdev/trigger.dev/blob/523400fcb4d65f3f24303b92566862a72817907c/docs/observability/dashboards.mdx)
 > Canonical documentation: https://trigger.dev/docs/observability/dashboards
 
 # Dashboards
@@ -17,7 +17,7 @@ Trigger.dev automatically collects process metrics (CPU, memory) and Node.js run
 
 All of this data is available in the `metrics` table for use in dashboard widgets. See [Logging, tracing & metrics](https://trigger.dev/docs/logging#metrics) for the full list of automatic metrics and how to create custom ones, or the [Query page](https://trigger.dev/docs/observability/query#metrics-table-columns) for the `metrics` table schema.
 
-![The built-in Metrics dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/images/metrics-built-in.png)
+![The built-in Metrics dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/523400fcb4d65f3f24303b92566862a72817907c/docs/images/metrics-built-in.png)
 
 ### Visualization types
 

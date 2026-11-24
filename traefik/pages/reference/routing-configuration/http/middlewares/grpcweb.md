@@ -1,10 +1,10 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/http/middlewares/grpcweb.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/http/middlewares/grpcweb.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/http/middlewares/grpcweb.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/http/middlewares/grpcweb.md)
 
 The `grpcWeb` middleware converts gRPC Web requests to HTTP/2 gRPC requests before forwarding them to the backends.
 
 > **Tip**
 > Please note, that Traefik needs to communicate using gRPC with the backends (h2c or HTTP/2 over TLS).
-> Check out [Exposing gRPC Services](https://doc.traefik.io/traefik/v3.7/expose/overview#exposing-grpc-services) for more details.
+> Check out [Exposing gRPC Services](https://doc.traefik.io/traefik/v3.8/expose/overview#exposing-grpc-services) for more details.
 
 ## Configuration Examples
 

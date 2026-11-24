@@ -1,8 +1,8 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/install-configuration/providers/others/file.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/install-configuration/providers/others/file.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/install-configuration/providers/others/file.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/install-configuration/providers/others/file.md)
 
 # File
 
-The file provider lets you define the [install configuration](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview) in a YAML or TOML file.
+The file provider lets you define the [install configuration](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/overview) in a YAML or TOML file.
 
 It supports providing configuration through a single configuration file or multiple separate files.
 

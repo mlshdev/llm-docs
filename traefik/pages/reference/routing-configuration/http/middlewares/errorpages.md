@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/http/middlewares/errorpages.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/http/middlewares/errorpages.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/http/middlewares/errorpages.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/http/middlewares/errorpages.md)
 
 The `errors` middleware returns a custom page in lieu of the default, according to configured ranges of HTTP Status codes.
 
@@ -112,12 +112,12 @@ spec:
 
 By default, the client `Host` header value is forwarded to the configured error service.
 To forward the `Host` value corresponding to the configured error service URL,
-the [`passHostHeader`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/service#opt-passHostHeader) option must be set to `false`.
+the [`passHostHeader`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/load-balancing/service#opt-passHostHeader) option must be set to `false`.
 
 > **Kubernetes**
 > When specifying a service in Kubernetes (e.g., in an IngressRoute), you need to reference the `name`, `namespace`, and `port` of your Kubernetes Service resource. For example, `my-service.my-namespace@kubernetescrd` (or `my-service.my-namespace@kubernetescrd:80`) ensures that requests go to the correct service and port.
 > **ServersTransport (Kubernetes)**
-> To customize how Traefik connects to the error page service (for example, to configure TLS to the backend), set a [`serversTransport`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/serverstransport) on the middleware's `service`.
+> To customize how Traefik connects to the error page service (for example, to configure TLS to the backend), set a [`serversTransport`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/serverstransport) on the middleware's `service`.
 > The `traefik.ingress.kubernetes.io/service.serverstransport` annotation on the Kubernetes Service is not applied here: it only affects a Service used as an Ingress backend, not one referenced by a middleware.
 >
 > ```yaml

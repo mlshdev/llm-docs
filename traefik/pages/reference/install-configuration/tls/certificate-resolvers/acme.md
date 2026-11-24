@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/install-configuration/tls/certificate-resolvers/acme.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/install-configuration/tls/certificate-resolvers/acme.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/install-configuration/tls/certificate-resolvers/acme.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/install-configuration/tls/certificate-resolvers/acme.md)
 
 ## Configuration Example
 
@@ -253,6 +253,7 @@ Each domain & SAN will lead to a certificate request.
 [ACME v2](https://community.letsencrypt.org/t/acme-v2-and-wildcard-certificate-support-is-live/55579) supports wildcard certificates.
 As described in [Let's Encrypt's post](https://community.letsencrypt.org/t/staging-endpoint-for-acme-v2/49605) wildcard certificates can only be generated through a `DNS-01` challenge.
 It is not possible to request a double wildcard certificate for a domain (for example `*.*.local.com`).
+For the same reason, a `**.local.com` domain is refused, and a ``Host(`**.local.com`)`` router gets no certificate.
 
 Most likely the root domain should receive a certificate too, so it needs to be specified as SAN and 2 `DNS-01` challenges are invoked.
 In such a case the generated DNS TXT record for both domains is the same.
@@ -304,7 +305,7 @@ certificatesResolvers:
 
 ## Using LetsEncrypt with Kubernetes
 
-When using LetsEncrypt with kubernetes, there are some known caveats with both the [Ingress](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-ingress) and [CRD](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd) providers.
+When using LetsEncrypt with kubernetes, there are some known caveats with both the [Ingress](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-ingress) and [CRD](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-crd) providers.
 
 > **Note**
 > If you intend to run multiple instances of Traefik with LetsEncrypt, please ensure you read the sections on those provider pages.

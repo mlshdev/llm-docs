@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/install-configuration/tls/spiffe.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/install-configuration/tls/spiffe.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/install-configuration/tls/spiffe.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/install-configuration/tls/spiffe.md)
 
 # SPIFFE
 
@@ -18,7 +18,7 @@ Traefik is able to connect to the Workload API to obtain an X509-SVID used to se
 
 ## Workload API
 
-To enable SPIFFE globally, you need to set up the [static configuration](https://doc.traefik.io/traefik/v3.7/getting-started/configuration-overview#the-static-configuration). The `workloadAPIAddr` option specifies the address of the SPIFFE [Workload API](https://spiffe.io/docs/latest/spiffe-about/spiffe-concepts/#spiffe-workload-api).
+To enable SPIFFE globally, you need to set up the [static configuration](https://doc.traefik.io/traefik/v3.8/getting-started/configuration-overview#the-install-configuration). The `workloadAPIAddr` option specifies the address of the SPIFFE [Workload API](https://spiffe.io/docs/latest/spiffe-about/spiffe-concepts/#spiffe-workload-api).
 
 **File (YAML)**
 
@@ -46,7 +46,7 @@ spiffe:
 ## ServersTransport
 
 Enabling SPIFFE does not imply that backend connections are going to use it automatically.
-Each [ServersTransport](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/serverstransport) or [TCPServersTransport](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/serverstransport), that is meant to be secured with SPIFFE, must explicitly enable it (see [SPIFFE with ServersTransport](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/serverstransport#opt-spiffe) or [SPIFFE with TCPServersTransport](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/serverstransport#opt-serverstransport-tls-spiffe)).
+Each [ServersTransport](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/load-balancing/serverstransport) or [TCPServersTransport](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/tcp/serverstransport), that is meant to be secured with SPIFFE, must explicitly enable it (see [SPIFFE with ServersTransport](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/load-balancing/serverstransport#opt-spiffe) or [SPIFFE with TCPServersTransport](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/tcp/serverstransport#opt-serverstransport-tls-spiffe)).
 
 ### Configuration Example
 

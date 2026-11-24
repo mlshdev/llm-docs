@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/http/middlewares/circuitbreaker.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/http/middlewares/circuitbreaker.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/http/middlewares/circuitbreaker.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/http/middlewares/circuitbreaker.md)
 
 The HTTP circuit breaker prevents stacking requests to unhealthy Services, resulting in cascading failures.
 
@@ -80,13 +80,14 @@ spec:
 
 ### expression
 
-The `expression` option can check three different metrics:
+The `expression` option can check four different metrics:
 
-| Metrics                                                   | Description                                                                                                                                                                                                     | Example                                                                                                                                                                             |
-| :-------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <a id="opt-NetworkErrorRatio"></a>`NetworkErrorRatio`     | The network error ratio to open the circuit breaker.                                                                                                                                                            | `NetworkErrorRatio() > 0.30` opens the circuit breaker at a 30% ratio of network errors                                                                                             |
-| <a id="opt-ResponseCodeRatio"></a>`ResponseCodeRatio`     | The status code ratio to open the circuit breaker.<br />More information [below](#responsecoderatio)                                                                                                            | `ResponseCodeRatio(500, 600, 0, 600) > 0.25` opens the circuit breaker if 25% of the requests returned a 5XX status (amongst the request that returned a status code from 0 to 5XX) |
-| <a id="opt-LatencyAtQuantileMS"></a>`LatencyAtQuantileMS` | The latency at a quantile in milliseconds to open the circuit breaker when a given proportion of your requests become too slow.<br /> Only floating point number (with the trailing .0) for the quantile value. | `LatencyAtQuantileMS(50.0) > 100` opens the circuit breaker when the median latency (quantile 50) reaches 100ms.                                                                    |
+| Metrics                                                   | Description                                                                                                                                                                                                     | Example                                                                                                                                                                                      |
+| :-------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <a id="opt-NetworkErrorRatio"></a>`NetworkErrorRatio`     | The network error ratio to open the circuit breaker.                                                                                                                                                            | `NetworkErrorRatio() > 0.30` opens the circuit breaker at a 30% ratio of network errors                                                                                                      |
+| <a id="opt-ResponseCodeRatio"></a>`ResponseCodeRatio`     | The status code ratio to open the circuit breaker.<br />More information [below](#responsecoderatio)                                                                                                            | `ResponseCodeRatio(500, 600, 0, 600) > 0.25` opens the circuit breaker if 25% of the requests returned a 5XX status (amongst the request that returned a status code from 0 to 5XX)          |
+| <a id="opt-LatencyAtQuantileMS"></a>`LatencyAtQuantileMS` | The latency at a quantile in milliseconds to open the circuit breaker when a given proportion of your requests become too slow.<br /> Only floating point number (with the trailing .0) for the quantile value. | `LatencyAtQuantileMS(50.0) > 100` opens the circuit breaker when the median latency (quantile 50) reaches 100ms.                                                                             |
+| <a id="opt-RequestThreshold"></a>`RequestThreshold`       | The total number of requests in the circuit breaker metrics window.                                                                                                                                             | `ResponseCodeRatio(500, 600, 0, 600) > 0.25 && RequestThreshold() >= 20` opens the circuit breaker if 25% of the requests returned a 5XX status and at least 20 requests have been recorded. |
 
 #### ResponseCodeRatio
 
@@ -104,6 +105,8 @@ Supported operators are:
 - OR (`||`)
 
 For example, `ResponseCodeRatio(500, 600, 0, 600) > 0.30 || NetworkErrorRatio() > 0.10` triggers the circuit breaker when 30% of the requests return a 5XX status code, or when the ratio of network errors reaches 10%.
+
+For example, `ResponseCodeRatio(500, 600, 0, 600) > 0.30 && RequestThreshold() >= 20` triggers the circuit breaker only when 30% of the requests return a 5XX status code and at least 20 requests have been recorded.
 
 #### Operators
 

@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/observe/tracing.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/observe/tracing.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/observe/tracing.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/observe/tracing.md)
 
 # Tracing
 
@@ -39,7 +39,7 @@ tracing:
 ```
 
 > **Info**
-> For detailed configuration options, refer to the [tracing reference documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/tracing).
+> For detailed configuration options, refer to the [tracing reference documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/tracing).
 
 ## Per-Router Tracing
 
@@ -103,4 +103,4 @@ labels:
 }
 ```
 
-When the `observability` options are not defined on a router, it inherits the behavior from the [entrypoint's observability configuration](https://doc.traefik.io/traefik/v3.7/observe/overview), or the global one.
+When the `observability` options are not defined on a router, it inherits the behavior from the [entrypoint's observability configuration](https://doc.traefik.io/traefik/v3.8/observe/overview), or the global one.

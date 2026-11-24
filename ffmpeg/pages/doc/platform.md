@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/platform.texi](https://github.com/FFmpeg/FFmpeg/blob/21c81303cb7c6c407dac1a8c03991ab273f1fe13/doc/platform.texi)
+> Pinned source for FFmpeg master: [doc/platform.texi](https://github.com/FFmpeg/FFmpeg/blob/9a9f834f0d3c65980d608897ffbaf04d44a0e106/doc/platform.texi)
 
 # Unix-like
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [accounts-billing/billing.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/accounts-billing/billing.mdx)
+> Pinned source for Runpod main: [accounts-billing/billing.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/accounts-billing/billing.mdx)
 > Canonical documentation: https://docs.runpod.io/accounts-billing/billing
 
 # Billing overview
@@ -36,15 +36,15 @@ Storage charges continue to accrue on network volumes while your Pods are stoppe
 
 ### Low balance notifications
 
-Low balance notifications alert you when your account balance drops below a threshold you define, giving you time to add funds before your workloads are interrupted.
+Low balance notifications alert you when your account balance drops below a threshold you define, giving you time to add funds before your workloads are interrupted. This setting is available for individual and team accounts. Organization accounts are typically billed post-paid and don't have a credit balance.
 
 To enable low balance notifications:
 
-1. Navigate to the [Billing page](https://www.console.runpod.io/user/billing) in the Runpod console.
-2. Under **Notifications**, enable **Low balance alert**.
-3. Set the balance threshold at which you want to be notified.
+1. Navigate to the [Settings page](https://console.runpod.io/user/settings) in the Runpod console.
+2. Under **Notification settings**, find **General notifications** and click **Edit**.
+3. Enable **Low balance notification** and set your **Low balance threshold** (in dollars).
 
-Runpod sends an email when your balance falls below the threshold you set. This is separate from auto-pay, so you can use one or both.
+Runpod sends a daily email when your balance falls below the threshold, and shows a console alert when your Pods are about to be force-stopped. This is separate from auto-pay, so you can use one or both.
 
 ### Auto-pay
 

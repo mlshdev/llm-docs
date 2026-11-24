@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/getting-started/faq.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/getting-started/faq.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/getting-started/faq.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/getting-started/faq.md)
 
 # FAQ
 
@@ -9,10 +9,10 @@ and while the documentation often demonstrates configuration options through fil
 the core feature of Traefik is its dynamic configurability,
 directly reacting to changes from providers over time.
 
-Notably, the [install configuration](https://doc.traefik.io/traefik/v3.7/getting-started/configuration-overview#the-install-configuration) is static,
+Notably, the [install configuration](https://doc.traefik.io/traefik/v3.8/getting-started/configuration-overview#the-install-configuration) is static,
 and can be provided by a file on startup, whereas various providers,
 such as the file provider,
-contribute dynamically all along the traefik instance lifetime to its [routing configuration](https://doc.traefik.io/traefik/v3.7/getting-started/configuration-overview#the-routing-configuration) changes.
+contribute dynamically all along the traefik instance lifetime to its [routing configuration](https://doc.traefik.io/traefik/v3.8/getting-started/configuration-overview#the-routing-configuration) changes.
 
 In addition, the configuration englobes concepts such as the EntryPoint which can be seen as a listener on the Transport Layer (TCP),
 as apposed to the Router which is more about the Presentation (TLS) and Application layers (HTTP).
@@ -133,7 +133,7 @@ http:
 
 ## Why Is My TLS Certificate Not Reloaded When Its Contents Change?
 
-With the [file provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file),
+With the [file provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file),
 a configuration update is only triggered when one of the watched configuration files is modified.
 
 Which is why, when a certificate is defined by path,
@@ -157,14 +157,14 @@ By default, the following headers are automatically added when proxying requests
 | Proxy Server's Hostname | `X-Forwarded-Server`           |
 
 For more details,
-please check out the [forwarded header](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints#opt-forwardedHeaders-connection) documentation.
+please check out the [forwarded header](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints#opt-forwardedHeaders-connection) documentation.
 
 ## How Traefik is Storing and Serving TLS Certificates?
 
 ### Storing TLS Certificates
 
-TLS certificates are either provided directly by the [routing configuration](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/dynamic-configuration-methods "Link to routing configuration overview"),
-or by [Certificate resolvers](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/tls/certificate-resolvers/overview "Link to certificates resolvers").
+TLS certificates are either provided directly by the [routing configuration](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/dynamic-configuration-methods "Link to routing configuration overview"),
+or by [Certificate resolvers](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/tls/certificate-resolvers/overview "Link to certificates resolvers").
 
 For each TLS certificate, Traefik produces an identifier used as a key to store it.
 This identifier is constructed as the alphabetically ordered concatenation of the SANs `DNSNames` and `IPAddresses` of the TLScertificate.

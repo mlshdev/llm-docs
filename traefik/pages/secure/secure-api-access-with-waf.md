@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/secure/secure-api-access-with-waf.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/secure/secure-api-access-with-waf.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/secure/secure-api-access-with-waf.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/secure/secure-api-access-with-waf.md)
 
 # Secure API Access with WAF
 
@@ -190,6 +190,6 @@ spec:
 > **Warning**
 > Starting with Traefik Hub v3.11.0, Coraza requires read/write permissions to `/tmp`. This requirement stems from upstream changes in the Coraza engine.
 > **Advanced Configuration**
-> Advanced options and detailed rule configuration are described in the [reference page](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/waf).
+> Advanced options and detailed rule configuration are described in the [reference page](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/waf).
 >
 > The WAF middleware supports extensive customization through Coraza directives. You can create custom rules, tune detection thresholds, configure logging levels, and integrate with external threat intelligence feeds. For comprehensive rule writing guidance, consult the [Coraza documentation](https://www.coraza.io/docs/tutorials/introduction/) and [OWASP CRS documentation](https://coreruleset.org/docs/).

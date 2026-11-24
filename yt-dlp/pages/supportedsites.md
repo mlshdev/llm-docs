@@ -1,4 +1,4 @@
-> Pinned source for yt-dlp 2026.10.26: [supportedsites.md](https://github.com/yt-dlp/yt-dlp/blob/f264a6cbd1f630894da0f368df00f8aae50140e0/supportedsites.md)
+> Pinned source for yt-dlp 2026.11.23: [supportedsites.md](https://github.com/yt-dlp/yt-dlp/blob/6f73a8d1664a58cdef8c25f01ffb5ab9cf730408/supportedsites.md)
 
 # Supported sites
 
@@ -649,9 +649,7 @@ The only reliable way to check if a site is supported is to try it.
 - **kuwo:mv**: 酷我音乐 - MV (**Currently broken**)
 - **kuwo:singer**: 酷我音乐 - 歌手 (**Currently broken**)
 - **kuwo:song**: 酷我音乐 (**Currently broken**)
-- **la7.it**
-- **la7.it:​pod:episode**
-- **la7.it:podcast**
+- **la7play.it**
 - **laracasts**
 - **laracasts:series**
 - **LastFM**
@@ -1004,8 +1002,6 @@ The only reliable way to check if a site is supported is to try it.
 - **peloton**: [*peloton*](#supported-sites "netrc machine")
 - **peloton:live**: Peloton Live
 - **PerformGroup**
-- **periscope**: Periscope
-- **periscope:user**: Periscope user videos
 - **PGATour**
 - **PhilharmonieDeParis**: Philharmonie de Paris
 - **phoenix.de**
@@ -1493,6 +1489,7 @@ The only reliable way to check if a site is supported is to try it.
 - **twitter:amplify**
 - **twitter:broadcast**
 - **twitter:card**
+- **twitter:event**
 - **twitter:shortener**
 - **twitter:spaces**
 - **Txxx**

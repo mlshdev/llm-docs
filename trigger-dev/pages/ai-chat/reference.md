@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.8: [docs/ai-chat/reference.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/ai-chat/reference.mdx)
+> Pinned source for Trigger.dev v4.8.10: [docs/ai-chat/reference.mdx](https://github.com/triggerdotdev/trigger.dev/blob/523400fcb4d65f3f24303b92566862a72817907c/docs/ai-chat/reference.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/reference
 
 # API Reference
@@ -740,7 +740,7 @@ Options for the frontend transport constructor and `useTriggerChatTransport` hoo
 | `onSessionChange`      | `(chatId, session \| null) => void`                                                                       | —                           | Fires when session state changes. `session` is the full `ChatSession` or `null` when the run ends.                                                                                                                                                                                      |
 | `onEvent`              | `(event: ChatTransportEvent) => void`                                                                     | —                           | Observability callback for transport lifecycle events (send outcomes, stream connects, first chunk, turn completion). See [Transport events](#transport-events). Exceptions thrown by the callback are swallowed.                                                                       |
 | `multiTab`             | `boolean`                                                                                                 | `false`                     | Enable multi-tab claim coordination via `BroadcastChannel`. See [Frontend → multi-tab](https://trigger.dev/docs/ai-chat/frontend#multi-tab-coordination).                                                                                                                               |
-| `watch`                | `boolean`                                                                                                 | `false`                     | Read-only watcher mode — keep the SSE subscription open across `trigger:turn-complete` so a viewer sees turns 2, 3, … through one long-lived stream.                                                                                                                                    |
+| `watch`                | `boolean`                                                                                                 | `false`                     | Read-only watcher mode — keep the SSE subscription open across `trigger:turn-complete` so a viewer sees turns 2, 3, … through one long-lived stream. Include the chat in `sessions`, or `reconnectToStream` returns `null`. See [`chat.createWatchToken`](#chatcreatewatchtoken).       |
 | `headStart`            | `string`                                                                                                  | —                           | URL of a [`chat.headStart`](https://trigger.dev/docs/ai-chat/fast-starts#head-start) route handler. When set, the FIRST message of a brand-new chat POSTs to this URL so step 1's LLM call runs in your warm process while the agent run boots in parallel. Subsequent turns bypass it. |
 
 ### Transport events
@@ -1074,6 +1074,36 @@ type ChatInputChunk<TMessage = UIMessage, TMetadata = unknown> =
 | `kind: "stop"`    | Client aborted the active turn                   | Optional `message` surfaces in the stop handler                                                                                               |
 
 For the raw wire format, see [Client Protocol — ChatInputChunk](https://trigger.dev/docs/ai-chat/client-protocol#chatinputchunk).
+
+## chat.createWatchToken
+
+`chat.createWatchToken(chatId, options?)` mints a read-only token for watching a session from another surface: a dashboard, a second app, or a page that reacts to each turn. It carries `read:sessions:{chatId}` only, so the holder can subscribe to the session's `.out` stream but can't send messages. Call it on the server (it needs your secret key). `options.tokenTTL` sets the lifetime.
+
+To watch with the token, create a `TriggerChatTransport` with `watch: true` and pass the session in `sessions`. `reconnectToStream` only subscribes to sessions the transport already knows about, and returns `null` otherwise.
+
+```ts Your viewer code
+import { TriggerChatTransport } from "@trigger.dev/sdk/chat";
+
+// token comes from chat.createWatchToken(chatId) on your server
+const transport = new TriggerChatTransport({
+  task: "my-chat",
+  accessToken: () => token,
+  watch: true,
+  sessions: { [chatId]: { publicAccessToken: token } },
+});
+
+const stream = await transport.reconnectToStream({ chatId });
+if (stream) {
+  const reader = stream.getReader();
+  while (true) {
+    const { value: chunk, done } = await reader.read();
+    if (done) break;
+    // chunk is a UIMessageChunk: "text-delta", "tool-input-available", "finish", ...
+  }
+}
+```
+
+In watch mode the stream stays open across turns, so one loop sees every turn. When it connects, the stream replays the session's earlier output before new turns arrive. The [Recall.ai meeting agent](https://trigger.dev/docs/guides/example-projects/recall-meeting-agent) uses this for the web page its meeting bot shows.
 
 ## Session token scopes
 

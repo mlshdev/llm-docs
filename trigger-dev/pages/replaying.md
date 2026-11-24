@@ -1,22 +1,22 @@
-> Pinned source for Trigger.dev v4.8.8: [docs/replaying.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/replaying.mdx)
+> Pinned source for Trigger.dev v4.8.10: [docs/replaying.mdx](https://github.com/triggerdotdev/trigger.dev/blob/523400fcb4d65f3f24303b92566862a72817907c/docs/replaying.mdx)
 > Canonical documentation: https://trigger.dev/docs/replaying
 
 # Replaying
 
-A replay is a copy of a run with the same payload but against the latest version in that environment. This is useful if something went wrong and you want to try again with the latest version of your code.
+A replay is a copy of a run with the same payload that runs on the current version of the environment. This is useful if something went wrong and you want to try again with your current code.
 
 ### Replaying from the UI
 
 1. ![Select a task, then in the bottom right
-   click "Replay"](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/images/replay-run-action.png)
+   click "Replay"](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/523400fcb4d65f3f24303b92566862a72817907c/docs/images/replay-run-action.png)
 2. You can edit the payload  (if available) and choose the environment  to replay the run in.
 
    ![Select a task, then in the bottom right
-   click "Replay"](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/images/replay-run-modal.png)
+   click "Replay"](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/523400fcb4d65f3f24303b92566862a72817907c/docs/images/replay-run-modal.png)
 
-1) ![On the runs page, press the triple dot button](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/images/replay-runs-list.png)
+1) ![On the runs page, press the triple dot button](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/523400fcb4d65f3f24303b92566862a72817907c/docs/images/replay-runs-list.png)
 
-- ![Click replay](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/images/replay-runs-list-popover.png)
+- ![Click replay](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/523400fcb4d65f3f24303b92566862a72817907c/docs/images/replay-runs-list-popover.png)
 
 ### Detecting replays in your task
 
@@ -58,7 +58,7 @@ const replayedRun = await runs.replay(run.id, {
 });
 ```
 
-The options use the same names as [`trigger()` options](https://trigger.dev/docs/triggering): `payload`, `metadata`, `tags`, `queue`, `concurrencyKey`, `machine`, `version`, `region`, `delay`, `ttl`, `idempotencyKey`, `idempotencyKeyTTL`, `maxAttempts`, `maxDuration`, and `priority`. If you leave out `payload`, `metadata`, `tags`, `queue`, `concurrencyKey`, or `machine`, the new run uses the original run's value. The other options fall back to the task's current defaults, and without `version` the replay runs on the current version. The replay always runs in the same environment as the original run.
+The options use the same names as [`trigger()` options](https://trigger.dev/docs/triggering): `payload`, `metadata`, `tags`, `queue`, `concurrencyKey`, `machine`, `version`, `region`, `delay`, `ttl`, `idempotencyKey`, `idempotencyKeyTTL`, `maxAttempts`, `maxDuration`, and `priority`. If you leave out `payload`, `metadata`, `tags`, `queue`, `concurrencyKey`, or `machine`, the new run uses the original run's value. The other options fall back to the task's current defaults, and without `version` the replay runs on the [current version](https://trigger.dev/docs/deployment/overview#current-version) (the promoted one, which isn't always the newest deploy). The replay always runs in the same environment as the original run.
 
 A `queue` must already exist in the environment, and a `version` must be a version deployed to it. Otherwise the replay fails with an error and no run is created.
 

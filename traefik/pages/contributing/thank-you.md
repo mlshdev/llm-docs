@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/contributing/thank-you.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/contributing/thank-you.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/contributing/thank-you.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/contributing/thank-you.md)
 
 # Thank You!
 
@@ -14,15 +14,15 @@ So once again, thank you for your invaluable help in making Traefik such a good 
 > If you want to:
 >
 > - Propose an idea, request a feature, or report a bug,
->   then read [Submitting Issues](https://doc.traefik.io/traefik/v3.7/contributing/submitting-issues).
+>   then read [Submitting Issues](https://doc.traefik.io/traefik/v3.8/contributing/submitting-issues).
 > - Discover how to make an efficient contribution,
->   then read [Submitting Pull Requests](https://doc.traefik.io/traefik/v3.7/contributing/submitting-pull-requests).
+>   then read [Submitting Pull Requests](https://doc.traefik.io/traefik/v3.8/contributing/submitting-pull-requests).
 > - Learn how to build and test Traefik,
->   then the page [Building and Testing](https://doc.traefik.io/traefik/v3.7/contributing/building-testing) is for you.
+>   then the page [Building and Testing](https://doc.traefik.io/traefik/v3.8/contributing/building-testing) is for you.
 > - Contribute to the documentation,
->   then read the page about [Documentation](https://doc.traefik.io/traefik/v3.7/contributing/documentation).
+>   then read the page about [Documentation](https://doc.traefik.io/traefik/v3.8/contributing/documentation).
 > - Understand how do we learn about Traefik usage,
->   read the [Data Collection](https://doc.traefik.io/traefik/v3.7/contributing/data-collection) page.
-> - Spread the love about Traefik, please check the [Advocating](https://doc.traefik.io/traefik/v3.7/contributing/advocating) page.
+>   read the [Data Collection](https://doc.traefik.io/traefik/v3.8/contributing/data-collection) page.
+> - Spread the love about Traefik, please check the [Advocating](https://doc.traefik.io/traefik/v3.8/contributing/advocating) page.
 > - Learn about who are the maintainers and how they work on the project,
->   read the [Maintainers](https://doc.traefik.io/traefik/v3.7/contributing/maintainers) and [Maintainer Guidelines](https://doc.traefik.io/traefik/v3.7/contributing/maintainers-guidelines) pages.
+>   read the [Maintainers](https://doc.traefik.io/traefik/v3.8/contributing/maintainers) and [Maintainer Guidelines](https://doc.traefik.io/traefik/v3.8/contributing/maintainers-guidelines) pages.

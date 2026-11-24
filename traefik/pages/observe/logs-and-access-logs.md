@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/observe/logs-and-access-logs.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/observe/logs-and-access-logs.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/observe/logs-and-access-logs.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/observe/logs-and-access-logs.md)
 
 ## Logs
 
@@ -166,7 +166,7 @@ labels:
 }
 ```
 
-When the `observability` options are not defined on a router, it inherits the behavior from the [entrypoint's observability configuration](https://doc.traefik.io/traefik/v3.7/observe/overview), or the global one.
+When the `observability` options are not defined on a router, it inherits the behavior from the [entrypoint's observability configuration](https://doc.traefik.io/traefik/v3.8/observe/overview), or the global one.
 
 ## Log Formats
 
@@ -209,9 +209,9 @@ The available filters are:
 
 When using the `json` format, you can customize which fields are included in your access logs.
 
-- **Request Fields:** You can choose to `keep`, `drop`, or `redact` any of the standard request fields. A complete list of available fields like `ClientHost`, `RequestMethod`, and `Duration` can be found in the [reference documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/logs-and-accesslogs#json-format-fields).
+- **Request Fields:** You can choose to `keep`, `drop`, or `redact` any of the standard request fields. A complete list of available fields like `ClientHost`, `RequestMethod`, and `Duration` can be found in the [reference documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/logs-and-accesslogs#json-format-fields).
 - **Request Headers:** You can also specify which request headers should be included in the logs, and whether their values should be `kept`, `dropped`, or `redacted`.
 - **Request Query Parameters:** You can choose to `keep` or `drop` the query parameters for a request.
 
 > **Info**
-> For detailed configuration options, refer to the [reference documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/logs-and-accesslogs).
+> For detailed configuration options, refer to the [reference documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/logs-and-accesslogs).

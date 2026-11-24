@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/install-configuration/providers/hashicorp/consul-catalog.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/install-configuration/providers/hashicorp/consul-catalog.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/install-configuration/providers/hashicorp/consul-catalog.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/install-configuration/providers/hashicorp/consul-catalog.md)
 
 # Traefik & Consul Catalog
 
@@ -39,7 +39,7 @@ Attaching tags to services:
 | <a id="opt-providers-consulCatalog-refreshInterval"></a>`providers.consulCatalog.refreshInterval`                                 | Defines the polling interval.                                                                                                                                                                                                                                                                                                                                                        | 15s                                 | No       |
 | <a id="opt-providers-consulCatalog-prefix"></a>`providers.consulCatalog.prefix`                                                   | Defines the prefix for Consul Catalog tags defining Traefik labels.                                                                                                                                                                                                                                                                                                                  | traefik                             | No       |
 | <a id="opt-providers-consulCatalog-requireConsistent"></a>`providers.consulCatalog.requireConsistent`                             | Forces the read to be fully consistent. See [here](#requireconsistent) for more information.                                                                                                                                                                                                                                                                                         | false                               | No       |
-| <a id="opt-providers-consulCatalog-exposedByDefault"></a>`providers.consulCatalog.exposedByDefault`                               | Expose Consul Catalog services by default through Traefik. If set to *false*, services that do not have a `traefik.enable=true` tag are ignored from the resulting routing configuration.<br>See [here](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview#restrict-the-scope-of-service-discovery) for additional information.                  | true                                | no       |
+| <a id="opt-providers-consulCatalog-exposedByDefault"></a>`providers.consulCatalog.exposedByDefault`                               | Expose Consul Catalog services by default through Traefik. If set to *false*, services that do not have a `traefik.enable=true` tag are ignored from the resulting routing configuration.<br>See [here](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/overview#restrict-the-scope-of-service-discovery) for additional information.                  | true                                | no       |
 | <a id="opt-providers-consulCatalog-defaultRule"></a>`providers.consulCatalog.defaultRule`                                         | The Default Host rule for all services. See [here](#defaultrule) for more information.                                                                                                                                                                                                                                                                                               | ``"Host(`{{ normalize .Name }}`)"`` | No       |
 | <a id="opt-providers-consulCatalog-connectAware"></a>`providers.consulCatalog.connectAware`                                       | Enable Consul Connect support. If set to `true`, Traefik will be enabled to communicate with Connect services.                                                                                                                                                                                                                                                                       | false                               | No       |
 | <a id="opt-providers-consulCatalog-connectByDefault"></a>`providers.consulCatalog.connectByDefault`                               | Consider every service as Connect capable by default. If set to true, Traefik will consider every Consul Catalog service to be Connect capable by default. The option can be overridden on an instance basis with the traefik.consulcatalog.connect tag.                                                                                                                             | false                               | No       |
@@ -178,7 +178,7 @@ providers:
 # ...
 ```
 
-For additional information, refer to [Restrict the Scope of Service Discovery](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview#restrict-the-scope-of-service-discovery).
+For additional information, refer to [Restrict the Scope of Service Discovery](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/overview#restrict-the-scope-of-service-discovery).
 
 ### `namespaces`
 
@@ -223,4 +223,4 @@ providers:
 
 ## Routing Configuration
 
-See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/other-providers/consul-catalog).
+See the dedicated section in [routing](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/other-providers/consul-catalog).

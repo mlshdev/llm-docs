@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/expose/kubernetes/basic.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/expose/kubernetes/basic.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/expose/kubernetes/basic.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/expose/kubernetes/basic.md)
 
 # Exposing Services with Traefik on Kubernetes - Basic
 
@@ -6,8 +6,8 @@ This guide will help you get started with exposing your services through Traefik
 
 For routing, this guide gives you two options:
 
-- [Gateway API](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/gateway-api)
-- [IngressRoute](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/ingressroute)
+- [Gateway API](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/gateway-api)
+- [IngressRoute](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/ingressroute)
 
 Feel free to choose the one that fits your needs best.
 
@@ -15,7 +15,7 @@ Feel free to choose the one that fits your needs best.
 
 - A Kubernetes cluster with Traefik Proxy installed
 - `kubectl` configured to interact with your cluster
-- Traefik deployed using the [Traefik Kubernetes Setup guide](https://doc.traefik.io/traefik/v3.7/setup/kubernetes)
+- Traefik deployed using the [Traefik Kubernetes Setup guide](https://doc.traefik.io/traefik/v3.8/setup/kubernetes)
 
 ## Expose Your First HTTP Service
 
@@ -438,7 +438,7 @@ Your browser can also access <https://whoami.docker.localhost/> (you'll need to 
 
 Now that you've mastered the basics of exposing services with Traefik on Kubernetes, you're ready to explore more advanced features like middlewares, Let's Encrypt certificates, sticky sessions, and multi-layer routing.
 
-Continue to the [Advanced Guide](https://doc.traefik.io/traefik/v3.7/expose/kubernetes/advanced) to learn about:
+Continue to the [Advanced Guide](https://doc.traefik.io/traefik/v3.8/expose/kubernetes/advanced) to learn about:
 
 - Adding middlewares for security and access control
 - Generating certificates with Let's Encrypt (IngressRoute) or cert-manager (Gateway API)

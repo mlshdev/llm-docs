@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/install-configuration/entrypoints.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/install-configuration/entrypoints.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/install-configuration/entrypoints.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/install-configuration/entrypoints.md)
 
 Listening for Incoming Connections/Requests
 
@@ -90,6 +90,7 @@ additionalArguments:
 | <a id="opt-asDefault"></a>`asDefault`                                                                                         | Mark the `entryPoint` to be in the list of default `entryPoints`.<br /> `entryPoints`in this list are used (by default) on HTTP and TCP routers that do not define their own `entryPoints` option.<br /> More information [here](#asdefault).                                                                                                                                                                                                                                                                                                                                                                                                                                       | false                                                              | No       |
 | <a id="opt-allowACMEByPass"></a>`allowACMEByPass`                                                                             | Enables handling of ACME TLS and HTTP challenges with custom routers instead of the internal ACME router.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | false                                                              | No       |
 | <a id="opt-forwardedHeaders-connection"></a>`forwardedHeaders.`<br />`connection`                                             | List of Connection headers that are allowed to pass through the middleware chain before being removed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | -                                                                  | No       |
+| <a id="opt-forwardedHeaders-addXForwardedSchemeHeaders"></a>`forwardedHeaders.`<br />`addXForwardedSchemeHeaders`             | Add the compatibility headers `X-Forwarded-Scheme` and `X-Scheme`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | false                                                              | No       |
 | <a id="opt-forwardedHeaders-insecure"></a>`forwardedHeaders.`<br />`insecure`                                                 | Set the insecure mode to always trust the forwarded headers information (`X-Forwarded-*`).<br />We recommend to use this option only for tests purposes, not in production.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | false                                                              | No       |
 | <a id="opt-forwardedHeaders-trustedIPs"></a>`forwardedHeaders.`<br />`trustedIPs`                                             | Set the IPs or CIDR from where Traefik trusts the forwarded headers information (`X-Forwarded-*`).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | -                                                                  | No       |
 | <a id="opt-forwardedHeaders-notAppendXForwardedFor"></a>`forwardedHeaders.`<br />`notAppendXForwardedFor`                     | When set to `true`, Traefik will not append the client's `RemoteAddr` to the `X-Forwarded-For` header. The existing header is preserved as-is. If no `X-Forwarded-For` header exists, none will be added.                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | false                                                              | No       |
@@ -112,8 +113,8 @@ additionalArguments:
 | <a id="opt-http-maxHeaderValueCount"></a>`http.maxHeaderValueCount`                                                           | Set the maximum number of request header values Traefik reads for each request. A request exceeding this limit is rejected with a `431 Request Header Fields Too Large` status. <br /> Comma-separated values in a single header line count as one value, while values sent on multiple header lines count once per line. <br /> This option applies to HTTP/1 and HTTP/2 only; it has no effect on HTTP/3 requests.                                                                                                                                                                                                                                                                | 500                                                                | No       |
 | <a id="opt-http-middlewares"></a>`http.middlewares`                                                                           | Set the list of middlewares that are prepended by default to the list of middlewares of each router associated to the named entry point. <br />More information [here](#httpmiddlewares).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | -                                                                  | No       |
 | <a id="opt-http-tls"></a>`http.tls`                                                                                           | Enable TLS on every router attached to the `entryPoint`. <br /> If no certificate are set, a default self-signed certificate is generated by Traefik. <br /> We recommend to not use self signed certificates in production.                                                                                                                                                                                                                                                                                                                                                                                                                                                        | -                                                                  | No       |
-| <a id="opt-http-tls-options"></a>`http.tls.options`                                                                           | Apply TLS options on every router attached to the `entryPoint`. <br /> These options apply only while the router does not define its own `tls` section. <br /> Defining a router `tls` section (even empty, or with any field such as `certResolver`) replaces the entrypoint TLS configuration for that router (no merge). <br /> More information in the [dedicated section](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/tls/tls-options) and [HTTP TLS overview](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/tls/overview).                                                                                            | -                                                                  | No       |
-| <a id="opt-http-tls-certResolver"></a>`http.tls.certResolver`                                                                 | Apply a certificate resolver on every router attached to the `entryPoint`. <br /> Like `http.tls.options`, this applies only while the router does not define its own `tls` section. <br /> Defining a router `tls` section (even empty, or with any field such as `certResolver`) replaces the entrypoint TLS configuration for that router (no merge). <br /> More information in the [dedicated section](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/tls/certificate-resolvers/overview) and [HTTP TLS overview](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/tls/overview).                                                 | -                                                                  | No       |
+| <a id="opt-http-tls-options"></a>`http.tls.options`                                                                           | Apply TLS options on every router attached to the `entryPoint`. <br /> These options apply only while the router does not define its own `tls` section. <br /> Defining a router `tls` section (even empty, or with any field such as `certResolver`) replaces the entrypoint TLS configuration for that router (no merge). <br /> More information in the [dedicated section](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/tls/tls-options) and [HTTP TLS overview](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/tls/overview).                                                                                            | -                                                                  | No       |
+| <a id="opt-http-tls-certResolver"></a>`http.tls.certResolver`                                                                 | Apply a certificate resolver on every router attached to the `entryPoint`. <br /> Like `http.tls.options`, this applies only while the router does not define its own `tls` section. <br /> Defining a router `tls` section (even empty, or with any field such as `certResolver`) replaces the entrypoint TLS configuration for that router (no merge). <br /> More information in the [dedicated section](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/tls/certificate-resolvers/overview) and [HTTP TLS overview](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/tls/overview).                                                 | -                                                                  | No       |
 | <a id="opt-http2-maxConcurrentStreams"></a>`http2.`<br />`maxConcurrentStreams`                                               | Set the number of concurrent streams per connection that each client is allowed to initiate. <br /> The value must be greater than zero.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | 250                                                                | No       |
 | <a id="opt-http2-maxDecoderHeaderTableSize"></a>`http2.`<br />`maxDecoderHeaderTableSize`                                     | Set the maximum size of the decoder header compression table. This controls the maximum size of the header cache that the server is willing to maintain so the client does not need to repeatedly send the same header across requests in the same http2 connection. <br /> This value is only a maximum, the other end of the connection can use a lower size.                                                                                                                                                                                                                                                                                                                     | 4096                                                               | No       |
 | <a id="opt-http2-maxEncoderHeaderTableSize"></a>`http2.`<br />`maxEncoderHeaderTableSize`                                     | Set the maximum size of the encoder header compression table. This controls the maximum size of the header cache that the server is willing to maintain when sending headers to the client, allowing the server to reduce the amount of duplicate headers it is sending in responses. <br /> This value is only a maximum, the other end of the connection can use a lower size.                                                                                                                                                                                                                                                                                                    | 4096                                                               | No       |
@@ -201,17 +202,17 @@ entryPoints:
 
 ### http.middlewares
 
-- You can attach a list of [middlewares](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/overview)
+- You can attach a list of [middlewares](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/overview)
   to each entryPoint.
 - The middlewares will take effect only if the rule matches, and before forwarding
   the request to the service.
 - Middlewares are applied in the same order as their declaration.
 - Middlewares are applied by default to every router exposed through the EntryPoint
-  (the Middlewares declared on the [IngressRoute](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/ingressroute#middleware)
-  or the [Ingress](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/ingress#on-ingress)
+  (the Middlewares declared on the [IngressRoute](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/ingressroute#middleware)
+  or the [Ingress](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/ingress#on-ingress)
   are applied after the ones declared on the Entrypoint)
 - Middlewares must be referenced by their **fully qualified name**, including the
-  [provider namespace](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview#provider-namespace)
+  [provider namespace](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/overview#provider-namespace)
   suffix (`<middleware-name>@<provider-name>`). The exact value depends on the
   provider that declares the middleware:
 
@@ -221,7 +222,7 @@ entryPoints:
   | <a id="opt-Docker"></a>Docker                 | `<middleware-name>@docker`                               | `strip@docker`               |
   | <a id="opt-Kubernetes-CRD"></a>Kubernetes CRD | `<middleware-namespace>-<middleware-name>@kubernetescrd` | `default-auth@kubernetescrd` |
 
-  When [`safeNaming`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd#safenaming) is enabled, the Kubernetes CRD value becomes `<middleware-namespace>_<middleware-name>@kubernetescrd`, using the same `_` separator as the other names generated by the provider.
+  When [`safeNaming`](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-crd#safenaming) is enabled, the Kubernetes CRD value becomes `<middleware-namespace>_<middleware-name>@kubernetescrd`, using the same `_` separator as the other names generated by the provider.
 
 **File (YAML)**
 
@@ -274,7 +275,7 @@ read them all as the same `HTTP_X_AUTH_USER` variable.
 
 Underscores and dots are not the only characters concerned: every character HTTP allows in a header name except the
 letters, the digits and the dash builds such an alias, that is `!`, `#`, `$`, `%`, `&`, `'`, `*`, `+`, `.`, `^`, `_`,
-`` ` ``, `|` and `~`. See the [Headers with Aliasing Names](https://doc.traefik.io/traefik/v3.7/security/header-aliases) security documentation
+`` ` ``, `|` and `~`. See the [Headers with Aliasing Names](https://doc.traefik.io/traefik/v3.8/security/header-aliases) security documentation
 for more details.
 
 The middlewares managing request headers (e.g. the ForwardAuth `authResponseHeaders` option) only manage the canonical
@@ -282,7 +283,7 @@ form of the headers they set, and rely on this option to not be spoofed with an 
 Traefik logs a warning at startup for every entry point left without this option configured.
 
 A default for every entry point can be set once with the
-[`global.aliasHeadersStrategy`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/configuration-options#opt-global-aliasheadersstrategy) option.
+[`global.aliasHeadersStrategy`](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/configuration-options#opt-global-aliasheadersstrategy) option.
 An explicit per-entry-point value always takes precedence, and when neither is set the behavior is unchanged (`keep`).
 Entry points that still use the deprecated `underscoreHeadersStrategy` option are left alone, so their behavior is unchanged as well.
 
@@ -487,6 +488,42 @@ You can configure Traefik to trust the forwarded headers information (`X-Forward
 > ## Static configuration
 > --entryPoints.web.address=:80
 > --entryPoints.web.forwardedHeaders.connection=foobar
+> ```
+>
+> **`forwardedHeaders.addXForwardedSchemeHeaders`**
+> Add the compatibility headers `X-Forwarded-Scheme` and `X-Scheme` next to `X-Forwarded-Proto`.
+> This is primarily useful when migrating from ingress-nginx and your applications still rely on these legacy headers.
+> When enabled, these compatibility headers follow the same value as `X-Forwarded-Proto`.
+>
+> **File (YAML)**
+>
+> ```yaml
+> ## Static configuration
+> entryPoints:
+>   websecure:
+>     address: ":443"
+>     forwardedHeaders:
+>       addXForwardedSchemeHeaders: true
+> ```
+>
+> **File (TOML)**
+>
+> ```toml
+> ## Static configuration
+> [entryPoints]
+>   [entryPoints.websecure]
+>     address = ":443"
+>
+>     [entryPoints.websecure.forwardedHeaders]
+>       addXForwardedSchemeHeaders = true
+> ```
+>
+> **CLI**
+>
+> ```bash
+> ## Static configuration
+> --entryPoints.websecure.address=:443
+> --entryPoints.websecure.forwardedHeaders.addXForwardedSchemeHeaders=true
 > ```
 
 ### HTTP3

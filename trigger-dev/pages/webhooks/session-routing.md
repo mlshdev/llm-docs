@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.8: [docs/webhooks/session-routing.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/webhooks/session-routing.mdx)
+> Pinned source for Trigger.dev v4.8.10: [docs/webhooks/session-routing.mdx](https://github.com/triggerdotdev/trigger.dev/blob/523400fcb4d65f3f24303b92566862a72817907c/docs/webhooks/session-routing.mdx)
 > Canonical documentation: https://trigger.dev/docs/webhooks/session-routing
 
 # Routing to a session
@@ -44,6 +44,8 @@ These are the same namespaces [filter](https://trigger.dev/docs/webhooks/filters
 
 `{a || b}` falls back to `b` when `a` is missing or empty. Compose several placeholders into one key: `"{webhook.externalRef}-{event.issue.id}"`. Each placeholder is checked against the event type at build time, so a bad field is a type error at build time.
 
+A key with no placeholders is a constant, so every delivery goes to the same session. Give two descriptors the same constant key to route events from different endpoints into one session.
+
 ### The `type` label
 
 `type` is a name you choose for the delivered action. It flows straight through to `action.type` on the envelope, so your handler can tell webhook actions apart from each other and from browser actions. It is optional and defaults to the descriptor `id`.
@@ -76,6 +78,8 @@ export const orderAgent = chat.agent({
 `action.type` is a closed union of the `type` labels of the events you listed, and each arm narrows `action.event` to that event's payload type. The full envelope is `{ type, event, source, headers, deliveryId, externalDeliveryId, endpoint }`. `deliveryId` is the delivery's `whd_` id, as in the dashboard and the [deliveries API](https://trigger.dev/docs/webhooks/deliveries): a [replay](https://trigger.dev/docs/webhooks/deliveries#replay) gets a new one. `externalDeliveryId` is the provider's id for the delivery (Stripe's `evt_` id, for example), the same across replays. `endpoint` is the endpoint the delivery arrived on.
 
 Because it is an [action](https://trigger.dev/docs/ai-chat/actions), the handler is not a turn by default: it can read the event, mutate session state with `chat.history`, and return nothing. To have the agent answer, return `chat.turn()`: the edit is saved, then a full turn runs on the session's history as a message turn does. Webhook actions bypass your `actionSchema` (their shape is fixed and already verified by the source), so `action.type` and `action.event` are typed from the descriptor, not the schema.
+
+Each delivery wakes the run, even when `onAction` returns nothing. If deliveries arrive more often than the idle timeout, the run never suspends and the time counts toward `maxDuration`, so set `maxDuration` on the agent to cover the session.
 
 ## Answering into a channel
 

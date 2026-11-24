@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/http/load-balancing/service.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/http/load-balancing/service.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/http/load-balancing/service.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/http/load-balancing/service.md)
 
 Traefik services define how to distribute incoming traffic across your backend servers.
 This page covers two main concepts:
@@ -127,7 +127,7 @@ labels:
 | <a id="opt-healthcheck"></a>`healthcheck`                                           | Configures health check to remove unhealthy servers from the load balancing rotation.                                                                                                                                                                                                                                                                                                         | No       |
 | <a id="opt-passiveHealthCheck"></a>`passiveHealthCheck`                             | Configures the passive health check to remove unhealthy servers from the load balancing rotation.                                                                                                                                                                                                                                                                                             | No       |
 | <a id="opt-passHostHeader"></a>`passHostHeader`                                     | Allows forwarding of the client Host header to server. By default, `passHostHeader` is true.                                                                                                                                                                                                                                                                                                  | No       |
-| <a id="opt-serversTransport"></a>`serversTransport`                                 | Allows to reference an [HTTP ServersTransport](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/serverstransport) configuration for the communication between Traefik and your servers. If no `serversTransport` is specified, the `default@internal` will be used.                                                                                    | No       |
+| <a id="opt-serversTransport"></a>`serversTransport`                                 | Allows to reference an [HTTP ServersTransport](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/load-balancing/serverstransport) configuration for the communication between Traefik and your servers. If no `serversTransport` is specified, the `default@internal` will be used.                                                                                    | No       |
 | <a id="opt-responseForwarding"></a>`responseForwarding`                             | Configures how Traefik forwards the response from the backend server to the client.                                                                                                                                                                                                                                                                                                           | No       |
 | <a id="opt-responseForwarding-flushInterval"></a>`responseForwarding.flushInterval` | Specifies the interval in between flushes to the client while copying the response body. It is a duration in milliseconds, defaulting to 100ms. A negative value means to flush immediately after each write to the client. The `FlushInterval` is ignored when ReverseProxy recognizes a response as a streaming response; for such responses, writes are flushed to the client immediately. | No       |
 
@@ -139,7 +139,7 @@ Servers represent individual backend instances for your service. The [service lo
 
 | Field                                       | Description                                        | Required                                                                                                                                    |
 | ------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| <a id="opt-url"></a>`url`                   | Points to a specific instance.                     | Yes for File provider, No for [Docker provider](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/other-providers/docker) |
+| <a id="opt-url"></a>`url`                   | Points to a specific instance.                     | Yes for File provider, No for [Docker provider](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/other-providers/docker) |
 | <a id="opt-weight"></a>`weight`             | Allows for weighted load balancing on the servers. | No                                                                                                                                          |
 | <a id="opt-preservePath"></a>`preservePath` | Allows to preserve the URL path.                   | No                                                                                                                                          |
 
@@ -152,7 +152,7 @@ The `strategy` option on the load balancer determines how traffic is distributed
 The default strategy. Distributes requests evenly across all servers in rotation, respecting server weights.
 This strategy uses Earliest Deadline First (EDF) scheduling to provide weighted round-robin behavior.
 
-> **WRR Load Balancing -- Using the [File Provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file)**
+> **WRR Load Balancing -- Using the [File Provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file)**
 > **Structured (YAML)**
 >
 > ```yaml
@@ -189,7 +189,7 @@ This strategy uses Earliest Deadline First (EDF) scheduling to provide weighted 
 Selects two servers at random and routes the request to the one with the fewest active connections.
 This algorithm provides better load distribution when servers have varying response times.
 
-> **P2C Load Balancing -- Using the [File Provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file)**
+> **P2C Load Balancing -- Using the [File Provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file)**
 > **Structured (YAML)**
 >
 > ```yaml
@@ -227,7 +227,7 @@ This provides session affinity without requiring sticky cookies.
 
 The algorithm computes a score for each available backend using a hash of the client's source IP combined with the backend's identifier, and assigns the client to the backend with the highest score.
 
-> **HRW Load Balancing -- Using the [File Provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file)**
+> **HRW Load Balancing -- Using the [File Provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file)**
 > **Structured (YAML)**
 >
 > ```yaml
@@ -268,7 +268,7 @@ When routing a request, it calculates a score for each healthy server using the 
 The server with the lowest score receives the request.
 When multiple servers have identical scores, Weighted Round Robin (WRR) with Earliest Deadline First (EDF) scheduling is used as a tie-breaker.
 
-> **Least-Time Load Balancing -- Using the [File Provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file)**
+> **Least-Time Load Balancing -- Using the [File Provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file)**
 > **Structured (YAML)**
 >
 > ```yaml
@@ -361,7 +361,7 @@ The Domain attribute of a cookie specifies the domain for which the cookie is va
 
 By setting the Domain attribute, the cookie can be shared across subdomains (for example, a cookie set for example.com would be accessible to [www.example.com](http://www.example.com), api.example.com, etc.). This is particularly useful in cases where sticky sessions span multiple subdomains, ensuring that the session is maintained even when the client interacts with different parts of the infrastructure.
 
-> **Adding Stickiness -- Using the [File Provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file)**
+> **Adding Stickiness -- Using the [File Provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file)**
 > **Structured (YAML)**
 >
 > ```yaml
@@ -383,7 +383,7 @@ By setting the Domain attribute, the cookie can be shared across subdomains (for
 >     [http.services.my-service.loadBalancer.sticky.cookie]
 > ```
 >
-> **Adding Stickiness with custom Options -- Using the [File Provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file)**
+> **Adding Stickiness with custom Options -- Using the [File Provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file)**
 > **Structured (YAML)**
 >
 > ```yaml
@@ -414,7 +414,7 @@ By setting the Domain attribute, the cookie can be shared across subdomains (for
 >       sameSite = "none"
 > ```
 >
-> **Setting Stickiness on all the required levels -- Using the [File Provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file)**
+> **Setting Stickiness on all the required levels -- Using the [File Provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file)**
 > **Structured (YAML)**
 >
 > ```yaml
@@ -511,15 +511,15 @@ Below are the available options for the passive health check mechanism:
 
 ### Middlewares
 
-You can attach a list of [middlewares](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/overview) to each HTTP service.
+You can attach a list of [middlewares](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/overview) to each HTTP service.
 The middlewares will take effect for all requests handled by the service, regardless of which router forwards the request.
 
 > **Middlewares Execution Order**
 > When both a router and a service have middlewares configured, the router middlewares are applied first, followed by the service middlewares.
 > This means the request passes through router middlewares before reaching service middlewares.
 > **Supported Providers**
-> Service-level middlewares can be configured with the [File](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file), [Docker](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/other-providers/docker), [Swarm](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/other-providers/docker), [Kubernetes IngressRoute](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/ingressroute), [Kubernetes Ingress](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/ingress), and [Kubernetes Gateway API](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/gateway-api) providers.
-> **Attaching Middlewares to a Service -- Using the [File Provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file)**
+> Service-level middlewares can be configured with the [File](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file), [Docker](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/other-providers/docker), [Swarm](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/other-providers/docker), [Kubernetes IngressRoute](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/ingressroute), [Kubernetes Ingress](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/ingress), and [Kubernetes Gateway API](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/gateway-api) providers.
+> **Attaching Middlewares to a Service -- Using the [File Provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file)**
 > **Structured (YAML)**
 >
 > ```yaml
@@ -557,7 +557,7 @@ The middlewares will take effect for all requests handled by the service, regard
 >       X-Custom-Header = "service-middleware"
 > ```
 >
-> **Attaching Middlewares to a Service -- Using [Docker Labels](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/other-providers/docker)**
+> **Attaching Middlewares to a Service -- Using [Docker Labels](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/other-providers/docker)**
 >
 > ```yaml
 > labels:
@@ -585,7 +585,7 @@ The `weighted` service type load balances requests between multiple services bas
 This is different from the `wrr` strategy - it operates on services, not servers.
 
 > **Supported Providers**
-> This service type can be defined currently with the [File](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file) provider or [IngressRoute](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/ingressroute).
+> This service type can be defined currently with the [File](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file) provider or [IngressRoute](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/ingressroute).
 > **Structured (YAML)**
 
 ```yaml
@@ -642,7 +642,7 @@ HealthCheck enables automatic self-healthcheck for this service, i.e. whenever o
 > **Behavior**
 > If HealthCheck is enabled for a given service and any of its descendants does not have it enabled, the creation of the service will fail.
 >
-> HealthCheck on Weighted services can be defined currently only with the [File provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file).
+> HealthCheck on Weighted services can be defined currently only with the [File provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file).
 > **Structured (YAML)**
 
 ```yaml
@@ -718,7 +718,7 @@ This ensures that requests from the same client IP are consistently routed to th
 This is different from the `hrw` strategy on a loadBalancer - it operates on **services**, not servers.
 
 > **Supported Providers**
-> This service type can be defined currently only with the [File](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file) provider.
+> This service type can be defined currently only with the [File](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file) provider.
 > **Structured (YAML)**
 
 ```yaml
@@ -775,7 +775,7 @@ HealthCheck enables automatic self-healthcheck for this service, similar to the 
 > **Behavior**
 > If HealthCheck is enabled for a given service and any of its descendants does not have it enabled, the creation of the service will fail.
 >
-> HealthCheck on Highest Random Weight services can be defined currently only with the [File provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file).
+> HealthCheck on Highest Random Weight services can be defined currently only with the [File provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file).
 > **Structured (YAML)**
 
 ```yaml
@@ -847,10 +847,17 @@ http:
 
 The `mirroring` service type mirrors requests sent to a service to other services. Please note that by default the whole request is buffered in memory while it is being mirrored. See the `maxBodySize` option in the example below for how to modify this behaviour. You can also omit the request body by setting the `mirrorBody` option to false.
 
+To avoid buffering the request body, set the `streamBody` option to true:
+the mirrored requests are sent along with the main request,
+and the body is streamed to the mirrors while the main service reads it.
+A mirror falling more than 1 MiB behind the main service is aborted, so that it never slows the main request down,
+and a mirrored request is aborted when the main service does not read the whole body.
+The `streamBody` option has no effect when `mirrorBody` is false, and cannot be used with `maxBodySize`.
+
 > **Default behavior of `percent`**
 > When configuring a `mirror` service, if the `percent` field is not set, it defaults to `0`, meaning **no traffic will be sent to the mirror**.
 > **Supported Providers**
-> This service type can be defined currently with the [File](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file) provider or [IngressRoute](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/ingressroute).
+> This service type can be defined currently with the [File](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file) provider or [IngressRoute](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/ingressroute).
 > **Structured (YAML)**
 
 ```yaml
@@ -921,7 +928,7 @@ HealthCheck enables automatic self-healthcheck for this service, i.e. if the mai
 > **Behavior**
 > If HealthCheck is enabled for a given service and any of its descendants does not have it enabled, the creation of the service will fail.
 >
-> HealthCheck on Mirroring services can be defined currently only with the [File provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file).
+> HealthCheck on Mirroring services can be defined currently only with the [File provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file).
 > **Structured (YAML)**
 
 ```yaml
@@ -994,7 +1001,7 @@ Failover can be triggered in two ways:
 > **Relation to HealthCheck**
 > The failover service relies on the HealthCheck system to get notified when its main service becomes unreachable, which means HealthCheck needs to be enabled and functional on the main service. However, HealthCheck does not need to be enabled on the failover service itself for it to be functional. It is only required in order to propagate upwards the information when the failover itself becomes down (i.e. both its main and its fallback are down too).
 > **Supported Providers**
-> This service type can be defined with the [File](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file) and [Kubernetes CRD](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd) providers.
+> This service type can be defined with the [File](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file) and [Kubernetes CRD](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-crd) providers.
 
 #### HealthCheck
 
@@ -1003,7 +1010,7 @@ HealthCheck enables automatic self-healthcheck for this service, i.e. if the mai
 > **Behavior**
 > If HealthCheck is enabled for a given service and any of its descendants does not have it enabled, the creation of the service will fail.
 >
-> HealthCheck on a Failover service can be defined currently only with the [File provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file).
+> HealthCheck on a Failover service can be defined currently only with the [File provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file).
 > **Structured (YAML)**
 
 ```yaml

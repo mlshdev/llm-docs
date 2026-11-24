@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/secure/secure-api-access-with-oidc.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/secure/secure-api-access-with-oidc.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/secure/secure-api-access-with-oidc.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/secure/secure-api-access-with-oidc.md)
 
 # Secure API Access with OIDC
 
@@ -11,7 +11,7 @@
 To authenticate the user, the middleware redirects through the authentication provider.
 Once the authentication is complete, users are redirected back to the middleware before being authorized to access the upstream application, as described in the diagram below:
 
-![OpenID Connect authentication flow](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/secure/oidc-auth-flow.png)
+![OpenID Connect authentication flow](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/secure/oidc-auth-flow.png)
 
 <br />
 
@@ -104,9 +104,9 @@ spec:
 ```
 
 > **Advanced Configuration**
-> Advanced options are described in the [reference page](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/oidc).
+> Advanced options are described in the [reference page](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/oidc).
 >
 > For example, you can find how to customize the session storage:
 >
-> - Using a cookie ([Options `session`](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/oidc#configuration-options) (default behavior))
-> - Using a [Redis store](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/oidc#sessionstore).
+> - Using a cookie ([Options `session`](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/oidc#configuration-options) (default behavior))
+> - Using a [Redis store](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/oidc#sessionstore).

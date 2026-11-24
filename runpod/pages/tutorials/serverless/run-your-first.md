@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/serverless/run-your-first.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/tutorials/serverless/run-your-first.mdx)
+> Pinned source for Runpod main: [tutorials/serverless/run-your-first.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/tutorials/serverless/run-your-first.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/serverless/run-your-first
 
 # Generate images with Serverless and SDXL
@@ -25,7 +25,7 @@ Before starting this tutorial you'll need:
 
 ## Step 1: Deploy a Serverless endpoint using the Runpod Hub
 
-1. Navigate to the [SDXL listing](https://console.runpod.io/hub/runpod-workers/worker-sdxl) in the Runpod Hub web interface.
+1. Navigate to the [SDXL listing](https://console.runpod.io/hub/listing/runpod-workers/worker-sdxl) in the Runpod Hub web interface.
 2. Click **Deploy \[VERSION\_NUMBER]**, then click **Create Endpoint** to confirm. This creates a fully configured endpoint with appropriate GPU and worker settings for running SDXL.
 
 > **Note**

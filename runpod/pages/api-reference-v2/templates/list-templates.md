@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/templates/list-templates.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/api-reference-v2/templates/list-templates.mdx)
+> Pinned source for Runpod main: [api-reference-v2/templates/list-templates.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/api-reference-v2/templates/list-templates.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/templates/list-templates
 
 # List Templates
@@ -31,7 +31,7 @@ is false.
   - Media type: `application/json`
     - Schema
       - allOf:
-        - `variant 1` (object): A bare list of templates. `GET /v2/catalog/templates` returns it as-is (the catalog is a capped, curated set); `GET /v2/templates` composes it with the pagination block via ListTemplatesResponse.
+        - `variant 1` (object): A bare list of templates. `GET /v2/templates` composes it with the pagination block via ListTemplatesResponse.
           - `templates` (required; array)
             - `items`
               - allOf:

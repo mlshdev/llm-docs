@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/setup/kubernetes.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/setup/kubernetes.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/setup/kubernetes.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/setup/kubernetes.md)
 
 This guide provides an in-depth walkthrough for installing and configuring Traefik Proxy within a Kubernetes cluster using the official Helm chart. In this guide, we'll cover the following:
 
@@ -209,7 +209,7 @@ helm install traefik traefik/traefik \
 
 Now that Traefik is deployed, you can access its dashboard at <https://dashboard.docker.localhost/>. When you access this link, your browser will prompt for the username and password. Ensure you use the credentials set in the `values.yaml` file to log in. Upon successful login, the dashboard will be displayed as shown below:
 
-![Traefik Dashboard](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/setup/traefik-dashboard.png)
+![Traefik Dashboard](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/setup/traefik-dashboard.png)
 
 ## Deploy a Demo Application
 
@@ -286,7 +286,7 @@ kubectl apply -f whoami-route.yaml
 
 After you apply the manifest, navigate to the Routes in the Traefik Dashboard; you’ll see that the <https://whoami.docker.localhost> route has been created.
 
-![Route](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/setup/route-in-dashboard.png)
+![Route](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/setup/route-in-dashboard.png)
 
 You can test the application using curl:
 
@@ -316,7 +316,7 @@ X-Real-Ip: 10.42.0.1
 
 You can also open a browser and navigate to <https://whoami.docker.localhost> to see a JSON dump from the service.
 
-![Whoami](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/setup/whoami-json-dump.png)
+![Whoami](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/setup/whoami-json-dump.png)
 
 ## Other Key Configuration Areas
 
@@ -345,7 +345,7 @@ persistence:
   storageClass: ""
 ```
 
-This enables a certificate resolver named `le`, configures the mandatory email and storage file, and sets up the HTTP challenge (requires port 80 access). Refer to the [HTTPS/TLS Documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/tls/certificate-resolvers/overview) and [Let's Encrypt Documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/tls/certificate-resolvers/acme) for full details, including DNS challenge configuration.
+This enables a certificate resolver named `le`, configures the mandatory email and storage file, and sets up the HTTP challenge (requires port 80 access). Refer to the [HTTPS/TLS Documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/tls/certificate-resolvers/overview) and [Let's Encrypt Documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/tls/certificate-resolvers/acme) for full details, including DNS challenge configuration.
 
 > **Let's Encrypt in Production**
 > Let's Encrypt can only issue certificates for hostnames that point to a public IP address reachable on ports 80 (HTTP‑01) or via your DNS provider's API (DNS‑01). Replace the `*.docker.localhost` examples with a real domain you control, create the DNS records, and keep ports 80/443 open to your cluster so the validation can succeed.
@@ -373,7 +373,7 @@ metrics:
     # ... other options available
 ```
 
-This enables the Prometheus endpoint on a dedicated `metrics` entry point (port 9100). See the [Metrics Documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/metrics) for configuration details and available metrics.
+This enables the Prometheus endpoint on a dedicated `metrics` entry point (port 9100). See the [Metrics Documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/metrics) for configuration details and available metrics.
 
 ### Tracing (OTel)
 
@@ -388,7 +388,7 @@ additionalArguments:
   - "--tracing.otel.httpendpoint=otel-collector.observability:4318" # Adjust endpoint as needed
 ```
 
-This enables OTel tracing and specifies the collector endpoint. Consult the [Tracing Documentation](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/tracing) for details on OTel tracing.
+This enables OTel tracing and specifies the collector endpoint. Consult the [Tracing Documentation](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/tracing) for details on OTel tracing.
 
 ## Conclusion
 

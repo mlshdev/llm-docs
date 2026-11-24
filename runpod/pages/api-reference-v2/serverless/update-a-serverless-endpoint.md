@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/serverless/update-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/api-reference-v2/serverless/update-a-serverless-endpoint.mdx)
+> Pinned source for Runpod main: [api-reference-v2/serverless/update-a-serverless-endpoint.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/api-reference-v2/serverless/update-a-serverless-endpoint.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/serverless/update-a-serverless-endpoint
 
 # Update A Serverless Endpoint

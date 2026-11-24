@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.8.8: [docs/self-hosting/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/self-hosting/overview.mdx)
+> Pinned source for Trigger.dev v4.8.10: [docs/self-hosting/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/523400fcb4d65f3f24303b92566862a72817907c/docs/self-hosting/overview.mdx)
 > Canonical documentation: https://trigger.dev/docs/self-hosting/overview
 
 # Self-hosting overview
@@ -35,7 +35,7 @@ The self-hosted version is a set of containers running on your own infrastructur
 - **Webapp**: includes the dashboard and other services like Redis and Postgres.
 - **Worker**: includes the supervisor and the runners that execute your tasks.
 
-![Self-hosting architecture](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/c4443e2b07a3cf993b76979ef323ae21556553c2/docs/self-hosting/architecture.png)
+![Self-hosting architecture](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/523400fcb4d65f3f24303b92566862a72817907c/docs/self-hosting/architecture.png)
 
 ## Feature comparison
 
@@ -66,12 +66,14 @@ Most of the [limits](https://trigger.dev/docs/limits) are configurable when self
 | Log size          | ✅            | —               |
 | Machines          | ✅            | —               |
 | OTel limits       | ✅            | —               |
-| Log retention     | —            | Never deleted   |
+| Log retention     | ✅            | —               |
 | I/O packet length | ❌            | 128KB           |
 | Alerts            | ❌            | 100M            |
 | Schedules         | ❌            | 100M            |
 | Team members      | ❌            | 100M            |
 | Preview branches  | ❌            | 100M            |
+
+Logs and traces stored in ClickHouse are kept for 30 days by default. Change it with [`EVENTS_CLICKHOUSE_RETENTION_DAYS`](https://trigger.dev/docs/self-hosting/env/webapp).
 
 ### Machine overrides
 

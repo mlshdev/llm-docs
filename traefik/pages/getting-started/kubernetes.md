@@ -1,9 +1,9 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/getting-started/kubernetes.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/getting-started/kubernetes.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/getting-started/kubernetes.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/getting-started/kubernetes.md)
 
 # Getting Started with Kubernetes and Traefik
 
 Kubernetes is a first-class citizen in Traefik, offering native support for Kubernetes resources and the latest Kubernetes standards.
-Whether you're using Traefik's [IngressRoute CRD](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/ingressroute), [Ingress](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/ingress) or the [Kubernetes Gateway API](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/gateway-api),
+Whether you're using Traefik's [IngressRoute CRD](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/ingressroute), [Ingress](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/ingress) or the [Kubernetes Gateway API](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/gateway-api),
 Traefik provides a seamless experience for managing your Kubernetes traffic.
 
 This guide shows you how to:
@@ -58,9 +58,9 @@ helm repo update
 
 Create a values file. This configuration:
 
-- Maps ports 80 and 443 to the web and websecure [entrypoints](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints)
-- Enables the [dashboard](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/api-dashboard) with a specific hostname rule
-- Enables the [Kubernetes Gateway API provider](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/gateway-api)
+- Maps ports 80 and 443 to the web and websecure [entrypoints](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints)
+- Enables the [dashboard](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/api-dashboard) with a specific hostname rule
+- Enables the [Kubernetes Gateway API provider](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/gateway-api)
 - Allows the Gateway to expose [HTTPRoutes](https://gateway-api.sigs.k8s.io/reference/api-types/httproute/) from all namespaces
 
 ```yaml
@@ -82,7 +82,7 @@ gateway:
 ```
 
 > **Info**
-> The [KubernetesCRD](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd) provider is enabled by default when using the Helm chart so we don't need to set it in the values file.
+> The [KubernetesCRD](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-crd) provider is enabled by default when using the Helm chart so we don't need to set it in the values file.
 > Install Traefik:
 
 ```bash
@@ -95,7 +95,7 @@ Alternatively, you can install Traefik using CLI arguments. This command:
 
 - Maps ports `30000` and `30001` to the web and websecure entrypoints
 - Enables the dashboard with a specific hostname rule
-- Enables the [Kubernetes Gateway API provider](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/gateway-api)
+- Enables the [Kubernetes Gateway API provider](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/gateway-api)
 - Allows the Gateway to expose HTTPRoutes from all namespaces
 
 ```bash
@@ -108,7 +108,7 @@ helm install traefik traefik/traefik --wait \
 ```
 
 > **Info**
-> The [KubernetesCRD](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd) provider is enabled by default when using the Helm chart so we don't need to set it in the CLI arguments.
+> The [KubernetesCRD](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-crd) provider is enabled by default when using the Helm chart so we don't need to set it in the CLI arguments.
 > When Traefik is installed with the Gateway API provider enabled, it automatically creates a default GatewayClass named **traefik**:
 
 ```bash
@@ -117,13 +117,13 @@ kubectl describe GatewayClass traefik
 
 ## Expose the Dashboard
 
-The dashboard is exposed with an [IngressRoute](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/ingressroute) provided by the Chart, as we defined in the helm values during installation.
+The dashboard is exposed with an [IngressRoute](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/ingressroute) provided by the Chart, as we defined in the helm values during installation.
 
 Access it at:
 
 <http://dashboard.localhost/dashboard/>
 
-![Traefik Dashboard Screenshot](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/getting-started/traefik-dashboard.png)
+![Traefik Dashboard Screenshot](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/getting-started/traefik-dashboard.png)
 
 ## Deploy a Sample Application
 
@@ -229,7 +229,7 @@ X-Real-Ip: 127.0.0.1
 
 You can also visit <http://whoami.localhost> in a browser to verify that the application is exposed correctly:
 
-![whoami application Screenshot](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/getting-started/whoami-localhost.png)
+![whoami application Screenshot](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/getting-started/whoami-localhost.png)
 
 ## Exposing the Application Using the Gateway API
 
@@ -237,14 +237,14 @@ Traefik supports the Kubernetes Gateway API specification, which provides a more
 When we installed Traefik earlier, we enabled the Gateway API provider.
 You can verify this in the providers section of the Traefik dashboard.
 
-![Providers Section Screenshot](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/getting-started/providers.png)
+![Providers Section Screenshot](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/getting-started/providers.png)
 
 To use the Gateway API:
 
 Install the Gateway API CRDs in your cluster:
 
 ```bash
-kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.6.3/standard-install.yaml
+kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.7.0/standard-install.yaml
 ```
 
 Create an HTTPRoute. This configuration:
@@ -309,18 +309,18 @@ X-Real-Ip: 127.0.0.1
 
 You can now visit <http://whoami.localhost> in your browser to verify that the application is exposed correctly:
 
-![whoami application Screenshot](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/getting-started/whoami-localhost.png)
+![whoami application Screenshot](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/getting-started/whoami-localhost.png)
 
 If you navigate to the **HTTP Routes** section of the traefik dashboard, you can see that the `whoami.localhost` route is managed by the Traefik Kubernetes Gateway API provider:
 
-![Traefik Dashboard HTTP Routes Section Screenshot](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/getting-started/kubernetes-gateway.png)
+![Traefik Dashboard HTTP Routes Section Screenshot](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/getting-started/kubernetes-gateway.png)
 
 That's it! You've successfully deployed Traefik and configured routing in a Kubernetes cluster.
 
 ## Next Steps
 
-- [Configure TLS](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/tls/overview)
-- [Set up Middlewares](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/overview)
-- [Enable Metrics](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/metrics)
-- [Learn more about Kubernetes CRD provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd)
-- [Learn more about Kubernetes Gateway API provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-gateway)
+- [Configure TLS](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/tls/overview)
+- [Set up Middlewares](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/overview)
+- [Enable Metrics](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/metrics)
+- [Learn more about Kubernetes CRD provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-crd)
+- [Learn more about Kubernetes Gateway API provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-gateway)

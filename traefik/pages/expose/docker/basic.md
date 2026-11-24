@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/expose/docker/basic.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/expose/docker/basic.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/expose/docker/basic.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/expose/docker/basic.md)
 
 # Exposing Services with Traefik on Docker - Basic
 
@@ -8,7 +8,7 @@ This guide will help you get started with exposing your services through Traefik
 
 - Docker and Docker Compose installed
 - Basic understanding of Docker concepts
-- Traefik deployed using the [Traefik Docker Setup guide](https://doc.traefik.io/traefik/v3.7/setup/docker)
+- Traefik deployed using the [Traefik Docker Setup guide](https://doc.traefik.io/traefik/v3.8/setup/docker)
 
 ## Expose Your First HTTP Service
 
@@ -19,7 +19,7 @@ First, create a `docker-compose.yml` file:
 ```yaml
 services:
   traefik:
-    image: "traefik:v3.7"
+    image: "traefik:v3.8"
     container_name: "traefik"
     restart: unless-stopped
     security_opt:
@@ -92,7 +92,7 @@ This confirms that Traefik is successfully routing requests to your whoami appli
 
 ## Add Routing Rules
 
-Now we'll enhance our routing by directing traffic to different services based on [URL paths](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/routing/rules-and-priority#path-pathprefix-and-pathregexp). This is useful for API versioning, frontend/backend separation, or organizing microservices.
+Now we'll enhance our routing by directing traffic to different services based on [URL paths](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/routing/rules-and-priority#path-pathprefix-and-pathregexp). This is useful for API versioning, frontend/backend separation, or organizing microservices.
 
 Update your `docker-compose.yml` to add another service:
 
@@ -166,7 +166,7 @@ Update your `docker-compose.yml` file with the following changes:
 ```yaml
 services:
   traefik:
-    image: "traefik:v3.7"
+    image: "traefik:v3.8"
     container_name: "traefik"
     restart: unless-stopped
     security_opt:
@@ -244,7 +244,7 @@ Your browser can access <https://whoami.docker.localhost/> for the service. You'
 
 Now that you've mastered the basics of exposing services with Traefik on Docker, you're ready to explore more advanced features like middlewares, Let's Encrypt certificates, sticky sessions, and multi-layer routing.
 
-Continue to the [Advanced Guide](https://doc.traefik.io/traefik/v3.7/expose/docker/advanced) to learn about:
+Continue to the [Advanced Guide](https://doc.traefik.io/traefik/v3.8/expose/docker/advanced) to learn about:
 
 - Adding middlewares for security and access control
 - Generating certificates with Let's Encrypt

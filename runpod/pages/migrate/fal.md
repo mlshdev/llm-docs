@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [migrate/fal.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/migrate/fal.mdx)
+> Pinned source for Runpod main: [migrate/fal.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/migrate/fal.mdx)
 > Canonical documentation: https://docs.runpod.io/migrate/fal
 
 # Migrate from fal to Runpod
@@ -541,7 +541,7 @@ fal's hosted realtime models (`fal-ai/fast-lcm-diffusion`, `fal-ai/fast-turbo-di
 
 ### ComfyUI workflows
 
-fal's ComfyUI pattern runs the ComfyUI server in a custom container inside a `fal.App` and posts an API-format workflow to it. On Runpod, the [ComfyUI worker](https://docs.runpod.io/tutorials/serverless/comfyui) does the same job as a ready-made queue-based endpoint. Deploy it from the [Hub listing](https://console.runpod.io/hub/runpod-workers/worker-comfyui), or use one of the `runpod/worker-comfyui` images (`-base`, `-flux1-schnell`, `-flux1-dev`, `-sdxl`, `-sd3`).
+fal's ComfyUI pattern runs the ComfyUI server in a custom container inside a `fal.App` and posts an API-format workflow to it. On Runpod, the [ComfyUI worker](https://docs.runpod.io/tutorials/serverless/comfyui) does the same job as a ready-made queue-based endpoint. Deploy it from the [Hub listing](https://console.runpod.io/hub/listing/runpod-workers/worker-comfyui), or use one of the `runpod/worker-comfyui` images (`-base`, `-flux1-schnell`, `-flux1-dev`, `-sdxl`, `-sd3`).
 
 Your exported `workflow_api.json` goes in the request as `{"input": {"workflow": { ... }}}`, and the result returns images as base64 in `output.images[0].data`. The Hub listing ships with FLUX.1-dev-fp8 and works only with that model. For other checkpoints, LoRAs, or custom nodes, build a customized image by following the worker's [customization guide](https://github.com/runpod-workers/worker-comfyui/blob/main/docs/customization.md), the same way you packaged nodes and models into the fal container.
 

@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/http/middlewares/forwardauth.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/http/middlewares/forwardauth.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/http/middlewares/forwardauth.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/http/middlewares/forwardauth.md)
 
 The `forwardAuth` middleware delegates authentication to an external service.
 If the service answers with a 2XX code, access is granted, and the original request is performed.
@@ -139,13 +139,13 @@ If left unset, the request body size is unrestricted which can have performance 
 > **Warning**
 > `trustForwardHeader` option is deprecated and will be removed in the next major version.
 >
-> Configure the trusted IPs at the [EntryPoint level](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints#forwarded-headers) using `forwardedHeaders.trustedIPs`,
+> Configure the trusted IPs at the [EntryPoint level](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints#forwarded-headers) using `forwardedHeaders.trustedIPs`,
 > and set `trustForwardHeader` to `true` on this middleware.
 >
 > With this setup, the EntryPoint is responsible for sanitizing incoming `X-Forwarded-*` headers:
 > it strips any such headers sent by untrusted clients and only preserves those coming from trusted upstream proxies.
 > By the time the ForwardAuth middleware processes the request, all `X-Forwarded-*` headers are guaranteed to be trustworthy,
-> including those intentionally added by other middlewares in the chain — for example, the `X-Forwarded-Prefix` header set by the [StripPrefix](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/stripprefix) middleware.
+> including those intentionally added by other middlewares in the chain — for example, the `X-Forwarded-Prefix` header set by the [StripPrefix](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/stripprefix) middleware.
 >
 > If `trustForwardHeader` is not explicitly set, Traefik will log a warning at startup and use a legacy behavior where some `X-Forwarded-*` headers (e.g. `X-Forwarded-For`, `X-Forwarded-Proto`) are removed but others (e.g. `X-Forwarded-Prefix`) are forwarded untouched.
 > To silence this warning, explicitly set `trustForwardHeader` to `true` or `false`.

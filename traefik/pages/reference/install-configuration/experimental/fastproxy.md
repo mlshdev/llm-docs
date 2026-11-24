@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/install-configuration/experimental/fastproxy.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/install-configuration/experimental/fastproxy.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/install-configuration/experimental/fastproxy.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/install-configuration/experimental/fastproxy.md)
 
 # Traefik FastProxy Experimental Configuration
 
@@ -8,7 +8,7 @@ This guide provides instructions on how to configure and use the new experimenta
 
 > **Limitations**
 > Please note that the new fast proxy implementation does not work with HTTP/2.
-> This means that when a H2C or HTTPS request with [HTTP2 enabled](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/serverstransport#opt-disableHTTP2) is sent to a backend, the fallback proxy is the regular one.
+> This means that when a H2C or HTTPS request with [HTTP2 enabled](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/load-balancing/serverstransport#opt-disableHTTP2) is sent to a backend, the fallback proxy is the regular one.
 >
 > Additionally, observability features like tracing and OTEL semconv metrics are not supported for the moment.
 > **Experimental**

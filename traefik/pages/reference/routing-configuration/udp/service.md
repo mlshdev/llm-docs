@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/udp/service.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/udp/service.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/udp/service.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/udp/service.md)
 
 ### General
 
@@ -18,7 +18,7 @@ i.e. each address (IP:Port) on which an instance of the service's program is dep
 
 #### Configuration Example
 
-A Service with One Server -- Using the [File Provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file)
+A Service with One Server -- Using the [File Provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file)
 
 **Structured (YAML)**
 
@@ -46,11 +46,11 @@ udp:
 
 The Weighted Round Robin (alias `WRR`) load-balancer of services is in charge of balancing the connections between multiple services based on provided weights.
 
-This strategy is only available to load balance between [services](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/udp/service) and not between servers.
+This strategy is only available to load balance between [services](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/udp/service) and not between servers.
 
 > **Supported Providers**
-> This strategy can currently be defined with the [File provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file)
-> and the [Kubernetes CRD provider (IngressRouteUDP)](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp).
+> This strategy can currently be defined with the [File provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file)
+> and the [Kubernetes CRD provider (IngressRouteUDP)](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp).
 > **Weights**
 > A weight must be a non-negative integer, and a `0` weight takes the child service out of the rotation.
 > A weighted service declaring a negative weight is disabled, and the routers referencing it are not created.

@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.156.0: [docs/victoriametrics/vmauth.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/victoriametrics/vmauth.md)
+> Pinned source for VictoriaMetrics v1.157.0: [docs/victoriametrics/vmauth.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/victoriametrics/vmauth.md)
 
 `vmauth` is an HTTP proxy, which can [authorize](https://docs.victoriametrics.com/victoriametrics/vmauth/#authorization), [route](https://docs.victoriametrics.com/victoriametrics/vmauth/#routing), and [load balance](https://docs.victoriametrics.com/victoriametrics/vmauth/#load-balancing) requests across [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) components or any other HTTP backends.
 
@@ -1005,6 +1005,17 @@ The `arg=value` format means exact matching of **the whole** `arg` query arg val
 The `arg=~regex` format means regex matching of **the whole** `arg` query arg value to the given `regex`.
 If at least a single query arg in the request matches at least one `src_query_args` entry, then the request is routed to the given `url_prefix`.
 
+Set `src_query_args_match_all: true` *(available from v1.157.0)* in order to route the request to the given `url_prefix` only if all the `src_query_args` entries match.
+For example, the following config routes requests to `http://app1-backend/` only if they contain both `db=foo` and `env=prod` query args:
+
+```yaml
+unauthorized_user:
+  url_map:
+  - src_query_args: ["db=foo", "env=prod"]
+    src_query_args_match_all: true
+    url_prefix: "http://app1-backend/"
+```
+
 ### Routing by header
 
 `src_headers` option can be specified inside `url_map` in order to route requests by the given HTTP request header.
@@ -1022,6 +1033,17 @@ unauthorized_user:
 ```
 
 If `src_headers` contains multiple entries, then it is enough to match only a single entry in order to route the request to the given `url_prefix`.
+
+Set `src_headers_match_all: true` *(available from v1.157.0)* in order to route the request to the given `url_prefix` only if all the `src_headers` entries match.
+For example, the following config routes requests to `http://app1-backend/` only if they contain both `AccountID: 1` and `ProjectID: 0` headers:
+
+```yaml
+unauthorized_user:
+  url_map:
+  - src_headers: ["AccountID: 1", "ProjectID: 0"]
+    src_headers_match_all: true
+    url_prefix: "http://app1-backend/"
+```
 
 ### Routing by multiple parts
 
@@ -2130,17 +2152,17 @@ These flags are available only in [VictoriaMetrics enterprise](https://docs.vict
 
 ```shellhelp
   -eula
-     Deprecated, please use -license or -licenseFile flags instead. By specifying this flag, you confirm that you have an enterprise license and accept the ESA https://victoriametrics.com/legal/esa/ . This flag is available only in Enterprise binaries. See https://docs.victoriametrics.com/victoriametrics/enterprise/
+     By specifying this flag, you accept the ESA https://victoriametrics.com/legal/esa/ . This flag is available only in Enterprise binaries. See https://docs.victoriametrics.com/victoriametrics/enterprise/
   -httpRealIPHeader string
      HTTP request header to use for obtaining IP address of client for applying 'ip_filters'. By default vmauth uses IP address of TCP the client. Useful if vmauth is behind reverse-proxy. This flag is available only in VictoriaMetrics enterprise. See https://docs.victoriametrics.com/victoriametrics/enterprise/
   -license string
-     License key for VictoriaMetrics Enterprise. See https://victoriametrics.com/products/enterprise/ . Trial Enterprise license can be obtained from https://victoriametrics.com/products/enterprise/trial/ . This flag is available only in Enterprise binaries. The license key can be also passed via file specified by -licenseFile command-line flag
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version.
   -license.forceOffline
-     Whether to enable offline verification for VictoriaMetrics Enterprise license key, which has been passed either via -license or via -licenseFile command-line flag. The issued license key must support offline verification feature. Contact info@victoriametrics.com if you need offline license verification. This flag is available only in Enterprise binaries
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version.
   -licenseFile string
-     Path to file with license key for VictoriaMetrics Enterprise. See https://victoriametrics.com/products/enterprise/ . Trial Enterprise license can be obtained from https://victoriametrics.com/products/enterprise/trial/ . This flag is available only in Enterprise binaries. The license key can be also passed inline via -license command-line flag
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version.
   -licenseFile.reloadInterval duration
-     Interval for reloading the license file specified via -licenseFile. A non-positive value disables periodic and SIGHUP-triggered reloads of -licenseFile. See https://victoriametrics.com/products/enterprise/ . This flag is available only in Enterprise binaries (default 1h0m0s)
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version. (default 1h0m0s)
   -mtls array
      Whether to require valid client certificate for https requests to the corresponding -httpListenAddr . This flag works only if -tls flag is set. See also -mtlsCAFile . This flag is available only in Enterprise binaries. See https://docs.victoriametrics.com/victoriametrics/enterprise/
      Supports array of values separated by comma or specified via multiple flags.

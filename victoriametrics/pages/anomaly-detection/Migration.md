@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.156.0: [docs/anomaly-detection/Migration.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/Migration.md)
+> Pinned source for VictoriaMetrics v1.157.0: [docs/anomaly-detection/Migration.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/anomaly-detection/Migration.md)
 
 ## Introduction
 
@@ -13,6 +13,10 @@ The `--dryRun` [command-line argument](https://docs.victoriametrics.com/anomaly-
 ```bash
 export VMANOMALY_STATE_VERSION_OVERRIDE=1.25.2
 ```
+
+## EULA-based licensing
+
+From [v1.33.0](https://docs.victoriametrics.com/anomaly-detection/changelog/#v1330), `-eula` accepts the [ESA](https://victoriametrics.com/legal/esa/); existing non-empty license settings remain compatible. See [licensing](https://docs.victoriametrics.com/anomaly-detection/quickstart/#licensing). Remove alerts that depend on the removed license-expiration metrics. On rollback, remove `-eula` and restore a valid license configuration.
 
 ## Compatibility Matrix
 
@@ -45,6 +49,7 @@ Read each row as **source persisted state → target runtime**. The upgrade and 
 
 | Source state       | Target runtime                          | Action and compatibility boundary                                                                                                                                                                                                                                                                     |
 | ------------------ | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| v1.32.0            | v1.33.0                                 | Reuse compatible built-in model state and data dumps; no upgrade-only refit is required. Temporal Envelope warm-up fixes apply as inference continues. Review [licensing](#eula-based-licensing) and [configuration changes](#stateless-mode).                                                        |
 | v1.31.1            | v1.32.0                                 | Existing compatible state remains readable, including raw Temporal Envelope snapshots. Switching Envelope `model_version` requires a fresh fit. Refit models with previously affected trends and multivariate `auto` models that learned review/score metadata columns.                               |
 | v1.31.0            | v1.31.1                                 | Existing saved built-in model state remains compatible. No manual state migration or upgrade-only refit is required.                                                                                                                                                                                  |
 | v1.30.7            | v1.31.0                                 | Reuse compatible existing built-in state; no upgrade-only refit is required. New peer models have no state from older releases.                                                                                                                                                                       |
@@ -69,6 +74,7 @@ Read each row as **source persisted state → target runtime**. The upgrade and 
 
 | Source state         | Target runtime     | Action and compatibility boundary                                                                                                                                                                                                                                                                                                                                 |
 | -------------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| v1.33.0              | v1.32.0            | Reinitialize/refit on rollback: the older runtime does not recognize v1.33.0 state provenance. Restore [valid licensing](#eula-based-licensing) and remove or adapt [unsupported holiday configuration](#stateless-mode).                                                                                                                                         |
 | v1.32.0              | v1.31.1 or earlier | Reinitialize/refit on rollback: older runtimes do not recognize the newer provenance, compressed Temporal Envelope snapshots or the v2 implementation. Remove unsupported configuration options.                                                                                                                                                                  |
 | v1.31.1              | v1.31.0 or earlier | The older shipped runtime does not recognize v1.31.1 provenance. Reinitialize/refit on rollback.                                                                                                                                                                                                                                                                  |
 | v1.31.0              | v1.30.7 or earlier | The older shipped runtime does not recognize v1.31.0 provenance. Reinitialize/refit on rollback, and replace peer-model configurations unsupported by the target version.                                                                                                                                                                                         |
@@ -87,7 +93,7 @@ Read each row as **source persisted state → target runtime**. The upgrade and 
 | v1.24.1              | v1.24.0            | Managed layouts are compatible; check recorded provenance against the shipped target.                                                                                                                                                                                                                                                                             |
 | Any stateful release | Before v1.24.0     | State restoration is unavailable; run with fresh state and configuration supported by the target.                                                                                                                                                                                                                                                                 |
 
-Model availability is a separate check from state compatibility. ARIMA was removed in v1.12.0, before persisted-state restoration existed; remove or replace its configuration when upgrading across that boundary. The `mad` and `zscore` aliases redirect to online counterparts from v1.28.4. Prophet, Holt-Winters and Isolation Forest remain available for existing configurations in v1.32.0; planned deprecation is not removal. Always verify the target model catalog and the [configuration changes](#stateless-mode) below.
+Model availability is a separate check from state compatibility. ARIMA was removed in v1.12.0, before persisted-state restoration existed; remove or replace its configuration when upgrading across that boundary. The `mad` and `zscore` aliases redirect to online counterparts from v1.28.4. Deprecation is not removal; see the model-specific notices for [Holt-Winters](https://docs.victoriametrics.com/anomaly-detection/components/models/#holt-winters) and [Isolation Forest](https://docs.victoriametrics.com/anomaly-detection/components/models/#isolation-forest-multivariate). Always verify the target model catalog and the [configuration changes](#stateless-mode) below.
 
 ### Clearing State
 
@@ -104,7 +110,9 @@ However, for releases [v1.24.0](https://docs.victoriametrics.com/anomaly-detecti
 
 In stateless mode, the migration process is almost straightforward as there are no persistent states to manage. One may simply upgrade the `vmanomaly` service to the latest version and restart it, up to a slight change in the config .YAML files for backward-incompatible changes, see the list below.
 
-**Breaking Changes**
+**Breaking and configuration changes**
+
+- [v1.33.0](https://docs.victoriametrics.com/anomaly-detection/changelog/#v1330): on rollback, remove [`is_holiday`](https://docs.victoriametrics.com/anomaly-detection/components/models/#holiday-output) from `provide_series` and adapt [Prophet](https://docs.victoriametrics.com/anomaly-detection/components/models/#prophet) top-level `holidays` to the target version's supported calendar configuration. Update alert rules that use the flag; a missing series is not an explicit zero. Review [licensing](#eula-based-licensing) in either direction.
 
 - [v1.12.0](https://docs.victoriametrics.com/anomaly-detection/changelog/#v1120) **ARIMA** model is removed from [built-in models](https://docs.victoriametrics.com/anomaly-detection/components/models/#built-in-models). Action: for vmanomaly v1.30.0 and newer, replace ARIMA with [Temporal Envelope](https://docs.victoriametrics.com/anomaly-detection/components/models/#temporal-envelope) *(available from vmanomaly v1.30.0)*; for older releases, use another supported seasonal model in the `models` section of the configuration.
 

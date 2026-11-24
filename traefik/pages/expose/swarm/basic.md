@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/expose/swarm/basic.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/expose/swarm/basic.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/expose/swarm/basic.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/expose/swarm/basic.md)
 
 # Exposing Services with Traefik on Docker Swarm - Basic
 
@@ -8,7 +8,7 @@ This guide will help you get started with exposing your services through Traefik
 
 - Docker Swarm cluster initialized
 - Basic understanding of Docker Swarm concepts
-- Traefik deployed using the [Traefik Docker Swarm Setup guide](https://doc.traefik.io/traefik/v3.7/setup/swarm)
+- Traefik deployed using the [Traefik Docker Swarm Setup guide](https://doc.traefik.io/traefik/v3.8/setup/swarm)
 
 ## Expose Your First HTTP Service
 
@@ -70,7 +70,7 @@ This confirms that Traefik is successfully routing requests to your whoami appli
 
 ## Add Routing Rules
 
-Now we'll enhance our routing by directing traffic to different services based on [URL paths](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/routing/rules-and-priority#path-pathprefix-and-pathregexp). This is useful for API versioning, frontend/backend separation, or organizing microservices.
+Now we'll enhance our routing by directing traffic to different services based on [URL paths](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/routing/rules-and-priority#path-pathprefix-and-pathregexp). This is useful for API versioning, frontend/backend separation, or organizing microservices.
 
 Update your `docker-compose.yml` to add another service:
 
@@ -184,7 +184,7 @@ Your browser can access <https://whoami.swarm.localhost/> for the service. You'l
 
 Now that you've mastered the basics of exposing services with Traefik on Docker Swarm, you're ready to explore more advanced features like middlewares, Let's Encrypt certificates, sticky sessions, and multi-layer routing.
 
-Continue to the [Advanced Guide](https://doc.traefik.io/traefik/v3.7/expose/swarm/advanced) to learn about:
+Continue to the [Advanced Guide](https://doc.traefik.io/traefik/v3.8/expose/swarm/advanced) to learn about:
 
 - Adding middlewares for security and access control
 - Generating certificates with Let's Encrypt

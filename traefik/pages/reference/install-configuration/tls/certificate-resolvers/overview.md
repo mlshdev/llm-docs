@@ -1,11 +1,11 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/install-configuration/tls/certificate-resolvers/overview.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/install-configuration/tls/certificate-resolvers/overview.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/install-configuration/tls/certificate-resolvers/overview.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/install-configuration/tls/certificate-resolvers/overview.md)
 
 In Traefik, TLS Certificates can be generated using Certificates Resolvers.
 
 In Traefik, two certificate resolvers exist:
 
-- [`acme`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/tls/certificate-resolvers/acme): It allows generating ACME certificates stored in a file (not distributed).
-- [`tailscale`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/tls/certificate-resolvers/tailscale): It allows provisioning TLS certificates for internal Tailscale services.
+- [`acme`](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/tls/certificate-resolvers/acme): It allows generating ACME certificates stored in a file (not distributed).
+- [`tailscale`](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/tls/certificate-resolvers/tailscale): It allows provisioning TLS certificates for internal Tailscale services.
 
 The Certificates resolvers are defined in the static configuration.
 

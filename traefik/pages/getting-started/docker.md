@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/getting-started/docker.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/getting-started/docker.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/getting-started/docker.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/getting-started/docker.md)
 
 # Getting Started with Docker and Traefik
 
@@ -33,7 +33,7 @@ This configuration:
 # docker-compose.yml
 services:
   traefik:
-    image: traefik:v3.7
+    image: traefik:v3.8
     command:
       - "--api.insecure=true"
       - "--providers.docker=true"
@@ -81,19 +81,19 @@ docker run -d \
   -p 8080:8080 \
   -v $PWD/traefik.yml:/etc/traefik/traefik.yml \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  traefik:v3.7
+  traefik:v3.8
 ```
 
 ## Expose the Dashboard
 
-Because we explicitly enabled insecure mode, the [dashboard](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/api-dashboard) is reachable on port 8080 without authentication.
+Because we explicitly enabled insecure mode, the [dashboard](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/api-dashboard) is reachable on port 8080 without authentication.
 **Do not enable this flag in production**.
 
 You can access the dashboard at:
 
 <http://localhost:8080/dashboard/>
 
-![Traefik Dashboard Screenshot](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/getting-started/traefik-dashboard.png)
+![Traefik Dashboard Screenshot](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/getting-started/traefik-dashboard.png)
 
 ## Deploy a Sample Application
 
@@ -141,17 +141,17 @@ X-Real-Ip: 192.168.147.1
 
 You can also open <http://whoami.localhost> in a browser to test the application:
 
-![whoami application Screenshot](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/getting-started/whoami-localhost.png)
+![whoami application Screenshot](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/getting-started/whoami-localhost.png)
 
 If you navigate to the **HTTP Routers** section of the Traefik dashboard, you can see that the `whoami.localhost` route is managed by the Traefik Docker provider:
 
-![Traefik Dashboard HTTP Routers Section Screenshot](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/getting-started/docker-router.png)
+![Traefik Dashboard HTTP Routers Section Screenshot](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/getting-started/docker-router.png)
 
 That's it! You've successfully deployed Traefik and configured routing in Docker.
 
 ## Next Steps
 
-- [Configure TLS](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/tls/overview)
-- [Set up Middlewares](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/overview)
-- [Enable Metrics](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/metrics)
-- [Learn more about Docker provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/docker)
+- [Configure TLS](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/tls/overview)
+- [Set up Middlewares](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/overview)
+- [Enable Metrics](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/metrics)
+- [Learn more about Docker provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/docker)

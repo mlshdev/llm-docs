@@ -6,21 +6,21 @@
   "title": "VictoriaMetrics",
   "homepage": "https://docs.victoriametrics.com/",
   "repository": "VictoriaMetrics/VictoriaMetrics",
-  "tag": "v1.156.0",
-  "releaseId": 436901484,
-  "releasePublishedAt": "2026-11-09T10:02:46Z",
-  "sourceCommit": "0c1bf87a0c9843c30566df0c0aa6593466425ac5",
-  "documentCount": 113,
+  "tag": "v1.157.0",
+  "releaseId": 453152297,
+  "releasePublishedAt": "2026-11-23T12:36:45Z",
+  "sourceCommit": "1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc",
+  "documentCount": 114,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 4897485,
-      "documentCount": 113,
-      "sha256": "aea26de7b8c8ec54da17cd8a6a7d01821fb8066468d60a3c2e6252b5666d5338"
+      "byteLength": 4944754,
+      "documentCount": 114,
+      "sha256": "a60e44bf3239f0b9e2fa966ad7d35de3046933a5b06f10bef1ef8bd7f6a9a659"
     }
   ],
-  "outputDigest": "bb3be5a33193b429ba86aca9b8dcbe6cb76d0954963e636fa32aafb617eff133",
+  "outputDigest": "7b7881f18fa4d69da7ed643c8258e4f0b47346f45d2728b48830590711d7e7f5",
   "quarantined": [
     {
       "sourcePath": "docs/anomaly-detection/UI.md",

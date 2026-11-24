@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/deprecation/features.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/deprecation/features.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/deprecation/features.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/deprecation/features.md)
 
 # Feature Deprecation Notices
 
@@ -25,6 +25,6 @@ Please use the API Group `apiextensions.k8s.io/v1` instead.
 ### Entry Point `underscoreHeadersStrategy` Option
 
 Starting on 3.7.12 the `underscoreHeadersStrategy` entry point option is deprecated,
-please use the [`aliasHeadersStrategy`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints#opt-http-aliasHeadersStrategy) option instead.
+please use the [`aliasHeadersStrategy`](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints#opt-http-aliasHeadersStrategy) option instead.
 Underscores are only one of the characters making a header name alias another one, and `aliasHeadersStrategy` handles them all.
 An entry point cannot configure both options with different values.

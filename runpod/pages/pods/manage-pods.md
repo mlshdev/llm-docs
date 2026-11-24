@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/manage-pods.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/pods/manage-pods.mdx)
+> Pinned source for Runpod main: [pods/manage-pods.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/pods/manage-pods.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/manage-pods
 
 # Manage Pods

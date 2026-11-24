@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [migrate/together-ai.mdx](https://github.com/runpod/docs/blob/e4b64f14b14cea0c05ab6977e1843b891202d4b9/migrate/together-ai.mdx)
+> Pinned source for Runpod main: [migrate/together-ai.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/migrate/together-ai.mdx)
 > Canonical documentation: https://docs.runpod.io/migrate/together-ai
 
 # Migrate from Together AI to Runpod
@@ -442,7 +442,7 @@ runpodctl serverless create \
 
 `--hub-id` pulls the worker image, container disk size, and default environment from the Hub release, and `--env` overrides individual values. `--gpu-id` accepts a pool ID or a GPU type ID; set it explicitly so the endpoint runs on the hardware you sized for. `--model-reference` attaches the Hugging Face model as a cached model: the `:main` suffix is the branch, tag, or revision, and the flag requires a GPU endpoint. The command prints the endpoint ID. For a gated or private model, store the token as a [secret](https://docs.runpod.io/pods/templates/secrets) named `hf_token` and add `--env HF_TOKEN='{{ RUNPOD_SECRET_hf_token }}'`, so the token itself never appears in the command or the endpoint configuration.
 
-Open the [vLLM worker](https://console.runpod.io/hub/runpod-workers/worker-vllm) in the Hub and click **Deploy**. Enter the Hugging Face model ID in the **Model** field, expand **Advanced** to set **Max Model Length** and other vLLM settings, click **Next**, then **Create Endpoint**. The full walkthrough is in the [vLLM quickstart](https://docs.runpod.io/serverless/vllm/get-started).
+Open the [vLLM worker](https://console.runpod.io/hub/listing/runpod-workers/worker-vllm) in the Hub and click **Deploy**. Enter the Hugging Face model ID in the **Model** field, expand **Advanced** to set **Max Model Length** and other vLLM settings, click **Next**, then **Create Endpoint**. The full walkthrough is in the [vLLM quickstart](https://docs.runpod.io/serverless/vllm/get-started).
 
 Wait until a worker is ready before you send traffic. Creating an endpoint returns immediately, and the first worker still has to pull the image and load the model.
 

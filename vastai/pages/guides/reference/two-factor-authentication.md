@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/reference/two-factor-authentication.mdx](https://github.com/vast-ai/docs/blob/40db3124261e3228f3e57a9387d9385eab63bbac/guides/reference/two-factor-authentication.mdx)
+> Pinned source for Vast.ai main: [guides/reference/two-factor-authentication.mdx](https://github.com/vast-ai/docs/blob/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/guides/reference/two-factor-authentication.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/reference/two-factor-authentication
 
 # Two-Factor Authentication
@@ -31,15 +31,15 @@ account.
 1. Go to [Account Settings](https://cloud.vast.ai/settings/), expand **Account
    Security**, and click **Enable Two-Factor Authentication**.
 
-   ![Account Security section with the Enable Two-Factor Authentication button circled](https://raw.githubusercontent.com/vast-ai/docs/40db3124261e3228f3e57a9387d9385eab63bbac/images/two-factor-authentication-enable.webp)
+   ![Account Security section with the Enable Two-Factor Authentication button circled](https://raw.githubusercontent.com/vast-ai/docs/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/images/two-factor-authentication-enable.webp)
 2. The section expands to list the available methods. Click **Add** next to
    **Authenticator App (TOTP)** or **SMS**.
 
-   ![Two-Factor Authentication section listing Authenticator App (TOTP), SMS, and Recovery Code, with both Add buttons circled](https://raw.githubusercontent.com/vast-ai/docs/40db3124261e3228f3e57a9387d9385eab63bbac/images/two-factor-authentication-choose-method.webp)
+   ![Two-Factor Authentication section listing Authenticator App (TOTP), SMS, and Recovery Code, with both Add buttons circled](https://raw.githubusercontent.com/vast-ai/docs/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/images/two-factor-authentication-choose-method.webp)
 3. Select **Email** and click **Send Code**, then enter the 6-digit code sent to
    your account email and click **Verify**.
 
-   ![Verify your identity dialog with Email selected and the Send Code button circled](https://raw.githubusercontent.com/vast-ai/docs/40db3124261e3228f3e57a9387d9385eab63bbac/images/two-factor-authentication-verify-identity.webp)
+   ![Verify your identity dialog with Email selected and the Send Code button circled](https://raw.githubusercontent.com/vast-ai/docs/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/images/two-factor-authentication-verify-identity.webp)
 4. Scan the QR code with your authenticator app. If you cannot scan it, copy
    the key under **Can't scan? Enter this key manually** into the app
    instead.
@@ -47,7 +47,7 @@ account.
    Give the method a **Label** (up to 30 characters), enter the 6-digit code
    the app shows, and click **Confirm**.
 
-   ![Enable authenticator app dialog with the QR code, setup key, Label field, and the six code boxes circled](https://raw.githubusercontent.com/vast-ai/docs/40db3124261e3228f3e57a9387d9385eab63bbac/images/two-factor-authentication-totp-qr.webp)
+   ![Enable authenticator app dialog with the QR code, setup key, Label field, and the six code boxes circled](https://raw.githubusercontent.com/vast-ai/docs/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/images/two-factor-authentication-totp-qr.webp)
 
    Choose your **Country**, enter your **Phone Number**, give the method a
    **Label** (up to 30 characters), and click **Send Code**.
@@ -55,12 +55,12 @@ account.
    Enter the 6-digit code from the text message to finish. The code is valid
    for 10 minutes.
 
-   ![Set Up SMS Verification dialog with an example phone number, with the Phone Number field and Send Code button circled](https://raw.githubusercontent.com/vast-ai/docs/40db3124261e3228f3e57a9387d9385eab63bbac/images/two-factor-authentication-sms-phone.webp)
+   ![Set Up SMS Verification dialog with an example phone number, with the Phone Number field and Send Code button circled](https://raw.githubusercontent.com/vast-ai/docs/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/images/two-factor-authentication-sms-phone.webp)
 5. 2FA is now on, and you are shown 10 one-time recovery codes. Save them with
    **Copy All**, **Download**, or **Print** — somewhere outside your phone, such
    as a password manager — then click **I've Saved My Codes**.
 
-   ![Save Your Recovery Codes dialog with the codes blurred and the Copy All, Download, and Print buttons circled](https://raw.githubusercontent.com/vast-ai/docs/40db3124261e3228f3e57a9387d9385eab63bbac/images/two-factor-authentication-recovery-codes.webp)
+   ![Save Your Recovery Codes dialog with the codes blurred and the Copy All, Download, and Print buttons circled](https://raw.githubusercontent.com/vast-ai/docs/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/images/two-factor-authentication-recovery-codes.webp)
 
    > **Warning**
    >
@@ -74,7 +74,7 @@ follows the same steps with one difference: in **Confirm it is you**, no email i
 sent automatically. You choose an existing method, email, or **Use a recovery
 code**, then click **Continue**.
 
-![Verify your identity dialog offering Authenticator App, Email, and Use a recovery code, with Continue circled](https://raw.githubusercontent.com/vast-ai/docs/40db3124261e3228f3e57a9387d9385eab63bbac/images/two-factor-authentication-verify-existing.webp)
+![Verify your identity dialog offering Authenticator App, Email, and Use a recovery code, with Continue circled](https://raw.githubusercontent.com/vast-ai/docs/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/images/two-factor-authentication-verify-existing.webp)
 
 ***
 
@@ -90,7 +90,7 @@ methods. Select one, click **Continue**, and enter the code:
 | **Email**               | Enter the code sent to your account email                            |
 | **Use a recovery code** | Enter one of your saved codes in place of a 6-digit code             |
 
-![Two-factor authentication prompt with Authenticator App selected, Email and Use a recovery code below, and Continue circled](https://raw.githubusercontent.com/vast-ai/docs/40db3124261e3228f3e57a9387d9385eab63bbac/images/two-factor-authentication-login-prompt.webp)
+![Two-factor authentication prompt with Authenticator App selected, Email and Use a recovery code below, and Continue circled](https://raw.githubusercontent.com/vast-ai/docs/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/images/two-factor-authentication-login-prompt.webp)
 
 ***
 
@@ -99,7 +99,7 @@ methods. Select one, click **Continue**, and enter the code:
 Everything below is under **Account Settings → Account Security**. Each change
 asks you to verify with an existing method or a recovery code first.
 
-![Two-Factor Authentication section with a configured authenticator app, its remove icon and the Regenerate button circled](https://raw.githubusercontent.com/vast-ai/docs/40db3124261e3228f3e57a9387d9385eab63bbac/images/two-factor-authentication-manage.webp)
+![Two-Factor Authentication section with a configured authenticator app, its remove icon and the Regenerate button circled](https://raw.githubusercontent.com/vast-ai/docs/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/images/two-factor-authentication-manage.webp)
 
 - **Regenerate recovery codes** — click **Regenerate** to get a fresh set of 10.
   Every earlier code stops working.

@@ -1,6 +1,6 @@
 # Vast.ai main
 
-> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `40db3124261e3228f3e57a9387d9385eab63bbac`.
+> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `138c1ddd5cfe5761c6391075c1fd0b6c517e059d`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Vast.ai main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -88,6 +88,7 @@
 - [Managing Templates](pages/guides/templates/managing-templates.md): If you want to make changes to a template you previously saved, simply navigate back to the templates page and select 'My Templates'. Here you'll be able to make your changes by clicking the pencil icon. (2445 bytes)
 - [Template Settings](pages/guides/templates/template-settings.md): This guide documents all settings and options available when configuring a template. Use this guide when you need to understand what a specific setting does or how to configure a particular option. (10593 bytes)
 - [Advanced Setup](pages/guides/templates/advanced-setup.md): This guide covers advanced customization techniques available on the Vast.ai platform. These features allow you to extend and enhance your templates beyond basic configuration. (6904 bytes)
+- [Custom Docker images for GB200](pages/guides/templates/custom-docker-images-gb200.md): Check Arm compatibility, build a multi-platform Docker image, and test your application on GB200. (8455 bytes)
 - [Creating Templates for GROBID](pages/guides/templates/examples/grobid.md): This guide demonstrates creating a template using an existing Docker image. See our Creating Templates guide for more details on template configuration. We will be using the image from GROBID on dockerhub. (5661 bytes)
 
 ## Teams

@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/21c81303cb7c6c407dac1a8c03991ab273f1fe13/doc/general.texi)
+> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/9a9f834f0d3c65980d608897ffbaf04d44a0e106/doc/general.texi)
 
 # External libraries
 
@@ -75,6 +75,24 @@ Initialization of amf encoder occurs in this order:
 1. trying to initialize through dx11(only windows)
 2. trying to initialize through dx9(only windows)
 3. trying to initialize through vulkan
+
+An AMF device can also be derived from an existing Vulkan device. AMF requires the
+`VK_KHR_get_physical_device_properties2` and `VK_KHR_surface` instance
+extensions and the `VK_KHR_swapchain` device extension, which are not enabled
+by default; enable them through the Vulkan device options:
+
+```text
+ffmpeg -init_hw_device vulkan=vk,instance_extensions=VK_KHR_get_physical_device_properties2+VK_KHR_surface,device_extensions=VK_KHR_swapchain \
+       -init_hw_device amf=amf@vk ...
+```
+
+If the Vulkan device uses custom queue lock callbacks, they must allow
+holding the locks of several queues at the same time; a single
+non-recursive mutex shared between queues cannot be used.
+Some AMF runtimes cannot use Vulkan devices whose queues were created with
+nonzero creation flags, such as internally synchronized queues; Vulkan devices
+with reduced queue counts (e.g. created with `limit_queues`) should not
+be used for derivation.
 
 To use h.264(AMD VCE) encoder on linux amdgru-pro version 19.20+ and amf-amdgpu-pro
 package(amdgru-pro contains, but does not install automatically) are required.

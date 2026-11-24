@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/security/request-path.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/security/request-path.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/security/request-path.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/security/request-path.md)
 
 # Request Path
 
@@ -46,7 +46,7 @@ Traefik provides two main mechanisms for path security that work together to pro
 ### Path Sanitization
 
 Path sanitization is enabled by default and helps prevent directory traversal attacks by normalizing request paths.
-Configure it in the [EntryPoints](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints#sanitizepath) HTTP section:
+Configure it in the [EntryPoints](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints#sanitizepath) HTTP section:
 
 **File (YAML)**
 
@@ -88,7 +88,7 @@ entryPoints:
 ### Encoded Character Filtering
 
 Encoded character filtering provides an additional security layer by rejecting potentially dangerous URL-encoded characters.
-Configure it in the [EntryPoints](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints#encoded-characters) HTTP section.
+Configure it in the [EntryPoints](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints#encoded-characters) HTTP section.
 
 This filtering occurs before path sanitization and catches attack attempts that use encoding to bypass other security controls.
 
@@ -145,4 +145,4 @@ entryPoints:
 
 > **Encoded Characters filtering on a per-route basis**
 > If you need to configure encoded character filtering on a per-route basis, you can use the `EncodedCharacters` middleware.
-> Refer to the documentation for the [`EncodedCharacter` middleware](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/encodedcharacters) for detailed implementation instructions and configuration options.
+> Refer to the documentation for the [`EncodedCharacter` middleware](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/encodedcharacters) for detailed implementation instructions and configuration options.

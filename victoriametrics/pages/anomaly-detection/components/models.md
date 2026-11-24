@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.156.0: [docs/anomaly-detection/components/models.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/components/models.md)
+> Pinned source for VictoriaMetrics v1.157.0: [docs/anomaly-detection/components/models.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/anomaly-detection/components/models.md)
 
 This section covers the `Models` component of VictoriaMetrics Anomaly Detection (commonly referred to as [`vmanomaly`](https://docs.victoriametrics.com/anomaly-detection/)) and provides a guide on how to configure the service.
 
@@ -120,7 +120,9 @@ models:
     provide_series: ['anomaly_score']  # only `anomaly_score` metric will be available for writing back to the database
 ```
 
-> If `provide_series` is not specified in model config, the model will produce its default [model-dependent output](#vmanomaly-output). The output can't be less than `['anomaly_score']`. Even if `timestamp` column is omitted, it will be implicitly added to `provide_series` list, as it's required for metrics to be properly written.
+> If `provide_series` is not specified in model config, the model will produce its default [model-dependent output](#vmanomaly-output). `anomaly_score` is not mandatory: a supported model can emit only `is_holiday` with `provide_series: [is_holiday]`. Even if `timestamp` column is omitted, it will be implicitly added to `provide_series` list, as it's required for metrics to be properly written.
+
+*(available from vmanomaly v1.33.0)* Prophet and Temporal Envelope v1/v2 (univariate and multivariate) support optional `is_holiday` output. Request it explicitly with `provide_series: [anomaly_score, is_holiday]`; it is off by default to avoid extra computation and stored series. Unsupported models reject this selection. An empty calendar logs a validation warning and produces zeros. See [holiday output](#holiday-output).
 
 **Detection direction**
 
@@ -130,7 +132,7 @@ The `detection_direction` argument *(available from vmanomaly v1.13.0)* can redu
 
 Here's how the three options differ:
 
-![detection\_direction comparison](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/components/schema_detection_direction.webp)
+![detection\_direction comparison](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/anomaly-detection/components/schema_detection_direction.webp)
 
 With the default, backward-compatible `both` value, anomalies are tracked in both directions (`y > yhat` or `y < yhat`). This is useful when there is no domain expertise to filter the required direction.
 
@@ -184,7 +186,7 @@ models:
 
 The visualization below demonstrates this concept. The narrow blue model prediction boundary is nested inside the wider green business protection boundary. Actual values outside the prediction boundary but still within `[yhat - min_dev_from_expected, yhat + min_dev_from_expected]` receive `anomaly_score = 0`; only values outside the green boundary remain anomalous.
 
-![min\_dev\_from\_expected](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/components/schema_min_dev_from_expected.webp)
+![min\_dev\_from\_expected](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/anomaly-detection/components/schema_min_dev_from_expected.webp)
 
 Example config of how to use this param based on query results:
 
@@ -220,7 +222,7 @@ Parameter can be a list of two float values, *allowing separate thresholds for u
 
 The green business protection boundary below scales with `|yhat|`, while the model prediction boundary remains visible inside it. Actual values outside the blue boundary but inside the proportional green boundary receive `anomaly_score = 0`.
 
-![min\_rel\_dev\_from\_expected](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/components/schema_min_rel_dev_from_expected.webp)
+![min\_rel\_dev\_from\_expected](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/anomaly-detection/components/schema_min_rel_dev_from_expected.webp)
 
 *Example*: Consider a scenario of monitoring incoming traffic to websites that typically receives *unknown in advance* requests per second (from tens to thousands). Setting absolute deviation threshold with `min_dev_from_expected` *may not be effective in reducing false positives*, as even a small increase in traffic (e.g., from 10 to 20 requests per second) can represent a 100% relative increase, which may be significant for that website. Instead, setting `min_rel_dev_from_expected` to smaller relative value - `[20, 40]` (20/40%) - will ensure that traffic drop from 10 to 8 requests per second (20% decrease) and traffic spike from 10 to 14 requests per second (40% increase) won't be considered anomalous, even if they exceed confidence intervals, thus, reducing false positives for small absolute deviations that are relatively significant.
 
@@ -319,7 +321,7 @@ For example, setting `scale: [1.2, 0.75]` for particular model will:
 
 Alternative visualization:
 
-![two-sided scale comparison](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/components/schema_scale_overview_v2.webp)
+![two-sided scale comparison](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/anomaly-detection/components/schema_scale_overview_v2.webp)
 
 The most common **use case** is when there is a preference to **widen one side** to blacklist smaller false positives (which otherwise would have [anomaly scores](https://docs.victoriametrics.com/anomaly-detection/faq/#how-is-anomaly-score-calculated) **only slightly higher than 1.0**, still making such data points **anomalous**), while **tightening the other side** to avoid missing true positives due to an overly loose margin (leading to [anomaly scores](https://docs.victoriametrics.com/anomaly-detection/faq/#how-is-anomaly-score-calculated) being slightly less than 1.0, making such data points **non-anomalous**).
 
@@ -508,7 +510,7 @@ If during an inference, you got a series having **new labelset** (not present in
 
 **Examples:** [Temporal Envelope](#temporal-envelope), [Online MAD](#online-mad), [Online Z-score](#online-z-score), [Online Seasonal Quantile](#online-seasonal-quantile)
 
-![Univariate model lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/components/model-lifecycle-univariate.svg)
+![Univariate model lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/anomaly-detection/components/model-lifecycle-univariate.svg)
 
 ### Multivariate Models
 
@@ -528,7 +530,7 @@ If during an inference, you got a **different amount of series** or some series 
 
 **Recommended:** [Temporal Envelope](#temporal-envelope). Existing [Isolation Forest](#isolation-forest-multivariate) configurations can migrate to its multivariate form.
 
-![Multivariate model lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/components/model-lifecycle-multivariate.svg)
+![Multivariate model lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/anomaly-detection/components/model-lifecycle-multivariate.svg)
 
 The following configuration applies a multivariate Temporal Envelope model to the same aligned input series:
 
@@ -563,7 +565,7 @@ Each query defines an independent population; queries are never pooled together.
 
 **Implementation:** [Peer Outlier](#peer-outlier), an online model. See its configuration, assumptions and parameters below.
 
-![Peer-group model lifecycle: fit per query and group, score each peer, and reuse group state when membership changes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/components/model-lifecycle-peer-group.svg)
+![Peer-group model lifecycle: fit per query and group, score each peer, and reuse group state when membership changes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/anomaly-detection/components/model-lifecycle-peer-group.svg)
 
 ### Online Models
 
@@ -752,7 +754,7 @@ models:
   # ...
 ```
 
-![AutoTunedModel tuning and inference lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/components/autotune.svg)
+![AutoTunedModel tuning and inference lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/anomaly-detection/components/autotune.svg)
 
 #### Shared asynchronous autotune workflow
 
@@ -893,6 +895,8 @@ For simple profiles without strong trend or seasonality, prefer [Online MAD](#on
 
 Preset suffixes describe expected profile shape: `smooth` represents gradual recurring curves, `spiky` represents narrow phase peaks, and `plateau` represents sustained calendar levels. Choose only profiles supported by the data. Calendar and holiday features use civil time from the configured query timezone, so hour/day profiles remain aligned across daylight-saving-time transitions.
 
+*(available from vmanomaly v1.33.0)* Both Envelope versions and topologies can emit `is_holiday` through `provide_series`. It marks exact country-holiday or special-event dates, including events unseen in training; learned before/after response shoulders do not extend the flag. See [holiday output](#holiday-output).
+
 Temporal Envelope also supports the [common model arguments](#common-args), including `queries`, `schedulers`, `provide_series`, `scale`, and `clip_predictions`. Configure `data_range`, `detection_direction`, `min_dev_from_expected`, `min_rel_dev_from_expected`, and query timezone under the corresponding [reader query](https://docs.victoriametrics.com/anomaly-detection/components/reader/#per-query-parameters). The multivariate variant applies these business policies independently to each input channel *(available from vmanomaly v1.30.2)*, so one model can represent combinations such as temperature above expected, power above expected, and clock below expected.
 
 The multivariate variant uses `class: temporal_envelope_multivariate` or `model.online.TemporalEnvelopeMultivariateModel` and adds:
@@ -925,7 +929,7 @@ models:
       special_events: ['12-24']
       group: true
     forecast_at: [1h, 1d]
-    provide_series: [anomaly_score, yhat, yhat_lower, yhat_upper]
+    provide_series: [anomaly_score, yhat, yhat_lower, yhat_upper, is_holiday]
 ```
 
 Multivariate monitoring with one dependency model per cluster:
@@ -1172,6 +1176,7 @@ Resulting metrics of the model are described [here](#vmanomaly-output).
 - `class` (string) - model class name `"model.prophet.ProphetModel"` (or `prophet` with class alias support *(available from vmanomaly v1.13.0)*)
 - `seasonalities` (list\[dict], optional): Additional seasonal components to include in Prophet. See Prophet’s [`add_seasonality()`](https://facebook.github.io/prophet/docs/seasonality,_holiday_effects,_and_regressors#modeling-holidays-and-special-events:~:text=modeling%20the%20cycle-,Specifying,-Custom%20Seasonalities) documentation for details.
 - `scale` *(available from vmanomaly v1.18.0)* (float): Is used to adjust the margins between `yhat` and \[`yhat_lower`, `yhat_upper`]. New margin = `|yhat_* - yhat_lower| * scale`. Defaults to 1 (no scaling is applied). See `scale`[common arg](https://docs.victoriametrics.com/anomaly-detection/components/models/#scale) section for detailed instructions and 2-sided option.
+- `holidays` *(available from vmanomaly v1.33.0)* (object, default `{}`): Structured calendar with `countries`, `special_events` and `group`, as in Temporal Envelope. Existing `args.country_holidays` and custom Prophet `args.holidays` remain supported. Nonempty structured and legacy calendar sources cannot be combined.
 - `tz_aware` *(available from vmanomaly v1.18.0)* (bool): Enables handling of timezone-aware timestamps. Default is `False`. Should be used with `tz_seasonalities` and `tz_use_cyclical_encoding` parameters.
 - `tz_seasonalities` *(available from vmanomaly v1.18.0)* (list\[dict]): Specifies timezone-aware seasonal components. Requires `tz_aware=True`. Supported options include `minute`, `hod` (hour of day), `dow` (day of week), and `month` (month of year). *(available from vmanomaly v1.18.2)* users can configure additional parameters for each seasonality, such as `fourier_order`, `prior_scale`, and `mode`. For more details, please refer to the **Timezone-unaware** configuration example below.
   > *(available from vmanomaly v1.18.2)* the format for `tz_seasonalities` has been updated to enhance flexibility. Previously, it accepted a list of strings (e.g., `['hod', 'minute']`). Now, it follows the same structure as custom seasonalities defined in the `seasonalities` argument (e.g., `{"name": "hod", "fourier_order": 5, "mode": "additive"}`). This change is backward-compatible, so older configurations will be automatically converted to the new format using default values.
@@ -1267,6 +1272,24 @@ models:
 
 > Apart from standard [`vmanomaly` output](#vmanomaly-output), Prophet model can provide additional metrics.
 
+*(available from vmanomaly v1.33.0)* To emit the calendar flag alongside the anomaly score:
+
+```yaml
+# Other components (reader, writer, schedulers, etc.) are omitted.
+models:
+  holiday_prophet:
+    class: prophet
+    provide_series: [anomaly_score, yhat, is_holiday]
+    holidays:
+      countries: [US, CA]
+      special_events: ['12-24', '2026-11-19']
+      group: true
+```
+
+Set the reader/query timezone to your operation's civil calendar. With the structured calendar, Prophet's holiday regressors and `is_holiday` use the same local dates even though Prophet internally predicts with timezone-naive UTC timestamps. The flag uses the restored output timezone; `tz_aware` controls seasonal regressors and is not required for the calendar flag. Legacy Prophet calendar fitting retains its existing behavior. For custom legacy holidays, the flag marks declared `ds` dates only: `lower_window=-1` and `upper_window=1` let Prophet learn effects on the preceding and following day, but do not mark those days as holidays.
+
+The flag is independent of the learned contribution: a zero effect or an unseen holiday can still produce `is_holiday=1`. It has no `forecast_at` variants. See [holiday output](#holiday-output).
+
 **Additional output metrics produced by FB Prophet**
 Depending on chosen `seasonality` parameter FB Prophet can return additional metrics such as:
 
@@ -1282,12 +1305,11 @@ Resulting metrics of the model are described [here](#vmanomaly-output)
 
 ### [Isolation forest](https://en.wikipedia.org/wiki/Isolation_forest) (Multivariate)
 
+*(deprecated since vmanomaly v1.33.0)* This model is scheduled for removal in v1.34.0. Existing configurations, including AutoTuned targets, still run with a warning. Migrate to the corresponding [Temporal Envelope](#temporal-envelope) model. For Isolation Forest, this applies to both `isolation_forest_univariate` and `isolation_forest_multivariate`.
+
 > `IsolationForestModel` is a [univariate](#univariate-models), [offline](#offline-models) model.
 
 > `IsolationForestMultivariateModel` is a [multivariate](#multivariate-models), [offline](#offline-models) model.
-
-> \[!NOTE]
-> Both univariate `isolation_forest` and multivariate `isolation_forest_multivariate` are planned for deprecation in a future release. For new deployments, use the corresponding univariate or multivariate online [Temporal Envelope](#temporal-envelope) model.
 
 Detects anomalies using binary trees. The algorithm has a linear time complexity and a low memory requirement, which works well with high-volume data. It can be used on both univariate and multivariate data, but it is more effective in multivariate case.
 
@@ -1343,10 +1365,9 @@ Resulting metrics of the model are described [here](#vmanomaly-output).
 
 ### [Holt-Winters](https://en.wikipedia.org/wiki/Exponential_smoothing)
 
-> `HoltWinters` is a [univariate](#univariate-models), [offline](#offline-models) model.
+*(deprecated since vmanomaly v1.33.0)* `holtwinters` is scheduled for removal in v1.34.0. Existing configurations, including AutoTuned targets, still run with a warning. Migrate to [Temporal Envelope](#temporal-envelope).
 
-> \[!NOTE]
-> Holt-Winters is planned for deprecation in a future release. For new deployments, prefer the online [Temporal Envelope](#temporal-envelope) model.
+> `HoltWinters` is a [univariate](#univariate-models), [offline](#offline-models) model.
 
 Here we use Holt-Winters Exponential Smoothing implementation from `statsmodels` [library](https://www.statsmodels.org/dev/generated/statsmodels.tsa.holtwinters.ExponentialSmoothing). All parameters from this library can be passed to the model.
 
@@ -1464,6 +1485,16 @@ The default metrics produced by `vmanomaly` include:
 - `y`: This is the original value obtained from the query result.
 
 > If an `infer` call receives `NaN` or infinite input values, the corresponding `anomaly_score` is `NaN`.
+
+### Holiday output
+
+*(available from vmanomaly v1.33.0)* `is_holiday` is an opt-in numeric output: `1` on a configured holiday or special-event date and `0` otherwise. [Prophet](#prophet) and [Temporal Envelope](#temporal-envelope) v1/v2 support it. It is aligned to the output timestamp and model identity labels. For univariate models it follows the labels of `y`, `yhat` and `anomaly_score`; for multivariate Envelope it is one shared flag with the aggregate anomaly-score labels, not one flag per channel.
+
+**How it works**
+
+Country calendars use the [`holidays` package](https://pypi.org/project/holidays/), including its observed dates. Membership is the union of all configured countries and special dates: with `countries: [US, CA]`, either country's holiday is sufficient for `1`. Dates use the output's local timezone, including local-midnight and daylight-saving transitions. Recurring `02-29` applies only in leap years. Subdivisions and forecast-horizon flags are not supported in this version.
+
+Only exact event dates count; learned Envelope shoulders and Prophet holiday windows do not extend membership. The flag does not depend on training coverage or learned effects. Requesting it with an empty calendar logs a validation warning and emits zeros. Omitting it from `provide_series` skips flag generation; a missing series must not be treated as an explicit zero.
 
 ## vmanomaly monitoring metrics
 
@@ -1645,19 +1676,18 @@ See the [component configuration reference](https://docs.victoriametrics.com/ano
 Pull the `vmanomaly` image:
 
 ```sh
-docker pull victoriametrics/vmanomaly:v1.32.0
+docker pull victoriametrics/vmanomaly:v1.33.0
 ```
 
 Mount the module at `/vmanomaly/src/model/custom.py`, which matches the configured import path `model.custom.CustomModel`. Validate the complete configuration with `--dryRun` before starting the long-running service.
 
 ```sh
 docker run --rm \
-  -v "$PWD/license:/license:ro" \
   -v "$PWD/custom_model.py:/vmanomaly/src/model/custom.py:ro" \
   -v "$PWD/config.yaml:/config.yaml:ro" \
-  victoriametrics/vmanomaly:v1.32.0 \
+  victoriametrics/vmanomaly:v1.33.0 \
   /config.yaml \
-  --licenseFile=/license \
+  -eula \
   --dryRun
 ```
 
@@ -1698,7 +1728,7 @@ Such models put **more pressure** on your reader's source, i.e. if your model sh
 
 **Examples:** [RollingQuantile](#rolling-quantile), **prior to [v1.28.0](https://docs.victoriametrics.com/anomaly-detection/changelog/#v1280)** where it become online model.
 
-![vmanomaly-model-type-rolling](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/components/model-type-rolling.webp)
+![vmanomaly-model-type-rolling](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/anomaly-detection/components/model-type-rolling.webp)
 
 #### Non-Rolling Models
 
@@ -1716,7 +1746,7 @@ Produced model instances are **stored in-memory** between consecutive re-fit cal
 
 **Examples:** [Prophet](#prophet)
 
-![vmanomaly-model-type-non-rolling](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/0c1bf87a0c9843c30566df0c0aa6593466425ac5/docs/anomaly-detection/components/model-type-non-rolling.webp)
+![vmanomaly-model-type-non-rolling](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc/docs/anomaly-detection/components/model-type-non-rolling.webp)
 
 ### Deprecated models
 

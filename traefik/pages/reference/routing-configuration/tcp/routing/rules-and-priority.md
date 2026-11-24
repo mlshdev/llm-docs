@@ -1,11 +1,11 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/tcp/routing/rules-and-priority.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/tcp/routing/rules-and-priority.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/tcp/routing/rules-and-priority.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/tcp/routing/rules-and-priority.md)
 
 ## General
 
 > **Note**
 >
 > - The character @ is not authorized in the router name
-> - If both HTTP routers and TCP routers listen to the same [EntryPoint](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints), the TCP routers will apply before the HTTP routers. If no matching route is found for the TCP routers, then the HTTP routers will take over.
+> - If both HTTP routers and TCP routers listen to the same [EntryPoint](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints), the TCP routers will apply before the HTTP routers. If no matching route is found for the TCP routers, then the HTTP routers will take over.
 
 ## Rules
 
@@ -13,12 +13,12 @@ Rules are a set of matchers configured with values, that determine if a particul
 
 The table below lists all the available matchers:
 
-| Rule                                                                                          | Description                                                                                                                                                                                     |
-| --------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <a id="opt-HostSNIdomain"></a>[``HostSNI(`domain`)``](#hostsni-and-hostsniregexp)             | Checks if the connection's Server Name Indication is equal to `domain`. Supports wildcard subdomain matching (e.g. `*.example.com`).<br /> More information [here](#hostsni-and-hostsniregexp). |
-| <a id="opt-HostSNIRegexpregexp"></a>[``HostSNIRegexp(`regexp`)``](#hostsni-and-hostsniregexp) | Checks if the connection's Server Name Indication matches `regexp`.<br />Use a [Go](https://golang.org/pkg/regexp/) flavored syntax.<br /> More information [here](#hostsni-and-hostsniregexp). |
-| <a id="opt-ClientIPip"></a>[``ClientIP(`ip`)``](#clientip)                                    | Checks if the connection's client IP correspond to `ip`. It accepts IPv4, IPv6 and CIDR formats.<br /> More information [here](#clientip).                                                      |
-| <a id="opt-ALPNprotocol"></a>[``ALPN(`protocol`)``](#alpn)                                    | Checks if the connection's ALPN protocol equals `protocol`.<br /> More information [here](#alpn).                                                                                               |
+| Rule                                                                                          | Description                                                                                                                                                                                                       |
+| --------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <a id="opt-HostSNIdomain"></a>[``HostSNI(`domain`)``](#hostsni-and-hostsniregexp)             | Checks if the connection's Server Name Indication is equal to `domain`. Supports wildcard subdomain matching (e.g. `*.example.com`, `**.example.com`).<br /> More information [here](#hostsni-and-hostsniregexp). |
+| <a id="opt-HostSNIRegexpregexp"></a>[``HostSNIRegexp(`regexp`)``](#hostsni-and-hostsniregexp) | Checks if the connection's Server Name Indication matches `regexp`.<br />Use a [Go](https://golang.org/pkg/regexp/) flavored syntax.<br /> More information [here](#hostsni-and-hostsniregexp).                   |
+| <a id="opt-ClientIPip"></a>[``ClientIP(`ip`)``](#clientip)                                    | Checks if the connection's client IP correspond to `ip`. It accepts IPv4, IPv6 and CIDR formats.<br /> More information [here](#clientip).                                                                        |
+| <a id="opt-ALPNprotocol"></a>[``ALPN(`protocol`)``](#alpn)                                    | Checks if the connection's ALPN protocol equals `protocol`.<br /> More information [here](#alpn).                                                                                                                 |
 
 > **Backticks or Quotes?**
 > To set the value of a rule, use [backticks](https://en.wiktionary.org/wiki/backtick) `` ` `` or escaped double-quotes `\"`.
@@ -54,10 +54,12 @@ These matchers do not support non-ASCII characters, use punycode encoded values 
 > when one wants a non-TLS router that matches all (non-TLS) requests,
 > one should use the specific ``HostSNI(`*`)`` syntax.
 > **Wildcard subdomain matching**
-> The `HostSNI` matcher supports a single-level wildcard prefix (`*.example.com`) to match any direct subdomain of `example.com`.
+> The `HostSNI` matcher supports a wildcard prefix to match the subdomains of a domain.
 > It should be preferred over the `HostSNIRegexp` matcher as it allows attaching a TLS option and is more efficient.
 >
-> A wildcard matches exactly one subdomain label: `*.example.com` matches `foo.example.com` but not `foo.bar.example.com` or `example.com` itself.
+> A single wildcard matches exactly one subdomain label, a double wildcard one or more:
+> `*.example.com` matches `foo.example.com` but not `foo.bar.example.com`, while `**.example.com` matches both.
+> Neither matches `example.com` itself.
 >
 > This is only available with the **v3 rule syntax** (the default).
 
@@ -87,6 +89,12 @@ Match TCP connections opened on any direct subdomain of `example.com` (e.g. `foo
 
 ```yaml
 HostSNI(`*.example.com`)
+```
+
+Match TCP connections opened on any subdomain of `example.com`, nested ones included (e.g. `foo.bar.example.com`):
+
+```yaml
+HostSNI(`**.example.com`)
 ```
 
 Match TCP connections opened on any subdomain of `example.com` (including nested subdomains), using a regular expression:
@@ -219,6 +227,9 @@ ALPN(`h2`)
 > In the example above, the priority is configured so that `Router-1` will handle requests from `192.168.0.12`.
 > To avoid path overlap, routes are sorted, by default, in descending order using rules length.
 > The priority is directly equal to the length of the rule, and so the longest length has the highest priority.
+> The stars of a double wildcard host do not count toward this length,
+> so that it always ranks below the single wildcard and the exact hosts it covers:
+> ``HostSNI(`foo.example.com`)`` has a priority of 26, ``HostSNI(`*.example.com`)`` of 24, and ``HostSNI(`**.example.com`)`` of 23.
 > A value of `0` for the priority is ignored: `priority: 0` means that the default rules length sorting is used.
 
 Negative priority values are supported.
@@ -230,5 +241,5 @@ Traefik reserves a range of priorities for its internal routers, the maximum use
 
 > **Providers Precedence**
 > When two routes from **different providers** share the same numeric priority,
-> Traefik uses the [`providers.precedence`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview#providers-precedence) install configuration option to determine which route takes precedence.
+> Traefik uses the [`providers.precedence`](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/overview#providers-precedence) install configuration option to determine which route takes precedence.
 > The provider listed first in `precedence` wins the tie.

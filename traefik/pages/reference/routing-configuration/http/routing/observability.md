@@ -1,15 +1,15 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/http/routing/observability.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/http/routing/observability.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/http/routing/observability.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/http/routing/observability.md)
 
 Traefik's observability features include logs, access logs, metrics, and tracing. You can configure these options globally or at more specific levels, such as per router or per entry point.
 
-By default, the router observability configuration is inherited from the attached EntryPoints and can be configured with the observability [options](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints#configuration-options).
+By default, the router observability configuration is inherited from the attached EntryPoints and can be configured with the observability [options](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/entrypoints#configuration-options).
 However, a router defining its own observability configuration will opt-out from these defaults.
 
 > **Info**
 > To enable router-level observability, you must first enable
-> [access-logs](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/logs-and-accesslogs#accesslogs),
-> [tracing](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/tracing),
-> and [metrics](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/observability/metrics).
+> [access-logs](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/logs-and-accesslogs#accesslogs),
+> [tracing](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/tracing),
+> and [metrics](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/observability/metrics).
 >
 > When metrics layers are not enabled with the `addEntryPointsLabels`, `addRoutersLabels` and/or `addServicesLabels` options,
 > enabling metrics for a router will not enable them.

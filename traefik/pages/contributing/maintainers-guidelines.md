@@ -1,8 +1,8 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/contributing/maintainers-guidelines.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/contributing/maintainers-guidelines.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/contributing/maintainers-guidelines.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/contributing/maintainers-guidelines.md)
 
 # Maintainer's Guidelines
 
-![Maintainer's Guidelines](https://raw.githubusercontent.com/traefik/traefik/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/assets/img/maintainers-guidelines.png)
+![Maintainer's Guidelines](https://raw.githubusercontent.com/traefik/traefik/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/assets/img/maintainers-guidelines.png)
 
 Welcome to the Traefik Community.
 
@@ -46,7 +46,7 @@ As a maintainer, you are granted a vote for the following:
 - [Proposals](https://github.com/traefik/contributors-guide/blob/master/proposals.md).
 
 Maintainers are also added to the maintainer's Discord server where happens the [issue triage](https://github.com/traefik/contributors-guide/blob/master/issue_triage.md)
-and appear on the [Maintainers](https://doc.traefik.io/traefik/v3.7/contributing/maintainers) page.
+and appear on the [Maintainers](https://doc.traefik.io/traefik/v3.8/contributing/maintainers) page.
 
 As a maintainer, you should:
 

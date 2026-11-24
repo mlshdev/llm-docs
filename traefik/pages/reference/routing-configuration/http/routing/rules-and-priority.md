@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/http/routing/rules-and-priority.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/http/routing/rules-and-priority.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/http/routing/rules-and-priority.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/http/routing/rules-and-priority.md)
 
 An HTTP router is in charge of connecting incoming requests to the services that can handle them. Traefik allows you to define your matching rules and [prioritize](#priority-calculation) the routes.
 
@@ -15,19 +15,19 @@ If the rule is verified, the router becomes active, calls middlewares, and then 
 
 The table below lists all the available matchers:
 
-| Matcher                                                                                              | Description                                                                                         |
-| ---------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------- |
-| <a id="opt-Headerkey-value"></a>[``Header(`key`, `value`)``](#header-and-headerregexp)               | Matches requests containing a header named `key` set to `value`.                                    |
-| <a id="opt-HeaderRegexpkey-regexp"></a>[``HeaderRegexp(`key`, `regexp`)``](#header-and-headerregexp) | Matches requests containing a header named `key` matching `regexp`.                                 |
-| <a id="opt-Hostdomain"></a>[``Host(`domain`)``](#host-and-hostregexp)                                | Matches requests host set to `domain`. Supports wildcard subdomain matching (e.g. `*.example.com`). |
-| <a id="opt-HostRegexpregexp"></a>[``HostRegexp(`regexp`)``](#host-and-hostregexp)                    | Matches requests host matching `regexp`.                                                            |
-| <a id="opt-Methodmethod"></a>[``Method(`method`)``](#method)                                         | Matches requests method set to `method`.                                                            |
-| <a id="opt-Pathpath"></a>[``Path(`path`)``](#path-pathprefix-and-pathregexp)                         | Matches requests path set to `path`.                                                                |
-| <a id="opt-PathPrefixprefix"></a>[``PathPrefix(`prefix`)``](#path-pathprefix-and-pathregexp)         | Matches requests path prefix set to `prefix`.                                                       |
-| <a id="opt-PathRegexpregexp"></a>[``PathRegexp(`regexp`)``](#path-pathprefix-and-pathregexp)         | Matches request path using `regexp`.                                                                |
-| <a id="opt-Querykey-value"></a>[``Query(`key`, `value`)``](#query-and-queryregexp)                   | Matches requests query parameters named `key` set to `value`.                                       |
-| <a id="opt-QueryRegexpkey-regexp"></a>[``QueryRegexp(`key`, `regexp`)``](#query-and-queryregexp)     | Matches requests query parameters named `key` matching `regexp`.                                    |
-| <a id="opt-ClientIPip"></a>[``ClientIP(`ip`)``](#clientip)                                           | Matches requests client IP using `ip`. It accepts IPv4, IPv6 and CIDR formats.                      |
+| Matcher                                                                                              | Description                                                                                                           |
+| ---------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| <a id="opt-Headerkey-value"></a>[``Header(`key`, `value`)``](#header-and-headerregexp)               | Matches requests containing a header named `key` set to `value`.                                                      |
+| <a id="opt-HeaderRegexpkey-regexp"></a>[``HeaderRegexp(`key`, `regexp`)``](#header-and-headerregexp) | Matches requests containing a header named `key` matching `regexp`.                                                   |
+| <a id="opt-Hostdomain"></a>[``Host(`domain`)``](#host-and-hostregexp)                                | Matches requests host set to `domain`. Supports wildcard subdomain matching (e.g. `*.example.com`, `**.example.com`). |
+| <a id="opt-HostRegexpregexp"></a>[``HostRegexp(`regexp`)``](#host-and-hostregexp)                    | Matches requests host matching `regexp`.                                                                              |
+| <a id="opt-Methodmethod"></a>[``Method(`method`)``](#method)                                         | Matches requests method set to `method`.                                                                              |
+| <a id="opt-Pathpath"></a>[``Path(`path`)``](#path-pathprefix-and-pathregexp)                         | Matches requests path set to `path`.                                                                                  |
+| <a id="opt-PathPrefixprefix"></a>[``PathPrefix(`prefix`)``](#path-pathprefix-and-pathregexp)         | Matches requests path prefix set to `prefix`.                                                                         |
+| <a id="opt-PathRegexpregexp"></a>[``PathRegexp(`regexp`)``](#path-pathprefix-and-pathregexp)         | Matches request path using `regexp`.                                                                                  |
+| <a id="opt-Querykey-value"></a>[``Query(`key`, `value`)``](#query-and-queryregexp)                   | Matches requests query parameters named `key` set to `value`.                                                         |
+| <a id="opt-QueryRegexpkey-regexp"></a>[``QueryRegexp(`key`, `regexp`)``](#query-and-queryregexp)     | Matches requests query parameters named `key` matching `regexp`.                                                      |
+| <a id="opt-ClientIPip"></a>[``ClientIP(`ip`)``](#clientip)                                           | Matches requests client IP using `ip`. It accepts IPv4, IPv6 and CIDR formats.                                        |
 
 ### Header and HeaderRegexp
 
@@ -50,21 +50,23 @@ If no `Host` is set in the request URL (for example, it's an IP address), these 
 These matchers will match the request's host in lowercase.
 
 > **Wildcard subdomain matching**
-> The `Host` matcher supports a single-level wildcard prefix (`*.example.com`) to match any direct subdomain of `example.com`.
+> The `Host` matcher supports a wildcard prefix to match the subdomains of a domain.
 > It should be preferred over the `HostRegexp` matcher as it allows attaching a TLS option and is more efficient.
 >
-> A wildcard matches exactly one subdomain label: `*.example.com` matches `foo.example.com` but not `foo.bar.example.com` or `example.com` itself.
+> A single wildcard matches exactly one subdomain label, a double wildcard one or more:
+> `*.example.com` matches `foo.example.com` but not `foo.bar.example.com`, while `**.example.com` matches both.
+> Neither matches `example.com` itself.
 >
 > This is only available with the **v3 rule syntax** (the default).
 > **Exception: a bare wildcard matches every request**
 > As an exception to the rules above, a bare `*` is not treated as a subdomain wildcard but as a catch-all:
 > ``Host(`*`)`` matches every request regardless of its host, including requests with no host at all.
-> This mirrors the behaviour of the TCP [``HostSNI(`*`)``](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/routing/rules-and-priority#hostsni-and-hostsniregexp) matcher, so both stay consistent.
+> This mirrors the behaviour of the TCP [``HostSNI(`*`)``](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/tcp/routing/rules-and-priority#hostsni-and-hostsniregexp) matcher, so both stay consistent.
 > \| Behavior                                                        | Rule                                                                    |
 > \|-----------------------------------------------------------------|:------------------------------------------------------------------------|
 > \| <a id="opt-Match-requests-with-Host-set-to-example-com"></a>Match requests with `Host` set to `example.com`. | ``Host(`example.com`)`` |
 > \| <a id="opt-Match-every-request-regardless-of-its-host-see-the-exception-above"></a>Match every request regardless of its host (see the exception above). | ``Host(`*`)`` |
-> \| <a id="opt-Match-requests-sent-to-any-subdomain-of-example-com"></a>Match requests sent to any subdomain of `example.com`. | ``HostRegexp(`^.+\.example\.com$`)`` |
+> \| <a id="opt-Match-requests-sent-to-any-subdomain-of-example-com"></a>Match requests sent to any subdomain of `example.com`. | ``Host(`**.example.com`)`` |
 > \| <a id="opt-Match-requests-with-Host-set-to-either-example-com-or-example-org"></a>Match requests with `Host` set to either `example.com` or `example.org`. | ``HostRegexp(`^example\.(com|org)$`)`` |
 > \| <a id="opt-Match-Host-case-insensitively"></a>Match `Host` [case-insensitively](https://en.wikipedia.org/wiki/Case_sensitivity). | ``HostRegexp(`(?i)^example\.(com|org)$`)`` |
 
@@ -122,13 +124,13 @@ It only matches the request client IP and does not use the `X-Forwarded-For` hea
 > **Warning**
 > RuleSyntax option is deprecated and will be removed in the next major version.
 > Please do not use this field and rewrite the router rules to use the v3 syntax.
-> In Traefik v3 a new rule syntax has been introduced ([migration guide](https://doc.traefik.io/traefik/v3.7/migrate/v3)). The `ruleSyntax` option allows configuring the rule syntax to be used for parsing the rule on a per-router basis. This allows having heterogeneous router configurations and eases migration.
+> In Traefik v3 a new rule syntax has been introduced ([migration guide](https://doc.traefik.io/traefik/v3.8/migrate/v3)). The `ruleSyntax` option allows configuring the rule syntax to be used for parsing the rule on a per-router basis. This allows having heterogeneous router configurations and eases migration.
 
 The default value of the `ruleSyntax` option is inherited from the `core.defaultRuleSyntax` option in the install configuration (formerly known as static configuration). By default, the `core.defaultRuleSyntax` static option is v3, meaning that the default rule syntax is also v3
 
 #### Configuration Example
 
-The configuration below uses the [File Provider (Structured)](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file) to configure the `ruleSyntax` to allow `Router-v2` to use v2 syntax, while for `Router-v3` it is configured to use v3 syntax.
+The configuration below uses the [File Provider (Structured)](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file) to configure the `ruleSyntax` to allow `Router-v2` to use v2 syntax, while for `Router-v3` it is configured to use v3 syntax.
 
 **Structured (YAML)**
 
@@ -241,6 +243,9 @@ labels:
 > To solve this issue, the priority must be set.
 > To avoid path overlap, routes are sorted, by default, in descending order using rules length.
 > The priority is directly equal to the length of the rule, and so the longest length has the highest priority.
+> The stars of a double wildcard host do not count toward this length,
+> so that it always ranks below the single wildcard and the exact hosts it covers:
+> ``Host(`foo.example.com`)`` has a priority of 23, ``Host(`*.example.com`)`` of 21, and ``Host(`**.example.com`)`` of 20.
 
 A value of `0` for the priority is ignored: `priority: 0` means that the default rules length sorting is used.
 
@@ -253,7 +258,7 @@ Traefik reserves a range of priorities for its internal routers, the maximum use
 
 > **Providers Precedence**
 > When two routes from **different providers** share the same numeric priority,
-> Traefik uses the [`providers.precedence`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/overview#providers-precedence) install configuration option to determine which route takes precedence.
+> Traefik uses the [`providers.precedence`](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/overview#providers-precedence) install configuration option to determine which route takes precedence.
 > The provider listed first in `precedence` wins the tie.
 
 ### Example

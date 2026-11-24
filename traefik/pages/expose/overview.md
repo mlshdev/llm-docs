@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/expose/overview.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/expose/overview.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/expose/overview.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/expose/overview.md)
 
 # Exposing Services with Traefik Proxy
 
@@ -8,7 +8,7 @@ This section guides you through exposing services securely with Traefik Proxy. Y
 
 Following these guides, you'll learn how to:
 
-- Route HTTP traffic to your services with [Gateway API](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/gateway-api) and [IngressRoute](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/ingressroute)
+- Route HTTP traffic to your services with [Gateway API](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/gateway-api) and [IngressRoute](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/http/ingressroute)
 - Configure routing rules to direct requests
 - Enable HTTPS with TLS
 - Add security middlewares
@@ -19,9 +19,9 @@ Following these guides, you'll learn how to:
 
 For detailed steps tailored to your environment, follow the guide for your platform:
 
-- [Kubernetes](https://doc.traefik.io/traefik/v3.7/expose/kubernetes/basic)
-- [Docker](https://doc.traefik.io/traefik/v3.7/expose/docker/basic)
-- [Docker Swarm](https://doc.traefik.io/traefik/v3.7/expose/swarm/basic)
+- [Kubernetes](https://doc.traefik.io/traefik/v3.8/expose/kubernetes/basic)
+- [Docker](https://doc.traefik.io/traefik/v3.8/expose/docker/basic)
+- [Docker Swarm](https://doc.traefik.io/traefik/v3.8/expose/swarm/basic)
 
 ## Advanced Use Cases
 
@@ -67,7 +67,7 @@ Traefik Proxy supports gRPC applications without requiring specific configuratio
 >           - url: https://backend:8080
 > ```
 >
-> Traefik handles the protocol negotiation automatically. Configure TLS certificates for your backends using [ServersTransport](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/serverstransport) if needed.
+> Traefik handles the protocol negotiation automatically. Configure TLS certificates for your backends using [ServersTransport](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/load-balancing/serverstransport) if needed.
 
 ### Exposing WebSocket Services
 
@@ -110,4 +110,4 @@ Traefik Proxy supports WebSocket (WS) and WebSocket Secure (WSS) connections out
 >           # - url: https://websocket-backend:8443  # End-to-end encryption
 > ```
 >
-> Traefik preserves WebSocket headers including `Origin`, `Sec-WebSocket-Key`, and `Sec-WebSocket-Version`. Use the [Headers middleware](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/middlewares/headers) if you need to modify headers for origin checking or other requirements.
+> Traefik preserves WebSocket headers including `Origin`, `Sec-WebSocket-Key`, and `Sec-WebSocket-Version`. Use the [Headers middleware](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/middlewares/headers) if you need to modify headers for origin checking or other requirements.

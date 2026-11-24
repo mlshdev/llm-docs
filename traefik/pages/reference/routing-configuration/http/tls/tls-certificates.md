@@ -1,4 +1,4 @@
-> Pinned source for Traefik Proxy v3.7.19: [docs/content/reference/routing-configuration/http/tls/tls-certificates.md](https://github.com/traefik/traefik/blob/7dafd6dba371bd1aee70c443c2975c229c969711/docs/content/reference/routing-configuration/http/tls/tls-certificates.md)
+> Pinned source for Traefik Proxy v3.8.0: [docs/content/reference/routing-configuration/http/tls/tls-certificates.md](https://github.com/traefik/traefik/blob/644b1f19cf031ec079cca10fad0c86e5ab7181b7/docs/content/reference/routing-configuration/http/tls/tls-certificates.md)
 
 > **Info**
 > When a router has to handle HTTPS traffic, it should be specified with a `tls` field of the router definition.
@@ -7,11 +7,11 @@
 
 ### Automated
 
-See the [Let's Encrypt](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/tls/certificate-resolvers/acme) page.
+See the [Let's Encrypt](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/tls/certificate-resolvers/acme) page.
 
 ### User defined
 
-To add / remove TLS certificates, even when Traefik is already running, their definition can be added to the [dynamic configuration](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/dynamic-configuration-methods#providing-dynamic-routing-configuration-to-traefik), in the `[[tls.certificates]]` section:
+To add / remove TLS certificates, even when Traefik is already running, their definition can be added to the [dynamic configuration](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/dynamic-configuration-methods#providing-dynamic-routing-configuration-to-traefik), in the `[[tls.certificates]]` section:
 
 **Structured (YAML)**
 
@@ -37,9 +37,9 @@ tls:
 ```
 
 > **Restriction**
-> In the above example, we've used the [file provider](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/others/file) to handle these definitions.
+> In the above example, we've used the [file provider](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/others/file) to handle these definitions.
 > It is the only available method to configure the certificates (as well as the options and the stores).
-> However, in [Kubernetes](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd), the certificates can and must be provided by [secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
+> However, in [Kubernetes](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-crd), the certificates can and must be provided by [secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
 
 #### Certificate selection (SNI)
 
@@ -53,7 +53,7 @@ By default, if the client does not send SNI, or if no certificate matches the re
 Traefik falls back to the [default certificate](#default-certificate) from the TLS store (if configured).
 
 To reject connections without SNI (or with an unknown server name) instead of falling back to the default certificate,
-enable `sniStrict` in [TLS Options](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/tls/tls-options#strict-sni-checking).
+enable `sniStrict` in [TLS Options](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/http/tls/tls-options#strict-sni-checking).
 
 ## Certificates Stores
 
@@ -63,9 +63,9 @@ In Traefik, certificates are grouped together in certificates stores.
 > Any store definition other than the default one (named `default`) will be ignored,
 > and there is therefore only one globally available TLS store.
 > **TLSStore in Kubernetes**
-> With the [TLSStore resource](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/tls/tlsstore), the store named `default` applies to every entry point,
+> With the [TLSStore resource](https://doc.traefik.io/traefik/v3.8/reference/routing-configuration/kubernetes/crd/tls/tlsstore), the store named `default` applies to every entry point,
 > whatever the namespace it is defined in.
-> The [`defaultTLSResourcesNamespace`](https://doc.traefik.io/traefik/v3.7/reference/install-configuration/providers/kubernetes/kubernetes-crd#defaulttlsresourcesnamespace) provider option
+> The [`defaultTLSResourcesNamespace`](https://doc.traefik.io/traefik/v3.8/reference/install-configuration/providers/kubernetes/kubernetes-crd#defaulttlsresourcesnamespace) provider option
 > restricts the namespace this cluster-wide store can be defined in.
 > In the `tls.certificates` section, a list of stores can then be specified to indicate where the certificates should be stored:
 
@@ -103,9 +103,9 @@ tls:
 > The `stores` list will actually be ignored and automatically set to `["default"]`.
 > **Per provider examples**
 >
-> - [Docker: Enable TLS](https://doc.traefik.io/traefik/v3.7/expose/docker/basic#enable-tls)
-> - [Swarm: Enable TLS](https://doc.traefik.io/traefik/v3.7/expose/swarm/basic#enable-tls)
-> - [Kubernetes: Enable TLS](https://doc.traefik.io/traefik/v3.7/expose/kubernetes/basic#enable-tls)
+> - [Docker: Enable TLS](https://doc.traefik.io/traefik/v3.8/expose/docker/basic#enable-tls)
+> - [Swarm: Enable TLS](https://doc.traefik.io/traefik/v3.8/expose/swarm/basic#enable-tls)
+> - [Kubernetes: Enable TLS](https://doc.traefik.io/traefik/v3.8/expose/kubernetes/basic#enable-tls)
 
 ### Default Certificate
 
