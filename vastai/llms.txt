@@ -1,6 +1,6 @@
 # Vast.ai main
 
-> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `138c1ddd5cfe5761c6391075c1fd0b6c517e059d`.
+> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `b0594c0dc62dd2305fdfc24e89104075db59ece5`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Vast.ai main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -41,7 +41,7 @@
 - [Scheduled Cloud Backups](pages/guides/instances/storage/cloud-backups.md): Learn how to set up and schedule automated Vast.ai cloud backups using CLI or cron. Keep your data safe with best practices and easy management. (10192 bytes)
 - [Managing Instances](pages/guides/instances/manage-instances.md): Learn how to manage running instances - start, stop, destroy, monitor status, and handle common operational tasks. (6860 bytes)
 - [Docker Execution Environment](pages/guides/instances/docker-environment.md): Learn how Vast.ai Docker instances handle resource allocation, environment variables, networking, ports, and CLI usage. (11011 bytes)
-- [Virtual Machines](pages/guides/instances/virtual-machines.md): Learn how Vast.ai virtual machines (VMs) provide full Linux instances with init manager support, process tracing, and nested containerization for advanced workloads. (4028 bytes)
+- [Virtual Machines](pages/guides/instances/virtual-machines.md): Learn how Vast.ai virtual machines (VMs) provide full Linux instances with init manager support, process tracing, and nested containerization for advanced workloads. (4527 bytes)
 
 ## Serverless
 
@@ -83,7 +83,7 @@
 
 ## Templates
 
-- [Templates](pages/guides/templates/introduction.md): A template is how Vast helps you launch an instance, setting up your rented machine with whatever software and formatting you need. Templates are generally used for launching instances through the web interface, but the… (4556 bytes)
+- [Templates](pages/guides/templates/introduction.md): A template is how Vast helps you launch an instance, setting up your rented machine with whatever software and formatting you need. Templates are generally used for launching instances through the web interface, but the… (4829 bytes)
 - [Creating Templates](pages/guides/templates/creating-templates.md): Creating a template is simple - it's just telling Vast.ai how you want your instances to be configured. This guide will walk you through creating your first template step by step. (6144 bytes)
 - [Managing Templates](pages/guides/templates/managing-templates.md): If you want to make changes to a template you previously saved, simply navigate back to the templates page and select 'My Templates'. Here you'll be able to make your changes by clicking the pencil icon. (2445 bytes)
 - [Template Settings](pages/guides/templates/template-settings.md): This guide documents all settings and options available when configuring a template. Use this guide when you need to understand what a specific setting does or how to configure a particular option. (10593 bytes)
@@ -436,7 +436,7 @@
 ## Concepts
 
 - [Hosting Overview](pages/host/hosting-overview.md): Vast is a GPU marketplace. Hosts sell GPU resources on the marketplace. Hosts are responsible for: (22578 bytes)
-- [Understanding Verification](pages/host/understanding-verification.md): Verification is fully automated and powered by proprietary algorithms that continuously evaluate each machine’s operational health and performance, dynamically adjusting assessments based on real-time supply and demand. (5962 bytes)
+- [Understanding Verification](pages/host/understanding-verification.md): Verification is fully automated and powered by proprietary algorithms that continuously evaluate each machine’s operational health and performance, dynamically adjusting assessments based on real-time supply and demand. (5735 bytes)
 - [Earning](pages/host/earning.md): This page in the console allows you to manage your earnings from referrals. You can find more information about Vast's referral program here. (2575 bytes)
 
 ## Guides
@@ -451,7 +451,7 @@
 - [Datacenter Status](pages/host/datacenter-status.md): Equipment that is in a certified datacenter on Vast.ai is eligible to be included in the "Secure Cloud" offering and receive other benefits, such as the blue datacenter label. Individual certifications will eventually b… (2186 bytes)
 - [Host Payouts](pages/host/payment.md): This guide explains how Vast.ai host payouts work, when invoices are generated, when payments are sent, and what to do if you experience a payout issue. (6164 bytes)
 - [Tax Guide for Hosts](pages/host/guide-to-taxes.md): Disclaimer: As an independent contractor, you are solely responsible for tracking your earnings and accurately reporting them in your tax filings. Vast.ai cannot provide tax advice, and we cannot verify the accuracy of… (2144 bytes)
-- [VMs](pages/host/vms.md): Vast now supports VM instances running on Kernel Virtual Machine (KVM) in addition to Docker container based instances. VM support is currently an optional feature for hosts as it usually requires additional configurati… (5735 bytes)
+- [VMs](pages/host/vms.md): Vast now supports VM instances running on Kernel Virtual Machine (KVM) in addition to Docker container based instances. VM support is currently an optional feature for hosts as it usually requires additional configurati… (5291 bytes)
 - [Set a Maintenance Window](pages/host/set-maintenance-window.md): Schedule a maintenance window on one machine or on many at once from the Machines page, so renters are warned before you take hardware down. (7429 bytes)
 - [Upgrade the Kernel](pages/host/upgrade-kernel.md): Check whether your host machine's kernel is up to date, install the update, and confirm the machine came back online. (15951 bytes)
 - [Upgrade the NVIDIA Driver](pages/host/upgrade-nvidia-driver.md): Bring a host machine up to the minimum NVIDIA driver version Vast asks for, built by DKMS and held at that version. (12447 bytes)
@@ -531,8 +531,8 @@
 
 ## Virtual desktops & VMs
 
-- [Linux Virtual Desktop](pages/linux-virtual-desktop.md): This guide will help you set up and use a Linux Virtual Desktop environment on Vast.ai using the Ubuntu Desktop (VM) template. (5641 bytes)
-- [Linux Virtual Machines](pages/linux-virtual-machines.md): Vast.ai provides virtual machine (VM) capabilities alongside its Docker-based instance rentals. This guide walks you through everything you need to know about running VMs on machines with GPUs found at Vast. (7704 bytes)
+- [Linux Virtual Desktop](pages/linux-virtual-desktop.md): This guide will help you set up and use a Linux Virtual Desktop environment on Vast.ai using the Ubuntu Desktop (VM) template. (6237 bytes)
+- [Linux Virtual Machines](pages/linux-virtual-machines.md): Vast.ai provides virtual machine (VM) capabilities alongside its Docker-based instance rentals. This guide walks you through everything you need to know about running VMs on machines with GPUs found at Vast. (8327 bytes)
 
 ## Graphics & GPU programming
 

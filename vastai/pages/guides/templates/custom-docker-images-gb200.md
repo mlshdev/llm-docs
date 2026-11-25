@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/templates/custom-docker-images-gb200.mdx](https://github.com/vast-ai/docs/blob/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/guides/templates/custom-docker-images-gb200.mdx)
+> Pinned source for Vast.ai main: [guides/templates/custom-docker-images-gb200.mdx](https://github.com/vast-ai/docs/blob/b0594c0dc62dd2305fdfc24e89104075db59ece5/guides/templates/custom-docker-images-gb200.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/templates/custom-docker-images-gb200
 
 # Custom Docker images for GB200

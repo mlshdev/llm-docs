@@ -1,6 +1,26 @@
-> Pinned source for Podman v6.2.0: [RELEASE_NOTES.md](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/RELEASE_NOTES.md)
+> Pinned source for Podman v6.2.1: [RELEASE_NOTES.md](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/RELEASE_NOTES.md)
 
 # Release Notes
+
+## 6.2.1
+
+### Bugfixes
+
+- Fixed a bug where ConfigMaps and Secrets mounted as executable were not being able to be executed immediately on pod launch when using `podman kube play`.
+- Fixed a bug where the Docker compatible image inspect responses returning an empty author for images with an author set.
+- Fixed a bug where the podman service did not use the correct server configured temporary directory for remote image builds ([#20839](https://github.com/podman-container-tools/podman/issues/20839)).
+- Fixed a bug where `--userns=nomap` sets the wrong supplementary group ([#30261](https://github.com/podman-container-tools/podman/issues/30261)).
+- Fixed a bug where the Docker compatible network inspect and list endpoints are failing when a network has no gateway.
+- Fixed a bug where `podman pod clone` would fail when it has no infra container ([#30340](https://github.com/podman-container-tools/podman/issues/30340)).
+- Fixed a bug where `podman-remote manifest push --compression-level` had no effect.
+- Fixed a bug where read-only containers using secrets could fail to start ([#30301](https://github.com/podman-container-tools/podman/issues/30301)).
+- Fixed a bug where `podman-remote manifest add --artifact` would fail when no storage driver was configured in storage.conf on the server ([#30280](https://github.com/podman-container-tools/podman/issues/30280)).
+- Fixed a bug where the podman machine state with the WSL provider was not parsed not correctly ([#30273](https://github.com/podman-container-tools/podman/issues/30273)).
+- Fixed a bug where `podman exec` could fail to set oom\_score\_adj as rootless user ([#30245](https://github.com/podman-container-tools/podman/issues/30245)).
+
+### Misc
+
+- Downgraded tags.cncf.io/container-device-interface to v1.1.0 ([#30233](https://github.com/podman-container-tools/podman/issues/30233)).
 
 ## 6.2.0
 
@@ -264,7 +284,7 @@
 - Support for running on iptables has been removed. Please use nftables instead.
 - Support for CNI networking has been removed. Please use Netavark instead.
 - Support for the slirp4netns rootless network stack has been removed. Please use Pasta instead. As part of this, the `--network-cmd-path` global option, only used with `slirp4netns`, has been removed.
-- Podman's configuration file parsing logic has seen a major rewrite. Please see [this document](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/contrib/design-docs/config-file-parsing.md) for exact details.
+- Podman's configuration file parsing logic has seen a major rewrite. Please see [this document](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/contrib/design-docs/config-file-parsing.md) for exact details.
 - Podman's import path has changed from `github.com/containers/podman/v5` to `go.podman.io/podman/v6` as part of our move into a CNCF-owned GitHub organization.
 - Network isolation now defaults to enabled, improving Docker compatibility and security. A special workaround for the Docker-compatible API related to isolation being disabled has been removed ([#27349](https://github.com/podman-container-tools/podman/issues/27349)).
 - The way the `podman quadlet` suite of commands functions has been changed. Previously, Quadlets and their associated files were tracked using a `.app` file, ensuring that removing a Quadlet also removed all associated non-Quadlet files. Now, Quadlets and associated files are placed in subdirectories, which should reduce bugs and make manual management of Quadlets added by `podman quadlet install` much easier.

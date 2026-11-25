@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.1: [docs/sources/alerting/alerting-rules/create-grafana-managed-rule.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/alerting/alerting-rules/create-grafana-managed-rule.md)
+> Pinned source for Grafana v13.3.2: [docs/sources/alerting/alerting-rules/create-grafana-managed-rule.md](https://github.com/grafana/grafana/blob/b8e90ef2a99c8629339e7233a7a813456d87c075/docs/sources/alerting/alerting-rules/create-grafana-managed-rule.md)
 
 > **Caution**
 >
@@ -48,7 +48,7 @@ Only users with **Edit** permissions for the folder storing the rules can edit o
 
 Note that if you delete an alert resource created in the UI, you can no longer retrieve it.
 
-To backup and manage alert rules, you can [provision alerting resources](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/) using options such as configuration files, Terraform, or the Alerting API.
+To backup and manage alert rules, you can [provision alerting resources](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/) using options such as configuration files, Terraform, the Alerting API, or `gcx`.
 
 \[//]: <> (
 

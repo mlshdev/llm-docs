@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-build.unit.5.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-build.unit.5.md.in)
+> Pinned source for Podman v6.2.1: [docs/source/markdown/podman-build.unit.5.md.in](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman-build.unit.5.md.in)
 
 # podman-build.unit
 
@@ -87,7 +87,7 @@ Unless overridden, subsequent lookups of the same image in the local storage mat
 ### `AuthFile=path`
 
 Path of the authentication file. Default is `${XDG_RUNTIME_DIR}/containers/auth.json` on Linux, and `$HOME/.config/containers/auth.json` on Windows/macOS.
-The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
+The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
 
 Note: There is also the option to override the default path of the authentication file by setting the `REGISTRY_AUTH_FILE` environment variable. This can be done with **export REGISTRY\_AUTH\_FILE=*path***.
 
@@ -612,6 +612,6 @@ Secret=mysecret
 
 # SEE ALSO
 
-[podman-build(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-build.1.md.in),
-[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-systemd.unit.5.md),
+[podman-build(1)](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman-build.1.md.in),
+[podman-systemd.unit(5)](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman-systemd.unit.5.md),
 [systemd.unit(5)](https://www.freedesktop.org/software/systemd/man/systemd.unit.html)

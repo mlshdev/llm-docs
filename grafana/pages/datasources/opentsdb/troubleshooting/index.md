@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.1: [docs/sources/datasources/opentsdb/troubleshooting/index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/datasources/opentsdb/troubleshooting/index.md)
+> Pinned source for Grafana v13.3.2: [docs/sources/datasources/opentsdb/troubleshooting/index.md](https://github.com/grafana/grafana/blob/b8e90ef2a99c8629339e7233a7a813456d87c075/docs/sources/datasources/opentsdb/troubleshooting/index.md)
 
 # Troubleshoot OpenTSDB data source issues
 

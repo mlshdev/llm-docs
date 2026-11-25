@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/notification-types](https://github.com/vast-ai/docs/blob/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/api-reference/openapi.yaml%23get%20/api/v0/notification-types)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/notification-types](https://github.com/vast-ai/docs/blob/b0594c0dc62dd2305fdfc24e89104075db59ece5/api-reference/openapi.yaml%23get%20/api/v0/notification-types)
 > Canonical documentation: https://docs.vast.ai/api-reference/notifications/list-notification-types
 
 # list notification types

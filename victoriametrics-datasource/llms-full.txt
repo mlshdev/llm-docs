@@ -1,14 +1,14 @@
-# VictoriaMetrics datasource for Grafana v1.0.2: full documentation
+# VictoriaMetrics datasource for Grafana v1.0.3: full documentation
 
 Source repository: https://github.com/VictoriaMetrics/victoriametrics-datasource
-Release tag: v1.0.2
-Source commit: 53e959300a520900f25547efee2f89d17538a368
+Release tag: v1.0.3
+Source commit: 58768647ecca729a9604f2f88318e81f5864aab5
 
 # Document: VictoriaMetrics datasource for Grafana
 
 Source path: src/README.md
-Pinned source: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/53e959300a520900f25547efee2f89d17538a368/src/README.md
-Canonical documentation: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/53e959300a520900f25547efee2f89d17538a368/src/README.md
+Pinned source: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58768647ecca729a9604f2f88318e81f5864aab5/src/README.md
+Canonical documentation: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58768647ecca729a9604f2f88318e81f5864aab5/src/README.md
 Description: The VictoriaMetrics Grafana plugin allows Grafana to query, visualize, and interact with VictoriaMetrics, a high-performance metrics storage and processing system.
 
 # VictoriaMetrics datasource for Grafana
@@ -17,7 +17,7 @@ The [VictoriaMetrics Grafana plugin](https://grafana.com/grafana/plugins/victori
 Grafana to query, visualize, and interact with [VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/),
 a high-performance metrics storage and processing system.
 
-![Grafana Dashboard Screenshot](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/53e959300a520900f25547efee2f89d17538a368/src/img/dashboard.png)
+![Grafana Dashboard Screenshot](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/58768647ecca729a9604f2f88318e81f5864aab5/src/img/dashboard.png)
 
 ## Capabilities
 
@@ -25,7 +25,7 @@ a high-performance metrics storage and processing system.
 2. Use Explore mode with Grafana.
 3. Build dashboards and setup alerts.
 4. Use Ad Hoc filters.
-5. [Template](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/53e959300a520900f25547efee2f89d17538a368/src/README.md#how-to-use-with-templates) queries and expressions.
+5. [Template](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58768647ecca729a9604f2f88318e81f5864aab5/src/README.md#how-to-use-with-templates) queries and expressions.
 6. Get insights about query execution bottlenecks via [tracing](https://docs.victoriametrics.com/victoriametrics/#query-tracing).
 7. Automatically format queries via `Prettify` button.
 
@@ -201,13 +201,13 @@ feature for navigating from a span in a trace directly to metrics relevant for a
 Metric to logs correlation can be configured using [correlations](https://grafana.com/docs/grafana/latest/administration/correlations/)
 interface:
 
-![Metric to logs correlation 1](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/53e959300a520900f25547efee2f89d17538a368/src/img/correlation-metric-to-logs-1.png)
-![Metric to logs correlation 2](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/53e959300a520900f25547efee2f89d17538a368/src/img/correlation-metric-to-logs-2.png)
-![Metric to logs correlation 3](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/53e959300a520900f25547efee2f89d17538a368/src/img/correlation-metric-to-logs-3.png)
+![Metric to logs correlation 1](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/58768647ecca729a9604f2f88318e81f5864aab5/src/img/correlation-metric-to-logs-1.png)
+![Metric to logs correlation 2](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/58768647ecca729a9604f2f88318e81f5864aab5/src/img/correlation-metric-to-logs-2.png)
+![Metric to logs correlation 3](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/58768647ecca729a9604f2f88318e81f5864aab5/src/img/correlation-metric-to-logs-3.png)
 
 Then, in Grafana's Explore mode click on the specified field will open a split view of Logs datasource already filtered
 by the configured fields:
-![Metric to logs correlation 4](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/53e959300a520900f25547efee2f89d17538a368/src/img/correlation-metric-to-logs-4.png)
+![Metric to logs correlation 4](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/58768647ecca729a9604f2f88318e81f5864aab5/src/img/correlation-metric-to-logs-4.png)
 
 ### Metric to traces
 
@@ -235,14 +235,14 @@ See more details [here](https://github.com/VictoriaMetrics/victoriametrics-datas
 ## License
 
 This project is licensed under
-the [AGPL-3.0-only](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/53e959300a520900f25547efee2f89d17538a368/LICENSE).
+the [AGPL-3.0-only](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58768647ecca729a9604f2f88318e81f5864aab5/LICENSE).
 
 
 # Document: VictoriaMetrics datasource for Grafana: repository guide
 
 Source path: README.md
-Pinned source: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/53e959300a520900f25547efee2f89d17538a368/README.md
-Canonical documentation: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/53e959300a520900f25547efee2f89d17538a368/README.md
+Pinned source: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58768647ecca729a9604f2f88318e81f5864aab5/README.md
+Canonical documentation: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58768647ecca729a9604f2f88318e81f5864aab5/README.md
 Description: The VictoriaMetrics datasource plugin allows to query and visualize data from VictoriaMetrics in Grafana.
 
 # VictoriaMetrics datasource for Grafana
@@ -276,7 +276,7 @@ The benefits of using VictoriaMetrics plugin are the following:
 2. Use Explore mode with Grafana.
 3. Build dashboards and setup alerts.
 4. Use Ad Hoc filters.
-5. [Template](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/53e959300a520900f25547efee2f89d17538a368/src/README.md#how-to-use-with-templates) queries and expressions.
+5. [Template](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58768647ecca729a9604f2f88318e81f5864aab5/src/README.md#how-to-use-with-templates) queries and expressions.
 6. Get insights about query execution bottlenecks via [tracing](https://docs.victoriametrics.com/victoriametrics/#query-tracing).
 7. Automatically format queries via `Prettify` button.
 
@@ -364,7 +364,7 @@ docker-compose -f docker-compose.yaml up
 
 When Grafana starts successfully datasources should be present on the datasources tab:
 
-![Configuration](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/53e959300a520900f25547efee2f89d17538a368/docs/assets/provision_datasources.webp)
+![Configuration](https://raw.githubusercontent.com/VictoriaMetrics/victoriametrics-datasource/58768647ecca729a9604f2f88318e81f5864aab5/docs/assets/provision_datasources.webp)
 
 ### Install in Kubernetes
 
@@ -735,19 +735,24 @@ Grafana doesn't allow forwarding Alert requests to alerting API /api/v1/rules fo
 ## License
 
 This project is licensed under
-the [AGPL-3.0-only](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/53e959300a520900f25547efee2f89d17538a368/LICENSE).
+the [AGPL-3.0-only](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58768647ecca729a9604f2f88318e81f5864aab5/LICENSE).
 
 
 # Document: VictoriaMetrics datasource for Grafana: changelog
 
 Source path: CHANGELOG.md
-Pinned source: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/53e959300a520900f25547efee2f89d17538a368/CHANGELOG.md
-Canonical documentation: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/53e959300a520900f25547efee2f89d17538a368/CHANGELOG.md
+Pinned source: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58768647ecca729a9604f2f88318e81f5864aab5/CHANGELOG.md
+Canonical documentation: https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58768647ecca729a9604f2f88318e81f5864aab5/CHANGELOG.md
 Description: Update Note 1: This is an alpha release. We do not recommend using it in production.
 
 # Changelog
 
 ## tip
+
+- BUGFIX: return a query error instead of crashing the backend when a sample value in the datasource response is not a string, for example a number or `null`.
+- BUGFIX: stop writing the contents of the datasource response to the Grafana log when the response cannot be parsed.
+
+## v1.0.2
 
 - BUGFIX: use the selected time range for label and label value suggestions when `Use optimized labels API` is enabled, which is the default. Previously, these requests always covered the last 6 hours regardless of the time picker. See [#600](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/600).
 

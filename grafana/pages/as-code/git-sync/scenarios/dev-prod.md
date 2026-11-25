@@ -1,10 +1,17 @@
-> Pinned source for Grafana v13.3.1: [docs/sources/as-code/git-sync/scenarios/dev-prod.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/as-code/git-sync/scenarios/dev-prod.md)
+> Pinned source for Grafana v13.3.2: [docs/sources/as-code/git-sync/scenarios/dev-prod.md](https://github.com/grafana/grafana/blob/b8e90ef2a99c8629339e7233a7a813456d87c075/docs/sources/as-code/git-sync/scenarios/dev-prod.md)
 
 # Git Sync for development and production environments
 
 Use separate Grafana instances for development and production. Each syncs with different Git locations to test dashboards before production.
 
+Before you begin, ensure you have the following:
+
+- A Git repository hosted on a [compatible Git provider](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/usage-limits/#compatible-git-providers).
+- Two Grafana instances, one for development and one for production, that meet the [Git Sync setup prerequisites](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/git-sync-setup/set-up-before/).
+
 ## Use it for
+
+Use this scenario in the following situations:
 
 - **Staged deployments**: You need to test dashboard changes before production deployment.
 - **Change control**: You require approvals before dashboards reach production.
@@ -13,40 +20,44 @@ Use separate Grafana instances for development and production. Each syncs with d
 
 ## Architecture
 
-```
-┌────────────────────────────────────────────────────────────┐
-│              GitHub Repository                             │
-│   Repository: your-org/grafana-manifests                 │
-│   Branch: main                                             │
-│                                                            │
-│   grafana-manifests/                                     │
-│   ├── dev/                                                │
-│   │   ├── dashboard-new.json    ← Development dashboards │
-│   │   └── dashboard-test.json                            │
-│   │                                                       │
-│   └── prod/                                               │
-│       ├── dashboard-stable.json  ← Production dashboards │
-│       └── dashboard-approved.json                        │
-└────────────────────────────────────────────────────────────┘
-           ↕                                 ↕
-    Git Sync (dev/)              Git Sync (prod/)
-           ↕                                 ↕
-┌─────────────────────┐          ┌─────────────────────┐
-│  Dev Grafana        │          │  Prod Grafana       │
-│                     │          │                     │
-│  Repository:        │          │  Repository:        │
-│  - path: dev/       │          │  - path: prod/      │
-│                     │          │                     │
-│  Creates folder:    │          │  Creates folder:    │
-│  "grafana-manifests"│         │  "grafana-manifests"│
-└─────────────────────┘          └─────────────────────┘
+In this scenario, each instance syncs a different path of the same branch:
+
+```text
+┌──────────────────────────────────────────────────────────────┐
+│ GitHub Repository                                            │
+│ Repository: your-org/grafana-manifests                       │
+│ Branch: main                                                 │
+│                                                              │
+│ grafana-manifests/                                           │
+│ ├── dev/                                                     │
+│ │   ├── dashboard-new.json        ← Development dashboards   │
+│ │   └── dashboard-test.json                                  │
+│ │                                                            │
+│ └── prod/                                                    │
+│     ├── dashboard-stable.json     ← Production dashboards    │
+│     └── dashboard-approved.json                              │
+└──────────────────────────────────────────────────────────────┘
+          ↕                                     ↕
+   Git Sync (dev/)                       Git Sync (prod/)
+          ↕                                     ↕
+┌───────────────────────┐             ┌───────────────────────┐
+│ Dev Grafana           │             │ Prod Grafana          │
+│                       │             │                       │
+│ Repository:           │             │ Repository:           │
+│ - path: dev/          │             │ - path: prod/         │
+│                       │             │                       │
+│ Creates folder:       │             │ Creates folder:       │
+│ "grafana-manifests"   │             │ "grafana-manifests"   │
+└───────────────────────┘             └───────────────────────┘
 ```
 
 ## Repository structure
 
+The following examples show how the dashboards appear in Git and in each Grafana instance.
+
 **In Git:**
 
-```
+```text
 your-org/grafana-manifests
 ├── dev/
 │   ├── dashboard-new.json
@@ -58,43 +69,47 @@ your-org/grafana-manifests
 
 **In Grafana Dashboards view:**
 
-**Dev instance:**
+**Development instance:**
 
-```
+```text
 Dashboards
 └── 📁 grafana-manifests/
     ├── New Dashboard
     └── Test Dashboard
 ```
 
-**Prod instance:**
+**Production instance:**
 
-```
+```text
 Dashboards
 └── 📁 grafana-manifests/
     ├── Stable Dashboard
     └── Approved Dashboard
 ```
 
-- Both instances create a folder named "grafana-manifests" (from repository name)
-- Each instance only shows dashboards from its configured path (`dev/` or `prod/`)
-- Dashboards appear with their titles from the JSON files
+- Both instances create a folder titled `grafana-manifests`, the display name of each instance's Repository resource.
+- Each instance only shows dashboards from its configured path (`dev/` or `prod/`).
+- Dashboards appear with their titles from the JSON files.
 
 ## Configuration parameters
 
-Development:
+Configure each instance with the following parameters.
 
-- Repository: `your-org/grafana-manifests`
-- Branch: `main`
-- Path: `dev/`
+**Development instance:**
 
-Production:
+- **Repository**: `your-org/grafana-manifests`
+- **Branch**: `main`
+- **Path**: `dev/`
 
-- Repository: `your-org/grafana-manifests`
-- Branch: `main`
-- Path: `prod/`
+**Production instance:**
+
+- **Repository**: `your-org/grafana-manifests`
+- **Branch**: `main`
+- **Path**: `prod/`
 
 ## How it works
+
+Dashboards move from development to production through Git:
 
 1. Developers create and modify dashboards in development.
 2. Git Sync commits changes to `dev/`.
@@ -105,7 +120,7 @@ Production:
 
 ## Alternative: Use branches
 
-Instead of using different paths, you can configure instances to use different branches:
+Instead of using different paths, you can configure instances to use different branches.
 
 **Development instance:**
 
@@ -121,13 +136,13 @@ Instead of using different paths, you can configure instances to use different b
 
 With this approach:
 
-- Development changes go to the `develop` branch
-- Use Git merge or pull request workflows to promote changes from `develop` to `main`
-- Production automatically syncs from the `main` branch
+- Development changes go to the `develop` branch.
+- You use Git merge or pull request workflows to promote changes from `develop` to `main`.
+- Production automatically syncs from the `main` branch.
 
 ## Alternative: Use separate repositories for stricter isolation
 
-For stricter isolation, use completely separate repositories:
+For stricter isolation, use completely separate repositories.
 
 **Development instance:**
 
@@ -140,3 +155,12 @@ For stricter isolation, use completely separate repositories:
 - **Repository**: `your-org/grafana-manifests-prod`
 - **Branch**: `main`
 - **Path**: `grafana/`
+
+## Learn more
+
+Refer to the following documents to learn more:
+
+- [Testing sandboxes with Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/testing-sandboxes/)
+- [Git Sync key concepts](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/key-concepts/)
+- [Set up Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/git-sync-setup/)
+- [Configure Git repository protection](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/permissions-git/)

@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-artifact-pull.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-artifact-pull.1.md.in)
+> Pinned source for Podman v6.2.1: [docs/source/markdown/podman-artifact-pull.1.md.in](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman-artifact-pull.1.md.in)
 
 # podman-artifact-pull
 
@@ -28,7 +28,7 @@ $ podman artifact pull quay.io/foobar/artifact:special
 #### **--authfile**=*path*
 
 Path of the authentication file. Default is `${XDG_RUNTIME_DIR}/containers/auth.json` on Linux, and `$HOME/.config/containers/auth.json` on Windows/macOS.
-The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
+The file is created by **[podman login](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman-login.1.md.in)**. If the authorization state is not found there, `$HOME/.docker/config.json` is checked, which is set using **docker login**.
 
 Note: There is also the option to override the default path of the authentication file by setting the `REGISTRY_AUTH_FILE` environment variable. This can be done with **export REGISTRY\_AUTH\_FILE=*path***.
 
@@ -92,11 +92,11 @@ Writing manifest to image destination
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-artifact(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-artifact.1.md)**, **[podman-login(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-login.1.md.in)**, **[containers-certs.d(5)](https://github.com/containers/image/blob/main/docs/containers-certs.d.5.md)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman.1.md)**, **[podman-artifact(1)](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman-artifact.1.md)**, **[podman-login(1)](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman-login.1.md.in)**, **[containers-certs.d(5)](https://github.com/containers/image/blob/main/docs/containers-certs.d.5.md)**
 
 ### Troubleshooting
 
-See [podman-troubleshooting(7)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/troubleshooting.md)
+See [podman-troubleshooting(7)](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/troubleshooting.md)
 for solutions to common issues.
 
 ## HISTORY

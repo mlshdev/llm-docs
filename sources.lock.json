@@ -15,10 +15,10 @@
       "docsCommit": "238224712cf7639036ed39fa8873d777b8822273"
     },
     "podman": {
-      "tag": "v6.2.0",
-      "releaseId": 440847312,
-      "releasePublishedAt": "2026-11-10T20:01:54Z",
-      "sourceCommit": "055de046937d29450f310fce0fe3071485d8bed9"
+      "tag": "v6.2.1",
+      "releaseId": 457071413,
+      "releasePublishedAt": "2026-11-24T17:00:07Z",
+      "sourceCommit": "3471162efb28760529d852706c493c29245def6d"
     },
     "docker": {
       "tag": "main",
@@ -43,10 +43,10 @@
       "documentationDigest": "76476316122882b99a3aec367017aed2c9cb3548148ef953abf9b995fb792d9b"
     },
     "grafana": {
-      "tag": "v13.3.1",
-      "releaseId": 440936629,
-      "releasePublishedAt": "2026-11-10T21:31:44Z",
-      "sourceCommit": "5db6ba887630c7fa12e5bfd063f2fa854025468c"
+      "tag": "v13.3.2",
+      "releaseId": 457138299,
+      "releasePublishedAt": "2026-11-24T17:58:42Z",
+      "sourceCommit": "b8e90ef2a99c8629339e7233a7a813456d87c075"
     },
     "victoriametrics": {
       "tag": "v1.157.0",
@@ -61,10 +61,10 @@
       "sourceCommit": "6433dae586cc15921b4b9c50a805a49553c9d761"
     },
     "victoriametrics-datasource": {
-      "tag": "v1.0.2",
-      "releaseId": 451320478,
-      "releasePublishedAt": "2026-11-19T12:33:20Z",
-      "sourceCommit": "53e959300a520900f25547efee2f89d17538a368"
+      "tag": "v1.0.3",
+      "releaseId": 456861218,
+      "releasePublishedAt": "2026-11-24T14:14:55Z",
+      "sourceCommit": "58768647ecca729a9604f2f88318e81f5864aab5"
     },
     "victorialogs-datasource": {
       "tag": "v0.34.0",
@@ -87,10 +87,10 @@
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "9a9f834f0d3c65980d608897ffbaf04d44a0e106",
-      "sourceCommittedAt": "2026-11-23T12:53:46Z",
-      "observedCommit": "9a9f834f0d3c65980d608897ffbaf04d44a0e106",
-      "documentationDigest": "93dacb0062be3502a69527f6b77e80144dceb4b7350f210393added4ca3bf0fd"
+      "sourceCommit": "065cfa5497fb393c2579d8b67157c245b0b8b04e",
+      "sourceCommittedAt": "2026-11-17T00:14:53Z",
+      "observedCommit": "065cfa5497fb393c2579d8b67157c245b0b8b04e",
+      "documentationDigest": "33f0376adf92d179a2097d190b110f60b2e1726eb73e68f35769313cda3d4921"
     },
     "yt-dlp": {
       "tag": "2026.11.23",
@@ -132,10 +132,10 @@
     "vastai": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "138c1ddd5cfe5761c6391075c1fd0b6c517e059d",
-      "sourceCommittedAt": "2026-11-23T18:13:37Z",
-      "observedCommit": "138c1ddd5cfe5761c6391075c1fd0b6c517e059d",
-      "documentationDigest": "f63db33db35a0622a9877f078242cffd57b4c71407fe9267ad6ca6b5825a1a75"
+      "sourceCommit": "b0594c0dc62dd2305fdfc24e89104075db59ece5",
+      "sourceCommittedAt": "2026-11-24T18:38:50Z",
+      "observedCommit": "b0594c0dc62dd2305fdfc24e89104075db59ece5",
+      "documentationDigest": "ef9c947b77c468aa4f5c14b0188bcbefca5d621c64c00542e8ec12330b3c9fbd"
     },
     "runpod": {
       "tag": "main",

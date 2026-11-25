@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [sdk/python/reference/delete-deployment.mdx](https://github.com/vast-ai/docs/blob/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/sdk/python/reference/delete-deployment.mdx)
+> Pinned source for Vast.ai main: [sdk/python/reference/delete-deployment.mdx](https://github.com/vast-ai/docs/blob/b0594c0dc62dd2305fdfc24e89104075db59ece5/sdk/python/reference/delete-deployment.mdx)
 > Canonical documentation: https://docs.vast.ai/sdk/python/reference/delete-deployment
 
 # VastAI.delete_deployment

@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [host/understanding-verification.mdx](https://github.com/vast-ai/docs/blob/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/host/understanding-verification.mdx)
+> Pinned source for Vast.ai main: [host/understanding-verification.mdx](https://github.com/vast-ai/docs/blob/b0594c0dc62dd2305fdfc24e89104075db59ece5/host/understanding-verification.mdx)
 > Canonical documentation: https://docs.vast.ai/host/understanding-verification
 
 # Understanding Verification
@@ -56,10 +56,6 @@ To qualify, a machine must pass [minimum baseline](https://docs.vast.ai/host/how
 
 - High-speed, symmetric, stable bandwidth is favored.
 - Ensure required ports are open and accessible; a static IP helps.
-
-### Virtualization
-
-- Enabling VM support significantly improves verification likelihood.
 
 ### Software
 
@@ -125,7 +121,6 @@ To qualify, a machine must pass [minimum baseline](https://docs.vast.ai/host/how
 | Network         | Symmetric, stable bandwidth; open ports | Upgrade links; verify routing/ports; monitor jitter/loss                |
 | Hardware        | Modern GPUs/CPUs; adequate PCIe & RAM   | Favor DC/workstation GPUs; ensure PCIe lanes; match CPU/RAM to GPU tier |
 | Storage         | Throughput and reliability              | Prefer NVMe; monitor SMART; ensure sustained bandwidth                  |
-| Virtualization  | VM capability enabled                   | Enable in BIOS; enable IOMMU.                                           |
 | Software        | Correct drivers/CUDA; clean system      | Install latest, stable, compatible versions; use Create Job only        |
 | DLPerf          | High real-world throughput              | Fix PCIe/thermal bottlenecks; maintain clocks; correct drivers          |
 | Supply & Demand | Alignment with renter needs             | Choose popular GPUs/VRAM; balance specs; maintain reliability           |

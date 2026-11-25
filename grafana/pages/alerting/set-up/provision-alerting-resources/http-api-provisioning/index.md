@@ -1,6 +1,12 @@
-> Pinned source for Grafana v13.3.1: [docs/sources/alerting/set-up/provision-alerting-resources/http-api-provisioning/_index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/alerting/set-up/provision-alerting-resources/http-api-provisioning/_index.md)
+> Pinned source for Grafana v13.3.2: [docs/sources/alerting/set-up/provision-alerting-resources/http-api-provisioning/_index.md](https://github.com/grafana/grafana/blob/b8e90ef2a99c8629339e7233a7a813456d87c075/docs/sources/alerting/set-up/provision-alerting-resources/http-api-provisioning/_index.md)
 
-# Use the HTTP API to manage alerting resources
+# Use the HTTP API to manage alerting resources (legacy)
+
+> **Note**
+>
+> This page documents the legacy Alerting Provisioning HTTP API (`/api/v1/provisioning/*`). Starting in Grafana 13, legacy `/api` endpoints are deprecated in favor of the new `/apis` endpoints.
+>
+> To provision alerting resources using the new HTTP APIs, refer to [Use the new HTTP APIs to manage alerting resources](https://grafana.com/docs/grafana/v13.3/alerting/set-up/provision-alerting-resources/http-apis-provisioning/). For details on migrating from legacy `/api` endpoints, refer to [Migrate to the new Grafana APIs](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis-migration/#alerting-provisioning-api).
 
 The Alerting Provisioning HTTP API can be used to create, modify, and delete resources relevant to Grafana-managed alerts. This API is the one used by our [Grafana Terraform provider](https://registry.terraform.io/providers/grafana/grafana/latest/docs).
 
@@ -8,7 +14,7 @@ The Alerting Provisioning HTTP API can be used to create, modify, and delete res
 
 > **Warning**
 >
-> The contact points, notification policies, notification template groups, and mute timings endpoints in this API are deprecated and will be removed in a future release. These endpoints don't return resources from a staged Alertmanager configuration. Use the [Grafana App Platform alerting APIs](https://editor.swagger.io/?url=https://raw.githubusercontent.com/grafana/grafana/main/packages/grafana-openapi/src/apis/notifications.alerting.grafana.app-v1beta1.json) instead.
+> This API is partially replaced by the [Alert rules HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/alert-rules/) (for alert rules, recording rules, and rule groups) and the [Alert notifications HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/alert-notifications/) (for contact points, notification policies, notification template groups, and mute timings, including staged Alertmanager configurations). Those legacy endpoints are deprecated and will be removed in a future release. The file-provisioning `export` endpoints and receiver permission endpoints remain on this API.
 
 ## Grafana-managed endpoints
 

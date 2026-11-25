@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [linux-virtual-desktop.mdx](https://github.com/vast-ai/docs/blob/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/linux-virtual-desktop.mdx)
+> Pinned source for Vast.ai main: [linux-virtual-desktop.mdx](https://github.com/vast-ai/docs/blob/b0594c0dc62dd2305fdfc24e89104075db59ece5/linux-virtual-desktop.mdx)
 > Canonical documentation: https://docs.vast.ai/linux-virtual-desktop
 
 # Linux Virtual Desktop
@@ -6,6 +6,15 @@
 # Guide: Linux Virtual Desktop on Vast.ai
 
 This guide will help you set up and use a Linux Virtual Desktop environment on Vast.ai using the Ubuntu Desktop (VM) template.
+
+> **Warning**
+>
+> VMs are in beta and are more limited than [Docker-based instances](https://docs.vast.ai/guides/instances/docker-environment). Choose a Docker-based instance unless your workload needs a VM.
+>
+> - **Consumer GPUs only:** VMs run only on consumer GPUs, such as the RTX 5090 and RTX 4090. Datacenter GPUs are not supported.
+> - **Slow to start:** VMs with large amounts of RAM can take 30 minutes or more to start.
+> - **No Cloud Sync:** data moves only by copying a whole VM to another VM.
+> - **More failed launches:** VMs fail to launch more often than Docker-based instances.
 
 ## Prerequisites
 

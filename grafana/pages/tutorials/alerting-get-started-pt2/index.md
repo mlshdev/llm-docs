@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.1: [docs/sources/tutorials/alerting-get-started-pt2/index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/tutorials/alerting-get-started-pt2/index.md)
+> Pinned source for Grafana v13.3.2: [docs/sources/tutorials/alerting-get-started-pt2/index.md](https://github.com/grafana/grafana/blob/b8e90ef2a99c8629339e7233a7a813456d87c075/docs/sources/tutorials/alerting-get-started-pt2/index.md)
 
 This tutorial is a continuation of the [Grafana Alerting - Create and receive your first alert](http://www.grafana.com/tutorials/alerting-get-started/) tutorial.
 

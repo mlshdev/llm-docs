@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/users/{user_id}/notification-prefs](https://github.com/vast-ai/docs/blob/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/api-reference/openapi.yaml%23get%20/api/v0/users/%7Buser_id%7D/notification-prefs)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/users/{user_id}/notification-prefs](https://github.com/vast-ai/docs/blob/b0594c0dc62dd2305fdfc24e89104075db59ece5/api-reference/openapi.yaml%23get%20/api/v0/users/%7Buser_id%7D/notification-prefs)
 > Canonical documentation: https://docs.vast.ai/api-reference/notifications/get-notification-preferences
 
 # get notification preferences

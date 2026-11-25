@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/creating-and-using-templates-with-api.mdx](https://github.com/vast-ai/docs/blob/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/api-reference/creating-and-using-templates-with-api.mdx)
+> Pinned source for Vast.ai main: [api-reference/creating-and-using-templates-with-api.mdx](https://github.com/vast-ai/docs/blob/b0594c0dc62dd2305fdfc24e89104075db59ece5/api-reference/creating-and-using-templates-with-api.mdx)
 > Canonical documentation: https://docs.vast.ai/api-reference/creating-and-using-templates-with-api
 
 # Creating and Using Templates with API

@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-init.1.md.in](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-init.1.md.in)
+> Pinned source for Podman v6.2.1: [docs/source/markdown/podman-init.1.md.in](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman-init.1.md.in)
 
 # podman-init
 
@@ -65,7 +65,7 @@ a9b78bcac97e131236930e3fa0be576e95ab89c96a7cb6fb1c821b772db9f623
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-start(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-start.1.md.in)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman.1.md)**, **[podman-start(1)](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman-start.1.md.in)**
 
 ## HISTORY
 

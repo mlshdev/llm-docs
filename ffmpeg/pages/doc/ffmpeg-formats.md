@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/9a9f834f0d3c65980d608897ffbaf04d44a0e106/doc/ffmpeg-formats.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/065cfa5497fb393c2579d8b67157c245b0b8b04e/doc/ffmpeg-formats.texi)
 
 # Description
 
@@ -5097,6 +5097,10 @@ ffmpeg -i file.mpg -c copy \
 ```
 
 ## mxf, mxf\_d10, mxf\_opatom
+
+The `mxf_opatom` muxer writes one clip-wrapped essence element.
+It does not accept ProRes or ancillary data, including EIA-608 captions
+mapped to ANC. For ProRes, use `-f mxf` when OP1a is suitable.
 
 MXF muxer.
 

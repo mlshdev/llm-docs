@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.2.0: [docs/source/markdown/podman-pod-restart.1.md](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-pod-restart.1.md)
+> Pinned source for Podman v6.2.1: [docs/source/markdown/podman-pod-restart.1.md](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman-pod-restart.1.md)
 
 # podman-pod-restart
 
@@ -64,7 +64,7 @@ cc8f0bea67b1a1a11aec1ecd38102a1be4b145577f21fc843c7c83b77fc28907
 
 ## SEE ALSO
 
-**[podman(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman.1.md)**, **[podman-pod(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-pod.1.md)**, **[podman-restart(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-restart.1.md.in)**
+**[podman(1)](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman.1.md)**, **[podman-pod(1)](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman-pod.1.md)**, **[podman-restart(1)](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman-restart.1.md.in)**
 
 ## HISTORY
 

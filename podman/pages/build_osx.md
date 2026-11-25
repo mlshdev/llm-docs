@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.2.0: [build_osx.md](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/build_osx.md)
+> Pinned source for Podman v6.2.1: [build_osx.md](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/build_osx.md)
 
 # Building the Podman client on macOS
 
@@ -73,4 +73,4 @@ $ man podman
 ## Using the client
 
 To learn how to use the Podman client, refer to its
-[tutorial](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/tutorials/remote_client.md).
+[tutorial](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/tutorials/remote_client.md).

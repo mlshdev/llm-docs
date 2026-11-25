@@ -1,11 +1,20 @@
-> Pinned source for Vast.ai main: [guides/instances/virtual-machines.mdx](https://github.com/vast-ai/docs/blob/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/guides/instances/virtual-machines.mdx)
+> Pinned source for Vast.ai main: [guides/instances/virtual-machines.mdx](https://github.com/vast-ai/docs/blob/b0594c0dc62dd2305fdfc24e89104075db59ece5/guides/instances/virtual-machines.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/virtual-machines
 
 # Virtual Machines
 
 Learn how Vast.ai virtual machines (VMs) provide full Linux instances with init manager support, process tracing, and nested containerization for advanced workloads.
 
-Vast.ai offers full virtual machines (VMs) in addition to [Docker-based instances](https://docs.vast.ai/guides/instances/docker-environment). VMs provide a complete Linux environment, making them ideal for workloads that require init managers, nested containerization, or process tracing.
+Vast.ai offers full virtual machines (VMs) in addition to [Docker-based instances](https://docs.vast.ai/guides/instances/docker-environment). VMs provide a complete Linux environment for workloads that require init managers, nested containerization, or process tracing.
+
+> **Warning**
+>
+> VMs are in beta and are more limited than [Docker-based instances](https://docs.vast.ai/guides/instances/docker-environment). Choose a Docker-based instance unless your workload needs a VM.
+>
+> - **Consumer GPUs only:** VMs run only on consumer GPUs, such as the RTX 5090 and RTX 4090. Datacenter GPUs are not supported.
+> - **Slow to start:** VMs with large amounts of RAM can take 30 minutes or more to start.
+> - **No Cloud Sync:** data moves only by copying a whole VM to another VM.
+> - **More failed launches:** VMs fail to launch more often than Docker-based instances.
 
 ## Feature Comparison
 
@@ -14,11 +23,9 @@ VMs offer capabilities not available in Docker-based instances:
 - **Init manager support** (e.g., `systemd`), required for running Docker, Kubernetes, Snap, or other containerization tools inside your instance
 - **Process tracing** (`ptrace`) support
 
-However, VMs come with some trade-offs:
+VMs also come with these trade-offs:
 
-- Slower creation and boot times
 - Higher disk overhead
-- Smaller selection of available machines
 - Fewer preconfigured templates
 - Only SSH launch mode is currently supported
 

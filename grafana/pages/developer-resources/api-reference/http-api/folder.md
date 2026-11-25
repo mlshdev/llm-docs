@@ -1,10 +1,10 @@
-> Pinned source for Grafana v13.3.1: [docs/sources/developer-resources/api-reference/http-api/folder.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/folder.md)
+> Pinned source for Grafana v13.3.2: [docs/sources/developer-resources/api-reference/http-api/folder.md](https://github.com/grafana/grafana/blob/b8e90ef2a99c8629339e7233a7a813456d87c075/docs/sources/developer-resources/api-reference/http-api/folder.md)
 
-# Folder APIs
+# Folder HTTP API
 
 > **Note**
 >
-> Available in Grafana 12 and later.
+> Available in Grafana 12.0 and later.
 >
 > This API complies with the new Grafana API structure. To learn more refer to documentation about the [API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 >
@@ -12,40 +12,48 @@
 
 ## Requirements
 
-If you're running Grafana Enterprise, you'll need to have specific permissions for some endpoints. Refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/custom-role-actions-scopes/) for more information.
+If you're running Grafana Enterprise or Grafana Cloud, some endpoints require specific permissions. For more information, refer to [Role-based access control permissions](https://grafana.com/docs/grafana/v13.3/administration/roles-and-permissions/access-control/custom-role-actions-scopes/).
 
 ## Endpoints
 
-| Method | URI                                                            | Summary                                 |
-| ------ | -------------------------------------------------------------- | --------------------------------------- |
-| GET    | /apis/folder.grafana.app/v1/namespaces/:namespace/folders      | [Get all folders](#get-all-folders)     |
-| GET    | /apis/folder.grafana.app/v1/namespaces/:namespace/folders/:uid | [Get folder by uid](#get-folder-by-uid) |
-| POST   | /apis/folder.grafana.app/v1/namespaces/:namespace/folders      | [Create folder](#create-folder)         |
-| PUT    | /apis/folder.grafana.app/v1/namespaces/:namespace/folders/:uid | [Update folder](#update-folder)         |
-| DELETE | /apis/folder.grafana.app/v1/namespaces/:namespace/folders/:uid | [Delete folder](#delete-folder)         |
+**Base path:** `/apis/folder.grafana.app/v1/namespaces/{namespace}/`
+
+Replace `{namespace}` with your namespace. To learn which namespace to use, refer to the [API overview](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+
+| Method | Summary                                   | Path            |
+| ------ | ----------------------------------------- | --------------- |
+| GET    | [Get all folders](#get-all-folders)       | `folders`       |
+| GET    | [Get folder by `uid`](#get-folder-by-uid) | `folders/{uid}` |
+| POST   | [Create folder](#create-folder)           | `folders`       |
+| PUT    | [Update folder](#update-folder)           | `folders/{uid}` |
+| DELETE | [Delete folder](#delete-folder)           | `folders/{uid}` |
 
 ## Get all folders
 
-`GET /apis/folder.grafana.app/v1/namespaces/:namespace/folders`
+`GET /apis/folder.grafana.app/v1/namespaces/{namespace}/folders`
 
 Returns all folders that the authenticated user has permission to view within the given organization. Use the `limit` query parameter to control the maximum number of dashboards returned. To retrieve additional dashboards, utilize the `continue` token provided in the response to fetch the next page.
 
-- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+**Path parameters**:
+
+- `{namespace}`: To learn more about which namespace to use, refer to the [API overview](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 
 **Query parameters**:
 
 - **`limit`** (optional): Maximum number of folders to return
 - **`continue`** (optional): Continue token from a previous response to fetch the next page
 
-**Required permissions**
+**Required permissions**:
 
-See note in the [introduction](#folder-apis) for an explanation.
+See note in the [introduction](#folder-http-api) for an explanation.
 
 | Action         | Scope       |
 | -------------- | ----------- |
 | `folders:read` | `folders:*` |
 
-**Example Request**:
+### Example request
+
+The following example shows a request to get all folders:
 
 ```http
 GET /apis/folder.grafana.app/v1/namespaces/default/folders?limit=1 HTTP/1.1
@@ -54,7 +62,9 @@ Content-Type: application/json
 Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
 ```
 
-**Example Response**:
+### Example response
+
+The following example shows the response:
 
 ```http
 HTTP/1.1 200
@@ -91,7 +101,9 @@ Content-Type: application/json
 
 The `metadata.continue` field contains a token to fetch the next page.
 
-**Example subsequent request using continue token**:
+### Example subsequent request using continue token
+
+The following example shows a request for the next page, using the `continue` token from the previous response:
 
 ```http
 GET /apis/folder.grafana.app/v1/namespaces/default/folders?limit=1&continue=eyJvIjoxNTIsInYiOjE3NjE3MDQyMjQyMDcxODksInMiOmZhbHNlfQ== HTTP/1.1
@@ -100,7 +112,9 @@ Content-Type: application/json
 Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
 ```
 
-**Example subsequent response**:
+### Example subsequent response
+
+The following example shows the response for the next page:
 
 ```http
 HTTP/1.1 200
@@ -134,30 +148,28 @@ Content-Type: application/json
 
 Continue making requests with the updated `continue` token until you receive a response without a `continue` field in the metadata, indicating you've reached the last page.
 
-Status Codes:
+## Get folder by `uid`
 
-- **200** – OK
-- **401** – Unauthorized
-- **403** – Access Denied
+`GET /apis/folder.grafana.app/v1/namespaces/{namespace}/folders/{uid}`
 
-## Get folder by uid
+Will return the folder given the folder `uid`.
 
-`GET /apis/folder.grafana.app/v1/namespaces/:namespace/folders/:uid`
+**Path parameters**:
 
-Will return the folder given the folder uid.
+- `{namespace}`: To learn more about which namespace to use, refer to the [API overview](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+- `{uid}`: The unique identifier of the folder. This is the `metadata.name` field in the folder response.
 
-- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
-- uid: the unique identifier of the folder to update. this will be the *name* in the folder response
+**Required permissions**:
 
-**Required permissions**
-
-See note in the [introduction](#folder-apis) for an explanation.
+See note in the [introduction](#folder-http-api) for an explanation.
 
 | Action         | Scope       |
 | -------------- | ----------- |
 | `folders:read` | `folders:*` |
 
-**Example Request**:
+### Example request
+
+The following example shows a request to get a folder by UID:
 
 ```http
 GET /apis/folder.grafana.app/v1/namespaces/default/folders/aef30vrzxs3y8d HTTP/1.1
@@ -166,7 +178,9 @@ Content-Type: application/json
 Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
 ```
 
-**Example Response**:
+### Example response
+
+The following example shows the response:
 
 ```http
 HTTP/1.1 200
@@ -193,26 +207,21 @@ Content-Type: application/json
 }
 ```
 
-Note the annotation `grafana.app/folder` which contains the uid of the parent folder.
-
-Status Codes:
-
-- **200** – Found
-- **401** – Unauthorized
-- **403** – Access Denied
-- **404** – Folder not found
+Note the annotation `grafana.app/folder` which contains the `uid` of the parent folder.
 
 ## Create folder
 
-`POST /apis/folder.grafana.app/v1/namespaces/:namespace/folders`
+`POST /apis/folder.grafana.app/v1/namespaces/{namespace}/folders`
 
 Creates a new folder.
 
-- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+**Path parameters**:
 
-**Required permissions**
+- `{namespace}`: To learn more about which namespace to use, refer to the [API overview](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
 
-See note in the [introduction](#folder-apis) for an explanation.
+**Required permissions**:
+
+See note in the [introduction](#folder-http-api) for an explanation.
 
 `folders:create` allows creating folders and subfolders. If granted with scope `folders:uid:general`, allows creating root level folders. Otherwise, allows creating subfolders under the specified folders.
 
@@ -221,7 +230,9 @@ See note in the [introduction](#folder-apis) for an explanation.
 | `folders:create` | `folders:*` |
 | `folders:write`  | `folders:*` |
 
-**Example Request**:
+### Example request
+
+The following example shows a request to create a folder:
 
 ```http
 POST /apis/folder.grafana.app/v1/namespaces/default/folders HTTP/1.1
@@ -242,9 +253,9 @@ Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
 }
 ```
 
-JSON Body schema:
+JSON body schema:
 
-- **metadata.name** – The Grafana unique identifier. If you do not want to provide this, set metadata.generateName to the prefix you would like for the uid.
+- **metadata.name** – The Grafana [unique identifier](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/#name-name). If you do not want to provide this, set metadata.generateName to the prefix you would like for the `uid`.
 - **metadata.annotations.grafana.app/folder** - Optional field, the unique identifier of the parent folder under which the folder should be created. Requires nested folders to be enabled.
 - **spec.title** – The title of the folder.
 
@@ -252,10 +263,12 @@ JSON Body schema:
 >
 > Custom labels and annotations in the metadata field are supported on some instances, with full support planned for all instances when these APIs reach general availability. If they are not yet supported on your instance, they will be ignored.
 
-**Example Response**:
+### Example response
+
+The following example shows the response:
 
 ```http
-HTTP/1.1 200
+HTTP/1.1 201
 Content-Type: application/json
 {
   "kind": "Folder",
@@ -280,32 +293,28 @@ Content-Type: application/json
 }
 ```
 
-Status Codes:
-
-- **201** – Created
-- **400** – Errors (invalid json, missing or invalid fields, etc)
-- **401** – Unauthorized
-- **403** – Access denied
-- **409** – Conflict (folder with the same uid already exists)
-
 ## Update folder
 
-`PUT /apis/folder.grafana.app/v1/namespaces/:namespace/folders/:uid`
+`PUT /apis/folder.grafana.app/v1/namespaces/{namespace}/folders/{uid}`
 
-Updates an existing folder identified by uid.
+Updates an existing folder identified by `uid`.
 
-- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
-- uid: the unique identifier of the folder to update. this will be the *name* in the folder response
+**Path parameters**:
 
-**Required permissions**
+- `{namespace}`: To learn more about which namespace to use, refer to the [API overview](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+- `{uid}`: The unique identifier of the folder. This is the `metadata.name` field in the folder response.
 
-See note in the [introduction](#folder-apis) for an explanation.
+**Required permissions**:
+
+See note in the [introduction](#folder-http-api) for an explanation.
 
 | Action          | Scope       |
 | --------------- | ----------- |
 | `folders:write` | `folders:*` |
 
-**Example Request**:
+### Example request
+
+The following example shows a request to update a folder:
 
 ```http
 PUT /apis/folder.grafana.app/v1/namespaces/default/folders/fef30w4jaxla8b HTTP/1.1
@@ -315,7 +324,7 @@ Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
 
 {
   "metadata": {
-    "name": "aef30vrzxs3y8d",
+    "name": "fef30w4jaxla8b",
     "annotations": {
       "grafana.app/folder": "xkj92m5pqw3vn4"
     }
@@ -326,9 +335,9 @@ Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
 }
 ```
 
-JSON Body schema:
+JSON body schema:
 
-- **metadata.name** – The unique identifier of the folder.
+- **metadata.name** – The [unique identifier](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/#name-name) of the folder.
 - **metadata.annotations.grafana.app/folder** - Optional field, the unique identifier of the parent folder under which the folder should be - update this to move the folder under a different parent folder. Requires nested folders to be enabled.
 - **spec.title** – The title of the folder.
 
@@ -336,7 +345,9 @@ JSON Body schema:
 >
 > Custom labels and annotations in the metadata field are supported on some instances, with full support planned for all instances when these APIs reach general availability. If they are not yet supported on your instance, they will be ignored.
 
-**Example Response**:
+### Example response
+
+The following example shows the response:
 
 ```http
 HTTP/1.1 200
@@ -364,46 +375,30 @@ Content-Type: application/json
 }
 ```
 
-Status Codes:
-
-- **200** – Updated
-- **400** – Errors (invalid json, missing or invalid fields, etc)
-- **401** – Unauthorized
-- **403** – Access Denied
-- **404** – Folder not found
-- **412** – Precondition failed (the folder has been changed by someone else). With this status code, the response body will have the following properties:
-
-```http
-HTTP/1.1 412 Precondition Failed
-Content-Type: application/json; charset=UTF-8
-Content-Length: 97
-
-{
-  "message": "The folder has been changed by someone else",
-  "status": "version-mismatch"
-}
-```
-
 ## Delete folder
 
-`DELETE /apis/folder.grafana.app/v1/namespaces/:namespace/folders/:uid`
+`DELETE /apis/folder.grafana.app/v1/namespaces/{namespace}/folders/{uid}`
 
-Deletes an existing folder identified by UID along with all dashboards (and their alerts) stored in the folder. This operation cannot be reverted.
+Deletes an existing empty folder identified by UID. This operation can't be reverted.
 
-If [Grafana Alerting](https://grafana.com/docs/grafana/v13.3/alerting) is enabled, you can set an optional query parameter `forceDeleteRules=false` so that requests will fail with 400 (Bad Request) error if the folder contains any Grafana alerts. However, if this parameter is set to `true` then it will delete any Grafana alerts under this folder.
+If the folder contains subfolders, dashboards, variables, library panels, alert rules, or recording rules, the request fails with `400 Bad Request`. Move or delete the folder contents first.
 
-- namespace: to read more about the namespace to use, see the [API overview](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
-- uid: the unique identifier of the folder to delete. this will be the *name* in the folder response
+**Path parameters**:
 
-**Required permissions**
+- `{namespace}`: To learn more about which namespace to use, refer to the [API overview](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+- `{uid}`: The unique identifier of the folder. This is the `metadata.name` field in the folder response.
 
-See note in the [introduction](#folder-apis) for an explanation.
+**Required permissions**:
+
+See note in the [introduction](#folder-http-api) for an explanation.
 
 | Action           | Scope       |
 | ---------------- | ----------- |
 | `folders:delete` | `folders:*` |
 
-**Example Request**:
+### Example request
+
+The following example shows a request to delete a folder:
 
 ```http
 DELETE /apis/folder.grafana.app/v1/namespaces/default/folders/fef30w4jaxla8b HTTP/1.1
@@ -413,7 +408,9 @@ Authorization: Bearer <SERVICE_ACCOUNT_TOKEN>
 
 ```
 
-**Example Response**:
+### Example response
+
+The following example shows the response:
 
 ```http
 HTTP/1.1 200
@@ -441,10 +438,21 @@ Content-Type: application/json
 }
 ```
 
-Status Codes:
+## Status codes
 
-- **200** – Deleted
-- **401** – Unauthorized
-- **400** – Bad Request
-- **403** – Access Denied
-- **404** – Folder not found
+The endpoints on this page return the following status codes:
+
+| Code  | Meaning                                                                                                                                           | Returned by                                                                                                                        |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `200` | OK.                                                                                                                                               | [Get all folders](#get-all-folders), [Get folder by `uid`](#get-folder-by-uid), [Update](#update-folder), [Delete](#delete-folder) |
+| `201` | Created.                                                                                                                                          | [Create](#create-folder)                                                                                                           |
+| `201` | Created, if the folder doesn't exist.                                                                                                             | [Update](#update-folder)                                                                                                           |
+| `400` | Bad request (invalid JSON, missing or invalid fields, or the parent folder doesn't exist).                                                        | [Create](#create-folder)                                                                                                           |
+| `400` | Bad request (invalid JSON, missing or invalid fields).                                                                                            | [Update](#update-folder)                                                                                                           |
+| `400` | Bad request (the folder isn't empty, for example it contains subfolders, dashboards, variables, library panels, alert rules, or recording rules). | [Delete](#delete-folder)                                                                                                           |
+| `401` | Unauthorized.                                                                                                                                     | All endpoints                                                                                                                      |
+| `403` | Access denied.                                                                                                                                    | All endpoints                                                                                                                      |
+| `404` | Folder not found.                                                                                                                                 | [Get folder by `uid`](#get-folder-by-uid), [Delete](#delete-folder)                                                                |
+| `404` | The parent folder doesn't exist.                                                                                                                  | [Update](#update-folder)                                                                                                           |
+| `409` | Conflict (a folder with the same `uid` already exists).                                                                                           | [Create](#create-folder)                                                                                                           |
+| `409` | Conflict (the folder changed since you read it).                                                                                                  | [Update](#update-folder)                                                                                                           |

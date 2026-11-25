@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.1: [docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_versions.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_versions.md)
+> Pinned source for Grafana v13.3.2: [docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_versions.md](https://github.com/grafana/grafana/blob/b8e90ef2a99c8629339e7233a7a813456d87c075/docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_versions.md)
 
 # Dashboard Versions
 
@@ -9,6 +9,10 @@
 > **This change doesn't disrupt or break your current setup**. Legacy APIs are not being disabled and remain fully accessible and operative, but `/api` routes will no longer be updated.
 >
 > To learn more refer to the [new API structure in Grafana](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/apis/).
+
+> **Note**
+>
+> This HTTP API is deprecated. Use the [Resource history HTTP API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/resource-history/) instead. To list the versions of a dashboard, refer to [List resource history](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/resource-history/#list-resource-history). To get a specific version, refer to [Retrieve a specific version](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/resource-history/#retrieve-a-specific-version). To learn how the legacy endpoints and fields map to the new ones, refer to [Migrate from the legacy Dashboard Versions API](https://grafana.com/docs/grafana/v13.3/developer-resources/api-reference/http-api/resource-history/#migrate-from-the-legacy-dashboard-versions-api).
 
 ## Get all dashboard versions by dashboard UID
 

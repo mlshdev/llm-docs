@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.1: [docs/sources/as-code/git-sync/_index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/as-code/git-sync/_index.md)
+> Pinned source for Grafana v13.3.2: [docs/sources/as-code/git-sync/_index.md](https://github.com/grafana/grafana/blob/b8e90ef2a99c8629339e7233a7a813456d87c075/docs/sources/as-code/git-sync/_index.md)
 
 # Introduction to Git Sync
 
@@ -98,6 +98,6 @@ Refer to the following documents to learn about Git Sync in depth:
   - [Single instance Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/single-instance/): Synchronize a single Grafana instance with a Git repository
   - [Git Sync for development and production environments](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/dev-prod/): Use separate Grafana instances for development and production with Git-controlled promotion
   - [Git Sync with regional replication](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/multi-region/): Synchronize multiple regional Grafana instances from a shared Git location
-  - [Testing sandboxes Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/testing-sandboxes/): Use a shared sandbox branch for short-lived projects and experimentation before promoting changes to the main branch
+  - [Testing sandboxes with Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/testing-sandboxes/): Use a shared sandbox branch for short-lived projects and experimentation before promoting changes to the main branch
   - [Git Sync for high availability environments](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/high-availability/): Run multiple Grafana instances serving traffic simultaneously, synchronized via Git Sync
-  - [Multiple team Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/multi-team/): Use multiple Git repositories with one Grafana instance, one repository per team
+  - [Git Sync in a Grafana instance shared by multiple teams](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/multi-team/): Use multiple Git repositories with one Grafana instance, one repository per team

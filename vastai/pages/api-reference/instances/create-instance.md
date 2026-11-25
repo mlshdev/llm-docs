@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/asks/{id}](https://github.com/vast-ai/docs/blob/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/api-reference/openapi.yaml%23put%20/api/v0/asks/%7Bid%7D)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/asks/{id}](https://github.com/vast-ai/docs/blob/b0594c0dc62dd2305fdfc24e89104075db59ece5/api-reference/openapi.yaml%23put%20/api/v0/asks/%7Bid%7D)
 > Canonical documentation: https://docs.vast.ai/api-reference/instances/create-instance
 
 # create instance

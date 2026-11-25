@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.1: [docs/sources/as-code/git-sync/scenarios/_index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/as-code/git-sync/scenarios/_index.md)
+> Pinned source for Grafana v13.3.2: [docs/sources/as-code/git-sync/scenarios/_index.md](https://github.com/grafana/grafana/blob/b8e90ef2a99c8629339e7233a7a813456d87c075/docs/sources/as-code/git-sync/scenarios/_index.md)
 
 # Git Sync deployment scenarios
 
@@ -6,14 +6,16 @@
 >
 > Git Sync functionalities are constantly evolving. [Contact Grafana](https://grafana.com/help/) for support or to report any issues you encounter and help us improve this feature.
 
-This guide shows practical deployment scenarios for Grafana’s Git Sync. Learn how to configure bidirectional synchronization between Grafana and Git repositories for teams, environments, and regions.
+This guide shows practical deployment scenarios for Git Sync. Learn how to configure bidirectional synchronization between Grafana and Git repositories for teams, environments, and regions.
 
-- [Single instance](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/single-instance/)
+Choose the scenario that matches your setup:
+
+- [Single instance Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/single-instance/)
 - [Git Sync for development and production environments](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/dev-prod/)
 - [Git Sync with regional replication](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/multi-region/)
-- [Testing sandboxes](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/testing-sandboxes/)
-- [High availability](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/high-availability/)
-- [Git Sync in a shared Grafana instance](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/multi-team/)
+- [Testing sandboxes with Git Sync](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/testing-sandboxes/)
+- [Git Sync for high availability environments](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/high-availability/)
+- [Git Sync in a Grafana instance shared by multiple teams](https://grafana.com/docs/grafana/v13.3/as-code/git-sync/scenarios/multi-team/)
 
 ## Learn more
 

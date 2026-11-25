@@ -1,4 +1,4 @@
-> Pinned source for Podman v6.2.0: [docs/tutorials/podman_machine_os_customization.md](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/tutorials/podman_machine_os_customization.md)
+> Pinned source for Podman v6.2.1: [docs/tutorials/podman_machine_os_customization.md](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/tutorials/podman_machine_os_customization.md)
 
 ![PODMAN logo](https://raw.githubusercontent.com/containers/common/main/logos/podman-logo-full-vert.png)
 
@@ -18,7 +18,7 @@ The examples below use `quay.io` as the container registry for storing and
 distributing the custom image. This is not a requirement - `podman machine os
 apply` supports multiple image sources and transports, so it is possible to
 build and apply an image entirely locally without a remote registry. See the
-[podman-machine-os-apply(1)](https://github.com/podman-container-tools/podman/blob/055de046937d29450f310fce0fe3071485d8bed9/docs/source/markdown/podman-machine-os-apply.1.md)
+[podman-machine-os-apply(1)](https://github.com/podman-container-tools/podman/blob/3471162efb28760529d852706c493c29245def6d/docs/source/markdown/podman-machine-os-apply.1.md)
 man page for the full list of supported URI forms.
 
 **NOTE**: `podman machine os apply` is not supported on WSL-based machines.

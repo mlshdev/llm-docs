@@ -1,9 +1,18 @@
-> Pinned source for Vast.ai main: [linux-virtual-machines.mdx](https://github.com/vast-ai/docs/blob/138c1ddd5cfe5761c6391075c1fd0b6c517e059d/linux-virtual-machines.mdx)
+> Pinned source for Vast.ai main: [linux-virtual-machines.mdx](https://github.com/vast-ai/docs/blob/b0594c0dc62dd2305fdfc24e89104075db59ece5/linux-virtual-machines.mdx)
 > Canonical documentation: https://docs.vast.ai/linux-virtual-machines
 
 # Linux Virtual Machines
 
 # Complete Guide to Running Virtual Machines on Vast.ai
+
+> **Warning**
+>
+> VMs are in beta and are more limited than [Docker-based instances](https://docs.vast.ai/guides/instances/docker-environment). Choose a Docker-based instance unless your workload needs a VM.
+>
+> - **Consumer GPUs only:** VMs run only on consumer GPUs, such as the RTX 5090 and RTX 4090. Datacenter GPUs are not supported.
+> - **Slow to start:** VMs with large amounts of RAM can take 30 minutes or more to start.
+> - **No Cloud Sync:** data moves only by copying a whole VM to another VM.
+> - **More failed launches:** VMs fail to launch more often than Docker-based instances.
 
 ## Introduction
 
@@ -29,9 +38,7 @@ Vast.ai provides virtual machine (VM) capabilities alongside its Docker-based in
 
 ### VM Limitations
 
-- Longer instance creation and boot times compared to Docker
 - Higher disk space requirements
-- Limited machine selection
 - Fewer preconfigured templates
 - Currently restricted to SSH-only launch mode
 
@@ -91,13 +98,13 @@ NOTE: SSH keys cannot be modified once a VM is running
 
 ## Creating and Configuring VMs
 
-### Search for Ubuntu VM Template
+### Open the Ubuntu 22.04 VM Template
 
-Go to [Templates tab](https://cloud.vast.ai/templates/) and search for recommended Ubuntu 22.04 VM template.
+Open the [Ubuntu 22.04 VM template](https://cloud.vast.ai/?ref_id=62897\&creator_id=62897\&name=Ubuntu%2022.04%20VM). To find it from the [Templates tab](https://cloud.vast.ai/templates/), search across all templates, not only recommended ones.
 
 ### Edit Template as Needed
 
-When you find the Ubuntu 22.04 VM template, you can edit the template.&#x20;
+You can edit the template before you rent a machine.
 
 ### **Environment Variables**
 

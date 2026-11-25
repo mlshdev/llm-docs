@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.1: [docs/sources/tutorials/alerting-get-started/index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/tutorials/alerting-get-started/index.md)
+> Pinned source for Grafana v13.3.2: [docs/sources/tutorials/alerting-get-started/index.md](https://github.com/grafana/grafana/blob/b8e90ef2a99c8629339e7233a7a813456d87c075/docs/sources/tutorials/alerting-get-started/index.md)
 
 In this tutorial, we walk you through the process of setting up your first alert in just a few minutes. You'll witness your alert in action with real-time data, as well as sending alert notifications.
 

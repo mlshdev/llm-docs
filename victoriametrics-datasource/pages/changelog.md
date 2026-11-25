@@ -1,8 +1,13 @@
-> Pinned source for VictoriaMetrics datasource for Grafana v1.0.2: [CHANGELOG.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/53e959300a520900f25547efee2f89d17538a368/CHANGELOG.md)
+> Pinned source for VictoriaMetrics datasource for Grafana v1.0.3: [CHANGELOG.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58768647ecca729a9604f2f88318e81f5864aab5/CHANGELOG.md)
 
 # Changelog
 
 ## tip
+
+- BUGFIX: return a query error instead of crashing the backend when a sample value in the datasource response is not a string, for example a number or `null`.
+- BUGFIX: stop writing the contents of the datasource response to the Grafana log when the response cannot be parsed.
+
+## v1.0.2
 
 - BUGFIX: use the selected time range for label and label value suggestions when `Use optimized labels API` is enabled, which is the default. Previously, these requests always covered the last 6 hours regardless of the time picker. See [#600](https://github.com/VictoriaMetrics/victoriametrics-datasource/issues/600).
 

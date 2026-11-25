@@ -6,33 +6,33 @@
   "title": "Grafana",
   "homepage": "https://grafana.com/docs/grafana/latest/",
   "repository": "grafana/grafana",
-  "tag": "v13.3.1",
-  "releaseId": 440936629,
-  "releasePublishedAt": "2026-11-10T21:31:44Z",
-  "sourceCommit": "5db6ba887630c7fa12e5bfd063f2fa854025468c",
-  "documentCount": 684,
+  "tag": "v13.3.2",
+  "releaseId": 457138299,
+  "releasePublishedAt": "2026-11-24T17:58:42Z",
+  "sourceCommit": "b8e90ef2a99c8629339e7233a7a813456d87c075",
+  "documentCount": 689,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
       "byteLength": 554,
       "documentCount": 0,
-      "sha256": "0726b042cd732e661c81f31cab73b4b5305815a68166b07bec780e646403bd04"
+      "sha256": "bb0d3cc7b54d5dc00f4345d23e185d72c949fd554754ebef98211725639a439b"
     },
     {
       "name": "llms-full.001.txt",
-      "byteLength": 8387602,
-      "documentCount": 656,
-      "sha256": "344fa5b34dfb96c1bb20a928e8c61349ee89e26ed69fcac10bb66e1ca506abbb"
+      "byteLength": 8383333,
+      "documentCount": 648,
+      "sha256": "43d69a11d3d6d7c2f92af9337c90e807ab445729fcd88cafd0bfe6d09937b69e"
     },
     {
       "name": "llms-full.002.txt",
-      "byteLength": 359513,
-      "documentCount": 28,
-      "sha256": "3a314f29beeb1873e1c91124f635cd99e1606dfaad86528b1f46cbb7890c27c0"
+      "byteLength": 660493,
+      "documentCount": 41,
+      "sha256": "41d8c8aa45c83b6f35dd694968ee48cbc17879033321836b0e6b715d55bba7e3"
     }
   ],
-  "outputDigest": "52e4dd4c33afa88244234210c49b882359d31ca19581ceb26294192d2b6f4d27",
+  "outputDigest": "f5ae179e2d82f42570d3edeb9ce01e42df5fd3f45b5b21d5869d613a50f132aa",
   "notes": [
     "Page order, sections, and cross-references follow the Hugo weights of docs/sources at the release tag, resolved against https://grafana.com/docs/grafana/v13.3/.",
     "Shared fragments referenced by `docs/shared` and `shared-snippet` are inlined into the pages that render them and are not published separately.",

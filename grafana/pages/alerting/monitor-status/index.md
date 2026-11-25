@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.3.1: [docs/sources/alerting/monitor-status/_index.md](https://github.com/grafana/grafana/blob/5db6ba887630c7fa12e5bfd063f2fa854025468c/docs/sources/alerting/monitor-status/_index.md)
+> Pinned source for Grafana v13.3.2: [docs/sources/alerting/monitor-status/_index.md](https://github.com/grafana/grafana/blob/b8e90ef2a99c8629339e7233a7a813456d87c075/docs/sources/alerting/monitor-status/_index.md)
 
 # Monitor alerts
 
@@ -18,6 +18,6 @@ This section focuses on finding and understanding the state of your alert rules,
 - [View alert rules](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-alert-rules/)
 - [View alert state](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-alert-state/)
 - [View alert state history](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-alert-state-history/)
-- [View notification history](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-notification-history/)
 - [View active notifications](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-active-notifications/)
+- [View notification history](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/view-notification-history/)
 - [Declare incidents from firing alerts](https://grafana.com/docs/grafana/v13.3/alerting/monitor-status/declare-incident-from-alert/)
