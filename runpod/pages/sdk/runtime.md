@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [sdk/runtime.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/sdk/runtime.mdx)
+> Pinned source for Runpod main: [sdk/runtime.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/sdk/runtime.mdx)
 > Canonical documentation: https://docs.runpod.io/sdk/runtime
 
 # Runpod SDK runtime

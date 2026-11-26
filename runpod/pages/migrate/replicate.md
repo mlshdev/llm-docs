@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [migrate/replicate.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/migrate/replicate.mdx)
+> Pinned source for Runpod main: [migrate/replicate.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/migrate/replicate.mdx)
 > Canonical documentation: https://docs.runpod.io/migrate/replicate
 
 # Migrate from Replicate to Runpod
@@ -689,15 +689,15 @@ In the console, go to [Serverless](https://www.console.runpod.io/serverless), cl
 
 ### Scaling and cold starts
 
-| Replicate deployment setting | Runpod endpoint setting                                  | Notes                                                                                                           |
-| ---------------------------- | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `min_instances`              | Active workers (`--workers-min`, `workers.min`)          | Active workers are always on and are billed continuously.                                                       |
-| `max_instances`              | Max workers (`--workers-max`, `workers.max`)             | Caps concurrency and spend.                                                                                     |
-| `hardware`                   | GPU pools (`--gpu-id`, `gpu.pools`) and GPUs per worker  | List up to three in priority order.                                                                             |
-| `version`                    | Template image tag                                       | Update the template's image to roll out a new version.                                                          |
-| Autoscaling by demand        | Queue delay or request count scaling                     | See [auto-scaling type](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#auto-scaling-type). |
-| Setup timeout                | `RUNPOD_INIT_TIMEOUT` environment variable               | 420 seconds by default. Raise it for models that take longer to load.                                           |
-| Always-on official models    | Public Endpoints, or active workers on your own endpoint |                                                                                                                 |
+| Replicate deployment setting | Runpod endpoint setting                                                                                                               | Notes                                                                                                           |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `min_instances`              | Active workers (`--workers-min`, `workers.min`)                                                                                       | Active workers are always on and are billed continuously.                                                       |
+| `max_instances`              | Max workers (`--workers-max`, `workers.max`)                                                                                          | Caps concurrency and spend.                                                                                     |
+| `hardware`                   | GPU pools (`--gpu-id`, `gpu.pools`) and GPUs per worker                                                                               | List up to three in priority order.                                                                             |
+| `version`                    | Template image tag                                                                                                                    | Update the template's image to roll out a new version.                                                          |
+| Autoscaling by demand        | Queue delay or request count scaling                                                                                                  | See [auto-scaling type](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#auto-scaling-type). |
+| Setup timeout                | [Initialization timeout](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#initialization-timeout) endpoint setting | Raise it for models that take longer to load.                                                                   |
+| Always-on official models    | Public Endpoints, or active workers on your own endpoint                                                                              |                                                                                                                 |
 
 To reduce cold starts without paying for an always-on worker, enable FlashBoot, use cached models or bake weights into the image, keep the image small, and raise the idle timeout so a worker stays warm between bursts. To remove cold starts for latency-sensitive traffic, set active workers to 1 or more.
 
@@ -1144,14 +1144,14 @@ Scripts that manage Replicate resources map to runpodctl or REST v2. See the [AP
 
 ### Environment variable map
 
-| Replicate or Cog               | Runpod                                                                    | Notes                                                                                    |
-| ------------------------------ | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `REPLICATE_API_TOKEN` (client) | `RUNPOD_API_KEY` (client)                                                 |                                                                                          |
-| `COG_SETUP_TIMEOUT`            | `RUNPOD_INIT_TIMEOUT`                                                     | Seconds a worker can take to initialize. Default 420.                                    |
-| `COG_MAX_CONCURRENCY`          | Concurrency setting in your handler                                       | See [concurrent handlers](https://docs.runpod.io/serverless/workers/concurrent-handler). |
-| `COG_WEIGHTS`                  | Your own variable, such as `MODEL_PATH`                                   | Set on the endpoint and read in the handler.                                             |
-| Not applicable                 | `BUCKET_ENDPOINT_URL`, `BUCKET_ACCESS_KEY_ID`, `BUCKET_SECRET_ACCESS_KEY` | Read by `rp_upload`.                                                                     |
-| Not applicable                 | `RUNPOD_ENDPOINT_ID`                                                      | Set by Runpod inside Serverless workers.                                                 |
+| Replicate or Cog               | Runpod                                                                                                               | Notes                                                                                    |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `REPLICATE_API_TOKEN` (client) | `RUNPOD_API_KEY` (client)                                                                                            |                                                                                          |
+| `COG_SETUP_TIMEOUT`            | [Initialization timeout](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#initialization-timeout) | Seconds a worker can take to initialize.                                                 |
+| `COG_MAX_CONCURRENCY`          | Concurrency setting in your handler                                                                                  | See [concurrent handlers](https://docs.runpod.io/serverless/workers/concurrent-handler). |
+| `COG_WEIGHTS`                  | Your own variable, such as `MODEL_PATH`                                                                              | Set on the endpoint and read in the handler.                                             |
+| Not applicable                 | `BUCKET_ENDPOINT_URL`, `BUCKET_ACCESS_KEY_ID`, `BUCKET_SECRET_ACCESS_KEY`                                            | Read by `rp_upload`.                                                                     |
+| Not applicable                 | `RUNPOD_ENDPOINT_ID`                                                                                                 | Set by Runpod inside Serverless workers.                                                 |
 
 ### Status map
 
@@ -1215,7 +1215,7 @@ Use the runpod-cloud-migrate skill to migrate this project from Replicate to Run
 
 **The job stays `IN_QUEUE`.** No worker is available. Check that max workers is above 0, that the GPU pool is available in the allowed data centers (`runpodctl datacenter list`), and that the image pulls. Add a second GPU pool, or remove a data center restriction. An endpoint that received no requests for several days may have had its max workers reduced, so raise it again.
 
-**The worker starts and then exits, or never becomes ready.** The image was built for the wrong architecture, the handler isn't started, or the model takes too long to load. Build with `--platform linux/amd64`, make sure the container runs `python -u /handler.py` and that the file calls `runpod.serverless.start`, and raise `RUNPOD_INIT_TIMEOUT` for slow model loads. Read the worker logs in the endpoint's **Logs** tab.
+**The worker starts and then exits, or never becomes ready.** The image was built for the wrong architecture, the handler isn't started, or the model takes too long to load. Build with `--platform linux/amd64`, make sure the container runs `python -u /handler.py` and that the file calls `runpod.serverless.start`, and raise the [Initialization timeout](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#initialization-timeout) for slow model loads. Read the worker logs in the endpoint's **Logs** tab.
 
 **Every request is slow.** The model is loading inside `handler()`. Move it to module level so it loads once per worker, as `setup()` did in Cog.
 

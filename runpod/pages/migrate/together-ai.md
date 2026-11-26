@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [migrate/together-ai.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/migrate/together-ai.mdx)
+> Pinned source for Runpod main: [migrate/together-ai.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/migrate/together-ai.mdx)
 > Canonical documentation: https://docs.runpod.io/migrate/together-ai
 
 # Migrate from Together AI to Runpod
@@ -1132,7 +1132,7 @@ Migrate this project from Together AI to Runpod using the runpod-cloud-migrate s
 
 **Tool calls come back as plain text.** Tool calling isn't enabled for the model, or the parser doesn't match the model's format. Set `ENABLE_AUTO_TOOL_CHOICE=true` and the `TOOL_CALL_PARSER` for your model family from [Configure vLLM to work with your model](https://docs.runpod.io/serverless/vllm/configuration#model-specific-configurations).
 
-**Workers fail to start or run out of memory.** The model plus its KV cache doesn't fit on the GPU you chose. Together selected hardware for you, and on Runpod this is your decision. Lower `MAX_MODEL_LEN`, lower `GPU_MEMORY_UTILIZATION`, use a quantized repository, or move to a larger GPU pool. For models that take longer than the default 420 seconds to load, raise `RUNPOD_INIT_TIMEOUT`.
+**Workers fail to start or run out of memory.** The model plus its KV cache doesn't fit on the GPU you chose. Together selected hardware for you, and on Runpod this is your decision. Lower `MAX_MODEL_LEN`, lower `GPU_MEMORY_UTILIZATION`, use a quantized repository, or move to a larger GPU pool. For models that take longer to load, raise the [Initialization timeout](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#initialization-timeout).
 
 **The endpoint stays at zero workers.** The GPU pool may be out of stock in the endpoint's data centers, or the endpoint's CUDA version constraint may exclude the machines that have stock. Add more pools, remove data center restrictions, and check the endpoint's CUDA settings. A cached model that isn't on any host yet also delays the first worker while it downloads, which shows up as a job sitting in the queue.
 

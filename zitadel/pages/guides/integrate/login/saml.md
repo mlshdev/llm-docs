@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.5: [apps/docs/content/guides/integrate/login/saml.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/guides/integrate/login/saml.mdx)
+> Pinned source for ZITADEL v4.20.6: [apps/docs/content/guides/integrate/login/saml.mdx](https://github.com/zitadel/zitadel/blob/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/content/guides/integrate/login/saml.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login/saml
 
 SAML stands for Security Assertion Markup Language. It is a standard commonly used for identity federation and single sign-on (SSO). It is one of the original and most popular standards for SSO. Although it is prone to certain security flaws and exploits if not implemented correctly, it remains relevant and widely used.

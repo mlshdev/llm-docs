@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [tutorials/migrations/openai/overview.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/tutorials/migrations/openai/overview.mdx)
+> Pinned source for Runpod main: [tutorials/migrations/openai/overview.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/tutorials/migrations/openai/overview.mdx)
 > Canonical documentation: https://docs.runpod.io/tutorials/migrations/openai/overview
 
 # OpenAI

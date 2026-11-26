@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/developer.texi](https://github.com/FFmpeg/FFmpeg/blob/065cfa5497fb393c2579d8b67157c245b0b8b04e/doc/developer.texi)
+> Pinned source for FFmpeg master: [doc/developer.texi](https://github.com/FFmpeg/FFmpeg/blob/35ef294f5d9d6c5b9a13abb59a4eedb1d0c875a3/doc/developer.texi)
 
 # Introduction
 
@@ -399,7 +399,8 @@ feature, for example Ogg or ID3v2.
 A subsystem made of more than one file lives in its own directory inside its
 library, for example `libavformat/ogg/`.
 A nested directory groups related files within a subsystem, for example the
-per-codec mappings (`struct ogg_codec`) in `libavformat/ogg/mapping/`.
+per-codec mappings of the demuxer (`struct ogg_codec`) in
+`libavformat/ogg/demuxer/`.
 
 ### File names
 
@@ -423,9 +424,9 @@ Files that predate these rules keep their names until a commit moves them.
 ### Includes
 
 A file includes headers from its own directory by their bare name, for example
-`#include "mapping.h"`.
+`#include "demuxer.h"`.
 It includes all other headers by their path from the source root, for example
-`#include "libavformat/ogg/mapping.h"`.
+`#include "libavformat/ogg/demuxer.h"`.
 The include path then names the group each header belongs to.
 
 ### Build system
@@ -441,17 +442,27 @@ Other components list the subsystem objects they use in their own
 
 ### Moving files
 
-A commit that moves files changes nothing else.
-It updates only what refers to the moved files: includes, Makefiles,
-`MAINTAINERS` and `.forgejo/CODEOWNERS`.
-This lets git's rename detection carry pending patches and backports across
-the move.
-Patches written against the old paths apply with `git am -3`.
+A commit that moves files should leave the moved code verifiable as
+unchanged.
+For a rename, git's rename detection shows it, and patches written against
+the old paths then apply across the move with `git am -3`.
+For a split, the extracted code should be identical to the code it
+replaces.
 
-Renaming symbols to match the new layout happens in one commit after the move.
+The move should change only what follows from the new paths: what refers to
+the moved files, such as includes, Makefiles, documentation, `MAINTAINERS`
+and `.forgejo/CODEOWNERS`, names derived from the file name, such as
+header guards, and the symbols that now cross a file boundary.
+A small change that completes the build integration of the moved code can go
+with it.
+
+Changes needed to make code movable should come before the move, in their
+own commits.
+Other renames go in a commit of their own, before or after the move, whichever
+keeps the move easier to verify.
 That commit also realigns the lines the rename shifts.
 
-Each subsystem moves in its own commit.
+Each subsystem should move in its own commit.
 
 ## Miscellaneous conventions
 

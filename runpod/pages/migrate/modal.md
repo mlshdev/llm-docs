@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [migrate/modal.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/migrate/modal.mdx)
+> Pinned source for Runpod main: [migrate/modal.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/migrate/modal.mdx)
 > Canonical documentation: https://docs.runpod.io/migrate/modal
 
 # Migrate from Modal to Runpod
@@ -1092,17 +1092,17 @@ Replace Modal CLI calls in CI with their Runpod counterparts from the [CLI comma
 
 ### Environment variable map
 
-| Modal                                  | Runpod                                                  | Where                                                                                |
-| -------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| `MODAL_TOKEN_ID`, `MODAL_TOKEN_SECRET` | `RUNPOD_API_KEY`                                        | Your machine and CI.                                                                 |
-| `~/.modal.toml`                        | `~/.runpod/config.toml`                                 | Your machine.                                                                        |
-| `MODAL_ENVIRONMENT`                    | `--env` on `rp flash deploy`, or `env=` on `runpod.App` | Your machine and CI.                                                                 |
-| `MODAL_IS_REMOTE`                      | `runpod.is_local()`                                     | In code.                                                                             |
-| `MODAL_REGION`                         | `RUNPOD_DC_ID`                                          | Inside Pods, including task Pods.                                                    |
-| `MODAL_TASK_ID`                        | `RUNPOD_POD_ID`                                         | Inside Pods, including task Pods.                                                    |
-| No counterpart                         | `RUNPOD_ENDPOINT_ID`                                    | Inside Serverless workers.                                                           |
-| No counterpart                         | `PORT`, `PORT_HEALTH`, `HEALTH_CHECK_PATH`              | Inside load-balancing workers.                                                       |
-| No counterpart                         | `RUNPOD_INIT_TIMEOUT`                                   | Endpoint setting for how long a worker may take to initialize (default 420 seconds). |
+| Modal                                  | Runpod                                                                                                               | Where                                                          |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| `MODAL_TOKEN_ID`, `MODAL_TOKEN_SECRET` | `RUNPOD_API_KEY`                                                                                                     | Your machine and CI.                                           |
+| `~/.modal.toml`                        | `~/.runpod/config.toml`                                                                                              | Your machine.                                                  |
+| `MODAL_ENVIRONMENT`                    | `--env` on `rp flash deploy`, or `env=` on `runpod.App`                                                              | Your machine and CI.                                           |
+| `MODAL_IS_REMOTE`                      | `runpod.is_local()`                                                                                                  | In code.                                                       |
+| `MODAL_REGION`                         | `RUNPOD_DC_ID`                                                                                                       | Inside Pods, including task Pods.                              |
+| `MODAL_TASK_ID`                        | `RUNPOD_POD_ID`                                                                                                      | Inside Pods, including task Pods.                              |
+| No counterpart                         | `RUNPOD_ENDPOINT_ID`                                                                                                 | Inside Serverless workers.                                     |
+| No counterpart                         | `PORT`, `PORT_HEALTH`, `HEALTH_CHECK_PATH`                                                                           | Inside load-balancing workers.                                 |
+| No counterpart                         | [Initialization timeout](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#initialization-timeout) | Endpoint setting for how long a worker may take to initialize. |
 
 ## Migrate with a coding agent
 

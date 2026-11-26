@@ -8,20 +8,20 @@
   "repository": "runpod/docs",
   "tag": "main",
   "branch": "main",
-  "sourceCommittedAt": "2026-11-23T22:52:30Z",
-  "documentationDigest": "b0859cd39069987fe21122d4f52cd49041b5d7e2bf1f9eb1cae0649e92bbadda",
-  "sourceCommit": "f1803c4438f689fd05a79ba9965c5fe8ef971f20",
+  "sourceCommittedAt": "2026-11-25T17:56:25Z",
+  "documentationDigest": "2f511cb330f7b2b08ea0c3e1e7d63d4e372b777e4ebb0ac85b5bd1e4214b6bdc",
+  "sourceCommit": "c845f73c104cb4b69f4caa11f27180533ad8546f",
   "documentCount": 412,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 4751295,
+      "byteLength": 4755314,
       "documentCount": 412,
-      "sha256": "25ba3300326175b5f0efc8e2ee001786b72634eda148a6c78676460c7c128b99"
+      "sha256": "b31776d630ca7ff2c17bd7cf510235964b46c61a00f51ad1ace8bf94d448d3fd"
     }
   ],
-  "outputDigest": "8fdb4538351379b5923823ba04ffe3fc77cd1b757cb067a7922c1230d43a5887",
+  "outputDigest": "876a79da87ec5380c68edd481e0cc794973eeb0c92b1e160f7399a86c7ad0e6f",
   "quarantined": [
     {
       "sourcePath": "agent-setup.mdx",

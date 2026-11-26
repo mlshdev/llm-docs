@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [migrate/hugging-face.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/migrate/hugging-face.mdx)
+> Pinned source for Runpod main: [migrate/hugging-face.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/migrate/hugging-face.mdx)
 > Canonical documentation: https://docs.runpod.io/migrate/hugging-face
 
 # Migrate from Hugging Face Inference Endpoints to Runpod
@@ -965,13 +965,13 @@ The Inference Endpoints API is at `https://api.endpoints.huggingface.cloud`. Run
 
 ### Environment variable map
 
-| Inside an Inference Endpoints container                 | Inside a Runpod worker                                                                                                        |
-| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Model files at `/repository`                            | Cached model at `/runpod-volume/huggingface-cache/hub/models--ORG--NAME/snapshots/HASH/`. Network volume at `/runpod-volume`. |
-| `HF_TOKEN` from Secret Env                              | `HF_TOKEN` from a Runpod secret                                                                                               |
-| TGI: `MODEL_ID`, `MAX_INPUT_LENGTH`, `MAX_TOTAL_TOKENS` | vLLM worker: `MODEL_NAME`, `MAX_MODEL_LEN`                                                                                    |
-| Port and health route from the container configuration  | `PORT`, `PORT_HEALTH`, `HEALTH_CHECK_PATH` (load balancing endpoints)                                                         |
-| Not applicable                                          | `RUNPOD_INIT_TIMEOUT`: seconds a worker may take to initialize (default 420)                                                  |
+| Inside an Inference Endpoints container                 | Inside a Runpod worker                                                                                                                                        |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Model files at `/repository`                            | Cached model at `/runpod-volume/huggingface-cache/hub/models--ORG--NAME/snapshots/HASH/`. Network volume at `/runpod-volume`.                                 |
+| `HF_TOKEN` from Secret Env                              | `HF_TOKEN` from a Runpod secret                                                                                                                               |
+| TGI: `MODEL_ID`, `MAX_INPUT_LENGTH`, `MAX_TOTAL_TOKENS` | vLLM worker: `MODEL_NAME`, `MAX_MODEL_LEN`                                                                                                                    |
+| Port and health route from the container configuration  | `PORT`, `PORT_HEALTH`, `HEALTH_CHECK_PATH` (load balancing endpoints)                                                                                         |
+| Not applicable                                          | [Initialization timeout](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#initialization-timeout): seconds a worker may take to initialize |
 
 ### Status map
 
@@ -1054,7 +1054,7 @@ Face Hub. Only the compute moves.
 
 **The vLLM worker runs out of GPU memory on a model that fit before.** vLLM pre-allocates VRAM for its KV cache, and your new GPU may have less memory than the old instance. Lower `MAX_MODEL_LEN` or `GPU_MEMORY_UTILIZATION`, or move up a pool.
 
-**Workers stay Throttled or Initializing for a long time.** The selected GPU is busy in the allowed data centers, or the model is still downloading to the host. Add a second and third GPU choice, remove data center restrictions, and for large models raise `RUNPOD_INIT_TIMEOUT`.
+**Workers stay Throttled or Initializing for a long time.** The selected GPU is busy in the allowed data centers, or the model is still downloading to the host. Add a second and third GPU choice, remove data center restrictions, and for large models raise the [Initialization timeout](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#initialization-timeout).
 
 **An endpoint that worked last week returns no workers.** Runpod set max workers to 0 after 7 days without requests. Raise max workers again.
 

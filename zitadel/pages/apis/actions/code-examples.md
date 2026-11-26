@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.5: [apps/docs/content/apis/actions/code-examples.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/apis/actions/code-examples.mdx)
+> Pinned source for ZITADEL v4.20.6: [apps/docs/content/apis/actions/code-examples.mdx](https://github.com/zitadel/zitadel/blob/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/content/apis/actions/code-examples.mdx)
 > Canonical documentation: https://zitadel.com/docs/apis/actions/code-examples
 
 Actions are a powerful tool to extend ZITADEL, and you might wonder what use cases actions can be used for.

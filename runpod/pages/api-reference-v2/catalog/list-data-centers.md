@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [api-reference-v2/catalog/list-data-centers.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/api-reference-v2/catalog/list-data-centers.mdx)
+> Pinned source for Runpod main: [api-reference-v2/catalog/list-data-centers.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/api-reference-v2/catalog/list-data-centers.mdx)
 > Canonical documentation: https://docs.runpod.io/api-reference-v2/catalog/list-data-centers
 
 # List Data Centers

@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.5: [apps/docs/content/guides/integrate/login-ui/mfa.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/guides/integrate/login-ui/mfa.mdx)
+> Pinned source for ZITADEL v4.20.6: [apps/docs/content/guides/integrate/login-ui/mfa.mdx](https://github.com/zitadel/zitadel/blob/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/content/guides/integrate/login-ui/mfa.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login-ui/mfa
 
 Multi-factor authentication (MFA) is a multi-step account authentication which requires to user to enter more than only the password.
@@ -11,11 +11,17 @@ ZITADEL supports different Methods:
 - OTP sent as Email
 - Universal Second Factor (U2F), which is authentication with your device like Windows Hello, Apple FaceID, Fingerprint, FIDO2 keys, Yubikey, etc.
 
+> **Note**
+>
+> If a TOTP, SMS or email code is wrong, ZITADEL delays the response depending on the number of failed attempts of the user, up to 10 seconds by default.
+> Make sure your timeouts allow for that.
+> See [Response delay after failed attempts](https://zitadel.com/docs/guides/manage/console/default-settings#response-delay-after-failed-attempts) for details.
+
 ## TOTP Registration
 
 ### Flow
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/guides/login-ui/register-totp-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/public/img/guides/login-ui/register-totp-flow.png)
 
 ### List the Possible Methods
 
@@ -124,7 +130,7 @@ curl --request POST \
 
 ### Flow
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/guides/login-ui/authenticate-totp-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/public/img/guides/login-ui/authenticate-totp-flow.png)
 
 ### Check User
 
@@ -191,7 +197,7 @@ curl --request PATCH \
 
 ### Flow
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/guides/login-ui/register-phone-otp-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/public/img/guides/login-ui/register-phone-otp-flow.png)
 
 ### List the Possible Methods
 
@@ -309,7 +315,7 @@ curl --request POST \
 
 ### Flow
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/guides/login-ui/authenticate-phone-otp-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/public/img/guides/login-ui/authenticate-phone-otp-flow.png)
 
 ### Check User
 
@@ -367,7 +373,7 @@ curl --request PATCH \
 
 ### Flow
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/guides/login-ui/register-email-otp-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/public/img/guides/login-ui/register-email-otp-flow.png)
 
 ### List the Possible Methods
 
@@ -443,7 +449,7 @@ curl --request POST \
 
 ### Flow
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/guides/login-ui/authenticate-email-otp-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/public/img/guides/login-ui/authenticate-email-otp-flow.png)
 
 ### Check User
 
@@ -501,7 +507,7 @@ curl --request PATCH \
 
 ### Flow
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/guides/login-ui/register-u2f-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/public/img/guides/login-ui/register-u2f-flow.png)
 
 ### List the Possible Methods
 
@@ -669,7 +675,7 @@ You have successfully registered a new U2F to the user.
 
 ### Flow
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/guides/login-ui/authenticate-u2f-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/public/img/guides/login-ui/authenticate-u2f-flow.png)
 
 ### Check User
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [integrations/dstack.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/integrations/dstack.mdx)
+> Pinned source for Runpod main: [integrations/dstack.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/integrations/dstack.mdx)
 > Canonical documentation: https://docs.runpod.io/integrations/dstack
 
 # Manage Pods with dstack on Runpod
@@ -137,7 +137,7 @@ These instructions work on macOS, Linux, and Windows.
    > Save the `ADMIN-TOKEN` to access the dstack web UI.
 3. Open your browser and go to `http://127.0.0.1:3000`. Enter the `ADMIN-TOKEN` from the server output to access the web UI where you can monitor and manage deployments.
 
-   ![](https://raw.githubusercontent.com/runpod/docs/f1803c4438f689fd05a79ba9965c5fe8ef971f20/images/e96e09d1-dstack_webui-fab1ac1123c8d4ce9a0458569bd97260.png)
+   ![](https://raw.githubusercontent.com/runpod/docs/c845f73c104cb4b69f4caa11f27180533ad8546f/images/e96e09d1-dstack_webui-fab1ac1123c8d4ce9a0458569bd97260.png)
 
 ## Deploy vLLM
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [storage/globalvolume/globalvolume-pods.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/storage/globalvolume/globalvolume-pods.mdx)
+> Pinned source for Runpod main: [storage/globalvolume/globalvolume-pods.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/storage/globalvolume/globalvolume-pods.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/globalvolume/globalvolume-pods
 
 # Global volumes for Pods

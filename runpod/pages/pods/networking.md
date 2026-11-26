@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [pods/networking.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/pods/networking.mdx)
+> Pinned source for Runpod main: [pods/networking.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/pods/networking.mdx)
 > Canonical documentation: https://docs.runpod.io/pods/networking
 
 # Global networking

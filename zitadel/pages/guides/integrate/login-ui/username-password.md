@@ -1,9 +1,9 @@
-> Pinned source for ZITADEL v4.20.5: [apps/docs/content/guides/integrate/login-ui/username-password.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/guides/integrate/login-ui/username-password.mdx)
+> Pinned source for ZITADEL v4.20.6: [apps/docs/content/guides/integrate/login-ui/username-password.mdx](https://github.com/zitadel/zitadel/blob/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/content/guides/integrate/login-ui/username-password.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/integrate/login-ui/username-password
 
 ## Flow
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/guides/login-ui/username-password-flow.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/public/img/guides/login-ui/username-password-flow.png)
 
 ## Register
 
@@ -231,6 +231,12 @@ If you read your session after the password check, you will see that the check h
 }
 
 ```
+
+> **Note**
+>
+> If the password is wrong, ZITADEL delays the response depending on the number of failed attempts of the user, up to 10 seconds by default.
+> Make sure your timeouts allow for that.
+> See [Response delay after failed attempts](https://zitadel.com/docs/guides/manage/console/default-settings#response-delay-after-failed-attempts) for details.
 
 ## List the Sessions (Account Chooser)
 

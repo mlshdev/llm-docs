@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/endpoints/endpoint-configurations.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/serverless/endpoints/endpoint-configurations.mdx)
+> Pinned source for Runpod main: [serverless/endpoints/endpoint-configurations.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/serverless/endpoints/endpoint-configurations.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/endpoints/endpoint-configurations
 
 # Endpoint settings
@@ -103,7 +103,11 @@ Once an endpoint has been scaled down this way, it stays at its reduced max work
 
 ### Initialization timeout
 
-`RUNPOD_INIT_TIMEOUT` in the endpoint configuration sets how long, in seconds, a worker can take to initialize before Runpod stops it. The default is 420 seconds. Workers are billed while they initialize. For large models that need longer to load, set a higher value.
+Initialization timeout in the endpoint configuration sets how long, in seconds, a worker can take to initialize before Runpod stops it. The default is 420 seconds. Range: 60 to 14400 seconds. Workers are billed while they initialize. The timeout runs from when Runpod starts the worker until the worker first reports that it is ready. This includes pulling the image and downloading the model, so set a higher value for large images and models.
+
+With the REST API, set `workers.initTimeout` in seconds when you [create](https://docs.runpod.io/api-reference-v2/serverless/create-a-serverless-endpoint) or [update](https://docs.runpod.io/api-reference-v2/serverless/update-a-serverless-endpoint) an endpoint. Sending `null` on update clears the setting, and the worker falls back to `RUNPOD_INIT_TIMEOUT`, then 420 seconds.
+
+If you set the `RUNPOD_INIT_TIMEOUT` environment variable, it still applies when Initialization timeout is not set. When both are set, Initialization timeout wins.
 
 ### Execution timeout
 

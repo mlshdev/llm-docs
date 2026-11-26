@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `f1803c4438f689fd05a79ba9965c5fe8ef971f20`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `c845f73c104cb4b69f4caa11f27180533ad8546f`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -94,10 +94,10 @@
 - [Overview](pages/serverless/endpoints/overview.md): Deploy and manage Serverless endpoints using the Runpod console or REST API. Review configuration and operations guidance for Runpod Serverless. (6265 bytes)
 - [Send API requests](pages/serverless/endpoints/send-requests.md): Submit and manage jobs for your queue-based endpoints by sending HTTP requests. Review configuration and operations guidance for Runpod Serverless. (13532 bytes)
 - [Operation reference](pages/serverless/endpoints/operation-reference.md): Detailed API reference for all queue-based endpoint operations. Review configuration and operations guidance for Runpod Serverless. (18711 bytes)
-- [Endpoint settings](pages/serverless/endpoints/endpoint-configurations.md): Reference guide for all Serverless endpoint settings and parameters. Review configuration and operations guidance for Runpod Serverless. (10850 bytes)
+- [Endpoint settings](pages/serverless/endpoints/endpoint-configurations.md): Reference guide for all Serverless endpoint settings and parameters. Review configuration and operations guidance for Runpod Serverless. (11569 bytes)
 - [Rolling releases](pages/serverless/endpoints/rolling-releases.md): Understand how Runpod rolls out Serverless endpoint updates without downtime, including worker replacement, version tracking, and rollback behavior. (2784 bytes)
 - [Cached models](pages/serverless/endpoints/model-caching.md): Accelerate worker cold starts and reduce costs by using cached models. Review configuration and operations guidance for Runpod Serverless. (8537 bytes)
-- [Optimize your endpoints](pages/serverless/development/optimization.md): Implement strategies to reduce latency and cost for your Serverless endpoints. Review configuration and operations guidance for Runpod Serverless. (5445 bytes)
+- [Optimize your endpoints](pages/serverless/development/optimization.md): Implement strategies to reduce latency and cost for your Serverless endpoints. Review configuration and operations guidance for Runpod Serverless. (5560 bytes)
 - [Monitor logs](pages/serverless/development/logs.md): View and access logs for Serverless endpoints and workers. Review setup, configuration, deployment, and operations guidance for Runpod Serverless. (4477 bytes)
 - [Job states and metrics](pages/serverless/endpoints/job-states.md): Monitor your endpoints effectively by understanding job states and key metrics. Review configuration and operations guidance for Runpod Serverless. (2971 bytes)
 - [Benchmark workers and requests](pages/serverless/development/benchmarking.md): Measure the performance of your Serverless workers and identify bottlenecks. Review configuration and operations guidance for Runpod Serverless. (3391 bytes)
@@ -251,13 +251,13 @@
 - [Migrate from Lambda to Runpod](pages/migrate/lambda.md): Move Lambda On-Demand Cloud instances, filesystems, firewall rules, and 1-Click Clusters to Runpod Pods, network volumes, and Instant Clusters. (74457 bytes)
 - [Migrate from CoreWeave to Runpod](pages/migrate/coreweave.md): Move Kubernetes GPU workloads, Slurm clusters, and object storage from CoreWeave to Runpod Pods, Serverless, and Instant Clusters. (95085 bytes)
 - [Migrate from Paperspace and DigitalOcean GPU to Runpod](pages/migrate/paperspace.md): Move Paperspace Machines, Notebooks, Deployments, and Workflows, and DigitalOcean GPU Droplets and Inference, to Runpod. (98183 bytes)
-- [Migrate from Modal to Runpod](pages/migrate/modal.md): Move Modal Functions, Clses, web endpoints, Volumes, and Secrets to the Runpod SDK and Serverless, with before and after code. (100144 bytes)
-- [Migrate from Replicate to Runpod](pages/migrate/replicate.md): Move Replicate models, Cog predictors, deployments, and client code to Runpod Public Endpoints and Serverless. (90026 bytes)
-- [Migrate from Baseten to Runpod](pages/migrate/baseten.md): Move Truss models, custom servers, Model APIs calls, Chains, and training jobs from Baseten to Runpod Serverless, Public Endpoints, and Pods. (95896 bytes)
+- [Migrate from Modal to Runpod](pages/migrate/modal.md): Move Modal Functions, Clses, web endpoints, Volumes, and Secrets to the Runpod SDK and Serverless, with before and after code. (100573 bytes)
+- [Migrate from Replicate to Runpod](pages/migrate/replicate.md): Move Replicate models, Cog predictors, deployments, and client code to Runpod Public Endpoints and Serverless. (91162 bytes)
+- [Migrate from Baseten to Runpod](pages/migrate/baseten.md): Move Truss models, custom servers, Model APIs calls, Chains, and training jobs from Baseten to Runpod Serverless, Public Endpoints, and Pods. (97123 bytes)
 - [Migrate from fal to Runpod](pages/migrate/fal.md): Move fal Model API calls, fal Serverless apps, and fal Compute instances to Runpod Public Endpoints, Serverless, Pods, and Instant Clusters. (104710 bytes)
-- [Migrate from Together AI to Runpod](pages/migrate/together-ai.md): Move Together AI serverless models, dedicated endpoints, fine-tunes, batch jobs, and GPU clusters to Runpod. (106322 bytes)
+- [Migrate from Together AI to Runpod](pages/migrate/together-ai.md): Move Together AI serverless models, dedicated endpoints, fine-tunes, batch jobs, and GPU clusters to Runpod. (106392 bytes)
 - [Migrate from Fireworks AI to Runpod](pages/migrate/fireworks-ai.md): Move Fireworks AI serverless inference, on-demand deployments, custom models, and fine-tuning to Runpod Serverless, Public Endpoints, and Pods. (87742 bytes)
-- [Migrate from Hugging Face Inference Endpoints to Runpod](pages/migrate/hugging-face.md): Move Hugging Face Inference Endpoints, Inference Providers calls, GPU Spaces, and Jobs to Runpod while your models stay on the Hugging Face Hub. (86721 bytes)
+- [Migrate from Hugging Face Inference Endpoints to Runpod](pages/migrate/hugging-face.md): Move Hugging Face Inference Endpoints, Inference Providers calls, GPU Spaces, and Jobs to Runpod while your models stay on the Hugging Face Hub. (87044 bytes)
 - [Migrate from AWS to Runpod](pages/migrate/aws.md): Move GPU training, inference, and batch workloads from EC2, SageMaker AI, and Bedrock to Runpod while keeping data and auth on AWS. (100199 bytes)
 - [Migrate from Google Cloud to Runpod](pages/migrate/google-cloud.md): Move GPU training, inference, and batch workloads from Compute Engine, Vertex AI, Cloud Run, and GKE to Runpod, and keep the rest on Google Cloud. (104279 bytes)
 - [Migrate from Azure to Runpod](pages/migrate/azure.md): Move GPU VMs, Azure Machine Learning endpoints, Container Apps GPU apps, and open-model inference from Azure to Runpod, with Terraform and code examples. (100571 bytes)

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [migrate/fal.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/migrate/fal.mdx)
+> Pinned source for Runpod main: [migrate/fal.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/migrate/fal.mdx)
 > Canonical documentation: https://docs.runpod.io/migrate/fal
 
 # Migrate from fal to Runpod
@@ -1202,7 +1202,7 @@ Scripts and CI jobs that run the `fal` CLI or call `https://api.fal.ai/v1` move 
 | `max_multiplexing`                  | `max_concurrency=` on `@app.queue`                                     | A [concurrent handler](https://docs.runpod.io/serverless/workers/concurrent-handler) in your image | A concurrent handler in your image           |
 | `scaling_delay`                     | `scaler_type="QUEUE_DELAY"`, `scaler_value=`                           | `--scale-by delay --scale-threshold`                                                               | `scaling.type`, `scaling.queueDelay`         |
 | `request_timeout`                   | `execution_timeout_ms=`                                                | `--execution-timeout` (seconds)                                                                    | `timeout` (ms)                               |
-| `startup_timeout`                   | `env={"RUNPOD_INIT_TIMEOUT": "SECONDS"}`                               | `RUNPOD_INIT_TIMEOUT` in the template env                                                          | `env.RUNPOD_INIT_TIMEOUT`                    |
+| `startup_timeout`                   | `env={"RUNPOD_INIT_TIMEOUT": "SECONDS"}`                               | `RUNPOD_INIT_TIMEOUT` in the template env                                                          | `workers.initTimeout` in seconds             |
 | `regions`                           | `datacenter=`                                                          | `--data-center-ids`                                                                                | `dataCenterIds`                              |
 | `requirements`                      | `dependencies=`, `system_dependencies=`                                | Installed in your image                                                                            | Installed in your image                      |
 | `image = ContainerImage(...)`       | `image=`, `registry_auth=`                                             | Template `--image`, `--registry-auth-id`                                                           | `image`, `registry`                          |

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/development/optimization.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/serverless/development/optimization.mdx)
+> Pinned source for Runpod main: [serverless/development/optimization.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/serverless/development/optimization.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/development/optimization
 
 # Optimize your endpoints
@@ -41,7 +41,7 @@ Runpod normally downloads your Docker image before a worker starts, so image siz
 
 > **Note**
 >
-> If cold start exceeds 7 minutes, the worker is marked unhealthy. Extend with `RUNPOD_INIT_TIMEOUT=800` (seconds).
+> If cold start exceeds the [Initialization timeout](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#initialization-timeout), the worker is stopped. Increase it in the endpoint configuration to allow more time.
 
 ## Reduce cold starts
 

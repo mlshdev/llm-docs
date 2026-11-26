@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.5: [apps/docs/content/concepts/architecture/software.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/concepts/architecture/software.mdx)
+> Pinned source for ZITADEL v4.20.6: [apps/docs/content/concepts/architecture/software.mdx](https://github.com/zitadel/zitadel/blob/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/content/concepts/architecture/software.mdx)
 > Canonical documentation: https://zitadel.com/docs/concepts/architecture/software
 
 Zitadel is built with two essential patterns. Event Sourcing (ES) and Command and Query Responsibility Segregation (CQRS).
@@ -18,7 +18,7 @@ This All in One (AiO) approach makes operating Zitadel simple.
 Zitadel's software architecture is built around multiple components at different levels.
 This chapter should give you an idea of the components as well as the different layers.
 
-![](https://raw.githubusercontent.com/zitadel/zitadel/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/public/img/zitadel_software_architecture.png)
+![](https://raw.githubusercontent.com/zitadel/zitadel/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/public/img/zitadel_software_architecture.png)
 
 ### Service Layer
 

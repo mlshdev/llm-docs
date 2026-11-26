@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/065cfa5497fb393c2579d8b67157c245b0b8b04e/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/35ef294f5d9d6c5b9a13abb59a4eedb1d0c875a3/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -12376,6 +12376,15 @@ through the model. The output frames are D3D12 hardware frames, so they
 must either be consumed by a D3D12 encoder or downloaded explicitly with
 `hwdownload,format=nv12`.
 
+The `migraphx` device only accepts software frames: input and output
+tensors are passed to ONNX Runtime in host memory, and MIGraphX copies them
+to and from the GPU on every run. D3D12 hardware-frame input is not
+supported with `migraphx` and fails during configuration; use
+`device=dml` for the D3D12 zero-copy path. The `migraphx`
+device requires either ONNX Runtime 1.23 or later built with the MIGraphX
+execution provider, or a MIGraphX plugin execution provider library set
+with `ep_library`, such as the one Windows ML installs on Windows.
+
 - model
   Set path to model file specifying network architecture and its parameters.
   Note that different backends use different file formats. TensorFlow, OpenVINO,
@@ -12419,16 +12428,25 @@ please use tools/python/tf\_sess\_config.py to get the configs of TensorFlow bac
 - device
   Set the device to run the model. For the ONNX Runtime backend this selects the
   execution provider: `cpu` (default), `cuda` (NVIDIA GPU),
-  `dml` (DirectML, Windows only) or `vitisai` (AMD Ryzen AI NPU).
+  `dml` (DirectML, Windows only), `vitisai` (AMD Ryzen AI NPU) or
+  `migraphx` (AMD GPU via MIGraphX).
 
 - device\_id
-  Set the device index used by GPU execution providers (e.g. `cuda` or
-  `dml`) for the ONNX Runtime backend. Default is 0.
+  Set the device index used by GPU execution providers (e.g. `cuda`,
+  `dml` or `migraphx`) for the ONNX Runtime backend. Default is 0.
 
 - threads\_per\_operation
   ONNX Runtime backend only. Set the number of CPU threads used per ONNX
   Runtime operator when running with `device=cpu`. Default is 0 (let
   ONNX Runtime choose automatically). Has no effect for GPU/NPU providers.
+
+- ep\_library
+  ONNX Runtime backend only, used with `device=migraphx`. Set the path of
+  a plugin execution provider library to register with ONNX Runtime, for
+  example the `amdgpu-ep.dll` that Windows ML installs for AMD GPUs.
+  Requires FFmpeg to be built against ONNX Runtime 1.22 or later. Native
+  plugin execution requires ONNX Runtime 1.23 or later at run time; the
+  selected plugin may require a newer runtime still.
 
 ### Examples
 
@@ -12496,6 +12514,18 @@ inference so that a software encoder can be used:
 ./ffmpeg -hwaccel d3d12va -hwaccel_output_format d3d12 -i input.mp4 \
   -vf dnn_processing=dnn_backend=onnx:model=sr_model.onnx:device=dml,hwdownload,format=nv12 \
   -y output.mp4
+```
+
+-
+
+Run the same model on an AMD GPU with the MIGraphX execution provider
+that Windows ML installs. The package folder name depends on the installed
+version, and the `:` of the drive letter has to be escaped:
+
+```text
+./ffmpeg -i input.mp4 -vf "format=grayf32,dnn_processing=dnn_backend=onnx:model=sr_model.onnx:device=migraphx\
+:ep_library='C\:/Program Files/WindowsApps/MicrosoftCorporationII.WinML.AMD.GPU.EP.1.8_1.8.65.0_x64__8wekyb3d8bbwe/ExecutionProvider/amdgpu-ep.dll'" \
+  -f null -
 ```
 
 -

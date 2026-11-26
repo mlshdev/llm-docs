@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/configuration/gpu-types.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/flash/configuration/gpu-types.mdx)
+> Pinned source for Runpod main: [flash/configuration/gpu-types.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/flash/configuration/gpu-types.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/configuration/gpu-types
 
 # GPU types

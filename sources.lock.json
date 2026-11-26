@@ -79,18 +79,18 @@
       "sourceCommit": "0f135ada5a362e41d6144e4821950a13566bedac"
     },
     "zitadel": {
-      "tag": "v4.20.5",
-      "releaseId": 450536972,
-      "releasePublishedAt": "2026-11-18T20:46:33Z",
-      "sourceCommit": "59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c"
+      "tag": "v4.20.6",
+      "releaseId": 457926930,
+      "releasePublishedAt": "2026-11-25T10:01:44Z",
+      "sourceCommit": "602e546331ac4e88a5958e5c78c8bc263c39ce61"
     },
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "065cfa5497fb393c2579d8b67157c245b0b8b04e",
-      "sourceCommittedAt": "2026-11-17T00:14:53Z",
-      "observedCommit": "065cfa5497fb393c2579d8b67157c245b0b8b04e",
-      "documentationDigest": "33f0376adf92d179a2097d190b110f60b2e1726eb73e68f35769313cda3d4921"
+      "sourceCommit": "35ef294f5d9d6c5b9a13abb59a4eedb1d0c875a3",
+      "sourceCommittedAt": "2026-11-25T12:57:02Z",
+      "observedCommit": "35ef294f5d9d6c5b9a13abb59a4eedb1d0c875a3",
+      "documentationDigest": "9b5178e80d94374df6e9b0f6b303ebea677f2203a4c26eeea291270192f80c80"
     },
     "yt-dlp": {
       "tag": "2026.11.23",
@@ -140,10 +140,10 @@
     "runpod": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "f1803c4438f689fd05a79ba9965c5fe8ef971f20",
-      "sourceCommittedAt": "2026-11-23T22:52:30Z",
-      "observedCommit": "f1803c4438f689fd05a79ba9965c5fe8ef971f20",
-      "documentationDigest": "b0859cd39069987fe21122d4f52cd49041b5d7e2bf1f9eb1cae0649e92bbadda"
+      "sourceCommit": "c845f73c104cb4b69f4caa11f27180533ad8546f",
+      "sourceCommittedAt": "2026-11-25T17:56:25Z",
+      "observedCommit": "c845f73c104cb4b69f4caa11f27180533ad8546f",
+      "documentationDigest": "2f511cb330f7b2b08ea0c3e1e7d63d4e372b777e4ebb0ac85b5bd1e4214b6bdc"
     },
     "discord-py-self": {
       "tag": "v2.1.0",

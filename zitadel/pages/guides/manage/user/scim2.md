@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.5: [apps/docs/content/guides/manage/user/scim2.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/guides/manage/user/scim2.mdx)
+> Pinned source for ZITADEL v4.20.6: [apps/docs/content/guides/manage/user/scim2.mdx](https://github.com/zitadel/zitadel/blob/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/content/guides/manage/user/scim2.mdx)
 > Canonical documentation: https://zitadel.com/docs/guides/manage/user/scim2
 
 Zitadel’s **[SCIM v2](https://scim.cloud/) service provider interface** enables standardized provisioning and lifecycle management of users and other instance resources.

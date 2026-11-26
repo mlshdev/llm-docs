@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/create-endpoints.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/flash/create-endpoints.mdx)
+> Pinned source for Runpod main: [flash/create-endpoints.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/flash/create-endpoints.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/create-endpoints
 
 # Create endpoints

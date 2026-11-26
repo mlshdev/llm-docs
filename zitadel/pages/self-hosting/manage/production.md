@@ -1,4 +1,4 @@
-> Pinned source for ZITADEL v4.20.5: [apps/docs/content/self-hosting/manage/production.mdx](https://github.com/zitadel/zitadel/blob/59827a8ec6dd0c23acbba5d0ebdf41fdc857d66c/apps/docs/content/self-hosting/manage/production.mdx)
+> Pinned source for ZITADEL v4.20.6: [apps/docs/content/self-hosting/manage/production.mdx](https://github.com/zitadel/zitadel/blob/602e546331ac4e88a5958e5c78c8bc263c39ce61/apps/docs/content/self-hosting/manage/production.mdx)
 > Canonical documentation: https://zitadel.com/docs/self-hosting/manage/production
 
 As soon as you successfully deployed ZITADEL as a proof of concept using one of our [deployment guides](https://zitadel.com/docs/self-hosting/deploy/overview),
@@ -200,6 +200,24 @@ DefaultInstance:
 ## Limits and Quotas
 
 We strongly advise implementing [rate limiting](https://zitadel.com/docs/self-hosting/manage/usage_control) and bot detection. Even with robust cryptography, reducing request volume helps protect against brute-force and denial-of-service attacks.
+
+### Tarpit for failed checks
+
+ZITADEL delays the response of failed password, TOTP, SMS and email code checks depending on the number of failed attempts of the user (see [Response delay after failed attempts](https://zitadel.com/docs/guides/manage/console/default-settings#response-delay-after-failed-attempts)).
+The delay is configured system-wide in the `SystemDefaults.Tarpit` section of the [runtime configuration](https://zitadel.com/docs/self-hosting/manage/configure/configure):
+
+| Setting             | Environment variable                              | Default | Description                                  |
+| ------------------- | ------------------------------------------------- | ------- | -------------------------------------------- |
+| `MinFailedAttempts` | `ZITADEL_SYSTEMDEFAULTS_TARPIT_MINFAILEDATTEMPTS` | `5`     | Failed attempts after which the delay starts |
+| `StepDuration`      | `ZITADEL_SYSTEMDEFAULTS_TARPIT_STEPDURATION`      | `1s`    | Duration added per step                      |
+| `StepSize`          | `ZITADEL_SYSTEMDEFAULTS_TARPIT_STEPSIZE`          | `5`     | Failed attempts needed for one more step     |
+| `MaxDuration`       | `ZITADEL_SYSTEMDEFAULTS_TARPIT_MAXDURATION`       | `10s`   | Maximum delay                                |
+
+The delay is `(failed attempts - MinFailedAttempts) / StepSize` (rounded down) times `StepDuration`, at most `MaxDuration`.
+Reducing `StepDuration` or `MaxDuration`, or increasing `MinFailedAttempts` or `StepSize`, weakens the protection against brute-force attacks.
+
+A delayed response is recorded as `tarpit` span (with the `tarpit.failed_attempts` and `tarpit.duration` attributes) and logged as `tarpit` on info level,
+so a long request caused by the delay can be told apart from a slow request.
 
 ## Minimum system requirements
 

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [get-started.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/get-started.mdx)
+> Pinned source for Runpod main: [get-started.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/get-started.mdx)
 > Canonical documentation: https://docs.runpod.io/get-started
 
 # Deploy your first Pod

@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/windows-wsl2.mdx](https://github.com/runpod/docs/blob/f1803c4438f689fd05a79ba9965c5fe8ef971f20/flash/windows-wsl2.mdx)
+> Pinned source for Runpod main: [flash/windows-wsl2.mdx](https://github.com/runpod/docs/blob/c845f73c104cb4b69f4caa11f27180533ad8546f/flash/windows-wsl2.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/windows-wsl2
 
 # Use Flash on Windows
