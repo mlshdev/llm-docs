@@ -1,6 +1,13 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/client/post-quantum-cryptography.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/client/post-quantum-cryptography.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/client/post-quantum-cryptography.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/client/post-quantum-cryptography.mdx)
 
 # Enable Quantum-Resistance
+
+> **Warning**
+>
+> Rosenpass support in NetBird is deprecated. Starting v0.82.0, `netbird up` prints a deprecation warning when
+> `--enable-rosenpass` or `--rosenpass-permissive` is used, and the desktop app shows a notice under
+> **Settings → Security**. Rosenpass keeps working for now, but it may be
+> removed in a future release, so avoid making new deployments depend on it.
 
 Post-quantum cryptography aims to mitigate risks associated with quantum computing's potential to undermine existing encryption methods.
 Current concerns include the possibility of bad actors collecting encrypted network traffic to decrypt it once quantum computers become available.
@@ -26,7 +33,7 @@ that automatically rotates and applies WireGuard pre-shared keys to every point-
 
 > **Note**
 >
-> This is still an experimental feature, may contain bugs, and is not supported on mobile devices.
+> Rosenpass is deprecated. The steps below are kept for existing setups; new deployments should not enable it.
 
 ### Enabling via the desktop app
 
@@ -81,5 +88,5 @@ netbird up --enable-rosenpass --rosenpass-permissive
 
 - Make sure to [star us on GitHub](https://github.com/netbirdio/netbird)
 - Follow us [on X](https://x.com/netbird)
-- Join our Slack Channel
+- Join our Slack Channel or Discord server
 - NetBird [latest release](https://github.com/netbirdio/netbird/releases) on GitHub

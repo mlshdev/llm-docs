@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/QuickStart.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/QuickStart.md)
+> Pinned source for VictoriaLogs v1.55.0: [docs/victorialogs/QuickStart.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/a7001ac416483b5ca96347edd33bfc502e31ce3f/docs/victorialogs/QuickStart.md)
 
 It is recommended to read [README](https://docs.victoriametrics.com/victorialogs/)
 and [Key Concepts](https://docs.victoriametrics.com/victorialogs/keyconcepts/)
@@ -40,8 +40,8 @@ and unpack it. It contains a single `victoria-logs-prod` binary.
 For example, on Linux with `amd64` architecture:
 
 ```sh
-curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.53.0/victoria-logs-linux-amd64-v1.53.0.tar.gz
-tar xzf victoria-logs-linux-amd64-v1.53.0.tar.gz
+curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.54.0/victoria-logs-linux-amd64-v1.54.0.tar.gz
+tar xzf victoria-logs-linux-amd64-v1.54.0.tar.gz
 ```
 
 The binary is self-contained and requires no installation - it is ready to run as is.
@@ -100,7 +100,7 @@ Enter a query in the input field and press `Enter`. For example:
 
 The `*` query should return the three log lines ingested at the previous step:
 
-![vmui with query results](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/quick-start-vmui.webp)
+![vmui with query results](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/a7001ac416483b5ca96347edd33bfc502e31ce3f/docs/victorialogs/quick-start-vmui.webp)
 
 Queries are written in [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/) - a simple yet powerful
 query language for logs. The same queries can also be executed via the
@@ -163,8 +163,8 @@ Just download the archive for the needed operating system and architecture, unpa
 For example, the following commands download VictoriaLogs archive for Linux/amd64, unpack and run it:
 
 ```sh
-curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.53.0/victoria-logs-linux-amd64-v1.53.0.tar.gz
-tar xzf victoria-logs-linux-amd64-v1.53.0.tar.gz
+curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.54.0/victoria-logs-linux-amd64-v1.54.0.tar.gz
+tar xzf victoria-logs-linux-amd64-v1.54.0.tar.gz
 ./victoria-logs-prod -storageDataPath=victoria-logs-data
 ```
 
@@ -187,7 +187,7 @@ Here is the command to run VictoriaLogs in a Docker container:
 
 ```sh
 docker run --rm -it -p 9428:9428 -v ./victoria-logs-data:/victoria-logs-data \
-  docker.io/victoriametrics/victoria-logs:v1.53.0 -storageDataPath=victoria-logs-data
+  docker.io/victoriametrics/victoria-logs:v1.54.0 -storageDataPath=victoria-logs-data
 ```
 
 The Docker image doesn't contain `curl` or `wget`. Use the `-healthcheck` command-line flag *(available from v1.54.0)* for Docker `HEALTHCHECK` instead.
@@ -202,6 +202,16 @@ healthcheck:
 If VictoriaLogs is configured via [environment variables](https://docs.victoriametrics.com/victorialogs/#environment-variables),
 then add `-envflag.enable` to the healthcheck command, so it reads the same environment variables.
 The same flag is supported by [vlagent](https://docs.victoriametrics.com/victorialogs/vlagent/) at `/vlagent-prod`.
+
+The `-healthcheck` flag doesn't request the `/health` page. It only checks that the process accepts connections.
+This is why it works with any `-tls` and `-mtls` settings.
+
+The check passes in the following cases, while the `/health` page doesn't return `OK`:
+
+- The process accepts connections, but doesn't respond.
+- The process is shutting down, but still serves requests during `-http.shutdownDelay`.
+
+Request the `/health` page over HTTP if you need to catch these cases.
 
 See also:
 

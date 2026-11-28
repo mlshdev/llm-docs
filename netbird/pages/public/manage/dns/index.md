@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/dns/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/dns/index.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/dns/index.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/dns/index.mdx)
 
 # DNS in NetBird
 
@@ -6,7 +6,7 @@ NetBird provides centralized DNS management to help your peers resolve domain na
 
 ## Key Concepts
 
-- **Nameserver**: A DNS server that NetBird distributes to peers. You configure these in the dashboard under **DNS → Nameservers**.
+- **Nameserver**: A DNS server that NetBird distributes to peers. You configure these in the dashboard under **Networking → DNS → Nameservers**.
 - **Match Domains**: Specific domains that should be resolved by a particular nameserver (e.g., `company.internal`). Adding a domain automatically matches all its subdomains.
 - **Primary Nameserver**: The default nameserver that handles all domains not matched by specific rules. Configured by leaving match domains empty.
 - **Search Domains**: Domain suffixes automatically appended to short hostnames. If you configure `company.internal` as a search domain, typing `server1` will try `server1.company.internal`. Available in v0.24.0+.
@@ -20,6 +20,8 @@ Starting with [v0.11.0](https://github.com/netbirdio/netbird/releases), NetBird 
 >
 > Available on both NetBird Cloud and self-hosted versions running v0.11.0 or later.
 
+The DNS name is built from the peer's name, which starts as the machine's hostname. The dashboard shows the DNS name in the peer's **Domain Name** field. You can't edit that field directly: to change a peer's DNS name, rename the peer. If the new name gives a DNS name another peer already has, the renamed peer gets an IP-based suffix, made of the last two octets of its NetBird IP, such as `my-server-12-7.netbird.cloud`. With the [`Reject Hostname Collisions`](https://docs.netbird.io/manage/settings/clients#unique-peer-hostnames) toggle on, the rename fails instead.
+
 By default, a peer that registers with a hostname whose DNS name another peer already has gets an IP-based suffix, such as `my-server-12-7.netbird.cloud`, and so does every ephemeral peer, even one whose DNS name no other peer has. With the `Reject Hostname Collisions` toggle on (Settings > Clients, under [Unique Peer Hostnames](https://docs.netbird.io/manage/settings/clients#unique-peer-hostnames)), a peer whose DNS name another peer already has is rejected, and every other new peer, ephemeral peers included, registers with its plain name. Peers that already have a suffix keep it.
 
 ## How NetBird Handles DNS
@@ -28,7 +30,7 @@ NetBird gives you centralized control over DNS resolution for all peers in your 
 
 ### Architecture Overview
 
-![NetBird DNS Diagram](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/netbird-dns-diagram.png)
+![NetBird DNS Diagram](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/dns/netbird-dns-diagram.png)
 
 #### NetBird's DHCP Role
 

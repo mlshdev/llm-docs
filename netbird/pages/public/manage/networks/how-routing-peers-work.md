@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/networks/how-routing-peers-work.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/networks/how-routing-peers-work.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/networks/how-routing-peers-work.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/networks/how-routing-peers-work.mdx)
 
 # How Routing Peers Work
 
@@ -37,7 +37,7 @@ NetBird offers two ways to configure routing peers. Both are actively maintained
 
 ## Mental model: how traffic flows
 
-![Three NetBird peers on the overlay network connect through a WireGuard tunnel to a routing peer in a private network. Access policies on the routing peer allow a database on TCP 5432, a web app on TCP 443, and an RDP workstation on TCP/UDP 3389; a printer with no policy is unreachable.](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/networks/networks-overview.png)
+![Three NetBird peers on the overlay network connect through a WireGuard tunnel to a routing peer in a private network. Access policies on the routing peer allow a database on TCP 5432, a web app on TCP 443, and an RDP workstation on TCP/UDP 3389; a printer with no policy is unreachable.](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/networks/networks-overview.png)
 
 The walkthrough below describes the **Linux kernel-mode** path, where forwarding and firewalling happen in the kernel via `nftables` / `iptables`. On other platforms, NetBird performs the same logical steps in a userspace filter, but the implementation differs.
 
@@ -97,31 +97,71 @@ The routing peer must have direct network reachability to the resources it serve
 
 ## High availability
 
-Multiple routing peers can serve the same network or route. Each peer that uses the network (a user's laptop, for example) picks one of those routing peers and sends all of that network's traffic through it until something makes it switch. The **metric** you assign each routing peer in the dashboard is the main control. There are no tunable thresholds.
+Multiple routing peers can serve the same network or route. Each peer that uses the network (a user's laptop, for example) picks one of those routing peers and sends all of that network's traffic through it until something makes it switch. The **metric** you assign each routing peer in the dashboard is the main control.
+
+The choice is made by the peer that uses the network, not by the routing peers, so what follows depends on the NetBird version of that peer.
+
+> **Note**
+>
+> This section describes NetBird v0.82.0 and later. Earlier clients measure latency only once, when the connection to a routing peer is set up. They also move to another routing peer as soon as the connection to their routing peer falls back to relayed, and for latency differences of 10 ms or more, so with masquerade on they reset connections more often.
 
 ### How a peer picks a routing peer
 
-A peer compares the routing peers it is connected to, in this order:
+A peer compares the routing peers it can use, in this order:
 
-1. **Metric.** The lowest metric wins, whatever the connection type or latency.
-2. **Connection type.** Among equal metrics, a direct (peer-to-peer) connection beats a relayed one.
-3. **Latency.** Among equal metrics and the same connection type, the lowest latency wins. To prevent flapping, a peer only moves to a routing peer whose latency is at least 10 ms lower than its current one.
+1. **Connection status.** A connected routing peer beats one that is idle with [lazy connections](https://docs.netbird.io/manage/peers/lazy-connection). A routing peer with no working connection, because it has not connected yet or its connection dropped (`Connecting` in `netbird status`), is not considered.
+2. **Metric.** The lowest metric wins, whatever the connection type or latency.
+3. **Connection type.** Among equal metrics, a direct (peer-to-peer) connection beats a relayed one.
+4. **Latency.** Among equal metrics and the same connection type, the lowest latency wins.
 
-Latency is measured once, when the connection to a routing peer is set up, and is not re-measured while that connection stays up.
+Latency is the round-trip time of the direct connection, sampled every few seconds and smoothed, so it keeps following the path while the connection stays up. A relayed connection has no latency measurement.
 
 ### What makes a peer switch
 
-A peer repeats this comparison whenever a routing peer's connection state changes or the network's configuration is updated. In practice it switches when:
+A peer repeats this comparison whenever a routing peer's connection state or latency changes, when the network's configuration is updated, when one of the delays below runs out, and every 30 seconds. It switches:
 
-- **Its routing peer goes offline.** The peer moves to the next routing peer in the order above, normally within seconds.
-- **A routing peer with a lower metric comes back online.** The peer moves back as soon as that routing peer reconnects, even while its connection is still relayed.
-- **Its routing peer's connection falls back from direct to relayed.** If another routing peer with the same metric still has a direct connection, the peer moves to it, although nothing went offline. With different metrics this does not happen, because metric outranks connection type.
+- **At once, when its routing peer is detected as offline.** The peer moves to the next routing peer in the order above. A routing peer that fails without shutting down can take longer to be detected: see the note under [Relayed switch delay](#relayed-switch-delay).
+- **At once, when its routing peer's connection is idle and another routing peer's connection is open.**
+- **At once, when a routing peer with a lower metric comes back online**, even while that routing peer's connection is still relayed.
+- **After the relayed switch delay, when its routing peer is relayed and an equivalent routing peer is direct.** See [Relayed switch delay](#relayed-switch-delay).
+- **When another routing peer is clearly closer**, once all three of these hold:
+  - **Switch margin.** The latency gain has to be at least 20 ms, at least 20% of the current latency, and at least four times the combined uncertainty of the two latency values, which the client logs as the `+/-` figure next to each latency (for example `latency: 40ms +/- 2ms`). The uncertainty grows with the jitter of a path and is small on a stable one. On stable paths that have been connected for a while, this means a peer on a routing peer at 40 ms moves to one at 15 ms but not to one at 25 ms, and a peer on a routing peer at 150 ms moves only to one at 120 ms or less. A newly connected path starts with a high uncertainty that settles as measurements accumulate, so right after connecting, the gain has to be larger.
+  - **Dwell time.** After a switch made for latency, the next switch for latency waits at least 30 seconds; this never delays a failover.
+  - **Latency measurement.** The routing peer that would take over needs a latency measurement, so one whose direct connection just came up cannot take over until it has one. A current routing peer without a measurement is kept for up to 30 seconds while it gets one; after that, it counts as slower than any measured routing peer.
+
+### Relayed switch delay
+
+A direct connection often falls back to relayed for a few seconds and recovers. Since every switch resets connections with masquerade on, a relayed routing peer is kept for a while before the route moves to an equivalent routing peer with a direct connection:
+
+- **Its direct connection fell back to relayed.** The delay counts from the fallback. If the direct connection comes back within the delay, the route does not move.
+- **It came up relayed.** When the routing peers of a network connect at the same time, for example after waking up from idle or when the client reconnects, the relayed connections come up first and the direct ones follow, one routing peer after the other. The delay counts from the moment another routing peer turns direct, and starts over if no equivalent routing peer is direct any more.
+
+If the routing peer is still relayed when the delay runs out, the route moves to the direct one, so traffic does not stay relayed for longer than the delay, unless the delay is set to `never`.
+
+The delay is set with the `NB_HA_RELAYED_SWITCH_DELAY` [environment variable](https://docs.netbird.io/client/environment-variables) on the peer that uses the network:
+
+| Value                             | Behavior                                                                                                                                                                     |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| unset                             | The default delay of 30 seconds.                                                                                                                                             |
+| a duration, such as `10s` or `2m` | Keep a relayed routing peer for that long.                                                                                                                                   |
+| `0`                               | Switch at once, as clients before v0.82.0 do.                                                                                                                                |
+| `never`                           | Keep a routing peer whose direct connection fell back to relayed for as long as it stays connected. A routing peer that came up relayed still moves after the default delay. |
+
+An invalid value is logged as a warning and the default is used.
+
+```shell
+sudo netbird service reconfigure --service-env NB_HA_RELAYED_SWITCH_DELAY=60s
+```
+
+> **Note**
+>
+> When a routing peer fails without shutting down, for example on power loss or a network outage, its direct connection is detected as down within seconds, but its relayed connection only once the relay service notices that the routing peer is gone, which can take a minute. In between, the routing peer looks relayed rather than offline, and traffic to the network is dropped until the failover. If an equivalent routing peer has a direct connection, the relayed switch delay applies: with the default delay, the failover takes about 30 seconds longer than one where the routing peer shuts down cleanly, and a longer delay, or `never`, ends when the relay service notices. Where fast failover matters more than avoiding connection resets, set a shorter delay, such as `10s`. With different metrics, or when the other routing peers are relayed too, the delay plays no part: the failover waits until the relay service notices, whatever the delay.
 
 ### What a switch does to open connections
 
-With masquerade on (the default), every switch resets established TCP connections through the network, whatever caused it: a failover, a failback, or a fallback to relayed. The new routing peer translates the traffic to a different source address, so applications such as SSH must reconnect. Expect the connection to stall for several seconds before the reset, while the peer notices the change. With masquerade off, connections are not translated and behave differently: see [High availability with masquerade off](https://docs.netbird.io/manage/networks/masquerade#high-availability-with-masquerade-off).
+With masquerade on (the default), every switch resets established TCP connections through the network, whatever caused it: a failover, a failback, a fallback to relayed, or a closer routing peer. The new routing peer translates the traffic to a different source address, so applications such as SSH must reconnect. After a failover, expect the connection to stall before the reset while the peer notices that its routing peer is gone: several seconds, or longer when the routing peer failed without shutting down (see [Relayed switch delay](#relayed-switch-delay)). With masquerade off, connections are not translated and behave differently: see [High availability with masquerade off](https://docs.netbird.io/manage/networks/masquerade#high-availability-with-masquerade-off).
 
-If users report dropped connections while no routing peer went offline, check whether the routing peers share a metric and whether their connections fall back to relayed. [Troubleshooting relayed connections](https://docs.netbird.io/help/troubleshooting-relayed-connections) covers why a connection is relayed.
+If users report dropped connections while no routing peer went offline, look up the reason for each switch in the client log (see [Finding switches in the client log](#finding-switches-in-the-client-log)), and check whether connections stay relayed for longer than the relayed switch delay. [Troubleshooting relayed connections](https://docs.netbird.io/help/troubleshooting-relayed-connections) covers why a connection is relayed.
 
 ### Primary / failover (different metrics)
 
@@ -131,11 +171,18 @@ Use different metrics when you want every peer on one known routing peer, with t
 
 ### Nearest routing peer (equal metrics)
 
-Use equal metrics when routing peers are spread across regions and you want each peer to use the closest one: for example, an EU-based and a US-based routing peer serving the same network, with users on both continents. Each peer picks the lowest-latency routing peer when it connects, though a direct connection still beats a relayed one whatever the latency. It does not move to another routing peer later just because latency changes, and routing peers within 10 ms of each other are effectively tied. The trade-off: a fallback to relayed can move peers to another routing peer and reset their connections.
+Use equal metrics when routing peers are spread across regions and you want each peer to use the closest one: for example, an EU-based and a US-based routing peer serving the same network, with users on both continents. Each peer picks the lowest-latency routing peer and keeps comparing latency while connected, but only moves for a clear gain, as described above. A direct connection still beats a relayed one whatever the latency, after the relayed switch delay. The trade-off: a fallback to relayed that lasts longer than the delay moves peers to another routing peer and resets their connections.
 
 ### Finding switches in the client log
 
-The client logs each switch at the default log level as `New chosen route is …`, followed by the chosen routing peer's WireGuard public key and its score. The comparison behind the decision, including the score of the routing peer it kept, is logged only at the debug level.
+The client logs routing peer decisions at the default log level:
+
+- `new chosen route is … for network [<network>]` when a network gets its first routing peer.
+- `switching routing peer for network [<network>] from <key> to <key>: <reason>`, as a warning, on every switch. The reason is one of `current routing peer unavailable`, `connected peer preferred over idle`, `lower route metric`, `direct connection preferred over relayed`, `lower latency`, or `route assigned to a different routing peer`.
+- `keeping relayed routing peer …` or `keeping routing peer …` when a better-ranked routing peer is held back, with the rule that holds it: the relayed switch delay, the latency margin, the minimum time on a routing peer, or a missing latency measurement. Repeats of the same decision are logged at the debug level.
+- `network [<network>] has not been assigned a routing peer …` when none of its routing peers is available.
+
+Keys are WireGuard public keys. Switches and the loss of every routing peer are also recorded as `Routing peer changed` and `No routing peer available` events, which show in `netbird status -d` and in debug bundles whatever the log level. For an exit node (a default route), the loss of every routing peer is recorded as `Default route disconnected due to peer unreachability` instead. The client keeps only its 10 most recent events of any kind, and loses them when the client service restarts, so check soon after a report or read the client log.
 
 ### Failure domains
 
@@ -171,7 +218,7 @@ This is the subtlest part of the model and the source of most policy mistakes.
 - **Forward chain.** Packets routed *through* the peer to backend resources. Network resource policies (Networks) and ACL Groups (Routes) apply here.
 - **Input chain.** Packets destined to the routing peer's own IP. [Peer-to-peer policies](https://docs.netbird.io/manage/access-control/manage-network-access) apply here.
 
-![Two paths compared. Through the routing peer: a network resource policy, evaluated in the forward chain, lets a client reach a web app behind the routing peer on TCP 443. To the routing peer: a peer-to-peer policy, evaluated in the input chain, lets a client reach SSH on the routing peer's NetBird IP on TCP 22.](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/networks/through-or-to-the-routing-peer.png)
+![Two paths compared. Through the routing peer: a network resource policy, evaluated in the forward chain, lets a client reach a web app behind the routing peer on TCP 443. To the routing peer: a peer-to-peer policy, evaluated in the input chain, lets a client reach SSH on the routing peer's NetBird IP on TCP 22.](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/networks/through-or-to-the-routing-peer.png)
 
 If users need to reach both the resources behind a routing peer **and** services running on the routing peer itself (Pi-hole, monitoring, jump-host SSH), you need one policy of each kind.
 

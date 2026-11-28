@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/dns/custom-zones.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/dns/custom-zones.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/dns/custom-zones.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/dns/custom-zones.mdx)
 
 # Custom Zones
 
@@ -10,9 +10,9 @@ This provides complete control over internal DNS without running separate infras
 
 ### Creating a Custom Zone
 
-To create a new Custom DNS Zone, navigate to **DNS** > **Zones** in the NetBird Dashboard and click **Add Zone**. Configure the zone settings as described below:
+To create a new Custom DNS Zone, navigate to **Networking** > **DNS** > **Zones** in the NetBird Dashboard and click **Add Zone**. Configure the zone settings as described below:
 
-![Add Custom Zone](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/zones/add-zone.png)
+![Add Custom Zone](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/dns/zones/add-zone.png)
 
 **Domain**
 
@@ -48,7 +48,7 @@ Controls whether the zone is active and distributed to peers.
 
 Click **Add Zone** to create the zone
 
-![Zone Created Successfully](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/zones/zone-created.png)
+![Zone Created Successfully](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/dns/zones/zone-created.png)
 
 ### Adding Records to a Zone
 
@@ -70,17 +70,17 @@ The target for this DNS record. For A records, this is an IPv4 address. For CNAM
 
 How long (in seconds) DNS resolvers should cache this record before checking for updates. Lower values mean faster propagation of changes but more DNS queries. Default is 300 seconds (5 minutes).
 
-![Add DNS Record](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/zones/add-record.png)
+![Add DNS Record](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/dns/zones/add-record.png)
 
 Click **Add Record** to create the DNS record.
 
-![DNS Record Created Successfully](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/zones/record-created.png)
+![DNS Record Created Successfully](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/dns/zones/record-created.png)
 
 ### Updating a Zone
 
 To update zone settings such as distribution groups or search domain configuration, click the three dots next to the zone, select **Edit**, make the necessary changes, and click **Save Changes** to apply them.
 
-![Update DNS Zone](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/zones/update-zone.png)
+![Update DNS Zone](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/dns/zones/update-zone.png)
 
 ### Deleting a Zone
 
@@ -90,7 +90,7 @@ To delete a zone, click the three dots next to the zone, select **Delete**, and 
 >
 > Deleting a zone will also remove all existing records within that zone. If only a single record needs to be removed, delete the individual record instead of the entire zone.
 
-![Delete DNS Zone](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/zones/delete-zone.png)
+![Delete DNS Zone](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/dns/zones/delete-zone.png)
 
 ## Behavior
 
@@ -103,10 +103,10 @@ Custom DNS Zones take precedence over nameservers when there is a conflict. If a
 Custom DNS Zones have the following limitations:
 
 - **Domain cannot be changed**: Once a zone is created, its domain cannot be modified. The zone must be deleted and recreated with a new domain
-- **Cannot use peer DNS domain**: Zone domain must not conflict with your NetBird peer DNS domain (e.g., `netbird.cloud`, `netbird.selfhosted`, or a custom domain configured via the `--dns-domain` flag or in **Settings** > **Network** > **DNS Domain**)
+- **Cannot use peer DNS domain**: Zone domain must not conflict with your NetBird peer DNS domain (e.g., `netbird.cloud`, `netbird.selfhosted`, or a custom domain configured via the `--dns-domain` flag or in **Settings** > **Networks** > **DNS Domain**)
 - **CNAME exclusivity**: CNAME records cannot coexist with A or AAAA records for the same hostname
 - **Empty zones not distributed**: Zones without any DNS records are not distributed to peers
-- **Requires managed DNS**: Peers in groups listed under **DNS** > **DNS Settings** (Disable DNS Management), or started with `netbird up --disable-dns`, run in [unmanaged mode](https://docs.netbird.io/manage/dns/dns-settings#unmanaged-mode) and will not resolve zone records, even when the zone's distribution groups include them
+- **Requires managed DNS**: Peers in groups listed under **Networking** > **DNS** > **DNS Settings** (Disable DNS Management), or started with `netbird up --disable-dns`, run in [unmanaged mode](https://docs.netbird.io/manage/dns/dns-settings#unmanaged-mode) and will not resolve zone records, even when the zone's distribution groups include them
 
 ## Use Cases
 

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/get-started/install/truenas.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/get-started/install/truenas.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/get-started/install/truenas.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/get-started/install/truenas.mdx)
 
 # Install NetBird on TrueNAS
 
@@ -12,11 +12,11 @@ NetBird can now be installed on TrueNAS via [TrueNAS Apps](https://apps.truenas.
 
 1. In TrueNAS, go to **Apps** and search for **NetBird**. If it doesn't appear, refresh the catalog (e.g., **Discover Apps** or the catalog refresh option in your TrueNAS version).
 
-![Refresh TrueNAS catalog and search for NetBird](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/truenas/truenas-refresh-catalog.png)
+![Refresh TrueNAS catalog and search for NetBird](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/truenas/truenas-refresh-catalog.png)
 
 2. Click **Install** and configure the app as described below. Most defaults are fine; the main fields you need to set are **Hostname** and **Setup Key**.
 
-![Install NetBird app on TrueNAS](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/truenas/truenas-install-netbird.png)
+![Install NetBird app on TrueNAS](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/truenas/truenas-install-netbird.png)
 
 3. After installation, confirm the app is **Running** in the Apps list.
 4. Open your [NetBird dashboard](https://app.netbird.io/) and go to **Peers** → **Servers**. You should see your TrueNAS peer listed. Rename it (e.g., "TrueNAS" or "NAS") if you like for easier identification.
@@ -25,7 +25,7 @@ NetBird can now be installed on TrueNAS via [TrueNAS Apps](https://apps.truenas.
 
 When you install the NetBird app, TrueNAS shows an **Edit Netbird Client** form. Use this as a guide:
 
-![NetBird client configuration form with Setup Key](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/truenas/truenas-config-setupkey.png)
+![NetBird client configuration form with Setup Key](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/truenas/truenas-config-setupkey.png)
 
 **Netbird Client Configuration**
 
@@ -55,7 +55,7 @@ You can leave **Labels** and **Additional Storage** empty unless you use them fo
 
 Because NetBird on TrueNAS runs inside a Docker container, you cannot connect directly to the TrueNAS host or its services by IP as you would to a normal peer. To reach TrueNAS or other devices on the same LAN, use NetBird Networks:
 
-1. **Create a NetBird Network**: In the dashboard, go to **Network Routing** → **Networks** → **Add Network**. Name it (e.g., "Home LAN" or "TrueNAS LAN").
+1. **Create a NetBird Network**: In the dashboard, go to **Networking** → **Network Routing** → **Networks** → **Add Network**. Name it (e.g., "Home LAN" or "TrueNAS LAN").
 2. **Add the TrueNAS peer as a routing peer**: In that network, click **Add Routing Peer** and select the TrueNAS peer. This makes TrueNAS the gateway for traffic into your local subnet.
 3. **Add a network resource**: Click **Add Resource**. Either:
    - Add your **entire LAN subnet** (e.g., `192.168.1.0/24`) so you can reach TrueNAS and any other device on that subnet, or
@@ -71,5 +71,5 @@ Install and configure TrueNAS for home server storage, then securely access it f
 
 - Make sure to [star us on GitHub](https://github.com/netbirdio/netbird)
 - Follow us [on X](https://x.com/netbird)
-- Join our Slack Channel
+- Join our Slack Channel or Discord server
 - NetBird [latest release](https://github.com/netbirdio/netbird/releases) on GitHub

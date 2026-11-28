@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/vlagent-metrics.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/vlagent-metrics.md)
+> Pinned source for VictoriaLogs v1.55.0: [docs/victorialogs/vlagent-metrics.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/a7001ac416483b5ca96347edd33bfc502e31ce3f/docs/victorialogs/vlagent-metrics.md)
 
 This document provides a comprehensive reference for all metrics exposed by `vlagent` at the `http://localhost:9429/metrics` endpoint.
 These metrics follow the Prometheus exposition format and can be used for monitoring, alerting, and performance analysis of log collection and remote write operations.

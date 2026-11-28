@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/maintenance/scaling/migrate-sqlite-to-postgresql.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/maintenance/scaling/migrate-sqlite-to-postgresql.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/maintenance/scaling/migrate-sqlite-to-postgresql.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/maintenance/scaling/migrate-sqlite-to-postgresql.mdx)
 
 # Migrate from SQLite to PostgreSQL
 
@@ -79,7 +79,8 @@ CAST
      column accounts.settings_auto_update_always                  to boolean,
      column accounts.settings_metrics_push_enabled                to boolean,
      column accounts.settings_agent_network_only                  to boolean,
-     column accounts.settings_local_mfa_enabled                   to boolean
+     column accounts.settings_local_mfa_enabled                   to boolean,
+     column accounts.settings_peer_hostname_collision_rejected    to boolean
 ;
 ```
 

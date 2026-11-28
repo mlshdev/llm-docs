@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/get-started/install/unraid.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/get-started/install/unraid.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/get-started/install/unraid.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/get-started/install/unraid.mdx)
 
 # Install NetBird on Unraid
 
@@ -54,7 +54,7 @@ The plugin installs the NetBird client and its service. A fresh installation sta
 
 4. Open **Peers** in the [NetBird dashboard](https://app.netbird.io/), or your self-hosted dashboard, and confirm that your Unraid server appears as connected.
 
-![NetBird plugin in Unraid showing a running service, its assigned NetBird addresses, and connected management and signal services](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/unraid/netbird-connected.png)
+![NetBird plugin in Unraid showing a running service, its assigned NetBird addresses, and connected management and signal services](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/unraid/netbird-connected.png)
 
 The NetBird tab shows the server's connection details. Your addresses and management URL will differ from this example.
 

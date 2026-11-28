@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/migration/combined-container.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/migration/combined-container.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/migration/combined-container.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/migration/combined-container.mdx)
 
 # Migration Guide: Combined Container Setup
 
@@ -21,7 +21,7 @@ This guide walks you through migrating a pre-v0.65.0 NetBird self-hosted deploym
 ### What's new
 
 - **Combined `netbird-server` container** - management, signal, relay, and the embedded STUN server all run in a single container, replacing four separate services
-- **Traefik reverse proxy** (for Caddy-based setups) - replaces the embedded Caddy with Traefik v3.6, handling TLS termination via Let's Encrypt and routing for gRPC, WebSocket, and HTTP traffic
+- **Traefik reverse proxy** (for Caddy-based setups) - replaces the embedded Caddy with Traefik, handling TLS termination via Let's Encrypt and routing for gRPC, WebSocket, and HTTP traffic
 - **Unified `config.yaml`** - a single configuration file replaces the combination of `management.json`, `setup.env`, and multiple environment files
 - **Simplified Docker Compose** - the stack goes from 5+ services down to 2 (Traefik + `netbird-server`) or 3 (with dashboard)
 
@@ -76,6 +76,10 @@ chmod +x migrate.sh
 ```
 
 ### Step 2: Run the migration
+
+> **Warning**
+>
+> For Caddy-based setups, the migration script currently generates `image: traefik:v3.7.14`. Restrict untrusted traffic during migration, then [upgrade Traefik](https://docs.netbird.io/selfhosted/maintenance/upgrade#upgrading-traefik-and-crowd-sec) to `v3.7.18` or a newer release you have verified before allowing that traffic. The migration script does not perform this upgrade.
 
 If your NetBird installation is in the current directory:
 

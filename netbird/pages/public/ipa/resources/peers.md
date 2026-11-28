@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/ipa/resources/peers.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/ipa/resources/peers.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/ipa/resources/peers.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/ipa/resources/peers.mdx)
 
 ## List all Peers   (GET /api/peers)
 
@@ -227,6 +227,7 @@ echo $response;
       "rosenpass_permissive": false,
       "server_ssh_allowed": true,
       "remote_jobs_allowed": true,
+      "server_vnc_allowed": false,
       "disable_client_routes": false,
       "disable_server_routes": false,
       "disable_dns": false,
@@ -295,6 +296,7 @@ echo $response;
       "rosenpass_permissive": "boolean",
       "server_ssh_allowed": "boolean",
       "remote_jobs_allowed": "boolean",
+      "server_vnc_allowed": "boolean",
       "disable_client_routes": "boolean",
       "disable_server_routes": "boolean",
       "disable_dns": "boolean",
@@ -528,6 +530,7 @@ echo $response;
     "rosenpass_permissive": false,
     "server_ssh_allowed": true,
     "remote_jobs_allowed": true,
+    "server_vnc_allowed": false,
     "disable_client_routes": false,
     "disable_server_routes": false,
     "disable_dns": false,
@@ -593,6 +596,7 @@ echo $response;
     "rosenpass_permissive": "boolean",
     "server_ssh_allowed": "boolean",
     "remote_jobs_allowed": "boolean",
+    "server_vnc_allowed": "boolean",
     "disable_client_routes": "boolean",
     "disable_server_routes": "boolean",
     "disable_dns": "boolean",
@@ -915,6 +919,7 @@ echo $response;
     "rosenpass_permissive": false,
     "server_ssh_allowed": true,
     "remote_jobs_allowed": true,
+    "server_vnc_allowed": false,
     "disable_client_routes": false,
     "disable_server_routes": false,
     "disable_dns": false,
@@ -980,6 +985,7 @@ echo $response;
     "rosenpass_permissive": "boolean",
     "server_ssh_allowed": "boolean",
     "remote_jobs_allowed": "boolean",
+    "server_vnc_allowed": "boolean",
     "disable_client_routes": "boolean",
     "disable_server_routes": "boolean",
     "disable_dns": "boolean",
@@ -1376,6 +1382,10 @@ Peer's WireGuard public key
 
 List of temporary access rules
 
+**session\_pub\_key (type: string; optional)**
+
+Ephemeral base64-encoded X25519 public key used with Noise\_IK to bind the VNC session. Required for VNC rules; ignored for SSH and L4.
+
 **POST /api/peers/{peerId}/temporary-access Request**
 
 **cURL**
@@ -1390,7 +1400,8 @@ curl -X POST https://api.netbird.io/api/peers/{peerId}/temporary-access \
   "wg_pub_key": "n0r3pL4c3h0ld3rK3y==",
   "rules": [
     "tcp/80"
-  ]
+  ],
+  "session_pub_key": "n0r3pL4c3h0ld3rK3y=="
 }'
 ```
 
@@ -1401,7 +1412,8 @@ let data = JSON.stringify({
   "wg_pub_key": "n0r3pL4c3h0ld3rK3y==",
   "rules": [
     "tcp/80"
-  ]
+  ],
+  "session_pub_key": "n0r3pL4c3h0ld3rK3y=="
 });
 let config = {
   method: 'post',
@@ -1434,7 +1446,8 @@ payload = json.dumps({
   "wg_pub_key": "n0r3pL4c3h0ld3rK3y==",
   "rules": [
     "tcp/80"
-  ]
+  ],
+  "session_pub_key": "n0r3pL4c3h0ld3rK3y=="
 })
 headers = {   
   'Content-Type': 'application/json',  
@@ -1467,7 +1480,8 @@ func main() {
   "wg_pub_key": "n0r3pL4c3h0ld3rK3y==",
   "rules": [
     "tcp/80"
-  ]
+  ],
+  "session_pub_key": "n0r3pL4c3h0ld3rK3y=="
 }`)
   client := &http.Client {
   }
@@ -1519,7 +1533,8 @@ request.body = JSON.dump({
   "wg_pub_key": "n0r3pL4c3h0ld3rK3y==",
   "rules": [
     "tcp/80"
-  ]
+  ],
+  "session_pub_key": "n0r3pL4c3h0ld3rK3y=="
 })
 response = https.request(request)
 puts response.read_body
@@ -1534,7 +1549,8 @@ RequestBody body = RequestBody.create(mediaType, '{
   "wg_pub_key": "n0r3pL4c3h0ld3rK3y==",
   "rules": [
     "tcp/80"
-  ]
+  ],
+  "session_pub_key": "n0r3pL4c3h0ld3rK3y=="
 }');
 Request request = new Request.Builder()
   .url("https://api.netbird.io/api/peers/{peerId}/temporary-access")
@@ -1565,7 +1581,8 @@ curl_setopt_array($curl, array(
   "wg_pub_key": "n0r3pL4c3h0ld3rK3y==",
   "rules": [
     "tcp/80"
-  ]
+  ],
+  "session_pub_key": "n0r3pL4c3h0ld3rK3y=="
 }',
   CURLOPT_HTTPHEADER => array(    
     'Content-Type: application/json',    
@@ -1590,7 +1607,8 @@ echo $response;
   "id": "chacbco6lnnbn6cg5s90",
   "rules": [
     "tcp/80"
-  ]
+  ],
+  "target_pub_key": "n0r3pL4c3h0ld3rK3y=="
 }
 ```
 
@@ -1602,7 +1620,8 @@ echo $response;
   "id": "string",
   "rules": [
     "string"
-  ]
+  ],
+  "target_pub_key": "string"
 }
 ```
 

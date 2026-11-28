@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/LTS-releases.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/LTS-releases.md)
+> Pinned source for VictoriaLogs v1.55.0: [docs/victorialogs/LTS-releases.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/a7001ac416483b5ca96347edd33bfc502e31ce3f/docs/victorialogs/LTS-releases.md)
 
 [Enterprise version of VictoriaLogs](https://docs.victoriametrics.com/victoriametrics/enterprise/) provides long-term support lines of releases (aka LTS releases).
 Every LTS line receives bugfixes and [security fixes](https://github.com/VictoriaMetrics/VictoriaLogs/blob/master/SECURITY.md) for 12 months after
@@ -14,4 +14,4 @@ to [the latest available releases](https://docs.victoriametrics.com/victorialogs
 
 ## Currently supported LTS release lines
 
-- v1.52.x - the latest one is [v1.52.1 LTS release](https://github.com/VictoriaMetrics/VictoriaLogs/releases/tag/v1.52.1)
+- v1.52.x - the latest one is [v1.52.2 LTS release](https://github.com/VictoriaMetrics/VictoriaLogs/releases/tag/v1.52.2)

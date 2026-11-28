@@ -1,15 +1,15 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/browser-client.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/browser-client.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/peers/browser-client.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/peers/browser-client.mdx)
 
 # Browser Client - Web-based Remote Access
 
-NetBird's Browser Client enables secure remote access to SSH and RDP resources directly from your web browser, without requiring any client software installation. This feature runs a NetBird peer as WebAssembly (WASM) in your browser, establishing secure connections through your existing NetBird network.
+NetBird's Browser Client enables secure remote access to SSH, RDP and VNC resources directly from your web browser, without requiring any client software installation. This feature runs a NetBird peer as WebAssembly (WASM) in your browser, establishing secure connections through your existing NetBird network.
 
 ## Overview
 
 The Browser Client provides instant, secure remote access through your browser:
 
 - **No installation required** - Works directly in your browser without any software downloads
-- **SSH and RDP support** - Access Linux and Windows machines with complete protocol implementations
+- **SSH, RDP and VNC support** - Access Linux, macOS and Windows machines with complete protocol implementations
 - **Secure by design** - All connections are encrypted end-to-end with WireGuard®
 - **True peer-to-peer** - Runs a complete NetBird peer as WebAssembly in your browser
 - **Works anywhere** - Access your resources from any device with a modern web browser
@@ -26,6 +26,7 @@ Before using the Browser Client, ensure:
 2. **Protocol requirements**:
    - **For SSH**: The NetBird SSH server must be enabled on the target peer. Learn more about [enabling SSH access](https://docs.netbird.io/manage/peers/ssh).
    - **For RDP**: The RDP server must be enabled on the target machine
+   - **For VNC**: The NetBird VNC server must be enabled on the target peer, or a VNC server of your own must be running on it. Learn more about [VNC access](https://docs.netbird.io/manage/peers/vnc).
 3. **Modern browser** - You're using an up-to-date version of Chrome, Firefox, Edge, or Safari with WebAssembly support
 
 ## Accessing Machines via the Browser Client
@@ -34,11 +35,11 @@ Before using the Browser Client, ensure:
 
 The easiest way to connect is directly from the Peers dashboard:
 
-1. Navigate to **Peers** → **Servers** in your NetBird dashboard (SSH and RDP targets are typically servers)
+1. Navigate to **Peers** → **Servers** in your NetBird dashboard (SSH, RDP and VNC targets are typically servers)
 2. Find the peer you want to access
 3. In the **Remote Access** section, click the **SSH** or **RDP** button
 
-![peer-list-view](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/browser-client/peer-list-view.png)
+![peer-list-view](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/browser-client/peer-list-view.png)
 
 ### SSH Connection
 
@@ -51,13 +52,13 @@ When connecting via SSH:
 >
 > Before connecting via SSH, make sure that SSH Access is enabled both on the target peer and in the NetBird Dashboard. Learn more about [enabling SSH access](https://docs.netbird.io/manage/peers/ssh).
 
-![ssh-credentials-modal](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/browser-client/ssh-credentials-modal.png)
+![ssh-credentials-modal](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/browser-client/ssh-credentials-modal.png)
 
 3. Adjust the SSH username in the credentials modal if required
 4. Click **Connect**
 5. A terminal window will open in your browser with your SSH session
 
-![ssh-terminal-connected](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/browser-client/ssh-terminal-connected.png)
+![ssh-terminal-connected](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/browser-client/ssh-terminal-connected.png)
 
 ### RDP Connection
 
@@ -66,7 +67,7 @@ For RDP access:
 1. Click the **RDP** button for your target machine
 2. A new window will open with a credentials modal - enter your RDP server credentials:
 
-![rdp-credentials-modal](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/browser-client/rdp-credentials-modal.png)
+![rdp-credentials-modal](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/browser-client/rdp-credentials-modal.png)
 
 - **Username**: Your username (can include domain: `DOMAIN\username`)
 - **Password**: Your password for the RDP server
@@ -74,7 +75,7 @@ For RDP access:
 3. Click **Connect**
 4. In the same window, a certificate warning dialog will appear - review the certificate details
 
-![rdp-certificate-modal](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/browser-client/rdp-certificate-modal.png)
+![rdp-certificate-modal](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/browser-client/rdp-certificate-modal.png)
 
 > **Note**
 >
@@ -83,7 +84,18 @@ For RDP access:
 5. Click **Accept and Continue** to proceed with the connection
 6. The remote desktop will load in the window
 
-![rdp-connected-session](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/browser-client/rdp-connected-session.png)
+![rdp-connected-session](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/browser-client/rdp-connected-session.png)
+
+### VNC Connection
+
+For VNC access:
+
+1. Click the **VNC** button for your target machine
+2. A new window will open with the connection options. Choose **NetBird** for the embedded VNC server, or **External** to reach a VNC server that already runs on the machine, then click **Connect**
+3. If connection approval is on, the person signed in on the target machine is asked to accept the connection
+4. The remote screen loads in the same window, with a toolbar at the top edge for **Ctrl+Alt+Del**, **Paste**, **Remote cursor** and **End session**
+
+See [VNC access](https://docs.netbird.io/manage/peers/vnc) for the connection modes, platform notes and troubleshooting.
 
 ## Connection Management
 
@@ -119,7 +131,7 @@ The Browser Client maintains NetBird's security standards:
 
 **"Connection timeout"**
 
-- Check that the SSH/RDP services are running on the target
+- Check that the SSH, RDP or VNC services are running on the target
 
 **"Authentication failed"**
 
@@ -130,7 +142,7 @@ The Browser Client maintains NetBird's security standards:
 **Browser Client Constraints**
 
 - **Relay-only connections**: No direct P2P connections (may increase latency)
-- **Advanced features**: Some SSH/RDP features are not available (SFTP, sound, file shares, etc.)
+- **Advanced features**: Some SSH, RDP and VNC features are not available (SFTP, sound, file shares, etc.)
 - **Concurrent connections**: Browser resource limits may affect multiple simultaneous sessions
 - **RDP resolution changes**: Require reconnection (not seamless)
 
@@ -154,6 +166,14 @@ The RDP implementation is 100% client-side using:
 - **[IronRDP](https://github.com/Devolutions/IronRDP)**: High-performance Rust RDP client (Apache 2.0/MIT licensed)
 - **RDCleanPath proxy**: IronRDP's rdp proxy reimplemented to make use of NetBird
 - Both components are compiled to WebAssembly and run entirely in the browser
+
+### VNC Technology Stack
+
+VNC access is also handled entirely in the browser:
+
+- **[noVNC](https://github.com/novnc/noVNC)**: the JavaScript VNC client (MPL 2.0 licensed) that draws the remote screen and sends keyboard and pointer input
+- **A bridge in the WASM NetBird client** carries the VNC stream through the NetBird network, so the viewer never opens a connection of its own
+- For NetBird's embedded server, the browser creates a one-time key pair for the session and the target peer authenticates it before sending any screen data. See [VNC access](https://docs.netbird.io/manage/peers/vnc#security).
 
 ## Security Considerations
 

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/ipa/resources/agent-network.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/ipa/resources/agent-network.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/ipa/resources/agent-network.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/ipa/resources/agent-network.mdx)
 
 ## Provision a managed Agent Network gateway   (POST /api/integrations/agent-network/managed-proxy)
 
@@ -628,6 +628,24 @@ echo $response;
         "type": "string",
         "description": "Raw deny reason code when the request was blocked (e.g. llm_policy.token_cap_exceeded)."
       },
+      "blocked_by": {
+        "type": "string",
+        "description": "ID of the policy (llm_policy.* deny reasons) or account budget rule (llm_account.* deny reasons) whose cap blocked the request."
+      },
+      "error_source": {
+        "type": "string",
+        "enum": [
+          "provider",
+          "proxy",
+          "policy",
+          "auth"
+        ],
+        "description": "Who produced a failed (status >= 400) response. provider is the upstream LLM API, proxy is the NetBird reverse proxy failing to reach it, policy is a NetBird policy or guardrail denial, auth is a proxy authentication rejection. Empty for successful requests."
+      },
+      "error_detail": {
+        "type": "string",
+        "description": "Admin-facing explanation of the failure, such as the proxy's transport error or which cap was exhausted and by how much. Returned only to callers with the account-wide agent network logs permission; callers limited to their own requests never receive it."
+      },
       "input_tokens": 1200,
       "output_tokens": 640,
       "total_tokens": 1840,
@@ -688,6 +706,9 @@ echo $response;
       "selected_policy_id": "string",
       "decision": "string",
       "deny_reason": "string",
+      "blocked_by": "string",
+      "error_source": "string",
+      "error_detail": "string",
       "input_tokens": "integer",
       "output_tokens": "integer",
       "total_tokens": "integer",
@@ -1013,6 +1034,24 @@ echo $response;
             "type": "string",
             "description": "Raw deny reason code when the request was blocked (e.g. llm_policy.token_cap_exceeded)."
           },
+          "blocked_by": {
+            "type": "string",
+            "description": "ID of the policy (llm_policy.* deny reasons) or account budget rule (llm_account.* deny reasons) whose cap blocked the request."
+          },
+          "error_source": {
+            "type": "string",
+            "enum": [
+              "provider",
+              "proxy",
+              "policy",
+              "auth"
+            ],
+            "description": "Who produced a failed (status >= 400) response. provider is the upstream LLM API, proxy is the NetBird reverse proxy failing to reach it, policy is a NetBird policy or guardrail denial, auth is a proxy authentication rejection. Empty for successful requests."
+          },
+          "error_detail": {
+            "type": "string",
+            "description": "Admin-facing explanation of the failure, such as the proxy's transport error or which cap was exhausted and by how much. Returned only to callers with the account-wide agent network logs permission; callers limited to their own requests never receive it."
+          },
           "input_tokens": 1200,
           "output_tokens": 640,
           "total_tokens": 1840,
@@ -1103,6 +1142,9 @@ echo $response;
           "selected_policy_id": "string",
           "decision": "string",
           "deny_reason": "string",
+          "blocked_by": "string",
+          "error_source": "string",
+          "error_detail": "string",
           "input_tokens": "integer",
           "output_tokens": "integer",
           "total_tokens": "integer",

@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/logsql.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/logsql.md)
+> Pinned source for VictoriaLogs v1.55.0: [docs/victorialogs/logsql.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/a7001ac416483b5ca96347edd33bfc502e31ce3f/docs/victorialogs/logsql.md)
 
 LogsQL is a simple yet powerful query language for [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/).
 See [examples](https://docs.victoriametrics.com/victorialogs/logsql-examples/), [LogsQL tutorial](https://docs.victoriametrics.com/victorialogs/logsql/#logsql-tutorial),
@@ -1370,7 +1370,14 @@ contains the following [phrases](https://docs.victoriametrics.com/victorialogs/l
 - uppercase and lowercase phrases
 - individual phrases where every uppercase letter is independently replaced with the corresponding lowercase letter
 
-For example, `_msg:contains_common_case("VictoriaMetrics")` finds logs where the [`_msg` field](https://docs.victoriametrics.com/victorialogs/keyconcepts/#message-field)
+For example, `_msg:contains_common_case("Error")` finds logs where the [`_msg` field](https://docs.victoriametrics.com/victorialogs/keyconcepts/#message-field)
+contains at least one of the following [words](https://docs.victoriametrics.com/victorialogs/logsql/#word):
+
+- Error
+- ERROR
+- error
+
+And `_msg:contains_common_case("VictoriaMetrics")` finds logs where the [`_msg` field](https://docs.victoriametrics.com/victorialogs/keyconcepts/#message-field)
 contains at least one of the following [words](https://docs.victoriametrics.com/victorialogs/logsql/#word):
 
 - VictoriaMetrics

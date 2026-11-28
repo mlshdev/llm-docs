@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/settings/groups.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/settings/groups.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/settings/groups.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/settings/groups.mdx)
 
 # Groups Settings
 
@@ -8,7 +8,7 @@ To find it, log in to your NetBird dashboard and navigate to `Settings` > `Group
 
 > **Note**
 >
-> This tab is only about account-wide group behavior. To view and manage the groups themselves, go to `Access Control` > `Groups`. See [Access Control](https://docs.netbird.io/manage/access-control) for how groups are used in policies.
+> This tab is only about account-wide group behavior. To view and manage the groups themselves, go to `Groups`. See [Access Control](https://docs.netbird.io/manage/access-control) for how groups are used in policies.
 
 ## Enable user group propagation
 
@@ -28,7 +28,7 @@ While the setting is on, any later change to a user's groups is propagated to th
 
 ### What changes when you disable it
 
-Turning the setting off does not remove any group memberships that were already propagated. Peers keep the groups they have. From that point on, changes to a user's groups no longer affect their peers, and you manage peer group membership yourself, either on the individual peers or in `Access Control` > `Groups`.
+Turning the setting off does not remove any group memberships that were already propagated. Peers keep the groups they have. From that point on, changes to a user's groups no longer affect their peers, and you manage peer group membership yourself, either on the individual peers or in `Groups`.
 
 ## JWT group sync
 

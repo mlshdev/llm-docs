@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [agent-network/README.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/agent-network/README.md)
+> Pinned source for NetBird v0.84.0: [agent-network/README.md](https://github.com/netbirdio/netbird/blob/22eac80ddcb056b2c4738309240bda2711bafd98/agent-network/README.md)
 
 # NetBird Agent Network
 

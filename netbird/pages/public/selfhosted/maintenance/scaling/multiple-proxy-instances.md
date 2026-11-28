@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/maintenance/scaling/multiple-proxy-instances.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/maintenance/scaling/multiple-proxy-instances.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/maintenance/scaling/multiple-proxy-instances.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/maintenance/scaling/multiple-proxy-instances.mdx)
 
 # Running Multiple Proxy Instances
 
@@ -160,7 +160,7 @@ Create a `docker-compose.yml` on the new server:
 ```yaml
 services:
   traefik:
-    image: traefik:v3.6
+    image: traefik:v3.7.18
     container_name: traefik
     restart: unless-stopped
     command:
@@ -313,7 +313,7 @@ With this setup, you only need to update the certificate files in one place. Whe
 
 After deploying all instances, verify they are connected:
 
-1. Open the NetBird dashboard and navigate to **Reverse Proxy** > **Services**
+1. Open the NetBird dashboard and navigate to **Networking** > **Reverse Proxy** > **Services**
 2. Click **Add Service** and check the domain selector - your cluster domain should appear with a **Cluster** badge
 3. The management server tracks all connected proxy instances; if an instance disconnects, it is removed from the active cluster
 

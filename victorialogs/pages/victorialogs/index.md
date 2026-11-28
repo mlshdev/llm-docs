@@ -1,9 +1,9 @@
-> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/_index.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/_index.md)
+> Pinned source for VictoriaLogs v1.55.0: [docs/victorialogs/_index.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/a7001ac416483b5ca96347edd33bfc502e31ce3f/docs/victorialogs/_index.md)
 
 VictoriaLogs is [open source](https://github.com/VictoriaMetrics/VictoriaLogs/) user-friendly database for logs
 from [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics/).
 
-![README-components.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/README-components.webp)
+![README-components.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/a7001ac416483b5ca96347edd33bfc502e31ce3f/docs/victorialogs/README-components.webp)
 
 - **Articles**: [Design, Benchmarks, Comparisons...](https://docs.victoriametrics.com/victorialogs/articles/).
 - **Available**: [Binary releases](https://github.com/VictoriaMetrics/Victorialogs/releases/latest), Docker images on [Docker Hub](https://hub.docker.com/r/victoriametrics/victoria-logs/) and [Quay](https://quay.io/repository/victoriametrics/victoria-logs), [Source code](https://github.com/VictoriaMetrics/VictoriaLogs).
@@ -441,7 +441,7 @@ The setup consists of the following components:
 - **[vmauth](https://docs.victoriametrics.com/victoriametrics/vmauth/#load-balancing)**: query logs via `vmauth` - it balances incoming queries among available VictoriaLogs instances,
   and automatically re-routes requests to healthy backends if some of the instances are temporarily unavailable.
 
-![VictoriaLogs Single-Node Instance High-Availability schema](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/ha-victorialogs-single-node.webp)
+![VictoriaLogs Single-Node Instance High-Availability schema](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/a7001ac416483b5ca96347edd33bfc502e31ce3f/docs/victorialogs/ha-victorialogs-single-node.webp)
 
 Here are the working examples of HA configuration for VictoriaLogs using Docker Compose:
 
@@ -472,6 +472,7 @@ The following steps must be performed to make a backup of the given `YYYYMMDD` p
 3. To remove the snapshot with `/internal/partition/snapshot/delete?path=<path-to-snapshot>` endpoint.
    See also [other ways to remove snapshots](https://docs.victoriametrics.com/victorialogs/#how-to-remove-snapshots).
    It is important to remove unneeded snapshots in order to free up storage space.
+   The number of existing snapshots is exposed via the `vl_snapshots` [metric](https://docs.victoriametrics.com/victorialogs/metrics/#vl_snapshots).
 
 The following steps must be performed for restoring the partition data from backup:
 
@@ -689,6 +690,8 @@ See the docs at https://docs.victoriametrics.com/victorialogs/
   -futureRetention value
      Log entries with timestamps bigger than now+futureRetention are rejected during data ingestion; see https://docs.victoriametrics.com/victorialogs/#retention
      The following optional suffixes are supported: s (second), h (hour), d (day), w (week), M (month), y (year). If suffix isn't set, then the duration is counted in months (default 2d)
+  -healthcheck
+     Whether to check that the running process accepts connections at -httpListenAddr and exit. The exit code is non-zero if the check fails. This is useful for Docker HEALTHCHECK in images without curl or wget. Pass the same -httpListenAddr as the checked process has
   -http.connTimeout duration
      Incoming connections to -httpListenAddr are closed after the configured timeout. This may help evenly spreading load among a cluster of services behind TCP-level load balancer. Zero value disables closing of incoming connections (default 2m0s)
   -http.disableCORS
@@ -829,6 +832,8 @@ See the docs at https://docs.victoriametrics.com/victorialogs/
   -nativeinsert.maxRequestSize size
      The maximum size in bytes of a single request, which can be accepted at /insert/native and /insert/multitenant/native HTTP endpoints
      Supports the following optional suffixes for size values: KB, MB, GB, TB, KiB, MiB, GiB, TiB (default 67108864)
+  -opentelemetry.consistentPrefix
+     Whether to prefix the names of OpenTelemetry attributes and key-value log body fields with their source for the logs ingested via OpenTelemetry protocol. This prevents field name collisions and helps to align field names with VictoriaMetrics and VictoriaTraces; see https://docs.victoriametrics.com/victorialogs/data-ingestion/opentelemetry/#field-names
   -opentelemetry.maxRequestSize size
      The maximum size in bytes of a single OpenTelemetry request
      Supports the following optional suffixes for size values: KB, MB, GB, TB, KiB, MiB, GiB, TiB (default 67108864)
@@ -1131,15 +1136,15 @@ These flags are available only in [VictoriaLogs enterprise](https://docs.victori
 
 ```shellhelp
   -eula
-     Deprecated, please use -license or -licenseFile flags instead. By specifying this flag, you confirm that you have an enterprise license and accept the ESA https://victoriametrics.com/legal/esa/ . This flag is available only in Enterprise binaries. See https://docs.victoriametrics.com/victoriametrics/enterprise/
+     By specifying this flag, you accept the ESA https://victoriametrics.com/legal/esa/ . This flag is available only in Enterprise binaries. See https://docs.victoriametrics.com/victoriametrics/enterprise/
   -license string
-     License key for VictoriaMetrics Enterprise. See https://victoriametrics.com/products/enterprise/ . Trial Enterprise license can be obtained from https://victoriametrics.com/products/enterprise/trial/ . This flag is available only in Enterprise binaries. The license key can be also passed via file specified by -licenseFile command-line flag
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version.
   -license.forceOffline
-     Whether to enable offline verification for VictoriaMetrics Enterprise license key, which has been passed either via -license or via -licenseFile command-line flag. The issued license key must support offline verification feature. Contact info@victoriametrics.com if you need offline license verification. This flag is available only in Enterprise binaries
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version.
   -licenseFile string
-     Path to file with license key for VictoriaMetrics Enterprise. See https://victoriametrics.com/products/enterprise/ . Trial Enterprise license can be obtained from https://victoriametrics.com/products/enterprise/trial/ . This flag is available only in Enterprise binaries. The license key can be also passed inline via -license command-line flag
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version.
   -licenseFile.reloadInterval duration
-     Interval for reloading the license file specified via -licenseFile. A non-positive value disables periodic and SIGHUP-triggered reloads of -licenseFile. See https://victoriametrics.com/products/enterprise/ . This flag is available only in Enterprise binaries (default 1h0m0s)
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version. (default 1h0m0s)
   -mtls array
      Whether to require valid client certificate for https requests to the corresponding -httpListenAddr . This flag works only if -tls flag is set. See also -mtlsCAFile . This flag is available only in Enterprise binaries. See https://docs.victoriametrics.com/victoriametrics/enterprise/
      Supports array of values separated by comma or specified via multiple flags.

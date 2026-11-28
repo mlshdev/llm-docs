@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/remote-jobs.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/remote-jobs.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/peers/remote-jobs.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/peers/remote-jobs.mdx)
 
 # Remote Jobs
 
@@ -45,7 +45,7 @@ Remote Jobs are designed for situations where you need diagnostics from a peer b
 - **Supporting non-technical users** - An end-user reports connectivity issues on their laptop. Instead of walking them through terminal commands, you trigger a debug bundle directly from the Dashboard and get the logs you need.
 - **Troubleshooting headless infrastructure** - A routing peer running on a cloud VM or IoT device has intermittent issues. You collect a debug bundle remotely without SSH-ing into the machine or disrupting its workload.
 - **Investigating intermittent problems** - A peer experiences brief connectivity drops. You enable **Bundle Duration** to have the peer collect logs over a time window, capturing the issue as it happens rather than after the fact.
-- **Sharing diagnostics with support** - You need to file a bug report or support request. A single remote job produces an anonymized bundle with an upload key you can paste directly into a GitHub Issue or Slack thread.
+- **Sharing diagnostics with support** - You need to file a bug report or support request. Enable **Anonymize** before creating the job if you plan to share the upload key in a public GitHub Issue, Slack thread, or Discord thread.
 - **Fleet-wide diagnostics via API** - You script debug bundle collection across multiple peers using the API, making it easy to gather logs during an incident or a scheduled health check without manual intervention.
 
 ## Job Types
@@ -66,7 +66,7 @@ The Debug Bundle job remotely collects diagnostic information from a peer, inclu
 
 **Result:**
 
-On success, the job returns an **upload key** that can be used to retrieve the debug bundle. Share this key with NetBird support via GitHub Issues, Slack, or your support channel.
+On success, the job returns an **upload key** that can be used to retrieve the debug bundle. Share this key with NetBird support via GitHub Issues, Slack, Discord, or your support channel. Post the key in a public channel only if **Anonymize** was enabled for the job.
 
 ## Using the Dashboard
 
@@ -82,7 +82,7 @@ On success, the job returns an **upload key** that can be used to retrieve the d
    - Toggle **Anonymize Log Data** to strip sensitive information
 6. Click **Create Debug Bundle**
 
-![create debug bundle modal](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/remote-jobs/debug-bundle.png)
+![create debug bundle modal](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/remote-jobs/debug-bundle.png)
 
 > **Note**
 >
@@ -98,7 +98,7 @@ The **Remote Jobs** tab on the peer detail page shows all jobs for that peer, so
 - **Parameters** - Hover to view the full parameter configuration
 - **Output** - On success, the result (e.g., upload key with copy button). On failure, the error reason.
 
-![remote job history table](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/remote-jobs/remote-job-history.png)
+![remote job history table](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/remote-jobs/remote-job-history.png)
 
 ## Using the API
 

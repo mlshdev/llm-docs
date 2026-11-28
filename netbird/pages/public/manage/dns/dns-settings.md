@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/dns/dns-settings.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/dns/dns-settings.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/dns/dns-settings.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/dns/dns-settings.mdx)
 
 # DNS Settings
 
@@ -42,11 +42,11 @@ netbird up --disable-dns=false
 
 ### Disable DNS Management for a Group
 
-1. Go to **DNS** → **DNS Settings**
+1. Go to **Networking** → **DNS** → **DNS Settings**
 2. Click the groups selection box and select existing groups, or type a new group name and press enter to create one inline
 3. Click **Save Changes**
 
-![DNS settings](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/netbird-dns-settings.png)
+![DNS settings](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/dns/netbird-dns-settings.png)
 
 > **Note**
 >
@@ -54,7 +54,7 @@ netbird up --disable-dns=false
 
 ### Re-enable DNS Management
 
-1. Go to **DNS** → **DNS Settings**
+1. Go to **Networking** → **DNS** → **DNS Settings**
 2. Remove the group from the disabled list
 3. Click **Save Changes**
 

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/dns/internal-dns-servers.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/dns/internal-dns-servers.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/dns/internal-dns-servers.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/dns/internal-dns-servers.mdx)
 
 # Internal DNS Servers
 
@@ -29,7 +29,7 @@ This means the routing peer must be able to resolve the domain. If it can't — 
 
 To fix this, add the **routing peer's group** to the internal Nameserver's distribution groups — along with any client groups that resolve these names directly (Active Directory clients always do):
 
-1. Go to **DNS** → **Nameservers**
+1. Go to **Networking** → **DNS** → **Nameservers**
 2. Edit your internal DNS nameserver (or create one if it doesn't exist)
 3. Under **Domains**, ensure your internal domains are listed (e.g., `corp.local`)
 4. Add the **routing peer's group** — plus any client groups that resolve these names directly — to the **Distribution Groups**
@@ -45,19 +45,19 @@ This ensures the routing peer receives the nameserver configuration and can reso
 
 To resolve internal domains through NetBird, create a **match domain** Nameserver pointing to your internal DNS server:
 
-1. Go to **DNS** → **Nameservers** → **Add Nameserver**
+1. Go to **Networking** → **DNS** → **Nameservers** → **Add Nameserver**
 2. Choose **Custom DNS**
 
-![Add nameserver](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/netbird-nameserver-add-button.png)
+![Add nameserver](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/dns/netbird-nameserver-add-button.png)
 
 3. Add the IP addresses of your internal DNS servers (e.g., `192.168.0.32`)
 4. Select the **Distribution Groups** — the peer groups that should use this nameserver
 
-![Custom DNS provider](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/netbird-nameserver-custom.png)
+![Custom DNS provider](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/dns/netbird-nameserver-custom.png)
 
 5. Under **Domains**, add a **Match Domain** and enter your internal domains (e.g., `corp.local`, `company.internal`)
 
-![Add match domain](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/netbird-nameserver-add-domain.png)
+![Add match domain](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/dns/netbird-nameserver-add-domain.png)
 
 6. Save the nameserver
 
@@ -73,7 +73,7 @@ If your internal DNS server is on a private network (not directly reachable by p
 
 **Create a Network Resource** so peers can reach the DNS server through the routing peer:
 
-1. Go to **Network Routing** → **Networks** → **Add Network**
+1. Go to **Networking** → **Network Routing** → **Networks** → **Add Network**
 2. Add a resource with the DNS server's IP (e.g., `192.168.0.32/32`)
 3. Assign the resource to a group (e.g., "Internal DNS")
 4. Add the routing peer that can access the private network
@@ -147,7 +147,7 @@ If you are migrating from a VPN that pushed your internal DNS servers for everyt
 
 **Match domain (internal)**: Same servers. Add match domain `company.internal`. Enable search domains.
 
-![Two nameserver groups pointing at the same internal DNS servers: one primary with no match domains, one with match domain company.internal and search domains enabled](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/dns/nameservers-route-all-internal.png)
+![Two nameserver groups pointing at the same internal DNS servers: one primary with no match domains, one with match domain company.internal and search domains enabled](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/dns/nameservers-route-all-internal.png)
 
 Result:
 
@@ -179,7 +179,7 @@ Result: Uses DNS2 (more specific)
 
 ### Editing
 
-1. Navigate to **DNS** → **Nameservers**
+1. Navigate to **Networking** → **DNS** → **Nameservers**
 2. Click the nameserver to edit
 3. Modify settings and click **Save**
 
@@ -226,7 +226,7 @@ We do not recommend using Domain Controllers as routing peers. If you must, you 
 To configure this:
 
 1. Create a dedicated group for your Domain Controllers (e.g., "Domain Controllers")
-2. Go to **DNS** → **DNS Settings**
+2. Go to **Networking** → **DNS** → **DNS Settings**
 3. Add the Domain Controller group to **Disable DNS management for these groups**
 4. Save Changes
 

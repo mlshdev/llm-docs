@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/migration/enable-reverse-proxy.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/migration/enable-reverse-proxy.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/migration/enable-reverse-proxy.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/migration/enable-reverse-proxy.mdx)
 
 # Migration Guide: Enable Reverse Proxy Feature
 
@@ -70,6 +70,22 @@ cp ../*.env . 2>/dev/null || echo "No .env files found"
 ### Step 2: Generate a proxy access token
 
 The proxy authenticates with the management server using an access token. Generate one using the server CLI.
+
+> **Warning**
+>
+> This applies only if you upgraded the combined container (`netbirdio/netbird-server`) with `migrate-to-enterprise.sh`, which migrates only combined deployments; otherwise, use the commands below as shown. If the script moved your store from SQLite to PostgreSQL, `config.yaml` still points at the old SQLite store, and a token created with `--config /etc/netbird/config.yaml` goes into that store: the proxy is refused with `invalid token`. Before creating the token, check which config file the server runs with:
+>
+> ```bash
+> docker top netbird-server -efww
+> ```
+>
+> The `netbird-server` line shows the command the server is running, with every path already filled in, also when a script starts it. The token must go into the store the running server uses, which is set in the config file whose path follows the last `--config` on that line (a later `--config` overrides an earlier one). If that file is `/etc/netbird/config.yaml`, use the commands below unchanged. If it is another file, such as `/etc/netbird/config.yaml.enterprise`, use that path in the `create`, `list` and `revoke` commands below. For `create`:
+>
+> ```bash
+> docker exec -it netbird-server \
+>   /go/bin/netbird-server --config /etc/netbird/config.yaml.enterprise admin token create \
+>   --name "my-proxy"
+> ```
 
 **Combined container** (`netbirdio/netbird-server`):
 
@@ -300,6 +316,43 @@ traefik:
 
 Apply both with `docker compose up -d proxy traefik`. The proxy's main port stays `8443`, which an unprivileged process can bind on the host. An L4 listen port below `1024` needs the host's unprivileged port floor lowered first; see [Bring Your Own Proxy](https://docs.netbird.io/manage/reverse-proxy/bring-your-own-proxy#expose-tcp-and-udp-services).
 
+### Enabling peer-to-peer connectivity
+
+The proxy runs an embedded NetBird client to reach your peers. Like any NetBird client, it discovers its public address through STUN. If no STUN server is reachable, or the STUN server cannot see the proxy's public address (for example, when it runs in an adjacent container on the same host), the proxy only advertises its internal address and peers fall back to a relay. `NB_PROXY_EXTERNAL_IP_MAP` exists for this case: it tells the proxy which public address to advertise instead.
+
+Services keep working through the relay, so the failure is easy to miss. On a peer, `netbird status -d` shows the proxy's peer entry with `Connection type: Relayed` instead of `P2P`. See [Troubleshooting relayed connections](https://docs.netbird.io/help/troubleshooting-relayed-connections) for how to read this output.
+
+To let peers establish direct peer-to-peer connections to the proxy:
+
+1. Set a fixed WireGuard port with `NB_PROXY_WG_PORT`.
+2. Forward that UDP port on your NAT or firewall to the proxy host, and publish it on the proxy container.
+3. Set `NB_PROXY_EXTERNAL_IP_MAP` to the public IP of the proxy host. Optionally map it to the internal IP or interface it belongs to, using the format `<public-IP>/<internal-IP-or-interface>`.
+
+In `proxy.env`:
+
+```bash
+NB_PROXY_WG_PORT=51830
+NB_PROXY_EXTERNAL_IP_MAP=203.0.113.5
+# Or map the public IP to an internal IP or interface:
+# NB_PROXY_EXTERNAL_IP_MAP=203.0.113.5/10.0.0.5
+# NB_PROXY_EXTERNAL_IP_MAP=203.0.113.5/eth0
+```
+
+In `docker-compose.yml`, publish the same UDP port on the `proxy` service (not needed with host networking):
+
+```yaml
+proxy:
+  # ...existing configuration...
+  ports:
+    - "51830:51830/udp"
+```
+
+Apply with `docker compose up -d proxy`.
+
+> **Note**
+>
+> A fixed `NB_PROXY_WG_PORT` only works with single-account deployments. Setting `NB_PROXY_EXTERNAL_IP_MAP` without a fixed, forwarded port has no effect.
+
 ### Step 4: Set up DNS records
 
 Create DNS records pointing to the server running your NetBird stack: one for the base proxy domain and one wildcard for service subdomains.
@@ -334,11 +387,15 @@ You should see log messages indicating the proxy has connected to the management
 Once the proxy connects to the management server:
 
 1. Open your NetBird dashboard
-2. Navigate to **Reverse Proxy** > **Services**
+2. Navigate to **Networking** > **Reverse Proxy** > **Services**
 3. Click **Add Service**
 4. In the domain selector, you should see your proxy domain (e.g., `proxy.example.com`) with a **Cluster** badge
 
 If the domain appears, the proxy is connected and ready. You can now [create your first service](https://docs.netbird.io/manage/reverse-proxy#quick-start).
+
+> **Note**
+>
+> To serve [Agent Network](https://docs.netbird.io/agent-network) from this proxy, add `NB_PROXY_PRIVATE=true` to `proxy.env` and recreate the proxy (`docker compose up -d proxy`). Your existing services keep working, apart from a short outage while the proxy restarts. To show the **Agent Network** menu (dashboard v2.90.0 or later), also add `NETBIRD_AGENT_NETWORK_ENABLED=true` to `dashboard.env` and run `docker compose up -d dashboard`. For the full setup, including a provider and a policy, see [Enable Agent Network for an Existing Self-Hosted Deployment](https://docs.netbird.io/agent-network/existing-self-hosted).
 
 ### Step 7 (optional): Enable CrowdSec IP reputation
 
@@ -468,7 +525,7 @@ netbird-proxy  | INFO proxy/internal/crowdsec/bouncer.go:187: CrowdSec bouncer s
 
 The bouncer re-polls the LAPI every 10 seconds. You can confirm from the CrowdSec side with `cscli bouncers list`, which shows a recent **Last API pull** for `netbird-proxy`.
 
-![CrowdSec IP Reputation Overview](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/maintenance/crowdsec-overview.png)
+![CrowdSec IP Reputation Overview](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/maintenance/crowdsec-overview.png)
 
 > **Warning**
 >
@@ -757,6 +814,7 @@ The proxy is configured through environment variables (each one maps to an equiv
 | `NB_PROXY_TRUSTED_PROXIES`               | No       | Comma-separated list of trusted upstream proxy CIDR ranges or individual IP addresses (e.g. `10.0.0.0/8,192.168.1.1`) used for PROXY protocol and forwarded client IPs.                                                                                                                                                                                                                                                                                                                      | -       |
 | `NB_PROXY_PROXY_PROTOCOL`                | No       | Enable PROXY protocol on TCP listeners to preserve client IPs behind L4 proxies.                                                                                                                                                                                                                                                                                                                                                                                                             | `false` |
 | `NB_PROXY_WG_PORT`                       | No       | WireGuard listen port (`0` = random). A fixed port only works with single-account deployments.                                                                                                                                                                                                                                                                                                                                                                                               | `0`     |
+| `NB_PROXY_EXTERNAL_IP_MAP`               | No       | Comma-separated external IPs the embedded NetBird client advertises as ICE candidates, each as `IP` or `IP/internal-IP-or-interface` (e.g. `203.0.113.5/10.0.0.5` or `203.0.113.5/eth0`). Same format as the client `--external-ip-map` flag. Only effective with a fixed, forwarded `NB_PROXY_WG_PORT`. See [Enabling peer-to-peer connectivity](#enabling-peer-to-peer-connectivity).                                                                                                      | -       |
 | `NB_PROXY_PRESHARED_KEY`                 | No       | Pre-shared key for the tunnel between the proxy and peers.                                                                                                                                                                                                                                                                                                                                                                                                                                   | -       |
 | `NB_PROXY_SUPPORTS_CUSTOM_PORTS`         | No       | Whether the proxy can bind arbitrary ports for UDP/TCP passthrough.                                                                                                                                                                                                                                                                                                                                                                                                                          | `true`  |
 | `NB_PROXY_REQUIRE_SUBDOMAIN`             | No       | Require a subdomain label in front of the cluster domain.                                                                                                                                                                                                                                                                                                                                                                                                                                    | `false` |

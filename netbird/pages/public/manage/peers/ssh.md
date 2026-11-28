@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/ssh.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/ssh.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/peers/ssh.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/peers/ssh.mdx)
 
 # SSH Access
 
@@ -85,7 +85,7 @@ On the machine you want to access via SSH, enable the NetBird SSH server.
 > re-enable SSH authentication without privileges. Only the change that could hand out
 > a shell needs them.
 
-![SSH server settings in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/ssh/ssh-client.png)
+![SSH server settings in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/ssh/ssh-client.png)
 
 **Using the CLI:**
 
@@ -139,7 +139,7 @@ Create an ACL policy to allow SSH access:
 
 4. Save the policy
 
-![netbird ssh access policy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/ssh/ssh-access-policy.png)
+![netbird ssh access policy](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/ssh/ssh-access-policy.png)
 
 ## Using NetBird SSH
 
@@ -327,7 +327,7 @@ When creating or editing an SSH policy in the Dashboard:
    - Add multiple local users per group as needed (e.g., `ashley`, `root`)
 7. Enable the policy and click **Continue**
 
-![netbird ssh fine grained access policy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/ssh/ssh-fine-grained-access-policy.png)
+![netbird ssh fine grained access policy](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/ssh/ssh-fine-grained-access-policy.png)
 
 **Example configuration:**
 
@@ -696,5 +696,5 @@ NetBird](https://netbird.io/pricing)
 
 - Make sure to [star us on GitHub](https://github.com/netbirdio/netbird)
 - Follow us [on X](https://x.com/netbird)
-- Join our Slack Channel
+- Join our Slack Channel or Discord server
 - NetBird [latest release](https://github.com/netbirdio/netbird/releases) on GitHub

@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/data-ingestion/Logstash.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/data-ingestion/Logstash.md)
+> Pinned source for VictoriaLogs v1.55.0: [docs/victorialogs/data-ingestion/Logstash.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/a7001ac416483b5ca96347edd33bfc502e31ce3f/docs/victorialogs/data-ingestion/Logstash.md)
 
 VictoriaLogs supports given below Logstash outputs:
 

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/maintenance/scaling/set-up-external-relays.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/maintenance/scaling/set-up-external-relays.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/maintenance/scaling/set-up-external-relays.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/maintenance/scaling/set-up-external-relays.mdx)
 
 # Set Up External Relay Servers
 
@@ -67,6 +67,10 @@ NB_STUN_PORTS=3478
 > **Note**
 >
 > Replace `relay-us.example.com` with your relay server's domain and `your-shared-secret-here` with the secret you generated.
+
+> **Note**
+>
+> If [peer authentication](https://docs.netbird.io/selfhosted/maintenance/peer-authentication) is enabled on your main server, add `NB_PEER_AUTH_PUBLIC_KEYS` with Management's public key to this file before the relay serves peers. Without it, the relay refuses every client that authenticates.
 
 The file holds the shared secret, so make it readable by root only:
 
@@ -158,6 +162,18 @@ WARN relay/server/server.go:78: Not starting QUIC listener: valid TLS config is 
 ```
 
 That is expected here. Peers connect over WebSocket, so neither the proxy nor the relay host needs 443/udp. The proxy needs 443/tcp, plus whatever it uses to obtain its own certificate, often 80/tcp. The relay host needs 3478/udp for STUN.
+
+## Running the Relay Behind Cloudflare's Proxy
+
+When the relay's DNS record is proxied by Cloudflare (the orange cloud), Cloudflare connects to the relay on 443 over HTTPS. Unlike the proxy in the previous section, it does not need the relay to serve plain HTTP: the relay keeps its own TLS. Set the zone's SSL/TLS encryption mode to **Full (strict)**. Compared with a relay on a DNS-only name:
+
+- **Peers connect over WebSocket only.** QUIC does not pass Cloudflare's proxy, so `netbird status -d` shows the relay as `Available via ws` and the relay logs no QUIC clients.
+- **Serve the certificate from files.** The relay cannot obtain its own Let's Encrypt certificate while the name is proxied: Cloudflare answers `525` and the relay logs `acme/autocert: missing certificate`. Use a certificate issued another way, for example through the DNS-01 challenge, which needs no connection to the host, and configure it as in [Alternative: TLS with Existing Certificates](#alternative-tls-with-existing-certificates).
+- **Move STUN off the proxied name.** STUN is UDP and does not pass the proxy, so `stun:<relay domain>:3478` stops answering. Create a DNS-only record for the relay host, such as `stun-us.example.com`, and in [Edit config.yaml](#edit-configyaml) list it in the main server's `stuns` as `uri: "stun:stun-us.example.com:3478"` instead of the relay's proxied name. A DNS-only record makes the relay host's address public. To keep it hidden, create no DNS-only record and list a public STUN server in `stuns`, such as `uri: "stun:stun.cloudflare.com:3478"`.
+- **The relay records Cloudflare's addresses, not the peers'.** Adding Cloudflare's ranges to the relay's `NB_TRUSTED_PROXIES` does not fix this, because the relay takes a peer's address from headers only when a request carries both `X-Real-Ip` and `X-Real-Port`, and peers' requests through Cloudflare do not carry both. Leave the ranges out.
+- **Lock the relay host to Cloudflare.** With the name proxied, the relay still answers anyone who connects to the relay host's own address, on 443/tcp and on 443/udp (QUIC), bypassing Cloudflare. In the firewall in front of the relay host, allow 443/tcp only from Cloudflare's ranges (the same method as [Close the direct path](https://docs.netbird.io/selfhosted/external-reverse-proxy#close-the-direct-path)) and block 443/udp. Peers already use WebSocket over 443/tcp (the first point), so blocking 443/udp does not affect them. If you created the DNS-only STUN record, keep 3478/udp open to all sources. The firewall still lets in anyone who points their own Cloudflare zone at the relay host's address, but the relay rejects any connection without a relay token issued by your NetBird server.
+
+If the main server is behind Cloudflare too, see [Behind Cloudflare's proxy](https://docs.netbird.io/selfhosted/external-reverse-proxy#behind-cloudflares-proxy).
 
 ## Alternative: TLS with Existing Certificates
 
@@ -298,6 +314,10 @@ server:
 > **Warning**
 >
 > The `secret` under `relays` and the `NB_AUTH_SECRET` on every relay server **must be identical**. If they differ, peers cannot use that relay.
+
+> **Note**
+>
+> `NB_AUTH_SECRET` on the main server's `netbird-server` container (NetBird v0.83.0 and later) is a different setting from `NB_AUTH_SECRET` on the relay servers: it replaces `server.authSecret`, not `relays.secret`. When `relays.secret` is set, the external relays use it and the main server's `NB_AUTH_SECRET` has no effect on them. When it is empty, they use `server.authSecret`, which `NB_AUTH_SECRET` can override.
 
 A mismatch is easiest to spot on the relay host, which logs `failed to handshake: ... invalid signature` for every rejected peer.
 

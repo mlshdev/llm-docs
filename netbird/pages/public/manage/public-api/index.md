@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/public-api/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/public-api/index.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/public-api/index.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/public-api/index.mdx)
 
 # Use service users and tokens to access NetBird's public API
 
@@ -20,14 +20,14 @@ The most common usage scenarios:
 
 ### Creating a service user
 
-To create a service user, you'll need to log in to your organization's account at <https://app.netbird.io> and navigate to the "Team" -> "Service Users" section of your account.
+To create a service user, log in to your organization's account at <https://app.netbird.io>, open **Users** in the sidebar, and select the **Service Users** tab.
 
-![service-user-overview](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/public-api/service-user-overview.png)
+![service-user-overview](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/public-api/service-user-overview.png)
 
-From there, you can create a new service user and specify a role that the user should have.
+Click **Create Service User** and specify a name and role for the service user.
 User role allows read-only access, use the admin for write access.
 
-![service-user-creation-popup](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/public-api/service-user-creation.png)
+![service-user-creation-popup](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/public-api/service-user-creation.png)
 
 > **Note**
 >
@@ -35,18 +35,18 @@ User role allows read-only access, use the admin for write access.
 
 ### Creating an access token
 
-To create an access token, you'll need to log in to your account and navigate to the "Team" section and look for your user or create a [service user](#service-users) to use for your API requests.
+To create an access token, open **Users** in the sidebar. On the **Users** tab, open your own user and select **Access Tokens**. For a [service user](#service-users), open it from the **Service Users** tab; its **Access Tokens** section appears directly. Click **Create Access Token**.
 
-![personal-access-token-overview](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/public-api/personal-access-token-overview.png)
+![personal-access-token-overview](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/public-api/personal-access-token-overview.png)
 
 From there, you can create a new token and specify expiration for the token. You won't be able to modify your token.
 
-![personal-access-creation-popup](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/public-api/personal-access-token-creation.png)
+![personal-access-creation-popup](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/public-api/personal-access-token-creation.png)
 
 After the token was generated successfully you will see a plain version of your token to copy and store in a secure place.
 Be aware that once you close the popup it is impossible to see the plain version of the token again as NetBird only stores a hashed version of the token.
 
-![personal-access-token-example](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/public-api/personal-access-token-example.png)
+![personal-access-token-example](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/public-api/personal-access-token-example.png)
 
 > **Note**
 >
@@ -74,3 +74,7 @@ curl https://api.netbird.io/api/users \
 ```
 
 With this header included, the NetBird API would authenticate your request using your personal access token and grant you access to the resources that your user has been authorized to.
+
+> **Note**
+>
+> The same token also works with the [NetBird MCP server](https://docs.netbird.io/manage/mcp-server), which lets AI agents such as Claude Code or Codex manage your account. See [Connect AI Clients](https://docs.netbird.io/manage/mcp-server/connect-clients).

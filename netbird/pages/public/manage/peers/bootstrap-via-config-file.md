@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/bootstrap-via-config-file.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/bootstrap-via-config-file.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/peers/bootstrap-via-config-file.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/peers/bootstrap-via-config-file.mdx)
 
 # Bootstrap peers via config file
 
@@ -190,7 +190,7 @@ For workloads where peers come and go — containers, autoscaling groups, short-
 netbird status --check startup && echo "registered" || echo "not registered yet"
 ```
 
-The Kubernetes example in [Deploy routing peers to a Kubernetes cluster](https://docs.netbird.io/use-cases/kubernetes/routing-peers-and-kubernetes#step-4-deploy-the-netbird-agent) wires all three checks into liveness, readiness, and startup probes — a good template for any container-based deployment.
+The Kubernetes example in [Deploy routing peers to a Kubernetes cluster](https://docs.netbird.io/use-cases/kubernetes/routing-peers-and-kubernetes#step-4-deploy-the-net-bird-client) wires all three checks into liveness, readiness, and startup probes — a good template for any container-based deployment.
 
 ### Parseable output
 

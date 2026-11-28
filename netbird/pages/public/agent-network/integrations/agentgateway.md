@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/integrations/agentgateway.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/integrations/agentgateway.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/agent-network/integrations/agentgateway.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/agent-network/integrations/agentgateway.mdx)
 
 # agentgateway
 
@@ -30,7 +30,7 @@ NetBird. The NetBird proxy sends it to agentgateway as an
 
 ## Connect agentgateway as a Provider
 
-1. Go to **Agent Network → Providers** and click **Connect Provider**.
+1. Go to **Agent Network → Agents → Providers** and click **Connect Provider**.
 2. Select **agentgateway**.
 3. Set **Upstream URL** to the private agentgateway proxy listener that the NetBird proxy
    can reach.
@@ -47,7 +47,7 @@ endpoint without receiving this key or the upstream providers' credentials.
 
 Agent Network denies requests until a policy authorizes them:
 
-1. Go to **Agent Network → Policies** and add a policy.
+1. Go to **Agent Network → Agents → Agent Policies** and add a policy.
 2. Select the source groups whose users or agents should reach agentgateway.
 3. Select the agentgateway provider as the destination.
 4. Optionally add [limits](https://docs.netbird.io/agent-network/policies/limits) and
@@ -90,7 +90,7 @@ user and group authorization with NetBird Agent Network policies.
 ## Verify the Integration
 
 Run requests from a NetBird peer covered by the policy. Replace `<your-endpoint>` with the
-endpoint shown on **Agent Network → Providers** and choose models configured on your
+endpoint shown on **Agent Network → Agents → Providers** and choose models configured on your
 agentgateway backends.
 
 An OpenAI request uses the normal OpenAI path and body:

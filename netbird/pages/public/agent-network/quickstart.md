@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/quickstart.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/quickstart.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/agent-network/quickstart.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/agent-network/quickstart.mdx)
 
 # NetBird Agent Network Quickstart
 
@@ -51,10 +51,10 @@ Whichever path you choose, you need:
 
 1. [Activate Agent Network on NetBird Cloud](https://app.netbird.io/peers?signup_source=netbird.ai):
    sign up, or sign in to your existing account.
-   - A **new account** opens in the focused Agent Network view, which hides the rest of the
-     dashboard. You can turn it off later in **Settings**; see
+   - A **new account** opens in the focused Agent Network view, which hides the **Networking**
+     section. You can turn it off later in **Settings**; see
      [Focused Dashboard View](https://docs.netbird.io/agent-network#focused-dashboard-view).
-   - An **existing account** keeps its dashboard and gains the **Agent Network** menu.
+   - An **existing account** keeps its dashboard and gains the collapsible **Agent Network** section. Expand **Agents** within it to find **Connect Agent**, **Providers**, and **Agent Policies**.
 2. Follow the guided setup. It walks you through the same steps this guide describes:
    1. **Connect your device**: install the NetBird client and connect it. See
       [Add Your Device to the Network](#add-your-device-to-the-network).
@@ -87,12 +87,16 @@ Once your first request goes through, continue at Verify in Usage & Logs.
 > This setup installs a minimal deployment with core functionality, using release candidate versions of the
 > platform. You can enable the full platform later.
 
+If you already run a self-hosted NetBird deployment, don't run the installation script on it: the
+script is for new deployments. Follow
+[Enable Agent Network for an Existing Self-Hosted Deployment](https://docs.netbird.io/agent-network/existing-self-hosted) instead.
+
 ### Self-Hosted Requirements
 
 #### Infrastructure
 
 - A Linux VM with at least **1 CPU** and **2 GB** of memory.
-- The VM must be publicly accessible on **TCP ports 80 and 443**, and **UDP port 3478**.
+- The VM must be publicly accessible on **TCP port 443** and **UDP port 3478**. **TCP port 80** does not need to be publicly reachable: the setup's built-in Traefik and the NetBird Proxy obtain their Let's Encrypt certificates over port 443 (the TLS-ALPN-01 challenge), so port 80 only redirects plain HTTP to HTTPS. Port 80 must still be free on the VM, because Traefik binds it.
 - A **public domain** that resolves to the VM's public IP (e.g. `netbird.example.com`),
   plus a **wildcard record** (e.g. `*.netbird.example.com`) so agent-network
   endpoints resolve.
@@ -130,7 +134,7 @@ and protected by a peer-to-peer encrypted WireGuard tunnel.
 2. Click **Add Peer** and download the NetBird client app for your device.
 3. Run the client app, click "Connect", and log in with your NetBird account when prompted
 
-![agent network connect](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/quickstart/agent-network-connect-device.png)
+![agent network connect](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/quickstart/agent-network-connect-device.png)
 
 You should now see your device in the peers list in the NetBird dashboard.
 
@@ -144,7 +148,7 @@ A **provider** is an upstream LLM service that NetBird routes requests to, such 
 OpenAI, Anthropic, any AI gateway, or a local model served by Ollama
 or vLLM.
 
-1. Go to **Agent Network > Providers** and click **Connect Provider**.
+1. Go to **Agent Network > Agents > Providers** and click **Connect Provider**.
 2. Select the provider, such as **Anthropic** if you use Claude Code.
 3. Paste the provider’s API key.
 4. *(Optional)* Set a list of allowed models and a custom token price.
@@ -155,7 +159,7 @@ The key never lives on the client.
 
 See [Providers](https://docs.netbird.io/agent-network/providers) for more details.
 
-![agent network add provider](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/quickstart/agent-network-add-provider.png)
+![agent network add provider](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/quickstart/agent-network-add-provider.png)
 
 > **Note**
 >
@@ -166,7 +170,7 @@ See [Providers](https://docs.netbird.io/agent-network/providers) for more detail
 
 You should now see your agent network endpoint above the **Providers** table.
 
-![agent network endpoint](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/quickstart/agent-network-endpoint.png)
+![agent network endpoint](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/quickstart/agent-network-endpoint.png)
 
 ## Configure Your Agent
 
@@ -180,7 +184,7 @@ injects the upstream provider key server-side.
 3. Copy the snippet and apply it. Claude Code reads `~/.claude/settings.json` and Codex
    reads `~/.codex/config.toml`.
 
-![NetBird Configure Your Agent modal showing Claude Code configuration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/integrations/agent-network-configure-agent-claude-code.png)
+![NetBird Configure Your Agent modal showing Claude Code configuration](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/integrations/agent-network-configure-agent-claude-code.png)
 
 ## Create a Policy
 
@@ -192,14 +196,14 @@ and budget limits and guardrails.
 If you set up a new NetBird Cloud account through the guided setup, it already created a
 starter policy for the **Users** group. Skip to the test request below.
 
-1. Go to **Team > Users** and add your user to a group, such as **Engineering**.
-2. Go to **Agent Network > Policies** and click **Add Policy**.
+1. Go to **Users** and add your user to a group, such as **Engineering**.
+2. Go to **Agent Network > Agents > Agent Policies** and click **Add Policy**.
 3. Select the **Source Group** you want to authorize.
 4. Choose the **Provider** that members of the group can access.
 5. *(Optional)* Set **token / budget limits** and attach **guardrails**.
 6. Save the policy.
 
-![agent network add policy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/quickstart/agent-network-add-policy.png)
+![agent network add policy](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/overview/agent-network-llm-policy.png)
 
 With the policy in place, the agent you configured above can now reach the provider.
 Run it as usual, or send a quick test request, using a model your provider allows:
@@ -216,4 +220,4 @@ curl https://<your-endpoint>/v1/messages \
 Open **Usage & Logs** to confirm the request was
 recorded with the caller identity, model, tokens, and cost.
 
-![agent network usage & logs](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/quickstart/agent-network-usage-and-logs.png)
+![agent network usage & logs](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/quickstart/agent-network-usage-and-logs.png)

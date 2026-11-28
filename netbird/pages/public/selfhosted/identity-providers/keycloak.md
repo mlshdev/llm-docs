@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/identity-providers/keycloak.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/identity-providers/keycloak.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/identity-providers/keycloak.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/identity-providers/keycloak.mdx)
 
 # Keycloak with NetBird Self-Hosted
 
@@ -12,6 +12,7 @@ Add Keycloak as an external IdP directly in the NetBird Management Dashboard. Th
 
 - NetBird self-hosted with embedded IdP enabled
 - Keycloak instance running with SSL
+- The NetBird server can reach Keycloak's issuer URL (for example `https://keycloak.example.com/realms/netbird`) and trusts Keycloak's certificate. If your organization's own certificate authority issued that certificate, see [Keycloak with a certificate from an internal CA](#keycloak-with-a-certificate-from-an-internal-ca).
 
 ### Step 1: Create Realm in Keycloak
 
@@ -19,12 +20,12 @@ Add Keycloak as an external IdP directly in the NetBird Management Dashboard. Th
 2. Hover over the realm dropdown in the top-left corner (where it shows `Master` or your current realm)
 3. Click **Create Realm**
 
-![Create realm](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/01_create-realm-keycloak.png)
+![Create realm](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/01_create-realm-keycloak.png)
 
 4. Fill in:
    - **Realm name**: `netbird`
 
-![Realm name](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/02_realm-name-keycloak.png)
+![Realm name](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/02_realm-name-keycloak.png)
 
 5. Click **Create**
 6. Verify that `netbird` is now selected in the realm dropdown
@@ -35,7 +36,7 @@ Add Keycloak as an external IdP directly in the NetBird Management Dashboard. Th
 2. Click **Users** (left-hand menu)
 3. Click **Create new user**
 
-![Create new user](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/03_create-user-keycloak.png)
+![Create new user](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/03_create-user-keycloak.png)
 
 4. Fill in:
    - **Username**: `netbird` (or your preferred username)
@@ -46,25 +47,25 @@ Add Keycloak as an external IdP directly in the NetBird Management Dashboard. Th
 8. Fill in the password and set **Temporary** to `Off`
 9. Click **Save**
 
-![User password](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/04_user-password-keycloak.png)
+![User password](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/04_user-password-keycloak.png)
 
 ### Step 3: Start Creating Client in Keycloak
 
 1. Click **Clients** → **Create client**
 
-![Create client](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/05_create-client-keycloak.png)
+![Create client](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/05_create-client-keycloak.png)
 
 2. Fill in the form:
    - **Client type**: `OpenID Connect`
    - **Client ID**: `netbird`
 
-![OpenID client ID](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/06_openid-clientid-keycloak.png)
+![OpenID client ID](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/06_openid-clientid-keycloak.png)
 
 3. Click **Next**
 4. On Capability config:
    - Enable **Client authentication**
 
-![Client authentication enabled](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/07_client-auth-on-keycloak.png)
+![Client authentication enabled](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/07_client-auth-on-keycloak.png)
 
 5. Click **Next**
 6. On Login settings page, **don't click Save yet** — you'll add the redirect URI in Step 4
@@ -87,7 +88,7 @@ Add Keycloak as an external IdP directly in the NetBird Management Dashboard. Th
 
 6. NetBird will display a **Redirect URL** — **copy this URL** (but don't click **Add Provider** yet)
 
-![Copy redirect URL from NetBird](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/08_copy-redirect-url-keycloak.png)
+![Copy redirect URL from NetBird](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/08_copy-redirect-url-keycloak.png)
 
 ### Step 5: Complete Client Configuration in Keycloak
 
@@ -98,7 +99,7 @@ Add Keycloak as an external IdP directly in the NetBird Management Dashboard. Th
 3. Click **Save**
 4. Go to the **Credentials** tab and copy the **Client secret** — you'll need this for Step 6
 
-![Copy client secret](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/09_copy-client-secret-keycloak.png)
+![Copy client secret](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/09_copy-client-secret-keycloak.png)
 
 ### Step 6: Complete NetBird Setup
 
@@ -106,7 +107,7 @@ Add Keycloak as an external IdP directly in the NetBird Management Dashboard. Th
 2. In the identity provider form, paste the **Client secret** you copied from Step 5
 3. Click **Add Provider**
 
-![NetBird Keycloak configuration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/10_netbird-config-keycloak.png)
+![NetBird Keycloak configuration](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/10_netbird-config-keycloak.png)
 
 ### Step 7: Test the Connection
 
@@ -115,7 +116,7 @@ Add Keycloak as an external IdP directly in the NetBird Management Dashboard. Th
 3. Click it and authenticate with the user credentials you created in Step 2
 4. You should be redirected back to NetBird and logged in
 
-![NetBird Keycloak login](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/11_netbird-keycloak-login.png)
+![NetBird Keycloak login](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/11_netbird-keycloak-login.png)
 
 > **Note**
 >
@@ -135,7 +136,7 @@ To sync Keycloak groups with NetBird, you need to create a client scope with a g
    - **Include in token scope**: `On`
 4. Click **Save**
 
-![Create client scope](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/jwt_create-client-scope.png)
+![Create client scope](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/jwt_create-client-scope.png)
 
 #### Step 2: Add Group Membership Mapper
 
@@ -152,7 +153,7 @@ To sync Keycloak groups with NetBird, you need to create a client scope with a g
    - **Add to token introspection**: `Off`
 5. Click **Save**
 
-![Add group mapper](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/jwt_add-group-mapper.png)
+![Add group mapper](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/jwt_add-group-mapper.png)
 
 #### Step 3: Add Client Scope to NetBird Client
 
@@ -161,7 +162,7 @@ To sync Keycloak groups with NetBird, you need to create a client scope with a g
 3. Click **Add client scope**
 4. Select **groups** and add it as **Default**
 
-![Add client scope](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/jwt_add-client-scope.png)
+![Add client scope](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/self-hosted/keycloak/jwt_add-client-scope.png)
 
 #### Step 4: Create Groups and Assign Users
 
@@ -197,7 +198,47 @@ For detailed instructions on the standalone setup, see the [Keycloak SSO with Ne
 
 ***
 
+## Keycloak with a certificate from an internal CA
+
+When you add Keycloak, and again every time the NetBird server starts, the server fetches Keycloak's OpenID configuration from the issuer URL, not through your browser. If your organization's own certificate authority (an internal CA) issued Keycloak's certificate, the server does not trust that certificate, even when every browser in your organization does. You then see one of these errors:
+
+- Adding Keycloak fails with `identity provider issuer is unreachable: … x509: certificate signed by unknown authority`.
+- A provider that worked before shows `Connector failed to initialize` when you click its button on the login page. This happens when the `netbird-server` container is recreated without the CA mount, for example after `docker-compose.yml` was replaced.
+
+Only the `netbird-server` container needs your CA file; the dashboard and the other containers do not. The CA file adds to the public CAs the server already trusts, so connections to public services, such as the license check on a commercial license, keep working.
+
+1. On the NetBird host, check which certificates Keycloak sends:
+
+   ```bash
+   openssl s_client -connect keycloak.example.com:443 -servername keycloak.example.com -showcerts </dev/null 2>/dev/null | grep -E '^ *[0-9] s:'
+   ```
+
+   Lines `0 s:`, `1 s:` and so on are the certificates Keycloak sends, its own first; only `0 s:` means it sends no intermediate CA. The CA file needs only your root CA certificate if Keycloak sends every intermediate CA between its certificate and the root, or if your root CA signed Keycloak's certificate directly. Otherwise, either configure Keycloak with a certificate chain file of its own certificate followed by every intermediate CA (preferred; the CA file then holds only the root), or add each intermediate CA certificate that Keycloak does not send to the CA file, after the root.
+
+2. Save the CA file in PEM format on the NetBird host, for example as `/etc/netbird/certs/internal-ca.pem`.
+
+3. In `docker-compose.override.yml`, in the same directory as `docker-compose.yml` (create it if it does not exist), mount the CA file into `/etc/ssl/certs/` of `netbird-server`. Docker Compose reads the override file automatically, so the mount stays in place when you replace `docker-compose.yml`; if you run `docker compose -f`, also pass `-f docker-compose.override.yml`. If the override file already has a `netbird-server` service, add the line under its `volumes:` key:
+
+   ```yaml
+   services:
+     netbird-server:
+       volumes:
+         - /etc/netbird/certs/internal-ca.pem:/etc/ssl/certs/internal-ca.pem:ro
+   ```
+
+4. Recreate the container with `docker compose up -d netbird-server`. Then add Keycloak again if adding it failed, or sign in with the **Keycloak** button if an existing provider stopped working.
+
+> **Note**
+>
+> Mounting the CA file into `/usr/local/share/ca-certificates/` has no effect: the container does not run `update-ca-certificates`.
+
 ## Troubleshooting
+
+### "identity provider issuer is unreachable" or "Connector failed to initialize" error
+
+- `Connector failed to initialize` on the login page: the server could not load Keycloak's OpenID configuration. It tries again each time you click the button, so a fix outside the NetBird host, such as a firewall rule, needs no restart. The cause is in the latest `failed to open connector` line of `docker compose logs netbird-server`.
+- If that line, or the error when adding Keycloak, includes `x509: certificate signed by unknown authority`: the NetBird server does not trust Keycloak's certificate. See [Keycloak with a certificate from an internal CA](#keycloak-with-a-certificate-from-an-internal-ca).
+- If that line or the error includes `context deadline exceeded`: the NetBird server cannot reach Keycloak's issuer URL. Allow HTTPS from the NetBird host to Keycloak's host name and port.
 
 ### "Invalid redirect URI" error
 

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/control-center/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/control-center/index.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/control-center/index.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/control-center/index.mdx)
 
 # Visualize Remote Access with Control Center
 
@@ -26,7 +26,7 @@ Control Center is a topological view in the NetBird dashboard that visualizes wh
 
 Use this to understand what a specific machine can reach.
 
-![Control Center Peer View](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/control-center/control-center-peer-view.png)
+![Control Center Peer View](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/control-center/control-center-peer-view.png)
 
 - Click the peer node, then search or choose another peer from the dropdown to switch focus.
 - The graph shows the peer's access control policy nodes and the reachable resources.
@@ -36,7 +36,7 @@ Use this to understand what a specific machine can reach.
 
 Use this view to see what resources a specific user can access.
 
-![Control Center User View](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/control-center/control-center-user-view.png)
+![Control Center User View](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/control-center/control-center-user-view.png)
 
 - Click the user node, then search or choose another user from the dropdown to switch focus.
 - The graph shows the users peers, access control policy nodes and the reachable resources.
@@ -47,7 +47,7 @@ Use this view to see what resources a specific user can access.
 
 Use this to validate team-level access.
 
-![Control Center Groups View](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/control-center/control-center-groups-view.png)
+![Control Center Groups View](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/control-center/control-center-groups-view.png)
 
 - Click a group node, then search or choose from the dropdown to switch groups.
 - The layout shows which resources that group can reach and via which policies.
@@ -61,7 +61,7 @@ Common checks:
 
 Use this to see who can access resources in your routed [networks](https://docs.netbird.io/manage/networks).
 
-![Control Center Network View](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/control-center/control-center-network-view.png)
+![Control Center Network View](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/control-center/control-center-network-view.png)
 
 - Toggle **All Networks** or select a specific network.
 - The network node shows its resources. Connecting lines display the port allowed by the policy and which groups have access.
@@ -75,11 +75,11 @@ When [Agent Network](https://docs.netbird.io/agent-network) is enabled for your 
 
 When the graph gets busy, focus a single node to see only what is connected to it. Right-click a node and choose **Focus**, or press `F` and then select the node.
 
-![The right-click menu on a policy node with the Focus option highlighted](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/control-center/control-center-focus-context-menu.png)
+![The right-click menu on a policy node with the Focus option highlighted](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/control-center/control-center-focus-context-menu.png)
 
 Everything unrelated dims, leaving only the focused node and its connections highlighted. A "Focusing on" pill at the top of the canvas shows what is in focus; close it to return to the full view.
 
-![Focus Mode active on a group node, with unrelated nodes dimmed and the Focusing on pill shown at the top of the canvas](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/control-center/control-center-focus-active.png)
+![Focus Mode active on a group node, with unrelated nodes dimmed and the Focusing on pill shown at the top of the canvas](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/control-center/control-center-focus-active.png)
 
 ## Edit Nodes
 
@@ -92,7 +92,7 @@ For changes that span several components, **Draft Mode** lets you stage the whol
 
 ## Quick Start
 
-1. Open **Control Center** in the NetBird dashboard.
+1. Open **Control Center** at the top of the dashboard sidebar.
 2. Pick a tab: **Peers**, **Users**, **Groups**, or **Networks**.
 3. Click a node to focus, then follow the policy chips to the target resource.
 4. Click a policy chip to edit it, then save. The graph updates right away.
@@ -111,3 +111,4 @@ For changes that span several components, **Draft Mode** lets you stage the whol
 - [Networks and routing peers](https://docs.netbird.io/manage/networks)
 - [MSP portal overview](https://docs.netbird.io/manage/for-partners/msp-portal)
 - [Agent Network in Control Center](https://docs.netbird.io/agent-network/control-center)
+- [Ask and build with the NetBird Assistant](https://docs.netbird.io/manage/assistant)

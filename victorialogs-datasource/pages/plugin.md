@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs datasource for Grafana v0.34.0: [src/README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/src/README.md)
+> Pinned source for VictoriaLogs datasource for Grafana v0.35.0: [src/README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bc4e680865e29fdde604cecf56ddd7b31d237150/src/README.md)
 
 # VictoriaLogs datasource for Grafana
 
@@ -6,7 +6,7 @@ The [VictoriaLogs Grafana plugin](https://grafana.com/grafana/plugins/victoriame
 to query, visualize, and interact with [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/),
 a high-performance log storage and processing system.
 
-![Grafana Dashboard Screenshot](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/dashboard.png)
+![Grafana Dashboard Screenshot](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/dashboard.png)
 
 ## Capabilities
 
@@ -15,6 +15,8 @@ a high-performance log storage and processing system.
 3. Show live-streaming logs.
 4. Build dashboards and setup alerts.
 5. Use Ad Hoc filters.
+
+The plugin requires VictoriaLogs `v1.54.0` or newer: see [VictoriaLogs compatibility](https://github.com/VictoriaMetrics/victorialogs-datasource/tree/main#victorialogs-compatibility) for what each feature needs and how the plugin reports an unsupported version.
 
 Try it at [VictoriaMetrics playground](https://play-grafana.victoriametrics.com/d/be5zidev72m80f/k8s-logs-demo)!
 
@@ -28,7 +30,7 @@ For installation options in Docker or Kubernetes refer to [these docs](https://g
 VictoriaLogs datasource supports [multitenancy](https://docs.victoriametrics.com/victorialogs/#multitenancy) via `multitenancyHeaders` datasource configuration option.
 To configure it, set AccountID and ProjectID in the `multitenancyHeaders` section.
 
-![Multitenancy configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/multitenancy_configuration.png)
+![Multitenancy configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/multitenancy_configuration.png)
 
 ### Manual configuration via UI
 
@@ -130,7 +132,7 @@ and LogsQL examples [here](https://docs.victoriametrics.com/victorialogs/logsql-
 
 A visual alternative to the LogsQL code editor: build queries by chaining typed pipes through an interactive UI with field/value dropdowns and keyboard navigation.
 
-![Query builder](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/query_builder.gif)
+![Query builder](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/query_builder.gif)
 
 #### Switching between Builder and Code
 
@@ -179,21 +181,21 @@ See the [LogsQL pipes reference](https://docs.victoriametrics.com/victorialogs/l
 For using [Logs panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/logs/)
 switch to `Raw Logs` query type:
 
-![Logs panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/panel_logs.png)
+![Logs panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/panel_logs.png)
 
 ### Time series panel
 
 For using [Time series panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/time-series/)
 switch to `Range` query type:
 
-![Time series panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/panel_time_series.png)
+![Time series panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/panel_time_series.png)
 
 ### Stats panel
 
 For using [Stats panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/stat/)
 switch to `Instant` query type:
 
-![Stats panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/panel_stat.png)
+![Stats panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/panel_stat.png)
 
 For enabling background visualization switch to `Range` query type.
 
@@ -202,11 +204,11 @@ For enabling background visualization switch to `Range` query type.
 For using [Table panel](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/table/)
 switch to `Raw Logs` query type:
 
-![Table panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/panel_table.png)
+![Table panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/panel_table.png)
 
 And apply `Transformations` by labels:
 
-![Transformations](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/panel_table_transformation.png)
+![Transformations](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/panel_table_transformation.png)
 
 ### Heatmap panel
 
@@ -220,7 +222,7 @@ Query example:
   | stats histogram(duration)
 ```
 
-![Heatmap panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/panel_heatmap.png)
+![Heatmap panel](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/panel_heatmap.png)
 
 ### Log level rules
 
@@ -291,7 +293,7 @@ VictoriaLogs datasource supports [variables](https://grafana.com/docs/grafana/la
 
 You can use [Ad Hoc filters](https://grafana.com/docs/grafana/latest/visualizations/dashboards/variables/add-template-variables/#add-ad-hoc-filters) to filter logs in Dashboards.
 By default, ad-hoc filters are applied to all panels in the Dashboard as the [extra\_filters](https://docs.victoriametrics.com/victorialogs/querying/#extra-filters) query parameter. If you navigate to the Explore page from the Dashboard, ad-hoc filters are also applied there.
-![Ad hoc filters](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/extra_filters_explore_page.png)
+![Ad hoc filters](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/extra_filters_explore_page.png)
 
 ##### Ad-hoc filters mode
 
@@ -308,7 +310,7 @@ Each panel exposes an **Ad-hoc filters** selector in the Query Editor *Options* 
 If you want to filter logs by a specific word or phrase, you can use [word filter](https://docs.victoriametrics.com/victorialogs/logsql/#word-filter).
 To do this, you need to create a [text box variable](https://grafana.com/docs/grafana/latest/visualizations/dashboards/variables/add-template-variables/#add-a-text-box-variable).
 After it is created, you need to add this to the query: `<q> | $word_filter`. Type any word or phrase you want to look for. Set to "\*" to not filter. By default, the given word is searched in the \_msg field.
-![Word filter](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/word_filter.png)
+![Word filter](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/word_filter.png)
 
 #### Variable interpolation
 
@@ -336,33 +338,45 @@ VictoriaLogs datasource supports automatic variable interpolation with the follo
 - `{tag=$var}` → `{tag in(...)}`
 - `{field!=$var}` → `{field not_in(...)}`
 
-**5. Restrictions:**
+**5. Regexp Filters:**
+
+- `field:~$var` and `field:~"$var"` → `field:~"(v1|...|vN)"`, the same for the negative `field:!~$var`
+- Values are escaped as a LogsQL string, so the variable value is used as the regexp as is: type `\d+`, not `\\d+`
+- Use `field:~"(${var:raw})"` to insert the value without escaping
+
+**6. Double-quoted Strings:**
+
+- A value put inside double quotes (`field:"$var"`, `field:="$var"`, `{tag="$var"}`) is escaped as a LogsQL string, so it cannot end the string
+- A value used without quotes (`field:$var`, `$var`) or inside backticks is inserted as is
+- Use `field:"${var:raw}"` to insert the value without escaping
+
+**7. Restrictions:**
 
 - Avoid using variables as values in regexp filters (e.g., `field:~$var`), in this case, you will get a warning message
 - Invalid usage will show an error message
 
 ## Incremental hits loading
 
-In Explore, `Raw Logs` queries and their logs volume histogram are loaded incrementally by default:
+> **Note:** available since [v0.33.0](https://github.com/VictoriaMetrics/victorialogs-datasource/releases/tag/v0.33.0).
 
-- the logs are requested first; the histogram request starts once the logs have answered;
-- when VictoriaLogs has not started answering the histogram request within 3 seconds, the request is cancelled and
-  the histogram is loaded bar by bar from the newest to the oldest, so a specific moment can be zoomed into before
-  the whole range is loaded;
-- when VictoriaLogs has not started answering the logs request itself within 3 seconds, it is cancelled and the
-  histogram is loaded bar by bar right away; the logs are requested again for the whole range once the histogram
-  is complete (or stopped).
-  With the **Logs volume** panel collapsed the logs request simply keeps running.
+In Explore mode, when incremental hits loading is enabled, the `Raw Logs` and `Logs volume` requests switch to bar-by-bar loading if a request has not started responding within 3 seconds.
+The incremental loading is following these rules:
 
-While the histogram is loaded bar by bar, a status row in the query editor shows the progress
-(`Logs volume is loading incrementally: 12 / 28 bars`) with **Pause**/**Resume** and **Stop** controls. **Pause** lets the bar in flight finish
-and holds the next one; **Stop** keeps the bars loaded so far and lets the logs load, unlike the Explore **Cancel**
-button which discards everything. Zooming into the histogram while it loads cancels the current requests and starts
-over for the new time range.
+- the `Logs` panel is queried first; the `Logs volume` histogram panel is executed after;
+- if VictoriaLogs didn't answer within 3 seconds, plugin cancels the request and switches to incremental mode
+- in incremental mode, the volume bars are loaded one-by-one, in the sort order of the logs. At any moment, user can
+  click on a bar to drilldown to a specific moment of time. This should help to significantly narrow the search criteria
+  and load logs faster for that narrowed time range.
+- after each bar that has hits, plugin loads the logs for the time range of that bar and adds them to the `Logs` panel. When the query reaches its [line limit](#line-limits), plugin loads only the bars.
+- the incremental mode can be paused, resumed or stopped from the status row above the query editor. The status row shows the progress, for example `12 / 28 bars, 350 logs (limit 1000)`. **Stop** keeps the bars and the logs loaded so far; the Explore **Cancel** button discards everything.
 
-The behaviour can be switched off per query with the **Incremental hits loading** option in the query editor.
-With a **Group hits by** field, the top-20 groups are picked within every bar separately, so the tail
-group `other` may differ from the one of a single whole-range request.
+Limitations of the incremental mode:
+
+- plugin loads the logs with the bars only for a query that has [filters](https://docs.victoriametrics.com/victorialogs/logsql/#filters) and no [pipes](https://docs.victoriametrics.com/victorialogs/logsql/#pipes). For a query with a pipe, plugin loads all bars first. Then it executes the `Logs` panel query for the full time range.
+- a query with a [subquery filter](https://docs.victoriametrics.com/victorialogs/logsql/#subquery-filter), such as `in(...)`, loads its logs with the bars. Each bar is a separate request, so VictoriaLogs calculates the subquery for the time range of that bar, not for the full time range.
+- if the `Logs volume` panel is collapsed, there are no bars to load, and plugin loads the logs with one usual request.
+
+The incremental mode can be turned off per query with the **Incremental hits loading** in the `Options` section below the query editor.
 
 ## Drilldown
 
@@ -373,7 +387,7 @@ The **Drilldown** button in the Explore query editor opens a drawer that explore
 it breaks the logs down by field values, by stream fields and by message patterns, narrows the selection with
 filter chips and hands the finished selection back to the editor.
 
-![Drilldown button](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/drilldown_button.png)
+![Drilldown button](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/drilldown_button.png)
 
 > **Note:** for now, the button is available only in the `Code` mode of the Explore query editor. The drawer does not
 > take the current query and always starts from the `*` query over the editor's time range.
@@ -396,7 +410,7 @@ of every value. Expanding a row shows a sample of its logs. The **Filter for** /
 of a row add a filter chip for the value. The level buttons above the tabs narrow the selection by the log level
 derived from the [log level rules](#log-level-rules) without drilling in.
 
-![Drilldown main view](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/drilldown_main.png)
+![Drilldown main view](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/drilldown_main.png)
 
 ### Details view
 
@@ -408,9 +422,9 @@ Adding a filter chip or a pattern filter opens the details view of the selection
   constant fields, and fields with too many or too long values are listed without a summary;
 - **Patterns** - the message patterns of the selection.
 
-![Drilldown details view](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/drilldown_details.png)
+![Drilldown details view](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/drilldown_details.png)
 
-![Drilldown patterns](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/drilldown_patterns.png)
+![Drilldown patterns](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/drilldown_patterns.png)
 
 A chip can be edited in place (field, operator `=`, `!=`, `=~`, `!~`, and value) and removed. Removing the last chip
 and pattern filter returns to the main view.
@@ -427,7 +441,7 @@ Explore time range, and **Go to editor** does not transfer it.
 chips of the query editor, the pattern filters are appended to the query expression, and the query is run.
 The original expression and stream filters of the editor are replaced, not merged.
 
-![Query editor after Go to editor](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/drilldown_go_to_editor.png)
+![Query editor after Go to editor](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/drilldown_go_to_editor.png)
 
 The drawer runs at most 6 queries at a time, so a wide time range with many fields takes a while to load completely.
 
@@ -445,7 +459,7 @@ There are two levels of control:
 
 Increase these limits only if needed; large values may make the browser sluggish.
 
-![Line limits configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/line_limits.png)
+![Line limits configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/line_limits.png)
 
 ### Configuring the default limit via file
 
@@ -476,7 +490,7 @@ feature for interactive links between visualizations.
 Tempo, Jaeger, and Zipkin data sources support [Trace to logs](https://grafana.com/docs/grafana/latest/explore/trace-integration/#trace-to-logs)
 feature for navigating from a span in a trace directly to logs relevant for that span. *(Supported since Grafana v12.2.0)*.
 
-![Derived fields configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/trace_to_logs.png)
+![Derived fields configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/trace_to_logs.png)
 
 An example of the correlation query in traces datasource is the following:
 
@@ -569,12 +583,12 @@ In VictoriaLogs datasource settings, you can configure rules of extracting value
 For example, if log entries have field `trace_id` then we can configure a Derived Field to make a link to Jaeger datasource
 for viewing an associated trace:
 
-![Derived fields configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/derived_fields_cfg.png)
+![Derived fields configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/derived_fields_cfg.png)
 
 Once configured, in Explore mode or in Logs panel log entries with field `trace_id` will also get a link that would
 open a Jaeger datasource and search for the `trace_id` value:
 
-![Derived fields explore](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/src/img/derived_fields_explore.png)
+![Derived fields explore](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/src/img/derived_fields_explore.png)
 
 If the trace ID is not stored in a separate field but in a log message itself, then use `Regex in log line` option
 to specify a regex expression for extracting the trace value from log message.
@@ -612,4 +626,4 @@ Learn more about [Derived Fields in Grafana](https://grafana.com/docs/grafana/ne
 ## License
 
 This project is licensed under
-the [Apache 2.0 license](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/LICENSE).
+the [Apache 2.0 license](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bc4e680865e29fdde604cecf56ddd7b31d237150/LICENSE).

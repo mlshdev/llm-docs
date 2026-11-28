@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/idp-sync/microsoft-entra-id-sync.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/idp-sync/microsoft-entra-id-sync.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/team/idp-sync/microsoft-entra-id-sync.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/team/idp-sync/microsoft-entra-id-sync.mdx)
 
 # Provision Users and Groups From Microsoft Entra ID via API
 
@@ -21,20 +21,24 @@ onboarding and offboarding processes.
 
 ## Get Started with NetBird-Entra ID Integration
 
-To get started, navigate to [Integrations](https://app.netbird.io/integrations) in the left menu, which will take you to the
-`Identity Provider` integration. Click the `Entra ID (Azure AD)` button. This action will trigger a pop-up window that will
+To get started, open **[Integrations](https://app.netbird.io/integrations)** and select the
+**Identity Provider Sync** tab. Click the `Entra ID (Azure AD)` button. This action will trigger a pop-up window that will
 present you with a user-friendly wizard, guiding you through the synchronization process between NetBird and Azure AD.
 
-![The Entra ID (API) card on the NetBird Identity Provider Sync tab](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/microsoft-entra-id-sync/entra-req-permissions.png)
+![The Entra ID (API) card on the NetBird Identity Provider Sync tab](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/microsoft-entra-id-sync/entra-req-permissions.png)
 
 ## Prerequisites
 
 Before starting the integration process, verify that you have the required permissions in Microsoft Entra ID (Azure AD).
-Specifically, you will need an Azure user account with at least one of these roles:
+To create and configure the app registration, use an Azure user account with at least one of these roles:
 
 - Application Administrator
 - Cloud Application Administrator
 - Global Administrator
+
+> **Note**
+>
+> Granting the Microsoft Graph `User.Read.All` and `Group.Read.All` **application permissions** later in this guide requires a **Privileged Role Administrator** or **Global Administrator**. See Microsoft's [admin consent requirements](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent#prerequisites).
 
 To check your permissions:
 
@@ -62,7 +66,7 @@ Fill in the registration form with the name, supported account type, and redirec
 
 Upon successful registration, you'll be redirected to a confirmation screen similar to the following:
 
-![The registered NetBird app overview in Entra ID showing the Application (client) ID and Directory (tenant) ID](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/microsoft-entra-id-sync/netbird-app-azure.png)
+![The registered NetBird app overview in Entra ID showing the Application (client) ID and Directory (tenant) ID](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/microsoft-entra-id-sync/netbird-app-azure.png)
 
 Copy and securely store the generated `Application (client) ID` and `Directory (tenant) ID` as you will need them shortly.
 
@@ -84,7 +88,7 @@ To assign user permissions:
 - In the search results, click on the `User` tab to expand it and view the available permissions.
 - Click on the checkbox to select and enable the `User.Read.All` permission.
 
-![The Microsoft Graph application permissions picker with User.Read.All selected](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/microsoft-entra-id-sync/request-api-perms.png)
+![The Microsoft Graph application permissions picker with User.Read.All selected](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/microsoft-entra-id-sync/request-api-perms.png)
 
 The `User.Read.All` permission allows NetBird to read the full set of profile properties, group memberships, and reports of the signed-in user and other users in your organization.
 
@@ -92,9 +96,9 @@ Next, repeat the procedure. This time, search for `Group.Read.All`, expand the `
 
 Once done, click the `Add permissions` button. You will see a few warnings:
 
-![The API permissions list with User.Read.All and Group.Read.All showing a Not granted warning next to the Grant admin consent button](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/microsoft-entra-id-sync/needed-netbird-api-perms.png)
+![The API permissions list with User.Read.All and Group.Read.All showing a Not granted warning next to the Grant admin consent button](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/microsoft-entra-id-sync/needed-netbird-api-perms.png)
 
-Locate the `Grant admin consent for [Your Organization Name]` button (you’ll find it next to `+Add a permission` button). Click on it to grant the required permissions.
+Have a **Privileged Role Administrator** or **Global Administrator** open the app registration's **API permissions** page and click `Grant admin consent for [Your Organization Name]` to grant the required permissions.
 
 A confirmation dialog will appear, asking you to verify this action. Review the permissions listed in the dialog and click `Yes` to confirm. Wait for the process to complete, this may take a few seconds.
 
@@ -108,7 +112,7 @@ On Azure, click on the `Certificates & secrets` button in the left menu to open 
 
 A new client secret will be generated and displayed on the screen. Copy and securely store the `Value` field immediately, as you will needed in the next step.
 
-![The new client secret in Entra ID with the Value column to copy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/microsoft-entra-id-sync/certs-secrets.png)
+![The new client secret in Entra ID with the Value column to copy](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/microsoft-entra-id-sync/certs-secrets.png)
 
 ## Enter Application ID and Directory ID in NetBird
 
@@ -116,7 +120,7 @@ Paste the secret `Value` from the previous step into NetBird and click the `Cont
 
 Paste the values and click the `Continue →` button.
 
-![The NetBird wizard step asking for the Application (client) ID and Directory (tenant) ID](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/microsoft-entra-id-sync/entra-copy-ids.png)
+![The NetBird wizard step asking for the Application (client) ID and Directory (tenant) ID](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/microsoft-entra-id-sync/entra-copy-ids.png)
 
 ## Choose Groups to Synchronize from Entra ID
 
@@ -125,7 +129,7 @@ At this stage, NetBird is set to synchronize all groups from your Microsoft Entr
 - If you want to synchronize all groups, simply click the `Continue →` button.
 - To synchronize only specific groups, click the `+ Add group filter` button, which will open a new panel where you can set criteria to include or exclude groups.
 
-![The NetBird group synchronization step with the Add group filter button](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/microsoft-entra-id-sync/add-group-filter.png)
+![The NetBird group synchronization step with the Add group filter button](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/microsoft-entra-id-sync/add-group-filter.png)
 
 ## Choose Users to Synchronize from Entra ID
 
@@ -155,11 +159,11 @@ These indicators confirm that:
 >
 > You can manually trigger a sync or adjust settings by clicking on the Microsoft Entra ID section in the Identity Provider screen
 
-![The Identity Provider Sync tab with the Entra ID integration enabled and marked as synced](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/microsoft-entra-id-sync/idp-synced.png)
+![The Identity Provider Sync tab with the Entra ID integration enabled and marked as synced](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/microsoft-entra-id-sync/idp-synced.png)
 
 ## Verify the Integration
 
-To verify the synchronization, navigate to `Teams > Users` in the left menu.
+To verify the synchronization, navigate to `Users` in the left menu.
 You should see all the users and groups from your Microsoft Entra ID environment listed in the NetBird dashboard.
 
 You can now proceed to configure [access control policies](https://docs.netbird.io/manage/access-control/manage-network-access#creating-policies) using the synchronized groups to allow or deny access to the

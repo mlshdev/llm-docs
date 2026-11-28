@@ -6,30 +6,38 @@
   "title": "NetBird",
   "homepage": "https://docs.netbird.io/",
   "repository": "netbirdio/netbird",
-  "tag": "v0.81.4",
-  "releaseId": 422688382,
-  "releasePublishedAt": "2026-10-24T11:24:02Z",
-  "sourceCommit": "7e791d3e2972ddb763bb0e5c3bff4f9e14f70033",
-  "docsCommit": "238224712cf7639036ed39fa8873d777b8822273",
-  "documentCount": 359,
+  "tag": "v0.84.0",
+  "releaseId": 460699551,
+  "releasePublishedAt": "2026-11-27T14:26:23Z",
+  "sourceCommit": "22eac80ddcb056b2c4738309240bda2711bafd98",
+  "docsCommit": "687df76a2ecb2c825e4726f53f78fb54a131f77c",
+  "documentCount": 370,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 4839485,
-      "documentCount": 359,
-      "sha256": "c292db1bd7c4ee9dc64f6bd26109b10cc423c37221eb17857a0fa62376124db9"
+      "byteLength": 5232752,
+      "documentCount": 370,
+      "sha256": "663999fbd765b86e8e8a6df3ac9092eff029e364d624164631e155f9f18d4d29"
     }
   ],
-  "outputDigest": "56d310752e0c412cf4f4cd0c75abb4a0c1134afb1196bf9f98df88b3986cbcbc",
+  "outputDigest": "d29c1b08a99bfea36c39094ed5dc0a4a9420ba5eef40eb3c530a1d4a1d75fa43",
   "quarantined": [
+    {
+      "sourcePath": "src/pages/manage/access-control/index.mdx",
+      "reason": "Unhandled MDX component <Video> in src/pages/manage/access-control/index.mdx"
+    },
     {
       "sourcePath": "src/pages/manage/control-center/draft-mode.mdx",
       "reason": "Unhandled MDX component <Video> in src/pages/manage/control-center/draft-mode.mdx"
+    },
+    {
+      "sourcePath": "src/pages/use-cases/security/implement-zero-trust.mdx",
+      "reason": "Unhandled MDX component <Video> in src/pages/use-cases/security/implement-zero-trust.mdx"
     }
   ],
   "notes": [
-    "Public docs are pinned to netbirdio/docs commit 238224712cf7639036ed39fa8873d777b8822273; its commit message matches v0.81.4 and it changes generated API resource pages.",
+    "Public docs are pinned to netbirdio/docs commit 687df76a2ecb2c825e4726f53f78fb54a131f77c; its commit message matches v0.84.0 and it changes generated API resource pages.",
     "NetBird does not tag its public docs repository; non-API pages are an evergreen snapshot at that exact commit, not a formally versioned manual.",
     "Release-tagged technical architecture documents are included separately from the public documentation snapshot."
   ]

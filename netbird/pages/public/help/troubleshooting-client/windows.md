@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/help/troubleshooting-client/windows.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/help/troubleshooting-client/windows.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/help/troubleshooting-client/windows.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/help/troubleshooting-client/windows.mdx)
 
 # NetBird client on Windows
 
@@ -89,7 +89,7 @@ Sometimes a port is refused even though `netstat` shows it free and it is not in
 
 ## Host-based firewall
 
-Windows Firewall or endpoint security software can block NetBird traffic before it leaves the machine. See [Ports & Firewalls: Host-based firewalls](https://docs.netbird.io/about-netbird/ports-and-firewalls#host-based-firewalls) for Windows Firewall symptoms, remediation, and diagnostic commands.
+Windows Firewall or endpoint security software can block NetBird traffic before it leaves the machine. See [Ports & Firewalls: Host-based firewalls](https://docs.netbird.io/about-netbird/ports-and-firewalls#host-based-firewalls) for Windows Firewall symptoms, remediation, and diagnostic commands. If peers stay relayed, see [Direct connections stay relayed on Windows](https://docs.netbird.io/about-netbird/ports-and-firewalls#direct-connections-stay-relayed-on-windows).
 
 ## Windows DNS scenarios
 

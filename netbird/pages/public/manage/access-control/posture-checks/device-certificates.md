@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/access-control/posture-checks/device-certificates.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/access-control/posture-checks/device-certificates.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/access-control/posture-checks/device-certificates.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/access-control/posture-checks/device-certificates.mdx)
 
 # Requiring a device certificate
 
@@ -28,9 +28,9 @@ Three things to do, in order:
 
 ## Create the posture check
 
-Navigate to `Access Control` > `Posture Checks` in the NetBird dashboard and click `Create Posture Check`. Enable `Certificate`.
+Navigate to `Networking` > `Access Control` > `Posture Checks` in the NetBird dashboard and click `Create Posture Check`. Enable `Certificate`.
 
-![Certificate posture check with a CA certificate field](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/posture-checks-certificate.png)
+![Certificate posture check with a CA certificate field](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/posture-checks/posture-checks-certificate.png)
 
 Paste the PEM of `Corp Root CA` into the `CA Certificates` field. `Add CA Certificate` adds further anchors, for example a second root during a CA rotation; a peer passes if its certificate chains to any of them. Give the check a name on the `Name & Description` tab, for example `Company device certificate`, and save.
 

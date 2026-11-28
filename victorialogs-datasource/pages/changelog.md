@@ -1,8 +1,32 @@
-> Pinned source for VictoriaLogs datasource for Grafana v0.34.0: [CHANGELOG.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/CHANGELOG.md)
+> Pinned source for VictoriaLogs datasource for Grafana v0.35.0: [CHANGELOG.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bc4e680865e29fdde604cecf56ddd7b31d237150/CHANGELOG.md)
 
 # Changelog
 
 ## tip
+
+- BREAKING: require VictoriaLogs `v1.54.0` or newer. Raw logs queries now pass their sort order with the `sort_direction` query arg instead of appending a `sort by (_time)` pipe, so VictoriaLogs applies its top-N optimization in both directions. An older VictoriaLogs ignores the arg: the `Oldest first` order in Explore, the `Direction` option in dashboards and the log context return the newest logs instead. See [#513](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/513).
+
+- BREAKING: escape `"` and `\` in a variable value used in a regexp filter (`field:~$var`) or inside double quotes (`field:"$var"`), so the value is used as is and cannot break the query. If a variable value has backslashes or quotes escaped by hand, remove the escaping: write `\d+` instead of `\\d+`. See [#765](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/765).
+
+- FEATURE: check the VictoriaLogs version on `Save & test` and in the query editor. The test fails and the editor shows a warning with the features that do not work when VictoriaLogs is older than the plugin requires. When VictoriaLogs does not report its version via `/select/buildinfo` (added in VictoriaLogs `v1.40.0`), the test passes with a warning and the editor lists the features that may not work. The requirements are listed in the [VictoriaLogs compatibility](https://github.com/VictoriaMetrics/victorialogs-datasource/tree/main#victorialogs-compatibility) section of the README.
+
+- FEATURE: load the logs in Explore bar by bar when `Incremental hits loading` is active and VictoriaLogs does not answer within 3 seconds. After each volume bar that has hits, the plugin loads the logs of that bar in the logs sort order. When the query reaches its line limit, the plugin loads only the bars. For a query with pipes, the plugin loads all bars first and then gets the logs in one request. See [Incremental hits loading](https://docs.victoriametrics.com/victorialogs/integrations/grafana/#incremental-hits-loading) docs and [pr #778](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/778).
+
+- BUGFIX: keep a separate logs sort order for each pane of the Explore split view. Switching the order in one pane no longer reloads the other pane. Requires Grafana `12.4` or newer, on an older Grafana the panes share the last picked order.
+
+- BUGFIX: respect the `Direction` option of a dashboard logs panel opened in the `View` mode. Older Grafana versions always loaded the newest logs there.
+
+- BUGFIX: show the `Open in split view` button in the log context of Explore. The context query did not name its data source, so Grafana hid the button.
+
+- BUGFIX: fix the query editor freezing for several seconds when a multi-value variable with thousands of selected values is used in a query.
+
+- BUGFIX: fix the interpolation of a multi-value variable in a negative regexp filter (`field:!~$var`), and of a variable value that is empty or has a line break.
+
+- BUGFIX: keep the first bucket of `Range` stats queries with a custom `Step`. The bucket that contains the start of the time range was dropped when its timestamp was before the start, so its data was missing from the panel. See [pr #778](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/778).
+
+- SECURITY: build the backend with Go 1.27.4 and update `golang.org/x/net` to v0.62.0. See [pr #766](https://github.com/VictoriaMetrics/victorialogs-datasource/pull/766). Thanks to @binGhzal for contributing.
+
+## v0.34.0
 
 - FEATURE: expose every log field as its own column in annotation query results, so annotation field mappings can use a single field for `Title` or `Tags`, and a field with an epoch-milliseconds timestamp for `Time end` to draw range annotations. See [#568](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/568). Thanks to @Danielv123 for contributing.
 
@@ -122,7 +146,7 @@
 
 - FEATURE: replace the `/health` endpoint in the datasource backend health check with a real query to `/select/logsql/query`. This verifies that the VictoriaLogs backend can actually serve log queries, not just that the HTTP server is up. See [#599](https://github.com/VictoriaMetrics/victorialogs-datasource/issues/599).
 
-- FEATURE: add OpenTelemetry preset to datasource configuration. When enabled, the preset auto-detects field format (`snake_case` / `camelCase`) of `traceID` and severity field from recent logs, then generates Derived Fields for `trace_id` and Log level rules for OTel severity — without manual configuration. See [OpenTelemetry preset](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/src/README.md#opentelemetry-preset) docs.
+- FEATURE: add OpenTelemetry preset to datasource configuration. When enabled, the preset auto-detects field format (`snake_case` / `camelCase`) of `traceID` and severity field from recent logs, then generates Derived Fields for `trace_id` and Log level rules for OTel severity — without manual configuration. See [OpenTelemetry preset](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bc4e680865e29fdde604cecf56ddd7b31d237150/src/README.md#opentelemetry-preset) docs.
 
 - FEATURE: route "Filter for value" / "Filter out" actions in Grafana Explore into the `extra_filters` query parameter instead of mutating the main `expr`. The user's LogsQL stays untouched; added filters appear as removable chips under the query editor (via the existing Ad-hoc filters control). Dashboard behavior is unchanged — there Grafana keeps driving these clicks through ad-hoc template variables.
 

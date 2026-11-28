@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/single-sign-on/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/single-sign-on/index.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/team/single-sign-on/index.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/team/single-sign-on/index.mdx)
 
 # Authenticate to NetBird with Single Sign On (SSO)
 
@@ -20,7 +20,7 @@ though some additional configuration is required to complete the integration.
 If you're using Google Workspace, Microsoft Entra ID, or a supported social login, you can simply sign in with no extra
 setup—just click the appropriate button on the [login page](https://app.netbird.io/):
 
-![The NetBird login page with Google, Microsoft, and GitHub sign-in buttons](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/netbird-login.png)
+![The NetBird login page with Google, Microsoft, and GitHub sign-in buttons](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/single-sign-on/netbird-login.png)
 
 ## Okta
 

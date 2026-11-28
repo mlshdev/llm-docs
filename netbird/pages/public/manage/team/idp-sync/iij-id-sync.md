@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/idp-sync/iij-id-sync.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/idp-sync/iij-id-sync.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/team/idp-sync/iij-id-sync.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/team/idp-sync/iij-id-sync.mdx)
 
 # Provision Users and Groups From IIJ ID
 
@@ -25,7 +25,7 @@ Once SSO is configured, and you can successfully log in to NetBird using your II
 
 To enable SCIM synchronization in NetBird, navigate to `Integrations > Identity Provider Sync` in your NetBird dashboard.
 
-![The Identity Provider Sync tab on the Integrations page with the Connect Generic SCIM button](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/iij-id-sync/iij-id-connect.png)
+![The Identity Provider Sync tab on the Integrations page with the Connect Generic SCIM button](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/iij-id-sync/iij-id-connect.png)
 
 Click the `Connect Generic SCIM` button, then `Get Started` on the first screen to launch the configuration wizard. You will be guided through several configuration options:
 
@@ -33,7 +33,7 @@ Click the `Connect Generic SCIM` button, then `Get Started` on the first screen 
 
 By default, all groups exported to the NetBird application in IIJ ID will be synchronized. If you want to synchronize only exported groups that start with a specific prefix, you can specify them in the filter. Keep in mind that the prefix matching is case-sensitive.
 
-![The wizard step for filtering synchronized groups by name prefix](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/iij-id-sync/iij-id-scim-group-filter.png)
+![The wizard step for filtering synchronized groups by name prefix](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/iij-id-sync/iij-id-scim-group-filter.png)
 
 Click `Continue` to proceed to the next step.
 
@@ -47,7 +47,7 @@ Click `Continue` to generate your SCIM credentials.
 
 NetBird will generate the SCIM credentials required to configure IIJ ID. Make note of both the **Base URL** and **Token Key** as you will need them in the next section to complete the IIJ ID configuration.
 
-![The wizard step showing the generated SCIM Base URL and Token Key](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/iij-id-sync/iij-id-scim-credentials.png)
+![The wizard step showing the generated SCIM Base URL and Token Key](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/iij-id-sync/iij-id-scim-credentials.png)
 
 Click `Finish Setup` to complete the NetBird SCIM configuration. The Generic SCIM card now shows the integration as enabled, and you can proceed to configure provisioning in IIJ ID using the credentials generated above.
 
@@ -60,7 +60,7 @@ Select `Export accounts` and enter the following details:
 - **The base URL for the SCIM server**: `https://api.netbird.io/api/scim/v2`
 - **Access token**: Paste the Token Key you copied from NetBird
 
-![The IIJ ID Provisioning tab with Export accounts selected and the SCIM base URL and access token filled in](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/iij-id-sync/iij-id-provisioning-settings.png)
+![The IIJ ID Provisioning tab with Export accounts selected and the SCIM base URL and access token filled in](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/iij-id-sync/iij-id-provisioning-settings.png)
 
 Click `Update Provisioning Information` to save the configuration.
 
@@ -75,7 +75,7 @@ want to synchronize, then set:
 
 Click `Update Applications User Settings` to apply the change.
 
-![The IIJ ID Application User edit form with Export set to Export](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/iij-id-sync/iij-id-enable-export.png)
+![The IIJ ID Application User edit form with Export set to Export](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/iij-id-sync/iij-id-enable-export.png)
 
 The `Export` column now shows `Export` for that entry. When you select a group as an Application User, its members become
 Application Users as well, so IIJ ID exports those users to NetBird.
@@ -94,9 +94,9 @@ Once saved, IIJ ID will automatically export the selected users, groups, and the
 ## Verify Synchronization
 
 After configuring provisioning in IIJ ID, the synchronization will begin automatically. You can verify that users and groups
-have been successfully synchronized by navigating to `Team > Users` in your NetBird dashboard.
+have been successfully synchronized by navigating to `Users` in your NetBird dashboard.
 
-![The NetBird Users table listing the users exported from IIJ ID](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/iij-id-sync/netbird-verify-users.png)
+![The NetBird Users table listing the users exported from IIJ ID](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/iij-id-sync/netbird-verify-users.png)
 
 > **Note**
 >

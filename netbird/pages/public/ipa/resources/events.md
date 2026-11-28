@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/ipa/resources/events.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/ipa/resources/events.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/ipa/resources/events.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/ipa/resources/events.mdx)
 
 ## List all Audit Events   (GET /api/events/audit)
 
@@ -595,7 +595,7 @@ Sort order (ascending or descending)
 
 **search (type: string; optional)**
 
-General search across request ID, host, path, source IP, user email, and user name
+General search across request ID, host, path, and source IP
 
 **source\_ip (type: string; optional)**
 

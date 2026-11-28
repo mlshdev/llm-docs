@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/use-cases/remote-access/exit-nodes.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/use-cases/remote-access/exit-nodes.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/use-cases/remote-access/exit-nodes.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/use-cases/remote-access/exit-nodes.mdx)
 
 # Configuring Exit Nodes for Internet Traffic
 
@@ -52,6 +52,8 @@ Peers in the distribution groups send their internet traffic through the routing
 
 In both cases the user's own choice wins. A user who deselects the exit node on their device stays off it even with Auto Apply enabled, and a user who selects it manually stays on it. Auto Apply sets the starting position of the switch on each device; it is not a lock. It cannot enforce the exit node against a user's explicit choice. If your setup requires enforcement, see [Enforcing the Exit Node on Managed Devices](#enforcing-the-exit-node-on-managed-devices) below.
 
+On an exit node with several routing peers, Auto Apply is set per routing peer, but turning it on for any one of them applies the whole exit node: devices use and fail over to all of its routing peers, even when the routing peer that has Auto Apply enabled is offline as they connect. Which routing peer carries the traffic is decided by the metric, not by which one has Auto Apply enabled. This needs NetBird client v0.74.2 or later; for older clients, turn Auto Apply on for every routing peer.
+
 > **Note**
 >
 > Auto Apply requires NetBird client version 0.55.0 or later.
@@ -68,31 +70,27 @@ Clients running v0.55.0 or later auto-apply these routes unless the user has exp
 
 Navigate to the NetBird dashboard and open **Peers** (exit nodes are typically unattended machines like a VPS, router, or always-on host).
 
-![Dashboard peers view](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers.png)
-
 ### 2. Select the Routing Peer
 
 Choose the peer that will serve as your exit node.
 
-![Routing peer selection](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-routing-peer.png)
+![Routing peer selection](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-routing-peer.png)
 
 ### 3. Configure the Exit Node
 
 Click **Add Exit Node**. In the dialog, assign one or more distribution groups to specify which peers should use this exit node.
 
-![Add exit node dialog](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-add-exit-node.png)
+![Add exit node dialog](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-add-exit-node.png)
 
 To make the exit node available without automatic activation, disable **Auto Apply**. Users can then enable it manually.
 
-![Auto Apply option](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/exit-node-auto-apply.png)
+![Auto Apply option](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/exit-node-auto-apply.png)
 
 Click **Add Exit Node** to complete the configuration. Masquerading is enabled by default.
 
 ### 4. Verify the Configuration
 
-Check the peer view to confirm the routing peer is marked as an exit node.
-
-![Exit node confirmation](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/netbird-peers-routing-peer-exit-node.png)
+Open the peer's **Network Routes** tab and check that the route is listed with **Exit Node** in the **Network** column.
 
 ### 5. Configure DNS
 
@@ -110,15 +108,15 @@ The running example: an exit node in `us-east` and one in `us-west`, users on bo
 
 ### 1. Deploy a routing peer per region
 
-Set up one routing peer in each region as described in the [configuration steps](#configuration-steps) above. Both need masquerading and a stable internet path.
+Set up one routing peer in each region. Both need masquerading and a stable internet path. Create the exit node on the `us-east` peer only, as described in the [configuration steps](#configuration-steps) above.
 
 ### 2. Add both peers to the same exit node
 
-In the exit node's configuration, add both routing peers and leave the metric identical on both.
+In **Network Routing** → **Routes**, click **Add Peer** in the exit node's **High Availability** column and select the `us-west` peer. Leave the metric identical on both. Do not use **Add Exit Node** on the `us-west` peer: that creates a second, separate exit node.
 
 Adding the regions as two separate exit nodes does not work, and fails in a way that is easy to miss. Metrics and nearest-peer selection only apply between routing peers of the same exit node. Separate exit nodes instead appear on each device as independent choices in its exit node selector, and with [Auto Apply](#exit-node-selection-and-auto-apply) enabled (the default) the client activates exactly one: whichever exit node's name sorts first alphabetically. Metrics and latency play no part in that choice. If the activated exit node's routing peer goes offline, the device keeps it selected and loses internet access entirely, even while another exit node's routing peer is online and connected. One exit node with multiple routing peers gives you selection and failover; separate exit nodes give you neither.
 
-![One exit node with two routing peers at equal metrics, distributed to the remote-workers group](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/regional-exit-nodes-equal-metrics.png)
+![One exit node with two routing peers at equal metrics, distributed to the remote-workers group](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/regional-exit-nodes-equal-metrics.png)
 
 The finished state: one exit node, both regional routing peers under it with the same metric, and the distribution group on each.
 
@@ -126,7 +124,7 @@ The finished state: one exit node, both regional routing peers under it with the
 
 Use a dedicated distribution group for the devices that should full-tunnel rather than the built-in All group, and keep the access policy one-directional from that group to the routing peers. Every device in the distribution group sends all of its internet traffic through whichever exit node it selects.
 
-![Access control policy with the remote-workers group as source and the exit-nodes group as destination, one-directional](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/regional-exit-nodes-access-policy.png)
+![Access control policy with the remote-workers group as source and the exit-nodes group as destination, one-directional](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/network-routes/use-cases/exit-nodes/regional-exit-nodes-access-policy.png)
 
 The policy that makes the exit nodes reachable: the distribution group as the source, the routing peers' group as the destination, one direction only.
 
@@ -136,7 +134,7 @@ On an east-coast device, run `netbird status -d`: the peer carrying the `0.0.0.0
 
 ### What this does and does not do
 
-This is nearest-exit selection plus automatic failover, not load balancing: each device follows its own lowest-latency exit node, and traffic is not spread evenly across the exit nodes. See [Nearest routing peer](https://docs.netbird.io/manage/networks/how-routing-peers-work#nearest-routing-peer-equal-metrics) for the selection mechanism.
+This is nearest-exit selection plus automatic failover, not load balancing: each device follows its own lowest-latency exit node, and traffic is not spread evenly across the exit nodes. See [Nearest routing peer](https://docs.netbird.io/manage/networks/how-routing-peers-work#nearest-routing-peer-equal-metrics) for the selection mechanism. Each routing peer egresses from its own public IP, so add every routing peer's IP to any source-IP allowlist.
 
 Latency-based selection is also not a guarantee of *which* exit node a given user lands on. If a rule must always hold, such as certain users always exiting in a specific country, use separate exit nodes with per-group distribution, or posture checks as in [Geo-Based Exit Node Routing](#geo-based-exit-node-routing) below. Make sure each device receives at most one exit node with [Auto Apply](#exit-node-selection-and-auto-apply) enabled: enable it on one exit node per distribution group, and keep those groups from overlapping — more than one auto-applied exit node on a device is the failure mode described in step 2 above. Offer any additional exit nodes with Auto Apply disabled; users can switch between exit nodes manually in the client either way.
 
@@ -158,7 +156,7 @@ The following example builds this goal: any device outside the United States sen
 
 ### 1. Create the Posture Check
 
-Navigate to **Access Control** → **Posture Checks**, click **Add Posture Check**, and select **Country and Region**. On the **Block** tab, add United States, then save the check as "Outside the US".
+Navigate to **Networking** → **Access Control** → **Posture Checks**, click **Add Posture Check**, and select **Country and Region**. On the **Block** tab, add United States, then save the check as "Outside the US".
 
 Peers located in a blocked country fail the check, so the policy below stops applying to them and they keep their split tunnel. Peers anywhere else pass the check and get the full tunnel. NetBird determines the location from the public IP the peer uses to reach the management service, resolved with MaxMind's GeoLite2 City database, and shows it as country and city on the peer in the dashboard. On self-hosted deployments, the management server needs the database configured; see [Geolocation Database](https://docs.netbird.io/selfhosted/maintenance/geo-support).
 
@@ -168,7 +166,7 @@ Add the exit node as described in the [configuration steps](#configuration-steps
 
 ### 3. Create the Access Policy
 
-Navigate to **Access Control** → **Policies** and add a policy from `remote-workers` to `exit-nodes`, protocol **ALL**. Before saving, open **Posture Checks**, browse for "Outside the US", and attach it.
+Navigate to **Networking** → **Access Control** → **Policies** and add a policy from `remote-workers` to `exit-nodes`, protocol **ALL**. Before saving, open **Posture Checks**, browse for "Outside the US", and attach it.
 
 This must be the only policy that connects `remote-workers` to the exit node peer. If another policy also allows that connection, for example a broad **All** to **All** rule, the peer stays reachable through it, the route keeps arriving, and the posture check has no effect on the tunnel mode. Scope any other policies so they do not cover the exit node peer.
 

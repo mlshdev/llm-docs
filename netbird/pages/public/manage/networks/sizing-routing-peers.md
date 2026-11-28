@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/networks/sizing-routing-peers.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/networks/sizing-routing-peers.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/networks/sizing-routing-peers.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/networks/sizing-routing-peers.mdx)
 
 # Sizing Routing Peers
 
@@ -140,7 +140,7 @@ Jumbo helps the [userspace datapath](#userspace-mode) too (about 2.5x), but user
 
 ## Scaling out: high availability and splitting load
 
-A single peer has a ceiling. To go past it, run more than one, but understand what NetBird high availability does and does not do. It gives you two things: **failover** (different metrics: one peer carries all, the rest are reserve) and **nearest-peer selection** (equal metrics: each client uses its lowest-latency peer, switching only past a 20 ms difference). See [How Routing Peers Work](https://docs.netbird.io/manage/networks/how-routing-peers-work#high-availability) for the mechanism behind both.
+A single peer has a ceiling. To go past it, run more than one, but understand what NetBird high availability does and does not do. It gives you two things: **failover** (different metrics: one peer carries all, the rest are reserve) and **nearest-peer selection** (equal metrics: each client uses its lowest-latency peer, switching only when another is clearly closer: at least 20 ms and at least 20% faster). See [How Routing Peers Work](https://docs.netbird.io/manage/networks/how-routing-peers-work#high-availability) for the mechanism behind both.
 
 Neither balances a Network's load. Nearest-peer *does* spread traffic when peers sit in different regions and users are spread among them — EU users on the EU peer, US users on the US — but it splits by geography, not evenly, and not at all when peers sit together. To split load deterministically, build more identical Networks as in [Step 4](#step-4-give-each-active-peer-its-own-network).
 

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/troubleshooting/connectivity.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/troubleshooting/connectivity.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/troubleshooting/connectivity.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/troubleshooting/connectivity.mdx)
 
 # Connectivity issues
 
@@ -24,13 +24,13 @@ This section applies to older multi-container deployments that run Coturn, confi
 
 To test it, open the [Trickle ICE test tool](https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice). In the **ICE servers** box, remove the default server and add your TURN server. Replace netbird.DOMAIN.com and PASSWORD with your STUN/TURN details from the `TURNConfig` section in `management.json`, then click Add server.
 
-![The Trickle ICE test tool with a NetBird STUN/TURN server added to the ICE servers list](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/troubleshooting/turn.png)
+![The Trickle ICE test tool with a NetBird STUN/TURN server added to the ICE servers list](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/troubleshooting/turn.png)
 
 *Add your STUN/TURN server in the ICE servers box, then click Add server.*
 
 Gather candidates and read the result:
 
-![Trickle ICE test output listing host, srflx, and relay candidate types](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/troubleshooting/turn-test-out.png)
+![Trickle ICE test output listing host, srflx, and relay candidate types](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/troubleshooting/turn-test-out.png)
 
 *A working TURN server returns `srflx` and `relay` candidates.*
 

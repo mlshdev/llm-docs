@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/how-it-works.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/how-it-works.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/agent-network/how-it-works.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/agent-network/how-it-works.mdx)
 
 # How Agent Network Works
 
@@ -37,7 +37,7 @@ into `metadata.tags` and its identity into the `x-litellm-end-user-id` header, s
 can apply tag budgets and per-user attribution. With agentgateway, NetBird uses the trusted
 `x-netbird-user-id` and `x-netbird-groups` headers for request attribution.
 
-![agent network LLM request path through the NetBird proxy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/how-it-works/agent-network-diagram-llm-apis.png)
+![agent network LLM request path through the NetBird proxy](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/how-it-works/agent-network-diagram-llm-apis.png)
 
 - **NetBird client**: the agent's device joins the overlay as a peer. Its requests to
   the endpoint are routed through the WireGuard tunnel, not the public internet.
@@ -71,7 +71,7 @@ flowing straight between the two peers. Because NetBird is a peer-to-peer networ
 also works in reverse, so a resource can reach back to an agent when needed, such as to
 deliver a callback or webhook.
 
-![agent network internal resource request path through WireGuard overlay](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/how-it-works/agent-network-diagram-internal-resources.png)
+![agent network internal resource request path through WireGuard overlay](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/how-it-works/agent-network-diagram-internal-resources.png)
 
 ## The Lifecycle of an LLM Request
 

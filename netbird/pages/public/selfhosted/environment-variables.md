@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/environment-variables.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/environment-variables.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/environment-variables.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/environment-variables.mdx)
 
 # Environment Variables Configuration
 
@@ -126,6 +126,10 @@ These variables can override CLI flags at runtime. The naming convention is `NB_
 | `NB_DISABLE_GEOLITE_UPDATE` | Disable GeoLite database updates                                                                                                                                  |
 | `NB_SETUP_PAT_ENABLED`      | Enable optional Personal Access Token creation from `/api/setup` during initial setup. See [Automated Setup](https://docs.netbird.io/selfhosted/automated-setup). |
 
+> **Note**
+>
+> The Management server does not read an environment variable for `--letsencrypt-listen-address`. Pass it as a command-line flag. See the `NB_LETSENCRYPT_LISTEN_ADDRESS` entry under [Signal Server Variables](#signal-server-variables) for what the setting does.
+
 ### Advanced Runtime Variables
 
 | Variable                              | Description                                                                                                                                                                                                                                                             |
@@ -135,25 +139,54 @@ These variables can override CLI flags at runtime. The naming convention is `NB_
 | `NB_GET_ACCOUNT_BUFFER_INTERVAL`      | Account buffer interval duration                                                                                                                                                                                                                                        |
 | `NB_SQL_MAX_OPEN_CONNS`               | Maximum SQL database connections                                                                                                                                                                                                                                        |
 | `NB_STORE_TRANSACTION_TIMEOUT`        | Store transaction timeout                                                                                                                                                                                                                                               |
+| `NB_ACCESS_LOG_STORE_ENGINE`          | Access log store engine: `sqlite` or `postgres`. Defaults to the main store engine                                                                                                                                                                                      |
+| `NB_ACCESS_LOG_POSTGRES_DSN`          | Connection string for a dedicated access log PostgreSQL database. Defaults to the main store DSN                                                                                                                                                                        |
+| `NB_ACCESS_LOG_SQLITE_FILE`           | Access log SQLite file, resolved against the data directory when relative. Defaults to `access_logs.db`                                                                                                                                                                 |
+| `NB_ACCESS_LOG_SQL_MAX_OPEN_CONNS`    | Maximum connections of the access log PostgreSQL pool. Defaults to `NB_SQL_MAX_OPEN_CONNS`                                                                                                                                                                              |
 | `NB_API_RATE_LIMITING_ENABLED`        | Enable API rate limiting                                                                                                                                                                                                                                                |
 | `NB_API_RATE_LIMITING_RPM`            | Rate limit requests per minute                                                                                                                                                                                                                                          |
 | `NB_API_RATE_LIMITING_BURST`          | Rate limit burst size                                                                                                                                                                                                                                                   |
 | `NETBIRD_METRICS_INTERVAL_IN_SECONDS` | Metrics push interval                                                                                                                                                                                                                                                   |
 
+### MCP Server Runtime
+
+Set these on the `netbird-server` container, or on `management` in a multi-container deployment. See [MCP Server for Self-Hosted NetBird](https://docs.netbird.io/selfhosted/maintenance/mcp-server).
+
+| Variable                 | Default                  | Description                                                                                                                                                                                                                               |
+| ------------------------ | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NB_MCP_ENABLED`         | `false`                  | Turn on the MCP server at `/api/mcp`. OAuth sign-in starts only with the embedded identity provider or a `PKCEAuthorizationFlow`. Read as a boolean.                                                                                      |
+| `NB_MCP_TOOLS`           | All tools                | Comma-separated list of the MCP tools to expose. An unknown tool name stops management at startup.                                                                                                                                        |
+| `NB_MCP_OAUTH_KEY`       | Datastore encryption key | Secret of at least 32 bytes that seals MCP OAuth codes and tokens. Changing it signs every MCP client out. Generate one with `openssl rand -base64 32`.                                                                                   |
+| `NB_CACHE_REDIS_ADDRESS` | -                        | Redis URL for management's shared cache, such as `redis://redis:6379`. When set, MCP sign-ins are stored there and survive restarts. Management does not start if it cannot reach Redis. `NB_IDP_CACHE_REDIS_ADDRESS` is the legacy name. |
+
 ## Signal Server Variables
 
 ### Runtime Variables
 
-| Variable                | Description                |
-| ----------------------- | -------------------------- |
-| `NB_PORT`               | Signal server port         |
-| `NB_METRICS_PORT`       | Prometheus metrics port    |
-| `NB_SSL_DIR`            | SSL certificates directory |
-| `NB_LETSENCRYPT_DOMAIN` | Let's Encrypt domain       |
-| `NB_CERT_FILE`          | TLS certificate file       |
-| `NB_CERT_KEY`           | TLS certificate key file   |
-| `NB_LOG_LEVEL`          | Log level                  |
-| `NB_LOG_FILE`           | Log file path              |
+| Variable                        | Description                                                                                                                                                                                                                                                                                   |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NB_PORT`                       | Signal server port                                                                                                                                                                                                                                                                            |
+| `NB_METRICS_PORT`               | Prometheus metrics port                                                                                                                                                                                                                                                                       |
+| `NB_SSL_DIR`                    | SSL certificates directory                                                                                                                                                                                                                                                                    |
+| `NB_LETSENCRYPT_DOMAIN`         | Let's Encrypt domain                                                                                                                                                                                                                                                                          |
+| `NB_LETSENCRYPT_LISTEN_ADDRESS` | Address of the separate Let's Encrypt challenge listener (overrides `--letsencrypt-listen-address`). Default `:443`. Used only when Let's Encrypt is on and `NB_PORT` is not `443`. Set it to an empty value to disable the separate listener when public port 443 is forwarded to `NB_PORT`. |
+| `NB_CERT_FILE`                  | TLS certificate file                                                                                                                                                                                                                                                                          |
+| `NB_CERT_KEY`                   | TLS certificate key file                                                                                                                                                                                                                                                                      |
+| `NB_LOG_LEVEL`                  | Log level                                                                                                                                                                                                                                                                                     |
+| `NB_LOG_FILE`                   | Log file path                                                                                                                                                                                                                                                                                 |
+| `NB_PEER_AUTH_PUBLIC_KEYS`      | Comma-separated base64 Ed25519 public keys of Management that peer authentication tokens are verified with. Unset: Signal ignores peer authentication. See [Peer Authentication](https://docs.netbird.io/selfhosted/maintenance/peer-authentication)                                          |
+| `NB_PEER_AUTH_REQUIRED`         | Refuse peers that do not authenticate. Default `false`. Requires `NB_PEER_AUTH_PUBLIC_KEYS`                                                                                                                                                                                                   |
+| `NB_PEER_AUTH_HOSTNAMES`        | Comma-separated hostnames accepted in peer authentication proofs. Unset: no hostname check                                                                                                                                                                                                    |
+| `NB_PEER_AUTH_CHECK_TIME`       | Refuse peer authentication proofs signed more than 10 minutes away from the local clock. Default `false`                                                                                                                                                                                      |
+
+## Combined Server Variables
+
+The combined `netbird-server` container reads its settings from `config.yaml`. From NetBird v0.83.0, two of its secrets can come from environment variables on the container instead, so `config.yaml` can be kept in version control without them. A variable that is set and not empty overrides the `config.yaml` field. See [Keeping secrets out of the config file](https://docs.netbird.io/selfhosted/maintenance/configuration-files#keeping-secrets-out-of-the-config-file) for the version requirement and the exceptions.
+
+| Variable                  | Overrides                    | Description                                                                                                                           |
+| ------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `NB_AUTH_SECRET`          | `server.authSecret`          | Shared secret of the relay that runs inside `netbird-server`. With external relays, applies only when `server.relays.secret` is empty |
+| `NB_STORE_ENCRYPTION_KEY` | `server.store.encryptionKey` | Database encryption key. On self-hosted Enterprise, also the key its integrations use                                                 |
 
 ## Relay Server Variables
 
@@ -169,23 +202,27 @@ These variables can override CLI flags at runtime. The naming convention is `NB_
 
 ### Runtime Variables
 
-| Variable                   | Default | Description                                                                                                                                                               |
-| -------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `NB_LOG_LEVEL`             | `info`  | Log level                                                                                                                                                                 |
-| `NB_LISTEN_ADDRESS`        | `:443`  | Listen address                                                                                                                                                            |
-| `NB_EXPOSED_ADDRESS`       | -       | Exposed address for peers                                                                                                                                                 |
-| `NB_AUTH_SECRET`           | -       | Authentication secret                                                                                                                                                     |
-| `NB_METRICS_PORT`          | -       | Prometheus metrics port                                                                                                                                                   |
-| `NB_TLS_CERT_FILE`         | -       | TLS certificate file                                                                                                                                                      |
-| `NB_TLS_KEY_FILE`          | -       | TLS key file                                                                                                                                                              |
-| `NB_LETSENCRYPT_DATA_DIR`  | -       | Let's Encrypt data directory                                                                                                                                              |
-| `NB_LETSENCRYPT_DOMAINS`   | -       | Let's Encrypt domains                                                                                                                                                     |
-| `NB_LETSENCRYPT_EMAIL`     | -       | Let's Encrypt email                                                                                                                                                       |
-| `NB_HEALTH_LISTEN_ADDRESS` | -       | Health check listen address                                                                                                                                               |
-| `NB_TRUSTED_PROXIES`       | -       | Comma-separated IP addresses or CIDRs for immediate upstream proxies whose `X-Real-Ip` and `X-Real-Port` headers the relay may trust. Empty trusts no forwarding headers. |
-| `NB_ENABLE_STUN`           | `false` | Enable embedded STUN server                                                                                                                                               |
-| `NB_STUN_PORTS`            | `3478`  | STUN server UDP ports (comma-separated)                                                                                                                                   |
-| `NB_STUN_LOG_LEVEL`        | `info`  | STUN server log level                                                                                                                                                     |
+| Variable                   | Default | Description                                                                                                                                                                                                                                                                                                        |
+| -------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `NB_LOG_LEVEL`             | `info`  | Log level                                                                                                                                                                                                                                                                                                          |
+| `NB_LISTEN_ADDRESS`        | `:443`  | Listen address                                                                                                                                                                                                                                                                                                     |
+| `NB_EXPOSED_ADDRESS`       | -       | Exposed address for peers                                                                                                                                                                                                                                                                                          |
+| `NB_AUTH_SECRET`           | -       | Authentication secret. Required unless `NB_PEER_AUTH_REQUIRED` is set, and not allowed with it                                                                                                                                                                                                                     |
+| `NB_METRICS_PORT`          | -       | Prometheus metrics port                                                                                                                                                                                                                                                                                            |
+| `NB_TLS_CERT_FILE`         | -       | TLS certificate file                                                                                                                                                                                                                                                                                               |
+| `NB_TLS_KEY_FILE`          | -       | TLS key file                                                                                                                                                                                                                                                                                                       |
+| `NB_LETSENCRYPT_DATA_DIR`  | -       | Let's Encrypt data directory                                                                                                                                                                                                                                                                                       |
+| `NB_LETSENCRYPT_DOMAINS`   | -       | Let's Encrypt domains                                                                                                                                                                                                                                                                                              |
+| `NB_LETSENCRYPT_EMAIL`     | -       | Let's Encrypt email                                                                                                                                                                                                                                                                                                |
+| `NB_HEALTH_LISTEN_ADDRESS` | -       | Health check listen address                                                                                                                                                                                                                                                                                        |
+| `NB_TRUSTED_PROXIES`       | -       | Comma-separated IP addresses or CIDRs for immediate upstream proxies whose `X-Real-Ip` and `X-Real-Port` headers the relay may trust. Empty trusts no forwarding headers.                                                                                                                                          |
+| `NB_ENABLE_STUN`           | `false` | Enable embedded STUN server                                                                                                                                                                                                                                                                                        |
+| `NB_STUN_PORTS`            | `3478`  | STUN server UDP ports (comma-separated)                                                                                                                                                                                                                                                                            |
+| `NB_STUN_LOG_LEVEL`        | `info`  | STUN server log level                                                                                                                                                                                                                                                                                              |
+| `NB_PEER_AUTH_PUBLIC_KEYS` | -       | Comma-separated base64 Ed25519 public keys of Management that peer authentication tokens are verified with. Unset: peers that present a token are refused. Set it before enabling peer authentication on Management. See [Peer Authentication](https://docs.netbird.io/selfhosted/maintenance/peer-authentication) |
+| `NB_PEER_AUTH_REQUIRED`    | `false` | Refuse peers that do not authenticate. Requires `NB_PEER_AUTH_PUBLIC_KEYS`. Replaces `NB_AUTH_SECRET`: remove the secret when you set it                                                                                                                                                                           |
+| `NB_PEER_AUTH_HOSTNAMES`   | -       | Comma-separated hostnames accepted in peer authentication proofs. Unset: no hostname check                                                                                                                                                                                                                         |
+| `NB_PEER_AUTH_CHECK_TIME`  | `false` | Refuse peer authentication proofs signed more than 10 minutes away from the local clock                                                                                                                                                                                                                            |
 
 ## Dashboard Variables
 
@@ -265,6 +302,17 @@ environment:
   - NB_API_RATE_LIMITING_BURST=10
 ```
 
+### Enable the MCP Server
+
+Set these in your container environment or docker-compose:
+
+```yaml
+environment:
+  - NB_MCP_ENABLED=true
+  # Optional: expose only some tools
+  - NB_MCP_TOOLS=list_peers,get_peer,list_groups,get_group
+```
+
 ## Variable Precedence
 
 Configuration values are applied in the following order (later values override earlier):
@@ -281,3 +329,4 @@ Configuration values are applied in the following order (later values override e
 - [Configuration Files Reference](https://docs.netbird.io/selfhosted/maintenance/configuration-files) - Detailed documentation for docker-compose.yml, config.yaml, and other config files
 - [Management SQLite Store](https://docs.netbird.io/selfhosted/maintenance/sqlite-store)
 - [Management Postgres Store](https://docs.netbird.io/selfhosted/maintenance/postgres-store)
+- [MCP Server for Self-Hosted NetBird](https://docs.netbird.io/selfhosted/maintenance/mcp-server)

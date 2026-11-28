@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/ipa/guides/msp-api-access.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/ipa/guides/msp-api-access.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/ipa/guides/msp-api-access.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/ipa/guides/msp-api-access.mdx)
 
 # MSP API access
 
@@ -16,7 +16,7 @@ Before you can make cross-tenant API calls you need a PAT issued to a real user 
 
 1. **Pick a user** inside your MSP account. Any real user with access to the tenants you want to automate will work, including an existing admin. Consider creating a dedicated automation user if you want clean audit attribution, an independent PAT rotation cadence, or independence from any individual employee's account lifecycle. Service users are not supported for cross-tenant calls — they remain fine for single-tenant API automation.
 2. **Add the user to a permission group** that has access to every tenant you want to automate.
-3. **Generate a PAT** for that user from the dashboard. Go to **Team** → **Users**, open the user, then **Access Tokens** → **Create Access Token**. Save the token securely — it is only shown once.
+3. **Generate a PAT** for that user from the dashboard. Go to **Users**, open the user, then **Access Tokens** → **Create Access Token**. Save the token securely — it is only shown once.
 
 > **Note**
 >
@@ -74,5 +74,9 @@ The same PAT is used for every step. Only the `account` parameter changes.
 - Activity from cross-tenant calls appears in each target tenant's audit log labeled **External**, the same way an MSP user's UI actions do.
 - A PAT with write access across every tenant under your MSP has a wide blast radius. Treat it accordingly — MFA on the underlying SSO identity, regular PAT rotation, and a secrets manager on the caller side.
 - Cross-tenant calls share the same rate limit as any other PAT (120 requests per minute, 1200 burst on NetBird Cloud). The budget is per PAT, not per tenant.
+
+> **Note**
+>
+> The same `account` query parameter works with the [NetBird MCP server](https://docs.netbird.io/manage/mcp-server): `https://api.netbird.io/api/mcp?account=<tenant_id>`. When the credential cannot access the tenant, the MCP server answers `403` instead of running tools in the MSP account. See [Connect to an MSP Tenant](https://docs.netbird.io/manage/mcp-server/connect-clients#connect-to-an-msp-tenant).
 
 [MSP API reference](https://docs.netbird.io/api/resources/msp)

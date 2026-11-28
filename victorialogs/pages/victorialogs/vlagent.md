@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/vlagent.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/vlagent.md)
+> Pinned source for VictoriaLogs v1.55.0: [docs/victorialogs/vlagent.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/a7001ac416483b5ca96347edd33bfc502e31ce3f/docs/victorialogs/vlagent.md)
 
 `vlagent` is an agent for collecting logs from various sources and storing them in [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/).
 
@@ -299,7 +299,7 @@ spec:
       serviceAccountName: vlagent
       containers:
         - name: vlagent
-          image: victoriametrics/vlagent:v1.53.0
+          image: victoriametrics/vlagent:v1.54.0
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
@@ -1089,6 +1089,8 @@ See the docs at https://docs.victoriametrics.com/victorialogs/vlagent/ .
      Whether to use pread() instead of mmap() for reading data files. By default, mmap() is used for 64-bit arches and pread() is used for 32-bit arches, since they cannot read data files bigger than 2^32 bytes in memory. mmap() is usually faster for reading small data chunks than pread()
   -fs.maxConcurrency int
      The maximum number of concurrent goroutines to work with files; smaller values may help reducing Go scheduling latency on systems with small number of CPU cores; higher values may help reducing data ingestion latency on systems with high-latency storage such as NFS or Ceph (default 16x CPU cores, capped at 256)
+  -healthcheck
+     Whether to check that the running process accepts connections at -httpListenAddr and exit. The exit code is non-zero if the check fails. This is useful for Docker HEALTHCHECK in images without curl or wget. Pass the same -httpListenAddr as the checked process has
   -http.connTimeout duration
      Incoming connections to -httpListenAddr are closed after the configured timeout. This may help evenly spreading load among a cluster of services behind TCP-level load balancer. Zero value disables closing of incoming connections (default 2m0s)
   -http.disableCORS
@@ -1248,6 +1250,8 @@ See the docs at https://docs.victoriametrics.com/victorialogs/vlagent/ .
   -nativeinsert.maxRequestSize size
      The maximum size in bytes of a single request, which can be accepted at /insert/native and /insert/multitenant/native HTTP endpoints
      Supports the following optional suffixes for size values: KB, MB, GB, TB, KiB, MiB, GiB, TiB (default 67108864)
+  -opentelemetry.consistentPrefix
+     Whether to prefix the names of OpenTelemetry attributes and key-value log body fields with their source for the logs ingested via OpenTelemetry protocol. This prevents field name collisions and helps to align field names with VictoriaMetrics and VictoriaTraces; see https://docs.victoriametrics.com/victorialogs/data-ingestion/opentelemetry/#field-names
   -opentelemetry.maxRequestSize size
      The maximum size in bytes of a single OpenTelemetry request
      Supports the following optional suffixes for size values: KB, MB, GB, TB, KiB, MiB, GiB, TiB (default 67108864)
@@ -1578,15 +1582,15 @@ These flags are available only in [VictoriaLogs enterprise](https://docs.victori
 
 ```shellhelp
   -eula
-     Deprecated, please use -license or -licenseFile flags instead. By specifying this flag, you confirm that you have an enterprise license and accept the ESA https://victoriametrics.com/legal/esa/ . This flag is available only in Enterprise binaries. See https://docs.victoriametrics.com/victoriametrics/enterprise/
+     By specifying this flag, you accept the ESA https://victoriametrics.com/legal/esa/ . This flag is available only in Enterprise binaries. See https://docs.victoriametrics.com/victoriametrics/enterprise/
   -license string
-     License key for VictoriaMetrics Enterprise. See https://victoriametrics.com/products/enterprise/ . Trial Enterprise license can be obtained from https://victoriametrics.com/products/enterprise/trial/ . This flag is available only in Enterprise binaries. The license key can be also passed via file specified by -licenseFile command-line flag
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version.
   -license.forceOffline
-     Whether to enable offline verification for VictoriaMetrics Enterprise license key, which has been passed either via -license or via -licenseFile command-line flag. The issued license key must support offline verification feature. Contact info@victoriametrics.com if you need offline license verification. This flag is available only in Enterprise binaries
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version.
   -licenseFile string
-     Path to file with license key for VictoriaMetrics Enterprise. See https://victoriametrics.com/products/enterprise/ . Trial Enterprise license can be obtained from https://victoriametrics.com/products/enterprise/trial/ . This flag is available only in Enterprise binaries. The license key can be also passed inline via -license command-line flag
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version.
   -licenseFile.reloadInterval duration
-     Interval for reloading the license file specified via -licenseFile. A non-positive value disables periodic and SIGHUP-triggered reloads of -licenseFile. See https://victoriametrics.com/products/enterprise/ . This flag is available only in Enterprise binaries (default 1h0m0s)
+     This flag is deprecated and has no effect. Use -eula if you intended to run the Enterprise version. (default 1h0m0s)
   -mtls array
      Whether to require valid client certificate for https requests to the corresponding -httpListenAddr . This flag works only if -tls flag is set. See also -mtlsCAFile . This flag is available only in Enterprise binaries. See https://docs.victoriametrics.com/victoriametrics/enterprise/
      Supports array of values separated by comma or specified via multiple flags.

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/settings/delete-account.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/settings/delete-account.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/settings/delete-account.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/settings/delete-account.mdx)
 
 # Delete your NetBird account
 
@@ -10,13 +10,13 @@ To delete your NetBird organization account, you must be a user with the [owner 
 >
 > Before proceeding to delete your Netbird account, please be aware that this action is irreversible. Once your account is deleted, you will permanently lose access to all associated data, including your peers, users, groups, policies, and routes.
 
-Go to the `Settings` tab, then click on `Danger zone`. Review the message and click on the `Delete Account` button.
+Go to **Settings → Danger zone**. Review the message and click on the `Delete Account` button.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/settings/account-settings-danger-zone.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/settings/account-settings-danger-zone.png)
 
 To confirm, click on the `Delete` button.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/settings/account-settings-delete-account-confirm.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/settings/account-settings-delete-account-confirm.png)
 
 After you delete your account, your session will end, and you will be redirected to the login page.
 
@@ -30,5 +30,5 @@ After you delete your account, your session will end, and you will be redirected
 
 - Make sure to [star us on GitHub](https://github.com/netbirdio/netbird)
 - Follow us [on X](https://x.com/netbird)
-- Join our Slack Channel
+- Join our Slack Channel or Discord server
 - NetBird [latest release](https://github.com/netbirdio/netbird/releases) on GitHub

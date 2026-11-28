@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/integrations/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/integrations/index.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/agent-network/integrations/index.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/agent-network/integrations/index.mdx)
 
 # Integrations
 
@@ -8,7 +8,7 @@ case the client holds no provider API key. NetBird authorizes the request agains
 [policies](https://docs.netbird.io/agent-network/policies) and injects the upstream key server-side.
 
 Replace `<your-endpoint>` in the snippets below with the endpoint shown on the
-**Agent Network → Providers** page after you connect your first provider.
+**Agent Network → Agents → Providers** page after you connect your first provider.
 
 ## In This Section
 

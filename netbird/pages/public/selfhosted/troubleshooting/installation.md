@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/troubleshooting/installation.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/troubleshooting/installation.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/troubleshooting/installation.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/troubleshooting/installation.mdx)
 
 # Installation script issues
 
@@ -69,6 +69,7 @@ A valid response is JSON containing `"issuer"`. Anything else points to where to
 
 ```bash
 docker compose down --volumes
+if [ -f .env ]; then sed -i '/^CROWDSEC_DASHBOARD_BOUNCER_KEY=/d' .env; fi
 rm -f docker-compose.yml dashboard.env config.yaml proxy.env \
       traefik-dynamic.yaml nginx-netbird.conf caddyfile-netbird.txt \
       npm-advanced-config.txt

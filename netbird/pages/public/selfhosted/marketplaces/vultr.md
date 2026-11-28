@@ -1,10 +1,10 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/marketplaces/vultr.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/marketplaces/vultr.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/marketplaces/vultr.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/marketplaces/vultr.mdx)
 
 # Deploy NetBird on Vultr
 
 Launch a self-hosted NetBird control plane directly from the [Vultr Marketplace](https://www.vultr.com/marketplace/). The marketplace image is one of the fastest ways to get a production-ready NetBird instance running. You provide a domain and email in Vultr's deploy form, set two DNS records, and the install script handles the rest. No terminal required to get started.
 
-![NetBird on the Vultr Marketplace](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/marketplaces/vultr-marketplace.png)
+![NetBird on the Vultr Marketplace](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/marketplaces/vultr-marketplace.png)
 
 ## What's included
 

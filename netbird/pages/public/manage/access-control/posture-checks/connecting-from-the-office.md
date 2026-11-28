@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/access-control/posture-checks/connecting-from-the-office.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/access-control/posture-checks/connecting-from-the-office.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/access-control/posture-checks/connecting-from-the-office.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/access-control/posture-checks/connecting-from-the-office.mdx)
 
 # Connecting from the office
 
@@ -18,9 +18,9 @@ Three things to create, in order:
 
 ## Create the posture check
 
-Navigate to `Access Control` > `Posture Checks` in the NetBird dashboard and click `Add Posture Check`. Select `Peer Network Range`.
+Navigate to `Networking` > `Access Control` > `Posture Checks` in the NetBird dashboard and click `Add Posture Check`. Select `Peer Network Range`.
 
-![Selecting the Peer Network Range posture check in the NetBird dashboard](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/posture-check-new-block-network-range.png)
+![Selecting the Peer Network Range posture check in the NetBird dashboard](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/posture-check-new-block-network-range.png)
 
 Select the `Block` action, then click `Add Network Range` and enter the office subnet `192.168.1.0/24`.
 
@@ -28,7 +28,7 @@ Select the `Block` action, then click `Add Network Range` and enter the office s
 >
 > If you have several sites to exclude, add one network range per site to the same posture check.
 
-![Peer Network Range posture check with the Block action and the office subnet 192.168.1.0/24](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/posture-check-block-network-range.png)
+![Peer Network Range posture check with the Block action and the office subnet 192.168.1.0/24](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/posture-check-block-network-range.png)
 
 Click `Save`, then `Continue`, and name the check "Exclude office subnet".
 
@@ -44,33 +44,33 @@ For this use case the resource is the office subnet `192.168.1.0/24`, because th
 
 ## Create the access policy and attach the check
 
-Navigate to `Access Control` > `Policies` and click `Add Policy`. Set the source to the group `route-users` and the destination to the office resource (or to a resource group that contains it), then choose the protocols and ports you want to allow.
+Navigate to `Networking` > `Access Control` > `Policies` and click `Add Policy`. Set the source to the group `route-users` and the destination to the office resource (or to a resource group that contains it), then choose the protocols and ports you want to allow.
 
 Click `Browse Checks`, select `Exclude office subnet`, and click `Add Posture Checks`.
 
-![An access policy with the Exclude office subnet posture check attached](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/policy-with-network-posturecheck-added.png)
+![An access policy with the Exclude office subnet posture check attached](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/policy-with-network-posturecheck-added.png)
 
 Name the policy "Office network access" and save it. Peers in `route-users` now receive the office route only while they are outside `192.168.1.0/24`.
 
 ## Verify it
 
-The example below uses a macOS client named `client-01` in the group `route-users`, so the NetBird interface appears as `utun100` and the local link as `en0`. On Windows and Linux the NetBird interface is `wt0` by default. The screenshots use the older `netbird routes list` alias of `netbird networks list`, which still works.
+The example below uses a macOS client named `client-01` in the group `route-users`, so the NetBird interface appears as `utun100` and the local link as `en0`. On Windows and Linux the NetBird interface is `wt0` by default.
 
-**Inside the office.** The device holds an address inside the office subnet.
+On the macOS client, run these commands inside the office, then repeat them from a different network:
 
-![macOS Wi-Fi details showing the client with the address 192.168.1.68 on the office network](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/wifi-inside-office-subnet.png)
+```bash
+ipconfig getifaddr en0
+netbird networks list
+netstat -rn | grep '192\.168\.1'
+```
 
-`netbird networks list` does not show the office network, and the system route table sends `192.168.1.0/24` over the local interface `en0`.
+Compare the results:
 
-![The NetBird client reporting no available routes while the device is on site](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netbird-routes-list-local.png)
-
-![netstat output showing 192.168.1.0/24 reached over the local interface en0](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netstat-routes-grep-local.png)
-
-**Outside the office.** The office network is distributed again and shows as selected, and the same destination now goes over the NetBird interface `utun100`.
-
-![The NetBird client listing 192.168.1.0/24 as an available and selected route while the device is remote](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netbird-routes-list-external.png)
-
-![netstat output showing 192.168.1.0/24 reached over the NetBird interface utun100](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/posture-checks/connecting-from-the-office/netstat-routes-grep-external.png)
+| Check                             | Inside the office                                   | Outside the office                                    |
+| --------------------------------- | --------------------------------------------------- | ----------------------------------------------------- |
+| Device address                    | Inside `192.168.1.0/24`, for example `192.168.1.68` | Outside the office subnet                             |
+| `netbird networks list`           | The office network is absent                        | The office network is available and selected          |
+| System route for `192.168.1.0/24` | Uses the local interface, `en0` in this example     | Uses the NetBird interface, `utun100` in this example |
 
 ## Limits worth knowing
 

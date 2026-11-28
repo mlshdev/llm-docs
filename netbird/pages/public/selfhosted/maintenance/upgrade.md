@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/maintenance/upgrade.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/maintenance/upgrade.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/maintenance/upgrade.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/maintenance/upgrade.mdx)
 
 # Upgrade Your Self-Hosted NetBird Installation
 
@@ -8,7 +8,7 @@ This guide covers NetBird upgrades and [updating Traefik and CrowdSec](#upgradin
 
 The NetBird Dashboard displays an update indicator at the bottom of the left navigation menu when a new version is available:
 
-![update-available](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/maintenance/update-available.png)
+![update-available](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/maintenance/update-available.png)
 
 You can also check the current version programmatically via the API (requires authentication):
 
@@ -88,23 +88,21 @@ Traefik and CrowdSec have their own release cycles. Upgrading NetBird does not u
 
 ### Choosing versions
 
-The following dependency versions have been validated for self-hosted NetBird as of **October 9, 2026**:
+The following version pins are used in these self-hosted NetBird examples:
 
-| Component                       | Validated version               |
+| Component                       | Version                         |
 | ------------------------------- | ------------------------------- |
-| Bundled Traefik                 | `traefik:v3.7.14`               |
+| Bundled Traefik                 | `traefik:v3.7.18`               |
 | CrowdSec                        | `crowdsecurity/crowdsec:v1.8.1` |
 | Traefik CrowdSec bouncer plugin | `v1.7.1`                        |
 
-Installer defaults can differ from these versions. Check the image tags in your `docker-compose.yml`; the bouncer plugin is configured separately in the [dashboard AppSec guide](https://docs.netbird.io/selfhosted/maintenance/crowdsec-dashboard#update-docker-compose-yml). Before adopting a newer release, review its migration requirements and verify it with your NetBird configuration in a test deployment.
-
 - **Traefik:** check the [releases](https://github.com/traefik/traefik/releases), [support policy](https://doc.traefik.io/traefik/deprecation/releases/), and [v3 migration notes](https://doc.traefik.io/traefik/migrate/v3/). Configuration changes can be required within the same major version.
 - **CrowdSec:** check the [releases](https://github.com/crowdsecurity/crowdsec/releases) and [Docker documentation](https://docs.crowdsec.net/u/getting_started/installation/docker/).
-- **Dashboard AppSec:** also check the [Traefik bouncer plugin releases](https://github.com/maxlerebourg/crowdsec-bouncer-traefik-plugin/releases). The plugin version is set by `--experimental.plugins.bouncer.version` in Traefik's `command:` list. Changing the CrowdSec image does not update it.
+- **Dashboard AppSec:** also check the [Traefik bouncer plugin releases](https://github.com/maxlerebourg/crowdsec-bouncer-traefik-plugin/releases). The plugin version is set by `--experimental.plugins.bouncer.version` in Traefik's `command:` list. Changing the CrowdSec image does not update it. A new installation can turn AppSec on from the quickstart or the enterprise script. The quickstart never changes an existing install, and the enterprise script adds AppSec only together with the proxy through `--enable-proxy`. To add AppSec to a running proxy, follow the [dashboard guide](https://docs.netbird.io/selfhosted/maintenance/crowdsec-dashboard).
 
 You can subscribe to release notifications on each GitHub repository using **Watch → Custom → Releases**. Check security advisories and upstream support status as well as the installer defaults when planning updates.
 
-Full version tags such as `traefik:v3.7.14` and `crowdsecurity/crowdsec:v1.8.1` select specific releases. A minor-version tag such as `traefik:v3.6` can fetch a newer patch image without a Compose edit. For controlled rollouts, use full version tags for all images, or image digests when you need immutable references, and update them deliberately after validation.
+Full version tags such as `traefik:v3.7.18` and `crowdsecurity/crowdsec:v1.8.1` select specific releases. A minor-version tag such as `traefik:v3.7` can fetch a newer patch image without a Compose edit. For controlled rollouts, use full version tags for all images, or image digests when you need immutable references, and update them deliberately after validation.
 
 ### Before changing a version
 
@@ -135,6 +133,8 @@ Full version tags such as `traefik:v3.7.14` and `crowdsecurity/crowdsec:v1.8.1` 
 ### Apply the update
 
 Change one component at a time so you can identify regressions. Edit that service's `image:` in `docker-compose.yml` to the version or digest you selected, preserving its existing environment, labels, networks, and volume mounts. If the image is supplied through a Compose variable, update that variable instead.
+
+For this Traefik update, set `image: traefik:v3.7.18` on the `traefik` service in a quickstart installation. For an enterprise installation using `image: traefik:${NETBIRD_TRAEFIK_TAG}`, set `NETBIRD_TRAEFIK_TAG=v3.7.18` in the Compose project's `.env` file.
 
 For Traefik, also check [header handling](#traefik-header-handling) and the [Docker network setting](#traefik-docker-network) before recreating the container.
 
@@ -185,13 +185,15 @@ Record the exact image versions or digests, plugin version, and test results wit
 
 ### Roll back a dependency update
 
-Restore the previous image digest or full version tag and any configuration changed for that component, including the bouncer plugin version. Recreate the affected service with `docker compose up -d --no-deps <service>` and repeat the verification checks. Restoring a moving tag such as `v3.6` or `latest` may fetch the upgraded image again; use the recorded digest to recover the exact previous image.
+Restore the previous image digest or full version tag and any configuration changed for that component, including the bouncer plugin version. Recreate the affected service with `docker compose up -d --no-deps <service>` and repeat the verification checks. Restoring a moving tag such as `v3.7` or `latest` may fetch the upgraded image again; use the recorded digest to recover the exact previous image.
 
 When rolling Traefik back to a release older than `v3.7.12`, also remove the `aliasHeadersStrategy` flags added in [Traefik header handling](#traefik-header-handling). Those releases do not recognize the option and fail to start with `field not found, node: aliasHeadersStrategy`.
 
 > **Warning**
 >
-> Traefik v3.0.0 through v3.7.11 are affected by header-alias spoofing ([GHSA-rf44-j88r-hh8c](https://github.com/traefik/traefik/security/advisories/GHSA-rf44-j88r-hh8c)). Removing `aliasHeadersStrategy` so those releases can start restores that vulnerable handling: a client can send an alias of a header Traefik wrote, and a backend that treats those names as the same variable can read the client's value instead. Do not expose an affected rollback version to untrusted traffic. Return to `v3.7.12` or newer, with `aliasHeadersStrategy` set to `delete`, once service is restored.
+> Traefik v3.0.0 through v3.7.11 are affected by header-alias spoofing ([GHSA-rf44-j88r-hh8c](https://github.com/traefik/traefik/security/advisories/GHSA-rf44-j88r-hh8c)). Removing `aliasHeadersStrategy` so those releases can start restores that vulnerable handling: a client can send an alias of a header Traefik wrote, and a backend that treats those names as the same variable can read the client's value instead. Do not expose an affected rollback version to untrusted traffic. Return to `v3.7.18` or a newer release you have verified, with `aliasHeadersStrategy` set to `delete`, once service is restored.
+>
+> Traefik v3.0.0 through v3.7.17 are also affected by a path-based authorization bypass ([GHSA-cp28-5662-543f](https://github.com/traefik/traefik/security/advisories/GHSA-cp28-5662-543f)). If a backend strips path parameters and is shared by an unauthenticated router and a router that protects paths with authentication or authorization middleware, a request such as `/public/..;x/admin` can bypass that middleware. Restrict untrusted traffic while using an affected rollback version, and return to `v3.7.18` or a newer release you have verified once service is restored.
 
 If the release migrated stored data or configuration in a way the older version cannot read, stop the affected service and [restore its pre-upgrade backup](https://docs.netbird.io/selfhosted/maintenance/backup) before starting the older image. Changing an image tag does not undo a database migration.
 
@@ -199,7 +201,7 @@ If the release migrated stored data or configuration in a way the older version 
 
 ### Traefik header handling
 
-Traefik v3.7.12 introduced `aliasHeadersStrategy` and warns when it is unset. When upgrading to the validated `v3.7.14` version, add these settings to the existing `services.traefik.command` list in `docker-compose.yml`:
+Traefik v3.7.12 introduced `aliasHeadersStrategy` and warns when it is unset. The installers require at least `v3.7.13` for the option's header-sanitization fix. When upgrading to `v3.7.18`, add these settings to the existing `services.traefik.command` list in `docker-compose.yml`:
 
 ```yaml
       - '--entrypoints.web.http.aliasHeadersStrategy=delete'
@@ -276,7 +278,7 @@ docker compose pull proxy && docker compose up -d --force-recreate proxy
 
 ## Get In Touch
 
-Feel free to ping us on Slack if you have any questions.
+Feel free to ping us on Slack or Discord if you have any questions.
 
 - NetBird managed version: <https://app.netbird.io>
 - Make sure to [star us on GitHub](https://github.com/netbirdio/netbird)

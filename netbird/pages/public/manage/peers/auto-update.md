@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/auto-update.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/auto-update.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/peers/auto-update.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/peers/auto-update.mdx)
 
 # Client Automatic Updates
 
@@ -16,7 +16,7 @@ The Automatic Updates feature allows the NetBird client to notify users when a n
 
 ## Enable Automatic Updates
 
-![Automatic Updates](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/auto-update/dashboard.png)
+![Automatic Updates](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/auto-update/dashboard.png)
 
 To enable client auto updates, navigate to **Settings » Clients** in your NetBird dashboard ([app.netbird.io/settings](https://app.netbird.io/settings) on NetBird Cloud, or your own Management dashboard when self-hosting) and select an update method under **Automatic Updates**:
 
@@ -81,5 +81,5 @@ Linux support is not available at this time due to the variety of distributions 
 
 - Make sure to [star us on GitHub](https://github.com/netbirdio/netbird)
 - Follow us [on X](https://x.com/netbird)
-- Join our Slack Channel
+- Join our Slack Channel or Discord server
 - NetBird [latest release](https://github.com/netbirdio/netbird/releases) on GitHub

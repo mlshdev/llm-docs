@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/clusters.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/clusters.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/agent-network/clusters.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/agent-network/clusters.mdx)
 
 # Clusters
 
@@ -23,11 +23,11 @@ upstreams, and keep the endpoint available if one goes down.
 Go to **Agent Network → Configuration → Clusters** to see every cluster serving your account, along
 with the number of connected proxies, online status, and the capabilities each proxy reports.
 
-![Agent Network clusters list under Configuration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/clusters/agent-network-clusters-list.png)
+![Agent Network clusters list under Configuration](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/clusters/agent-network-clusters-list.png)
 
 Use **Setup Self-Hosted Cluster** to register a new one. Enter a domain for the cluster and pick a
 **Deployment Method**: run it yourself with Docker, or use one of the **1-click deployments** for
 popular cloud providers to stand up a proxy in a few clicks. The wizard then walks you through the
 DNS records to add and starting the proxy.
 
-![Setup Cluster wizard with domain and deployment method](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/clusters/agent-network-setup-cluster.png)
+![Setup Cluster wizard with domain and deployment method](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/clusters/agent-network-setup-cluster.png)

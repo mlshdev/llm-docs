@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/use-cases/remote-access/clientless-rdp.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/use-cases/remote-access/clientless-rdp.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/use-cases/remote-access/clientless-rdp.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/use-cases/remote-access/clientless-rdp.mdx)
 
 # Clientless RDP Access for Third Parties
 
@@ -93,7 +93,7 @@ One example runs through this guide:
 Skip this step if the RDP host already runs the NetBird client; you will
 select it directly as a **Peer** target when creating the service.
 
-1. In the dashboard, go to **Networks** and create a network, for example
+1. In the dashboard, go to **Networking → Network Routing → Networks** and create a network, for example
    `office-servers`.
 2. Add a **resource** for the single host `10.10.20.15`. Prefer a
    single-host resource over the whole subnet: the proxy should be able to
@@ -161,7 +161,7 @@ This step is the same for both use cases.
 2. Add an **IP allow rule** for the firm's egress addresses only:
    `203.0.113.40/32`.
 
-![TCP service Access Control tab with an Allow Only rule for the IP address 203.0.113.40/32 and CrowdSec IP Reputation disabled](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/use-cases/clientless-rdp/tcp-service-access-control.png)
+![TCP service Access Control tab with an Allow Only rule for the IP address 203.0.113.40/32 and CrowdSec IP Reputation disabled](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/use-cases/clientless-rdp/tcp-service-access-control.png)
 
 With a strict single-IP allowlist like this one, that rule alone does the
 work. If your allow rules are broader (country rules or wide CIDR ranges),

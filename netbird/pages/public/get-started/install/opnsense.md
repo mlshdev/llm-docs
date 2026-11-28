@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/get-started/install/opnsense.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/get-started/install/opnsense.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/get-started/install/opnsense.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/get-started/install/opnsense.mdx)
 
 # OPNsense Installation
 
@@ -44,7 +44,7 @@ Fill out the authentication form with the following values and click `Save`:
 - **Management URL**: Default is `https://api.netbird.io:443`. If self-hosting, enter your custom management server URL.
 - **Setup Key**: Paste the setup key from your NetBird account.
 
-![authentication](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/opnsense/authentication.png)
+![authentication](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/opnsense/authentication.png)
 
 ### Verify Connection Status
 
@@ -53,7 +53,7 @@ Access it via `VPN` > `NetBird` > `Status` in the OPNsense menu.
 
 Use this section for diagnostics and troubleshooting common connection or setup issues.
 
-![connection status](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/opnsense/status.png)
+![connection status](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/opnsense/status.png)
 
 ### Assign NetBird interface
 
@@ -63,11 +63,11 @@ After installation, a new interface named `wt0` will be available but unassigned
 - **Device**: `wt0`
 - **Description**: `NetBird`
 
-![interfaceAssignment](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/opnsense/interface_assignment.png)
+![interfaceAssignment](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/opnsense/interface_assignment.png)
 
 Click `Add` to assign the interface.
 
-![interfaceAssignment](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/opnsense/new_interface.png)
+![interfaceAssignment](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/opnsense/new_interface.png)
 
 ### Enable the NetBird interface
 
@@ -77,7 +77,7 @@ the following options and click `Save`, then `Apply changes` to activate the int
 - **Enable**: `✓ Enable Interface`
 - **Lock**: `✓ Prevent interface removal`
 
-![enableInterface](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/opnsense/enable_interface.png)
+![enableInterface](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/opnsense/enable_interface.png)
 
 > **Note**
 >
@@ -103,7 +103,7 @@ This ensures traffic flows freely, while NetBird’s own policies (ACLs) govern 
 4. Click `Save`, then `Apply changes`.
 5. Ensure this rule is at the top of the `NetBird` rules list so it isn’t shadowed by other rules.
 
-![firewallRules](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/opnsense/firewall_rules.png)
+![firewallRules](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/opnsense/firewall_rules.png)
 
 ### Config for Troubleshooting Relayed Connections
 
@@ -140,5 +140,5 @@ By default, OPNsense uses automatic outbound NAT which randomizes source ports. 
 
 - Make sure to [star us on GitHub](https://github.com/netbirdio/netbird)
 - Follow us [on X](https://x.com/netbird)
-- Join our Slack Channel
+- Join our Slack Channel or Discord server
 - NetBird [latest release](https://github.com/netbirdio/netbird/releases) on GitHub

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/settings/permissions.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/settings/permissions.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/settings/permissions.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/settings/permissions.mdx)
 
 # Permissions
 
@@ -6,7 +6,7 @@ The `Permissions` tab in your account settings controls how much of the dashboar
 
 To find it, log in to your NetBird dashboard and navigate to `Settings` > `Permissions`.
 
-![Restrict dashboard for regular users setting in the Permissions tab](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/settings/permissions-restrict-dashboard.png)
+![Restrict dashboard for regular users setting in the Permissions tab](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/settings/permissions-restrict-dashboard.png)
 
 ## Restrict dashboard for regular users
 

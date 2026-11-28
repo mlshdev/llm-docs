@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/community.texi](https://github.com/FFmpeg/FFmpeg/blob/35ef294f5d9d6c5b9a13abb59a4eedb1d0c875a3/doc/community.texi)
+> Pinned source for FFmpeg master: [doc/community.texi](https://github.com/FFmpeg/FFmpeg/blob/7f32f9dccc74d6afedcf32fd5595b05b9c9eee69/doc/community.texi)
 
 <a id="organisation"></a>
 

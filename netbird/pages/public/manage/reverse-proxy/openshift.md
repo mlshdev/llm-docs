@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/reverse-proxy/openshift.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/reverse-proxy/openshift.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/reverse-proxy/openshift.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/reverse-proxy/openshift.mdx)
 
 # Reverse Proxy on OpenShift
 
@@ -49,7 +49,7 @@ Before you start, make sure you have:
 - An OpenShift login with permission to create Deployments, Services, Secrets, PersistentVolumeClaims and, for the Route fallback, Routes in the target namespace. No additional SCC is needed.
 - A default StorageClass that can provision a 1 GiB PVC.
 - A **proxy access token** from your NetBird management server. This is not a client setup key or a personal access token:
-  - **NetBird Cloud** - create an account-scoped token in the dashboard under **Reverse Proxy** > **Clusters** > **Setup Self-Hosted Cluster**, or through the API. See [Bring Your Own Proxy](https://docs.netbird.io/manage/reverse-proxy/bring-your-own-proxy). The management address is `https://api.netbird.io`.
+  - **NetBird Cloud** - create an account-scoped token in the dashboard under **Networking** > **Reverse Proxy** > **Clusters** > **Setup Self-Hosted Cluster**, or through the API. See [Bring Your Own Proxy](https://docs.netbird.io/manage/reverse-proxy/bring-your-own-proxy). The management address is `https://api.netbird.io`.
   - **Self-hosted** - create a management-wide token with `netbird-server admin token create` (combined container) or `netbird-mgmt admin token create` (multi-container). See [Enable Reverse Proxy](https://docs.netbird.io/selfhosted/migration/enable-reverse-proxy). The management address is your management server's public URL. Because this proxy runs outside the management host's Docker network, the management server's Traefik must also route the `ProxyService` gRPC path and have its idle timeout disabled. Follow [Prepare the management server for cross-host proxies](https://docs.netbird.io/selfhosted/maintenance/scaling/multiple-proxy-instances#prepare-the-management-server-for-cross-host-proxies) first. This [Traefik requirement](https://docs.netbird.io/manage/reverse-proxy#traefik-requirement) applies to the management server, not to the proxy deployed here.
 - Public DNS names you control, and inbound TCP 443 connectivity from the Internet to the proxy.
 - Outbound access from the cluster to your NetBird management server, the configured signal and relay services, Let's Encrypt, and `pkgs.netbird.io`, from which the proxy downloads its geolocation database at startup.
@@ -246,7 +246,7 @@ oc get pvc netbird-proxy-certs -n "$NAMESPACE"
 oc logs deployment/netbird-proxy -n "$NAMESPACE" --tail=50
 ```
 
-The PVC is `Bound`, the logs contain `Initial mapping sync complete`, and the cluster appears in the dashboard under **Reverse Proxy** > **Clusters** with an **Online** badge. If the rollout times out, see [Troubleshooting](#troubleshooting).
+The PVC is `Bound`, the logs contain `Initial mapping sync complete`, and the cluster appears in the dashboard under **Networking** > **Reverse Proxy** > **Clusters** with an **Online** badge. If the rollout times out, see [Troubleshooting](#troubleshooting).
 
 ### Configuration explained
 
@@ -447,7 +447,7 @@ The proxy reaches the backend through a routing peer, so the backend has to exis
 1. **Deploy a routing peer** in the cluster. Follow [OpenShift Installation](https://docs.netbird.io/get-started/install/openshift) to run the rootless UBI client, preferably with a [persistent peer identity](https://docs.netbird.io/get-started/install/openshift#persistent-peer-identity) so the routing peer assignment survives restarts.
 2. **Create a network and a domain resource** with the address `nginx-server.netbird-proxy.svc.cluster.local` (replace `netbird-proxy` if you changed `NAMESPACE`), and assign the UBI client as its routing peer. Any pod in the cluster can resolve and reach this Service. See [Networks](https://docs.netbird.io/manage/networks).
 3. **Add an access policy** that lets the proxy's embedded peer reach the resource. The proxy joins your NetBird network as a peer when it receives its first service mapping. See [Access Control](https://docs.netbird.io/manage/access-control/manage-network-access).
-4. **Create the reverse proxy service** under **Reverse Proxy** > **Services** > **Add Service**. See the [Reverse Proxy quick start](https://docs.netbird.io/manage/reverse-proxy#quick-start) for the full dialog.
+4. **Create the reverse proxy service** under **Networking** > **Reverse Proxy** > **Services** > **Add Service**. See the [Reverse Proxy quick start](https://docs.netbird.io/manage/reverse-proxy#quick-start) for the full dialog.
 
    | Field          | Value                                                                                         |
    | -------------- | --------------------------------------------------------------------------------------------- |
@@ -461,7 +461,7 @@ The proxy reaches the backend through a routing peer, so the backend has to exis
 
 The proxy requests a certificate for a service hostname only when management sends it the service mapping, so this last step is what triggers issuance. A DNS record or a Route alone does not register a service.
 
-**Checkpoint.** The service under **Reverse Proxy** > **Services** moves from `certificate_pending` to `active`, and the proxy logs contain `certificate for domain "nginx.proxy.example.com" ready`.
+**Checkpoint.** The service under **Networking** > **Reverse Proxy** > **Services** moves from `certificate_pending` to `active`, and the proxy logs contain `certificate for domain "nginx.proxy.example.com" ready`.
 
 > **Note**
 >

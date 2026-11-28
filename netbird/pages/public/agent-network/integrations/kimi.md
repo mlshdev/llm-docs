@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/integrations/kimi.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/integrations/kimi.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/agent-network/integrations/kimi.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/agent-network/integrations/kimi.mdx)
 
 # Kimi (Moonshot AI)
 
@@ -24,7 +24,7 @@ calls picks the shape, and NetBird forwards that path through to Moonshot unchan
 
 ## Connect the Provider
 
-1. Go to **Agent Network → Providers** and click **Connect Provider**.
+1. Go to **Agent Network → Agents → Providers** and click **Connect Provider**.
 2. Select **Kimi (Moonshot AI) API**. Keep the default **Upstream URL** `https://api.moonshot.ai`, the bare
    international host. Don't add a path suffix: the client picks the API shape with the path
    it calls (`/anthropic` or `/v1`), and NetBird rides that path through to Moonshot.
@@ -35,7 +35,7 @@ calls picks the shape, and NetBird forwards that path through to Moonshot unchan
 5. Save the provider. The key is now held server-side. The next step authorizes who can use
    it.
 
-![Connect the Kimi (Moonshot AI) provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/integrations/agent-network-connect-kimi.png)
+![Connect the Kimi (Moonshot AI) provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/integrations/agent-network-connect-kimi.png)
 
 > **Note**
 >
@@ -49,7 +49,7 @@ See [Providers](https://docs.netbird.io/agent-network/providers) for details.
 By default nothing is allowed. A policy must connect a source group to the Kimi provider
 before anyone can route through it.
 
-1. Go to **Agent Network → Policies** and add a policy.
+1. Go to **Agent Network → Agents → Agent Policies** and add a policy.
 2. Set the **Source** to the users or agents who should be able to reach Kimi (for example
    your `Engineering` group from your IdP).
 3. Set the **Provider** to the Kimi provider you just connected.

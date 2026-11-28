@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/idp-sync/google-workspace-sync.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/idp-sync/google-workspace-sync.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/team/idp-sync/google-workspace-sync.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/team/idp-sync/google-workspace-sync.mdx)
 
 # Provision Users and Groups From Google Workspace
 
@@ -11,6 +11,8 @@ Google Workspace to NetBird. You can utilize these synchronized groups to config
 access policies, and automate onboarding and offboarding processes, adding significant value to your organizational
 workflow and security posture.
 
+For changes to a user's synced groups to update their peers, [Enable user group propagation](https://docs.netbird.io/manage/settings/groups#enable-user-group-propagation) must be enabled in `Settings` > `Groups`. If it is disabled, removing a user from a Google Workspace group leaves their peers' existing group memberships intact. Update those peer memberships manually in NetBird to revoke access granted through that group.
+
 The integration process involves two complementary services: Google Workspace and Google Cloud Platform (GCP).
 Google Workspace serves as your Identity Provider (IdP), managing user and group identities and providing Single Sign-On (SSO)
 capabilities. GCP is used to create a service account, which NetBird uses to authenticate and access Google Workspace
@@ -22,9 +24,9 @@ data via the Admin SDK API. This service account uses OAuth 2.0 for secure, auth
 
 ## Get Started with NetBird-Google Workspace Integration
 
-Go to the `Integrations` section in the left menu to access the `Identity Provider integration`. Click the `Google Workspace` button. This will open a pop-up window featuring an intuitive wizard to guide you through the synchronization process between NetBird and Google Workspace.
+Go to **Integrations** and select the **Identity Provider Sync** tab. Click the `Google Workspace` button. This will open a pop-up window featuring an intuitive wizard to guide you through the synchronization process between NetBird and Google Workspace.
 
-![The Google Workspace card on the Identity Provider Sync tab with its Connect button](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/q1aq98X.png)
+![The Google Workspace card on the Identity Provider Sync tab with its Connect button](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/q1aq98X.png)
 
 ## Prerequisites
 
@@ -114,7 +116,7 @@ The key will automatically download to your local device. The new key will also 
 
 During service account key creation, you may encounter the following error:
 
-![The GCP error shown when the organization policy blocks service account key creation](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/mU2qAwe.png)
+![The GCP error shown when the organization policy blocks service account key creation](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/mU2qAwe.png)
 
 If that's the case, lift the constraint for the NetBird project only. Activate Google Cloud Shell on the top menu (shell icon) and run:
 
@@ -126,7 +128,7 @@ Replace `PROJECT_ID` with the ID of the project you created for NetBird. The org
 
 Now, you can upload the service account key to NetBird. After a successful upload, you'll see the key listed in the NetBird interface.
 
-![The NetBird wizard step for uploading the service account JSON key, with the key listed after upload](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/g8omqCt.png)
+![The NetBird wizard step for uploading the service account JSON key, with the key listed after upload](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/g8omqCt.png)
 
 If you lifted the constraint, restore it now by removing the project-level override. The key you already created keeps working:
 
@@ -160,7 +162,7 @@ Back to Google Workspace, enter `admin api` in the search bar and enable the fol
 
 Then, click `CONTINUE`
 
-![The Google Workspace privilege picker with Admin API Users Read and Groups Read checked](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/nKLJX2H.png)
+![The Google Workspace privilege picker with Admin API Users Read and Groups Read checked](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/nKLJX2H.png)
 
 Review the Admin API privileges to verify they are correct and click `CREATE ROLE` when ready.
 
@@ -170,7 +172,7 @@ In NetBird, click `Continue →`. For convenience, you can copy the service acco
 
 Then, in Google Workspace, click on `Assign service accounts` as shown below:
 
-![The Assign service accounts link on the new role's page in Google Workspace](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/HHzmRAL.png)
+![The Assign service accounts link on the new role's page in Google Workspace](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/HHzmRAL.png)
 
 Paste the service account Email address and click the `ADD` button.
 
@@ -182,22 +184,22 @@ Go back to NetBird and click `Continue →`. The next screen will prompt you to 
 
 To get your customer ID, navigate to [Account Settings](https://admin.google.com/ac/accountsettings/profile?hl=en_US) and copy the corresponding ID.
 
-![The Customer ID field on the Google Workspace Account settings profile page](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/443kaDt.png)
+![The Customer ID field on the Google Workspace Account settings profile page](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/443kaDt.png)
 
 ## Synchronizing Google Workspace Groups and Users
 
 Return to NetBird. The next two screens allow you to select which Google Workspace groups and users you want to synchronize. By default, NetBird synchronizes all groups and users. If you're okay with syncing everything, click `Continue` on both screens.
 
-![The NetBird wizard step for choosing which Google Workspace groups to sync](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/gAgKeL0.png)
+![The NetBird wizard step for choosing which Google Workspace groups to sync](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/gAgKeL0.png)
 
 You can also click on `+ Add group (or user group) filter` to change this settings as you see fit. To finish the integration process, click the `Connect` button.
 
 The next screen confirms that the integration was successful:
 
-![The Google Workspace card showing the integration as enabled](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/EkPJqpJ.png)
+![The Google Workspace card showing the integration as enabled](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/EkPJqpJ.png)
 
-To verify the integration is working correctly, you can also navigate to `Team` > `Users`. Here, you should see your synchronized Google Workspace users listed.
+To verify the integration is working correctly, you can also navigate to `Users`. Here, you should see your synchronized Google Workspace users listed.
 
-![The NetBird Users table listing users synced from Google Workspace](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/5AcaIqW.png)
+![The NetBird Users table listing users synced from Google Workspace](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/google-workspace-sync/5AcaIqW.png)
 
 The list should match the users in your Google Workspace Admin console.

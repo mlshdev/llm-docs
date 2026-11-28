@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/register-machines-using-setup-keys.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/register-machines-using-setup-keys.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/peers/register-machines-using-setup-keys.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/peers/register-machines-using-setup-keys.mdx)
 
 # Automate Deployments and Onboard Machines at Scale with Setup Keys
 
@@ -11,8 +11,12 @@ Pass the setup key to the `netbird up` command to authenticate a machine without
 This unlocks automated, unattended deployments and integrates cleanly with infrastructure-as-code tools such as Ansible, CloudFormation, and Terraform.
 
 ```bash
-netbird up --setup-key <SETUP KEY>
+sudo netbird up --setup-key <SETUP KEY>
 ```
+
+> **Note**
+>
+> On a machine with no console, such as a server, run `netbird up` with `sudo`, or as root. If an administrator gave the default profile to a user with `netbird profile claim default --owner <user>`, run `netbird up` as that user without `sudo`. See [Set up a headless machine](https://docs.netbird.io/client/profile-ownership#set-up-a-headless-machine).
 
 You can also pre-populate the client configuration ahead of first start, so peers come up fully configured and register with no manual steps. See [Bootstrap peers via config file](https://docs.netbird.io/manage/peers/bootstrap-via-config-file).
 
@@ -30,13 +34,13 @@ Peers registered with this key are automatically removed from NetBird after stay
 
 This is useful for short-lived workloads such as containers or autoscaling instances.
 
+By default, every ephemeral peer gets an IP-based suffix on its DNS name, made of the last two octets of its NetBird IP, such as `ci-runner-12-7.netbird.cloud`, even when no other peer has the plain name `ci-runner.netbird.cloud`. The `Reject Hostname Collisions` toggle under [Unique Peer Hostnames](https://docs.netbird.io/manage/settings/clients#unique-peer-hostnames) gives new ephemeral peers their plain names, but it applies to every peer in the account: with it on, any peer whose DNS name another peer already has fails to register. If your ephemeral peers share a hostname on purpose, for example autoscaled VMs that a provisioning tool gives one name, every one after the first fails to register, so leave the toggle off.
+
 ## Managing Setup Keys
 
 Setup keys are available in the NetBird Management Dashboard under `Settings` → `Setup Keys`.
 Use [this page](https://app.netbird.io/settings?tab=setup-keys) to view and manage your setup keys.
 From there, you can add new keys or revoke existing ones.
-
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/register-machines-using-setup-keys/setup-keys.png)
 
 > **Note**
 >
@@ -70,11 +74,9 @@ Adding peers to groups manually can become time-consuming in large networks with
 Starting with NetBird [v0.9.2](https://github.com/netbirdio/netbird/releases), you can specify a list of auto-assign groups when creating or updating a setup key.
 Every peer registered with this key is automatically added to those groups, and all access control rules for those groups apply automatically.
 
-To configure `Auto-assign groups`, open `Settings` → `Setup Keys` and create or update a setup key.
+To configure `Auto-assign groups`, open `Settings` → `Setup Keys` and [create a setup key](#create-setup-key) or update an existing one.
 Then use this key to enroll new machines.
 You can also edit the auto-assigned groups of an existing key directly from the `Groups` column of the setup keys table, provided your role allows updating setup keys.
-
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/register-machines-using-setup-keys/netbird-peer-auto-tagging-newkey.png)
 
 > **Note**
 >
@@ -90,8 +92,8 @@ The defaults are suitable for most cases. For security reasons, we recommend usi
 >
 > You can also generate a setup key while adding a peer. Go to `Peers` → `Add Peer` and click `Generate Key`. This is the most common path when enrolling a new server or routing peer. It creates a one-off key that expires in 24 hours with no auto-assigned groups. To control the key type, expiration, usage limit, or auto-groups, create the key from `Settings` → `Setup Keys` instead.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/register-machines-using-setup-keys/add-setup-key.png)
+![Create New Setup Key dialog with name, reusable, usage limit, expiry, ephemeral peers, extra DNS labels and auto-assigned groups settings](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/register-machines-using-setup-keys/add-setup-key.png)
 
-Once the key has been created, copy it and store it in a secure location.
+Once the key has been created, copy it and store it in a secure location. The key is shown only once.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/register-machines-using-setup-keys/setup-key-created.png)
+![Setup key created dialog showing the new key with a copy button](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/register-machines-using-setup-keys/setup-key-created.png)

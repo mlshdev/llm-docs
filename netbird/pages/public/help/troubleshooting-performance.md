@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/help/troubleshooting-performance.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/help/troubleshooting-performance.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/help/troubleshooting-performance.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/help/troubleshooting-performance.mdx)
 
 # Troubleshooting performance
 
@@ -153,7 +153,7 @@ Some reports are not about speed at all. They are one-time or reconnection delay
 
 - **A slow first name lookup.** The first request to a resource by name can pause for a while as the routing peer resolves it, and some apps make it worse by remembering a failed lookup. Later requests are quick. See [DNS Troubleshooting](https://docs.netbird.io/manage/dns/troubleshooting).
 - **Waking an idle connection.** NetBird brings a connection up when you first use it (see [Lazy connections](https://docs.netbird.io/manage/peers/lazy-connection)), so the very first request to a peer you have not talked to in a while can take a moment while the tunnel comes up. This is by design, and everything after it runs normally.
-- **A connection that keeps reconnecting.** If the link is unstable, or a laptop keeps switching between Wi-Fi and other networks, NetBird reconnects often, and each reconnect can interrupt transfers in progress. It reads as "slow and unstable" rather than steadily slow. If you suspect this, capture a [debug bundle](https://docs.netbird.io/help/troubleshooting-client#debug-bundle) and [reach out to support](https://docs.netbird.io/help/netbird-support) so the team can see the reconnection pattern.
+- **A connection that keeps reconnecting.** If the link is unstable, or a laptop keeps switching between Wi-Fi and other networks, NetBird reconnects often, and each reconnect can interrupt transfers in progress. It reads as "slow and unstable" rather than steadily slow. If the client drops and comes back every few minutes, see [Connection drops every few minutes](https://docs.netbird.io/help/troubleshooting-connection-drops). Otherwise, capture a [debug bundle](https://docs.netbird.io/help/troubleshooting-client#debug-bundle) and [reach out to support](https://docs.netbird.io/help/netbird-support) so the team can see the reconnection pattern.
 
 ## Recap
 

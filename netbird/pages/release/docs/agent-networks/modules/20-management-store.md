@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [docs/agent-networks/modules/20-management-store.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/20-management-store.md)
+> Pinned source for NetBird v0.84.0: [docs/agent-networks/modules/20-management-store.md](https://github.com/netbirdio/netbird/blob/22eac80ddcb056b2c4738309240bda2711bafd98/docs/agent-networks/modules/20-management-store.md)
 
 # management/store — persistence for agent-network entities
 
@@ -9,7 +9,7 @@
 
 This module is the persistence layer for the Agent Network feature. Everything the management server stores about LLM proxying — providers, policies, guardrails, the per-account settings row, a usage-counter table written on every proxied LLM request, and the account-budget rules — flows through the methods added to `store.Store`. The module owns six tables, six entity types from `management/server/agentnetwork/types`, and a single hot-path upsert (`IncrementAgentNetworkConsumption`) consumed by the proxy fleet.
 
-Out of scope here: the catalog of provider definitions (compiled-in, no DB), the synthesizer/manager built on top of these CRUDs (covered in [21-management-agentnetwork.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/21-management-agentnetwork.md)), and the HTTP handlers that translate API requests into Save/Delete calls.
+Out of scope here: the catalog of provider definitions (compiled-in, no DB), the synthesizer/manager built on top of these CRUDs (covered in [21-management-agentnetwork.md](https://github.com/netbirdio/netbird/blob/22eac80ddcb056b2c4738309240bda2711bafd98/docs/agent-networks/modules/21-management-agentnetwork.md)), and the HTTP handlers that translate API requests into Save/Delete calls.
 
 ## Files
 
@@ -67,19 +67,19 @@ Reads decrypt provider secrets in-place; writes do `provider.Copy().EncryptSensi
 ### Correctness
 
 - `SaveAgentNetworkProvider` saves the copy (sql\_store\_agentnetwork.go:95). The caller's in-memory pointer therefore keeps plaintext `api_key` and any `CreatedAt`/`UpdatedAt` gorm autofills land on the copy, not the original. Callers that need synced timestamps must re-fetch.
-- `IncrementAgentNetworkConsumption`'s `Create` provides initial counter values (`TokensInput: tokensIn`, etc.) in the row, and on conflict the assignments add the same deltas to the existing values. The insert-vs-update arithmetic is consistent. Cross-check that no engine in use (sqlite, postgres, mysql) silently rejects the `OnConflict` clause — GORM emits engine-specific SQL but `ON DUPLICATE KEY UPDATE` (mysql) vs `ON CONFLICT (...)` (sqlite/postgres) need their unique constraint to match the composite PK on `agent_network_consumption`; it does, by construction.
+- `IncrementAgentNetworkConsumption`'s `Create` provides initial counter values (`TokensInput: tokensIn`, etc.) in the row, and on conflict the assignments add the same deltas to the existing values. The insert-vs-update arithmetic is consistent. Cross-check that no engine in use (sqlite, postgres) silently rejects the `OnConflict` clause — GORM emits `ON CONFLICT (...)`, which needs its unique constraint to match the composite PK on `agent_network_consumption`; it does, by construction.
 - `IncrementAgentNetworkConsumption` writes `updated_at: time.Now().UTC()` literally inside the assignments map (sql\_store\_agentnetwork.go:333) — fine, but it's a Go-side timestamp captured at call time, not a DB-side `now()`. Acceptable for an audit field.
 - `GetAgentNetworkConsumption` returns a zero-valued non-nil row on `ErrRecordNotFound` (sql\_store\_agentnetwork.go:364-371). Document or rename — a typed sentinel error would be more orthodox; callers must know not to error-check.
 
 ### Concurrency / transactions
 
-- Hot-path `IncrementAgentNetworkConsumption` runs outside any explicit transaction; concurrency safety relies entirely on the DB serialising the `ON CONFLICT` upsert against the composite PK. This is correct for postgres and mysql; for sqlite it serialises behind the single writer.
+- Hot-path `IncrementAgentNetworkConsumption` runs outside any explicit transaction; concurrency safety relies entirely on the DB serialising the `ON CONFLICT` upsert against the composite PK. This is correct for postgres; for sqlite it serialises behind the single writer.
 - `SaveAgentNetworkSettings` is a blind upsert with no version/etag — concurrent writes from two operators last-write-wins on the collection-toggle flags (settings.go:23-25). Acceptable for admin-curated state but worth flagging.
 - `Save*Provider` uses `db.Save` on a struct with a PK already set — GORM emits UPDATE or INSERT based on row existence. No upsert clause is attached, so a race between two creates with the same generated `xid` (vanishingly unlikely) would surface as a PK violation.
 
 ### Migration safety
 
-- All six tables ride `AutoMigrate` (sql\_store.go:141-142). AutoMigrate is additive: new columns get added, but it never drops columns nor narrows types. Three `bool` columns on `agent_network_settings` (`EnableLogCollection`, `EnablePromptCollection`, `RedactPii`) default to false at the GORM/DDL layer for existing rows; the test at sql\_store\_agentnetwork\_budgetrule\_test.go:83-112 locks that down on a fresh sqlite. Verify postgres/mysql produce the same default.
+- All six tables ride `AutoMigrate` (sql\_store.go:141-142). AutoMigrate is additive: new columns get added, but it never drops columns nor narrows types. Three `bool` columns on `agent_network_settings` (`EnableLogCollection`, `EnablePromptCollection`, `RedactPii`) default to false at the GORM/DDL layer for existing rows; the test at sql\_store\_agentnetwork\_budgetrule\_test.go:83-112 locks that down on a fresh sqlite. Verify postgres produces the same default.
 - The named index `idx_agent_network_settings_cluster_subdomain` on settings.go:15 is declared on only `subdomain`. Either the cluster column also needs `gorm:"index:idx_agent_network_settings_cluster_subdomain"` to make it composite, or the name is misleading.
 - The named index `idx_agent_network_provider` on `Provider.ProviderID` (provider.go:30) is *not* unique and not scoped to account — two providers in the same account with the same `provider_id` are permitted at the DB layer; uniqueness, if any, must live above the store.
 
@@ -108,12 +108,12 @@ Gap: there is no store-level test for providers (encryption round-trip), policie
 
 - No retention / GC for `agent_network_consumption`.
 - No `Delete` for `Settings` (one row per account, cleared with the account).
-- No DB-engine-specific tuning — the same struct tags drive sqlite, mysql, postgres.
+- No DB-engine-specific tuning — the same struct tags drive sqlite and postgres.
 - Provider `extra_values` and `models` are JSON blobs; querying inside them is not supported by design.
 - `GetAgentNetworkConsumption` "not-found = zero row" contract is convenient but unconventional.
 
 ## Cross-references
 
-- Upstream: [shared/api](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/10-shared-api.md), [management/agentnetwork](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/modules/21-management-agentnetwork.md)
-- End-to-end flow: [../01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/01-end-to-end-flows.md)
-- Top-level: [../00-overview.md](https://github.com/netbirdio/netbird/blob/7e791d3e2972ddb763bb0e5c3bff4f9e14f70033/docs/agent-networks/00-overview.md)
+- Upstream: [shared/api](https://github.com/netbirdio/netbird/blob/22eac80ddcb056b2c4738309240bda2711bafd98/docs/agent-networks/modules/10-shared-api.md), [management/agentnetwork](https://github.com/netbirdio/netbird/blob/22eac80ddcb056b2c4738309240bda2711bafd98/docs/agent-networks/modules/21-management-agentnetwork.md)
+- End-to-end flow: [../01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/22eac80ddcb056b2c4738309240bda2711bafd98/docs/agent-networks/01-end-to-end-flows.md)
+- Top-level: [../00-overview.md](https://github.com/netbirdio/netbird/blob/22eac80ddcb056b2c4738309240bda2711bafd98/docs/agent-networks/00-overview.md)

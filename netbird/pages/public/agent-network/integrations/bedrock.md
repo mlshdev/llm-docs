@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/integrations/bedrock.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/integrations/bedrock.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/agent-network/integrations/bedrock.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/agent-network/integrations/bedrock.mdx)
 
 # AWS Bedrock
 
@@ -33,7 +33,7 @@ for details.
 
 ## Connect the Provider
 
-1. Go to **Agent Network → Providers** and click **Connect Provider**.
+1. Go to **Agent Network → Agents → Providers** and click **Connect Provider**.
 2. Select **AWS Bedrock**. Set the **Upstream URL** to your region's Bedrock runtime host,
    for example `https://bedrock-runtime.us-east-1.amazonaws.com`. Bedrock is region-specific,
    so the host must include the region you enabled model access in.
@@ -45,7 +45,7 @@ for details.
 5. Save the provider. The key is now held server-side, the next step authorizes who can use
    it.
 
-![Connect the AWS Bedrock provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/integrations/agent-network-bedrock-connect.png)
+![Connect the AWS Bedrock provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/integrations/agent-network-bedrock-connect.png)
 
 See [Providers](https://docs.netbird.io/agent-network/providers) for details.
 
@@ -58,14 +58,14 @@ it to one. If the profile you need isn't in the picker, add it the same way as a
 the full profile ID into the **Model** field on the **Models** tab, for example
 `eu.anthropic.claude-sonnet-5`, and set its input/output pricing yourself.
 
-![Models tab with a geo-specific Bedrock inference profile ID and manually entered input/output pricing](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/providers/agent-network-custom-model.png)
+![Models tab with a geo-specific Bedrock inference profile ID and manually entered input/output pricing](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/providers/agent-network-custom-model.png)
 
 ## Create a Policy
 
 By default nothing is allowed: a policy must connect a source group to the Bedrock provider
 before anyone can route through it.
 
-1. Go to **Agent Network → Policies** and add a policy.
+1. Go to **Agent Network → Agents → Agent Policies** and add a policy.
 2. Set the **Source** to the users or agents who should be able to reach Bedrock (for example
    your `Engineering` group from your IdP).
 3. Set the **Provider** to the AWS Bedrock provider you just connected.
@@ -93,7 +93,7 @@ and group. Values are sanitized to Bedrock's accepted character set before they 
 
 The provider's **Mappings** tab shows exactly what NetBird sends:
 
-![Bedrock identity metadata mapping: user to user email and group to groups in the X-Amzn-Bedrock-Request-Metadata header](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/integrations/agent-network-bedrock-mappings.png)
+![Bedrock identity metadata mapping: user to user email and group to groups in the X-Amzn-Bedrock-Request-Metadata header](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/integrations/agent-network-bedrock-mappings.png)
 
 ## Use with Claude Code
 

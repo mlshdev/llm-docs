@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/use-cases/remote-access/cloud-to-on-premise.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/use-cases/remote-access/cloud-to-on-premise.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/use-cases/remote-access/cloud-to-on-premise.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/use-cases/remote-access/cloud-to-on-premise.mdx)
 
 # Cloud to On-Premise Access (VPN-to-Site)
 
@@ -38,21 +38,17 @@ Look for your local subnet, typically something like `10.100.0.0/24`.
 
 ## Step 2: Create a Network for On-Premise Resources
 
-1. Go to **Network Routing** → **Networks** in the NetBird dashboard
+1. Go to **Networking** → **Network Routing** → **Networks** in the NetBird dashboard
 2. Click **Add Network**
 3. Name it "On-Premise Data Center" and click **Save**
-
-![Add network](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/networks/use-cases/cloud-to-on-premise/add-network-on-prem-datacenter.png)
 
 ## Step 3: Add Your Database as a Resource
 
 1. In your new network, click **Add Resource**
 2. In the **Resource** tab, enter a name like "Database Servers"
 3. Enter your database subnet or specific IP (e.g., `10.100.0.0/24` or `10.100.0.50/32`)
-4. Expand **Additional Options** and under **Resource Groups**, create a group called `on-prem-databases`
+4. Expand **Optional Settings** and under **Resource Groups**, create a group called `on-prem-databases`
 5. Click **Continue** to proceed to the **Access Control** tab
-
-![Add resource](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/networks/use-cases/cloud-to-on-premise/add-resource-database-servers.png)
 
 > **Note**
 >
@@ -68,7 +64,7 @@ Look for your local subnet, typically something like `10.100.0.0/24`.
 6. Name it "Cloud to Database Access" and click **Add Policy**
 7. Click **Add Resource** to save the resource with its policy
 
-![Add policy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/networks/use-cases/cloud-to-on-premise/add-policy-on-prem-databases.png)
+![Add policy](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/networks/use-cases/cloud-to-on-premise/add-policy-on-prem-databases.png)
 
 ## Step 5: Set Up the Routing Peer On-Premise
 
@@ -77,7 +73,7 @@ The routing peer forwards traffic from NetBird to your data center network. Inst
 1. In the NetBird dashboard, go to **Settings** → **Setup Keys**
 2. Create a new setup key (one-time use recommended). Add `on-prem-databases` to **Auto-assigned groups** and click **Create Setup Key**.
 
-![Create setup key](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/networks/use-cases/cloud-to-on-premise/create-new-setup-key-on-prem-db.png)
+![Create setup key](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/networks/use-cases/cloud-to-on-premise/create-new-setup-key-on-prem-db.png)
 
 > **Note**
 >

@@ -1,10 +1,10 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/settings/clients.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/settings/clients.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/settings/clients.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/settings/clients.mdx)
 
 # Client Settings
 
-The `Clients` tab under [Settings](https://app.netbird.io/settings) holds account-wide settings that control how NetBird clients behave. Changing these settings requires a role with permission to update settings, such as `Owner` or `Admin`. Roles with read-only access to settings can view the tab, but the controls are disabled.
+The `Clients` tab under **[Settings](https://app.netbird.io/settings)** holds account-wide settings that control how NetBird clients behave. Changing these settings requires a role with permission to update settings, such as `Owner` or `Admin`. Roles with read-only access to settings can view the tab, but the controls are disabled.
 
-![Client settings tab showing Automatic Updates, Expose Services from CLI, and Lazy Connections](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/settings/client-settings-tab.png)
+![Client settings tab showing Automatic Updates, Expose Services from CLI, and Lazy Connections](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/settings/client-settings-tab.png)
 
 ## Automatic Updates
 
@@ -32,18 +32,21 @@ Two machines in one account can register with the same hostname, for example sim
 
 The suffix gives each peer its own DNS name, but it also hides that two machines share a hostname. If you want such a registration to fail loudly instead, enable the `Reject Hostname Collisions` toggle under `Unique Peer Hostnames` in the `Clients` tab of [Settings](https://app.netbird.io/settings). The setting applies to the whole account and is off by default.
 
-![Unique Peer Hostnames section of the Clients settings tab, with the Reject Hostname Collisions toggle switched off](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/settings/unique-peer-hostnames.png)
+![Unique Peer Hostnames section of the Clients settings tab, with the Reject Hostname Collisions toggle switched off](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/settings/unique-peer-hostnames.png)
 
-Whether the toggle is on or off, two hostnames collide when they produce the same DNS name. To build the DNS name, NetBird takes the part of the hostname before the first dot, lowercases it, and replaces each run of characters that are not valid in DNS with a single `-` (non-ASCII characters are first converted to punycode). So `Laptop` and `laptop` collide, so do `my_laptop` and `my-laptop`, and so do `web.prod` and `web.staging`, which both become `web`.
+Whether the toggle is on or off, two hostnames collide when they produce the same DNS name. To build the DNS name, NetBird takes the part of the hostname before the first dot, lowercases it, replaces each run of characters that are not valid in DNS with a single `-` (non-ASCII characters are first converted to punycode), and then keeps the first 59 characters of the result, so hostnames that differ only after that point get the same DNS name and collide. So `Laptop` and `laptop` collide, so do `my_laptop` and `my-laptop`, and so do `web.prod` and `web.staging`, which both become `web`.
 
 With the toggle on:
 
 - No new peer gets a suffix, ephemeral peers included. A peer whose DNS name is free registers with it; a peer whose DNS name another peer in the account already has fails to register, and no peer is created, so nothing appears in the peer list. The client reports `peer with hostname "laptop" is already registered`, stops retrying, and stays disconnected until someone runs `netbird up` on that machine again: either with a hostname whose DNS name is free (`netbird up --hostname <name>`), or after deleting the peer that holds the name.
+- Unlike a client installed on a host, which keeps running but disconnected, a container from the `netbirdio/netbird` image exits when it is rejected. With a Docker restart policy such as `unless-stopped`, Docker starts it again and it is rejected again, in a loop, until you stop the container. No peer is created, so nothing appears in the peer list.
 - Renaming a peer in the dashboard or through the API to a name whose DNS name another peer already has fails with the same error.
 
 Enabling the toggle does not touch existing peers: DNS names that already carry a suffix keep it, and a registered peer is not checked for collisions when it logs in again, even if it now reports a hostname whose DNS name another peer has; it keeps the DNS name it already had. The toggle only blocks DNS names that are already taken, so a peer that already has a suffixed name, such as `laptop-12-7`, doesn't block a new `laptop`.
 
-Deleting a peer frees its DNS name but does not change the others: if you delete the `laptop` that holds `laptop.netbird.cloud`, the other one keeps `laptop-12-7.netbird.cloud`. To give it the plain name, rename it to another name and then back to `laptop`; saving the same name does not change its DNS name.
+Deleting a peer frees its DNS name but does not change the others: if you delete the `laptop` that holds `laptop.netbird.cloud`, the other one keeps `laptop-12-7.netbird.cloud`. To give it the plain name, rename it to another name and then back to `laptop`. The peer is still named `laptop` (the suffix is only on its DNS name), so renaming it to `laptop` has no effect: the dashboard won't save it, and the API accepts the request without rebuilding the DNS name.
+
+Renaming to another name and back also removes the suffix from an [ephemeral peer](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys#ephemeral-peers), as long as no other peer has the plain DNS name; if one does, the peer gets a suffix again, or with the toggle on the rename fails. The peer keeps the plain name until NetBird removes it after more than 10 minutes offline. If the machine then registers again, it is a new peer: with the toggle off it gets a new suffix, and with the toggle on it gets the plain name, or is rejected if another peer has that DNS name.
 
 Keep the toggle off if your fleet registers machines with identical hostnames on purpose, such as autoscaled VMs or containers that join through a [setup key](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys). The default suffix exists for that case, and with the toggle on every such machine after the first fails to join.
 
@@ -51,4 +54,4 @@ This setting is available on NetBird Cloud and on self-hosted management servers
 
 ## Agent Network-focused view
 
-Accounts using [Agent Network](https://docs.netbird.io/agent-network) see an additional `Agent Network focused view` toggle. When enabled, the dashboard shows only the Agent Network-related sections and hides parts that are not relevant for it, such as Networks, DNS, and Reverse Proxy. Disable it to bring back the full dashboard.
+Accounts using [Agent Network](https://docs.netbird.io/agent-network) see an additional `Agent Network focused view` toggle. When enabled, the dashboard hides the **Networking** section, including Networks, DNS, and Reverse Proxy. The shared pages at the top and the options under the **Account** heading remain available according to your permissions. Disable the toggle to show Networking again.

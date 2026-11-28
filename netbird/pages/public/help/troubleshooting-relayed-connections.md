@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/help/troubleshooting-relayed-connections.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/help/troubleshooting-relayed-connections.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/help/troubleshooting-relayed-connections.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/help/troubleshooting-relayed-connections.mdx)
 
 # Troubleshooting relayed connections
 
@@ -159,11 +159,11 @@ Any `Unavailable` entry means the reported transport to that endpoint is being d
 
 > **Warning**
 >
-> Every fix on this page is an **outbound** firewall rule or an allowance on the host's `wt0` interface. NetBird never needs an inbound port opened on your perimeter firewall.
+> NetBird never needs an inbound port opened on your perimeter firewall.
 
 ### Step 4: Is a host firewall in the way?
 
-The host's own firewall or security software can block UDP before it ever leaves the machine. Telltale symptoms: peers show `Connected` but can't be pinged, or two peers on the *same office LAN* connect relayed because a host firewall drops their unsolicited direct packets. Both cases, with platform-specific checks and fixes for UFW, firewalld, and Windows Firewall, are covered in [Ports & Firewalls: Host-based firewalls](https://docs.netbird.io/about-netbird/ports-and-firewalls#host-based-firewalls).
+The host's own firewall or security software can block UDP before it ever leaves the machine. Telltale symptoms: peers show `Connected` but can't be pinged, or two peers on the *same office LAN* connect relayed because a host firewall drops their unsolicited direct packets. Both cases, with platform-specific checks and fixes for UFW, firewalld, and Windows Firewall, are covered in [Ports & Firewalls: Host-based firewalls](https://docs.netbird.io/about-netbird/ports-and-firewalls#host-based-firewalls). If a Windows peer stays relayed, go straight to [Direct connections stay relayed on Windows](https://docs.netbird.io/about-netbird/ports-and-firewalls#direct-connections-stay-relayed-on-windows).
 
 Endpoint protection software (CrowdStrike, ESET, Sophos and similar) often ships its own firewall that overrides OS rules, if connectivity works with it temporarily disabled, add an exception for the NetBird process.
 
@@ -232,7 +232,7 @@ To keep a whole fleet on direct connections rather than fixing peers one at a ti
 
 ## Recap
 
-In one breath: **NAT** is the obstacle, **Signal** is the messenger, **STUN** is the mirror, and **Relay** is the safety net. A relayed connection means hole punching failed, either because something fixable blocks Signal, STUN, or UDP (find it: control plane → STUN → host firewall → both ends), or because both peers sit behind symmetric NAT, which you prove by elimination. Every fix is an outbound rule; nothing is ever opened inbound. And when the NAT itself is the cause, the relay is doing exactly the job it was built for, keeping peers connected without exposing anything, with end-to-end encryption intact.
+In one breath: **NAT** is the obstacle, **Signal** is the messenger, **STUN** is the mirror, and **Relay** is the safety net. A relayed connection means hole punching failed, either because something fixable blocks Signal, STUN, or UDP (find it: control plane → STUN → host firewall → both ends), or because both peers sit behind symmetric NAT, which you prove by elimination. Every fix on the network is an outbound rule; nothing is ever opened on the perimeter firewall. The one inbound rule is on a peer's own host firewall, for example Windows Firewall when direct connections stay relayed. And when the NAT itself is the cause, the relay is doing exactly the job it was built for, keeping peers connected without exposing anything, with end-to-end encryption intact.
 
 ### Go deeper
 

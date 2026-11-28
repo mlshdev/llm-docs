@@ -1,11 +1,11 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/policies/guardrails.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/policies/guardrails.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/agent-network/policies/guardrails.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/agent-network/policies/guardrails.mdx)
 
 # Guardrails
 
 Guardrails are checks you configure on a policy to constrain what its callers can
 do. They are defined per policy and apply only to that policy.
 
-![agent network guardrails on a policy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/policies/agent-network-guardrails.png)
+![agent network guardrails on a policy](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/policies/agent-network-guardrails.png)
 
 ## Model Allowlist
 

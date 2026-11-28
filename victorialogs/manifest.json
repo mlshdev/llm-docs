@@ -6,21 +6,21 @@
   "title": "VictoriaLogs",
   "homepage": "https://docs.victoriametrics.com/victorialogs/",
   "repository": "VictoriaMetrics/VictoriaLogs",
-  "tag": "v1.54.0",
-  "releaseId": 444136749,
-  "releasePublishedAt": "2026-11-13T11:28:59Z",
-  "sourceCommit": "6433dae586cc15921b4b9c50a805a49553c9d761",
+  "tag": "v1.55.0",
+  "releaseId": 460136141,
+  "releasePublishedAt": "2026-11-27T03:45:06Z",
+  "sourceCommit": "a7001ac416483b5ca96347edd33bfc502e31ce3f",
   "documentCount": 38,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 1017588,
+      "byteLength": 1023403,
       "documentCount": 38,
-      "sha256": "c5623325f50e619d832ac0203f08a46c94beb26224f8a294ca81e483ca4cf205"
+      "sha256": "7f7b6a564e5bd4d1233d9b7d21952cd3a234258f8ef2b2b0980e2984d539fce9"
     }
   ],
-  "outputDigest": "4537944f1d62ca76bd15041d8aa295019a9c66cccc57089277cebf774d8afb04",
+  "outputDigest": "8c325308cd6af554956159d42c9ae96d8db6b5c55e65fc35b304ef94a72c4f3f",
   "quarantined": [
     {
       "sourcePath": "docs/victorialogs/CHANGELOG.md",

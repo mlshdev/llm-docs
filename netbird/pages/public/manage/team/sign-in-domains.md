@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/sign-in-domains.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/sign-in-domains.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/team/sign-in-domains.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/team/sign-in-domains.mdx)
 
 # Allow Users from Other Domains to Join Your Account
 
@@ -30,7 +30,7 @@ You prove ownership of those domains, and everyone across your organization join
 
 Go to **Settings → Authentication**, find **Sign-in Domains**, then click **Add** and enter the domain, e.g. `company.co.uk`.
 
-![The Sign-in Domains section of the Authentication tab, listing the account's domains with their verification status](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/sign-in-domains/authentication-tab.png)
+![The Sign-in Domains section of the Authentication tab, listing the account's domains with their verification status](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/sign-in-domains/authentication-tab.png)
 
 The domain starts as **Pending** until you prove you own it.
 
@@ -38,7 +38,7 @@ The domain starts as **Pending** until you prove you own it.
 
 Click **Verify** on the pending domain. NetBird shows a TXT record to publish at the root of the domain, so on `company.co.uk` itself rather than `www.company.co.uk`.
 
-![The verification dialog showing the TXT record name and value to publish in DNS](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/sign-in-domains/dns-verification.png)
+![The verification dialog showing the TXT record name and value to publish in DNS](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/sign-in-domains/dns-verification.png)
 
 Add the record, then click **Start Verification**. NetBird keeps checking on its own, so you can leave the page. The domain becomes **Verified** once the record is found. If it never appears the domain ends up **Unverified**, and **Verify** starts the checks again.
 
@@ -50,7 +50,7 @@ If you cannot change DNS, contact [NetBird Support](https://docs.netbird.io/help
 
 Once the domain is Verified, a user signing in for the first time with an address on it joins your account.
 
-![The NetBird login page, where a user signing in with an email address on a verified domain joins the existing account](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/sign-in-domains/login.png)
+![The NetBird login page, where a user signing in with an email address on a verified domain joins the existing account](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/sign-in-domains/login.png)
 
 ## Remove Domain
 

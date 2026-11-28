@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/ipa/guides/errors.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/ipa/guides/errors.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/ipa/guides/errors.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/ipa/guides/errors.mdx)
 
 # Errors
 
@@ -26,6 +26,6 @@ A 4xx status code indicates a client error - those are mostly related to missing
 
 **5xx**
 
-A 5xx status code indicates a server error - in this case please reach out to us via Slack or [GitHub](https://github.com/netbirdio/netbird/issues).
+A 5xx status code indicates a server error - in this case please reach out to us via Slack, Discord, or [GitHub](https://github.com/netbirdio/netbird/issues).
 
 ***

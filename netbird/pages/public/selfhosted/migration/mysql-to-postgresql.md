@@ -1,8 +1,8 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/migration/mysql-to-postgresql.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/migration/mysql-to-postgresql.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/migration/mysql-to-postgresql.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/migration/mysql-to-postgresql.mdx)
 
 # Migrate from MySQL to PostgreSQL
 
-MySQL support for the Management store is deprecated and will be removed in an upcoming release. This guide moves an existing MySQL deployment to PostgreSQL with the `netbird-mysql-migrate` tool.
+MySQL support for the Management store was removed in `v0.82.0`. A management server configured to use MySQL cannot start on `v0.82.0` or later. This guide moves an existing MySQL deployment to PostgreSQL with the `netbird-mysql-migrate` tool before upgrading.
 
 The tool copies the following into PostgreSQL:
 
@@ -13,14 +13,15 @@ The tool only reads your MySQL database and doesn't change it.
 
 ## Before You Begin
 
-- Upgrade the management server to `v0.81.0` or later and start it once on MySQL, so the database schema is current. That's the `netbird-server` service, or `management` on the older multi-container setup, not the NetBird client. Use the tool from the same release.
+- Before upgrading or starting `v0.81.5`, stop the management server and back up MySQL and the full `/var/lib/netbird` data directory. Follow the commands in [Step 2](#step-2-stop-the-management-server-and-back-up), using `backup-before-upgrade` instead of `backup`. Save your configuration files and record the current server version with this backup so you can restore the original state if the schema update fails. Keep this backup separate from the one you create in Step 2 after the schema update.
+- Upgrade the management server to `v0.81.5` and start it once on MySQL so the database schema matches the migration tool. Keep the server on `v0.81.5` until you finish the migration. That's the `netbird-server` service, or `management` on the older multi-container setup, not the NetBird client. Use the tool from the [v0.81.5 release](https://github.com/netbirdio/netbird/releases/tag/v0.81.5); it is no longer included in `v0.82.0` or later.
 - Prepare an empty PostgreSQL database. To run one in Docker, see [Set Up PostgreSQL](https://docs.netbird.io/selfhosted/maintenance/scaling/migrate-sqlite-to-postgresql#set-up-postgre-sql). The examples in this guide connect with `sslmode=require`; use `verify-full` to also verify the server certificate. Use `sslmode=disable` only when PostgreSQL runs on the same host or Docker network as the management server.
 - Run the tool on a Linux machine that can reach both MySQL and PostgreSQL. The tool is Linux-only, built for `amd64`, `arm64`, and `arm`.
 
 ## Step 1: Get the Migration Tool
 
 ```bash
-VERSION=0.81.0
+VERSION=0.81.5
 curl -L -o netbird-mysql-migrate.tar.gz \
   https://github.com/netbirdio/netbird/releases/download/v${VERSION}/netbird-mysql-migrate_${VERSION}_linux_amd64.tar.gz
 tar xzf netbird-mysql-migrate.tar.gz
@@ -132,11 +133,11 @@ environment:
 docker compose up -d
 ```
 
-Log in to the dashboard and confirm that your peers, users, and activity events are there. Then delete the `backup` directory.
+Log in to the dashboard and confirm that your peers, users, and activity events are there. Once you have verified the migration on `v0.81.x`, you can [upgrade the management server](https://docs.netbird.io/selfhosted/maintenance/upgrade) to `v0.82.0` or later. Keep the `backup` directory until you have also verified the upgrade.
 
 ## Roll Back
 
-The tool doesn't change MySQL, so to roll back, revert the store settings from Step 4 and restart the management server. Changes made while running on PostgreSQL aren't carried back to MySQL.
+The tool doesn't change MySQL, so to roll back before upgrading beyond `v0.81.x`, revert the store settings from Step 4 and restart the management server. Changes made while running on PostgreSQL aren't carried back to MySQL.
 
 A failed run leaves no data in PostgreSQL, so you can fix the problem and run the tool again.
 

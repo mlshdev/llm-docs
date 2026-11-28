@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/use-cases/remote-access/site-to-site.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/use-cases/remote-access/site-to-site.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/use-cases/remote-access/site-to-site.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/use-cases/remote-access/site-to-site.mdx)
 
 # Site-to-Site
 
@@ -56,11 +56,11 @@ Each site becomes its own Network: a Resource for that site's subnet, served by 
 
 **Network A:**
 
-1. Go to **Network Routing** → **Networks** → **Add Network**, name it `site-a`, and click **Create Network**
+1. Go to **Networking** → **Network Routing** → **Networks** → **Add Network**, name it `site-a`, and click **Create Network**
 2. Inside the network, click **Add Resource**:
    - Enter a name like `site-a-subnet`
    - Enter the address `10.0.0.0/24` (a subnet, or a single host like `10.0.0.50/32`)
-   - Expand **Additional Options** and under **Resource Groups**, create a group called `site-a-cidr` (this group represents the subnet for use in policies)
+   - Expand **Optional Settings** and under **Resource Groups**, create a group called `site-a-cidr` (this group represents the subnet for use in policies)
 3. Click **Add Routing Peer**, select the `site-a-routers` group, and leave **Masquerade** enabled (the default)
 
 > **Note**
@@ -168,7 +168,39 @@ From Site A, ping a device at Site B:
 ping 10.1.0.100
 ```
 
+Ping alone can pass while other traffic is blocked, so also connect to a service on that device, for example a web server:
+
+```bash
+curl http://10.1.0.100
+```
+
 Reverse from Site B to confirm both directions work. The destination sees the connection coming from its local routing peer's LAN IP — source IPs are masqueraded at both routing peers.
+
+## If traffic stops at the routing peer
+
+If the routing peer reaches the other site but devices on its LAN can't connect, check its forward policy. Ping alone can mislead here: ufw lets ping through while it blocks other traffic.
+
+```bash
+sudo iptables -S FORWARD | head -n 1
+```
+
+`-P FORWARD DROP` means the routing peer drops the traffic. NetBird allows traffic arriving from the tunnel that your policies permit, and replies going back into it, but not new connections from the LAN into the tunnel. ufw sets this policy to `DROP`, and so does Docker when it turns on IP forwarding. Allow only the site-to-site traffic, with `<IFACE>` as the routing peer's LAN interface and `wt0` as NetBird's:
+
+```bash
+sudo iptables -I FORWARD -i <IFACE> -o wt0 -s 10.0.0.0/24 -d 10.1.0.0/24 -j ACCEPT
+```
+
+The rule is lost on reboot. Don't keep it with `iptables-save` or `iptables-persistent`: they also save NetBird's own rules, which can fail to load at boot and leave the host with no IPv4 firewall rules. On a ufw host, add it as `sudo ufw route allow in on <IFACE> out on wt0 from 10.0.0.0/24 to 10.1.0.0/24` instead, which ufw keeps.
+
+On a host whose firewall is written in nftables, the check above can show `ACCEPT` while an nftables chain drops the traffic. Look for a forward chain with `policy drop` in `sudo nft list ruleset` and insert the rule into it. To keep it, add it to the same chain in the file the host loads at boot, such as `/etc/nftables.conf`, before any drop or reject rule. For the common `inet filter` table:
+
+```bash
+sudo nft insert rule inet filter forward iifname "<IFACE>" oifname "wt0" ip saddr 10.0.0.0/24 ip daddr 10.1.0.0/24 accept
+```
+
+firewalld isn't covered here: these checks don't detect it, and it removes rules added this way on `firewall-cmd --reload`.
+
+If devices at Site B start connections too, add the same rule on the Site B routing peer with the subnets swapped. Replies need no rule.
 
 ## Cloud routing peers
 

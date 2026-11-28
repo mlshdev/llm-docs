@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/browser-client/architecture.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/browser-client/architecture.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/peers/browser-client/architecture.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/peers/browser-client/architecture.mdx)
 
 # Browser Client Technical Architecture
 
@@ -64,7 +64,7 @@ The WebAssembly NetBird Client will register as a temporary peer with the manage
 Once the connection is closed, the temporary peer will be automatically removed from the management server. This happens after 10 minutes of inactivity.
 For the WebAssembly NetBird Client all peers will be named as `{browser}-browser-client` (e.g. `safari-17-browser-client`).
 
-![temporary-peers-filter](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/browser-client/temporary-peers-filter.png)
+![temporary-peers-filter](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/browser-client/temporary-peers-filter.png)
 
 #### Temporary Policy
 
@@ -72,7 +72,7 @@ To allow the registered WebAssembly NetBird Client to connect to the target peer
 The policy will be created P2P with no groups required. This way the client will only connect to one other peer. Once either of the peers (source or destination) is removed, the temporary policy will be automatically removed from the management server.
 The policies for the WebAssembly NetBird Client will be named as `Temporary access policy for peer {browser-client-name}` (e.g. `Temporary access policy for peer safari-17-browser-client`).
 
-![temporary-policies-filter](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/browser-client/temporary-policies-filter.png)
+![temporary-policies-filter](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/browser-client/temporary-policies-filter.png)
 
 ## Connection Flow
 
@@ -116,7 +116,7 @@ The return path follows the reverse flow for responses.
 
 Traffic is encapsulated through multiple protocol layers:
 
-1. **Application Layer**: SSH/RDP protocol packets
+1. **Application Layer**: SSH, RDP or VNC protocol packets
 2. **TCP Layer**: Application packets wrapped in TCP segments
 3. **WireGuard Layer**: TCP segments encapsulated in encrypted WireGuard frames
 4. **Relay Protocol**: WireGuard frames wrapped in relay protocol frames

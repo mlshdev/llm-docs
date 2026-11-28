@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/idp-sync/keycloak-sync.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/idp-sync/keycloak-sync.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/team/idp-sync/keycloak-sync.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/team/idp-sync/keycloak-sync.mdx)
 
 # Provision Users and Groups From Keycloak
 
@@ -23,7 +23,7 @@ Before you begin the integration process, ensure you have the necessary permissi
 
 Once the SCIM plugin is installed, you should see the SCIM section available in your Keycloak admin console.
 
-![The Keycloak admin console sidebar showing the SCIM section added by the plugin](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/keycloak-sync/keycloak-scim-installed.png)
+![The Keycloak admin console sidebar showing the SCIM section added by the plugin](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/keycloak-sync/keycloak-scim-installed.png)
 
 ## Setting Up SSO with Keycloak
 
@@ -35,7 +35,7 @@ Once SSO is configured, and you can successfully log in to NetBird using your Ke
 
 To enable SCIM synchronization in NetBird, navigate to `Integrations > Identity Provider Sync` in your NetBird dashboard.
 
-![The Identity Provider Sync tab with the Connect Generic SCIM button](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/keycloak-sync/keycloak-connect.png)
+![The Identity Provider Sync tab with the Connect Generic SCIM button](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/keycloak-sync/keycloak-connect.png)
 
 Click the `Connect Generic SCIM` button, then `Get Started` to launch the configuration wizard. You will be guided through several configuration options:
 
@@ -43,7 +43,7 @@ Click the `Connect Generic SCIM` button, then `Get Started` to launch the config
 
 By default, all groups mapped in the Keycloak SCIM client will be synchronized. If you want to synchronize only groups that start with a specific prefix, you can specify them in the filter. Keep in mind that the prefix matching is case-sensitive.
 
-![The NetBird wizard step for filtering which groups to synchronize by prefix](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/keycloak-sync/keycloak-scim-group-filter.png)
+![The NetBird wizard step for filtering which groups to synchronize by prefix](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/keycloak-sync/keycloak-scim-group-filter.png)
 
 Click `Continue` to proceed to the next step.
 
@@ -57,11 +57,11 @@ Click `Continue` to generate your SCIM credentials.
 
 NetBird will generate the SCIM credentials required to configure Keycloak. Make note of both the **Base URL** and **Token Key** as you will need them in the next section to complete the Keycloak configuration.
 
-![The NetBird wizard showing the generated SCIM Base URL and Token Key](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/keycloak-sync/keycloak-scim-credentials.png)
+![The NetBird wizard showing the generated SCIM Base URL and Token Key](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/keycloak-sync/keycloak-scim-credentials.png)
 
 Click `Finish Setup` to complete the NetBird SCIM configuration.
 
-![The Identity Provider Sync tab showing the Generic SCIM integration enabled](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/keycloak-sync/keycloak-scim-enabled.png)
+![The Identity Provider Sync tab showing the Generic SCIM integration enabled](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/keycloak-sync/keycloak-scim-enabled.png)
 
 You can now proceed to configure the SCIM client in Keycloak using the credentials generated above.
 
@@ -87,7 +87,7 @@ In the SCIM Remote Provider Configuration form, fill out the following sections:
 - **Base URL**: Paste the Base URL you copied from NetBird (e.g., `https://api.netbird.io/api/scim/v2`)
 - **Hostname-Verifier Enabled**: Enable this checkbox
 
-![The Keycloak SCIM Remote Provider Configuration form with provider and connection details filled in](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/keycloak-sync/keycloak-scim-config.png)
+![The Keycloak SCIM Remote Provider Configuration form with provider and connection details filled in](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/keycloak-sync/keycloak-scim-config.png)
 
 **Authentication:**
 
@@ -127,7 +127,7 @@ To synchronize only groups that match specific criteria, configure the group fil
 - **Comparator**: Select `Contains`
 - **Comparison Value**: Enter the text that should be contained in the group name
 
-![The Keycloak Resource Filtering Rules tab with a user filter and a group filter configured](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/keycloak-sync/keycloak-scim-filtering-config.png)
+![The Keycloak Resource Filtering Rules tab with a user filter and a group filter configured](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/keycloak-sync/keycloak-scim-filtering-config.png)
 
 ## Initial Sync
 
@@ -142,7 +142,7 @@ Confirm the following settings:
 - **Identifier**: Set to `Username`
 - **Synchronization Strategy**: Set to `Get and (update or create) Strategy`
 
-![The Keycloak User Synchronization settings with Identifier and Synchronization Strategy selected](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/keycloak-sync/keycloak-scim-user-sync-settings.png)
+![The Keycloak User Synchronization settings with Identifier and Synchronization Strategy selected](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/keycloak-sync/keycloak-scim-user-sync-settings.png)
 
 Click `Count local and remote resources` to validate that the **Local User Count** and **Remote User Count** values are as expected.
 
@@ -176,7 +176,7 @@ Once validated, click `Synchronize all resources from startIndex` to sync all gr
 
 ## Verify Synchronization
 
-After completing the initial sync, you can verify that users and groups have been successfully synchronized by navigating to `Team > Users` in your NetBird dashboard.
+After completing the initial sync, you can verify that users and groups have been successfully synchronized by navigating to `Users` in your NetBird dashboard.
 
 > **Note**
 >

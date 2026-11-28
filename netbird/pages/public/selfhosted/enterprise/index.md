@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/enterprise/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/enterprise/index.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/enterprise/index.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/enterprise/index.mdx)
 
 # NetBird Enterprise Commercial License
 
@@ -24,16 +24,16 @@ To obtain a license, contact the NetBird team through the [on-prem pricing page]
 
 The core connectivity, access control, and routing features are the same in the open source Community Edition and the commercial build. The commercial license adds the capabilities most teams need in production:
 
-| Capability                                                              | Community Edition (open source) | Enterprise Commercial License |
-| ----------------------------------------------------------------------- | ------------------------------- | ----------------------------- |
-| Core networking, access control, and routing                            | Yes                             | Yes                           |
-| Active-active high availability (Management + Signal)                   | No                              | Yes                           |
-| SCIM user and group provisioning                                        | No                              | Yes                           |
-| EDR and MDM integrations (CrowdStrike, SentinelOne, Intune, and others) | No                              | Yes                           |
-| Traffic-flow event logging and streaming                                | No                              | Yes                           |
-| Peer approval                                                           | No                              | Yes                           |
-| Audit event streaming and notifications                                 | No                              | Yes                           |
-| Support                                                                 | Community (Slack, GitHub)       | Standard support included     |
+| Capability                                                              | Community Edition (open source)    | Enterprise Commercial License |
+| ----------------------------------------------------------------------- | ---------------------------------- | ----------------------------- |
+| Core networking, access control, and routing                            | Yes                                | Yes                           |
+| Active-active high availability (Management + Signal)                   | No                                 | Yes                           |
+| SCIM user and group provisioning                                        | No                                 | Yes                           |
+| EDR and MDM integrations (CrowdStrike, SentinelOne, Intune, and others) | No                                 | Yes                           |
+| Traffic-flow event logging and streaming                                | No                                 | Yes                           |
+| Peer approval                                                           | No                                 | Yes                           |
+| Audit event streaming and notifications                                 | No                                 | Yes                           |
+| Support                                                                 | Community (Slack, Discord, GitHub) | Standard support included     |
 
 ## Frequently asked questions
 
@@ -84,7 +84,7 @@ The server running the self-hosted Enterprise edition requires a connection to t
 - NetBird version and server uptime
 - Usage counters such as the number of accounts, active peers, active users, policies, posture checks, and which features are enabled
 
-Only the aggregate counters above are included. No individual peer, user, network, or traffic records, no identifiers other than the ones listed, and no IP address or platform data are sent. The counters are part of the license validation call and cannot be disabled separately. Independently of the license, the server also sends the [anonymous usage metrics](https://docs.netbird.io/about-netbird/faq#why-and-what-are-the-anonymous-usage-metrics) inherited from the Community Edition, which can be disabled with `NETBIRD_DISABLE_ANONYMOUS_METRICS=true`.
+Only the aggregate counters above are included. No individual peer, user, network, or traffic records, no identifiers other than the ones listed, and no IP address or platform data are sent. The counters are part of the license validation call and cannot be disabled separately. The [anonymous usage metrics](https://docs.netbird.io/about-netbird/faq#why-and-what-are-the-anonymous-usage-metrics) are separate and go to `metrics.netbird.io`. To turn them off, set `disableAnonymousMetrics: true` under `server:` in the server's configuration file (`config.yaml`, or `config.yaml.enterprise` if your install directory has one) and run `docker compose restart netbird-server`.
 
 ## Summary
 

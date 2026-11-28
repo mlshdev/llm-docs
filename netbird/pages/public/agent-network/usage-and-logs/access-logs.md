@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/usage-and-logs/access-logs.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/usage-and-logs/access-logs.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/agent-network/usage-and-logs/access-logs.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/agent-network/usage-and-logs/access-logs.mdx)
 
 # Access Logs
 
@@ -6,7 +6,7 @@ The access log is a per-request audit trail of agent-network traffic. Each entry
 records the caller, provider and model, tokens and cost, the policy decision,
 and the reason a request was allowed or denied.
 
-![agent network access logs table](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/usage-and-logs/agent-network-access-logs.png)
+![agent network access logs table](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/usage-and-logs/agent-network-access-logs.png)
 
 ## Who can see what
 
@@ -53,13 +53,13 @@ Hovering **Tokens** shows which buckets a request actually used. Here a
 follow-up request sent only 16 fresh input tokens but replayed 3,980 tokens from
 the cache, wrote none, and produced 192 of output, for 4,188 tokens in total:
 
-![agent network access log token breakdown with prompt-cache reads and writes](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/usage-and-logs/agent-network-access-log-token-breakdown.png)
+![agent network access log token breakdown with prompt-cache reads and writes](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/usage-and-logs/agent-network-access-log-token-breakdown.png)
 
 Hovering **Cost** breaks the same request down in dollars. Most of the spend
 here is output, with the 3,980 cached tokens costing only $0.0020 at the reduced
 cache-read rate:
 
-![agent network access log cost breakdown by token bucket](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/usage-and-logs/agent-network-access-log-cost-breakdown.png)
+![agent network access log cost breakdown by token bucket](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/usage-and-logs/agent-network-access-log-cost-breakdown.png)
 
 All four buckets are listed even when one costs nothing, so a zero cache-write
 line tells you this request read the cache rather than populating it. The total
@@ -87,7 +87,7 @@ Use the **Requests / Sessions** switch above the log to change the view. The
 row per session, most recent activity first, so you can see the latest sessions
 at a glance.
 
-\[Image unavailable: agent network access logs grouped by session]
+![agent network access logs grouped by session](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/usage-and-logs/agent-network-access-log-sessions.png)
 
 Some agents keep a session across many separate calls. For example,
 [Claude Code](https://docs.netbird.io/agent-network/integrations/claude-code) tags every request in a
@@ -117,7 +117,7 @@ single-request row.
 
 ## Filtering
 
-![agent network access log filters](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/usage-and-logs/agent-network-access-log-filters.png)
+![agent network access log filters](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/usage-and-logs/agent-network-access-log-filters.png)
 
 Filter the log by:
 

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/external-reverse-proxy.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/external-reverse-proxy.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/external-reverse-proxy.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/external-reverse-proxy.mdx)
 
 # External Reverse Proxy Setup for Self-Hosted NetBird
 
@@ -105,6 +105,16 @@ All reverse proxy configurations for the combined container must route the follo
 > **Note**
 >
 > The combined container includes an embedded STUN server that still needs to be directly accessible on UDP port 3478.
+
+> **Note**
+>
+> On a commercial-license install with traffic events enabled, also route `/flow.FlowService/` (gRPC, h2c) to `netbird-receiver:80`. See [Traffic events route (commercial license)](#traffic-events-route-commercial-license).
+
+> **Note**
+>
+> The `/api/*` route also serves the [MCP server](https://docs.netbird.io/selfhosted/maintenance/mcp-server) and its OAuth sign-in. If your proxy answers unknown paths with `200` and an HTML page instead of `404`, also route `/.well-known/oauth-protected-resource/api/mcp`, `/.well-known/oauth-authorization-server/api/mcp/auth` and `/.well-known/openid-configuration/api/mcp/auth` to management. Do not route all of `/.well-known/`. See [Reverse Proxy](https://docs.netbird.io/selfhosted/maintenance/mcp-server#reverse-proxy) on the MCP page.
+
+To keep the dashboard and the API off the internet while clients keep working, see [Keep the Self-Hosted Dashboard and API Private](https://docs.netbird.io/selfhosted/maintenance/private-management-plane).
 
 ### Docker Compose for External Proxy (Combined)
 
@@ -516,6 +526,65 @@ location ~ ^/(api|oauth2)/ {
 
 ***
 
+#### Traffic events route (commercial license)
+
+With traffic events enabled (the installer's `Enable traffic flow` prompt, or `getting-started-enterprise.sh --enable-traffic-events`), clients send them to `/flow.FlowService/`. If you replace the installer's Traefik with Nginx, route that path to the receiver container. Without that route, the requests reach the dashboard, clients log `failed to send flow event to server: stream not initialized`, and no traffic events appear. With Nginx in Docker on the installer's `netbird` network, add this to the `server` block that listens on 443:
+
+```nginx
+# Traffic events
+location /flow.FlowService/ {
+    grpc_pass grpc://netbird-receiver:80;
+    grpc_read_timeout 1d;
+    grpc_send_timeout 1d;
+    grpc_socket_keepalive on;
+}
+```
+
+On a deployment migrated with `migrate-to-enterprise.sh`, use `grpc_pass grpc://netbird-flow-receiver:80;` instead. With Nginx on the host, publish the receiver service (`receiver`, or `flow-receiver` on a migrated deployment) on localhost in the Compose override from the [port reference](#container-port-reference-combined), for example `'127.0.0.1:8082:80'`, and set `grpc_pass grpc://127.0.0.1:8082;`.
+
+***
+
+## Behind Cloudflare's proxy
+
+To put the NetBird server behind Cloudflare's proxy (the orange cloud), make the changes below, then close the direct path. Cloudflare decrypts the HTTPS it proxies, so it can read dashboard and REST API traffic. Management, Signal and peer traffic stay encrypted with the peers' WireGuard keys.
+
+### Cloudflare settings
+
+- **gRPC on**, under the zone's **Network** settings. While it is off, the dashboard loads but clients fail with `403 (Forbidden)` and `received unexpected content-type "text/html; charset=UTF-8"`.
+- **SSL/TLS encryption mode: Full (strict).** With **Flexible**, the sign-in loops and clients fail with `308 (Permanent Redirect)`.
+
+### Server changes
+
+Edit the server's configuration file (`config.yaml` in your install directory, or `config.yaml.enterprise` if it exists), then run `docker compose restart netbird-server`.
+
+**STUN.** Cloudflare does not proxy UDP 3478, so point clients at a STUN server they reach directly: preferably an [external relay](https://docs.netbird.io/selfhosted/maintenance/scaling/set-up-external-relays) with STUN on a DNS-only name, or a public STUN server of your choice, such as Cloudflare's (`stun:stun.cloudflare.com:3478`).
+
+```yaml
+server:
+  stuns:
+    - uri: "stun:stun-us.example.com:3478"   # your external relay's DNS-only name
+```
+
+**Client IPs.** Until the server trusts Cloudflare's [IP ranges](https://www.cloudflare.com/ips/), every peer's connection IP is a Cloudflare address, and so is the IP recorded on dashboard login audit events. Add them to `trustedHTTPProxies`:
+
+```yaml
+server:
+  reverseProxy:
+    trustedHTTPProxies:
+      - "172.30.0.10/32"    # your reverse proxy: the installer's Traefik
+      - "173.245.48.0/20"   # one line per Cloudflare range, IPv4 and IPv6
+```
+
+With the installer's Traefik, also add `--entrypoints.websecure.forwardedHeaders.trustedIPs=<ranges>` to the `traefik` service's `command:` and run `docker compose up -d traefik`. With Nginx, replace `172.30.0.10` in both `trustedPeers` and `trustedHTTPProxies` with the address `netbird-server` sees Nginx connect from.
+
+**Certificates.** Let's Encrypt's TLS-ALPN-01 challenge cannot pass Cloudflare's proxy. Use the DNS-01 challenge instead ([commercial-license stack](https://docs.netbird.io/selfhosted/enterprise/getting-started#traefik-cannot-issue-a-tls-certificate-behind-cloudflares-proxy)).
+
+### Close the direct path
+
+Proxying hides the server's address in DNS but does not block it. In the firewall in front of the server, such as a cloud security group (host rules miss Docker's published ports), allow TCP 80 and 443 only from Cloudflare's IP ranges. Every Cloudflare customer shares those ranges; zone-level [Authenticated Origin Pulls](https://developers.cloudflare.com/ssl/origin-configuration/authenticated-origin-pull/) with your own certificate closes that gap.
+
+***
+
 ## Multi-Container Setup (Legacy)
 
 The following sections apply to NetBird installations from before v0.65.0 that use separate containers for management, signal, and relay. If you are running a new installation, use the [combined container templates above](#combined-container-setup-v0650).
@@ -543,6 +612,10 @@ All reverse proxy configurations must route the following endpoints:
 > **Note**
 >
 > The `coturn` service still needs to be directly accessible on UDP port 3478 as it handles STUN/TURN traffic.
+
+> **Note**
+>
+> The `/api/*` route also serves the [MCP server](https://docs.netbird.io/selfhosted/maintenance/mcp-server) and its OAuth sign-in. If your proxy answers unknown paths with `200` and an HTML page instead of `404`, also route `/.well-known/oauth-protected-resource/api/mcp`, `/.well-known/oauth-authorization-server/api/mcp/auth` and `/.well-known/openid-configuration/api/mcp/auth` to management. Do not route all of `/.well-known/`. See [Reverse Proxy](https://docs.netbird.io/selfhosted/maintenance/mcp-server#reverse-proxy) on the MCP page.
 
 ### Docker Compose for External Proxy (Multi-Container)
 
@@ -749,7 +822,7 @@ If you don't have Traefik set up yet, here's a complete example:
 ```yaml
 services:
   traefik:
-    image: traefik:v3.2
+    image: traefik:v3.7.18
     command:
       - "--api.insecure=true"
       - "--providers.docker=true"
@@ -758,6 +831,8 @@ services:
       - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
       - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
       - "--entrypoints.websecure.address=:443"
+      - "--entrypoints.web.http.aliasHeadersStrategy=delete"
+      - "--entrypoints.websecure.http.aliasHeadersStrategy=delete"
       - "--certificatesresolvers.letsencrypt.acme.email=your-email@example.com"
       - "--certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json"
       - "--certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=web"
@@ -1501,4 +1576,4 @@ location /management.ProxyService/ {
 - Check that WebSocket routes have proper upgrade handling
 - Ensure coturn (STUN/TURN) is accessible on UDP port 3478
 
-For more help, see the [Troubleshooting guide](https://docs.netbird.io/selfhosted/troubleshooting) or reach out on Slack.
+For more help, see the [Troubleshooting guide](https://docs.netbird.io/selfhosted/troubleshooting) or reach out on Slack or Discord.

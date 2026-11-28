@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/about-netbird/how-netbird-works.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/about-netbird/how-netbird-works.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/about-netbird/how-netbird-works.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/about-netbird/how-netbird-works.mdx)
 
 # How NetBird Works
 
@@ -16,12 +16,12 @@ users (or machines) have access to the resources for which they are authorized.
 A **Peer** is a machine or any device that is connected to the network.
 It can be a Linux server running in the cloud or on-premises, a personal laptop, mobile phone, or even a Raspberry Pi.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/about-netbird/high-level-dia.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/about-netbird/high-level-dia.png)
 
 With NetBird clients installed and authorized on the Management service, machines form a mesh network connecting
 to each other directly via an encrypted point-to-point WireGuard tunnel.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/about-netbird/mesh.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/about-netbird/mesh.png)
 
 While it is possible to create a full mesh network, it might be not a desirable outcome.
 In this case, [groups and access controls](https://docs.netbird.io/manage/access-control/manage-network-access) can be utilized to limit the access to certain machines.
@@ -52,7 +52,7 @@ The Management Service's responsibilities include:
 
 The Management service runs in the cloud NetBird-managed. It can also be self-hosted.
 
-![management-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/about-netbird/management.png)
+![management-dia](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/about-netbird/management.png)
 
 ## Client Application
 
@@ -92,7 +92,7 @@ Signal's sole responsibility is:
   peers need to find each other and exchange the most suitable connection candidates.
   This is done through Signal. After a connection has been established, Signal steps out.
 
-![signal-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/about-netbird/signal.png)
+![signal-dia](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/about-netbird/signal.png)
 
 > **Note**
 >
@@ -107,7 +107,7 @@ The Relay service is a [TURN server](https://webrtc.org/getting-started/turn-ser
 In fact, we use an open-source implementation called [Coturn](https://github.com/coturn/coturn).
 The purpose of the Relay service is to gracefully implement a "Plan B" by relaying traffic between peers when a direct point-to-point connection is not possible. However, starting with v0.29.0, a new WebSocket-based relay has been introduced with the intent of replacing the previous TURN relay (Coturn). [More info](https://netbird.io/knowledge-hub/september-newsletter).
 
-![relay-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/about-netbird/relay.png)
+![relay-dia](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/about-netbird/relay.png)
 
 > **Note**
 >

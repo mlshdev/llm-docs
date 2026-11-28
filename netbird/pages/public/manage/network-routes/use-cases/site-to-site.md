@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/network-routes/use-cases/site-to-site.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/network-routes/use-cases/site-to-site.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/network-routes/use-cases/site-to-site.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/network-routes/use-cases/site-to-site.mdx)
 
 # Site-to-Site
 
@@ -57,7 +57,7 @@ sudo netbird up --setup-key YOUR_SETUP_KEY
 
 ## Step 3: Create network routes
 
-Add one route per site under **Network Routing** → **Routes** → **Add Route**:
+Add one route per site under **Networking** → **Network Routing** → **Routes** → **Add Route**:
 
 **Site A:**
 
@@ -165,7 +165,17 @@ From Site A, ping a device at Site B:
 ping 10.1.0.100
 ```
 
+Ping alone can pass while other traffic is blocked, so also connect to a service on that device, for example a web server:
+
+```bash
+curl http://10.1.0.100
+```
+
 Reverse from Site B to confirm both directions work.
+
+> **Note**
+>
+> If the routing peer reaches the other site but devices on its LAN don't, check the routing peer's forward policy. See [If traffic stops at the routing peer](https://docs.netbird.io/use-cases/remote-access/site-to-site#if-traffic-stops-at-the-routing-peer).
 
 ## Cloud routing peers
 

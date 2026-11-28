@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/get-started/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/get-started/index.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/get-started/index.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/get-started/index.mdx)
 
 # Getting Started
 
@@ -15,7 +15,7 @@ and build a secure peer-to-peer overlay network in less than ten minutes.
 
 First, let's create your NetBird account.
 
-![NetBird IdP SSO and MFA](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/onboarding/01_netbird-sso.jpeg)
+![NetBird IdP SSO and MFA](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/onboarding/01_netbird-sso.jpeg)
 
 1. Navigate to [netbird.io](https://netbird.io/) and click Get Started in the top-right corner. Or simply click [here](https://app.netbird.io/).
 2. You’ll be redirected to the sign-in page, where NetBird uses your identity provider (IdP) for secure authentication.
@@ -28,14 +28,14 @@ Upon your first login, you'll be greeted by a short onboarding survey. This help
 ## Peer-to-Peer Network
 
 One way of using NetBird is to create a peer-to-peer network, where you run the NetBird client on your devices to connect them directly.
-![Onboarding Method Selection](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/onboarding/02_p2p-network.jpeg)
+![Onboarding Method Selection](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/onboarding/02_p2p-network.jpeg)
 
 The onboarding process will now guide you to connect your first device, also known as a peer.
 For this guide, we'll select Peer-to-Peer Network. If you’re selecting the Remote Network Access option, you can see that process [here](#remote-network-access).
 
 ### Install Your First Peer
 
-![Download NetBird](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/onboarding/03_download-netbird.jpeg)
+![Download NetBird](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/onboarding/03_download-netbird.jpeg)
 
 1. On the "Let's get your first device online" screen, click the Install NetBird button.
 2. An [installation modal](https://app.netbird.io/install) will appear. Select your operating system (e.g., macOS, Windows, Linux). For this example, we're installing it on a macOS machine.
@@ -45,7 +45,7 @@ For this guide, we'll select Peer-to-Peer Network. If you’re selecting the Rem
 
 With the client installed, you now need to connect it to your network.
 
-![Connect NetBird Client](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/onboarding/04_connect-client.jpeg)
+![Connect NetBird Client](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/onboarding/04_connect-client.jpeg)
 
 1. Launch the NetBird desktop app. On first launch, the welcome screen points you to the system tray on Windows and Linux or the menu bar on macOS, then asks whether you use NetBird Cloud or a self-hosted deployment.
 2. Click **Connect** in the main window or tray/menu-bar menu.
@@ -56,7 +56,7 @@ With the client installed, you now need to connect it to your network.
 
 Next, let's add a second, headless peer, like a Linux server or a Raspberry Pi. For devices without a graphical interface, we use a [Setup Key](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys).
 
-![Install NetBird Headless](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/onboarding/05_headless-installed.jpeg)
+![Install NetBird Headless](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/onboarding/05_headless-installed.jpeg)
 
 1. In the web UI, the onboarding flow will now prompt you to "bring in your second device." Click the link that says Install with a setup key.
 2. A pop-up will explain that a one-off setup key will be created, which you can also learn more about here. Click Continue..
@@ -73,21 +73,29 @@ First, copy the curl command, paste it into your server's terminal, and press **
 curl -fsSL https://pkgs.netbird.io/install.sh | sh
 ```
 
-Next, copy the netbird up --setup-key ... command and paste it into the terminal.
+Next, copy the netbird up --setup-key ... command and paste it into the terminal. Add `sudo` before the command.
 
 ```bash
-netbird up --setup-key <YOUR_SETUP_KEY>
+sudo netbird up --setup-key <YOUR_SETUP_KEY>
 ```
 
-After running the second command, the terminal will confirm Connected. Your headless device is now part of your NetBird network.
+> **Note**
+>
+> On a machine with no console, such as a server, run `netbird up` with `sudo`, or as root. If an administrator gave the default profile to a user with `netbird profile claim default --owner <user>`, run `netbird up` as that user without `sudo`. See [Set up a headless machine](https://docs.netbird.io/client/profile-ownership#set-up-a-headless-machine).
 
-![Headless install connected](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/onboarding/06_headless-install-connected.jpeg)
+After running the second command, the terminal will confirm:
+
+```text
+Connected
+```
+
+Your headless device is now part of your NetBird network.
 
 ### Verify the Connection
 
 The onboarding UI will now display both of your connected peers. The onboarding wizard provides a simple way to test that they can communicate directly.
 
-![Testing ping on NetBird](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/onboarding/07_ping-test.jpeg)
+![Testing ping on NetBird](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/onboarding/07_ping-test.jpeg)
 
 1. Copy the provided ping command from the onboarding UI. This command uses the NetBird IP address of your second peer (the Ubuntu server).
 2. Open a terminal on your first peer and paste the command. Replace the example below with the NetBird IP for your machine.
@@ -102,14 +110,14 @@ ping 100.74.76.17
 
 The final onboarding step introduces NetBird's powerful Access Control policies.
 
-![NetBird policy disabled](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/onboarding/08_policy-disabled-example.jpeg)
+![NetBird policy disabled](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/onboarding/08_policy-disabled-example.jpeg)
 
 1. By default, a policy is active that allows connections between all your devices. This is why the ping command in the previous step worked.
 2. The wizard demonstrates this by allowing you to toggle the policy. If you disable the "Default Policy," the ping between your devices will immediately fail with a "Request timeout" error.
 3. Re-enabling the policy instantly restores the connection. This gives you a basic understanding of how you can control traffic within your network. You can learn much more about policies [here](https://docs.netbird.io/manage/access-control/manage-network-access).
 4. Click Continue to finish.
 
-![Policy Example](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/onboarding/09_policy-example.jpeg)
+![Policy Example](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/onboarding/09_policy-example.jpeg)
 In the policy example above, we allowed *IT Admins* port specific access to peers under the *AWS Servers* group. Policies are a key building block to access in NetBird. You can learn more about the power of policies [here](https://docs.netbird.io/manage/access-control/manage-network-access).
 
 > **Note**
@@ -124,8 +132,6 @@ This machine acts as a routing peer, routing traffic to internal resources that 
 The onboarding process will now guide you to build our first network resource.
 For this guide, we'll select Remote Network Access.
 
-![NetBird Onboarding](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/onboarding/10_remote-access-onboarding.jpeg)
-
 ### Define Your Network Resource
 
 Next, you'll define the private network you want your users to be able to access.
@@ -134,13 +140,13 @@ Next, you'll define the private network you want your users to be able to access
 2. Enter the CIDR range of your private network. For example, `10.0.0.0/32`.
 3. Click Create Resource. A "Network" will be created in your dashboard to contain this resource and its access rules.
 
-![NetBird Subnet Setup](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/onboarding/11_entire-subnet.jpeg)
+![NetBird Subnet Setup](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/onboarding/11_entire-subnet.jpeg)
 
 ### Add and Configure a Routing Peer
 
 A [routing peer](https://docs.netbird.io/manage/network-routes) is a NetBird peer that lives inside your private network and acts as a gateway, forwarding traffic between your remote users and the internal resources.
 
-![Adding a routing peer](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/onboarding/12_add-routing-peer.jpeg)
+![Adding a routing peer](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/onboarding/12_add-routing-peer.jpeg)
 
 1. The dashboard will now prompt you to "Add a routing peer." First, click Generate Setup Key. This creates a one-time key used to enroll the gateway machine into your NetBird account.
 2. Next, click Install Routing Peer. Select the operating system of your gateway machine (the video uses Linux).
@@ -152,11 +158,15 @@ A [routing peer](https://docs.netbird.io/manage/network-routes) is a NetBird pee
 curl -fsSL https://pkgs.netbird.io/install.sh | sh
 ```
 
-Next, copy the netbird up --setup-key ... command and paste it into the terminal.
+Next, copy the netbird up --setup-key ... command and paste it into the terminal. Add `sudo` before the command.
 
 ```bash
-netbird up --setup-key <YOUR_SETUP_KEY>
+sudo netbird up --setup-key <YOUR_SETUP_KEY>
 ```
+
+> **Note**
+>
+> On a machine with no console, such as a server, run `netbird up` with `sudo`, or as root. If an administrator gave the default profile to a user with `netbird profile claim default --owner <user>`, run `netbird up` as that user without `sudo`. See [Set up a headless machine](https://docs.netbird.io/client/profile-ownership#set-up-a-headless-machine).
 
 After running the second command, the terminal will confirm Connected. Your headless device is now part of your NetBird network.
 
@@ -173,9 +183,7 @@ Now, set up the device you will use to connect to your private network.
 
 With both the routing peer and your client device online, you can now test your connection to the private network. To properly test connectivity you should move the client device to a different network, for example, connecting the device using your phone's hotspot.
 
-![Switching Network](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/onboarding/13_switching-network.jpeg)
-
-1. Open a terminal on your client device and run the test command (e.g., `ping 10.0.0.100`). Due note, the IP you ping needs to be a device on the same network that the routing peer is installed on.
+1. Open a terminal on your client device and run the test command (e.g., `ping 10.0.0.100`). Do note, the IP you ping needs to be a device on the same network that the routing peer is installed on.
 2. You should see successful replies, confirming that your client device can reach internal resources through the routing peer.
 3. Click It works! - Continue in the UI.
 
@@ -183,28 +191,40 @@ With both the routing peer and your client device online, you can now test your 
 
 The final step of the onboarding wizard explains the access rule that was automatically created for you.
 
-![Testing Worked](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/onboarding/14_it-worked.jpeg)
+![Testing Worked](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/onboarding/14_it-worked.jpeg)
 
 1. A policy, named "Users to My Subnet," is enabled by default. This policy allows all authenticated users to access the resources within the subnet you define.
 2. To demonstrate this, you can toggle this policy off. When disabled, the ping from your client device will begin to fail with a "Request timeout" error, showing that the connection is now blocked.
 3. Re-enabling the policy will immediately restore access.
 4. Click Continue to complete the setup.
 
-![Understanding Your Access Policy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/onboarding/16_onboarding-policies.jpeg)
+![Understanding Your Access Policy](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/onboarding/16_onboarding-policies.jpeg)
 
-Click Go to Dashboard to access the main NetBird admin panel. From here, you can:
+Click **Go to Dashboard** to open the main NetBird admin panel.
 
-- [Control Center](https://docs.netbird.io/manage/control-center): Visualize your network topology and access relationships with an interactive graph.
-- [Peers](https://docs.netbird.io/manage/peers/add-machines-to-your-network): View and manage all connected devices and their properties.
-- [Setup Keys](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys): Create and manage keys for adding new headless or ephemeral devices.
-- [Access Control](https://docs.netbird.io/manage/access-control/manage-network-access): Define granular firewall rules to control which peers can access what.
-- [Team](https://docs.netbird.io/manage/team/add-users-to-your-network): Manage users and create groups for easier policy management.
+## Navigate the Dashboard
 
-You are now ready to explore the full capabilities of NetBird.
+**Control Center**, **Peers**, **Users**, and **Groups** sit at the top of the sidebar. Use [Control Center](https://docs.netbird.io/manage/control-center) to visualize access relationships, [Peers](https://docs.netbird.io/manage/peers/add-machines-to-your-network) to manage devices, [Users](https://docs.netbird.io/manage/team/add-users-to-your-network) to manage people, and [Groups](https://docs.netbird.io/manage/access-control/manage-network-access#managing-groups) to organize users, peers, and resources for policies.
+
+The remaining pages are organized into sections:
+
+| Section                            | Pages                                                                                                                                           |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Networking**                     | **Access Control** (Policies and Posture Checks), **Network Routing** (Networks and Routes), **Reverse Proxy**, **DNS**, and **Traffic Events** |
+| **Agent Network**                  | **Agents** (Connect Agent, Providers, and Agent Policies), **Usage & Logs**, and **Configuration**                                              |
+| **Account** heading, at the bottom | **Settings**, **Tenants** for MSP accounts, **Integrations**, and **Audit Events**                                                              |
+
+Click the **Networking** or **Agent Network** heading to expand or collapse it. The dashboard remembers your choice and opens the section containing the page you navigate to. Available sections and pages depend on your permissions and which features are enabled for your account.
+
+**Account** labels the options at the bottom of the sidebar. Open **Settings**, **Tenants**, **Integrations**, or **Audit Events** directly beneath it.
+
+To manage [service users](https://docs.netbird.io/manage/public-api), open **Users** and select the **Service Users** tab. To create [setup keys](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys), go to **Settings → Setup Keys**.
+
+For documentation, click the question-mark help button in the dashboard header and select **Documentation**.
 
 ## Support Us
 
 - Star us on [GitHub](https://github.com/netbirdio/netbird)
 - Follow us [on X](https://x.com/netbird)
-- Join our Slack Channel
+- Join our Slack Channel or Discord server
 - NetBird release page on GitHub: [releases](https://github.com/netbirdio/netbird/releases/latest)

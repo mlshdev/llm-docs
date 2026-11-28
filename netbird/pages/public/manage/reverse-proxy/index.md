@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/reverse-proxy/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/reverse-proxy/index.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/reverse-proxy/index.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/reverse-proxy/index.mdx)
 
 # Reverse Proxy
 
@@ -20,7 +20,7 @@ NetBird Reverse Proxy lets you expose internal services running on peers or behi
 
 When you create a reverse proxy service, NetBird provisions a public domain with an automatic TLS certificate. Incoming traffic to that domain is received at the NetBird proxy cluster, then forwarded through an encrypted NetBird tunnel to the target peer or network resource running your application. The target service only needs to be reachable within your NetBird network: it does not need a public IP address or open ports.
 
-![Reverse proxy traffic flow diagram showing User to Proxy Service (TLS) through WireGuard tunnel to either a NetBird Peer directly or via a Routing Peer to a Network Resource](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/reverse-proxy-diagram.png)
+![Reverse proxy traffic flow diagram showing User to Proxy Service (TLS) through WireGuard tunnel to either a NetBird Peer directly or via a Routing Peer to a Network Resource](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/reverse-proxy/reverse-proxy-diagram.png)
 
 NetBird supports two categories of service:
 
@@ -70,6 +70,8 @@ Toward the backend, the proxy uses HTTP/2 only over TLS: a target with protocol 
 - **gRPC backend without TLS**: use a TCP service, which relays the connection unchanged.
 
 TCP services relay other TCP protocols the same way, such as SSH and RDP.
+
+A TCP service can relay Windows file shares (SMB) too, but don't publish them this way: see [Limitations](#windows-file-shares-smb).
 
 ### Targets
 
@@ -245,7 +247,7 @@ Follow these steps to create your first reverse proxy service and expose an inte
 
 ### Step 1: Open the Reverse Proxy page
 
-Navigate to **Reverse Proxy** > **Services** in the NetBird dashboard and click **Add Service**.
+Navigate to **Networking** > **Reverse Proxy** > **Services** in the NetBird dashboard and click **Add Service**.
 
 ### Step 2: Configure service details
 
@@ -257,13 +259,13 @@ In the **Details** tab:
 4. For L4 services, set the **listen port** that the proxy will accept connections on. Some clusters auto-assign ports; others allow you to specify one manually.
 5. Click **Add Target** to define where traffic should be sent.
 
-![Add Service modal showing the Details tab](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-details.png)
+![Add Service modal showing the Details tab](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-details.png)
 
 6. In the target configuration, select the **type** (Peer, Host, Domain, Subnet, or Proxy Cluster), then choose the specific peer, resource, or cluster.
 7. For HTTP services, set the **protocol** (HTTP or HTTPS) and **port** for the target. Optionally, enter a **path** for path-based routing. For L4 services, set the target **host/IP** and **port**. For **Proxy Cluster** targets, the host field accepts any hostname or IP the cluster's embedded proxy can resolve from its own host stack — see [Private services](https://docs.netbird.io/manage/reverse-proxy/bring-your-own-proxy#private-services-net-bird-only-access) for details.
 8. For an HTTP target, expand **Optional Settings** and choose an **Access** action if this path should differ from the service default. **Use service authentication** is the default. See [Per-target access actions](https://docs.netbird.io/manage/reverse-proxy/authentication#per-target-access-actions).
 
-![Add Target configuration modal showing the unified Peer / Resource / Proxy Cluster picker](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-target.png)
+![Add Target configuration modal showing the unified Peer / Resource / Proxy Cluster picker](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-target.png)
 
 You can add multiple targets. HTTP services support path-based routing across targets.
 
@@ -271,7 +273,7 @@ You can add multiple targets. HTTP services support path-based routing across ta
 
 Switch to the **Authentication** tab to configure how users are authenticated before reaching your service. This tab is only available for HTTP services.
 
-![Add Service modal showing the Authentication tab](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-auth.png)
+![Add Service modal showing the Authentication tab](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/reverse-proxy/authentication/reverse-proxy-add-service-auth.png)
 
 - Enable **NetBird-Only Access** to make the service reachable only from peers in the selected NetBird groups (private service). Only appears when the selected base domain is on a cluster that advertises the `Private` capability. Picking this method hides the operator auth options below — the two modes are mutually exclusive.
 - Enable **SSO** to require users to authenticate through your identity provider. Optionally restrict access to specific groups.
@@ -298,17 +300,17 @@ Access restrictions are evaluated before authentication: if a connection is bloc
 
 > **Note**
 >
-> **NetBird-Only services:** when [NetBird-Only Access](https://docs.netbird.io/manage/reverse-proxy/authentication#netbird-only-access-private-services) is enabled on a service, an allow rule for the NetBird network range is applied automatically. Any rules you add on this tab are layered on top of that baseline — country and CrowdSec checks are skipped on the overlay path because the source address is always a NetBird CGNAT address.
+> **NetBird-Only services:** requests arriving over WireGuard must satisfy any configured CIDR allowlists and blocklists in addition to the [peer-group check](https://docs.netbird.io/manage/reverse-proxy/authentication#net-bird-only-access-private-services). Country and CrowdSec checks are skipped on this path. If you configure a CIDR allowlist, include the intended callers' overlay addresses, which may come from a custom account range rather than the default CGNAT range. NetBird-Only Access does not override your CIDR rules.
 
 ### Step 4: Configure advanced settings
 
 Switch to the **Settings** tab to adjust advanced proxy behavior. The available settings depend on the service mode.
 
-![Add Service modal showing the Settings tab](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-settings.png)
+![Add Service modal showing the Settings tab](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/reverse-proxy/reverse-proxy-add-service-settings.png)
 
 The per-service options differ between HTTP and L4 (TCP/UDP/TLS) services and apply at different points along the request path:
 
-![Diagram showing per-service options: HTTP services (Pass Host Header, Rewrite Redirects) and L4 services (PROXY Protocol v2, Session Idle Timeout) and where each applies between the user, proxy service, and backend](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/reverse-proxy-service-options-diagram.png)
+![Diagram showing per-service options: HTTP services (Pass Host Header, Rewrite Redirects) and L4 services (PROXY Protocol v2, Session Idle Timeout) and where each applies between the user, proxy service, and backend](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/reverse-proxy/reverse-proxy-service-options-diagram.png)
 
 **HTTP services:**
 
@@ -323,7 +325,7 @@ The per-service options differ between HTTP and L4 (TCP/UDP/TLS) services and ap
 
 > **Warning**
 >
-> **Backend configuration may be required.** If your backend service has a "trusted proxies", "known hosts", or "allowed networks" setting (common in Jellyfin, Home Assistant, Plex, Nextcloud, and others), you must configure it to trust the NetBird IP range. Without this, the backend may reject proxied requests or fail to read the real client IP. See [Backend Service Configuration](https://docs.netbird.io/manage/reverse-proxy/service-configuration) for details and per-service examples.
+> **Backend configuration may be required.** HTTP backends such as Jellyfin, Home Assistant, and Nextcloud may require a "trusted proxies" or "known proxies" setting before accepting forwarded client IP headers. Configure it for the source address the backend sees, which can be a NetBird IP, a routing peer's address, or a container address. See [Backend Service Configuration](https://docs.netbird.io/manage/reverse-proxy/service-configuration) for details and per-service examples.
 
 ### Step 5: Create the service
 
@@ -440,6 +442,20 @@ The command supports HTTP and L4 protocols (`--protocol`), optional authenticati
 
 For the complete guide including setup, authentication options, session lifecycle, troubleshooting, and examples, see [Expose from CLI](https://docs.netbird.io/manage/reverse-proxy/expose-from-cli).
 
+## Limitations
+
+### Windows file shares (SMB)
+
+Don't publish Windows file shares through the reverse proxy. A TCP service can relay SMB, but:
+
+- **The port.** Windows connects to file shares on port 445. On NetBird Cloud, NetBird assigns each TCP service its listen port and you can't choose 445, so a normal `\\<service hostname>\share` path can't connect. Only a drive mapped to the assigned port gets through, from a device running Windows 11, version 24H2 or later, or Windows Server 2025 or later (`New-SmbMapping -TcpPort`; see Microsoft's [alternative SMB ports](https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-ports) page). A self-hosted proxy can listen on 445, but the next two points still apply.
+- **The sign-in.** Through the proxy, Windows signs in with NTLM, not Kerberos, on a mapped drive as well, unless the TCP service's hostname is registered as a service principal name and the device reaches a domain controller over the tunnel. Kerberos needs a domain controller and a ticket for the server name in the share path. That name is the TCP service's hostname, which has no service principal name in Active Directory, and a device without the NetBird client can't reach a domain controller. Windows falls back to NTLM without warning: if the file server accepts NTLM, the share opens normally; if it refuses NTLM, the connection fails.
+
+  You can register the hostname on the file server's computer account (`setspn -S cifs/<service hostname> <file server>`). That gets Kerberos for devices that reach a domain controller over the tunnel, but those devices can reach the file server directly, so the proxy adds nothing for them.
+- **The exposure.** TCP services have no SSO, so anyone who passes the access restrictions reaches the file server's own sign-in directly.
+
+For devices that run the NetBird client, reach the file servers and domain controllers over the tunnel instead: see [Active Directory & Windows File Shares](https://docs.netbird.io/use-cases/remote-access/active-directory). For devices that can't run the client, publish a web application that serves the files as an HTTP service. HTTP services support SSO and the other [authentication methods](https://docs.netbird.io/manage/reverse-proxy/authentication).
+
 ## Related pages
 
 - [Expose from CLI](https://docs.netbird.io/manage/reverse-proxy/expose-from-cli) - expose local services from the command line using `netbird expose`
@@ -457,5 +473,5 @@ For the complete guide including setup, authentication options, session lifecycl
 
 - Make sure to [star us on GitHub](https://github.com/netbirdio/netbird)
 - Follow us [on X](https://x.com/netbird)
-- Join our Slack Channel
+- Join our Slack Channel or Discord server
 - NetBird [latest release](https://github.com/netbirdio/netbird/releases) on GitHub

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/user-roles.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/user-roles.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/team/user-roles.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/team/user-roles.mdx)
 
 # User Roles
 
@@ -8,20 +8,21 @@ NetBird has eight user roles - `Owner`, `Admin`, `Network Admin`, `Billing Admin
 
 Rows are grouped by what a `Network Admin` can do, from full access down to no access.
 
-|            Area | Owner | Admin | Network Admin | Billing Admin | Auditor | User |
-| --------------: | :---: | :---: | :-----------: | :-----------: | :-----: | :--: |
-|  Control Center |   ✅   |   ✅   |       ✅       |       ❌       |    📖   |   ❌  |
-|  Access Control |   ✅   |   ✅   |       ✅       |       ❌       |    📖   |   ❌  |
-| Network Routing |   ✅   |   ✅   |       ✅       |       ❌       |    📖   |   ❌  |
-|             DNS |   ✅   |   ✅   |       ✅       |       ❌       |    📖   |   ❌  |
-|           Peers |   ✅   |   ✅   |       📖      |       ❌       |    📖   |  📖1 |
-|      Setup Keys |   ✅   |   ✅   |       📖      |       ❌       |    📖   |   ❌  |
-|            Team |   ✅   |   ✅   |       📖      |       ❌       |    📖   |   ❌  |
-|        Activity |   ✅   |   ✅   |       📖      |       ❌       |    📖   |   ❌  |
-|        Settings |   ✅   |   ✅   |       📖      |       ✅2      |    📖   |   ❌  |
-|   Reverse Proxy |   ✅   |   ✅   |       ❌       |       ❌       |    📖   |   ❌  |
-|         Tenants |   ✅   |   ✅   |       ❌       |       ❌       |    📖   |   ❌  |
-|    Integrations |   ✅   |   ✅   |       ❌       |       ❌       |    📖   |   ❌  |
+|                  Area | Owner | Admin | Network Admin | Billing Admin | Auditor | User |
+| --------------------: | :---: | :---: | :-----------: | :-----------: | :-----: | :--: |
+|        Control Center |   ✅   |   ✅   |       ✅       |       ❌       |    📖   |   ❌  |
+|        Access Control |   ✅   |   ✅   |       ✅       |       ❌       |    📖   |   ❌  |
+|       Network Routing |   ✅   |   ✅   |       ✅       |       ❌       |    📖   |   ❌  |
+|                   DNS |   ✅   |   ✅   |       ✅       |       ❌       |    📖   |   ❌  |
+|                 Peers |   ✅   |   ✅   |       📖      |       ❌       |    📖   |  📖1 |
+|            Setup Keys |   ✅   |   ✅   |       📖      |       ❌       |    📖   |   ❌  |
+| Users / Service Users |   ✅   |   ✅   |       📖      |       ❌       |    📖   |   ❌  |
+|        Traffic Events |   ✅   |   ✅   |       📖      |       ❌       |    📖   |   ❌  |
+|          Audit Events |   ✅   |   ✅   |       📖      |       ❌       |    📖   |   ❌  |
+|              Settings |   ✅   |   ✅   |       📖      |       ✅2      |    📖   |   ❌  |
+|         Reverse Proxy |   ✅   |   ✅   |       ❌       |       ❌       |    📖   |   ❌  |
+|               Tenants |   ✅   |   ✅   |       ❌       |       ❌       |    📖   |   ❌  |
+|          Integrations |   ✅   |   ✅   |       ❌       |       ❌       |    📖   |   ❌  |
 
 **Legend:** ✅ = Full access · 📖 = Read only · ❌ = No access
 
@@ -56,7 +57,7 @@ An `Admin` has full access to the account, with two exceptions: administrators c
 
 ## Network Admin
 
-A `Network Admin` fully manages network configuration - Control Center, Access Control, Network Routing, and DNS. They have read-only access to Peers, Setup Keys, Team, Activity, and Settings, and no access to Reverse Proxy, Tenants, or Integrations. A `Network Admin` can view setup keys but not create them, and can't invite users or create service users.
+A `Network Admin` fully manages network configuration - Control Center, Access Control, Network Routing, and DNS. They have read-only access to Peers, Setup Keys, Users, Service Users, Traffic Events, Audit Events, and Settings, and no access to Reverse Proxy, Tenants, or Integrations. A `Network Admin` can view setup keys but not create them, and can't invite users or create service users.
 
 ## Billing Admin
 
@@ -88,7 +89,15 @@ Any signed-in user, whatever their role, sees their own usage and their own requ
 
 ## Roles and the API
 
-Roles apply the same way whether a user works in the dashboard or through the NetBird management API - a user's permissions over API resources match their role. Every role except `User`, `Agent Network Admin`, and `Usage Viewer` can create a personal access token that carries the same permissions as that user's role, so they can interact with the API programmatically.
+Roles apply the same way whether a user works in the dashboard or through the NetBird management API - a user's permissions over API resources match their role.
+
+`Owner`, `Admin`, and `Network Admin` can create personal access tokens, which carry the same permissions as the user who owns them. `Billing Admin`, `Auditor`, `User`, `Agent Network Admin`, and `Usage Viewer` cannot create personal access tokens. For programmatic read access, an `Owner` or `Admin` can create a service user with the `Auditor` role and generate a token for that service user. The token then carries the service user's read-only permissions.
+
+For access issued to an individual auditor, use a dedicated service user and revoke its tokens when that auditor is offboarded. Removing the auditor's own account does not revoke tokens owned by the service user.
+
+Token expiration must be between 1 and 365 days.
+
+Roles also apply to AI agents that use the [NetBird MCP server](https://docs.netbird.io/manage/mcp-server). An agent that signs in through OAuth acts with the role of the user who signed in, and can be limited further to read-only access.
 
 ## Roles and identity provider sync
 
@@ -98,13 +107,11 @@ Roles apply the same way whether a user works in the dashboard or through the Ne
 
 ## Assign a role
 
-To change a user's role, go to the `Team` tab, select the `Users` tab, and click the user you want to update:
-
-![user list in the Team tab](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/user-tab-list.png)
+To change a user's role, open **Users** in the sidebar, select the **Users** tab, and click the user you want to update.
 
 Select the desired role from the dropdown. `Agent Network Admin` and `Usage Viewer` are under the **Agent Network** tab:
 
-![user role dropdown](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/user-update-role.png)
+![user role dropdown](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/user-update-role.png)
 
 Click the `Save` button to apply the change.
 
@@ -118,5 +125,5 @@ Click the `Save` button to apply the change.
 
 - Make sure to [star us on GitHub](https://github.com/netbirdio/netbird)
 - Follow us [on X](https://x.com/netbird)
-- Join our Slack Channel
+- Join our Slack Channel or Discord server
 - NetBird [latest release](https://github.com/netbirdio/netbird/releases) on GitHub

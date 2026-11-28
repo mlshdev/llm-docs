@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/querying/vlogscli.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/querying/vlogscli.md)
+> Pinned source for VictoriaLogs v1.55.0: [docs/victorialogs/querying/vlogscli.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/a7001ac416483b5ca96347edd33bfc502e31ce3f/docs/victorialogs/querying/vlogscli.md)
 
 `vlogscli` is an **interactive** command-line tool for querying [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/).
 It has the following features:
@@ -19,8 +19,8 @@ or from docker images at [Docker Hub](https://hub.docker.com/r/victoriametrics/v
 ### Running `vlogscli` from release binary
 
 ```sh
-curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.53.0/vlutils-linux-amd64-v1.53.0.tar.gz
-tar xzf vlutils-linux-amd64-v1.53.0.tar.gz
+curl -L -O https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.54.0/vlutils-linux-amd64-v1.54.0.tar.gz
+tar xzf vlutils-linux-amd64-v1.54.0.tar.gz
 ./vlogscli-prod
 ```
 

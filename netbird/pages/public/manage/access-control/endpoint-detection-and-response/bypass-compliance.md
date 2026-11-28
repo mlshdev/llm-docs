@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/access-control/endpoint-detection-and-response/bypass-compliance.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/access-control/endpoint-detection-and-response/bypass-compliance.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/access-control/endpoint-detection-and-response/bypass-compliance.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/access-control/endpoint-detection-and-response/bypass-compliance.mdx)
 
 # Bypass Compliance for Non-Compliant Peers
 
@@ -25,7 +25,7 @@ When you bypass compliance for a peer:
 2. The bypass remains active until:
    - An administrator manually revokes it, OR
    - The device becomes naturally compliant in the EDR system (bypass is automatically removed)
-3. All bypass actions are logged in the [Activity Events](https://docs.netbird.io/manage/activity) for audit purposes.
+3. All bypass actions are logged in **[Audit Events](https://docs.netbird.io/manage/activity)** for audit purposes.
 
 ## Bypass Compliance for a Peer
 
@@ -35,11 +35,11 @@ To bypass compliance for a non-compliant peer:
 2. Locate the peer showing `Non-compliant` status (red badge)
 3. Hover over the **Bypass** button to see which integration's compliance check will be bypassed
 
-![Bypass view](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/endpoint-detection-and-response/bypass-compliance/general-view.png)
+![Bypass view](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/endpoint-detection-and-response/bypass-compliance/general-view.png)
 
 4. Click the **Bypass** button and confirm the action in the dialog
 
-![Bypass confirm button](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/endpoint-detection-and-response/bypass-compliance/bypass-button.png)
+![Bypass confirm button](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/endpoint-detection-and-response/bypass-compliance/bypass-button.png)
 
 The peer will immediately gain network access and the non-compliant status will be replaced with a green `Bypassed` badge.
 
@@ -50,7 +50,7 @@ To see all peers that have compliance bypassed:
 1. Navigate to the [Peers](https://app.netbird.io/peers) page
 2. Click the **Bypassed** filter button (shows a count badge with the number of bypassed peers)
 
-![Bypassed filter button](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/endpoint-detection-and-response/bypass-compliance/bypassed-filter.png)
+![Bypassed filter button](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/endpoint-detection-and-response/bypass-compliance/bypassed-filter.png)
 
 The filter can be combined with connection status filters:
 
@@ -71,7 +71,7 @@ To revoke a bypass and return a peer to normal compliance validation:
 3. Click the **Revoke** button next to the "Bypassed" badge
 4. Confirm the action
 
-![Revoke compliance bypass](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/endpoint-detection-and-response/bypass-compliance/revoke-bypass.png)
+![Revoke compliance bypass](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/endpoint-detection-and-response/bypass-compliance/revoke-bypass.png)
 
 Once revoked, the peer will be subject to normal compliance checks. If the device is still non-compliant, it will lose network access and show the `Non-compliant` status again.
 
@@ -84,12 +84,12 @@ You can bypass compliance or revoke bypass for multiple peers at once:
 1. Navigate to the [Peers](https://app.netbird.io/peers) page
 2. Select multiple peers using the checkboxes (peers must have non-compliant status)
 
-![Batch bypass](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/endpoint-detection-and-response/bypass-compliance/batch-bypass.png)
+![Batch bypass](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/endpoint-detection-and-response/bypass-compliance/batch-bypass.png)
 
 3. In the action bar that appears at the bottom, click the **Bypass Compliance** button (shield icon)
 4. Confirm the action in the dialog
 
-![Batch bypass confirm](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/endpoint-detection-and-response/bypass-compliance/batch-bypass-button.png)
+![Batch bypass confirm](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/endpoint-detection-and-response/bypass-compliance/batch-bypass-button.png)
 
 The button shows a count of how many selected peers will have compliance bypassed.
 
@@ -98,12 +98,12 @@ The button shows a count of how many selected peers will have compliance bypasse
 1. Navigate to the [Peers](https://app.netbird.io/peers) page
 2. Select multiple bypassed peers using the checkboxes
 
-![Batch revoke bypass](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/endpoint-detection-and-response/bypass-compliance/batch-revoke-bypass.png)
+![Batch revoke bypass](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/endpoint-detection-and-response/bypass-compliance/batch-revoke-bypass.png)
 
 3. In the action bar that appears at the bottom, click the **Revoke Compliance Bypass** button (shield-off icon)
 4. Confirm the action in the dialog
 
-![Batch revoke bypass confirm](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/endpoint-detection-and-response/bypass-compliance/batch-revoke-bypass-button.png)
+![Batch revoke bypass confirm](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/endpoint-detection-and-response/bypass-compliance/batch-revoke-bypass-button.png)
 
 > **Note**
 >
@@ -128,7 +128,7 @@ All compliance bypass actions are recorded in the activity log:
 | `Peer compliance bypassed by admin` | An administrator bypassed compliance for a peer   |
 | `Peer compliance bypass revoked`    | An administrator or the system removed the bypass |
 
-You can view these events in the [Activity Events](https://docs.netbird.io/manage/activity) page, including details about which administrator performed the action and the original rejection reason.
+You can view these events under **[Audit Events](https://docs.netbird.io/manage/activity)** in the dashboard, including details about which administrator performed the action and the original rejection reason.
 
 ## API Access
 

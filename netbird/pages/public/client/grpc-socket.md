@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/client/grpc-socket.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/client/grpc-socket.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/client/grpc-socket.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/client/grpc-socket.mdx)
 
 # gRPC Daemon Socket
 
@@ -31,13 +31,12 @@ migrated from `tcp://127.0.0.1:41731` automatically.
 > **Warning**
 >
 > **Security warning:** The default Unix socket allows read and write access for
-> local users, so any local user can read status and configuration and perform
-> operations that do not require privileges. Operations that decide who may
-> obtain a shell on the machine are refused unless the caller is root, or an
-> administrator on Windows: see [Privileged
-> operations](#privileged-operations). If you require local-user isolation
-> beyond that, place a custom socket inside a restricted directory and ensure
-> that the directory is recreated securely at boot.
+> local users. Each local user can read basic status and use the profiles that
+> they own. Operations that decide who may obtain a shell on the machine are
+> refused unless the caller is root, or an administrator on Windows: see
+> [Privileged operations](#privileged-operations). To let only one group connect,
+> see [Restrict daemon access to a
+> group](https://docs.netbird.io/client/profile-ownership#restrict-daemon-access-to-a-group).
 
 On Linux installations that use an instance-specific systemd service, the socket can instead be under `/var/run/netbird/<instance>.sock`. The NetBird CLI automatically uses the only socket in that directory when the default socket does not exist. If multiple instance sockets exist, pass the intended address explicitly with `--daemon-addr`.
 
@@ -53,9 +52,10 @@ Use the global `--daemon-addr` option when installing or reconfiguring the servi
 
 ```text
 unix:///path/to/netbird.sock
-tcp://host:port
 npipe://name
 ```
+
+The `tcp://host:port` format is deprecated. See [TCP sockets (deprecated)](#tcp-sockets-deprecated).
 
 > **Warning**
 >
@@ -83,30 +83,23 @@ netbird --daemon-addr unix:///var/run/netbird-integration-grpc.sock status
 > listener above. If the daemon uses its default listener, run `netbird status`
 > instead. Do not pass an HTTP/JSON socket to `--daemon-addr`.
 
-### Use a TCP Socket
-
-```shell
-sudo netbird service reconfigure \
-  --daemon-addr tcp://127.0.0.1:41731
-```
-
-Then specify that address when using the CLI on platforms where it is not the default:
-
-```shell
-netbird --daemon-addr tcp://127.0.0.1:41731 status
-```
+### TCP Sockets (Deprecated)
 
 > **Warning**
 >
-> **Security warning:** The daemon gRPC server does not add authentication or
-> TLS. Keep TCP listeners bound to a trusted interface such as `127.0.0.1` and
-> do not expose them to an untrusted network. The API includes operations that
-> can read or change the local NetBird daemon's state.
->
-> A TCP connection also carries no caller identity, so the daemon cannot tell
-> who is calling and refuses every [privileged
-> operation](#privileged-operations) on that socket, whoever runs the client.
-> Use a Unix socket, or `npipe://` on Windows, if your integration needs them.
+> TCP sockets are deprecated. A future release removes them.
+
+A TCP connection does not carry a caller identity. The daemon cannot identify the
+caller, so it refuses every request on a TCP socket. Use a Unix socket on Linux and
+macOS, or a named pipe on Windows.
+
+If your service uses a TCP socket, change it to the default address:
+
+```shell
+sudo netbird service reconfigure --daemon-addr unix:///var/run/netbird.sock
+```
+
+On Windows, use `--daemon-addr npipe://netbird`.
 
 ## Privileged Operations
 
@@ -115,21 +108,36 @@ by the identity of whoever calls it, read from the kernel rather than supplied b
 the client: `SO_PEERCRED` on Linux, `LOCAL_PEERCRED` on macOS, and the named-pipe
 client token on Windows. A caller whose identity cannot be established is refused.
 
+Most operations also require the caller to own the profile, or to hold the active
+connection. See [Profile ownership and daemon access](https://docs.netbird.io/client/profile-ownership). To let
+only one group connect to the socket, see [Restrict daemon access to a
+group](https://docs.netbird.io/client/profile-ownership#restrict-daemon-access-to-a-group).
+
 Since 0.76.0 the following require root, or an administrator on Windows, because
-they decide who may obtain a shell on the machine:
+they decide who may obtain a shell on the machine, or reach the desktop of whoever
+is signed in to it. The VNC entries apply from 0.84.0:
 
-| Change                        | Refused when                                                             |
-| ----------------------------- | ------------------------------------------------------------------------ |
-| Enable the NetBird SSH server | the caller is not privileged                                             |
-| Enable SSH root login         | the caller is not privileged                                             |
-| Disable SSH authentication    | the caller is not privileged                                             |
-| Change the management URL     | the caller is not privileged and that profile has the SSH server enabled |
-| Deregister the peer (logout)  | the caller is not privileged and that profile has the SSH server enabled |
+| Change                          | Refused when                                                                    |
+| ------------------------------- | ------------------------------------------------------------------------------- |
+| Enable the NetBird SSH server   | the caller is not privileged                                                    |
+| Enable SSH root login           | the caller is not privileged                                                    |
+| Disable SSH authentication      | the caller is not privileged                                                    |
+| Enable the NetBird VNC server   | the caller is not privileged                                                    |
+| Disable VNC connection approval | the caller is not privileged                                                    |
+| Change the management URL       | the caller is not privileged and that profile has the SSH or VNC server enabled |
+| Deregister the peer (logout)    | the caller is not privileged and that profile has the SSH or VNC server enabled |
 
-Only the direction that creates the capability is guarded. Turning the SSH server or
-root login off, and re-enabling SSH authentication, are always allowed, and restating a
-value that is already set is not a change, so an integration that submits a whole
-settings form does not start failing once an administrator enables SSH.
+The management URL and deregistration entries are guarded only while one of the
+servers is enabled, because that is when the management identity the profile points
+at decides who may open a shell or attach to the desktop. Repointing the profile,
+and deregistering the peer so its key can be registered elsewhere, are both ways to
+hand that decision to someone else.
+
+Only the direction that creates the capability is guarded. Turning the SSH server,
+root login or the VNC server off, re-enabling SSH authentication, and turning VNC
+connection approval back on are always allowed, and restating a value that is already
+set is not a change, so an integration that submits a whole settings form does not
+start failing once an administrator enables SSH or VNC.
 
 Removing a profile is not refused. An unprivileged caller removes it locally and the
 daemon skips the deregistration, which leaves the peer registered on the management
@@ -138,7 +146,8 @@ server rather than detached from it.
 A profile written before the SSH server flag existed counts as having it enabled,
 because the daemon reads an unset flag the same way the engine does. The management URL
 and deregistration guards therefore apply on those installations even though nobody
-enabled SSH explicitly.
+enabled SSH explicitly. The VNC server flag is read the other way: a profile without
+it counts as having the VNC server off, because the server shipped together with the flag.
 
 A refusal comes back as gRPC `PermissionDenied` carrying a `google.rpc.ErrorInfo`
 detail, so an integration can recognise it without parsing the message:
@@ -229,22 +238,10 @@ grpcurl \
   daemon.DaemonService/Status
 ```
 
-### Query Status Through a TCP Socket
+### Query Status on Windows
 
-This applies to a custom loopback TCP listener, since `grpcurl` cannot dial a
-Windows named pipe and the Windows default is therefore not reachable this way. Use
-a client that can open the pipe, or configure a TCP listener for testing and accept
-that [privileged operations](#privileged-operations) are refused on it:
-
-```shell
-grpcurl \
-  -plaintext \
-  -import-path ./client/proto \
-  -proto daemon.proto \
-  -d '{}' \
-  127.0.0.1:41731 \
-  daemon.DaemonService/Status
-```
+`grpcurl` cannot connect to a Windows named pipe. Use a client that can open a named
+pipe. Do not use a TCP socket, because the daemon refuses every request on it.
 
 `-plaintext` is required because the local daemon socket does not use TLS. For a Unix socket, pass the full `unix:///...` URI and include `-unix`. The URI form also avoids a Unix-socket regression in some `grpcurl` 1.9.x builds.
 
@@ -271,7 +268,7 @@ For a long-running integration, generate a gRPC client from the same `daemon.pro
 
 1. Download or vendor `client/proto/daemon.proto` from the NetBird repository.
 2. Generate client bindings with the Protocol Buffer and gRPC tools for your language.
-3. Create a local gRPC channel to the configured Unix or TCP address without TLS. That does not make the socket safe to expose remotely.
+3. Create a local gRPC channel to the configured Unix socket or named pipe without TLS.
 4. Create a `daemon.DaemonService` client from that channel.
 5. Call unary methods or consume server streams using the generated request and response types.
 
@@ -297,7 +294,7 @@ This is expected. Supply `daemon.proto` with your tool's equivalent of the `grpc
 
 ### A Client Receives an Unavailable or Connection-Refused Error
 
-Confirm that the daemon is running and that the integration uses the same socket address as the service. For a Unix socket, also verify access to the socket and each parent directory. For TCP, verify the host and port and ensure the listener remains bound to a trusted interface.
+Confirm that the daemon is running and that the integration uses the same socket address as the service. For a Unix socket, also verify access to the socket and each parent directory. If the address uses `tcp://`, change it to a Unix socket or a named pipe. The daemon refuses every request on a TCP socket.
 
 ### A Call Is Refused With PermissionDenied
 
@@ -305,8 +302,8 @@ The operation is one of the [privileged operations](#privileged-operations) and 
 caller is not root, or not an administrator on Windows. Check the `ErrorInfo` detail
 on the error: `PRIVILEGE_REQUIRED` in domain `daemon.netbird.io` means the daemon
 identified the caller and refused the change, rather than failing to reach it. On a
-TCP socket every such operation is refused, because the transport carries no caller
-identity.
+TCP socket the daemon refuses every request, because TCP carries no caller identity.
+TCP sockets are deprecated.
 
 ### A Method or Field Is Unimplemented
 

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/integrations/codex.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/integrations/codex.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/agent-network/integrations/codex.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/agent-network/integrations/codex.mdx)
 
 # Keyless Access to Codex
 
@@ -27,11 +27,11 @@ endpoint.
 
 ## Connect the Provider
 
-1. Go to **Agent Network → Providers** and click **Connect Provider**.
+1. Go to **Agent Network → Agents → Providers** and click **Connect Provider**.
 2. Select **OpenAI** (or another OpenAI-compatible provider or gateway) and paste its API key.
 3. Save the provider. The key is now held server-side, the next step authorizes who can use it.
 
-![connect OpenAI provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/integrations/agent-network-connect-openai.png)
+![connect OpenAI provider in NetBird Agent Network](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/integrations/agent-network-connect-openai.png)
 
 See [Providers](https://docs.netbird.io/agent-network/providers) for details.
 
@@ -40,7 +40,7 @@ See [Providers](https://docs.netbird.io/agent-network/providers) for details.
 By default nothing is allowed: a policy must connect a source group to the OpenAI provider
 before anyone can route Codex through it.
 
-1. Go to **Agent Network → Policies** and add a policy.
+1. Go to **Agent Network → Agents → Agent Policies** and add a policy.
 2. Set the **Source** to the users or agents who should be able to use Codex (for example
    your `Engineering` group from your IdP).
 3. Set the **Provider** to the OpenAI provider you just connected.
@@ -48,7 +48,7 @@ before anyone can route Codex through it.
    so Codex usage stays within budget, and [guardrails](https://docs.netbird.io/agent-network/policies/guardrails)
    such as a model allowlist.
 
-![create a NetBird Agent Network policy authorizing Codex](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/integrations/agent-network-create-policy-codex.png)
+![create a NetBird Agent Network policy authorizing Codex](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/integrations/agent-network-create-policy-codex.png)
 
 See [Policies](https://docs.netbird.io/agent-network/policies) for details.
 

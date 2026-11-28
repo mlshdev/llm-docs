@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/index.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/agent-network/index.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/agent-network/index.mdx)
 
 # What is NetBird Agent Network?
 
@@ -21,7 +21,7 @@ The NetBird Control Center below captures it in essence: the agents on the left 
 databases, servers, and LLM APIs on the right, only where the policies in the middle
 allow it.
 
-![agent network](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/overview/agent-network-control-center-v2.png)
+![agent network](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/overview/agent-network-control-center-v2.png)
 
 ## Two Use Cases
 
@@ -39,7 +39,7 @@ real identity from your identity provider like Okta, Microsoft Entra ID, Google,
 and others. That lets you apply per-identity policies, token and cost limits, model guardrails, and
 full audit logs to outbound LLM traffic.
 
-![agent network llm policy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/overview/agent-network-llm-policy.png)
+![agent network llm policy](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/overview/agent-network-llm-policy.png)
 
 ### Agentic Access to Internal Resources and Local Models
 
@@ -51,7 +51,7 @@ NetBird’s overlay network traverses firewalls and works across datacenters and
 configuring security groups, or changing network topology. Each agent connects with its own identity, and access policies
 define exactly which resources it can reach, just like any other NetBird peer in the network.
 
-![agent network llm policy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/overview/agent-network-internal-resources-policy.png)
+![agent network llm policy](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/overview/agent-network-internal-resources-policy.png)
 
 ## How NetBird Fits in Your Enterprise IT Stack
 
@@ -70,9 +70,9 @@ their enterprise stack with minimal changes.
 
 ## Focused Dashboard View
 
-Some accounts open directly into Agent Network, with the rest of the NetBird Dashboard (such as Peers, Networks, and DNS) hidden to keep the experience focused on agents. This is the default for accounts onboarded specifically for Agent Network.
+Some accounts open directly into Agent Network, with the **Networking** section hidden to keep the experience focused on agents. **Control Center**, **Peers**, **Users**, and **Groups** remain at the top of the sidebar, and the options under the **Account** heading remain at the bottom, subject to your permissions. This is the default for accounts onboarded specifically for Agent Network.
 
-To use the full NetBird platform, open **Settings** and turn off **Agent Network focused view**. You can re-enable it from the same setting at any time.
+To show the Networking section, open **Settings** and turn off **Agent Network focused view**. You can re-enable it from the same setting at any time.
 
 For API-managed accounts, `agent_network_only` requires `dashboard_features.agent_network` to be enabled. See the [Accounts API reference](https://docs.netbird.io/ipa/resources/accounts) for the account settings schema.
 

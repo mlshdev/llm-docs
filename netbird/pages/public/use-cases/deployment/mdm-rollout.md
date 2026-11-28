@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/use-cases/deployment/mdm-rollout.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/use-cases/deployment/mdm-rollout.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/use-cases/deployment/mdm-rollout.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/use-cases/deployment/mdm-rollout.mdx)
 
 # Roll Out NetBird Across Your Organization with MDM
 
@@ -150,7 +150,7 @@ See [Enforce NetBird Settings on macOS](https://docs.netbird.io/manage/peers/mdm
 3. Set **Ignore app version** according to who owns updates, in [Step 5](#step-5-pick-one-owner-for-updates).
 4. Assign it as **Required** to the `NetBird Pilot` device group.
 
-![Intune Add App screen for the NetBird MSI, with App install context, Ignore app version, and an empty Command-line arguments field](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-07.png)
+![Intune Add App screen for the NetBird MSI, with App install context, Ignore app version, and an empty Command-line arguments field](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/mdm-deployment/intune-netbird-integration/intune-07.png)
 
 **macOS**: the PKG as a macOS app.
 
@@ -169,7 +169,7 @@ Intune installs NetBird and starts its service. The device does not join your ne
 
 Because the policy pins the server, the app skips the server question. The user clicks **Connect**, signs in with their Entra ID account in the browser, and is connected. The new peer appears in the NetBird dashboard under that user's name and, with group sync, in that user's groups.
 
-![NetBird desktop app showing the Connected state after the user signs in](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/client/desktop-app/default-view.png)
+![NetBird desktop app showing the Connected state after the user signs in](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/client/desktop-app/default-view.png)
 
 A short message is enough:
 
@@ -225,11 +225,11 @@ With the client on every company laptop, you can make sure nothing else gets in.
 
 Connect Intune under **Integrations → EDR** in the NetBird dashboard and select the groups the check applies to, such as the groups synced from Entra ID for your employees. The integration covers Windows and macOS, and is available on the NetBird Cloud Business plan and with a self-hosted [Enterprise license](https://docs.netbird.io/selfhosted/enterprise).
 
-![Connect NetBird with Intune dialog, selecting the groups the Intune check applies to](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/groups.png)
+![Connect NetBird with Intune dialog, selecting the groups the Intune check applies to](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/groups.png)
 
 A device that fails the check shows **Approval required** in the peers list until Intune reports it as managed and compliant:
 
-![NetBird peers list with a peer marked Approval required](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/endpoint-detection-and-response/intune-mdm/edr-approval-required.png)
+![NetBird peers list with a peer marked Approval required](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/endpoint-detection-and-response/edr-approval-required.png)
 
 ## Rollout checklist
 

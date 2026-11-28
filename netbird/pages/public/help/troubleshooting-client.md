@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/help/troubleshooting-client.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/help/troubleshooting-client.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/help/troubleshooting-client.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/help/troubleshooting-client.mdx)
 
 # Troubleshooting client issues
 
@@ -17,6 +17,8 @@ experience. The steps here are cross-platform; for OS-specific details, use the 
 - **Id:** platform-specific-guides
 - **Description:** OS-specific steps live on their own pages. Everything else on this page applies to all platforms.
 - **Items:** \[Linux]\(/help/troubleshooting-client/linux) - Permanent debug log level (systemd, service, Docker) and host-based firewall (UFW, firewalld). - Icon: terminal - Chips: \[Debug logs]\(/help/troubleshooting-client/linux#set-the-log-level-permanently); \[Host firewall]\(/help/troubleshooting-client/linux#host-based-firewall); \[Windows]\(/help/troubleshooting-client/windows) - Debug log level, foreground mode via PSExec, Windows Firewall, and Windows DNS (NRPT/GPO, Active Directory). - Icon: windows - Chips: \[Foreground (PSExec)]\(/help/troubleshooting-client/windows#run-the-client-in-foreground-mode); \[Windows DNS]\(/help/troubleshooting-client/windows#windows-dns-scenarios); \[macOS]\(/help/troubleshooting-client/macos) - Permanent debug log level and host-based firewall on macOS. - Icon: laptop - Chips: \[Debug logs]\(/help/troubleshooting-client/macos#set-the-log-level-permanently); \[Host firewall]\(/help/troubleshooting-client/macos#host-based-firewall); \[Android]\(/help/troubleshooting-client/android) - Enable trace logs and capture them with ADB. - Icon: android - Chips: \[Trace logs (ADB)]\(/help/troubleshooting-client/android#enable-trace-logs-and-capture-them-with-adb); \[iOS]\(/help/troubleshooting-client/ios) - Collect a debug bundle from the app. On-device debugging is limited. - Icon: mobile
+
+If your antivirus or EDR product flags NetBird, see [Antivirus and EDR alerts](https://docs.netbird.io/help/troubleshooting-client/antivirus-alerts).
 
 ## NetBird client status
 
@@ -83,6 +85,7 @@ Wireguard port: 51820
 Quantum resistance: false
 Lazy connection: false
 SSH Server: Disabled
+VNC Server: Disabled
 Networks: -
 Peers count: 2/2 Connected
 ```
@@ -216,7 +219,7 @@ The archive collects the most useful diagnostics into one file, and every bundle
 | `service_params.json`                                   | Service-install parameters when available; sensitive environment values are masked |
 | `metrics.txt`                                           | Buffered client metrics when available; peer identifiers are anonymized            |
 
-With `--anonymize`, public IP addresses, domains, and MAC addresses are replaced consistently across every file, so the bundle stays readable while sensitive values are masked; private, CGNAT, and link-local IP ranges are kept, and interface names are not anonymized. Adding `--anonymize-level strict` (which implies `--anonymize`) also masks those internal IP ranges, peer names, and WireGuard public keys. Private keys and SSH keys are never included, and the packet capture (`capture.pcap`) is left out of anonymized bundles because it holds raw decrypted packets.
+With `--anonymize`, public IP addresses, domains, and MAC addresses are replaced consistently across every file, so the bundle stays readable while sensitive values are masked; private, CGNAT, and link-local IP ranges are kept, and interface names are not anonymized. Adding `--anonymize-level strict` (which implies `--anonymize`) also masks those internal IP ranges, peer names, and WireGuard public keys. The status file keeps the NetBird IPv4 address of each remote peer and peer names under `netbird.io` at both levels. Private keys and SSH keys are never included, and the packet capture (`capture.pcap`) is left out of anonymized bundles because it holds raw decrypted packets.
 
 ### Debug for a specific time
 
@@ -256,7 +259,7 @@ netbird debug bundle --system-info --upload-bundle
 ```
 
 This will output an `Upload file key`, which is effectively a random filename in our internal storage system
-and can be safely shared with us through public channels such as GitHub Issues or Slack.
+and can be safely shared with us through public channels such as GitHub Issues, Slack, or Discord.
 Uploading the bundle does not remove the local ZIP from the temporary directory.
 
 ```shell
@@ -273,7 +276,7 @@ Upload file key:
 
 > **Note**
 >
-> Uploading to a custom endpoint with `--upload-bundle-url` (for example a self-hosted upload server) requires root/administrator and an `https` URL. To upload to a server that uses `http` or an untrusted TLS certificate, add `--upload-bundle-insecure`.
+> Uploading to a custom endpoint with `--upload-bundle-url` (for example a self-hosted upload server) requires `--upload-bundle`, root/administrator and an `https` URL. To upload to a server that uses `http` or an untrusted TLS certificate, add `--upload-bundle-insecure`. Without `--upload-bundle`, the command fails with `--upload-bundle-url requires --upload-bundle`.
 
 > **Warning**
 >
@@ -286,7 +289,7 @@ Upload file key:
 
 The desktop app can create and optionally upload a debug bundle without using the CLI. Open **Settings → Troubleshoot**.
 
-![Troubleshoot settings in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/help/troubleshooting-client/ui-settings.png)
+![Troubleshoot settings in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/help/troubleshooting-client/ui-settings.png)
 
 Choose the data and capture behavior that fits the issue:
 
@@ -298,7 +301,7 @@ Choose the data and capture behavior that fits the issue:
 - **Capture packets** adds a packet capture while collecting new logs. Packet captures are excluded from anonymized bundles because they contain raw packets.
 - **Capture duration** accepts 1–30 minutes.
 
-![Debug bundle capture options in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/help/troubleshooting-client/ui-bundle-wizard.png)
+![Debug bundle capture options in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/help/troubleshooting-client/ui-bundle-wizard.png)
 
 Click **Create debug bundle**. You can cancel while logs are being collected. When the operation finishes:
 
@@ -307,7 +310,7 @@ Click **Create debug bundle**. You can cancel while logs are being collected. Wh
 
 In both cases, the ZIP is stored locally in the platform's temporary directory listed above.
 
-![Completed debug bundle uploaded with a key in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/help/troubleshooting-client/ui-bundle-success.png)
+![Completed debug bundle uploaded with a key in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/help/troubleshooting-client/ui-bundle-success.png)
 
 If you kept the bundle local, attach the ZIP through the support channel you are using.
 
@@ -360,7 +363,7 @@ Once triggered, the job appears in the **Remote Jobs** section on the peer detai
 - **Created/Updated**: Timestamps for job lifecycle
 - **Output**: Once completed, displays the upload key that you can copy and share with NetBird support
 
-The upload key is automatically copyable by clicking on it. Share this key through GitHub Issues, Slack, or support channels.
+The upload key is automatically copyable by clicking on it. Share this key through GitHub Issues, Slack, Discord, or support channels.
 
 #### Limitations
 

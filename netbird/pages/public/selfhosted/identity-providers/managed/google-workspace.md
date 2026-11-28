@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/identity-providers/managed/google-workspace.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/identity-providers/managed/google-workspace.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/identity-providers/managed/google-workspace.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/identity-providers/managed/google-workspace.mdx)
 
 # Google Workspace SSO with NetBird Self-Hosted
 
@@ -20,7 +20,7 @@ Add Google as an external IdP directly in the NetBird Management Dashboard. This
 3. Navigate to **APIs & Services** → **Credentials**
 4. Click **Create Credentials** → **OAuth client ID**
 
-![OAuth client ID](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/1_0auth-client-id-google.png)
+![OAuth client ID](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/1_0auth-client-id-google.png)
 
 5. If prompted, configure the OAuth consent screen first:
    - Choose **Internal** (for Workspace) or **External** (for any Google account)
@@ -51,7 +51,7 @@ Add Google as an external IdP directly in the NetBird Management Dashboard. This
 
 5. **Copy the Redirect URL** that NetBird displays (but don't click **Add Provider** yet)
 
-![Copy redirect URL](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/2_copy-redirect-google.png)
+![Copy redirect URL](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/2_copy-redirect-google.png)
 
 ### Step 3: Complete Google OAuth Client Setup
 
@@ -59,7 +59,7 @@ Add Google as an external IdP directly in the NetBird Management Dashboard. This
 2. Under **Authorized redirect URIs**, click **Add URI**
 3. Paste the redirect URL you copied from NetBird
 
-![Paste URI](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/3_paste-uri-google.png)
+![Paste URI](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/3_paste-uri-google.png)
 
 4. Click **Create**
 
@@ -69,14 +69,14 @@ Add Google as an external IdP directly in the NetBird Management Dashboard. This
 
 5. Note the **Client ID** and **Client Secret** — you'll need these for Step 4
 
-![OAuth client created](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/4_0auth-client-created-google.png)
+![OAuth client created](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/4_0auth-client-created-google.png)
 
 ### Step 4: Complete NetBird Setup
 
 1. Return to the NetBird tab
 2. Fill in the **Client ID** and **Client Secret** from Step 3
 
-![NetBird complete configuration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/5_netbird-complete-google.png)
+![NetBird complete configuration](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/managed/google-workspace/5_netbird-complete-google.png)
 
 3. Click **Add Provider**
 
@@ -118,7 +118,7 @@ These providers can authenticate users via Google while adding proper group clai
 If you don't need automatic group synchronization:
 
 1. Authenticate users via Google as configured above
-2. Manually assign users to groups in NetBird Dashboard under **Team** → **Users**
+2. Manually assign users to groups in NetBird Dashboard under **Users**
 3. Use NetBird's built-in groups for access control policies
 
 This approach works well for smaller teams where group membership doesn't change frequently.

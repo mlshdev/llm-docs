@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/get-started/install/linux.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/get-started/install/linux.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/get-started/install/linux.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/get-started/install/linux.mdx)
 
 # Linux Installation
 
@@ -515,7 +515,7 @@ netbird up
 >
 > It will open your browser and prompt you for your email and password. Follow the instructions.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/get-started/netbird-sso-login-cmd.gif)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/get-started/netbird-sso-login-cmd.gif)
 
 Check connection status:
 
@@ -534,14 +534,18 @@ For unattended deployments across many machines, pre-populate the client config 
 1. Login to the Management Service. You need to have a `setup key` in hand (see [setup keys](https://docs.netbird.io/manage/peers/register-machines-using-setup-keys)).
 
 ```bash
-  netbird up --setup-key <SETUP KEY>
+  sudo netbird up --setup-key <SETUP KEY>
 ```
 
 Alternatively, if you are hosting your own Management Service provide `--management-url` property pointing to your Management Service:
 
 ```bash
-  netbird up --setup-key <SETUP KEY> --management-url http://localhost:33073
+  sudo netbird up --setup-key <SETUP KEY> --management-url http://localhost:33073
 ```
+
+> **Note**
+>
+> On a machine with no console, such as a server, run `netbird up` with `sudo`, or as root. If an administrator gave the default profile to a user with `netbird profile claim default --owner <user>`, run `netbird up` as that user without `sudo`. See [Set up a headless machine](https://docs.netbird.io/client/profile-ownership#set-up-a-headless-machine).
 
 > **Note**
 >

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/use-cases/remote-access/overlapping-ips-for-resources.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/use-cases/remote-access/overlapping-ips-for-resources.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/use-cases/remote-access/overlapping-ips-for-resources.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/use-cases/remote-access/overlapping-ips-for-resources.mdx)
 
 # Overlapping IPs for Resources
 
@@ -156,7 +156,7 @@ The fix works by giving each site its own name, so it is worth making those name
 [custom DNS zone](https://docs.netbird.io/manage/dns/custom-zones), users can call the apps by service names instead of
 remembering which router serves which site.
 
-In **DNS** → **Zones**, create a zone `corp.internal`, distribute it to the `users` group
+In **Networking** → **DNS** → **Zones**, create a zone `corp.internal`, distribute it to the `users` group
 only, and add one CNAME per site pointing at its routing peer's name:
 
 | Record                | Type  | Target                        |

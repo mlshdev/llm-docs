@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/reverse-proxy/bring-your-own-proxy.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/reverse-proxy/bring-your-own-proxy.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/reverse-proxy/bring-your-own-proxy.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/reverse-proxy/bring-your-own-proxy.mdx)
 
 # Bring Your Own Proxy
 
@@ -8,9 +8,9 @@ It is the option to choose when you want:
 
 - **Full control over traffic** — proxied traffic terminates on infrastructure you operate, not on shared proxy clusters managed by the platform.
 - **Specific geographic placement** — pick the region and provider you need (regulatory, latency, residency).
-- **Your own TLS / domain** — the proxy issues certificates directly via Let's Encrypt for a wildcard under a domain you own.
+- **Your own TLS / domain** — the proxy issues Let's Encrypt certificates for individual service hostnames under a domain you own.
 
-In the dashboard, BYOP proxies live under **Reverse Proxy** > **Clusters** and appear as **account clusters**. See [Shared and account clusters](#shared-and-account-clusters) for the full distinction.
+In the dashboard, BYOP proxies live under **Networking** > **Reverse Proxy** > **Clusters** and appear as **account clusters**. See [Shared and account clusters](#shared-and-account-clusters) for the full distinction.
 
 > **Note**
 >
@@ -40,18 +40,18 @@ NetBird recognises two cluster types, distinguished by the `type` field on the `
 
 Both cluster types appear together on the **Clusters** page. The **Type** badge next to the cluster name marks each row as **shared** or **account**, the **Status** column shows whether at least one proxy in the cluster has heartbeated within the last two minutes, and the **Features** column lists the capabilities reported by the connected proxies:
 
-| Feature badge          | Meaning                                                                                                                                                                                                                                                                                                                                                                                                   |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Custom Ports**       | The cluster can bind arbitrary TCP/UDP listen ports for L4 services.                                                                                                                                                                                                                                                                                                                                      |
-| **Subdomain Required** | Services on this cluster must use a subdomain — the bare cluster apex is not addressable.                                                                                                                                                                                                                                                                                                                 |
-| **CrowdSec**           | The cluster has CrowdSec IP-reputation configured across all active proxies.                                                                                                                                                                                                                                                                                                                              |
-| **Private**            | The cluster can publish services that are only reachable from peers in your NetBird network. Required to enable [NetBird-Only Access](https://docs.netbird.io/manage/reverse-proxy/authentication#netbird-only-access-private-services) and the **Proxy Cluster** target type on services. Activated when at least one connected proxy in the cluster runs as an embedded NetBird peer (`netbird proxy`). |
+| Feature badge          | Meaning                                                                                                                                                                                                                                                                                                                                                              |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Custom Ports**       | The cluster can bind arbitrary TCP/UDP listen ports for L4 services.                                                                                                                                                                                                                                                                                                 |
+| **Subdomain Required** | Services on this cluster must use a subdomain — the bare cluster apex is not addressable.                                                                                                                                                                                                                                                                            |
+| **CrowdSec**           | The cluster has CrowdSec IP-reputation configured across all active proxies.                                                                                                                                                                                                                                                                                         |
+| **Private**            | The cluster can publish services that are only reachable from peers in your NetBird network. Required to enable [NetBird-Only Access](https://docs.netbird.io/manage/reverse-proxy/authentication#net-bird-only-access-private-services) and the **Proxy Cluster** target type on services. For the Docker deployment below, enable it with `NB_PROXY_PRIVATE=true`. |
 
 When creating a service you pick a base domain from any cluster you can reach: shared clusters are always available; account clusters appear only for the account that owns them. There is no functional difference at the data-plane — services on either cluster type behave identically once a request lands. The choice is operational: shared clusters are zero-effort, account clusters give you control over location, TLS, and the data path.
 
 > **Note**
 >
-> The rest of this page describes how to set up an **account cluster**. If you want to use a shared cluster, no setup is required — pick the platform-provided domain in [Reverse Proxy > Services > Add Service](https://docs.netbird.io/manage/reverse-proxy).
+> The rest of this page describes how to set up an **account cluster**. If you want to use a shared cluster, no setup is required — pick the platform-provided domain in [Networking > Reverse Proxy > Services > Add Service](https://docs.netbird.io/manage/reverse-proxy).
 
 ## How it works
 
@@ -77,7 +77,7 @@ Before you start, make sure you have:
 - A NetBird account with **Network Admin** (or higher) access on a management instance that supports BYOP — the **Services** permission is required to create proxy tokens and manage account clusters.
 - A **server with a public IP** that can accept inbound TCP traffic on **port 443** (clients connect here, and Let's Encrypt's default `tls-alpn-01` challenge validates here). Port **80** is only needed if you switch the ACME challenge to `http-01`. For HA, repeat for every replica behind the same domain.
 - **Docker** installed and running on that server.
-- A **domain you control** that you can point at the server. You will configure two `A` records: `proxy-domain` and `*.proxy-domain`.
+- A **domain you control** that you can point at the server. You will configure an `A` record for `proxy-domain` and a wildcard `CNAME` from `*.proxy-domain` to `proxy-domain`.
 
 > **Warning**
 >
@@ -89,32 +89,36 @@ NetBird's dashboard provides a three-step wizard that generates the proxy token,
 
 ### Step 1: Open Clusters and start the wizard
 
-Navigate to **Reverse Proxy** > **Clusters** in the NetBird dashboard. The table lists every cluster your account can reach — both the shared platform clusters and any account clusters you've already set up.
+Navigate to **Networking** > **Reverse Proxy** > **Clusters** in the NetBird dashboard. The table lists every cluster your account can reach — both the shared platform clusters and any account clusters you've already set up.
 
 Click **Setup Self-Hosted Cluster** to open the wizard.
 
-![Clusters page in the dashboard with the Setup Self-Hosted Cluster button](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/byop/byop-self-hosted-proxies-empty.png)
+![Clusters page in the dashboard with the Setup Self-Hosted Cluster button](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/reverse-proxy/byop/byop-self-hosted-proxies-empty.png)
 
 ### Step 2: Choose your domain
 
 In the **Domain** tab, enter the domain that this proxy cluster will be reachable on, e.g., `proxy.company.com`. This becomes the proxy's `NB_PROXY_DOMAIN` and the suffix of every public service URL hosted on it (`{subdomain}.proxy.company.com`).
 
-![Setup Cluster modal showing the Domain tab with the requirements callout](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/byop/byop-setup-modal-domain.png)
+![Setup Cluster modal showing the Domain tab with the requirements callout](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/reverse-proxy/byop/byop-setup-modal-domain.png)
 
 The wizard reminds you of the host requirements — public IP, Docker, ports 80 and 443 free. Click **Continue** to move to the DNS step.
 
 ### Step 3: Configure DNS records
 
-In the **DNS Records** tab, add the two `A` records shown in the table at your domain registrar:
+In the **DNS Records** tab, configure the following records with your DNS provider:
 
 | Type  | Name                  | Content                  |
 | ----- | --------------------- | ------------------------ |
 | A     | `proxy.company.com`   | Your machine's public IP |
 | CNAME | `*.proxy.company.com` | `proxy.company.com`      |
 
-The wildcard record is required so that every service domain (`{subdomain}.proxy.company.com`) resolves to your proxy. If you run an HA cluster, point both records at all replicas (round-robin) or at the IP of a load balancer / floating IP that fronts them.
+The wildcard CNAME sends every service hostname (`{subdomain}.proxy.company.com`) to the cluster hostname. For an HA cluster, give `proxy.company.com` an `A` record for each replica IP (round-robin), or point it to the IP of a load balancer or floating IP. Keep the wildcard CNAME pointing to `proxy.company.com`.
 
-![Setup Cluster modal showing the DNS Records tab with copyable A record entries](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/byop/byop-setup-modal-dns.png)
+> **Note**
+>
+> With the default `tls-alpn-01` challenge, configure the load balancer for TCP passthrough on port 443 so the original TLS handshake, including SNI and the `acme-tls/1` ALPN protocol, reaches the NetBird proxy. Terminating TLS at the load balancer prevents the proxy from answering that challenge. For other certificate modes, see [TLS configuration](#tls-configuration).
+
+![Setup Cluster modal showing the DNS Records tab](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/reverse-proxy/byop/byop-setup-modal-dns.png)
 
 > **Note**
 >
@@ -126,7 +130,7 @@ Click **Continue** to move to the install step.
 
 Switching to the **Run the Proxy** tab automatically generates a one-time, account-scoped proxy token and embeds it into a ready-to-run `docker run` command:
 
-![Setup Cluster modal showing the Run the Proxy tab with the generated docker run command](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/byop/byop-setup-modal-install.png)
+![Setup Cluster modal showing the Run the Proxy tab with the generated docker run command](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/reverse-proxy/byop/byop-setup-modal-install.png)
 
 ```shell
 docker run -d \
@@ -174,21 +178,25 @@ Click **Finish Setup** to close the wizard.
 
 Back on the **Clusters** page, the new account cluster appears once the proxy registers, with a count of connected proxies and an **Online** badge. A non-zero connected count means at least one replica is alive and exchanging mappings with management.
 
-![Clusters page showing a connected account cluster with one proxy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/byop/byop-self-hosted-proxies-connected.png)
+![Clusters page showing a connected account cluster with one proxy](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/reverse-proxy/byop/byop-self-hosted-proxies-connected.png)
 
-You can also check the proxy's own health probe — by default it binds to `localhost:8080` on the proxy host, so run this on the box itself:
+The health probe binds to `localhost:8080` inside the proxy container by default. To reach it from the Docker host, run a temporary curl container that [shares the proxy container's network stack](https://docs.docker.com/engine/network/#container-networks). Replace `<proxy-container>` with the proxy's name or ID from `docker ps`:
 
 ```shell
-curl -s http://localhost:8080/healthz
+docker run --rm --network "container:<proxy-container>" \
+  curlimages/curl:latest --fail --silent --show-error \
+  http://127.0.0.1:8080/healthz
 ```
 
-Healthy output reports `management_connected: true` and `initial_sync_complete: true`. To probe from another host, override the bind address with `NB_PROXY_HEALTH_ADDRESS=:8080` and publish the port from the container.
+Healthy output reports `management_connected: true` and `initial_sync_complete: true`. This command works without publishing the health port or installing curl in the proxy image.
+
+To use the host's curl instead, add `-e NB_PROXY_HEALTH_ADDRESS=:8080 -p 127.0.0.1:8080:8080` when creating the proxy container. Then run `curl --fail --silent --show-error http://127.0.0.1:8080/healthz` on the Docker host. This publishes the probe only on the host's loopback address.
 
 ## Use the proxy for services
 
 Once the cluster is connected, your BYOP domain shows up in the service creation flow as a regular **Cluster** option in the domain picker.
 
-1. Go to **Reverse Proxy** > **Services** > **Add Service**.
+1. Go to **Networking** > **Reverse Proxy** > **Services** > **Add Service**.
 2. Choose a subdomain and pick your BYOP domain (`proxy.company.com`) as the base domain.
 3. Configure targets, authentication, and access restrictions as you would for any other reverse proxy service. See [Reverse Proxy overview](https://docs.netbird.io/manage/reverse-proxy) for service mode, target, and authentication details.
 
@@ -245,11 +253,11 @@ An L4 service on a port below the floor still fails to bind: its status becomes 
 A BYOP cluster whose proxy runs embedded as a NetBird peer (`netbird proxy` mode — the default for the `netbirdio/reverse-proxy` image) reports the `Private` capability if started with the flag `--private` or environment variable `NB_PROXY_PRIVATE=true`. With that capability set, the cluster unlocks two new options anywhere it is selected:
 
 - **NetBird-Only Access** on the service's **Authentication** tab — turn the service into a *private service* that only peers in your NetBird network can reach. See [NetBird-Only Access](https://docs.netbird.io/manage/reverse-proxy/authentication#net-bird-only-access-private-services) for the full behaviour, identity-header semantics, and access-group rules.
-- **Proxy Cluster** in the target picker — point the service at a hostname or IP that the embedded proxy can resolve directly from its own host stack (without WireGuard), with **Direct Upstream** locked on. Useful when the upstream is co-located with the BYOP proxy and you do not need (or want) to route it through the mesh.
+- **Proxy Cluster** in the target picker — point the service at a hostname or IP that the embedded proxy can resolve directly from its own host stack (without WireGuard), with **Direct Upstream** locked on. Useful when the upstream is co-located with the BYOP proxy and you do not need (or want) to route it through the mesh. Saving this target requires every active proxy in the selected cluster to report the `Private` capability.
 
 With a **Proxy Cluster** target (or **Direct Upstream** enabled on a peer/resource target), the service is still reachable only over the NetBird tunnel and still gated by group membership, but the proxy reaches the upstream directly via its host network stack — no WireGuard peer is required between the proxy and the backend:
 
-![Diagram of a NetBird-Only service with Direct Upstream: the device tunnels to the proxy cluster, the management service checks group membership, and the proxy reaches the backend service directly over the host network stack with no WireGuard peer](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/byop/netbird-only-direct-upstream-diagram.png)
+![Diagram of a NetBird-Only service with Direct Upstream: the device tunnels to the proxy cluster, the management service checks group membership, and the proxy reaches the backend service directly over the host network stack with no WireGuard peer](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/reverse-proxy/byop/netbird-only-direct-upstream-diagram.png)
 
 NetBird Cloud's shared clusters do not currently advertise `Private`. Running your own BYOP cluster is the supported way to enable private services for an account on Cloud. For self-hosted, the same applies — the proxy must be running with the flag set.
 
@@ -259,9 +267,9 @@ When the selected base domain does *not* advertise the `Private` capability:
 - The **Proxy Cluster** option is hidden from the target picker.
 - **Direct Upstream** is locked off in service settings.
 
-To verify the capability is set, check the cluster row on the **Clusters** page — a **Private** badge appears in the Features column when at least one connected proxy is running in embedded mode.
+A **Private** badge in the cluster row's Features column means at least one active proxy reports private-mode support. It does not confirm that every replica supports it; see [High availability](#high-availability) below.
 
-![Clusters page row showing the Private feature badge in the Features column](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/reverse-proxy/byop/byop-clusters-private-feature.png)
+![Clusters page row showing the Private feature badge in the Features column](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/reverse-proxy/byop/byop-clusters-private-feature.png)
 
 ## High availability
 
@@ -271,13 +279,15 @@ Run multiple proxy replicas with the **same** `NB_PROXY_TOKEN` and **same** `NB_
 - Receives the full set of service mappings for the cluster.
 - Maintains its own WireGuard tunnels to backend peers.
 
-For DNS, point both `A` records at all replica IPs (round-robin) or at a load balancer / floating IP that fronts them. For TLS, see [Sharing certificates across replicas](#sharing-certificates-across-replicas).
+For an HA cluster using **Proxy Cluster** targets or **Direct Upstream**, set `NB_PROXY_PRIVATE=true` on every replica, including replicas added later. Management rejects creation or updates of services with those targets unless every active proxy reports the `Private` capability, even if the cluster already shows a **Private** badge.
+
+For DNS, point the cluster hostname's `A` records at the replica IPs (round-robin) or at a load balancer / floating IP. Keep the wildcard CNAME pointing to that hostname. With the default `tls-alpn-01` challenge, the load balancer must pass TLS through on port 443, including `acme-tls/1` traffic. For certificate coordination, see [Sharing certificates across replicas](#sharing-certificates-across-replicas).
 
 For broader operational guidance — token rotation, cert lock methods, monitoring — see [Running Multiple Proxy Instances](https://docs.netbird.io/selfhosted/maintenance/scaling/multiple-proxy-instances). The same operational patterns apply, with the caveat that BYOP cluster scope is your account, not the whole management instance.
 
 ## TLS configuration
 
-The Docker command produced by the wizard uses **ACME (Let's Encrypt) with the `tls-alpn-01` challenge** by default. That mode needs only port 443 open and works without an additional HTTP listener.
+The Docker command produced by the wizard uses **ACME (Let's Encrypt) with the `tls-alpn-01` challenge** by default. That mode issues certificates for individual service hostnames, needs only port 443 open, and works without an additional HTTP listener. The wildcard DNS record routes service names to the proxy; it does not cause the proxy to request a wildcard certificate.
 
 Other modes are supported by the same image. To switch challenge type, supply your own certificates, or use a wildcard certificate, set the corresponding environment variables. The variables documented in [TLS certificate configuration](https://docs.netbird.io/manage/reverse-proxy#tls-certificate-configuration) apply identically to BYOP — only the management endpoint and the account-scoped token make BYOP different from a management-wide self-hosted proxy.
 
@@ -296,7 +306,7 @@ When multiple replicas use ACME, share `NB_PROXY_CERTIFICATE_DIRECTORY` between 
 
 ## Set up a BYOP proxy from the API
 
-If you prefer the API over the wizard, the flow is two calls plus the docker run:
+If you prefer the API over the wizard, create a proxy token, configure DNS, start the proxy, and check the cluster registration:
 
 **1. Create an account-scoped proxy token.** Replace `<MANAGEMENT_URL>` with `https://api.netbird.io` for NetBird Cloud, or with the management URL of your self-hosted deployment. Save the `plain_token` from the response — it's shown only this once.
 
@@ -312,7 +322,7 @@ curl -X POST <MANAGEMENT_URL>/api/reverse-proxies/proxy-tokens \
 
 `expires_in` is in seconds; `0` means never expires. Pick a meaningful name — it appears in the token list and is helpful when revoking.
 
-**2. Configure the two `A` records** for your domain (see [Step 3](#step-3-configure-dns-records) above).
+**2. Configure the `A` and wildcard `CNAME` records** for your domain (see [Step 3](#step-3-configure-dns-records) above).
 
 **3. Run the proxy** with the token from step 1:
 
@@ -324,10 +334,13 @@ docker run -d \
  -e NB_PROXY_ACME_CERTIFICATES=true \
  -e NB_PROXY_DOMAIN=proxy.company.com \
  -e NB_PROXY_TOKEN=<plain_token_from_step_1> \
+ -e NB_PROXY_PRIVATE=true \
  -e NB_PROXY_ADDRESS=:443 \
  -p 80:80 -p 443:443 \
  netbirdio/reverse-proxy:latest
 ```
+
+`NB_PROXY_PRIVATE=true` enables NetBird-only services, matching the wizard's command. Without it, the Docker proxy defaults to private-service support being disabled.
 
 **4. Verify** with `GET /api/reverse-proxies/clusters` (BYOP clusters return `"type": "account"`; platform-managed clusters return `"type": "shared"`) or check the **Clusters** page in the dashboard.
 
@@ -358,14 +371,14 @@ Within roughly one heartbeat interval (60 seconds) of a revoke, every proxy regi
 
 ## Troubleshooting
 
-| Symptom                                                   | Likely cause                                                                                                                 | Fix                                                                                                                                                                                                                                           |
-| --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Proxy logs show `Unauthenticated` immediately after start | Wrong or missing `NB_PROXY_TOKEN`, or token revoked                                                                          | Generate a new token in the dashboard or API and restart with the new value                                                                                                                                                                   |
-| Proxy logs show `cluster address ... is already in use`   | Another account, or a management-wide self-hosted proxy on the same management, already owns this cluster domain             | Pick a domain that no other account or management-wide proxy on this management is using — cluster domains are reserved across the management instance                                                                                        |
-| Service stuck in `certificate_pending`                    | ACME challenge cannot complete: ports blocked, DNS not propagated, or geo-blocking on validation traffic                     | Verify both `A` records resolve correctly; ensure ports 80/443 are reachable from anywhere; switch to `http-01` if `tls-alpn-01` fails. See [TLS-ALPN-01 requirements](https://docs.netbird.io/manage/reverse-proxy#tls-alpn-01-requirements) |
-| Service stays in `tunnel_not_created`                     | Proxy can reach management but cannot reach the target peer over WireGuard                                                   | Confirm the target peer is online (`netbird status`) and policies allow connectivity from the proxy's embedded peer. The proxy creates one embedded peer per account on first service mapping                                                 |
-| Proxy disconnects roughly one minute after start          | Token was revoked or expired (the heartbeat checks token validity every minute and tears down the gRPC stream when it fails) | Generate a new token, restart the proxy                                                                                                                                                                                                       |
-| `Setup Self-Hosted Cluster` button greyed out             | Account user lacks the `services:create` permission                                                                          | Ask a Network Admin (or higher) to set up the cluster or grant the role                                                                                                                                                                       |
+| Symptom                                                   | Likely cause                                                                                                                 | Fix                                                                                                                                                                                                                                                                         |
+| --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Proxy logs show `Unauthenticated` immediately after start | Wrong or missing `NB_PROXY_TOKEN`, or token revoked                                                                          | Generate a new token in the dashboard or API and restart with the new value                                                                                                                                                                                                 |
+| Proxy logs show `cluster address ... is already in use`   | Another account, or a management-wide self-hosted proxy on the same management, already owns this cluster domain             | Pick a domain that no other account or management-wide proxy on this management is using — cluster domains are reserved across the management instance                                                                                                                      |
+| Service stuck in `certificate_pending`                    | ACME challenge cannot complete: ports blocked, DNS not propagated, or geo-blocking on validation traffic                     | Verify the cluster hostname's `A` record and wildcard `CNAME`. Allow validation traffic on port 443 with TLS passthrough for `tls-alpn-01`, or port 80 for `http-01`. See [TLS-ALPN-01 requirements](https://docs.netbird.io/manage/reverse-proxy#tls-alpn-01-requirements) |
+| Service stays in `tunnel_not_created`                     | Proxy can reach management but cannot reach the target peer over WireGuard                                                   | Confirm the target peer is online (`netbird status`) and policies allow connectivity from the proxy's embedded peer. The proxy creates one embedded peer per account on first service mapping                                                                               |
+| Proxy disconnects roughly one minute after start          | Token was revoked or expired (the heartbeat checks token validity every minute and tears down the gRPC stream when it fails) | Generate a new token, restart the proxy                                                                                                                                                                                                                                     |
+| `Setup Self-Hosted Cluster` button greyed out             | Account user lacks the `services:create` permission                                                                          | Ask a Network Admin (or higher) to set up the cluster or grant the role                                                                                                                                                                                                     |
 
 For deeper debugging, raise the log level to `debug` or `trace` (`NB_PROXY_LOG_LEVEL=debug`) and consult the proxy's `/healthz` endpoint.
 

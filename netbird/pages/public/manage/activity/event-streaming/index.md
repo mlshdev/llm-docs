@@ -1,8 +1,8 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/activity/event-streaming/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/activity/event-streaming/index.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/activity/event-streaming/index.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/activity/event-streaming/index.mdx)
 
 # Stream Network Activity to Third-Party SIEM Platforms
 
-![event-streaming-integration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/event-streaming/event-streaming-integration.png)
+![event-streaming-integration](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/activity/event-streaming/event-streaming-integration.png)
 
 Security Information and Event Management (SIEM) systems play a critical role in network security by monitoring,
 detecting, and responding to security threats in real-time. By aggregating and analyzing activity across the network,
@@ -16,7 +16,7 @@ to third-party SIEM systems, such as [Datadog](https://www.datadoghq.com/dg/secu
 > This feature is available in the cloud version of NetBird and in self-hosted deployments with an [enterprise license](https://docs.netbird.io/selfhosted/enterprise). The open-source self-hosted version does not include event streaming.
 
 This documentation provides step-by-step guides and best practices for integrating NetBird activity event streaming with
-supported third-party platforms. To get started, select one of the following integrations:
+supported third-party platforms. In the dashboard, open **Integrations → Event Streaming**. Select one of the following guides for setup instructions:
 
 - [Datadog](https://docs.netbird.io/manage/activity/event-streaming/datadog)
 - [Amazon S3](https://docs.netbird.io/manage/activity/event-streaming/amazon-s3)

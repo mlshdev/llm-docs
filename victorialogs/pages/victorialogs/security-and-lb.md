@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/security-and-lb.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/security-and-lb.md)
+> Pinned source for VictoriaLogs v1.55.0: [docs/victorialogs/security-and-lb.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/a7001ac416483b5ca96347edd33bfc502e31ce3f/docs/victorialogs/security-and-lb.md)
 
 ## Security on untrusted networks
 
@@ -356,7 +356,7 @@ users:
 
 Below is a diagram of this configuration:
 
-![security-and-lb-tenants.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/security-and-lb-tenants.webp)
+![security-and-lb-tenants.webp](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaLogs/a7001ac416483b5ca96347edd33bfc502e31ce3f/docs/victorialogs/security-and-lb-tenants.webp)
 
 See [how to override http request headers before proxying the requests to backends](https://docs.victoriametrics.com/victoriametrics/vmauth/#modifying-http-headers).
 

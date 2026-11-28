@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/single-sign-on/cidaas.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/single-sign-on/cidaas.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/team/single-sign-on/cidaas.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/team/single-sign-on/cidaas.mdx)
 
 # cidaas on NetBird Cloud
 
@@ -25,7 +25,7 @@ Configure the App Details section with the following settings:
 - **App Logo URL**: `https://netbird.io/_next/static/media/netbird-logo.46570303.svg`
 - **App Type**: `Regular`
 
-![cidaas App Details form with App Type set to Regular](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/cidaas-idp/app-details.png)
+![cidaas App Details form with App Type set to Regular](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/single-sign-on/cidaas-idp/app-details.png)
 
 Click **Next** to proceed to App Settings.
 
@@ -39,7 +39,7 @@ Configure the App Settings section with the following settings:
 - **Redirect URLs**: `https://login.netbird.io/login/callback`
 - **Allow Logout URLs**: `https://login.netbird.io/oauth/revoke`
 
-![cidaas App Settings with scopes, OAuth standard, redirect URLs, and logout URLs filled in](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/cidaas-idp/app-settings.png)
+![cidaas App Settings with scopes, OAuth standard, redirect URLs, and logout URLs filled in](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/single-sign-on/cidaas-idp/app-settings.png)
 
 Click **Next** to proceed to Company Settings.
 
@@ -60,7 +60,7 @@ Click **Submit** to create the application. You should see an **App created succ
 
 Ensure the application status is set to **Active**. If it is not active, select **Active** from the status dropdown.
 
-![cidaas application status dropdown set to Active](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/single-sign-on/cidaas-idp/app-status.png)
+![cidaas application status dropdown set to Active](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/single-sign-on/cidaas-idp/app-status.png)
 
 ## Step 6: Copy the Client Credentials
 

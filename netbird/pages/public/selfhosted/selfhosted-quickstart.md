@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/selfhosted-quickstart.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/selfhosted-quickstart.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/selfhosted-quickstart.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/selfhosted-quickstart.mdx)
 
 # Self-Hosting Quickstart Guide (5 min)
 
@@ -13,7 +13,7 @@ Prefer not to manage the infrastructure yourself? **[NetBird Cloud](https://docs
 ## Infrastructure requirements
 
 - A Linux VM with at least **1CPU** and **2GB** of memory.
-- The VM must be publicly accessible on **TCP ports 80 and 443**, and **UDP port 3478**.
+- The VM must be publicly accessible on **TCP port 443** and **UDP port 3478**. With the default built-in Traefik, **TCP port 80** does not need to be publicly reachable: Traefik obtains and renews its Let's Encrypt certificate over port 443 (the TLS-ALPN-01 challenge), so port 80 only redirects plain HTTP to HTTPS. Port 80 must still be free on the VM, because Traefik binds it. If you choose another reverse proxy during setup, check how it obtains certificates.
 - A **public domain** name that resolves to the VM's public IP address (e.g. `netbird.example.com`).
 
 ## Software requirements
@@ -85,16 +85,26 @@ If you skipped the proxy during initial setup, you can add it later by following
 
 When the proxy is enabled, the script also offers to add [CrowdSec](https://docs.netbird.io/selfhosted/maintenance/crowdsec) for automatic IP reputation blocking. A local CrowdSec LAPI container syncs community threat intelligence and the proxy checks every incoming connection against it. You can enable CrowdSec per service in enforce or observe mode through the dashboard.
 
+### Protect the dashboard with CrowdSec AppSec (Optional)
+
+After you enable CrowdSec, the script asks whether to inspect HTTP requests to the dashboard, `/api`, and `/oauth2`. A request that matches an AppSec rule is rejected with `403` before the dashboard or the API handles it. Services you expose through the proxy are not inspected. They keep the per-service IP reputation setting above. Relay and gRPC are not inspected and have no CrowdSec coverage.
+
+The default is no. There is no observe mode on this path. If CrowdSec is unreachable, the dashboard, `/api`, and `/oauth2` are blocked. Two different rule matches from the same public IP within about a minute can ban that IP for 4 hours. Remove the ban over SSH, as described in [Recovering from a dashboard lockout](https://docs.netbird.io/selfhosted/maintenance/crowdsec-dashboard#recovering-from-a-dashboard-lockout).
+
+The script asks when you chose built-in Traefik and enabled both the proxy and CrowdSec. Other reverse proxy options and the agent-network preset skip the question. Answering no leaves AppSec off. Add it later with [Protect the dashboard with CrowdSec AppSec](https://docs.netbird.io/selfhosted/maintenance/crowdsec-dashboard). Rerunning the quickstart on an existing install does not turn it on.
+
 ### Generated Files
 
 The script generates the following files:
 
-| File                 | Description                                                                |
-| -------------------- | -------------------------------------------------------------------------- |
-| `docker-compose.yml` | Docker Compose configuration with all services                             |
-| `config.yaml`        | Combined server configuration (management, signal, relay, STUN)            |
-| `dashboard.env`      | Environment variables for the dashboard container                          |
-| `proxy.env`          | Environment variables for the proxy container (only when proxy is enabled) |
+| File                            | Description                                                                                       |
+| ------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `docker-compose.yml`            | Docker Compose configuration with all services                                                    |
+| `config.yaml`                   | Combined server configuration (management, signal, relay, STUN)                                   |
+| `dashboard.env`                 | Environment variables for the dashboard container                                                 |
+| `proxy.env`                     | Environment variables for the proxy container (only when proxy is enabled)                        |
+| `.env`                          | Dashboard bouncer key, `CROWDSEC_DASHBOARD_BOUNCER_KEY`, mode `600` (only when AppSec is enabled) |
+| `crowdsec/acquis.d/appsec.yaml` | AppSec listener on port `7422` (only when AppSec is enabled)                                      |
 
 For options 2-4, additional configuration files are generated (e.g., `nginx-netbird.conf`, `caddyfile-netbird.txt`, or `npm-advanced-config.txt`).
 
@@ -104,7 +114,7 @@ See an example `config.yaml` file in the [NetBird GitHub repository](https://git
 
 The script deploys NetBird **without any users**. Once complete, you'll need to create your first user:
 
-![NetBird setup page](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/quickstart/setup.png)
+![NetBird setup page](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/quickstart/setup.png)
 
 1. Open your browser and navigate to `https://netbird.example.com`
 2. You'll be redirected to the setup page (`/setup`)
@@ -141,20 +151,21 @@ curl -fsSL https://github.com/netbirdio/netbird/releases/latest/download/getting
 >
 > The variables must be set for `bash`, not `curl`. Export them first, as above, or set them after the pipe: `curl -fsSL <url> | NETBIRD_DOMAIN=netbird.my-domain.com bash`. If you set them before `curl`, only `curl` sees them, and the script stops with `NETBIRD_DOMAIN is required for a non-interactive install.`
 
-| Variable                           | Default                                                        | Used with                 | What it sets                                                                                   |
-| ---------------------------------- | -------------------------------------------------------------- | ------------------------- | ---------------------------------------------------------------------------------------------- |
-| `NETBIRD_DOMAIN`                   | Required                                                       | Every option              | The domain of your NetBird server, for example `netbird.my-domain.com`                         |
-| `NETBIRD_LETSENCRYPT_EMAIL`        | Required                                                       | Option `0`                | The email address for Let's Encrypt certificate notifications                                  |
-| `NETBIRD_REVERSE_PROXY_TYPE`       | `0`                                                            | Every option              | The reverse proxy option, `0` to `5`, from [Reverse Proxy Selection](#reverse-proxy-selection) |
-| `NETBIRD_ENABLE_PROXY`             | `false`                                                        | Option `0`                | Whether to enable the [NetBird Proxy service](#enable-the-netbird-proxy-service)               |
-| `NETBIRD_ENABLE_CROWDSEC`          | `false`                                                        | Option `0`, proxy enabled | Whether to add [CrowdSec IP reputation](#crowdsec-ip-reputation-optional)                      |
-| `NETBIRD_TRAEFIK_EXTERNAL_NETWORK` | Empty                                                          | Option `1`                | The Docker network of your existing Traefik                                                    |
-| `NETBIRD_TRAEFIK_ENTRYPOINT`       | `websecure`                                                    | Option `1`                | The entrypoint of your existing Traefik                                                        |
-| `NETBIRD_TRAEFIK_CERTRESOLVER`     | Empty                                                          | Option `1`                | The certificate resolver of your existing Traefik                                              |
-| `NETBIRD_BIND_LOCALHOST_ONLY`      | `true`                                                         | Options `2` to `5`        | Whether NetBird's HTTP ports listen on `127.0.0.1` only                                        |
-| `NETBIRD_EXTERNAL_PROXY_NETWORK`   | Empty                                                          | Options `2` to `4`        | The Docker network your reverse proxy runs on                                                  |
-| `NETBIRD_TRUSTED_PEERS`            | The built-in Traefik's address for option `0`, empty otherwise | Every option              | The address your reverse proxy reaches the NetBird server from, for example `172.20.0.5/32`    |
-| `NETBIRD_NON_INTERACTIVE`          | Not set                                                        | Every option              | `true` never prompts, even when a terminal is available                                        |
+| Variable                           | Default                                                        | Used with                    | What it sets                                                                                                                                                                  |
+| ---------------------------------- | -------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NETBIRD_DOMAIN`                   | Required                                                       | Every option                 | The domain of your NetBird server, for example `netbird.my-domain.com`                                                                                                        |
+| `NETBIRD_LETSENCRYPT_EMAIL`        | Required                                                       | Option `0`                   | The email address for Let's Encrypt certificate notifications                                                                                                                 |
+| `NETBIRD_REVERSE_PROXY_TYPE`       | `0`                                                            | Every option                 | The reverse proxy option, `0` to `5`, from [Reverse Proxy Selection](#reverse-proxy-selection)                                                                                |
+| `NETBIRD_ENABLE_PROXY`             | `false`                                                        | Option `0`                   | Whether to enable the [NetBird Proxy service](#enable-the-netbird-proxy-service)                                                                                              |
+| `NETBIRD_ENABLE_CROWDSEC`          | `false`                                                        | Option `0`, proxy enabled    | Whether to add [CrowdSec IP reputation](#crowdsec-ip-reputation-optional)                                                                                                     |
+| `NETBIRD_ENABLE_CROWDSEC_APPSEC`   | `false`                                                        | Option `0`, CrowdSec enabled | Whether to protect the dashboard, `/api`, and `/oauth2` with [CrowdSec AppSec](#protect-the-dashboard-with-crowdsec-appsec-optional). Requires `NETBIRD_ENABLE_CROWDSEC=true` |
+| `NETBIRD_TRAEFIK_EXTERNAL_NETWORK` | Empty                                                          | Option `1`                   | The Docker network of your existing Traefik                                                                                                                                   |
+| `NETBIRD_TRAEFIK_ENTRYPOINT`       | `websecure`                                                    | Option `1`                   | The entrypoint of your existing Traefik                                                                                                                                       |
+| `NETBIRD_TRAEFIK_CERTRESOLVER`     | Empty                                                          | Option `1`                   | The certificate resolver of your existing Traefik                                                                                                                             |
+| `NETBIRD_BIND_LOCALHOST_ONLY`      | `true`                                                         | Options `2` to `5`           | Whether NetBird's HTTP ports listen on `127.0.0.1` only                                                                                                                       |
+| `NETBIRD_EXTERNAL_PROXY_NETWORK`   | Empty                                                          | Options `2` to `4`           | The Docker network your reverse proxy runs on                                                                                                                                 |
+| `NETBIRD_TRUSTED_PEERS`            | The built-in Traefik's address for option `0`, empty otherwise | Every option                 | The address your reverse proxy reaches the NetBird server from, for example `172.20.0.5/32`                                                                                   |
+| `NETBIRD_NON_INTERACTIVE`          | Not set                                                        | Every option                 | `true` never prompts, even when a terminal is available                                                                                                                       |
 
 The comment block at the top of [`getting-started.sh`](https://github.com/netbirdio/netbird/blob/main/infrastructure_files/getting-started.sh) is the authoritative list. It also has `NETBIRD_AGENT_NETWORK`, which installs the [Agent Network](https://docs.netbird.io/agent-network/how-it-works) preset instead of this setup. The variables need NetBird v0.77.1 or later, and `NETBIRD_TRUSTED_PEERS` needs v0.79.0 or later.
 
@@ -164,6 +175,7 @@ Before you automate the install, know that:
 - **Set `NETBIRD_TRUSTED_PEERS` if you use your own reverse proxy (options `1` to `5`).** Without it, the NetBird server trusts forwarded client IP headers from any source, not only from your proxy. The script only prints a warning, which is easy to miss in an unattended run.
 - **The script does not wait for your reverse proxy.** Interactively, options `2`, `4` and `5` pause until you confirm that your proxy is configured. Unattended, the script starts the containers straight away, and you configure the proxy afterwards.
 - **A rerun never overwrites an installation.** If the directory already has a generated `config.yaml`, the script stops and lists the files to remove. Run it in a fresh directory.
+- **`NETBIRD_ENABLE_CROWDSEC_APPSEC=true` requires CrowdSec, built-in Traefik, and the proxy.** Any other combination stops the script. A copy of `getting-started.sh` from before this option ignores the variable without an error, so confirm that `crowdsec/acquis.d/appsec.yaml` exists after the run. If it does not, follow the [dashboard guide](https://docs.netbird.io/selfhosted/maintenance/crowdsec-dashboard).
 
 Like the interactive install, an unattended install creates no users. Create the first user in the browser, as described in [Initial setup](#initial-setup-onboarding), or from your automation with the [setup API](https://docs.netbird.io/selfhosted/automated-setup).
 
@@ -214,7 +226,7 @@ For more troubleshooting help, see the [Troubleshooting guide](https://docs.netb
 
 ## Get In Touch
 
-Feel free to ping us on Slack if you have any questions.
+Feel free to ping us on Slack or Discord if you have any questions.
 
 - NetBird managed version: <https://app.netbird.io>
 - Make sure to [star us on GitHub](https://github.com/netbirdio/netbird)

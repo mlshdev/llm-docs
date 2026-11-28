@@ -8,11 +8,11 @@
       "sourceCommit": "644b1f19cf031ec079cca10fad0c86e5ab7181b7"
     },
     "netbird": {
-      "tag": "v0.81.4",
-      "releaseId": 422688382,
-      "releasePublishedAt": "2026-10-24T11:24:02Z",
-      "sourceCommit": "7e791d3e2972ddb763bb0e5c3bff4f9e14f70033",
-      "docsCommit": "238224712cf7639036ed39fa8873d777b8822273"
+      "tag": "v0.84.0",
+      "releaseId": 460699551,
+      "releasePublishedAt": "2026-11-27T14:26:23Z",
+      "sourceCommit": "22eac80ddcb056b2c4738309240bda2711bafd98",
+      "docsCommit": "687df76a2ecb2c825e4726f53f78fb54a131f77c"
     },
     "podman": {
       "tag": "v6.2.1",
@@ -55,10 +55,10 @@
       "sourceCommit": "1cc50e8a514bb5bd8d4486a7c26a1ca5d539cafc"
     },
     "victorialogs": {
-      "tag": "v1.54.0",
-      "releaseId": 444136749,
-      "releasePublishedAt": "2026-11-13T11:28:59Z",
-      "sourceCommit": "6433dae586cc15921b4b9c50a805a49553c9d761"
+      "tag": "v1.55.0",
+      "releaseId": 460136141,
+      "releasePublishedAt": "2026-11-27T03:45:06Z",
+      "sourceCommit": "a7001ac416483b5ca96347edd33bfc502e31ce3f"
     },
     "victoriametrics-datasource": {
       "tag": "v1.0.3",
@@ -67,10 +67,10 @@
       "sourceCommit": "58768647ecca729a9604f2f88318e81f5864aab5"
     },
     "victorialogs-datasource": {
-      "tag": "v0.34.0",
-      "releaseId": 436423279,
-      "releasePublishedAt": "2026-11-06T11:30:26Z",
-      "sourceCommit": "a5450dee43595fd480c52dd362ced1d7430ab36b"
+      "tag": "v0.35.0",
+      "releaseId": 460539819,
+      "releasePublishedAt": "2026-11-27T11:52:37Z",
+      "sourceCommit": "bc4e680865e29fdde604cecf56ddd7b31d237150"
     },
     "vmestimator": {
       "tag": "v0.1.18",
@@ -87,10 +87,10 @@
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "35ef294f5d9d6c5b9a13abb59a4eedb1d0c875a3",
-      "sourceCommittedAt": "2026-11-25T12:57:02Z",
-      "observedCommit": "420f158f648571c859a31582bedb462f2412aa35",
-      "documentationDigest": "9b5178e80d94374df6e9b0f6b303ebea677f2203a4c26eeea291270192f80c80"
+      "sourceCommit": "7f32f9dccc74d6afedcf32fd5595b05b9c9eee69",
+      "sourceCommittedAt": "2026-11-19T12:16:14Z",
+      "observedCommit": "7f32f9dccc74d6afedcf32fd5595b05b9c9eee69",
+      "documentationDigest": "11e543e4fe204f39ea13fd7609c7e43ccc102261cb381fecad18250469e5a577"
     },
     "yt-dlp": {
       "tag": "2026.11.23",

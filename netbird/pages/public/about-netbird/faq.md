@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/about-netbird/faq.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/about-netbird/faq.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/about-netbird/faq.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/about-netbird/faq.mdx)
 
 # FAQ
 
@@ -9,6 +9,10 @@ The NetBird client doesn't require any incoming port to be open. For the full li
 ## How does NetBird interact with host-based firewalls?
 
 NetBird automatically adds rules to allow traffic on the `wt0` interface on Windows and Linux. For platform behavior, common conflicts (UFW, firewalld, Windows Firewall, third-party security software), and remediation steps, see [Ports & Firewalls](https://docs.netbird.io/about-netbird/ports-and-firewalls#host-based-firewalls).
+
+## Why does my antivirus flag NetBird?
+
+A VPN client has to make deep changes to a device: it runs as a privileged service, changes routes and DNS, and can update itself. Antivirus and EDR products judge these behaviors with heuristic models and sometimes misjudge them as malicious, often right after a new release. To check whether an alert is genuine and report a false positive to your vendor, see [Antivirus and EDR alerts](https://docs.netbird.io/help/troubleshooting-client/antivirus-alerts).
 
 ## Why and what are the anonymous usage metrics?
 

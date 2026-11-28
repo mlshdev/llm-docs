@@ -1,11 +1,11 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/usage-and-logs/log-collection.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/usage-and-logs/log-collection.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/agent-network/usage-and-logs/log-collection.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/agent-network/usage-and-logs/log-collection.mdx)
 
 # Log Collection & Retention
 
 Found under **Agent Network → Configuration → Log Collection**, these
 account-level controls govern how much request detail is stored.
 
-![agent network log collection and retention configuration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/usage-and-logs/agent-network-log-collection.png)
+![agent network log collection and retention configuration](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/usage-and-logs/agent-network-log-collection.png)
 
 ## Enable Log Collection
 

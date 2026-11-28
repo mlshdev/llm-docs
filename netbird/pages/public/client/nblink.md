@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/client/nblink.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/client/nblink.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/client/nblink.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/client/nblink.mdx)
 
 # nblink
 
@@ -6,11 +6,11 @@
 unprivileged process. It runs the client in userspace mode, so there is no TUN
 device to create and no root to grant.
 
-That makes it useful where the regular agent cannot run:
+That makes it useful where the regular client cannot run:
 
 - Managed laptops where you cannot install software that needs administrator rights.
 - Rootless containers, including OpenShift and Podman.
-- Short-lived environments such as CI jobs, where installing an agent is not worth it.
+- Short-lived environments such as CI jobs, where installing the client is not worth it.
 
 Names on the upstream side of a forward are resolved inside the tunnel, so
 `/etc/resolv.conf` is never modified.

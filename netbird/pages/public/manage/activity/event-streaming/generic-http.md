@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/activity/event-streaming/generic-http.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/activity/event-streaming/generic-http.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/activity/event-streaming/generic-http.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/activity/event-streaming/generic-http.mdx)
 
 # Stream Network Activity to a Generic HTTP Endpoint
 
@@ -16,15 +16,15 @@ Before you start, ensure you have an HTTP/S endpoint that is publicly accessible
 
 ## Create an Integration in NetBird
 
-1. Navigate to the **Integrations** tab in the NetBird dashboard and select **Event Streaming**.
+1. Open **Integrations** in the NetBird dashboard and select the **Event Streaming** tab.
 2. Find the **Generic HTTP** option and click **Connect**.
-3. A configuration panel will open with several tabs: **General**, **Headers**, **Body Template**, and **Danger Zone**.
+3. A configuration panel will open with three tabs: **General**, **Headers**, and **Body Template**. A fourth tab, **Danger Zone**, appears when you open an existing integration.
 
 ### General Configuration
 
 This tab is for the essential endpoint details.
 
-![Generic HTTP General Configuration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/event-streaming/generic-http/general-config.png)
+![Generic HTTP General Configuration](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/activity/event-streaming/generic-http/general-config.png)
 
 - **Endpoint URL**: Enter the full HTTPS or HTTP URL where NetBird should send the events. This field is mandatory.
 - **Authentication**: Select the authentication method required by your endpoint.
@@ -41,15 +41,15 @@ This tab is for the essential endpoint details.
 
 You can add custom HTTP headers to every outgoing request in the **Headers** tab. This is useful for passing static tokens, setting a custom `Content-Type`, or other API requirements. By default, the `Content-Type` is `application/json`.
 
-![Generic HTTP Headers Configuration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/event-streaming/generic-http/headers-config.png)
+![Generic HTTP Headers Configuration](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/activity/event-streaming/generic-http/headers-config.png)
 
 ### Custom Body Template (Optional)
 
 The **Body Template** tab gives you powerful control over the structure of the JSON payload sent to your endpoint.
 
-![Generic HTTP Body Template Configuration](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/event-streaming/generic-http/body-template-config.png)
+![Generic HTTP Body Template Configuration](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/activity/event-streaming/generic-http/body-template-config.png)
 
-If this option is disabled, NetBird sends a default JSON object for each event. When enabled, you can define your own payload structure using Go's `text/template` templating engine.
+If this option is disabled, NetBird sends a default JSON object for each event. When enabled, you can define your own payload structure using Go's `html/template` templating engine. That engine HTML-escapes the values it inserts (for example, `+` becomes `&#43;`), so check the output if your receiver needs exact strings.
 
 This is especially useful for integrating with services that expect a specific format, like Grafana Loki.
 
@@ -69,15 +69,15 @@ You can use the following variables from the `StreamEvent` object in your templa
 
 ### Danger Zone
 
-This tab allows you to delete the integration. This action is irreversible and will immediately stop events from being sent to your endpoint.
+This tab appears when you open an existing integration. It allows you to delete the integration. This action is irreversible and will immediately stop events from being sent to your endpoint.
 
-![Generic HTTP Danger Zone](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/activity/event-streaming/generic-http/danger-zone.png)
+![Generic HTTP Danger Zone](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/activity/event-streaming/generic-http/danger-zone.png)
 
-After configuring all settings, click **Save Changes**.
+For a new integration, click **Continue** to move from **General** to **Headers** to **Body Template**, then click **Connect**. When you edit an existing integration, click **Save Changes** instead.
 
 ## Verify the Integration
 
-Once you save the integration, NetBird sends a test event to your endpoint to confirm that the connection and authentication are successful.
+When you connect or save the integration, NetBird sends a test event to your endpoint to confirm that the connection and authentication are successful.
 
 Check the logs of your receiving service for a new POST request. You should find a JSON payload similar to this (if custom template wasn't set up):
 
@@ -87,11 +87,11 @@ Check the logs of your receiving service for a new POST request. You should find
     "Timestamp": "2025-06-01T16:00:00Z",
     "Message": "integration test event for generic http endpoint",
     "InitiatorID": "netbird-test-system",
-    "TargetID": "target-id",
-    "Meta": {
+    "target_id": "target-id",
+    "meta": {
         "purpose": "configuration-test",
         "source": "netbird-test"
     },
-    "Reference": "netbird:test:generichttp"
+    "reference": "netbird:test:generichttp"
 }
 ```

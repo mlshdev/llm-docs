@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/add-machines-to-your-network.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/add-machines-to-your-network.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/peers/add-machines-to-your-network.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/peers/add-machines-to-your-network.mdx)
 
 # Add peers to your NetBird network
 
@@ -19,18 +19,13 @@ For details on adding machines to your network, part of our "Getting started wit
 
 To add a new peer to your network follow these steps:
 
-1. Sign-in to your NetBird account at <https://app.netbird.io/> and go to `Peers`.
-2. Hit `Add Peer` button
+1. Sign in to your NetBird account at <https://app.netbird.io/> and open **Peers** at the top of the sidebar.
+2. Click `Add Peer`.
+3. Follow the installation instructions for your operating system.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/add-machines-to-your-network/add-new-peer-empty.png)
+![Install NetBird dialog with operating system choices and installation instructions](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/add-machines-to-your-network/add-new-peer-popup.png)
 
-3. Follow the instructions
-
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/add-machines-to-your-network/add-new-peer-popup.png)
-
-4. Refresh the Peers view, and it will display new machines
-
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/add-machines-to-your-network/peer-list.png)
+4. Refresh the Peers view and verify that the new machine appears.
 
 ## What's next?
 
@@ -45,5 +40,5 @@ Here are a few links that might be handy as you venture further into NetBird:
 
 - Make sure to [star us on GitHub](https://github.com/netbirdio/netbird)
 - Follow us [on X](https://x.com/netbird)
-- Join our Slack Channel
+- Join our Slack Channel or Discord server
 - NetBird [latest release](https://github.com/netbirdio/netbird/releases) on GitHub

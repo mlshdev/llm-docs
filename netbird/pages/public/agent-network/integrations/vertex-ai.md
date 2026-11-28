@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/integrations/vertex-ai.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/integrations/vertex-ai.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/agent-network/integrations/vertex-ai.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/agent-network/integrations/vertex-ai.mdx)
 
 # Google Vertex AI
 
@@ -86,7 +86,7 @@ cat netbird-vertex-key.json | base64 -w 0
 
 ## Connect the Provider
 
-1. Go to **Agent Network → Providers** and click **Connect Provider**.
+1. Go to **Agent Network → Agents → Providers** and click **Connect Provider**.
 2. Select **Google Vertex AI**. NetBird pre-fills the upstream URL
    (`https://aiplatform.googleapis.com`) and the correct auth handling for Vertex.
 3. Provide the **service account key** you generated (`netbird-vertex-key.json`). NetBird stores it encrypted server-side and never returns it to callers.
@@ -103,7 +103,7 @@ See [Providers](https://docs.netbird.io/agent-network/providers) for details.
 By default nothing is allowed: a policy must connect a source group to the Vertex AI
 provider before anyone can route through it.
 
-1. Go to **Agent Network → Policies** and add a policy.
+1. Go to **Agent Network → Agents → Agent Policies** and add a policy.
 2. Set the **Source** to the users or agents who should be able to reach Vertex AI (for
    example your `Engineering` group from your IdP).
 3. Set the **Provider** to the Google Vertex AI provider you just connected.

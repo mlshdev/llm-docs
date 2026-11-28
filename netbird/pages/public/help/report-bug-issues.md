@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/help/report-bug-issues.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/help/report-bug-issues.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/help/report-bug-issues.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/help/report-bug-issues.mdx)
 
 # Report bugs and issues
 
@@ -7,4 +7,4 @@ NetBird offers two ways to get help, depending on what you are running. Pick the
 ### Where to report
 
 - **Id:** where-to-report
-- **Items:** \[Community Support]\(/help/community-support) - Free, for everyone. The NetBird client, open source self-hosted deployments, and general questions, on Slack or GitHub Discussions.; \[NetBird Support]\(/help/netbird-support) - Mainly for paying NetBird Cloud customers and commercial-license self-hosted deployments: the dashboard, control plane, billing, and subscriptions.
+- **Items:** \[Community Support]\(/help/community-support) - Free, for everyone. The NetBird client, open source self-hosted deployments, and general questions, on Slack, Discord, or GitHub Discussions.; \[NetBird Support]\(/help/netbird-support) - Mainly for paying NetBird Cloud customers and commercial-license self-hosted deployments: the dashboard, control plane, billing, and subscriptions.

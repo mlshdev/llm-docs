@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/policies/index.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/policies/index.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/agent-network/policies/index.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/agent-network/policies/index.mdx)
 
 # Policies
 
@@ -6,7 +6,7 @@ Policies connect users and agents (source groups) to AI providers, controlling
 which identities can reach which providers and models, with optional limits and
 guardrails.
 
-![agent network llm policy](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/policies/agent-network-create-policy.png)
+![agent network llm policy](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/policies/agent-network-create-policy.png)
 
 > **Note**
 >
@@ -26,7 +26,7 @@ provider and no applicable limit is exhausted.
 
 ## Create a Policy
 
-1. Go to **Agent Network → Policies** and add a policy.
+1. Go to **Agent Network → Agents → Agent Policies** and add a policy.
 2. Choose the source groups and destination providers.
 3. Optionally attach [limits](https://docs.netbird.io/agent-network/policies/limits) and
    [guardrails](https://docs.netbird.io/agent-network/policies/guardrails).
@@ -48,7 +48,7 @@ curl -vk https://sailcloth.netbird.ai/v1/chat/completions \
   }' | jq
 ```
 
-![agent network log](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/policies/agent-network-access-log.png)
+![agent network log](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/policies/agent-network-access-log.png)
 
 ## More
 

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/help/troubleshooting-account-access.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/help/troubleshooting-account-access.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/help/troubleshooting-account-access.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/help/troubleshooting-account-access.mdx)
 
 # Pending approval and account invitations
 
@@ -50,11 +50,11 @@ The two users are not linked, and approving the second one does not merge them. 
 
 1. **Click Log Out.**
 2. **Sign in with the method you used to create the account.** If you don't remember which one, try each option on the sign-in page with the same email address. The right one opens your account as its Owner, with your peers and settings.
-3. **Reject the extra user.** In **Team → Users**, the second user shows your email address and is waiting for approval. Click **Reject** to remove it. See [Approve or reject user](https://docs.netbird.io/manage/team/approve-users#approve-or-reject-user).
+3. **Reject the extra user.** In **Users**, the second user shows your email address and is waiting for approval. Click **Reject** to remove it. See [Approve or reject user](https://docs.netbird.io/manage/team/approve-users#approve-or-reject-user).
 
 From then on, sign in with your original method only. If you use the other method again, NetBird creates the second user again and you are back on this screen.
 
-If your account does not [require user approval](https://docs.netbird.io/manage/team/approve-users#require-user-approval), you don't see this screen. The second sign-in joins your account straight away with the User role, so you are in your own account but can't manage it. Log out and sign in with your original method as in steps 1 and 2. The extra user is not pending, so you can't reject it: in **Team → Users**, open the actions menu on its row and click **Delete** instead.
+If your account does not [require user approval](https://docs.netbird.io/manage/team/approve-users#require-user-approval), you don't see this screen. The second sign-in joins your account straight away with the User role, so you are in your own account but can't manage it. Log out and sign in with your original method as in steps 1 and 2. The extra user is not pending, so you can't reject it: in **Users**, open the actions menu on its row and click **Delete** instead.
 
 If you signed up with a public email address, such as a Gmail account, domain matching never applies. The second sign-in lands in a new, empty account of its own instead. Sign out and sign in with your original method to get back to your account. If you don't need the empty account, sign in to it once more and [delete it](https://docs.netbird.io/manage/settings/delete-account).
 

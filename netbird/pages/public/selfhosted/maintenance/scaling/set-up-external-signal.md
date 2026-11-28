@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/maintenance/scaling/set-up-external-signal.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/maintenance/scaling/set-up-external-signal.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/maintenance/scaling/set-up-external-signal.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/maintenance/scaling/set-up-external-signal.mdx)
 
 # Set Up External Signal Server
 
@@ -45,6 +45,10 @@ NB_LOG_LEVEL=info
 NB_LETSENCRYPT_DOMAIN=signal.example.com
 ```
 
+> **Note**
+>
+> If [peer authentication](https://docs.netbird.io/selfhosted/maintenance/peer-authentication) is enabled on your main server, add `NB_PEER_AUTH_PUBLIC_KEYS` with Management's public key to this file before the signal server serves peers. Without it, the signal server ignores the credentials clients present and treats every client as unauthenticated.
+
 Create `docker-compose.yml`:
 
 ```yaml
@@ -69,6 +73,30 @@ services:
 volumes:
   signal_data:
 ```
+
+### Let's Encrypt challenge listener
+
+When `NB_PORT` is not `443`, the signal server opens a separate listener for the Let's Encrypt challenges. Set its address with `--letsencrypt-listen-address` or `NB_LETSENCRYPT_LISTEN_ADDRESS`. The default is `:443`.
+
+A process that does not run as root (for example, the UBI images) cannot bind port 443. In this case, choose one of these options:
+
+- Set the listener to a port that the process can bind, and forward public port 443 to it:
+
+  ```bash
+  NB_LETSENCRYPT_LISTEN_ADDRESS=:8443
+  ```
+
+- Forward public port 443 to `NB_PORT`, and disable the separate listener with an empty value. The main TLS listener then answers the TLS-ALPN-01 challenges:
+
+  ```bash
+  NB_LETSENCRYPT_LISTEN_ADDRESS=
+  ```
+
+If the challenge listener cannot bind its address, the signal server logs an error and continues to run.
+
+> **Note**
+>
+> The Management server has the same `--letsencrypt-listen-address` flag, with the same default. It does not read an environment variable for it. If its challenge listener cannot bind, the Management server stops with an error. The Relay and the combined server do not use this flag.
 
 ## Alternative: TLS with Existing Certificates
 

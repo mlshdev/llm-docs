@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/identity-providers/disable-local-authentication.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/identity-providers/disable-local-authentication.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/identity-providers/disable-local-authentication.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/identity-providers/disable-local-authentication.mdx)
 
 # Disable Local Authentication
 
@@ -23,13 +23,13 @@ Before disabling local authentication:
 
 1. Configure an external IdP connector following the [Authentication Guide](https://docs.netbird.io/selfhosted/identity-providers).
 2. Log out and log in with your new admin account via the external IdP. NetBird will notify you that the user requires approval.
-3. Log back in as your original NetBird-local admin and navigate to **Team > Users**. You should see the new IdP user pending approval:
+3. Log back in as your original NetBird-local admin and navigate to **Users**. You should see the new IdP user pending approval:
 
-![Approve User](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/approve_user.png)
+![Approve User](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/approve_user.png)
 
 4. Approve the request, click on the user, select **Owner** as the role, confirm the ownership transfer, and save.
 
-![Change Owner](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/selfhosted/identity-providers/change-owner.png)
+![Change Owner](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/selfhosted/identity-providers/change-owner.png)
 
 5. Verify you can log in via the external IdP with full owner access.
 

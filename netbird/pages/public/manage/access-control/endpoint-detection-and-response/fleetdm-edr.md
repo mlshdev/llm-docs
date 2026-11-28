@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/access-control/endpoint-detection-and-response/fleetdm-edr.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/access-control/endpoint-detection-and-response/fleetdm-edr.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/access-control/endpoint-detection-and-response/fleetdm-edr.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/access-control/endpoint-detection-and-response/fleetdm-edr.mdx)
 
 # Restrict Network Access with FleetDM
 
@@ -83,7 +83,9 @@ Before you start creating and configuring a FleetDM integration, ensure that you
 
 > **Note**
 >
-> NetBird matches FleetDM hosts to peers using the **hardware serial number** of the device. You must ensure that each of your devices has a unique serial number.
+> NetBird matches FleetDM hosts to peers using the **hardware UUID** of the device (the `uuid` that osquery reports in `system_info`), and uses the **hardware serial number** for peers that report no UUID. A peer that reports a UUID is not matched by serial, so it needs a FleetDM host with the same UUID.
+> NetBird clients from v0.84.0 report the UUID on Linux (when the client runs as root), Windows, and macOS. Older clients and devices with a placeholder UUID from the firmware report only the serial number. Android clients report the serial number, or the `ANDROID_ID` when the serial is not readable. iOS clients report neither, so they never match a FleetDM host.
+> Each device needs a unique hardware UUID, and a unique serial number when it is matched by serial.
 
 ## Finding FleetDM Policy IDs
 

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/ipa/resources/edr-intune-integrations.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/ipa/resources/edr-intune-integrations.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/ipa/resources/edr-intune-integrations.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/ipa/resources/edr-intune-integrations.mdx)
 
 ## Create EDR Intune Integration   (POST /api/integrations/edr/intune)
 
@@ -25,6 +25,18 @@ The Groups this integrations applies to
 **last\_synced\_interval (type: integer; required; min: 24)**
 
 The devices last sync requirement interval in hours. Minimum value is 24 hours.
+
+**sync\_interval (type: integer; optional; min: 1; max: 1440)**
+
+How often devices are synced from the integration, in minutes. Minimum value is 1 minute, maximum is 1440 minutes.
+
+**stale\_grace\_minutes (type: integer; optional; min: 0; max: 240)**
+
+Minutes a previously approved device keeps access after a stale check-in. 0 disables it, maximum is 240.
+
+**stale\_grace\_new\_peers (type: boolean; optional)**
+
+Whether newly added peers get the grace period while the EDR has not reported them compliant yet. When false, they are denied until it does.
 
 **enabled (type: boolean; optional)**
 
@@ -62,6 +74,24 @@ curl -X POST https://api.netbird.io/api/integrations/edr/intune \
     "description": "The devices last sync requirement interval in hours. Minimum value is 24 hours.",
     "minimum": 24
   },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes. Minimum value is 1 minute, maximum is 1440 minutes.",
+    "minimum": 1,
+    "maximum": 1440
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 disables it, maximum is 240.",
+    "minimum": 0,
+    "maximum": 240,
+    "default": 0
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet. When false, they are denied until it does.",
+    "default": false
+  },
   "enabled": {
     "type": "boolean",
     "description": "Indicates whether the integration is enabled",
@@ -94,6 +124,24 @@ let data = JSON.stringify({
     "type": "integer",
     "description": "The devices last sync requirement interval in hours. Minimum value is 24 hours.",
     "minimum": 24
+  },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes. Minimum value is 1 minute, maximum is 1440 minutes.",
+    "minimum": 1,
+    "maximum": 1440
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 disables it, maximum is 240.",
+    "minimum": 0,
+    "maximum": 240,
+    "default": 0
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet. When false, they are denied until it does.",
+    "default": false
   },
   "enabled": {
     "type": "boolean",
@@ -150,6 +198,24 @@ payload = json.dumps({
     "description": "The devices last sync requirement interval in hours. Minimum value is 24 hours.",
     "minimum": 24
   },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes. Minimum value is 1 minute, maximum is 1440 minutes.",
+    "minimum": 1,
+    "maximum": 1440
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 disables it, maximum is 240.",
+    "minimum": 0,
+    "maximum": 240,
+    "default": 0
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet. When false, they are denied until it does.",
+    "default": false
+  },
   "enabled": {
     "type": "boolean",
     "description": "Indicates whether the integration is enabled",
@@ -204,6 +270,24 @@ func main() {
     "type": "integer",
     "description": "The devices last sync requirement interval in hours. Minimum value is 24 hours.",
     "minimum": 24
+  },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes. Minimum value is 1 minute, maximum is 1440 minutes.",
+    "minimum": 1,
+    "maximum": 1440
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 disables it, maximum is 240.",
+    "minimum": 0,
+    "maximum": 240,
+    "default": 0
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet. When false, they are denied until it does.",
+    "default": false
   },
   "enabled": {
     "type": "boolean",
@@ -279,6 +363,24 @@ request.body = JSON.dump({
     "description": "The devices last sync requirement interval in hours. Minimum value is 24 hours.",
     "minimum": 24
   },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes. Minimum value is 1 minute, maximum is 1440 minutes.",
+    "minimum": 1,
+    "maximum": 1440
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 disables it, maximum is 240.",
+    "minimum": 0,
+    "maximum": 240,
+    "default": 0
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet. When false, they are denied until it does.",
+    "default": false
+  },
   "enabled": {
     "type": "boolean",
     "description": "Indicates whether the integration is enabled",
@@ -315,6 +417,24 @@ RequestBody body = RequestBody.create(mediaType, '{
     "type": "integer",
     "description": "The devices last sync requirement interval in hours. Minimum value is 24 hours.",
     "minimum": 24
+  },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes. Minimum value is 1 minute, maximum is 1440 minutes.",
+    "minimum": 1,
+    "maximum": 1440
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 disables it, maximum is 240.",
+    "minimum": 0,
+    "maximum": 240,
+    "default": 0
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet. When false, they are denied until it does.",
+    "default": false
   },
   "enabled": {
     "type": "boolean",
@@ -368,6 +488,24 @@ curl_setopt_array($curl, array(
     "type": "integer",
     "description": "The devices last sync requirement interval in hours. Minimum value is 24 hours.",
     "minimum": 24
+  },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes. Minimum value is 1 minute, maximum is 1440 minutes.",
+    "minimum": 1,
+    "maximum": 1440
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 disables it, maximum is 240.",
+    "minimum": 0,
+    "maximum": 240,
+    "default": 0
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet. When false, they are denied until it does.",
+    "default": false
   },
   "enabled": {
     "type": "boolean",
@@ -430,6 +568,18 @@ echo $response;
     "type": "integer",
     "description": "The devices last sync requirement interval in hours."
   },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes."
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 means disabled."
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet."
+  },
   "enabled": {
     "type": "boolean",
     "description": "Indicates whether the integration is enabled"
@@ -471,6 +621,9 @@ echo $response;
     }
   ],
   "last_synced_interval": "integer",
+  "sync_interval": "integer",
+  "stale_grace_minutes": "integer",
+  "stale_grace_new_peers": "boolean",
   "enabled": "boolean"
 }
 ```
@@ -672,6 +825,18 @@ echo $response;
     "type": "integer",
     "description": "The devices last sync requirement interval in hours."
   },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes."
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 means disabled."
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet."
+  },
   "enabled": {
     "type": "boolean",
     "description": "Indicates whether the integration is enabled"
@@ -713,6 +878,9 @@ echo $response;
     }
   ],
   "last_synced_interval": "integer",
+  "sync_interval": "integer",
+  "stale_grace_minutes": "integer",
+  "stale_grace_new_peers": "boolean",
   "enabled": "boolean"
 }
 ```
@@ -744,6 +912,18 @@ The Groups this integrations applies to
 **last\_synced\_interval (type: integer; required; min: 24)**
 
 The devices last sync requirement interval in hours. Minimum value is 24 hours.
+
+**sync\_interval (type: integer; optional; min: 1; max: 1440)**
+
+How often devices are synced from the integration, in minutes. Minimum value is 1 minute, maximum is 1440 minutes.
+
+**stale\_grace\_minutes (type: integer; optional; min: 0; max: 240)**
+
+Minutes a previously approved device keeps access after a stale check-in. 0 disables it, maximum is 240.
+
+**stale\_grace\_new\_peers (type: boolean; optional)**
+
+Whether newly added peers get the grace period while the EDR has not reported them compliant yet. When false, they are denied until it does.
 
 **enabled (type: boolean; optional)**
 
@@ -781,6 +961,24 @@ curl -X PUT https://api.netbird.io/api/integrations/edr/intune \
     "description": "The devices last sync requirement interval in hours. Minimum value is 24 hours.",
     "minimum": 24
   },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes. Minimum value is 1 minute, maximum is 1440 minutes.",
+    "minimum": 1,
+    "maximum": 1440
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 disables it, maximum is 240.",
+    "minimum": 0,
+    "maximum": 240,
+    "default": 0
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet. When false, they are denied until it does.",
+    "default": false
+  },
   "enabled": {
     "type": "boolean",
     "description": "Indicates whether the integration is enabled",
@@ -813,6 +1011,24 @@ let data = JSON.stringify({
     "type": "integer",
     "description": "The devices last sync requirement interval in hours. Minimum value is 24 hours.",
     "minimum": 24
+  },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes. Minimum value is 1 minute, maximum is 1440 minutes.",
+    "minimum": 1,
+    "maximum": 1440
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 disables it, maximum is 240.",
+    "minimum": 0,
+    "maximum": 240,
+    "default": 0
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet. When false, they are denied until it does.",
+    "default": false
   },
   "enabled": {
     "type": "boolean",
@@ -869,6 +1085,24 @@ payload = json.dumps({
     "description": "The devices last sync requirement interval in hours. Minimum value is 24 hours.",
     "minimum": 24
   },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes. Minimum value is 1 minute, maximum is 1440 minutes.",
+    "minimum": 1,
+    "maximum": 1440
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 disables it, maximum is 240.",
+    "minimum": 0,
+    "maximum": 240,
+    "default": 0
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet. When false, they are denied until it does.",
+    "default": false
+  },
   "enabled": {
     "type": "boolean",
     "description": "Indicates whether the integration is enabled",
@@ -923,6 +1157,24 @@ func main() {
     "type": "integer",
     "description": "The devices last sync requirement interval in hours. Minimum value is 24 hours.",
     "minimum": 24
+  },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes. Minimum value is 1 minute, maximum is 1440 minutes.",
+    "minimum": 1,
+    "maximum": 1440
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 disables it, maximum is 240.",
+    "minimum": 0,
+    "maximum": 240,
+    "default": 0
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet. When false, they are denied until it does.",
+    "default": false
   },
   "enabled": {
     "type": "boolean",
@@ -998,6 +1250,24 @@ request.body = JSON.dump({
     "description": "The devices last sync requirement interval in hours. Minimum value is 24 hours.",
     "minimum": 24
   },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes. Minimum value is 1 minute, maximum is 1440 minutes.",
+    "minimum": 1,
+    "maximum": 1440
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 disables it, maximum is 240.",
+    "minimum": 0,
+    "maximum": 240,
+    "default": 0
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet. When false, they are denied until it does.",
+    "default": false
+  },
   "enabled": {
     "type": "boolean",
     "description": "Indicates whether the integration is enabled",
@@ -1034,6 +1304,24 @@ RequestBody body = RequestBody.create(mediaType, '{
     "type": "integer",
     "description": "The devices last sync requirement interval in hours. Minimum value is 24 hours.",
     "minimum": 24
+  },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes. Minimum value is 1 minute, maximum is 1440 minutes.",
+    "minimum": 1,
+    "maximum": 1440
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 disables it, maximum is 240.",
+    "minimum": 0,
+    "maximum": 240,
+    "default": 0
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet. When false, they are denied until it does.",
+    "default": false
   },
   "enabled": {
     "type": "boolean",
@@ -1087,6 +1375,24 @@ curl_setopt_array($curl, array(
     "type": "integer",
     "description": "The devices last sync requirement interval in hours. Minimum value is 24 hours.",
     "minimum": 24
+  },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes. Minimum value is 1 minute, maximum is 1440 minutes.",
+    "minimum": 1,
+    "maximum": 1440
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 disables it, maximum is 240.",
+    "minimum": 0,
+    "maximum": 240,
+    "default": 0
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet. When false, they are denied until it does.",
+    "default": false
   },
   "enabled": {
     "type": "boolean",
@@ -1149,6 +1455,18 @@ echo $response;
     "type": "integer",
     "description": "The devices last sync requirement interval in hours."
   },
+  "sync_interval": {
+    "type": "integer",
+    "description": "How often devices are synced from the integration, in minutes."
+  },
+  "stale_grace_minutes": {
+    "type": "integer",
+    "description": "Minutes a previously approved device keeps access after a stale check-in. 0 means disabled."
+  },
+  "stale_grace_new_peers": {
+    "type": "boolean",
+    "description": "Whether newly added peers get the grace period while the EDR has not reported them compliant yet."
+  },
   "enabled": {
     "type": "boolean",
     "description": "Indicates whether the integration is enabled"
@@ -1190,6 +1508,9 @@ echo $response;
     }
   ],
   "last_synced_interval": "integer",
+  "sync_interval": "integer",
+  "stale_grace_minutes": "integer",
+  "stale_grace_new_peers": "boolean",
   "enabled": "boolean"
 }
 ```

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/client/desktop-app.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/client/desktop-app.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/client/desktop-app.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/client/desktop-app.mdx)
 
 # NetBird Desktop App
 
@@ -14,15 +14,15 @@ Click **Connect** in the main window or tray menu. NetBird opens your browser to
 
 The main window opens in a compact **Default** view that shows the essentials: the active profile, connection status, hostname, overlay IP, and current exit node.
 
-![NetBird desktop app default view](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/client/desktop-app/default-view.png)
+![NetBird desktop app default view](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/client/desktop-app/default-view.png)
 
 Switch to the **Advanced** view and the window expands with a peers and resources browser on the right. The **Peers** tab lists the peers in your network.
 
-![Advanced view showing the Peers tab](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/client/desktop-app/peers-view.png)
+![Advanced view showing the Peers tab](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/client/desktop-app/peers-view.png)
 
 The **Resources** tab lists the network resources available to you. You can search resources, show only active or overlapping entries, toggle individual resources, or enable and disable all resources at once.
 
-![Advanced view showing the Resources tab](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/client/desktop-app/resources-view.png)
+![Advanced view showing the Resources tab](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/client/desktop-app/resources-view.png)
 
 ## Peer Details
 
@@ -40,7 +40,7 @@ A colored status dot sits next to the tray icon so you can read the state of you
 - **Yellow** when you need to log in.
 - **Grey** when disconnected.
 
-![NetBird system tray status indicator](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/client/desktop-app/tray-status.png)
+![NetBird system tray status indicator](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/client/desktop-app/tray-status.png)
 
 The tray menu also provides profile switching, session-renewal access, exit-node selection, Settings, Help & Support, and **Quit NetBird**. Closing the main window only hides it while the daemon and network connection continue running. Choosing **Quit NetBird** disconnects the daemon before the desktop app exits, unless **Stay Connected After Quitting** is enabled in **Settings → General** (requires client v0.76.2 or later). That setting is off by default; with it enabled, the connection keeps running after quitting and only stops when you disconnect it yourself.
 
@@ -58,11 +58,13 @@ The settings page uses a tabbed layout that groups options by what they control.
 - **Profiles** for managing the accounts the app knows about. See [Profiles](https://docs.netbird.io/client/profiles).
 - **SSH** for the native SSH server and its optional features. Some of these
   require privileges: see the note below.
+- **VNC** for the embedded VNC server and its connection-approval prompt. These
+  require privileges too: see the note below. See [VNC Access](https://docs.netbird.io/manage/peers/vnc).
 - **Advanced** for log-level and custom configuration options.
 - **Troubleshoot** for [capturing a debug bundle](#capturing-a-debug-bundle).
 - **About** for version information, useful links, and updating the app.
 
-![Settings page with the General tab and Display Language picker](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/client/desktop-app/settings-language.png)
+![Settings page with the General tab and Display Language picker](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/client/desktop-app/settings-language.png)
 
 > **Note**
 >
@@ -77,6 +79,13 @@ The settings page uses a tabbed layout that groups options by what they control.
 > itself; root login and SSH authentication have no policy key. A switch already in its safe
 > state stays operable: turning the SSH server off, turning root login off, and
 > re-enabling SSH authentication never require privileges.
+>
+> **Enable VNC Server** and turning **Require Connection Approval** off work the same
+> way, for the same reason: the VNC server attaches to the console session, which on a
+> shared machine belongs to somebody else, and the approval prompt is that person's
+> only say in a connection. They can also be set through [MDM](#mdm-driven-ui) with
+> `allowServerVNC` and `disableVNCApproval`. Turning the server off, or the prompt back
+> on, needs no privileges.
 
 **Connect on Startup** controls whether the background service reconnects when it starts. **Launch NetBird UI at Login** controls only whether the graphical interface opens when you sign in to the operating system. On a fresh desktop installation, launch at login is enabled once by default. Upgrades preserve the user's existing preference. Administrators can manage this behavior with [`disableAutostart`](https://docs.netbird.io/client/mdm-integration#disableAutostart).
 
@@ -96,7 +105,7 @@ If you roll out NetBird through MDM, the app reads the policy in effect on the d
 
 When a session is about to expire, the app shows a dialog with a countdown and two clear actions: renew or log out. An operating system notification fires ahead of time, and the session deadline remains visible across reconnects.
 
-![Session expiry dialog with a countdown and renew or logout actions](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/client/desktop-app/session-expiration.png)
+![Session expiry dialog with a countdown and renew or logout actions](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/client/desktop-app/session-expiration.png)
 
 The renewal flow follows one rule: re-authenticating never closes an active connection. **Renew session** runs the browser sign-in flow while your existing connection stays up. Your tunnels, SSH sessions, and remote desktop sessions keep running through the renewal. Only the underlying session ticket changes.
 
@@ -110,4 +119,4 @@ Translations are a community effort on [Crowdin](https://crowdin.com/project/net
 
 The **Troubleshoot** tab can capture a debug bundle that collects daemon and UI logs in one step. You can collect new trace logs for 1–30 minutes, cycle the connection, include a packet capture and system information, anonymize sensitive data, and either upload the result to NetBird or keep it locally. See [Troubleshooting the client](https://docs.netbird.io/help/troubleshooting-client#debug-bundle-uploads-with-gui) for the complete flow.
 
-![Completed debug bundle saved locally in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/help/troubleshooting-client/ui-bundle-local-success.png)
+![Completed debug bundle saved locally in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/help/troubleshooting-client/ui-bundle-local-success.png)

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/agent-network/control-center.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/agent-network/control-center.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/agent-network/control-center.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/agent-network/control-center.mdx)
 
 # Agent Network in Control Center
 
@@ -31,7 +31,7 @@ The **Networks** view does not show Agent Network nodes, because providers are n
 
 When the graph gets busy, use [Focus Mode](https://docs.netbird.io/manage/control-center#focus-mode) to isolate one path. Right-click an agent policy or provider and choose **Focus**, or press `F` and then select the node. Everything unrelated dims, leaving only the groups and providers connected to it, and a **Focusing on** pill at the top of the canvas shows what is in focus. Close the pill to return to the full view.
 
-![Control Center in the Peer view, focused on an agent policy that connects to the Anthropic API provider, with unrelated nodes dimmed](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/control-center/agent-network-control-center-focus-policy.png)
+![Control Center in the Peer view, focused on an agent policy that connects to the Anthropic API provider, with unrelated nodes dimmed](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/control-center/agent-network-control-center-focus-policy.png)
 
 ## Edit Providers and Agent Policies in Place
 
@@ -40,7 +40,7 @@ You do not have to leave Control Center to change Agent Network configuration. C
 - **Provider:** the **Edit Provider** dialog, with the **Provider** tab (provider, upstream URL, API key, display name) and the **Models** tab.
 - **Agent policy:** the **Update Agent Policy** dialog, with the **Policy**, **Limits**, and **Guardrails** tabs.
 
-![The Edit Provider dialog opened from Control Center, showing the Anthropic API provider, its upstream URL, a masked API key, and the display name](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/control-center/agent-network-control-center-edit-provider.png)
+![The Edit Provider dialog opened from Control Center, showing the Anthropic API provider, its upstream URL, a masked API key, and the display name](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/control-center/agent-network-control-center-edit-provider.png)
 
 In the live view, saving asks you to confirm, because the change applies to your account immediately. The right-click menu also offers:
 
@@ -58,7 +58,7 @@ Click **Add** in the toolbar (or press `C`) and open the **Agent Network** tab o
 - **Add new:** a **Provider** node ("Connect an AI provider or gateway") and an **Agent Policy** node ("Authorize groups to reach providers").
 - **Existing providers** and **Existing agent policies:** the ones already in your account, ready to drag onto the canvas. Each existing policy shows how many groups and providers it connects.
 
-![The Draft Mode components panel on the Agent Network tab, listing the Provider and Agent Policy nodes, existing providers, and existing agent policies](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/control-center/agent-network-control-center-components-panel.png)
+![The Draft Mode components panel on the Agent Network tab, listing the Provider and Agent Policy nodes, existing providers, and existing agent policies](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/control-center/agent-network-control-center-components-panel.png)
 
 You can also right-click the canvas and choose **New Agent Policy** or **New Agent Provider**.
 
@@ -77,7 +77,7 @@ Draw connections between nodes to wire up access. Unlike access control policies
 
 For our example, connect `Engineers` to **Anthropic API**. Before saving the policy, use the **Limits** and **Guardrails** tabs to cap spend and restrict the policy to the models the team actually uses, so the first version you deploy is already scoped. See [Token & Budget Limits](https://docs.netbird.io/agent-network/policies/limits) and [Guardrails](https://docs.netbird.io/agent-network/policies/guardrails).
 
-![A draft canvas where the new Engineers group connects through a new agent policy to the Anthropic API provider, with two pending changes on the Review & Deploy button](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/agent-network/control-center/agent-network-control-center-draft-connected.png)
+![A draft canvas where the new Engineers group connects through a new agent policy to the Anthropic API provider, with two pending changes on the Review & Deploy button](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/agent-network/control-center/agent-network-control-center-draft-connected.png)
 
 ### Review and Deploy
 

@@ -1,4 +1,4 @@
-> Pinned source for VictoriaLogs v1.54.0: [docs/victorialogs/metrics.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/6433dae586cc15921b4b9c50a805a49553c9d761/docs/victorialogs/metrics.md)
+> Pinned source for VictoriaLogs v1.55.0: [docs/victorialogs/metrics.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/a7001ac416483b5ca96347edd33bfc502e31ce3f/docs/victorialogs/metrics.md)
 
 This document provides a comprehensive reference for all metrics exposed by VictoriaLogs at the `http://localhost:9428/metrics` endpoint.
 These metrics follow the Prometheus exposition format and can be used for monitoring, alerting, and performance analysis.
@@ -177,6 +177,12 @@ These metrics follow the Prometheus exposition format and can be used for monito
 
 **Description:** Number of daily partitions currently active in storage. Each partition typically represents one day of log data. Count decreases when old partitions are deleted due to retention policies.
 
+### vl\_snapshots
+
+**Type:** Gauge
+
+**Description:** Number of [partition snapshots](https://docs.victoriametrics.com/victorialogs/#backup-and-restore) stored in active partitions right now. A new snapshot takes almost no disk space, but an old snapshot may take more space over time. Snapshots older than `-snapshotsMaxAge` (`3d` by default) are deleted automatically. See [how to remove snapshots](https://docs.victoriametrics.com/victorialogs/#how-to-remove-snapshots). To check that backups run, use `vl_http_requests_total{path="/internal/partition/snapshot/create"}`, which counts requests to create snapshots.
+
 ### vl\_storage\_log\_min\_timestamp\_seconds
 
 **Type:** Gauge
@@ -330,7 +336,7 @@ These metrics follow the Prometheus exposition format and can be used for monito
 
 **Type:** Counter
 
-**Description:** The number of queries logged as slow because they took longer than `-search.logSlowQueryDuration` including the time spent waiting in the queue. In [cluster](https://docs.victoriametrics.com/victorialogs/cluster/) `vlstorage` nodes expose this metric too, which helps finding the slow node.
+**Description:** The number of queries logged as slow because their execution took longer than `-search.logSlowQueryDuration`. In [cluster](https://docs.victoriametrics.com/victorialogs/cluster/) `vlstorage` nodes expose this metric too, which helps finding the slow node.
 
 ## Concurrency and Resource Metrics
 
@@ -357,6 +363,24 @@ These metrics follow the Prometheus exposition format and can be used for monito
 **Type:** Gauge
 
 **Description:** Current number of queries actively executing. Real-time query processing load when the system approaches the `-search.maxConcurrentRequests` capacity limit.
+
+### vl\_query\_memory\_limit\_reached\_total
+
+**Type:** Counter
+
+**Description:** Number of times queries couldn't obtain memory because of the [`vl_query_memory_limit_bytes`](https://docs.victoriametrics.com/victorialogs/metrics/#vl_query_memory_limit_bytes) limit. Such queries fail with an error instead of risking an out-of-memory crash. A single failed query may increase it more than once.
+
+### vl\_query\_memory\_limit\_bytes
+
+**Type:** Gauge
+
+**Description:** Maximum amount of memory all concurrently executed queries may use together for their execution state. It is set to half of the memory available to VictoriaLogs, which is controlled by `-memory.allowedPercent` or `-memory.allowedBytes` command-line flags. Queries fail once their combined memory would exceed this limit.
+
+### vl\_query\_memory\_usage\_bytes
+
+**Type:** Gauge
+
+**Description:** Current amount of memory reserved by the running queries for their execution state. Real-time query memory load when the system approaches the [`vl_query_memory_limit_bytes`](https://docs.victoriametrics.com/victorialogs/metrics/#vl_query_memory_limit_bytes) limit.
 
 ### vl\_concurrent\_internalselect\_requests\_wait\_duration
 

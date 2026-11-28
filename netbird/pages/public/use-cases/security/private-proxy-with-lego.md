@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/use-cases/security/private-proxy-with-lego.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/use-cases/security/private-proxy-with-lego.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/use-cases/security/private-proxy-with-lego.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/use-cases/security/private-proxy-with-lego.mdx)
 
 # NetBird Reverse Proxy with LEGO DNS Challenge
 
@@ -424,7 +424,7 @@ docker compose logs lego
 docker compose logs netbird-proxy
 ```
 
-The proxy log should report that it loaded a wildcard certificate for `*.proxy.example.com`, is watching `/certs`, and enabled private inbound listeners. In the NetBird dashboard, open **Reverse Proxy > Clusters** and confirm that the cluster is online and shows the **Private** capability. If you see all that, you're good to go.
+The proxy log should report that it loaded a wildcard certificate for `*.proxy.example.com`, is watching `/certs`, and enabled private inbound listeners. In the NetBird dashboard, open **Networking > Reverse Proxy > Clusters** and confirm that the cluster is online and shows the **Private** capability. If you see all that, you're good to go.
 
 Only the `netbird-proxy` container registers with NetBird; the LEGO helper won't appear in the dashboard. Replicas that use the same `NB_PROXY_TOKEN` and `NB_PROXY_DOMAIN` appear as one cluster with a connected-proxy count rather than as separate cluster rows.
 
@@ -432,7 +432,7 @@ Only the `netbird-proxy` container registers with NetBird; the LEGO helper won't
 
 Now let's publish the Grafana dashboard from our running example:
 
-1. Open **Reverse Proxy > Services** and add an HTTP service.
+1. Open **Networking > Reverse Proxy > Services** and add an HTTP service.
 2. Use a single-label subdomain covered by the certificate: `grafana` for `grafana.proxy.example.com`.
 3. Select this proxy cluster and point the application target at the Grafana instance.
 4. On the **Authentication** tab, enable [NetBird-Only Access](https://docs.netbird.io/manage/reverse-proxy/authentication#net-bird-only-access-private-services).

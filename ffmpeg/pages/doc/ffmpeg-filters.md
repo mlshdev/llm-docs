@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/35ef294f5d9d6c5b9a13abb59a4eedb1d0c875a3/doc/ffmpeg-filters.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-filters.texi](https://github.com/FFmpeg/FFmpeg/blob/7f32f9dccc74d6afedcf32fd5595b05b9c9eee69/doc/ffmpeg-filters.texi)
 
 # Description
 
@@ -30493,6 +30493,35 @@ To enable compilation of these filters you need to configure FFmpeg with
 `--enable-libmfx` or `--enable-libvpl`.
 
 To use QSV filters, you need to setup the QSV device correctly. For more information, please read <https://trac.ffmpeg.org/wiki/Hardware/QuickSync>
+
+## vpp\_qsv
+
+Apply Quick Sync Video VPP filters.
+
+The following options are relevant to AI super resolution:
+
+- ai\_sr
+  Enable AI super resolution. The default is disabled. The option is available
+  in builds compiled with oneVPL 2.13 or later headers. It requires a runtime
+  supporting API 2.13 or later and a QSV device that supports AI super
+  resolution. Set `w` and `h` to the desired output dimensions.
+  Supported scale factors, pixel formats and combinations with other VPP filters
+  depend on the implementation.
+  When `ai_sr` is enabled, `scale_mode` is ignored.
+
+- w
+
+- h
+  Set the output width and height expressions. `w` defaults to `cw`,
+  the width of the input crop area, and `h` defaults to `w*ch/cw`,
+  which keeps the aspect ratio of the crop area. Setting only `w`
+  therefore also changes `h`.
+
+For example, to upscale a 960x540 NV12 input to 1920x1080:
+
+```text
+vpp_qsv=ai_sr=1:w=1920:h=1080
+```
 
 ## hstack\_qsv
 

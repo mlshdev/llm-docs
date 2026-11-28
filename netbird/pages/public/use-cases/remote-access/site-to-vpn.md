@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/use-cases/remote-access/site-to-vpn.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/use-cases/remote-access/site-to-vpn.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/use-cases/remote-access/site-to-vpn.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/use-cases/remote-access/site-to-vpn.mdx)
 
 # Site-to-VPN: Clientless Devices Reaching NetBird Peers
 
@@ -117,7 +117,7 @@ interface address) on egress from `wt0` is sufficient.
 
 In the NetBird dashboard:
 
-1. Go to **Network Routing** → **Networks** and click **Add Network**
+1. Go to **Networking** → **Network Routing** → **Networks** and click **Add Network**
 2. Name: `site-50-network`
 3. Click **Create Network**
 
@@ -150,7 +150,7 @@ The routing peer needs to be allowed to reach the target peer over the
 overlay. Because Step 3's SNAT rewrites the source to the routing peer's
 NetBird IP, the policy uses peer groups:
 
-1. Go to **Access Control** → **Policies** and click **Add Policy**
+1. Go to **Networking** → **Access Control** → **Policies** and click **Add Policy**
 2. Configure:
    - **Name:** `Site Router to Overlay Peer`
    - **Protocol:** `TCP`

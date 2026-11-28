@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/peers/approve-peers.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/peers/approve-peers.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/peers/approve-peers.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/peers/approve-peers.mdx)
 
 # Approve peers
 
@@ -22,7 +22,7 @@ For details on the peer approval feature, part of our "Getting started with NetB
 
 To enable peer approval, navigate to [Settings » Authentication](https://app.netbird.io/settings) and enable 'Peer approval'.
 
-![peer-approval-settings](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/approve-peers/peer-approval-settings.png)
+![peer-approval-settings](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/approve-peers/peer-approval-settings.png)
 
 > **Note**
 >
@@ -32,7 +32,7 @@ To enable peer approval, navigate to [Settings » Authentication](https://app.ne
 
 To approve a peer, navigate to the [Peers section](https://app.netbird.io/peers) and click the `Approve` button on the right side of the peers table.
 
-![peer-needs-approval](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/peers/approve-peers/peer-needs-approval.png)
+![peer-needs-approval](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/peers/approve-peers/peer-needs-approval.png)
 
 ## Automate peer approval with EDR integrations
 
@@ -46,5 +46,5 @@ Check the [EDR integrations](https://docs.netbird.io/manage/access-control/endpo
 
 - Make sure to [star us on GitHub](https://github.com/netbirdio/netbird)
 - Follow us [on X](https://x.com/netbird)
-- Join our Slack Channel
+- Join our Slack Channel or Discord server
 - NetBird [latest release](https://github.com/netbirdio/netbird/releases) on GitHub

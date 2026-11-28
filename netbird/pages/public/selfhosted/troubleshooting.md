@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/selfhosted/troubleshooting.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/selfhosted/troubleshooting.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/selfhosted/troubleshooting.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/selfhosted/troubleshooting.mdx)
 
 # Troubleshooting
 
@@ -22,5 +22,5 @@ This page helps with issues when self-hosting NetBird. Collect the diagnostics b
 If you're still experiencing issues, see [Report bugs and issues](https://docs.netbird.io/help/report-bug-issues) for the right channel:
 
 1. **Gather evidence first**: `docker compose logs` for all services, your configuration (without secrets), and the steps to reproduce.
-2. **Open source self-hosted and general questions** go to [Community Support](https://docs.netbird.io/help/community-support): the Slack Channel for quick questions, or [GitHub Discussions](https://github.com/netbirdio/netbird/discussions) for a written record.
+2. **Open source self-hosted and general questions** go to [Community Support](https://docs.netbird.io/help/community-support): Slack or Discord for quick questions, or [GitHub Discussions](https://github.com/netbirdio/netbird/discussions) for a written record.
 3. **Cloud customers and users, and commercial-license deployments** can reach the team through [NetBird Support](https://docs.netbird.io/help/netbird-support).

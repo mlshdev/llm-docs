@@ -1,8 +1,8 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/use-cases/remote-access/active-directory.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/use-cases/remote-access/active-directory.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/use-cases/remote-access/active-directory.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/use-cases/remote-access/active-directory.mdx)
 
 # Active Directory & Windows File Shares
 
-Remote, domain-joined users expect their mapped drives, DFS (Distributed File System) paths, and domain login to *just work*, even when the domain controllers and file servers sit on a private LAN with nothing exposed publicly. This guide is the end-to-end journey for that over NetBird. It builds on two underlying pieces, [How Routing Peers Work](https://docs.netbird.io/manage/networks/how-routing-peers-work) and [Internal DNS Servers](https://docs.netbird.io/manage/dns/internal-dns-servers), and ties them together into a single setup.
+Remote, domain-joined users expect their mapped drives, DFS (Distributed File System) paths, and domain login to *just work*, even when the domain controllers and file servers sit on a private LAN with nothing exposed publicly. This guide is the end-to-end journey for that over NetBird, with the NetBird client on each remote device. It builds on two underlying pieces, [How Routing Peers Work](https://docs.netbird.io/manage/networks/how-routing-peers-work) and [Internal DNS Servers](https://docs.netbird.io/manage/dns/internal-dns-servers), and ties them together into a single setup. To see why not to publish the shares through the reverse proxy, see [Windows file shares (SMB)](https://docs.netbird.io/manage/reverse-proxy#windows-file-shares-smb).
 
 > **Note**
 >

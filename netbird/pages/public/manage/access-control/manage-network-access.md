@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/access-control/manage-network-access.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/access-control/manage-network-access.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/access-control/manage-network-access.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/access-control/manage-network-access.mdx)
 
 # Managing Access with NetBird: Groups and Access Policies
 
@@ -34,8 +34,8 @@ Here are some key attributes of groups:
 - A single group can have multiple peers.
 - Peers can be part of multiple groups simultaneously.
 - Groups can be included in the 'Source' and 'Destination' lists of policies.
-- Groups can be created either in `Access Control > Groups` or in places where a group input field is provided. Type the preferred group name into the input and press 'Enter' to create the new group. [Learn more](#creating-groups)
-- Groups can be deleted in `Access Control > Groups` [Learn more](#deleting-groups)
+- Groups can be created either in `Groups` or in places where a group input field is provided. Type the preferred group name into the input and press 'Enter' to create the new group. [Learn more](#creating-groups)
+- Groups can be deleted in `Groups` [Learn more](#deleting-groups)
 - There exists a default group called `All` which cannot be deleted or renamed.
 
 > **Note**
@@ -78,7 +78,7 @@ There is a `Default` policy, which configures a default mesh connection between 
 
 ### Creating Policies
 
-After accessing the `Access Control` > `Policies` tab, click on the `Add policy` button to create a new policy.
+Open **Networking → Access Control → Policies** and click **Add policy** to create a new policy.
 In the popup, specify connection `Source` and `Destination` groups. You can select existing groups or create new ones by entering a name in the input box.
 
 > **Note**
@@ -89,13 +89,13 @@ You can limit access to specific protocol and ports by selecting the `Protocol` 
 Starting version `0.48` NetBird supports port ranges in policies, allowing you to specify a range of ports in the format `start-end` (e.g., `8000-9000`).
 Set the `Direction` field, then provide a name and description for your policy.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/create-rule.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/create-rule.png)
 
 If necessary, you can also add a [posture checks](https://docs.netbird.io/manage/access-control/posture-checks) to the policy. Posture checks are used to ensure that the peer meets certain security requirements before allowing it to connect. You can select from predefined posture checks or create custom ones.
 
 Once you have finished configuring the policy, click `Add Policy` to save it. You will then see your new policy in the table.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/new-rule-list.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/new-rule-list.png)
 
 > **Note**
 >
@@ -106,7 +106,7 @@ Once you have finished configuring the policy, click `Add Policy` to save it. Yo
 If you create a new group when defining a policy, you will need to add a peer to the group for the policy to take effect.
 You can assign a peer to a group by accessing the `Peers` section. Then, choose the specific peer you want to assign to a group. Click on the `Assigned Groups` select box and select the group(s) you wish to assign to this peer.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/associate-peer-groups.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/associate-peer-groups.png)
 
 > **Note**
 >
@@ -120,13 +120,13 @@ To update a policy, just click on its name and customize it according to your re
 
 To disable a policy, use the switch in the `Active` column of the table.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/disable-rule.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/disable-rule.png)
 
 ### Deleting Policies
 
 To delete a policy, click on `Delete` in the table, and confirm the message that appears.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/delete-rule-menu.png)
+![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/delete-rule-menu.png)
 
 ## Managing Groups
 
@@ -141,31 +141,31 @@ When you see a group input field anywhere in the dashboard (e.g. such as when cr
 1. Type your preferred group name into the input field
 2. Press 'Enter' to create the new group
 
-![Create group inline](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/groups/create-group-input.png)
+![Create group inline](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/groups/create-group-input.png)
 
 **From Groups Page**\\
 
-1. Navigate to `Access Control` > `Groups`
+1. Navigate to `Groups`
 2. Click the `Create Group` button
 3. Provide a name for your new group
 
-![Create group from groups page](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/groups/create-group.png)
+![Create group from groups page](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/groups/create-group.png)
 
 ### Viewing Groups
 
 **Groups Overview**\\
 
-Navigate to `Access Control` > `Groups` to view all groups in your organization. This page shows:
+Navigate to `Groups` to view all groups in your organization. This page shows:
 
 - All existing groups
 - Associated objects (peers, users, policies, etc.)
 - Usage status (used/unused groups)
 
-![Groups overview page](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/groups/view-groups.png)
+![Groups overview page](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/groups/view-groups.png)
 
 **Group Details**\\
 
-Navigate to `Access Control` > `Groups` and then click on any group name to view detailed information and manage associated objects:
+Navigate to `Groups` and then click on any group name to view detailed information and manage associated objects:
 
 - **Users**: View, assign, or invite users to this group
 - **Peers**: Manage which peers are assigned to this group
@@ -175,11 +175,11 @@ Navigate to `Access Control` > `Groups` and then click on any group name to view
 - **Nameservers**: View nameservers using this group as a distribution group
 - **Setup Keys**: See setup keys with this group as an auto-assigned group
 
-![Group details page](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/groups/view-group-detail.png)
+![Group details page](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/groups/view-group-detail.png)
 
 ### Renaming Groups
 
-1. Navigate to `Access Control` > `Groups`
+1. Navigate to `Groups`
 2. Click the dropdown button (⋮) next to the group you want to rename
 3. Select `Rename`
 4. Enter the new name and click `Save`
@@ -188,11 +188,11 @@ Navigate to `Access Control` > `Groups` and then click on any group name to view
 >
 > Groups synchronized from Identity Providers (Google Workspace, Entra ID, etc.) cannot be renamed.
 
-![Rename group](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/groups/rename-group.png)
+![Rename group](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/groups/rename-group.png)
 
 ### Deleting Groups
 
-1. Navigate to `Access Control` > `Groups`
+1. Navigate to `Groups`
 2. Click the dropdown button (⋮) next to the group you want to delete
 3. Select `Delete`
 4. Confirm the action by clicking `Delete` in the confirmation dialog
@@ -205,4 +205,4 @@ Navigate to `Access Control` > `Groups` and then click on any group name to view
 >
 > Groups with active dependencies cannot be deleted. First remove all dependencies in order to delete the group.
 
-![Delete group](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/access-control/groups/delete-group.png)
+![Delete group](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/access-control/groups/delete-group.png)

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/idp-sync/okta-sync.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/idp-sync/okta-sync.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/team/idp-sync/okta-sync.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/team/idp-sync/okta-sync.mdx)
 
 # Provision Users and Groups from Okta
 
@@ -16,7 +16,7 @@ to synchronize users and groups smoothly.
 
 ## Get Started with NetBird-Okta Integration
 
-To set up SSO, open `Integrations` in the NetBird admin console's left menu and select the `Single Sign-On` tab. On the Okta card, click `Connect Okta`. This opens the `Connect NetBird with Okta SSO` wizard, which walks you through the rest of the SSO setup. Its first screen lists the Okta permissions you need, covered in the prerequisites below. You set up SCIM later, from the `Identity Provider Sync` tab.
+To set up SSO, open **Integrations** in the NetBird admin console and select the `Single Sign-On` tab. On the Okta card, click `Connect Okta`. This opens the `Connect NetBird with Okta SSO` wizard, which walks you through the rest of the SSO setup. Its first screen lists the Okta permissions you need, covered in the prerequisites below. You set up SCIM later, from the `Identity Provider Sync` tab.
 
 ## Prerequisites
 
@@ -63,13 +63,13 @@ In NetBird, click the `Continue →` button. The wizard shows the `Enter your Ok
 
 Treat the `Client Secret` like a password. Paste it straight into the NetBird wizard, and don't share it over email or chat.
 
-![The Sign On tab of the NetBird app in Okta, showing the OpenID Connect Client ID and Client Secret](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/okta-sync/rl5Gelc.png)
+![The Sign On tab of the NetBird app in Okta, showing the OpenID Connect Client ID and Client Secret](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/okta-sync/rl5Gelc.png)
 
 - Click `Edit` in the `Settings` section.
 - In `Credential Details`, change the `Application username format` from `Okta username` to `Email`.
 - Click the `Save` button
 
-![The Credential Details section with Application username format set to Email](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/okta-sync/FWPf0Cu.png)
+![The Credential Details section with Application username format set to Email](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/okta-sync/FWPf0Cu.png)
 
 - On the top right, click on your username
 - Copy your [Okta account domain](https://developer.okta.com/docs/guides/find-your-domain/main/), shown under your email address in that menu, for example `trial-1234567.okta.com`.
@@ -80,7 +80,7 @@ Back in the NetBird wizard, fill in the form with the values you collected:
 - `Okta account domain`: for example `trial-1234567.okta.com`.
 - `Primary E-Mail Domain`: the domain of the email addresses your users sign in with, for example `mycompany.com`.
 
-![The Enter your Okta details step of the Connect NetBird with Okta SSO wizard, with fields for Client ID, Client Secret, Okta account domain, and Primary E-Mail Domain, and the Connect button](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/okta-sync/okta-sso-enter-details.png)
+![The Enter your Okta details step of the Connect NetBird with Okta SSO wizard, with fields for Client ID, Client Secret, Okta account domain, and Primary E-Mail Domain, and the Connect button](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/okta-sync/okta-sso-enter-details.png)
 
 Click `Connect`. If your primary email domain isn't verified yet, NetBird asks you to prove you own it. The `Verify Domain Ownership` dialog shows a TXT record to add to your DNS:
 
@@ -101,7 +101,7 @@ In NetBird, go to `Integrations > Identity Provider Sync` and click the `Connect
 
 The next screen will show you how to enable NetBird API credentials in Okta. Copy the value of the `Authorization (Bearer)` token.
 
-![The NetBird wizard step showing the Authorization (Bearer) token to copy into Okta](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/okta-sync/aoPqKJR.png)
+![The NetBird wizard step showing the Authorization (Bearer) token to copy into Okta](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/okta-sync/aoPqKJR.png)
 
 Navigate to the NetBird app in your Okta admin dashboard. Click the `Provisioning` tab, then select `Configure API Integration`.
 
@@ -111,7 +111,7 @@ Follow these steps:
 - Enter your NetBird API Token.
 - Click `Test API Credentials` to verify the SCIM connection.
 
-![The Okta API Integration form with Enable API integration checked and the token entered](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/okta-sync/Wn6f9Pj.png)
+![The Okta API Integration form with Enable API integration checked and the token entered](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/okta-sync/Wn6f9Pj.png)
 
 If everything works as expected, Okta shows the message "NetBird was verified successfully!". Click `Save` to continue.
 
@@ -129,7 +129,7 @@ Enable Okta to create, update, and deactivate NetBird users by checking the corr
 
 When done, click `Save`.
 
-![The Provisioning to App settings with Create Users, Update User Attributes, and Deactivate Users enabled](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/okta-sync/JD0EHVI.png)
+![The Provisioning to App settings with Create Users, Update User Attributes, and Deactivate Users enabled](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/okta-sync/JD0EHVI.png)
 
 ## Assigning NetBird Application to Okta Groups
 
@@ -151,11 +151,11 @@ One more time, go to NetBird and click `Continue →`. You'll see the final inst
 - Select `Find groups by name`
 - Search for specific groups to push to NetBird.
 
-![The Push Groups tab with the Push Groups dropdown open on Find groups by name](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/okta-sync/uqUiTtg.png)
+![The Push Groups tab with the Push Groups dropdown open on Find groups by name](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/okta-sync/uqUiTtg.png)
 
-Once you finish, go back to NetBird and click `Finish Setup`. You can verify the synchronization by navigating to `Team > Users`. The users listed in NetBird should match those assigned to the app in Okta.
+Once you finish, go back to NetBird and click `Finish Setup`. You can verify the synchronization by navigating to `Users`. The users listed in NetBird should match those assigned to the app in Okta.
 
-![The NetBird Users table listing the users pushed from Okta](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync/okta-sync/GPTzvut.png)
+![The NetBird Users table listing the users pushed from Okta](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync/okta-sync/GPTzvut.png)
 
 > **Note**
 >

@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/ipa/resources/services.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/ipa/resources/services.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/ipa/resources/services.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/ipa/resources/services.mdx)
 
 ## List available proxy clusters   (GET /api/reverse-proxies/clusters)
 
@@ -4290,7 +4290,7 @@ echo $response;
 
 ## Validate a custom domain   (GET /api/reverse-proxies/domains/{domainId}/validate)
 
-Trigger domain ownership validation for a custom domain
+Validate domain ownership for a custom domain
 
 ### Path Parameters
 

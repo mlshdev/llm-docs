@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/ipa/resources/accounts.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/ipa/resources/accounts.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/ipa/resources/accounts.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/ipa/resources/accounts.mdx)
 
 ## List all Accounts   (GET /api/accounts)
 
@@ -192,7 +192,8 @@ echo $response;
         "network_traffic_logs_groups": [
           "ch8i4ug6lnn4g9hqv7m0"
         ],
-        "network_traffic_packet_counter_enabled": true
+        "network_traffic_packet_counter_enabled": true,
+        "user_email_mapping_enabled": false
       },
       "lazy_connection_enabled": true,
       "auto_update_version": "0.51.2",
@@ -255,7 +256,8 @@ echo $response;
         "network_traffic_logs_groups": [
           "string"
         ],
-        "network_traffic_packet_counter_enabled": "boolean"
+        "network_traffic_packet_counter_enabled": "boolean",
+        "user_email_mapping_enabled": "boolean"
       },
       "lazy_connection_enabled": "boolean",
       "auto_update_version": "string",
@@ -541,6 +543,10 @@ Limits traffic logging to these groups. If unset all peers are enabled.
 
 Enables or disables network traffic packet counter. If enabled, network packets and their size will be counted and reported. (This can have an slight impact on performance)
 
+**user\_email\_mapping\_enabled (type: boolean; optional)**
+
+(Cloud only) Enables resolving user IDs to email addresses in streamed activity and network traffic events.
+
 **lazy\_connection\_enabled (type: boolean; optional)**
 
 Enables or disables experimental lazy connection
@@ -642,7 +648,8 @@ curl -X PUT https://api.netbird.io/api/accounts/{accountId} \
       "network_traffic_logs_groups": [
         "ch8i4ug6lnn4g9hqv7m0"
       ],
-      "network_traffic_packet_counter_enabled": true
+      "network_traffic_packet_counter_enabled": true,
+      "user_email_mapping_enabled": false
     },
     "lazy_connection_enabled": true,
     "auto_update_version": "0.51.2",
@@ -701,7 +708,8 @@ let data = JSON.stringify({
       "network_traffic_logs_groups": [
         "ch8i4ug6lnn4g9hqv7m0"
       ],
-      "network_traffic_packet_counter_enabled": true
+      "network_traffic_packet_counter_enabled": true,
+      "user_email_mapping_enabled": false
     },
     "lazy_connection_enabled": true,
     "auto_update_version": "0.51.2",
@@ -782,7 +790,8 @@ payload = json.dumps({
       "network_traffic_logs_groups": [
         "ch8i4ug6lnn4g9hqv7m0"
       ],
-      "network_traffic_packet_counter_enabled": true
+      "network_traffic_packet_counter_enabled": true,
+      "user_email_mapping_enabled": false
     },
     "lazy_connection_enabled": true,
     "auto_update_version": "0.51.2",
@@ -863,7 +872,8 @@ func main() {
       "network_traffic_logs_groups": [
         "ch8i4ug6lnn4g9hqv7m0"
       ],
-      "network_traffic_packet_counter_enabled": true
+      "network_traffic_packet_counter_enabled": true,
+      "user_email_mapping_enabled": false
     },
     "lazy_connection_enabled": true,
     "auto_update_version": "0.51.2",
@@ -963,7 +973,8 @@ request.body = JSON.dump({
       "network_traffic_logs_groups": [
         "ch8i4ug6lnn4g9hqv7m0"
       ],
-      "network_traffic_packet_counter_enabled": true
+      "network_traffic_packet_counter_enabled": true,
+      "user_email_mapping_enabled": false
     },
     "lazy_connection_enabled": true,
     "auto_update_version": "0.51.2",
@@ -1026,7 +1037,8 @@ RequestBody body = RequestBody.create(mediaType, '{
       "network_traffic_logs_groups": [
         "ch8i4ug6lnn4g9hqv7m0"
       ],
-      "network_traffic_packet_counter_enabled": true
+      "network_traffic_packet_counter_enabled": true,
+      "user_email_mapping_enabled": false
     },
     "lazy_connection_enabled": true,
     "auto_update_version": "0.51.2",
@@ -1105,7 +1117,8 @@ curl_setopt_array($curl, array(
       "network_traffic_logs_groups": [
         "ch8i4ug6lnn4g9hqv7m0"
       ],
-      "network_traffic_packet_counter_enabled": true
+      "network_traffic_packet_counter_enabled": true,
+      "user_email_mapping_enabled": false
     },
     "lazy_connection_enabled": true,
     "auto_update_version": "0.51.2",
@@ -1179,7 +1192,8 @@ echo $response;
       "network_traffic_logs_groups": [
         "ch8i4ug6lnn4g9hqv7m0"
       ],
-      "network_traffic_packet_counter_enabled": true
+      "network_traffic_packet_counter_enabled": true,
+      "user_email_mapping_enabled": false
     },
     "lazy_connection_enabled": true,
     "auto_update_version": "0.51.2",
@@ -1240,7 +1254,8 @@ echo $response;
       "network_traffic_logs_groups": [
         "string"
       ],
-      "network_traffic_packet_counter_enabled": "boolean"
+      "network_traffic_packet_counter_enabled": "boolean",
+      "user_email_mapping_enabled": "boolean"
     },
     "lazy_connection_enabled": "boolean",
     "auto_update_version": "string",

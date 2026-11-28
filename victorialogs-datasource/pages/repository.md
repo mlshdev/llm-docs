@@ -1,10 +1,11 @@
-> Pinned source for VictoriaLogs datasource for Grafana v0.34.0: [README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/README.md)
+> Pinned source for VictoriaLogs datasource for Grafana v0.35.0: [README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bc4e680865e29fdde604cecf56ddd7b31d237150/README.md)
 
 # VictoriaLogs datasource for Grafana
 
 The VictoriaLogs datasource plugin allows you to query and visualize
 [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) data in [Grafana](https://grafana.com/grafana/plugins/victoriametrics-logs-datasource/).
 
+- [VictoriaLogs compatibility](#victorialogs-compatibility)
 - [Installation](#installation)
 - [Development](#getting-started-development)
 - [How to make new release](#how-to-make-new-release)
@@ -20,7 +21,7 @@ For gitops follow [installation](#installation) instructions.
 
 Once installed, start exploring logs from [Grafana's Explore page](https://grafana.com/docs/grafana/latest/explore/get-started-with-explore/):
 
-![Grafana Explore](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/docs/assets/explore.webp)
+![Grafana Explore](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/docs/assets/explore.webp)
 
 > To search for all logs simply use `*` as a query. See [LogsQL specification](https://docs.victoriametrics.com/victorialogs/logsql/).
 
@@ -29,6 +30,25 @@ Once installed, start exploring logs from [Grafana's Explore page](https://grafa
 - How to connect Logs with Traces using [Derived Fields](https://github.com/VictoriaMetrics/victorialogs-datasource/tree/main/src#derived-fields).
 - How to explore logs without writing LogsQL with [Drilldown](https://github.com/VictoriaMetrics/victorialogs-datasource/tree/main/src#drilldown).
 - [Demo dashboard](https://play-grafana.victoriametrics.com/d/be5zidev72m80f) built with VictoriaLogs plugin.
+
+## VictoriaLogs compatibility
+
+The plugin relies on VictoriaLogs APIs that appeared in specific releases. The table lists each plugin feature with
+the API it needs, the plugin release that added it and the oldest VictoriaLogs release that provides the API. The plugin
+requires the newest of these VictoriaLogs versions: `Save & test` on the data source page fails with the reported
+VictoriaLogs version when it is older, and the query editor shows a warning with the features that do not work. The
+version is read from `/select/buildinfo`. When VictoriaLogs does not report it (an older release, a build without a
+release tag, or a proxy that hides the endpoint), `Save & test` passes with a warning and the query editor warns that
+the features may not work.
+
+The table is generated from `pkg/vlcompat/requirements.go` with `make readme-compat`. The pre-commit hook
+(installed by `yarn install` via husky) runs it when a commit touches the list, and the backend CI check fails when
+the table is stale.
+
+| Feature                                                                                           | Needs                                                                                                                         | Plugin  | VictoriaLogs |
+| ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------- | ------------ |
+| Compatibility check: Save & test on the data source page and the warning in the query editor      | [the /select/buildinfo endpoint reporting the VictoriaLogs version](https://github.com/VictoriaMetrics/VictoriaLogs/pull/851) | v0.35.0 | v1.40.0      |
+| Order of raw logs: the Explore sort order, the Direction option in dashboards and the log context | [the sort\_direction query arg of /select/logsql/query](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1355)            | v0.35.0 | v1.54.0      |
 
 ## Installation
 
@@ -86,7 +106,7 @@ docker compose -f docker-compose.yaml up
 
 After Grafana starts successfully, datasource should be available in the datasources tab
 
-![Configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/a5450dee43595fd480c52dd362ced1d7430ab36b/docs/assets/provision_datasources.webp)
+![Configuration](https://raw.githubusercontent.com/VictoriaMetrics/victorialogs-datasource/bc4e680865e29fdde604cecf56ddd7b31d237150/docs/assets/provision_datasources.webp)
 
 ### Install in Kubernetes
 
@@ -444,7 +464,7 @@ This command will build frontend part and backend part or the plugin and locate 
 ### 8. How to run e2e tests
 
 End-to-end tests run against a real Grafana + VictoriaLogs stack and can be executed
-against different Grafana and VictoriaLogs versions. See [tests/README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/tests/README.md)
+against different Grafana and VictoriaLogs versions. See [tests/README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bc4e680865e29fdde604cecf56ddd7b31d237150/tests/README.md)
 for instructions.
 
 ## How to make new release
@@ -463,4 +483,4 @@ For more information on the fields in `plugin.json`, please refer to the [Grafan
 ## License
 
 This project is licensed under
-the [Apache 2.0 license](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/a5450dee43595fd480c52dd362ced1d7430ab36b/LICENSE).
+the [Apache 2.0 license](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/bc4e680865e29fdde604cecf56ddd7b31d237150/LICENSE).

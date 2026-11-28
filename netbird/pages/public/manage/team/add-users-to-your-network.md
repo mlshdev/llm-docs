@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/manage/team/add-users-to-your-network.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/manage/team/add-users-to-your-network.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/manage/team/add-users-to-your-network.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/manage/team/add-users-to-your-network.mdx)
 
 # Add users to your network
 
@@ -37,27 +37,27 @@ Users on any other domain your organization uses, such as `company.co.uk` or a s
 ## Direct user invites
 
 As the name stands, this way of inviting users is straightforward and works through the web UI.
-To invite a new user, proceed to `Team` then select the `Users` tab and click the Invite User button.
+To invite a new user, open **Users** in the sidebar, select the **Users** tab, and click the Invite User button.
 A window will appear, allowing you to specify the name and email address of the user you want to invite. Optionally, you could select a set of groups with which you want this user to be associated.
 
-The invited users will receive an email invitation that they have to confirm.
+On NetBird Cloud, invited users receive an email invitation that they have to confirm.
 After logging in to the system, they will join your network automatically.
 
-![high-level-dia](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/user-invites.png)
+On a self-hosted installation the same button reads `Add User`, and it only appears when [local user management](https://docs.netbird.io/selfhosted/identity-providers/local) is enabled. Select **Invite User** to generate an invite link that you share with the user, or **Create User** to generate a password that you share securely. See [local user management](https://docs.netbird.io/selfhosted/identity-providers/local#user-management) for the steps. If you have [disabled local authentication](https://docs.netbird.io/selfhosted/identity-providers/disable-local-authentication), the button is disabled and users have to come from your IdP instead.
+
+![The Invite User dialog with name, email, and group fields](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/user-invites.png)
 
 > **Note**
 >
 > On NetBird Cloud, you can't invite someone who already has a NetBird account, for example one they created by signing in before you invited them. The invite fails with a `409` error. See [User already belongs to another NetBird account](https://docs.netbird.io/help/troubleshooting-user-in-another-account) to move them into your account.
 >
-> On self-hosted NetBird with the embedded identity provider, a `409` means the email address already belongs to a user in your account. Look for them under **Team → Users** instead.
+> On self-hosted NetBird with the embedded identity provider, a `409` means the email address already belongs to a user in your account. Look for them under **Users** instead.
 
 ## Identity Provider (IdP) Sync
 
-NetBird's IdP-Sync automates user access management by integrating with your IdP and automatically
-provisioning users and groups. You can enable this feature from the `Users` tab by clicking the `Identity Provider Sync`
-button.
+NetBird's IdP-Sync automates user access management by integrating with your IdP and automatically provisioning users and groups. Open **Integrations** and select the **Identity Provider Sync** tab to configure it.
 
-![idp-sync-reference](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/manage/team/idp-sync-reference.png)
+![The Identity Provider Sync tab on the Integrations page](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/manage/team/idp-sync-reference.png)
 
 See the [Provision Users and Groups From Your Identity Provider](https://docs.netbird.io/manage/team/idp-sync) section for more details.
 
@@ -71,5 +71,5 @@ NetBird user roles control the level of access each person has to your account. 
 
 - Make sure to [star us on GitHub](https://github.com/netbirdio/netbird)
 - Follow us [on X](https://x.com/netbird)
-- Join our Slack Channel
+- Join our Slack Channel or Discord server
 - NetBird [latest release](https://github.com/netbirdio/netbird/releases) on GitHub

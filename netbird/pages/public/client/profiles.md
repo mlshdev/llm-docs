@@ -1,4 +1,4 @@
-> Pinned source for NetBird v0.81.4: [netbirdio/docs@238224712cf7639036ed39fa8873d777b8822273:src/pages/client/profiles.mdx](https://github.com/netbirdio/docs/blob/238224712cf7639036ed39fa8873d777b8822273/src/pages/client/profiles.mdx)
+> Pinned source for NetBird v0.84.0: [netbirdio/docs@687df76a2ecb2c825e4726f53f78fb54a131f77c:src/pages/client/profiles.mdx](https://github.com/netbirdio/docs/blob/687df76a2ecb2c825e4726f53f78fb54a131f77c/src/pages/client/profiles.mdx)
 
 # Switching Between NetBird Accounts with Profiles
 
@@ -8,7 +8,7 @@ Only one profile is active at a time, and switching takes just a click.
 This feature also allows you to switch between self-hosted and cloud-hosted NetBird accounts seamlessly without needing
 to juggle multiple config files.
 
-![Profile selector in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/client/profiles/profiles.png)
+![Profile selector in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/client/profiles/profiles.png)
 
 ## NetBird Profiles GUI Quickstart
 
@@ -28,7 +28,7 @@ Open **Settings → Profiles** to:
 - **Delete** any inactive profile. Active and default profiles cannot be removed.
 - Recognize profiles by their assigned Work, Home, Default, or other type icon.
 
-![Profiles settings in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/238224712cf7639036ed39fa8873d777b8822273/public/docs-static/img/client/profiles/profiles-edit.png)
+![Profiles settings in the NetBird desktop app](https://raw.githubusercontent.com/netbirdio/docs/687df76a2ecb2c825e4726f53f78fb54a131f77c/public/docs-static/img/client/profiles/profiles-edit.png)
 
 ## What Is a Profile?
 
@@ -54,13 +54,17 @@ Each profile has two parts:
 The `default` profile is special: its ID is always `default`. You can rename its display label,
 but it keeps that reserved ID and cannot be removed.
 
-The default profile is stored as `default.json` in NetBird's state directory. Additional service profiles are stored under a per-user subdirectory as `<id>.json`:
+The default profile is stored as `default.json` in NetBird's state directory. New profiles are stored in the `profiles.v1` subdirectory as `<id>.json`:
 
-| OS              | Default state directory  | Additional profile example                   |
-| --------------- | ------------------------ | -------------------------------------------- |
-| Linux and macOS | `/var/lib/netbird/`      | `/var/lib/netbird/<username>/<id>.json`      |
-| FreeBSD         | `/var/db/netbird/`       | `/var/db/netbird/<username>/<id>.json`       |
-| Windows         | `%ProgramData%\Netbird\` | `%ProgramData%\Netbird\<username>\<id>.json` |
+| OS              | Default state directory  | Additional profile example                    |
+| --------------- | ------------------------ | --------------------------------------------- |
+| Linux and macOS | `/var/lib/netbird/`      | `/var/lib/netbird/profiles.v1/<id>.json`      |
+| FreeBSD         | `/var/db/netbird/`       | `/var/db/netbird/profiles.v1/<id>.json`       |
+| Windows         | `%ProgramData%\Netbird\` | `%ProgramData%\Netbird\profiles.v1\<id>.json` |
+
+Profiles from earlier versions stay in their per-user subdirectory, for example `/var/lib/netbird/<username>/<id>.json`.
+
+Each profile has an owner, and only the owner can use it. See [Profile ownership and daemon access](https://docs.netbird.io/client/profile-ownership).
 
 `NB_STATE_DIR` overrides the default state directory. Treat profile files as credentials: stop the service before manual maintenance, restrict access, and prefer the GUI or CLI for normal profile management.
 
@@ -97,11 +101,10 @@ To disable the profiles feature, you can use the `--disable-profiles` flag when 
 sudo netbird service install --disable-profiles
 ```
 
-Alternatively, you can set the `NB_DISABLE_PROFILES` environment variable:
+Alternatively, you can set the `NB_DISABLE_PROFILES` environment variable. Put it after `sudo`, because `sudo` drops variables exported in your shell:
 
 ```shell
-export NB_DISABLE_PROFILES=true
-sudo netbird service install
+sudo NB_DISABLE_PROFILES=true netbird service install
 ```
 
 When profiles are disabled:
@@ -123,7 +126,7 @@ When profiles are disabled:
 With the CLI, you can manage profiles easily. The main command is:
 
 ```bash
-netbird profile <add|list|select|rename|remove> [name|handle]
+netbird profile <add|list|select|rename|remove|claim> [name|handle]
 ```
 
 > **Note**
@@ -209,12 +212,12 @@ For example, running this command might output:
 
 ```text
 NAME     ACTIVE
-work     ✓
+work     *
 default
 home
 ```
 
-A **✓** in the `ACTIVE` column marks the active profile; inactive profiles are left blank.
+The list shows only the profiles that you own. A `*` in the `ACTIVE` column marks the active profile; inactive profiles are left blank.
 
 To also show each profile's short ID, add the `--show-id` flag:
 
@@ -224,13 +227,16 @@ netbird profile list --show-id
 
 ```text
 ID        NAME     ACTIVE
-a1b2c3d4  work     ✓
+a1b2c3d4  work     *
 default   default
 e5f6a7b8  home
 ```
 
 This is useful when several profiles share the same name. The ID column lets you tell them
 apart and select or remove the right one by its ID prefix.
+
+To show the owner of each profile, add `--show-owner`. To claim a profile for a user, see
+[Claim a profile](https://docs.netbird.io/client/profile-ownership#claim-a-profile).
 
 ### Select (Switch) a Profile
 
@@ -253,7 +259,6 @@ The successful command will output the short ID of the now-active profile:
 Profile switched to: e5f6a7b8
 ```
 
-If the profile hasn't been used before, you will need to run `netbird up` or `netbird login` to authenticate.
 If the handle matches no profile, you'll see:
 
 ```text
@@ -267,6 +272,10 @@ Error: name "work" is ambiguous (2 profiles share this name)
 Run `netbird profile list --show-id` to see IDs, then select by ID prefix:
   netbird profile select|remove <id-prefix>
 ```
+
+`netbird profile select` disconnects NetBird if it is connected, even when you select the profile that is already active. Run `netbird up` to connect with the selected profile. If the profile has never logged in, `netbird up` logs it in.
+
+In the desktop app, selecting a profile connects it, so you don't need to run `netbird up`. If the profile's session has expired (through the account's login expiration or inactivity expiration), you have to log in again before the profile connects.
 
 ### Remove a Profile
 
